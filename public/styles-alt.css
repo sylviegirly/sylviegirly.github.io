@@ -95,10 +95,6 @@ article {
     margin-bottom: 50px;
 }
 
-/* .container-grid > * {
-     border: 1px dashed red;
-} */
-
 aside {
     max-width: var(--right-sidebar-size);
 }
