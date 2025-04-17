@@ -877,6 +877,10 @@ footer a:hover {
         max-width: 100%;
     }
 
+    article {
+        max-width: 100%;
+    }
+
     footer {
         height: 60px;
         text-align: center;
