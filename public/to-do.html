@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Site Title -->
+        <title>to-do list</title>
+
+        <!-- Site Description -->
+        <meta content="Personal to-do list for this website." name="description" />
+
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- FavIcon -->
+        <link ref="favicon" href="favicon.ico" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" href="styles-alt.css" />
+
+        <!-- JavaScript: -->
+        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
+        if this HTML file is in 2 subfolders, etc. -->
+        <script src="Scripts/sparkle_cursor.js"></script>
+        <script src="Scripts/header.js" defer></script>
+        <script src="Scripts/left-sidebar.js" defer></script>
+        <script src="Scripts/footer.js" defer></script>
+        <script src="Scripts/tab-title-suffix.js"></script>
+    </head>
+    <body id="body">
+        <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- FONT TOGGLER. -->
+        <!-- =============================================== -->
+        <div id="font-toggle">
+            <button type="button" id="toggle-font">toggle font</button>
+        </div>
+
+        <div class="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+            <main id="content">
+                <article>
+                    <div class="subtitle">
+                        <img src="https://i.imgur.com/tFpDa70.gif" alt="hanging pixel flowers" /> To-Do List
+                    </div>
+                    <blockquote>
+                        So I don't go insane from trying to learn how to do HTML/CSS from scratch, I'm keeping a minor
+                        to-do list for my own self.
+                    </blockquote>
+                    <div>
+                        <ul>
+                            <li>
+                                Pondering links to add (minecraft forever world + fave/used builds? zhongvie shrine,
+                                sylvie shrine, zhongli shrine, resource hub). look at
+                                <a href="/sitemap.html">sitemap</a> for what links i wanna do
+                            </li>
+                            <li>Zhongvie reusable hover in the corner cause I ... want them everywhere ...</li>
+                            <li>Look into webrings(?) ... I gotta learn the terminology here</li>
+                            <li>
+                                About me page next, I've got some ideas ... need to hunt down blinkies + stamps
+                                <i>(partially done)</i>
+                            </li>
+                            <li>
+                                Join <a href="https://yume-ring.neocities.org/">yume-ring</a> when the Zhongvie shrine
+                                is complete ... god I don't even know what template layout I wanna do yet
+                            </li>
+                            <li>
+                                Maybe I can use grids finally to make a character layout loool.
+                                <s
+                                    >Too late for my usual site CSS at this point cause I don't wanna re-gut the entire
+                                    thing + it doesn't like full width headers/banners if the inner content isn't also
+                                    screen-wide.</s
+                                >
+                                Well that was a lie
+                            </li>
+                            <li>
+                                Introduce <a href="https://tippyjs.bootcss.com" target="_blank">tippy.js</a> into here
+                            </li>
+                            <li><s>Add social links to about me</s>, maybe reorganize site-map and nav banner</li>
+                            <li>
+                                Start adding some images to Neocities files itself, though I need to run them through
+                                the PNG cruncher just to ensure file sizes stay small (catbox going down was annoying
+                                loool, i might use filegarden for anything i want in high quality like my minecraft
+                                screenshots though i guess it depends on their size anyway) ... or site buttons ...? Non
+                                essential images i guess
+                                <i
+                                    >(sorry im very tired as im typing this part so my punctuation is out the window
+                                    rn)</i
+                                >
+                            </li>
+                            <li>
+                                look into <a href="https://scumsuck.com/resources/deployneocities/">site deployment</a>,
+                                i get lazy to copy and paste into neocities itself
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </main>
+        </div>
+        <!-- =============================================== -->
+        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
+        <!-- =============================================== -->
+        <general-footer></general-footer>
+
+        <script src="Scripts/font_toggle.js"></script>
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    </body>
+</html>

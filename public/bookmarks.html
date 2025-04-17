@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Site Title -->
+        <title>bookmarks</title>
+
+        <!-- Site Description -->
+        <meta content="Personal to-do list for this website." name="description" />
+
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- FavIcon -->
+        <link ref="favicon" href="favicon.ico" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" href="styles-alt.css" />
+
+        <!-- JavaScript: -->
+        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
+        if this HTML file is in 2 subfolders, etc. -->
+        <script src="Scripts/sparkle_cursor.js"></script>
+        <script src="Scripts/header.js" defer></script>
+        <script src="Scripts/left-sidebar.js" defer></script>
+        <script src="Scripts/footer.js" defer></script>
+        <script src="Scripts/tab-title-suffix.js"></script>
+    </head>
+    <body id="body">
+        <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- FONT TOGGLER. -->
+        <!-- =============================================== -->
+        <div id="font-toggle">
+            <button type="button" id="toggle-font">toggle font</button>
+        </div>
+
+        <div class="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+            <main id="content">
+                <article>
+                    <a href="http://textfiles.com/underconstruction/"
+                        ><img
+                            class="full-width-image"
+                            src="https://i.imgur.com/y2ExbiS.gif"
+                            alt="under construction gif"
+                    /></a>
+                </article>
+            </main>
+        </div>
+        <!-- =============================================== -->
+        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
+        <!-- =============================================== -->
+        <general-footer></general-footer>
+
+        <script src="Scripts/font_toggle.js"></script>
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    </body>
+</html>

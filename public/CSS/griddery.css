@@ -1,0 +1,72 @@
+/* -------------------------------------------------------- */
+/* GRIDDERY */
+/* -------------------------------------------------------- */
+/*----- griddery v2.0 (NEW) -----*/
+[griddery-cont] {
+    display: table;
+    width: 100%;
+}
+
+[griddery-tr] {
+    display: table-row;
+}
+
+[griddery-col] {
+    display: table-cell;
+    vertical-align: top;
+}
+
+[griddery-item] {
+    display: flex;
+    justify-content: center;
+}
+
+[griddery-item] > * {
+    flex: 1;
+}
+
+[griddery-item] img,
+[griddery-item] a,
+[griddery-item] iframe,
+[griddery-item] figure {
+    max-width: fit;
+}
+
+[griddery-item] img {
+    border-radius: var(--border-radius);
+    width: auto;
+}
+
+/*----- 🐶 DOGS GRID 🐶 -----*/
+/* dogs grid column spacing */
+[griddery-id=".dog"] [griddery-col] + [griddery-col] {
+    padding-left: 7px;
+}
+
+/* dogs grid "row" spacing */
+[griddery-id=".dog"] [griddery-item] + [griddery-item] {
+    margin-top: 3px;
+}
+
+/* everything below here is not necessary, it's just for the purpose of the demo. however,
+ * you may consider following the rules I wrote for imgs so that they don't appear super huge. */
+
+[griddery-item] {
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 15%);
+    overflow: hidden;
+    z-index: 0;
+}
+
+[griddery-item] .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 6px;
+    border-radius: 0 0 4px 0;
+    background: rgba(0, 0, 0, 69%);
+    color: white;
+    font-family: monospace;
+    z-index: 1;
+}
