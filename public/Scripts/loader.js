@@ -12,19 +12,9 @@ function fadeOut() {
             clearInterval(intervalID);
         }
     }, 50);
-
-    /*var linkItems = document.getElementsByClassName("sitelink");
-
-    for (var i = 0; i < linkItems.length; i++) {
-        linkItems[i].addEventListener("click", function () {
-            var number = this.getAttribute("href");
-            console.log(number);
-            setTimeout(() => window.location.assign(number), 9000); // navigate to a new website after 3s (3000ms)
-        });
-    }*/
 }
 
-function fadeIn() {
+/*function fadeIn() {
     var opacity = 0;
     var intervalID = setInterval(function () {
         if (opacity < 1) {
@@ -34,4 +24,4 @@ function fadeIn() {
             clearInterval(intervalID);
         }
     }, 50);
-}
+}*/

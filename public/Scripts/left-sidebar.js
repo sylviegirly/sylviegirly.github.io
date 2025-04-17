@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // define your images here
-    var images = [
+    const images = [
         "<img class='full-width-image' src='Images/Side Decorations/sylvie_sunflower.jpg' alt='sylvie holding a sunflower' title='art by me'/>",
         "<img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_2.png' alt='a chibi sylvie looking smug' title='art by me'/>",
         "<img class='full-width-image' src='https://f2.toyhou.se/file/f2-toyhou-se/images/85730612_3J07ioqrEo7BBgg.gif' alt='a gif of chibi sylvie dancing' title='art by me'/>",
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     // this chooses a random number from all available image indices
-    var randomImage = images[Math.floor(Math.random() * images.length)];
+    const randomImage = images[Math.floor(Math.random() * images.length)];
     console.log(randomImage);
     // append to the div
     document.getElementById("img-load").innerHTML = randomImage;
