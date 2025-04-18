@@ -108,10 +108,20 @@ aside {
 /* -------------------------------------------------------- */
 
 h1 {
-    color: var(--secondary-accent);
-    font-family: "venice";
-    font-size: 1.5em;
-    font-weight: 500;
+    background-color: var(--primary-accent);
+    /*background-image: url(https://sadhost.neocities.org/images/tiles/bg_bluewhiteflowers.gif);*/
+    color: black;
+    border-radius: var(--border-radius);
+    letter-spacing: 1px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: normal;
 }
 
 h2 {
@@ -562,13 +572,6 @@ article li {
 
 article li::marker {
     color: var(--secondary-accent);
-}
-
-article .subtitle {
-    text-align: left;
-    padding-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 /* Checkmark List Type for To-Do */
