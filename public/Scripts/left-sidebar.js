@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     // define your images here
     const images = [
-        "<img class='full-width-image' src='Images/Side Decorations/sylvie_sunflower.jpg' alt='sylvie holding a sunflower' title='art by me'/>",
-        "<img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_2.png' alt='a chibi sylvie looking smug' title='art by me'/>",
-        "<img class='full-width-image' src='https://f2.toyhou.se/file/f2-toyhou-se/images/85730612_3J07ioqrEo7BBgg.gif' alt='a gif of chibi sylvie dancing' title='art by me'/>",
-        "<a href='https://x.com/_camberry'><img class='full-width-image' src='Images/Side Decorations/sylvie_icon.png' alt='a rounded icon of a chibi sylvie'/></a>",
-        "<a href='https://www1.flightrising.com/clan-profile/257170'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_7.png' alt='a chibi of sylvie's half feral form/></a>",
-        "<a href='https://www1.flightrising.com/clan-profile/674713'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_6.png' alt='a pixel chibi of sylvie's half feral form/></a>",
-        "<a href='https://vgen.co/EFR4INZ'><img class='full-width-image' src='Images/Side Decorations/sylvie_emote.png' alt='a chibi sylvie holding out a yellow flower'/></a>",
-        "<a href='https://leeleesart.tumblr.com/'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_5.png' alt='a chibi sylvie sitting with an aranara zhongli' title='thank you lily for the bday gift :)'/></a>",
-        "<a href='https://x.com/mawbyte'><img class='full-width-image' src='Images/Side Decorations/sylvie_plant.png' alt='a chibi sylvie holding a plant and looking happy'/></a>",
-        "<a href='https://x.com/potato_bananaz'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_1.png' alt='a chibi sylvie floating and reaching out to a flower'/></a>",
-        "<a href='https://vgen.co/DonutHead21'><img class='full-width-image' src='Images/Side Decorations/sylvie_fishing.png' alt='a chibi sylvie trying to fish on a lilypad'/></a>",
-        "<a href='https://vgen.co/Julieta__Sophia'><img class='full-width-image' src='Images/Side Decorations/sylvie_demi.png' alt='a headshot of sylvie, behind them is the agender and demisexual flag'/></a>",
-        "<a href='https://twitter.com/magaridilatte'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_4.png' alt='a chibi sylvie who is waving at the viewer'/></a>",
-        "<a href='https://vgen.co/SakiKagami_'><img class='full-width-image' src='Images/Side Decorations/sylvie_in_a_box.png' alt='a chibi sylvie in an anime figurine box'/></a>",
-        "<a href='https://vgen.co/42NEDIA'><img class='full-width-image' src='Images/Side Decorations/sylvie_christmas.png' alt='a drawing of sylvie and an original character with red hair, decorated in christmas outfits' title='gift from ghost :)'/></a>",
-        "<img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_3.png' alt='a chibi sylvie sitting on a cupcake' title='art by me'/>"
+        "<img class='full-width-image' src='Images/Side Decorations/sylvie_sunflower.jpg' aria-hidden='true' alt='' title='art by me'/>",
+        "<img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_2.png' aria-hidden='true' alt='' title='art by me'/>",
+        "<img class='full-width-image' src='https://f2.toyhou.se/file/f2-toyhou-se/images/85730612_3J07ioqrEo7BBgg.gif' aria-hidden='true' alt='' title='art by me'/>",
+        "<a href='https://x.com/_camberry'><img class='full-width-image' src='Images/Side Decorations/sylvie_icon.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://www1.flightrising.com/clan-profile/257170'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_7.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://www1.flightrising.com/clan-profile/674713'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_6.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/EFR4INZ'><img class='full-width-image' src='Images/Side Decorations/sylvie_emote.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://leeleesart.tumblr.com/'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_5.png' aria-hidden='true' alt='' title='thank you lily for the bday gift :)'/></a>",
+        "<a href='https://x.com/mawbyte'><img class='full-width-image' src='Images/Side Decorations/sylvie_plant.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://x.com/potato_bananaz'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_1.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/DonutHead21'><img class='full-width-image' src='Images/Side Decorations/sylvie_fishing.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/Julieta__Sophia'><img class='full-width-image' src='Images/Side Decorations/sylvie_demi.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://twitter.com/magaridilatte'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_4.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/SakiKagami_'><img class='full-width-image' src='Images/Side Decorations/sylvie_in_a_box.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/42NEDIA'><img class='full-width-image' src='Images/Side Decorations/sylvie_christmas.png' aria-hidden='true' alt='' title='gift from ghost :)'/></a>",
+        "<img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_3.png' aria-hidden='true' alt='' title='art by me'/>"
     ];
 
     // this chooses a random number from all available image indices
@@ -37,13 +37,13 @@ const sidebar = `
     <section>
         <div class="img-floatinganim">
             <img class="dendro"
-                src="Images/dendro_symbol.png" alt="dendro symbol from genshin" />
+                src="Images/dendro_symbol.png" aria-hidden='true' alt='' />
         </div>
         <div id="img-load"></div>
         <div class="subtitle">
-            <img src="https://files.catbox.moe/5cvuev.gif" alt="tiny plant gif" />
+            <img src="https://files.catbox.moe/5cvuev.gif" aria-hidden='true' alt='' />
             Welcome!!
-            <img src="https://files.catbox.moe/5cvuev.gif" alt="tiny plant gif" />
+            <img src="https://files.catbox.moe/5cvuev.gif" aria-hidden='true' alt='' />
         </div>
         <div>
             <p style="text-align: center">
@@ -51,12 +51,14 @@ const sidebar = `
                 <img
                     style="padding-left: 5px; padding-right: 5px"
                     src="https://files.catbox.moe/46vbi9.gif"
-                    alt="pixel tea bag" />
+                    aria-hidden="true"
+                    alt="" />
                 <b>25+</b>
                 <img
                     style="padding-left: 5px; padding-right: 5px"
                     src="https://files.catbox.moe/46vbi9.gif"
-                    alt="pixel tea bag" />
+                    aria-hidden="true"
+                    alt="" />
                 <b>she/her</b>
             </p>
             <hr />
@@ -69,14 +71,17 @@ const sidebar = `
                 <a href="https://www.tumblr.com/lavendergalactic"
                 title="gifs by lavendergalactic as a commission for me. please don't use.">
                 <img
-                    src="https://i.imgur.com/24MKg0L.gif"
-                    alt="bites you gif button">
+                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/bites%20you%20shiny%20button.gif"
+                    aria-hidden="true"
+                    alt="">
                 <img
-                    src="https://i.imgur.com/DnFgww5.gif"
-                    alt="silly gif button">
+                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/silly%20shiny%20button.gif"
+                    aria-hidden="true"
+                    alt="">
                 <img
-                    src="https://i.imgur.com/ph1KvZ4.gif"
-                    alt="zhongvie gif button">
+                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/zhongvie%20shiny%20button.gif"
+                    aria-hidden="true"
+                    alt="">
                 </a>
             </div>
         </div>
@@ -86,7 +91,8 @@ const sidebar = `
             <div class="images-row">
                 <a href="https://pixel-world.tumblr.com/post/46858429546/roses" target="_blank">
                     <img
-                        alt="pixel yellow rose"
+                        aria-hidden="true"
+                        alt=""
                         src="https://64.media.tumblr.com/8a14bb7db6ba9bc223ca88d807a4023d/e43dfe7d33d4ece3-fd/s75x75_c1/3f15828df46052d966c5a7887da0b391697c9c4b.gif" />
                 </a>
                 <a href="https://zhongvie.neocities.org/" target="_blank"
@@ -94,7 +100,8 @@ const sidebar = `
                 /></a>
                 <a href="https://pixel-world.tumblr.com/post/46858429546/roses" target="_blank">
                     <img
-                        alt="pixel yellow rose"
+                        aria-hidden="true"
+                        alt=""
                         src="https://64.media.tumblr.com/8a14bb7db6ba9bc223ca88d807a4023d/e43dfe7d33d4ece3-fd/s75x75_c1/3f15828df46052d966c5a7887da0b391697c9c4b.gif" />
                 </a>
             </div>
