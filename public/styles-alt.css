@@ -39,6 +39,10 @@
     font-family: "dosis";
     src: url(Fonts/Dosis-VariableFont_wght.ttf);
 }
+@font-face {
+    font-family: "atkinson";
+    src: url(Fonts/AtkinsonHyperlegible-Regular.ttf);
+}
 
 /* -------------------------------------------------------- */
 /* BASICS */
@@ -1040,7 +1044,7 @@ footer a:hover {
 .feed-container {
     background-color: var(--background-colour);
     font-size: 0.75em;
-    font-family: "freepixel", "Courier", "Impact";
+    font-family: "freepixel", "Courier";
     letter-spacing: normal;
     overflow-y: scroll;
 }
