@@ -166,8 +166,8 @@ em {
 
 underline,
 u {
-    border-bottom: 1px dotted var(--secondary-accent);
-    text-decoration: none;
+    text-decoration: dotted;
+    text-decoration-color: var(--secondary-accent);
 }
 
 s,
