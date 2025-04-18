@@ -109,10 +109,13 @@ const sidebar = `
     </section>
     <div class="images" style="margin-top: 20px;">
     <a href="https://tamanotchi.world/22103c">
-    <img src="https://tamanotchi.world/i/22103" alt="It's tamaNOTchi! Click to feed!">
+    <img src="https://tamanotchi.world/i/22103" style="width: 34px; height: auto" alt="It's tamaNOTchi! Click to feed!">
     </a>
     <a href="https://tamanotchi.world/22050c">
-    <img src="https://tamanotchi.world/i/22050" alt="It's tamaNOTchi! Click to feed!">
+    <img src="https://tamanotchi.world/i/22050" style="width: 34px; height: auto" alt="It's tamaNOTchi! Click to feed!">
+    </a>
+    <a href="https://tamanotchi.world/22258c">
+    <img src="https://tamanotchi.world/i/22258" style="width: 34px; height: auto" alt="It's tamaNOTchi! Click to feed!">
     </a>
     </div>
 </div>
