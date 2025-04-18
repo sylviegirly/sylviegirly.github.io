@@ -41,9 +41,9 @@ const sidebar = `
         </div>
         <div id="img-load"></div>
         <div class="subtitle">
-            <img src="https://files.catbox.moe/5cvuev.gif" aria-hidden='true' alt='' />
+            <img src="Images/General%20Decorations/plant_bopping.gif" aria-hidden="true" alt="" />
             Welcome!!
-            <img src="https://files.catbox.moe/5cvuev.gif" aria-hidden='true' alt='' />
+            <img src="Images/General%20Decorations/plant_bopping.gif" aria-hidden="true" alt="" />
         </div>
         <div>
             <p style="text-align: center">
@@ -93,7 +93,7 @@ const sidebar = `
                     <img
                         aria-hidden="true"
                         alt=""
-                        src="https://64.media.tumblr.com/8a14bb7db6ba9bc223ca88d807a4023d/e43dfe7d33d4ece3-fd/s75x75_c1/3f15828df46052d966c5a7887da0b391697c9c4b.gif" />
+                        src="Images/General%20Decorations/pixel_rose.gif" />
                 </a>
                 <a href="https://zhongvie.neocities.org/" target="_blank"
                     ><img src="https://i.imgur.com/kAwdvi1.png" alt="zhongvie button"
@@ -102,7 +102,7 @@ const sidebar = `
                     <img
                         aria-hidden="true"
                         alt=""
-                        src="https://64.media.tumblr.com/8a14bb7db6ba9bc223ca88d807a4023d/e43dfe7d33d4ece3-fd/s75x75_c1/3f15828df46052d966c5a7887da0b391697c9c4b.gif" />
+                        src="Images/General%20Decorations/pixel_rose.gif" />
                 </a>
             </div>
             <hr style="width: 100%" />
