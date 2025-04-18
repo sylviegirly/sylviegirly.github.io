@@ -552,12 +552,13 @@ main {
 
 article {
     margin-bottom: 20px;
-    min-width: calc(
+    width: auto;
+    /*min-width: calc(
         var(--blog-size) - (var(--left-sidebar-size) + var(--right-sidebar-size)) - (calc(var(--grid-gap) * 2))
-    ); /* literally the px number is just grip-gap x2 */
-    max-width: calc(
+    );*/ /* literally the px number is just grip-gap x2 */
+    /*max-width: calc(
         var(--blog-size) - (var(--left-sidebar-size) - (calc(var(--grid-gap) * 1)))
-    ); /* literally the px number is just grip-gap x2 */
+    );*/ /* literally the px number is just grip-gap x2 */
 }
 
 article ul {
@@ -877,7 +878,7 @@ footer a:hover {
     }
 
     article {
-        max-width: 100%;
+        width: auto;
     }
 
     footer {
