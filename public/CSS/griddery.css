@@ -26,10 +26,9 @@
 }
 
 [griddery-item] img,
-[griddery-item] a,
 [griddery-item] iframe,
 [griddery-item] figure {
-    max-width: fit;
+    max-width: 100%;
 }
 
 [griddery-item] img {
@@ -39,12 +38,12 @@
 
 /*----- 🐶 DOGS GRID 🐶 -----*/
 /* dogs grid column spacing */
-[griddery-id=".dog"] [griddery-col] + [griddery-col] {
+[griddery-id=".minecraft"] [griddery-col] + [griddery-col] {
     padding-left: 7px;
 }
 
 /* dogs grid "row" spacing */
-[griddery-id=".dog"] [griddery-item] + [griddery-item] {
+[griddery-id=".minecraft"] [griddery-item] + [griddery-item] {
     margin-top: 3px;
 }
 
