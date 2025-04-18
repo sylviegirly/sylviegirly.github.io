@@ -35,6 +35,10 @@
     font-family: "freepixel";
     src: url(Fonts/FreePixel.ttf);
 }
+@font-face {
+    font-family: "dosis";
+    src: url(Fonts/Dosis-VariableFont_wght.ttf);
+}
 
 /* -------------------------------------------------------- */
 /* BASICS */
@@ -47,6 +51,7 @@
 html {
     position: relative;
     min-height: 100%;
+    font-size: 1rem;
 }
 
 html,
@@ -60,9 +65,8 @@ body {
     height: 100%;
     background-color: var(--background-colour);
     color: var(--text-colour);
-    font-size: 1rem;
     font-family: "freepixel";
-    line-height: 1.3em;
+    line-height: 1.3rem;
     letter-spacing: 0;
     background-image: url(https://i.imgur.com/j5DXHGi.png);
 }
@@ -75,7 +79,7 @@ section,
 article {
     background-color: var(--article-bg);
     border-radius: var(--border-radius);
-    padding: 15px;
+    padding: 1rem;
     box-shadow: 6px 6px 0 var(--letter-glow);
 }
 
@@ -111,17 +115,19 @@ h1 {
     background-color: var(--primary-accent);
     /*background-image: url(https://sadhost.neocities.org/images/tiles/bg_bluewhiteflowers.gif);*/
     color: black;
+    font-family: "dosis";
     border-radius: var(--border-radius);
     letter-spacing: 1px;
     padding: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5em;
     text-align: left;
     padding-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: normal;
+    text-shadow: 1px 1px rgba(19, 40, 12, 0.25);
 }
 
 h2 {
@@ -191,7 +197,9 @@ mark {
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    font-size: 1.2em;
+    font-family: "dosis";
+    text-shadow: 1px 1px rgba(19, 40, 12, 0.25);
+    font-size: 1.2rem;
 }
 
 blockquote {
