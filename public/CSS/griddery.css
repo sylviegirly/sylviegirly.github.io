@@ -33,13 +33,19 @@
 
 [griddery-item] img {
     border-radius: var(--border-radius);
-    width: auto;
+    width: 100%;
+    transition: 0.5s;
+}
+
+[griddery-item] img:hover {
+    outline: 1px dotted var(--secondary-accent);
+    outline-offset: -5px;
 }
 
 /*----- 🐶 DOGS GRID 🐶 -----*/
 /* dogs grid column spacing */
 [griddery-id=".minecraft"] [griddery-col] + [griddery-col] {
-    padding-left: 7px;
+    padding-left: 10px;
 }
 
 /* dogs grid "row" spacing */
@@ -53,7 +59,6 @@
 [griddery-item] {
     position: relative;
     border-radius: 4px;
-    box-shadow: 4px 4px 14px rgba(0, 0, 0, 15%);
     overflow: hidden;
     z-index: 0;
 }
