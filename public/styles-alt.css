@@ -904,6 +904,10 @@ footer a:hover {
         max-width: 95%;
     }
 
+    img {
+        max-width: 100%;
+    }
+
     .side-deco {
         display: none;
     }
