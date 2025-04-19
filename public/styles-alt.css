@@ -966,7 +966,7 @@ footer a:hover {
     padding: 15px; /* Some padding */
     border-radius: var(--border-radius); /* Rounded corners */
     font-size: 1.1rem; /* Increase font size */
-    transition: 0.5s;
+    font-family: "atkinson";
 }
 
 #myBtn:hover {
