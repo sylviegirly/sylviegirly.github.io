@@ -38,12 +38,12 @@
 
 /*----- 🐶 DOGS GRID 🐶 -----*/
 /* dogs grid column spacing */
-[griddery-id=".minecraft"] [griddery-col] + [griddery-col] {
+[griddery-id="img[minecraft]"] [griddery-col] + [griddery-col] {
     padding-left: 7px;
 }
 
 /* dogs grid "row" spacing */
-[griddery-id=".minecraft"] [griddery-item] + [griddery-item] {
+[griddery-id="img[minecraft]"] [griddery-item] + [griddery-item] {
     margin-top: 3px;
 }
 
