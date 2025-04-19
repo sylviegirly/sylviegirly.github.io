@@ -166,7 +166,8 @@ em {
 
 underline,
 u {
-    text-decoration: dotted;
+    text-decoration: underline;
+    text-decoration-style: wavy;
     text-decoration-color: var(--secondary-accent);
 }
 
@@ -629,6 +630,7 @@ article .scrollable {
 article .columns {
     display: flex;
     flex-direction: row;
+    vertical-align: baseline;
 }
 
 /* -------------------------------------------------------- */
