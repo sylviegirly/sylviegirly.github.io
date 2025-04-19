@@ -569,9 +569,9 @@ article {
     /*min-width: calc(
         var(--blog-size) - (var(--left-sidebar-size) + var(--right-sidebar-size)) - (calc(var(--grid-gap) * 2))
     );*/ /* literally the px number is just grip-gap x2 */
-    /*max-width: calc(
+    max-width: calc(
         var(--blog-size) - (var(--left-sidebar-size) - (calc(var(--grid-gap) * 1)))
-    );*/ /* literally the px number is just grip-gap x2 */
+    ); /* literally the px number is just grip-gap x2 */
 }
 
 article ul {
