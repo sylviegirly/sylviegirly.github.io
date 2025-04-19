@@ -15,11 +15,11 @@ const content = `
         <li><a href="/index.html">home</a></li>
         <li><a href="/about.html">about me</a></li>
         <li class="disabled">ocs / shrines</li>
-        <li class="disabled">
+        <li>
             fun things
             <ul>
-                <li>minecraft forever world</li>
-                <li>recipes</li>
+                <li><a href="/minecraft.html">minecraft world</a></li>
+                <li class="disabled">recipes</li>
             </ul>
         </li>
         <li><a href="/blogging.html">blog</a></li>
