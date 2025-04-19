@@ -686,6 +686,8 @@ article .columns {
     flex-wrap: wrap;
     padding: 10px;
     align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
     text-align-last: center;
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
