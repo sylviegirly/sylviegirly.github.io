@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // this chooses a random number from all available image indices
     const randomImage = images[Math.floor(Math.random() * images.length)];
-    console.log(randomImage);
     // append to the div
     document.getElementById("img-load").innerHTML = randomImage;
 
