@@ -950,6 +950,30 @@ footer a:hover {
 }
 
 /* -------------------------------------------------------- */
+/* SCROLL TO TOP */
+/* -------------------------------------------------------- */
+#backscroll {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--primary-accent); /* Set a background color */
+    color: black; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: var(--border-radius); /* Rounded corners */
+    font-size: 1.1rem; /* Increase font size */
+    transition: 0.5s;
+}
+
+#myBtn:hover {
+    background-color: var(--secondary-accent); /* Add a dark-grey background on hover */
+}
+
+/* -------------------------------------------------------- */
 /* ACCESSIBILITY */
 /* -------------------------------------------------------- */
 .asw-menu-btn {
