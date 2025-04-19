@@ -496,7 +496,7 @@ section .scrollable {
     border-radius: var(--border-radius);
     overflow-y: scroll;
     padding: 7px;
-    margin: 5px;
+    margin-top: 10px;
 }
 
 section .scrollable p {
