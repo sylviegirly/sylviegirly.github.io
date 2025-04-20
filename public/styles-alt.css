@@ -512,6 +512,7 @@ nav ul ul li a {
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
+    text-transform: lowercase;
 }
 
 /* Style the links inside the dropdown */
