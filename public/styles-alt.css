@@ -256,6 +256,10 @@ footer a {
     transition: 0.5s;
 }
 
+article a img {
+    line-height: 0;
+}
+
 .intro a:hover,
 article a:hover,
 aside a:hover {
@@ -752,6 +756,11 @@ article .columns {
     align-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.lazy-flex-images a {
+    text-decoration: none;
+    line-height: 0;
 }
 
 .images {
