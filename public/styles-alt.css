@@ -222,7 +222,7 @@ blockquote {
 }
 
 abbr {
-    text-decoration-style: wavy;
+    text-decoration-style: dotted;
     text-decoration-color: var(--link-hover);
     cursor: pointer;
 }
