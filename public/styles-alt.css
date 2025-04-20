@@ -744,6 +744,16 @@ article .columns {
     height: auto;
 }
 
+.lazy-flex-images {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .images {
     display: flex;
     align-items: center;
