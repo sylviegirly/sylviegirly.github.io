@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const content = `
 <header>
-    <div class="title">aid's tiny corner</div>
-    <div class="subtext">a personal site</div>
+    <div class="title">aid's small corner</div>
+    <div class="subtext">a little personal site</div>
 </header>
 <nav>
     <ul>
