@@ -530,11 +530,11 @@ section .full-width-image {
 .links li a {
     background-color: var(--primary-accent);
     border-radius: var(--border-radius);
-    font-size: 0.75rem;
     padding-top: 3px;
     padding-bottom: 3px;
     text-decoration: none;
     color: black;
+    font-size: 0.9rem;
     display: block;
     transition: 0.5s ease-in-out;
 }
