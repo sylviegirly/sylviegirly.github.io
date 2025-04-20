@@ -493,6 +493,7 @@ nav ul ul li a {
 
 /* Style the dropdown button to fit inside the topnav */
 .dropdown .dropbtn {
+    color: black;
     font-size: 1rem;
     border: none;
     outline: none;
