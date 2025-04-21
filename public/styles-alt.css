@@ -1117,6 +1117,7 @@ footer a:hover {
 
     article .scrollable {
         height: fit-content;
+        max-height: 400px;
     }
 }
 
