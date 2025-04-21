@@ -476,7 +476,7 @@ nav ul ul li a {
 
 /* Add an active class to highlight the current page */
 .active {
-    background-color: #a9bc8e;
+    background-color: var(--primary-accent);
     color: white;
 }
 
