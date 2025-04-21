@@ -688,16 +688,16 @@ section .full-width-image {
     padding-bottom: 3px;
     text-decoration: none;
     color: black;
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
     display: block;
     transition: 0.5s ease-in-out;
 }
 
 .links li a:hover {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     color: black;
-    font-size: 1rem;
+    font-size: 1rem !important;
     background-color: var(--link-hover);
 }
 
