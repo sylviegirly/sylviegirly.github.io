@@ -166,9 +166,9 @@ em {
 
 underline,
 u {
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: var(--secondary-accent);
+    text-decoration: wav;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(120, 139, 104, 0.71);
 }
 
 s,
