@@ -613,7 +613,7 @@ article {
 }
 
 article ul {
-    line-height: 120%;
+    line-height: 1.2rem;
     list-style-type: square;
 }
 
@@ -736,7 +736,7 @@ article .columns {
 
 .interest-content li {
     display: inline;
-    line-height: 1.5em;
+    line-height: 1.5rem;
 }
 
 .interest-content li:after {
