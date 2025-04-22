@@ -310,8 +310,7 @@ aside a:hover {
 /* HEADER */
 /* -------------------------------------------------------- */
 
-header,
-nav {
+header {
     max-width: 100hv;
     align-content: center;
 }
@@ -355,235 +354,118 @@ header .subtext {
 /* -------------------------------------------------------- */
 
 nav {
-    text-align: center;
     background-color: var(--primary-accent);
-    height: 50px;
-    position: sticky;
-    top: 0;
-    margin-bottom: 20px;
-    z-index: 1;
-}
-
-nav ul {
-    width: var(--blog-size);
-}
-
-nav ul li:first-child > a {
-    padding-left: 0;
-}
-
-nav ul li:last-child > a {
-    padding-right: 0;
-}
-
-nav li {
-    display: inline-block;
-    position: relative;
-    text-transform: uppercase;
-    padding-left: 30px;
-    color: black;
-}
-
-nav li a {
-    text-decoration: none;
-    color: black;
-    transition: 0.5s;
-}
-
-nav li a:hover {
-    letter-spacing: 3px;
-}
-
-/* Subnavigation (Drop-Down): */
-
-nav ul ul {
-    background: var(--primary-accent);
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 10px;
-    padding: 0.5em;
-    max-width: 250px;
-    transition: all 0.5s ease;
-    list-style-type: circle;
-}
-
-nav ul ul li::marker {
-    color: white;
-}
-
-nav ul li:hover ul,
-nav ul li:focus-within ul {
-    display: block;
-}
-
-nav ul ul li {
-    display: block;
-    padding-left: 10px;
-    padding-right: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: left;
-}
-
-nav ul li strong {
-    color: var(--link-color);
-    text-decoration: underline;
-    font-weight: normal;
-}
-
-nav ul ul li a {
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-}
-/* -------------------------------------------------------- */
-/* NEW NAV TEST */
-/* -------------------------------------------------------- */
-
-.topnavbg {
-    background-color: var(--primary-accent);
-    width: 100%;
-    position: sticky;
-    top: 0;
-    margin-bottom: 20px;
-    z-index: 1;
-}
-/* Add a black background color to the top navigation */
-.topnav {
-    max-width: var(--blog-size);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
     color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+nav > button {
+    min-width: 44px;
+    min-height: 24px;
+    display: flex;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1rem !important;
-    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border: 0;
+    background-color: var(--primary-accent);
+    color: #000000;
+    font-size: 2.5rem;
 }
-
-.topnav i {
-    color: #444b39;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+nav ul {
     display: none;
-}
-
-/* Dropdown container - needed to position the dropdown content */
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-/* Style the dropdown button to fit inside the topnav */
-.dropdown .dropbtn {
-    color: black;
-    cursor: pointer;
-    font-size: 1rem;
-    border: none;
-    outline: none;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
     margin: 0;
+    padding: 0;
+    background-color: var(--primary-accent);
+    color: #000000;
+    list-style: none;
     text-transform: uppercase;
 }
-
-.topnav a:hover,
-.dropdown:hover .dropbtn,
-.dropbtn:focus {
-    background-color: #535c46;
-    color: white;
-}
-
-/* Style the dropdown content (hidden by default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
+nav ul ul {
     background-color: var(--article-bg);
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    color: #000000;
     text-transform: lowercase;
 }
-
-/* Style the links inside the dropdown */
-.dropdown-content a {
-    float: none;
+nav ul ul a {
     color: white;
-    padding: 12px 16px;
+}
+nav ul.show {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+}
+nav a {
+    min-width: 44px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 150ms ease-in-out;
+    color: #000000;
     text-decoration: none;
+}
+nav a:hover {
+    background-color: var(--secondary-accent);
+    color: #384529;
+}
+nav li {
+    padding: 0.2rem;
+}
+nav li.dropdown {
+    position: relative;
+}
+nav li.dropdown > a::after {
+    content: "▼";
     display: block;
-    text-align: left;
+    margin-left: 0.5rem;
+    transition: transform 250ms linear;
+    font-size: 0.5em;
+}
+nav li.dropdown > a[aria-expanded="true"]::after {
+    transform: rotate(-180deg);
+}
+nav li.dropdown ul a {
+    padding-left: 1.25rem;
+}
+nav li.dropdown ul li.dropdown ul a {
+    padding-left: 2rem;
 }
 
-/* Add a grey background to dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #2b2b2b;
-}
-
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.show {
-    display: block;
-}
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 800px) {
-    .topnav a:not(:first-child),
-    .dropdown .dropbtn {
+@media screen and (min-width: 800px) {
+    nav button {
         display: none;
     }
-    .topnav a.icon {
-        float: right;
-        display: block;
+    nav li {
+        padding: 0;
     }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 800px) {
-    .topnav {
-        width: 100%;
-        display: block;
+    nav > ul,
+    nav > ul.show {
+        display: grid;
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
     }
-    .topnav.responsive {
-        position: relative;
-        flex-direction: column;
-    }
-    .topnav.responsive a.icon {
+    nav .dropdown ul.show {
         position: absolute;
-
-        right: 0;
+    }
+    nav .dropdown ul ul {
         top: 0;
+        left: 100%;
     }
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
+    nav ul ul {
+        max-width: max-content;
     }
-    .topnav.responsive .dropdown {
-        float: none;
-    }
-    .topnav.responsive .dropdown-content {
-        position: relative;
-    }
-    .topnav.responsive .dropdown .dropbtn {
-        display: block;
+    nav a:hover {
         width: 100%;
-        text-align: left;
+    }
+    nav ul {
+            text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+        width: var(--blog-size);
     }
 }
 
@@ -1080,32 +962,6 @@ footer a:hover {
 
     .side-deco {
         display: none;
-    }
-
-    nav {
-        width: 100%;
-        height: fit-content;
-        position: relative;
-    }
-
-    nav ul {
-        width: 100%;
-        padding: 0;
-    }
-
-    nav li {
-        align-content: center;
-        width: 100%;
-        height: 30px;
-        padding-left: 0;
-    }
-
-    nav li a {
-        display: block;
-    }
-
-    nav ul ul {
-        max-width: 100%;
     }
 
     article .columns {
