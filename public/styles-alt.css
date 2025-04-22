@@ -458,14 +458,14 @@ nav li.dropdown ul li.dropdown ul a {
         max-width: max-content;
         min-width: 175px;
     }
-    nav a:hover {
-        width: 100%;
+    nav ul ul li {
+        min-width: 175px;
     }
     nav ul {
-            text-align: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
         width: var(--blog-size);
     }
 }
