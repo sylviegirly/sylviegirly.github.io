@@ -26,43 +26,22 @@
         <!-- JavaScript: -->
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
+
+        <!-- Menu Items -->
         <script src="Scripts/left-sidebar.js" defer></script>
         <script src="Scripts/header.js" defer></script>
         <script src="Scripts/footer.js" defer></script>
 
+        <!-- Sparkle Cursor -->
         <script src="Scripts/sparkle_cursor.js"></script>
 
+        <!-- Marquee JS -->
         <script src="Scripts/marquee-setup.js"></script>
         <script src="Scripts/marquee.js"></script>
 
-        <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
         <!-- Disclosure Menu -->
+        <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
         <script src="Scripts/Accessible/accessible-menu.js" type="module"></script>
-
-        <!--✻✻✻✻✻✻  griddery by @glenthemes  ✻✻✻✻✻✻-->
-        <script src="https://griddery.github.io/grid.js"></script>
-        <link href="../CSS/griddery.css" rel="stylesheet" />
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                /*----- 🐱 CATS GRID 🐱 -----*/
-                // for the column count, I used css variables, :root
-                gridderyV3({
-                    items: "img[cat]",
-                    columns: 3
-                });
-
-                /*----- 🐶 DOGS GRID 🐶 -----*/
-                // for the column count, I directly assigned a number.
-                // both work!
-                gridderyV3({
-                    items: ".dog",
-                    columns: 3
-                });
-            });
-        </script>
-        <script src="../Scripts/lightbox-plus-jquery.js"></script>
-
-        <link href="../CSS/lightbox.css" rel="stylesheet" />
     </head>
     <body id="body">
         <!-- =============================================== -->
