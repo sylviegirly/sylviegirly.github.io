@@ -456,6 +456,7 @@ nav li.dropdown ul li.dropdown ul a {
     }
     nav ul ul {
         max-width: max-content;
+        min-width: 175px;
     }
     nav a:hover {
         width: 100%;
