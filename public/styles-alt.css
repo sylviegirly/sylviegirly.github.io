@@ -617,6 +617,10 @@ article ul {
     list-style-type: square;
 }
 
+article ul ul li::marker {
+    color: var(--primary-accent);
+}
+
 article li {
     padding-top: 3px;
     padding-bottom: 3px;
