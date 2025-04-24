@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Yadyra</title>
+        <title>Flex layout</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
@@ -12,7 +12,6 @@
         <link rel="stylesheet" type="text/css" href="../CSS/character.css" />
         <link rel="stylesheet" href="../CSS/lightbox.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-        <script src="../Scripts/tab-title-suffix.js"></script>
 
         <!-- JS: -->
         <script src="../Scripts/lightbox-plus-jquery.js"></script>
@@ -21,21 +20,21 @@
         <script src="../Scripts/Accessible/accessible-menu.js" type="module"></script>
         <style>
             :root {
-                --primary-accent: #ad5f74;
-                --secondary-accent: #edb4c4;
+                --primary-accent: #788b68;
+                --secondary-accent: #cee8ba;
                 --font-on-accent: #ffffff;
 
-                --link: #c38798;
+                --link: #a2c387;
                 --linkhover: #ffffff;
 
-                --letter-glow: rgba(177, 97, 119, 0.25);
+                --letter-glow: #788b6840;
 
-                --header-image: url("https://images.pexels.com/photos/2719301/pexels-photo-2719301.jpeg");
-                --focal-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/77333450_PkQirf08KpPheOL.png");
+                --header-image: url("https://images.unsplash.com/reserve/0jCul0wRzOXVv9y2bjtp_San_Zenone_WooD.jpg?q=80&w=1275&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                --focal-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/79394708_tZZYfAgD24V2CgQ.jpg?1724458113");
                 --design-image: url("https://i.imgur.com/1pSE61i.png");
-                --focal-trivia-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/91054878_fvmgkjH8RdryKXQ.png");
+                --focal-trivia-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/83253103_nT0t5aMZipBsvGX.jpg?1717909219");
 
-                --moodboard-1-image: url("https://images.unsplash.com/photo-1540458638618-893e9fb35c07");
+                --moodboard-1-image: url("https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg");
                 --moodboard-2-image: url("https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86");
                 --moodboard-3-image: url("https://images.unsplash.com/photo-1504701954957-2010ec3bcec1");
                 --moodboard-4-image: url("https://images.unsplash.com/photo-1608303852360-97cb721e42cc");
@@ -50,20 +49,20 @@
         <nav>
             <button id="toggle-0" aria-label="Toggle main menu">☰</button>
             <ul id="menu-0">
-                <li id="item-1-0-0"><a id="link-1-0-0" href="../index.html">Home</a></li>
-                <li id="item-2-0-0"><a id="link-2-0-0" href="../about.html">About Me</a></li>
+                <li id="item-1-0-0"><a id="link-1-0-0" href="/index.html">Home</a></li>
+                <li id="item-2-0-0"><a id="link-2-0-0" href="/about.html">About Me</a></li>
                 <li id="item-3-0-0" class="dropdown">
                     <a id="link-3-0-0" href="#">Personal</a>
                     <ul id="menu-3">
-                        <li id="item-3-1-0"><a id="link-3-1-0" href="../blogging.html">Blog</a></li>
-                        <li id="item-3-2-0"><a id="link-3-2-0" href="../manifesto.html">Manifesto</a></li>
-                        <li id="item-3-3-0"><a id="link-3-3-0" href="../to-do.html">To-Do List</a></li>
+                        <li id="item-3-1-0"><a id="link-3-1-0" href="/blogging.html">Blog</a></li>
+                        <li id="item-3-2-0"><a id="link-3-2-0" href="/manifesto.html">Manifesto</a></li>
+                        <li id="item-3-3-0"><a id="link-3-3-0" href="/to-do.html">To-Do List</a></li>
                     </ul>
                 </li>
                 <li id="item-4-0-0" class="dropdown">
                     <a id="link-4-0-0" href="#">OCs / Shrines</a>
                     <ul id="menu-4">
-                        <li id="item-4-1-0"><a id="link-4-1-0" href="#" class="disabled">Sylvie</a></li>
+                        <li id="item-4-1-0"><a id="link-4-1-0" href="sylvie.html">Sylvie</a></li>
                         <li id="item-4-2-0"><a id="link-4-2-0" href="yadyra.html">Yadyra</a></li>
                         <li id="item-4-3-0"><a id="link-4-3-0" href="#" class="disabled">Nameless</a></li>
                         <li id="item-4-4-0" class="dropdown">
@@ -80,8 +79,8 @@
                 <li id="item-5-0-0" class="dropdown">
                     <a id="link-5-0-0" href="#">Fun Things</a>
                     <ul id="menu-5">
-                        <li id="item-5-1-0"><a id="link-5-1-0" href="../minecraft.html">Minecraft Forever World</a></li>
-                        <li id="item-5-2-0"><a id="link-5-2-0" href="../links.html">Neighbours / Webrings</a></li>
+                        <li id="item-5-1-0"><a id="link-5-1-0" href="/minecraft.html">Minecraft Forever World</a></li>
+                        <li id="item-5-2-0"><a id="link-5-2-0" href="/links.html">Neighbours / Webrings</a></li>
                         <li id="item-5-3-0"><a id="link-5-3-0" href="#" class="disabled">Recipes</a></li>
                     </ul>
                 </li>
@@ -92,8 +91,8 @@
                         <li id="item-6-2-0">
                             <a id="link-6-2-0" href="/bookmarks.html" class="disabled">Bookmarks</a>
                         </li>
-                        <li id="item-6-3-0"><a id="link-6-3-0" href="../sitemap.html">Sitemap</a></li>
-                        <li id="item-6-4-0"><a id="link-6-4-0" href="../credits.html">Credits</a></li>
+                        <li id="item-6-3-0"><a id="link-6-3-0" href="/sitemap.html">Sitemap</a></li>
+                        <li id="item-6-4-0"><a id="link-6-4-0" href="credits/html">Credits</a></li>
                     </ul>
                 </li>
             </ul>
@@ -115,27 +114,33 @@
                     <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
                     <div class="icon">
                         <img
-                            src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/91055006_YCj.png"
-                            alt=""
-                            data-tippy-content="Art by vanillssugar"
-                            aria-hidden="true" />
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/95582061_J99.png"
+                            data-tippy-content="Art by me"
+                            alt="" />
                     </div>
-                    <div class="header">Yadyra Chóros</div>
+                    <div class="header">Sylvie</div>
 
                     <!-- Quote -->
                     <div class="quote">
-                        You'd be amazed as to how gods enjoy feeding on 'stories' and reading; I am one of those myself,
-                        but rather than a 'reader', I'd call myself a ... ghostwriter, perhaps
+                        I am completely fine in an “I have been mentally unwell for years” kinda way
                     </div>
 
                     <!-- Navigation menu  -->
                     <div class="" id="main-menu">
                         <ul>
-                            <li><a href="https://toyhou.se/5806515.yadyra">Toyhouse</a></li>
-                            <li><a href="https://ca.pinterest.com/Asuraid/yadyra/">Pinterest</a></li>
+                            <li><a href="" class="disabled">Zhongvie 💖</a></li>
+                            <li><a href="https://toyhou.se/10313327.sylvie">Toyhouse</a></li>
+                            <li><a href="https://www.pinterest.com/Asuraid/sylvie/ ">Pinterest</a></li>
+                            <li>
+                                <a href="https://genshin-impact-fanon.fandom.com/wiki/Sylvie">Genshin Fanon Wiki</a>
+                            </li>
+                            <li><a href=" https://open.spotify.com/playlist/3d0jzwTJRgDXTwMhPwFxRF">Spotify</a></li>
                         </ul>
                     </div>
-                    <p>Stinky eldritch abomination man ... can you tell he's the guardian of life?</p>
+                    <p>
+                        Text can go here. You can also add <a href="">inline links</a>. It's best not to make this too
+                        long because this moves to the top of the page on mobile.
+                    </p>
                 </div>
             </div>
 
@@ -143,10 +148,15 @@
             <main id="content">
                 <!-- Section tags must be used for blocks -->
 
+                <section class="full warning">
+                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i> This is still a work in progress, if
+                    somehow you are here ... beware empty boxes. 💔
+                </section>
+
                 <!-- CHARACTER INFORMATION: DESKTOP ------------------------------>
                 <section class="twothird second-order">
                     <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
-                    <h1>the ultimate universe hopper</h1>
+                    <h1>lord of the forest</h1>
                     <div class="row">
                         <div class="column">
                             <div class="stat-holder">
@@ -156,7 +166,13 @@
                                 <div>
                                     <!-- NAME -->
                                     <div class="stat-name">name</div>
-                                    <div>yadyra chóros</div>
+                                    <div>
+                                        foras / <span
+                                            class="tippy"
+                                            data-tippy-content="Old Persian. Wood ( daruv / 𐎭𐎠𐎽𐎢𐎺 ). God (baga / 𐏎 )."
+                                            >daruvbaga</span
+                                        >
+                                    </div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -166,14 +182,7 @@
                                 <div>
                                     <!-- AGE -->
                                     <div class="stat-name">age</div>
-                                    <div>
-                                        very, <i>very</i>
-                                        <span
-                                            class="tippy"
-                                            data-tippy-content="Like billions of years old, it's not worth tracking to him"
-                                            >old</span
-                                        >
-                                    </div>
+                                    <div>5,000+ years</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -183,7 +192,7 @@
                                 <div>
                                     <!-- GENDER -->
                                     <div class="stat-name">gender</div>
-                                    <div>agender</div>
+                                    <div>agender / librafeminine</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -192,7 +201,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">role</div>
-                                    <div>overseer and guardian of life</div>
+                                    <div>adventurer / traveller</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -202,7 +211,7 @@
                                 <div>
                                     <!-- AGE -->
                                     <div class="stat-name">alignment</div>
-                                    <div>true neutral</div>
+                                    <div>chaotic good</div>
                                 </div>
                             </div>
                         </div>
@@ -214,7 +223,7 @@
                                 <div>
                                     <!-- NICKNAMES / ALT NAMES -->
                                     <div class="stat-name">called</div>
-                                    <div>the pink man / guardian</div>
+                                    <div>sylvie</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -224,7 +233,7 @@
                                 <div>
                                     <!-- SPECIES -->
                                     <div class="stat-name">species</div>
-                                    <div>celestial being / god</div>
+                                    <div>elemental being / god</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -234,7 +243,7 @@
                                 <div>
                                     <!-- PRONOUNS -->
                                     <div class="stat-name">pronouns</div>
-                                    <div>he/him (or any)</div>
+                                    <div>they / she</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -243,69 +252,64 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">mbti</div>
-                                    <div>INTJ-A</div>
+                                    <div>ENFP-A</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
                                 <div class="statcon">
-                                    <i class="fa-solid fa-cloud-moon" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-leaf" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <div class="stat-name">element</div>
-                                    <div>time / space</div>
+                                    <div>dendro</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="scrollable">
+                    <div class="scrollable" style="max-height: 255px">
                         <p>
-                            Yadyra is what many would consider being an enigma; known as the balance and overseer of the
-                            universe as it is, a creature able to tear time and space asunder. The man easily scoffs at
-                            these stories and plays them down, though not out of humbleness, but more the desire to
-                            shrug them off&mdash;he sees no reason to awe over what to him merely seems like child&#39;s
-                            play.
+                            Sylvie is the vessel of the
+                            <span class="tippy" data-tippy-content="林王魔神 / Forest King Demon God">God of Trees</span
+                            >&mdash;a Dendro elemental lifeform adopted as a god by the people of Sumeru&mdash;that went
+                            by the name of Foras. Disillusioned with the aspect of godhood upon their revival from a
+                            death suffered during the Archon War, they have integrated into human life and have been
+                            travelling all over Teyvat for the last 1,500 years.
                         </p>
-
                         <p>
-                            Yadyra, at his core, is an old being born out of existence itself with a purpose to make
-                            sure the delicate balance of life and death is not disrupted throughout this reality and
-                            many others.
-                        </p>
-
-                        <p>
-                            Out of sheer curiosity and boredom, he often traverses across different planets and
-                            realities to satisfy his itch to observe and see how possibilities play out (sometimes with
-                            a little nudge from him one way or another), but otherwise remains impartial in his
-                            observations an actions; only those daring to toy with the flow of life itself will see him
-                            stepping in.
-                        </p>
-
-                        <p>
-                            He is quite a stoic and serious man with a shitlord energy about him, quick witted and able
-                            to throw quips and verbal stabs towards others. Often accompanied by his &#39;son&#39; and
-                            companion star who is used as a stress ball to squeeze.
+                            Many would call them loud in different ways&mdash;in voice, energy, and their personality in
+                            general; one would not think they were anything but an adventurer that was way, way too
+                            enthusiastic and reckless for their own good. The years Sylvie has been alive have put them
+                            through a number of events and situations that have shaped their view of their world.
                         </p>
                     </div>
                 </section>
 
                 <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
-                <section class="third focal" data-tippy-content="Art by forcedcoma">
+                <section class="third focal">
                     <div class="flags">
                         <img
-                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/64506058_YQGpSvsyoVUaOsc.png?1688666560"
-                            alt="aroace flag"
-                            data-tippy-content="AroAce" />
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/92843298_6yYKC488KX24i9B.png?1734548412"
+                            alt="demiromantic and demisexual flag"
+                            data-tippy-content="Demirose" />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/64471049_6khJgSXAsOdENPh.png?1688662209"
                             alt="agender flag"
                             data-tippy-content="Agender" />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/70532447_sbE4v8YQlr0NMUu.png"
+                            alt="librafeminine flag"
+                            data-tippy-content="Librafeminine" />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/92835398_38tb8Uwx8AbJl9Q.png"
+                            alt="ADHD flag"
+                            data-tippy-content="ADHD" />
                     </div>
                 </section>
 
                 <!-- CHARACTER INFORMATION: MOBILE ------------------------------>
                 <section class="twothird first-order">
                     <!-- MOBILE INFORMATION, PLEASE COPY AND PASTE TO DESKTOP -->
-                    <h1>the ultimate universe hopper</h1>
+                    <h1>lord of the forest</h1>
                     <div class="row">
                         <div class="column">
                             <div class="stat-holder">
@@ -315,7 +319,13 @@
                                 <div>
                                     <!-- NAME -->
                                     <div class="stat-name">name</div>
-                                    <div>yadyra chóros</div>
+                                    <div>
+                                        foras / <span
+                                            class="tippy"
+                                            data-tippy-content="Old Persian. Wood ( daruv / 𐎭𐎠𐎽𐎢𐎺 ). God (baga / 𐏎 )."
+                                            >daruvbaga</span
+                                        >
+                                    </div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -325,14 +335,7 @@
                                 <div>
                                     <!-- AGE -->
                                     <div class="stat-name">age</div>
-                                    <div>
-                                        very, <i>very</i>
-                                        <span
-                                            class="tippy"
-                                            data-tippy-content="Like billions of years old, it's not worth tracking to him"
-                                            >old</span
-                                        >
-                                    </div>
+                                    <div>5,000+ years</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -342,7 +345,7 @@
                                 <div>
                                     <!-- GENDER -->
                                     <div class="stat-name">gender</div>
-                                    <div>agender</div>
+                                    <div>agender / librafeminine</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -351,7 +354,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">role</div>
-                                    <div>overseer and guardian of life</div>
+                                    <div>adventurer / traveller</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -361,7 +364,7 @@
                                 <div>
                                     <!-- AGE -->
                                     <div class="stat-name">alignment</div>
-                                    <div>true neutral</div>
+                                    <div>chaotic good</div>
                                 </div>
                             </div>
                         </div>
@@ -373,7 +376,7 @@
                                 <div>
                                     <!-- NICKNAMES / ALT NAMES -->
                                     <div class="stat-name">called</div>
-                                    <div>the pink man / guardian</div>
+                                    <div>sylvie</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -383,7 +386,7 @@
                                 <div>
                                     <!-- SPECIES -->
                                     <div class="stat-name">species</div>
-                                    <div>celestial being / god</div>
+                                    <div>elemental being / god</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -393,7 +396,7 @@
                                 <div>
                                     <!-- PRONOUNS -->
                                     <div class="stat-name">pronouns</div>
-                                    <div>he/him (or any)</div>
+                                    <div>they / she</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -402,47 +405,34 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">mbti</div>
-                                    <div>INTJ-A</div>
+                                    <div>ENFP-A</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
                                 <div class="statcon">
-                                    <i class="fa-solid fa-cloud-moon" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-leaf" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <div class="stat-name">element</div>
-                                    <div>time / space</div>
+                                    <div>dendro</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="scrollable">
+                    <div class="scrollable" style="max-height: 255px">
                         <p>
-                            Yadyra is what many would consider being an enigma; known as the balance and overseer of the
-                            universe as it is, a creature able to tear time and space asunder. The man easily scoffs at
-                            these stories and plays them down, though not out of humbleness, but more the desire to
-                            shrug them off&mdash;he sees no reason to awe over what to him merely seems like child&#39;s
-                            play.
+                            Sylvie is the vessel of the
+                            <span class="tippy" data-tippy-content="林王魔神 / Forest King Demon God">God of Trees</span
+                            >&mdash;a Dendro elemental lifeform adopted as a god by the people of Sumeru&mdash;that went
+                            by the name of Foras. Disillusioned with the aspect of godhood upon their revival from a
+                            death suffered during the Archon War, they have integrated into human life and have been
+                            travelling all over Teyvat for the last 1,500 years.
                         </p>
-
                         <p>
-                            Yadyra, at his core, is an old being born out of existence itself with a purpose to make
-                            sure the delicate balance of life and death is not disrupted throughout this reality and
-                            many others.
-                        </p>
-
-                        <p>
-                            Out of sheer curiosity and boredom, he often traverses across different planets and
-                            realities to satisfy his itch to observe and see how possibilities play out (sometimes with
-                            a little nudge from him one way or another), but otherwise remains impartial in his
-                            observations an actions; only those daring to toy with the flow of life itself will see him
-                            stepping in.
-                        </p>
-
-                        <p>
-                            He is quite a stoic and serious man with a shitlord energy about him, quick witted and able
-                            to throw quips and verbal stabs towards others. Often accompanied by his &#39;son&#39; and
-                            companion star who is used as a stress ball to squeeze.
+                            Many would call them loud in different ways&mdash;in voice, energy, and their personality in
+                            general; one would not think they were anything but an adventurer that was way, way too
+                            enthusiastic and reckless for their own good. The years Sylvie has been alive have put them
+                            through a number of events and situations that have shaped their view of their world.
                         </p>
                     </div>
                 </section>
@@ -459,7 +449,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 99%">
+                                    <div class="progresschunk" style="width: 3%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -473,7 +463,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 92%">
+                                    <div class="progresschunk" style="width: 35%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -487,7 +477,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 3%">
+                                    <div class="progresschunk" style="width: 50%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -501,7 +491,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 85%">
+                                    <div class="progresschunk" style="width: 75%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -529,7 +519,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 22%">
+                                    <div class="progresschunk" style="width: 80%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -543,7 +533,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 87%">
+                                    <div class="progresschunk" style="width: 33%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -557,7 +547,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 13%">
+                                    <div class="progresschunk" style="width: 40%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -571,7 +561,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 3%">
+                                    <div class="progresschunk" style="width: 10%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -585,7 +575,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 50%">
+                                    <div class="progresschunk" style="width: 10%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -599,7 +589,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 3%">
+                                    <div class="progresschunk" style="width: 60%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -613,7 +603,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 69%">
+                                    <div class="progresschunk" style="width: 5%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -627,23 +617,173 @@
                 <section class="half">
                     <h2><i class="fa-solid fa-heart" aria-hidden="true"></i> Likes</h2>
                     <ul>
-                        <li>books, many books...</li>
-                        <li>odd artifacts</li>
-                        <li>people doing the unexpected</li>
-                        <li>schedules and timeliness</li>
-                        <li>deflating big egos</li>
+                        <li>eating/trying new foods</li>
+                        <li>fashion/clothing</li>
+                        <li>doing dumb shit</li>
+                        <li>fun competitions</li>
+                        <li>new adventures</li>
                     </ul>
                 </section>
                 <!-- DISLIKES -->
                 <section class="half">
                     <h2><i class="fa-solid fa-heart-crack" aria-hidden="true"></i> Dislikes</h2>
                     <ul>
-                        <li>loud people</li>
-                        <li>most other celestials / gods</li>
-                        <li>minimalism aesthetics</li>
-                        <li>veering off schedules</li>
-                        <li>uncontrolled temper tantrums</li>
+                        <li>cold sensations</li>
+                        <li>tangled hair</li>
+                        <li>wet sensations</li>
+                        <li>being called old</li>
+                        <li>being ignored</li>
                     </ul>
+                </section>
+
+                <!-- DETAILED PERSONALITY ------------------------------>
+                <section class="full">
+                    <h2><i class="fa-solid fa-folder-open" aria-hidden="true"></i> Details</h2>
+                    <!-- DETAIL BLOCK: DEMEANOR -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-masks-theater" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">demeanor</div>
+                            <div>
+                                at their core, sylvie is a level headed person beyond the silly and humorous attitude
+                                they often tend to default to. they are a loving person at heart and tend to be warm to
+                                most people they meet, if not a little childish and silly if they come to like you. true
+                                in their convinctions, with an unwavering personality.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: TEMPERAMENT -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">temperament</div>
+                            <div>
+                                confident, sassy, and reassured of themselves; it's hard to not hear sylvie before you
+                                see them. they're loud and full of life and energy, finding enjoyment in the smallest of
+                                things. it's hard to ever find them without a grin or smirk on their face and a glimmer
+                                in their eyes.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: TEMPERAMENT -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-message" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">temperament</div>
+                            <div>
+                                an extrovert at their core, it's rare to find them by their lonesome; often sylvie can
+                                be located talking to people. conversations flow easily, and if their companions are
+                                more withdrawn, they feel no pressure in maintaning and continuing conversations on
+                                their own.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: INTELLECT -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-book" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">intellect</div>
+                            <div>
+                                due to sylvie's long-lived lifespan and the many, many experiences they've seen and
+                                lived through, they've grown to be observant of people and habits. although their own
+                                knowledge runs deep, their intellect is best shown in reading people and reacting on the
+                                spot to situations ... strategizing is not their strong suit, and they tend to prefer
+                                thinking and doing in the moment, which has lead to a metaphorical foot in the mouth.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: STRENGTH -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-crown" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">strengths</div>
+                            <div>
+                                friendly, open, good-natured, and warm, sylvie is someone who will stick by your side
+                                through thick and thin with a stupid smile on their face. they are level-headed and tend
+                                to rely on humour to help ease stressful situations while thinking on their feet how to
+                                resolve things, or open to offering a listening ear. fun-loving and sees the whimsy and
+                                joy in living despite their age.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: FLAWS -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-skull" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">flaws</div>
+                            <div>
+                                stubborn but in a way that's annoying, sylvie tends to be the type to dig their heels in
+                                when they believe their own ideas and truth; although open to listening to others, it is
+                                hard to get them to sway. they do not open up easily to people, despite their very
+                                chipper and open demeanour, more often people will realize they know very little about
+                                them in the grand scheme of things. nosy, rash, and often acts without thinking, which
+                                has lead them into situations where they've done more harm than good, or gotten hurt in
+                                the process.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: AMBITIONS -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-award" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">ambitions</div>
+                            <div>
+                                with a 500 year absence from being in the dark sea, sylvie is curious how the world has
+                                changed in that time; they are a traveller still at heart, and enjoy sponging in the
+                                experiences of the world to digest and indulge in, even if they are never satiated truly
+                                from their wanderlust. with the traveller's arrival and how things are slowly and
+                                quietly stirring, their curiosity is driven to see and follow alongside each beat of the
+                                story.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: NOTES -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">notes</div>
+                            <div>
+                                <ul>
+                                    <li style="line-height: 1em">
+                                        it is rare for sylvie to discuss much with others when it comes to their own
+                                        insecurity; after years of being a god-like figure, it's been integrated into
+                                        their brain that 'gods' do not show weakness. only zhongli and a few others have
+                                        seen their more vulnerable side.
+                                    </li>
+                                    <li style="line-height: 1em">
+                                        terribly competitive with the right people or circumstances; do not play TCG
+                                        against them, they are someone who is not shameless to make absolutely
+                                        disgusting decks to fight against.
+                                    </li>
+                                    <li style="line-height: 1em">
+                                        sylvie, although acting foolish and silly, is quick-witted and able to analyze
+                                        situations easily; this simple, welcoming personality is not a ruse as they are
+                                        truthful with it, but it does help to disarm people.
+                                    </li>
+                                    <li style="line-height: 1em">
+                                        ... sometimes they truly are stupid though and do say some dumb, unfiltered
+                                        stuff.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- STORY DETAILS ------------------------------>
@@ -651,11 +791,8 @@
                     <h1>Story</h1>
                     <img
                         src="https://f2.toyhou.se/file/f2-toyhou-se/images/63911350_j8M7RHTZ4naVmsr.png"
-                        style="max-height: 300px; float: right; padding: 5px"
-                        alt=""
-                        aria-hidden="true"
-                        data-tippy-content="Art by nekodoruBox" />
-                    <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Intro</h2>
+                        style="max-height: 300px; float: left; padding: 5px" />
+                    <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Section Title</h2>
                     <p>
                         Space is vast, full of endless possibilities, the ancient one whose eyes have seen the worlds
                         beyond him, and all around him, full of precious life, knowledge, people, more ... he goes on to
@@ -677,71 +814,6 @@
                         returned. This was interesting to him, how they reacted to him was also new. He mimicked their
                         humanness for a little while, getting used to the human language as a whole.
                     </p>
-                    <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Origin</h2>
-                    <p>
-                        A life that started with one thing. A wish. A desire to protect and prolong life. The beast
-                        opened his eyes for the first time upon this request. He doesn&#39;t know his birth, just his
-                        purpose. Watch, prolong, and react when necessary. Yes, that was right. He was a simple word, a
-                        guardian. Knowledge of it all belonged to him. All of it. He knows you, me, and the universe.
-                        But he will not mind it, at all.
-                    </p>
-
-                    <p>
-                        He simply wishes to watch life go on and observe the actions all forms of life take, be it with
-                        the simplest organism that actions are moving its cells around or the largest action of life
-                        moving in wars, the stars going out, or starting a new course of a sun. He sighs as the flow of
-                        the universe is ever unpredictable, but predictable at the same time.
-                    </p>
-
-                    <p>
-                        He landed on one of the many human parallel planets, unpredictable some of these humans are.
-                        Their feelings are sometimes too much of a &quot;thing.&quot; He found them interesting,
-                        hilarious, and something to observe more in-depth when he had a chance from his other
-                        curiosities. He walked with his self-made star, they were basically just a brilliant source of
-                        magic put into a star, giving them a will, but it&#39;s really just an acting program with a
-                        &quot;soul&quot;.
-                    </p>
-
-                    <p>
-                        As he was going about his day in this world, he came across a horrific scene&mdash;well ...
-                        horrific for a human. He had seen this before, a caravan attacked, looted, and left to burn, the
-                        one who likely drove this was either taken or killed. Sad as it was. It wasn&#39;t new to him,
-                        but what was the tiny life he found, the star that followed him pointed it out, still breathing,
-                        but not crying, and very weak.
-                    </p>
-
-                    <p>
-                        Yadyra had an idea. He would take the child, and see if he could change it. If not, it was going
-                        to die either way, so why not? There was so much time, for the little things. So, taking the
-                        child from the women&#39;s hands, he left. After many years, the child, he would name Glosyia, a
-                        play on to an ancient hero name, and quite a popular name around this time, even if it was a
-                        female&#39;s name, that didn&#39;t matter to him.
-                    </p>
-
-                    <p>
-                        He had planned to let the child go at some point, but he was, while experimenting, screwed it
-                        up, and accidentally implanted a small piece of himself into the child. Oh, well, a 1/5th of a
-                        personality, but ... he sighed, well, his child now, as it goes.
-                    </p>
-
-                    <p>
-                        As times passed, and the three, yes, three now, moved worlds together, regardless if had to be a
-                        little fetch story for his son, but that wasn&#39;t a story he was going to tell, no way in
-                        hell.
-                    </p>
-
-                    <p>
-                        ...He&#39;s been smiling at you, you know. Listening to his story, even if you are to never meet
-                        him again, he will always have known of you, and your story, rest assured, he found you
-                        interesting for the time, as you read, and for the time you were around.
-                    </p>
-
-                    <p>He won&#39;t wish anything for you, he has only seen you. And now you have seen him.</p>
-
-                    <p>
-                        &quot;Pleasent beginnings, is it not?&quot; He said, coldly, a toothy grin on his face. &mdash;
-                        <span class="display-user"><a href="https://toyhou.se/RuinedCrown">RuinedCrown</a></span>
-                    </p>
                 </section>
 
                 <!-- MOODBOARD ------------------------------>
@@ -756,9 +828,16 @@
                     </div>
                 </section>
 
-                <!-- DESIGN ------------------------------>
+                <!-- DESIGN ALTERNATIVE LAYOUT WITH IMAGE ------------------------------>
                 <section class="full">
                     <h1>Design</h1>
+                    <div class="design-image-huge">
+                        <img src="../Images/OC%20Stuff/Sylvie/humanRefSFW.jpg" alt="" loading="lazy" />
+                        <p style="text-align: center">
+                            <i>Design sheet, still needs to be updated for their pronouns + flags</i>
+                        </p>
+                    </div>
+                    <hr />
                     <div class="design-row">
                         <div class="design-info">
                             <!-- DETAILS -->
@@ -768,7 +847,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">height</div>
-                                    <div>5'7" / 170 cm</div>
+                                    <div>6'3" / 192 cm</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -777,7 +856,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">body type</div>
-                                    <div>slim and masculine, no definition</div>
+                                    <div>masculine and muscled, soft tummy</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -786,7 +865,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">eyes</div>
-                                    <div>crimson, subtle pink around pupil</div>
+                                    <div>green, with a light green ring</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -795,97 +874,126 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">hair length + colour</div>
-                                    <div>above shoulders, mid-pink</div>
+                                    <div>green gradient, reaches hips</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
                                 <div class="statcon">
-                                    <i class="fa-solid fa-question" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-shirt" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <div class="stat-name">extras</div>
-                                    <div>stubble, lines on his face, feathered ears</div>
+                                    <div class="stat-name">wardrobe</div>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                They tend to default to a simple outfit: low-cut frilly shirt,
+                                                waist-high black pants, and thigh-high brown boots.
+                                            </li>
+                                            <li>
+                                                Sylvie enjoys trying on various clothing in general, and finds appeal in
+                                                more revealing clothing.
+                                            </li>
+                                            <li>
+                                                Dresses and make-up are not off the table, and they actively enjoy
+                                                wearing both.
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="design-info" style="margin-top: 10px">
                             <h2><i class="fa-solid fa-palette" aria-hidden="true"></i> Design Notes</h2>
                             <ul>
                                 <li style="margin-top: 5px">
-                                    He has no human-like ears; the feathers adorning the sides of his head are his
-                                    'ears'.
+                                    Their eyebrows <u>are</u> green, I just tend to default to drawing them black;
+                                    artists can do either or!
+                                </li>
+                                <li>Their shirt opening can be simplified to not have any strings.</li>
+                                <li>
+                                    Their pupils act like a cat's, being able to dilate or turn into slits; by default I
+                                    tend to draw them slitted.
+                                </li>
+                                <li>They have sharp, canine-like teeth.</li>
+                                <li>Their vision is not a necessity to draw if need be.</li>
+                                <li>The fern they wear is only on the left side of their head.</li>
+                                <li>
+                                    <a href="https://www.tiktok.com/@majorpectoralis">Major pectoralis</a> is the body
+                                    reference they're based off.
                                 </li>
                                 <li>
-                                    The lines going down his face extend from jaw all the way up to underneath his hair.
-                                </li>
-                                <li>Multiple eyes are optional; they have no set place they appear on his body.</li>
-                                <li>
-                                    His arms and neck are 'feathered', following the same colour of his ear feathers,
-                                    though it is <u>not</u> a necessity to draw his hands feathered. His neck is a
-                                    <b>must</b> though.
-                                </li>
-                                <li>
-                                    Please view his
-                                    <a href="https://toyhou.se/5806515.yadyra/88363890">ref sheet</a> for full details.
+                                    Their full design sheet is
+                                    <a href="https://toyhou.se/10313327.sylvie/10793690.design-reference">here</a> on
+                                    Toyhouse, including additional design notes + 3D turnarounds.
                                 </li>
                             </ul>
                         </div>
-                        <div class="design-image"></div>
-                        <div class="pal-column">
-                            <div style="background: #ffe5d4" class="pal" data-tippy-content="#FFE5D4 / skin"></div>
-                            <div style="background: #d7788a" class="pal" data-tippy-content="#D7788A / hair"></div>
+                        <div class="pal-column-alt">
                             <div
-                                style="background: #bc1f3d"
+                                style="background: #ca8f69"
                                 class="pal"
-                                data-tippy-content="#BC1F3D / inner clothing"></div>
-                            <div style="background: #f18045" class="pal" data-tippy-content="#F18045 / gold trim"></div>
-                            <div style="background: #201513" class="pal" data-tippy-content="#201513 / cloth"></div>
-                            <div style="background: #613d38" class="pal" data-tippy-content="#613D38 / feathers"></div>
+                                data-tippy-content="#CA8F69 / skin + fur"></div>
+                            <div style="background: #844e39" class="pal" data-tippy-content="#844E39 / scar"></div>
+                            <div
+                                style="background: #4d6647"
+                                class="pal"
+                                data-tippy-content="#4D6647 / hair + eyes + fur"></div>
+                            <div
+                                style="background: #d4f4af"
+                                class="pal"
+                                data-tippy-content="#D4F4AF / hair + fur tips"></div>
+                            <div
+                                style="background: #23451b"
+                                class="pal"
+                                data-tippy-content="#23451B / leaf accents"></div>
+                            <div
+                                style="background: #865b44"
+                                class="pal"
+                                data-tippy-content="#865B44 / horns + boots"></div>
+                            <div style="background: #ececec" class="pal" data-tippy-content="#ECECEC / shirt"></div>
+                            <div
+                                style="background: #343434"
+                                class="pal"
+                                data-tippy-content="#343434 / pants + fur"></div>
+                            <div
+                                style="background: #f4ddb3"
+                                class="pal"
+                                data-tippy-content="#F4DDB3 / gold accents + hooves"></div>
                         </div>
                     </div>
                 </section>
 
                 <!-- TRIVIA + FOCAL IMAGE -->
-                <section class="third triviafocal" data-tippy-content="Art by vanillssugar"></section>
+                <section class="third triviafocal" data-tippy-content="Art by me"></section>
 
                 <section class="twothird">
                     <h1>Trivia</h1>
                     <div class="scrollable">
                         <ul>
                             <li>
-                                He has no true form; as a celestial being and with a celestial body, there is no
-                                solidness to his form. As such, he's decided upon a humanlike body that he's been
-                                maintaining for years, though devoid of any parts he deems unnecessary like organs.
+                                Sylvie cannot handle spice to save their life, despite a deep love of spicy food in
+                                general; they faked their spicy intolerance so hard it became real.
                             </li>
                             <li>
-                                As a hobby, he tends to place himself into worlds through what he likes to call
-                                'simulations', suppressing his memory and living in a world for as long as it amuses him
-                                or serves a purpose; this is among the few ways he finds amusement (and is an apt excuse
-                                for me to have him explore medias).
+                                Their ears are quite sensitive to touch, it may cause them to protectively cover their
+                                ears if anyone touches them or breathes close to them.
                             </li>
                             <li>
-                                Will break the fourth wall, considering he's made to be a being that's not constrained
-                                by such concepts. You know he can also talk to you, right?
+                                They can eat everything for the most part because their body can digest practically
+                                anything (minus anything originating from the void/abyss realm). even so, they are a
+                                massive foodie and prefer actual food.
                             </li>
                             <li>
-                                Although impartial, he has very much pushed and manipulated some planets to incite chaos
-                                and disorder for the sheer curiosity in what the outcome would be, though none of his
-                                adjustments are to lead to mass extinction.
+                                They tend to view grooming (brushing one's hair, etc) as a bonding, affectionate
+                                activity, so friends may find Sylvie working on their hair to fix it (or licking it if
+                                they're in their deer form).
                             </li>
                             <li>
-                                In the line of 'guardians', he is currently the fourth; it was only through meeting
-                                Ahaur that he even gained the knowledge of the existence of the other three who are now
-                                either retired or have been killed.
+                                Sylvie has no true human body; they have no organs inside of them and they fake their
+                                blood being 'red', in reality, they are just a human bag wrapped around pure dendro
+                                essence (thus their true 'blood' is green).
                             </li>
-                            <li>
-                                He and Ahaur tend to oversee the flow of life and death, which includes the
-                                reincarnation cycle of souls ... and the disposal and trimming of them through the demon
-                                network (with Nameless at its head).
-                            </li>
-                            <li>Unfortunate owner of a very pink cowboy hat ... thanks to Ahaur, mostly.</li>
-                            <li>
-                                Many tend to call him either the Guardian or Pink Man (derogatory); saying his name,
-                                although not taboo, is often avoided by most people.
-                            </li>
-                            <li>Makes some nice bread.</li>
+                            <li>Sylvie was made on <b>March 14, 2021</b>.</li>
                         </ul>
                     </div>
                 </section>
@@ -898,13 +1006,13 @@
                         <div class="relationshipbox">
                             <div class="relationshipicon">
                                 <img
-                                    src="https://f2.toyhou.se/file/f2-toyhou-se/characters/10116616?1614437372"
-                                    loading="lazy"
+                                    src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/91055006_YCj.png"
                                     alt=""
-                                    aria-hidden="true" />
+                                    aria-hidden="true"
+                                    loading="lazy" />
                             </div>
-                            <span class="relationshipname">Glosyia Chóros</span
-                            ><span class="relationshiptype"> &bull; 'son'</span>
+                            <span class="relationshipname">Zhongli</span
+                            ><span class="relationshiptype"> &bull; husband</span>
                             <div class="relationshiphearts">
                                 <i class="fa-solid fa-heart" aria-hidden="true"></i
                                 ><i class="fa-solid fa-heart" aria-hidden="true"></i
@@ -912,134 +1020,104 @@
                                 ><i class="fa-solid fa-heart" aria-hidden="true"></i
                                 ><i class="fa-solid fa-heart" aria-hidden="true"></i>
                             </div>
-                        </div>
-                        <!-- RELATIONSHIP BOX -->
-                        <div class="relationshipbox">
-                            <div class="relationshipicon">
-                                <img src="https://i.imgur.com/xhheRA6.png" loading="lazy" alt="" aria-hidden="true" />
-                            </div>
-
-                            <span class="relationshipname">Ahaur</span
-                            ><span class="relationshiptype"> &bull; sibling / sister</span>
-                            <div class="relationshiphearts">
-                                <i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            <div class="relationshipinfo">
+                                Their ground underneath their feet and the soil for their roots; Zhongli is a friend
+                                first before anything else, and Sylvie wouldn't give his companionship up for the world.
+                                Considering they've known each other for the last ~4,500 years, it's an understatement
+                                that they consider him dear to them (pun intended).
                             </div>
                         </div>
                         <!-- RELATIONSHIP BOX -->
                         <div class="relationshipbox">
                             <div class="relationshipicon">
-                                <img
-                                    src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/65524824_CM7.png"
-                                    loading="lazy"
-                                    alt=""
-                                    aria-hidden="true" />
+                                <img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/91055006_YCj.png" />
                             </div>
-                            <span class="relationshipname">Nameless</span
-                            ><span class="relationshiptype"> &bull; fun to bully</span>
+                            <span class="relationshipname">Name</span
+                            ><span class="relationshiptype"> &bull; relationship</span>
                             <div class="relationshiphearts">
                                 <i class="fa-solid fa-heart" aria-hidden="true"></i
                                 ><i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-regular fa-heart" aria-hidden="true"></i
-                                ><i class="fa-regular fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
                                 ><i class="fa-regular fa-heart" aria-hidden="true"></i>
                             </div>
+                            <div class="relationshipinfo">Blah blah blah blah blah blah blah blah blah blah</div>
+                        </div>
+                        <!-- RELATIONSHIP BOX -->
+                        <div class="relationshipbox">
+                            <div class="relationshipicon">
+                                <img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/91055006_YCj.png" />
+                            </div>
+                            <span class="relationshipname">Name</span
+                            ><span class="relationshiptype"> &bull; relationship</span>
+                            <div class="relationshiphearts">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <div class="relationshipinfo">Blah blah blah blah blah blah blah blah blah blah</div>
                         </div>
                     </div>
                 </section>
 
                 <!-- RIBBON COLLECTION ------------------------------>
                 <section class="full">
-                    <h2><i class="fa-solid fa-award" aria-hidden="true"></i> Ribbons and Badges</h2>
+                    <h2>Ribbons and Badges</h2>
 
                     <div class="badgeholder">
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/53915244_cMZV1mKUUW7T9rF.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Agender: This character has no gender." />
                         <img
                             src="https://i.imgur.com/oTG1ZcT.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="He/Him: This character uses he/him/himself pronouns." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/53929408_FjqlCS1Evzq4LCl.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Aromantic Asexual: This character does not experience romantic or sexual attraction." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/60686095_aiyXap9f1jphGDQ.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Parental Figure: This character is a parent or guardian." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/54103965_pKPvpIWWbqbwWZy.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Time: This character uses magic or has abilities relating to time." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/58626549_krCvC3dcnXMR5Qs.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Space: This character uses Space/Cosmic Magic." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/62647124_LhI7fZhQP2FKtts.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="God: This character is (a) God." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/58626517_jl0bYcEw3X3CyCk.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Shooting Star: This character originates from outer space." />
                         <img
                             src="https://i.imgur.com/rro5kpp.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Multiverse: This character exists in multiple universes or is part of a multiverse." />
                         <img
                             src="https://i.imgur.com/5V1nBPL.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content=" The Architect: This character has the INTJ personality type." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/55975608_stU8ReY3XZMTZBo.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="True Neutral: This character is of the true neutral alignment." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/53472659_CCLrUbk9CVEOGaO.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Best Everything: This character has their owners favorite design and story." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/51144774_7BY072yZ5sC631S.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Encyclopedia: This character's story is very detailed and thought-out." />
                         <img
                             src="https://file.toyhou.se/images/15987643_bvhutjRbgnwMYz3.png?1565855179"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Main Character: This character is high priority, very important character." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/64515662_dtd88sJLtmejtM5.png"
-                            loading="lazy"
-                            aria-hidden="true"
+                            placement="top"
                             data-tippy-content="Microphone: This character has a voice claim." />
                         <img
                             src="https://file.toyhou.se/images/15994704_nf7aEmw9Z4bJ629.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="Actor: This character was/is used in roleplay." />
                         <img
                             src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/17268339_ocb.png"
-                            loading="lazy"
-                            aria-hidden="true"
                             data-tippy-content="2018: This character was made in 2018." />
                     </div>
                 </section>
@@ -1048,77 +1126,52 @@
                 <section class="full">
                     <!-- CHANGE THIS LINK TO TH GALLERY -->
                     <a href="https://toyhou.se/5806515.yadyra/gallery" class="viewmore">View More</a>
-                    <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Image Gallery</h2>
+                    <h2>Image Gallery</h2>
 
                     <div class="image-gallery">
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by @_yaseii">
                             <a
-                                href="../Images/OC%20Stuff/Yadyra/gallery_1_full.jpg"
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/54500043_bb4KTjrbP2X5RtQ.png"
                                 loading="lazy"
                                 data-lightbox="gallery"
-                                aria-label="open image"
-                                ><img
-                                    src="../Images/OC%20Stuff/Yadyra/gallery_1_thumb.jpg"
-                                    alt=""
-                                    loading="lazy"
-                                    aria-hidden="true"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/54500043_bb4.png" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by Boludmilaz">
                             <a
-                                href="../Images/OC%20Stuff/Yadyra/gallery_2_full.jpg"
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/85210571_gbhyZ7GtQBXhWWl.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
-                                aria-label="open image"
-                                ><img
-                                    src="../Images/OC%20Stuff/Yadyra/gallery_2_thumb.jpg"
-                                    alt=""
-                                    loading="lazy"
-                                    aria-hidden="true"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/85210571_gbh.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by me">
                             <a
-                                href="../Images/OC%20Stuff/Yadyra/gallery_3_full.jpg"
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/66811108_2cTSzaOtyxI9GBj.png"
                                 loading="lazy"
                                 data-lightbox="gallery"
-                                aria-label="open image"
-                                ><img
-                                    src="../Images/OC%20Stuff/Yadyra/gallery_3_thumb.jpg"
-                                    alt=""
-                                    loading="lazy"
-                                    aria-hidden="true"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/66811108_2cT.png" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by Beelzebubx">
                             <a
-                                href="../Images/OC%20Stuff/Yadyra/gallery_4_full.jpg"
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/67992117_2DjtpcYpSTVzNlH.png"
                                 loading="lazy"
                                 data-lightbox="gallery"
-                                aria-label="open image"
-                                ><img
-                                    src="../Images/OC%20Stuff/Yadyra/gallery_4_thumb.jpg"
-                                    alt=""
-                                    loading="lazy"
-                                    aria-hidden="true"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/67992117_2Dj.png" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by Sylkoli">
                             <a
-                                href="../Images/OC%20Stuff/Yadyra/gallery_5_full.jpg"
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/63492253_cFz00aLOuxBFnIk.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
-                                aria-label="open image"
-                                ><img
-                                    src="../Images/OC%20Stuff/Yadyra/gallery_5_thumb.jpg"
-                                    alt=""
-                                    loading="lazy"
-                                    aria-hidden="true"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/63492253_cFz.jpg" alt=""
                             /></a>
                         </div>
                     </div>
