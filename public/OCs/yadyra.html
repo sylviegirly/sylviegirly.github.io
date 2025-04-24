@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Yadyra</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" type="text/css" href="../CSS/character.css" />
+        <link rel="stylesheet" href="../CSS/lightbox.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <script src="../Scripts/tab-title-suffix.js"></script>
+
+        <!-- JS: -->
+        <script src="../Scripts/lightbox-plus-jquery.js"></script>
+        <!-- Disclosure Menu -->
+        <script src="../Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <script src="../Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <style>
+            :root {
+                --primary-accent: #ad5f74;
+                --secondary-accent: #edb4c4;
+                --font-on-accent: #ffffff;
+
+                --link: #c38798;
+                --linkhover: #ffffff;
+
+                --letter-glow: rgba(177, 97, 119, 0.25);
+
+                --header-image: url("https://images.pexels.com/photos/2719301/pexels-photo-2719301.jpeg");
+                --focal-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/77333450_PkQirf08KpPheOL.png");
+                --design-image: url("https://i.imgur.com/1pSE61i.png");
+                --focal-trivia-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/91054878_fvmgkjH8RdryKXQ.png");
+
+                --moodboard-1-image: url("https://images.unsplash.com/photo-1540458638618-893e9fb35c07");
+                --moodboard-2-image: url("https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86");
+                --moodboard-3-image: url("https://images.unsplash.com/photo-1504701954957-2010ec3bcec1");
+                --moodboard-4-image: url("https://images.unsplash.com/photo-1608303852360-97cb721e42cc");
+                --moodboard-5-image: url("https://images.unsplash.com/photo-1562048048-86d659689440");
+            }
+
+            .w3-border {
+                border: 1px solid #ccc !important;
+            }
+            .w3-grey,
+            .w3-hover-grey:hover,
+            .w3-gray,
+            .w3-hover-gray:hover {
+                color: #000 !important;
+                background-color: #9e9e9e !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Please don't remove the next 2 lines! -->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+        <nav>
+            <button id="toggle-0" aria-label="Toggle main menu">☰</button>
+            <ul id="menu-0">
+                <li id="item-1-0-0"><a id="link-1-0-0" href="/index.html">Home</a></li>
+                <li id="item-2-0-0"><a id="link-2-0-0" href="/about.html">About Me</a></li>
+                <li id="item-3-0-0" class="dropdown">
+                    <a id="link-3-0-0" href="#">Personal</a>
+                    <ul id="menu-3">
+                        <li id="item-3-1-0"><a id="link-3-1-0" href="/blogging.html">Blog</a></li>
+                        <li id="item-3-2-0"><a id="link-3-2-0" href="/manifesto.html">Manifesto</a></li>
+                        <li id="item-3-3-0"><a id="link-3-3-0" href="/to-do.html">To-Do List</a></li>
+                    </ul>
+                </li>
+                <li id="item-4-0-0" class="dropdown">
+                    <a id="link-4-0-0" href="#">OCs / Shrines</a>
+                    <ul id="menu-4">
+                        <li id="item-4-1-0"><a id="link-4-1-0" href="#" class="disabled">Sylvie</a></li>
+                        <li id="item-4-2-0"><a id="link-4-2-0" href="../OCs/yadyra.html">Yadyra</a></li>
+                        <li id="item-4-3-0"><a id="link-4-3-0" href="#" class="disabled">Nameless</a></li>
+                        <li id="item-4-4-0" class="dropdown">
+                            <a id="link-4-4-0" href="#">Shrines</a>
+                            <ul id="menu-4-4">
+                                <li id="item-4-4-1"><a id="link-4-4-1" href="#" class="disabled">Zhongli</a></li>
+                                <li id="item-4-4-2">
+                                    <a id="link-4-4-2" href="#" class="disabled">Zhongvie (🌿🔶)</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="item-5-0-0" class="dropdown">
+                    <a id="link-5-0-0" href="#">Fun Things</a>
+                    <ul id="menu-5">
+                        <li id="item-5-1-0"><a id="link-5-1-0" href="/minecraft.html">Minecraft Forever World</a></li>
+                        <li id="item-5-2-0"><a id="link-5-2-0" href="/links.html">Neighbours / Webrings</a></li>
+                        <li id="item-5-3-0"><a id="link-5-3-0" href="#" class="disabled">Recipes</a></li>
+                    </ul>
+                </li>
+                <li id="item-6-0-0" class="dropdown">
+                    <a id="link-6-0-0" href="#">Others</a>
+                    <ul id="menu-6">
+                        <li id="item-6-1-0"><a id="link-6-1-0" href="https://asuraid.atabook.org/">Guestbook</a></li>
+                        <li id="item-6-2-0">
+                            <a id="link-6-2-0" href="/bookmarks.html" class="disabled">Bookmarks</a>
+                        </li>
+                        <li id="item-6-3-0"><a id="link-6-3-0" href="/sitemap.html">Sitemap</a></li>
+                        <li id="item-6-4-0"><a id="link-6-4-0" href="credits/html">Credits</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <header></header>
+
+        <!-- =============================================== -->
+        <!-- FONT TOGGLER. -->
+        <!-- =============================================== -->
+        <div id="font-toggle">
+            <button type="button" id="toggle-font" data-tippy-content="Switch fonts">toggle font</button>
+        </div>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div id="container">
+            <div id="sidebar">
+                <div id="sidebar-content">
+                    <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+                    <div class="icon">
+                        <img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/91055006_YCj.png" alt="" />
+                    </div>
+                    <div class="header">Yadyra Chóros</div>
+
+                    <!-- Quote -->
+                    <div class="quote">
+                        You'd be amazed as to how gods enjoy feeding on 'stories' and reading; I am one of those myself,
+                        but rather than a 'reader', I'd call myself a ... ghostwriter, perhaps
+                    </div>
+
+                    <!-- Navigation menu  -->
+                    <div class="" id="main-menu">
+                        <ul>
+                            <li><a href="https://toyhou.se/5806515.yadyra">Toyhouse</a></li>
+                            <li><a href="https://ca.pinterest.com/Asuraid/yadyra/">Pinterest</a></li>
+                        </ul>
+                    </div>
+                    <p>Stinky eldritch abomination man ... can you tell he's the guardian of life?</p>
+                </div>
+            </div>
+
+            <!-- Content area -->
+            <main id="content">
+                <!-- Section tags must be used for blocks -->
+
+                <!-- CHARACTER INFORMATION: DESKTOP ------------------------------>
+                <section class="twothird second-order">
+                    <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
+                    <h1>the ultimate universe hopper</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div>yadyra chóros</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>very, <i>very</i> old</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>agender</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">role</div>
+                                    <div>overseer and guardian of life</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>true neutral</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>the pink man / guardian</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>celestial being / god</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>he/him (or any)</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">mbti</div>
+                                    <div>INTJ-A</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-cloud-moon" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">element</div>
+                                    <div>time / space</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            Yadyra is what many would consider being an enigma; known as the balance and overseer of the
+                            universe as it is, a creature able to tear time and space asunder. The man easily scoffs at
+                            these stories and plays them down, though not out of humbleness, but more the desire to
+                            shrug them off&mdash;he sees no reason to awe over what to him merely seems like child&#39;s
+                            play.
+                        </p>
+
+                        <p>
+                            Yadyra, at his core, is an old being born out of existence itself with a purpose to make
+                            sure the delicate balance of life and death is not disrupted throughout this reality and
+                            many others.
+                        </p>
+
+                        <p>
+                            Out of sheer curiosity and boredom, he often traverses across different planets and
+                            realities to satisfy his itch to observe and see how possibilities play out (sometimes with
+                            a little nudge from him one way or another), but otherwise remains impartial in his
+                            observations an actions; only those daring to toy with the flow of life itself will see him
+                            stepping in.
+                        </p>
+
+                        <p>
+                            He is quite a stoic and serious man with a shitlord energy about him, quick witted and able
+                            to throw quips and verbal stabs towards others. Often accompanied by his &#39;son&#39; and
+                            companion star who is used as a stress ball to squeeze.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
+                <section class="third focal">
+                    <div class="flags">
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/64506058_YQGpSvsyoVUaOsc.png?1688666560"
+                            alt="aroace flag"
+                            data-tippy-content="AroAce" />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/64471049_6khJgSXAsOdENPh.png?1688662209"
+                            alt="agender flag"
+                            data-tippy-content="Agender" />
+                    </div>
+                </section>
+
+                <!-- CHARACTER INFORMATION: MOBILE ------------------------------>
+                <section class="twothird first-order">
+                    <!-- MOBILE INFORMATION, PLEASE COPY AND PASTE TO DESKTOP -->
+                    <h1>the ultimate universe hopper</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div>yadyra chóros</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>very, <i>very</i> old</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>agender</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">role</div>
+                                    <div>overseer and guardian of life</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>true neutral</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>the pink man / guardian</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>celestial being / god</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>he/him (or any)</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">mbti</div>
+                                    <div>INTJ-A</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-cloud-moon" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">element</div>
+                                    <div>time / space</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            This is the base framework that I use for my character pages. Its main feature is that it
+                            allows you to easily make a grid with varying element widths, which is ironically something
+                            much more easily accomplished with flexbox than grid. It's also a fairly good Tumblr
+                            knockoff layout if you're into that.
+                        </p>
+
+                        <p>
+                            <a href="https://github.com/kayleconut/kalechips-resources/blob/main/layouts/flex.html"
+                                >You can copy the source code for this from Github!</a
+                            >
+                            Or just take it from the view source page directly.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- PERSONALITY SLIDERS ------------------------------>
+                <section class="full">
+                    <h1>Character</h1>
+                    <div class="sliderow">
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>friendly</span>
+                                <span>reserved</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 99%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>polite</span>
+                                <span>blunt</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 92%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>clever</span>
+                                <span>foolish</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 3%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sensitive</span>
+                                <span>tough</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 85%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>confident</span>
+                                <span>diffident</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 3%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>careful</span>
+                                <span>reckless</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 22%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sincere</span>
+                                <span>deceptive</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 87%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>diligent</span>
+                                <span>lazy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 13%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>calm</span>
+                                <span>irritable</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 3%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>hopeful</span>
+                                <span>pessimistic</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 50%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>organized</span>
+                                <span>messy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 3%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>humorous</span>
+                                <span>serious</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 69%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LIKES AND DISLIKES ------------------------------>
+                <!-- LIKES -->
+                <section class="half">
+                    <h2><i class="fa-solid fa-heart" aria-hidden="true"></i> Likes</h2>
+                    <ul>
+                        <li>books, many books...</li>
+                        <li>odd artifacts</li>
+                        <li>people doing the unexpected</li>
+                        <li>schedules and timeliness</li>
+                        <li>deflating big egos</li>
+                    </ul>
+                </section>
+                <!-- DISLIKES -->
+                <section class="half">
+                    <h2><i class="fa-solid fa-heart-crack" aria-hidden="true"></i> Dislikes</h2>
+                    <ul>
+                        <li>loud people</li>
+                        <li>most other celestials / gods</li>
+                        <li>minimalism aesthetics</li>
+                        <li>veering off schedules</li>
+                        <li>uncontrolled temper tantrums</li>
+                    </ul>
+                </section>
+
+                <!-- STORY DETAILS ------------------------------>
+                <section class="full">
+                    <h1>Story</h1>
+                    <img
+                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/63911350_j8M7RHTZ4naVmsr.png"
+                        style="max-height: 300px; float: right; padding: 5px"
+                        alt=""
+                        aria-hidden="true" />
+                    <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Intro</h2>
+                    <p>
+                        Space is vast, full of endless possibilities, the ancient one whose eyes have seen the worlds
+                        beyond him, and all around him, full of precious life, knowledge, people, more ... he goes on to
+                        the next peak of his endless interests. There is so much to see, even if he knows it all, and
+                        the possibilities they have laid before themselves. Eyes that reach vastly across all time and
+                        space. The toothy grin of perhaps pride grows on him. It was always so fascinating to see change
+                        and how species grow.
+                    </p>
+                    <p>
+                        The worlds he has visited were always short visits, nothing ever beyond a few months since he's
+                        his curiosity was generally filled within the time frame, he couldn't say it was especially
+                        boring or unfilling, but he never really had any reason to stay to them, almost all of
+                        everything was the life that had a purpose that kept them moving in a rhythmic existence, and
+                        you cannot completely wish to watch more of it.
+                    </p>
+                    <p>
+                        But the planet Earth caught his interest, more than others since living here, the humans, had
+                        odd movements of life, they acted in harmony, others times pure chaos. His toothy grinned
+                        returned. This was interesting to him, how they reacted to him was also new. He mimicked their
+                        humanness for a little while, getting used to the human language as a whole.
+                    </p>
+                    <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Origin</h2>
+                    <p>
+                        A life that started with one thing. A wish. A desire to protect and prolong life. The beast
+                        opened his eyes for the first time upon this request. He doesn&#39;t know his birth, just his
+                        purpose. Watch, prolong, and react when necessary. Yes, that was right. He was a simple word, a
+                        guardian. Knowledge of it all belonged to him. All of it. He knows you, me, and the universe.
+                        But he will not mind it, at all.
+                    </p>
+
+                    <p>
+                        He simply wishes to watch life go on and observe the actions all forms of life take, be it with
+                        the simplest organism that actions are moving its cells around or the largest action of life
+                        moving in wars, the stars going out, or starting a new course of a sun. He sighs as the flow of
+                        the universe is ever unpredictable, but predictable at the same time.
+                    </p>
+
+                    <p>
+                        He landed on one of the many human parallel planets, unpredictable some of these humans are.
+                        Their feelings are sometimes too much of a &quot;thing.&quot; He found them interesting,
+                        hilarious, and something to observe more in-depth when he had a chance from his other
+                        curiosities. He walked with his self-made star, they were basically just a brilliant source of
+                        magic put into a star, giving them a will, but it&#39;s really just an acting program with a
+                        &quot;soul&quot;.
+                    </p>
+
+                    <p>
+                        As he was going about his day in this world, he came across a horrific scene&mdash;well ...
+                        horrific for a human. He had seen this before, a caravan attacked, looted, and left to burn, the
+                        one who likely drove this was either taken or killed. Sad as it was. It wasn&#39;t new to him,
+                        but what was the tiny life he found, the star that followed him pointed it out, still breathing,
+                        but not crying, and very weak.
+                    </p>
+
+                    <p>
+                        Yadyra had an idea. He would take the child, and see if he could change it. If not, it was going
+                        to die either way, so why not? There was so much time, for the little things. So, taking the
+                        child from the women&#39;s hands, he left. After many years, the child, he would name Glosyia, a
+                        play on to an ancient hero name, and quite a popular name around this time, even if it was a
+                        female&#39;s name, that didn&#39;t matter to him.
+                    </p>
+
+                    <p>
+                        He had planned to let the child go at some point, but he was, while experimenting, screwed it
+                        up, and accidentally implanted a small piece of himself into the child. Oh, well, a 1/5th of a
+                        personality, but ... he sighed, well, his child now, as it goes.
+                    </p>
+
+                    <p>
+                        As times passed, and the three, yes, three now, moved worlds together, regardless if had to be a
+                        little fetch story for his son, but that wasn&#39;t a story he was going to tell, no way in
+                        hell.
+                    </p>
+
+                    <p>
+                        ...He&#39;s been smiling at you, you know. Listening to his story, even if you are to never meet
+                        him again, he will always have known of you, and your story, rest assured, he found you
+                        interesting for the time, as you read, and for the time you were around.
+                    </p>
+
+                    <p>He won&#39;t wish anything for you, he has only seen you. And now you have seen him.</p>
+
+                    <p>
+                        &quot;Pleasent beginnings, is it not?&quot; He said, coldly, a toothy grin on his face. &mdash;
+                        <span class="display-user"><a href="https://toyhou.se/RuinedCrown">RuinedCrown</a></span>
+                    </p>
+                </section>
+
+                <!-- MOODBOARD ------------------------------>
+                <section class="full">
+                    <h1>Moodboard</h1>
+                    <div class="moodboard-grid">
+                        <div class="moodboard1"></div>
+                        <div class="moodboard2"></div>
+                        <div class="moodboard3"></div>
+                        <div class="moodboard4"></div>
+                        <div class="moodboard5"></div>
+                    </div>
+                </section>
+
+                <!-- DESIGN ------------------------------>
+                <section class="full">
+                    <h1>Design</h1>
+                    <div class="design-row">
+                        <div class="design-info">
+                            <!-- DETAILS -->
+                            <div class="stat-holder" style="margin-top: 10px">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-ruler" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">height</div>
+                                    <div>5'7" / 170 cm</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">body type</div>
+                                    <div>slim and masculine, no definition</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">eyes</div>
+                                    <div>crimson, subtle pink around pupil</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">hair length + colour</div>
+                                    <div>above shoulders, mid-pink</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-question" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">extras</div>
+                                    <div>stubble, lines on his face, feathered ears</div>
+                                </div>
+                            </div>
+                            <h2><i class="fa-solid fa-palette" aria-hidden="true"></i> Design Notes</h2>
+                            <ul>
+                                <li style="margin-top: 5px">
+                                    He has no human-like ears; the feathers adorning the sides of his head are his
+                                    'ears'.
+                                </li>
+                                <li>
+                                    The lines going down his face extend from jaw all the way up to underneath his hair.
+                                </li>
+                                <li>Multiple eyes are optional; they have no set place they appear on his body.</li>
+                                <li>
+                                    His arms and neck are 'feathered', following the same colour of his ear feathers,
+                                    though it is <u>not</u> a necessity to draw his hands feathered. His neck is a
+                                    <b>must</b> though.
+                                </li>
+                                <li>
+                                    Please view his
+                                    <a href="https://toyhou.se/5806515.yadyra/88363890">ref sheet</a> for full details.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="design-image"></div>
+                        <div class="pal-column">
+                            <div style="background: #ffe5d4" class="pal" data-tippy-content="#FFE5D4 / skin"></div>
+                            <div style="background: #d7788a" class="pal" data-tippy-content="#D7788A / hair"></div>
+                            <div
+                                style="background: #bc1f3d"
+                                class="pal"
+                                data-tippy-content="#BC1F3D / inner clothing"></div>
+                            <div style="background: #f18045" class="pal" data-tippy-content="#F18045 / gold trim"></div>
+                            <div style="background: #201513" class="pal" data-tippy-content="#201513 / cloth"></div>
+                            <div style="background: #613d38" class="pal" data-tippy-content="#613D38 / feathers"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TRIVIA + FOCAL IMAGE -->
+                <section class="third triviafocal" data-tippy-content="Art by vanillssugar"></section>
+
+                <section class="twothird">
+                    <h1>Trivia</h1>
+                    <div class="scrollable">
+                        <ul>
+                            <li>
+                                He has no true form; as a celestial being and with a celestial body, there is no
+                                solidness to his form. As such, he's decided upon a humanlike body that he's been
+                                maintaining for years, though devoid of any parts he deems unnecessary like organs.
+                            </li>
+                            <li>
+                                As a hobby, he tends to place himself into worlds through what he likes to call
+                                'simulations', suppressing his memory and living in a world for as long as it amuses him
+                                or serves a purpose; this is among the few ways he finds amusement (and is an apt excuse
+                                for me to have him explore medias).
+                            </li>
+                            <li>
+                                Will break the fourth wall, considering he's made to be a being that's not constrained
+                                by such concepts. You know he can also talk to you, right?
+                            </li>
+                            <li>
+                                Although impartial, he has very much pushed and manipulated some planets to incite chaos
+                                and disorder for the sheer curiosity in what the outcome would be, though none of his
+                                adjustments are to lead to mass extinction.
+                            </li>
+                            <li>
+                                In the line of 'guardians', he is currently the fourth; it was only through meeting
+                                Ahaur that he even gained the knowledge of the existence of the other three who are now
+                                either retired or have been killed.
+                            </li>
+                            <li>
+                                He and Ahaur tend to oversee the flow of life and death, which includes the
+                                reincarnation cycle of souls ... and the disposal and trimming of them through the demon
+                                network (with Nameless at its head).
+                            </li>
+                            <li>Unfortunate owner of a very pink cowboy hat ... thanks to Ahaur, mostly.</li>
+                            <li>
+                                Many tend to call him either the Guardian or Pink Man (derogatory); saying his name,
+                                although not taboo, is often avoided by most people.
+                            </li>
+                            <li>Makes some nice bread.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- RELATIONSHIPS -->
+                <section class="full">
+                    <h1>Relationships</h1>
+                    <div class="relationshipcontainer">
+                        <!-- RELATIONSHIP BOX -->
+                        <div class="relationshipbox">
+                            <div class="relationshipicon">
+                                <img src="https://f2.toyhou.se/file/f2-toyhou-se/characters/10116616?1614437372" />
+                            </div>
+                            <span class="relationshipname">Glosyia Chóros</span
+                            ><span class="relationshiptype"> &bull; 'son'</span>
+                            <div class="relationshiphearts">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <!-- RELATIONSHIP BOX -->
+                        <div class="relationshipbox">
+                            <div class="relationshipicon">
+                                <img src="https://i.imgur.com/xhheRA6.png" />
+                            </div>
+
+                            <span class="relationshipname">Ahaur</span
+                            ><span class="relationshiptype"> &bull; sibling / sister</span>
+                            <div class="relationshiphearts">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <!-- RELATIONSHIP BOX -->
+                        <div class="relationshipbox">
+                            <div class="relationshipicon">
+                                <img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/65524824_CM7.png" />
+                            </div>
+                            <span class="relationshipname">Nameless</span
+                            ><span class="relationshiptype"> &bull; fun to bully</span>
+                            <div class="relationshiphearts">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- RIBBON COLLECTION ------------------------------>
+                <section class="full">
+                    <h2>Ribbons and Badges</h2>
+
+                    <div class="badgeholder">
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/53915244_cMZV1mKUUW7T9rF.png"
+                            data-tippy-content="Agender: This character has no gender." />
+                        <img
+                            src="https://i.imgur.com/oTG1ZcT.png"
+                            data-tippy-content="He/Him: This character uses he/him/himself pronouns." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/53929408_FjqlCS1Evzq4LCl.png"
+                            data-tippy-content="Aromantic Asexual: This character does not experience romantic or sexual attraction." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/60686095_aiyXap9f1jphGDQ.png"
+                            data-tippy-content="Parental Figure: This character is a parent or guardian." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/54103965_pKPvpIWWbqbwWZy.png"
+                            data-tippy-content="Time: This character uses magic or has abilities relating to time." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/58626549_krCvC3dcnXMR5Qs.png"
+                            data-tippy-content="Space: This character uses Space/Cosmic Magic." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/62647124_LhI7fZhQP2FKtts.png"
+                            data-tippy-content="God: This character is (a) God." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/58626517_jl0bYcEw3X3CyCk.png"
+                            data-tippy-content="Shooting Star: This character originates from outer space." />
+                        <img
+                            src="https://i.imgur.com/rro5kpp.png"
+                            data-tippy-content="Multiverse: This character exists in multiple universes or is part of a multiverse." />
+                        <img
+                            src="https://i.imgur.com/5V1nBPL.png"
+                            data-tippy-content=" The Architect: This character has the INTJ personality type." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/55975608_stU8ReY3XZMTZBo.png"
+                            data-tippy-content="True Neutral: This character is of the true neutral alignment." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/53472659_CCLrUbk9CVEOGaO.png"
+                            data-tippy-content="Best Everything: This character has their owners favorite design and story." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/51144774_7BY072yZ5sC631S.png"
+                            data-tippy-content="Encyclopedia: This character's story is very detailed and thought-out." />
+                        <img
+                            src="https://file.toyhou.se/images/15987643_bvhutjRbgnwMYz3.png?1565855179"
+                            data-tippy-content="Main Character: This character is high priority, very important character." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/64515662_dtd88sJLtmejtM5.png"
+                            placement="top"
+                            data-tippy-content="Microphone: This character has a voice claim." />
+                        <img
+                            src="https://file.toyhou.se/images/15994704_nf7aEmw9Z4bJ629.png"
+                            data-tippy-content="Actor: This character was/is used in roleplay." />
+                        <img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/17268339_ocb.png"
+                            data-tippy-content="2018: This character was made in 2018." />
+                    </div>
+                </section>
+
+                <!-- PHOTO GALLERY ------------------------------>
+                <section class="full">
+                    <!-- CHANGE THIS LINK TO TH GALLERY -->
+                    <a href="https://toyhou.se/5806515.yadyra/gallery" class="viewmore">View More</a>
+                    <h2>Image Gallery</h2>
+
+                    <div class="image-gallery">
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by @_yaseii">
+                            <a
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/54500043_bb4KTjrbP2X5RtQ.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/54500043_bb4.png" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by Boludmilaz">
+                            <a
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/85210571_gbhyZ7GtQBXhWWl.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/85210571_gbh.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by me">
+                            <a
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/66811108_2cTSzaOtyxI9GBj.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/66811108_2cT.png" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by Beelzebubx">
+                            <a
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/67992117_2DjtpcYpSTVzNlH.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/67992117_2Dj.png" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by Sylkoli">
+                            <a
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/63492253_cFz00aLOuxBFnIk.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/63492253_cFz.jpg" alt=""
+                            /></a>
+                        </div>
+                    </div>
+                </section>
+
+                <footer id="main-footer">
+                    <p>
+                        Coded by <a href="https://zhongvie.neocities.org/">Aid</a>, inspired from
+                        <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's layout</a>, using kalechip's
+                        <a href="https://kalechips.net/projects/layouts/">template</a>.
+                    </p>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+        <script src="../Scripts/font_toggle.js"></script>
+        <script src="../Scripts/scroll-to-top.js"></script>
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    </body>
+</html>
