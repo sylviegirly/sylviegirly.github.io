@@ -1001,9 +1001,10 @@ footer a:hover {
     border-radius: var(--border-radius); /* Rounded corners */
     font-size: 1.1rem; /* Increase font size */
     font-family: "atkinson";
+    transition: 0.5s;
 }
 
-#myBtn:hover {
+#backscroll:hover {
     background-color: var(--secondary-accent); /* Add a dark-grey background on hover */
 }
 
