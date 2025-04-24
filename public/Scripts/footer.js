@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const footer = `
 <footer>
     <p>
-        2025 - 2025. Lovingly coded by <a href="https://zhongvie.neocities.org">aid</a>, with layout help from
-        <a href="https://sadgrl.online">sadgrl.online</a> and
-        <a href="https://petrapixel.neocities.org">petrapixel</a>. Layout inspired by <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie</a>.
+        2025 — forevermore <i>/</i> lovingly coded by <a href="https://zhongvie.neocities.org">aid</a> <i>/</i> <a href="https://zhongvie.neocities.org/credits">credits</a> <i>/</i> <a href="https://asuraid.atabook.org/">guestbook</a>
     </p>
 </footer>
 `;
