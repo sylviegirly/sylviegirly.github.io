@@ -881,6 +881,7 @@ button {
 }
 
 .relationshipinfo {
+    text-align: left;
     margin-top: 10px;
     background-color: var(--background);
     border-radius: var(--border-radius);
@@ -1085,7 +1086,7 @@ button {
     }
 
     .relationshipinfo {
-        height: 150px;
+        height: 200px;
     }
 
     .pal-column-alt {
