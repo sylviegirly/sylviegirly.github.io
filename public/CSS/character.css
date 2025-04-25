@@ -974,6 +974,10 @@ button {
     justify-content: center;
 }
 
+.badgeholder img {
+    align-self: center;
+}
+
 /* Sliders */
 .sliderow {
     display: flex !important;
