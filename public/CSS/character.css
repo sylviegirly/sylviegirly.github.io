@@ -533,10 +533,14 @@ abbr {
 summary {
     font-size: 1em;
     color: var(--secondary-accent);
-    text-decoration: underline;
-    text-decoration-style: double;
+    text-decoration: none;
     padding: 5px;
     margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+summary:hover {
+    text-decoration: underline;
 }
 
 details {
@@ -544,7 +548,7 @@ details {
     border-radius: var(--border-radius);
     padding: 5px;
     padding-left: 10px;
-    margin: 5px;
+    margin: 10px 5px;
     border-left: 5px solid var(--secondary-accent);
 }
 

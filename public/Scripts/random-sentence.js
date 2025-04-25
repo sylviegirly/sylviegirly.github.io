@@ -6,6 +6,7 @@ const sentence = [
         "gooodbyee 200 dollars helloo piece of pleastic<br/><i>— <a href='https://www.tumblr.com/emetiq/754135509162409984' style='font-size: 0.8em' target='_blank'>emetiq</a></i>",
         "why cant my support system be my beautiful stable mind and problem solving skills and nothing else<br/><i>— <a href='https://www.tumblr.com/3000s/715936227540582400' style='font-size: 0.8em'>3000s</a></i>",
         "think about your blorbos ON THE CLOCK<br/><i>— <a href='https://www.tumblr.com/blorbobrain/775964211427803136' style='font-size: 0.8em'>blorbobrain</a></i>",
+        "85% tired 15% also tired<br/><i>— <a href='https://1st-1.tumblr.com/post/183847953452' style='font-size: 0.8em'>1st-1</a></i>",
         "i hope i am not only a mutual to you but also someone you can point at a fictional character and go 'oh shit that guy on tumblr is super fucking mentally unwell about that one' about<br/><i>— <a href='https://www.tumblr.com/adolescenceknight/754619849466118144' style='font-size: 0.8em'>adolescenceknight</a></i>",
         "clocking in for another day at the i dont wanna factory<br/><i>— <a href='https://cbc-bb.tumblr.com/post/744838020593827840' style='font-size: 0.8em' target='_blank'>cbc-bb</a></i>",
         "Get up girls we have another day of obsessing over fictional characters to cope with reality ahead of us <br/><i>— <a href='https://sylviegirly.tumblr.com/post/775491641278595072' style='font-size: 0.8em'>euphoricfez</a></i>",
