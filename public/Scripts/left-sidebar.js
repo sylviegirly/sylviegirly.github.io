@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "<a href='https://www1.flightrising.com/clan-profile/257170'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_7.png' aria-hidden='true' alt=''/></a>",
         "<a href='https://www1.flightrising.com/clan-profile/674713'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_6.png' aria-hidden='true' alt=''/></a>",
         "<a href='https://vgen.co/EFR4INZ'><img class='full-width-image' src='Images/Side Decorations/sylvie_emote.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://toyhou.se/Opossun'><img class='full-width-image' src='Images/Side Decorations/sylvie_deer_1.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://www1.flightrising.com/clan-profile/394089'><img class='full-width-image' src='Images/Side Decorations/sylvie_deer_2.png' aria-hidden='true' alt=''/></a>",
         "<a href='https://leeleesart.tumblr.com/'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_5.png' aria-hidden='true' alt='' title='thank you lily for the bday gift :)'/></a>",
         "<a href='https://x.com/mawbyte'><img class='full-width-image' src='Images/Side Decorations/sylvie_plant.png' aria-hidden='true' alt=''/></a>",
         "<a href='https://www1.flightrising.com/clan-profile/348859'><img class='full-width-image' src='Images/Side Decorations/sylvie_deer.png' aria-hidden='true' alt=''/></a>",
@@ -17,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "<a href='https://twitter.com/magaridilatte'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_4.png' aria-hidden='true' alt=''/></a>",
         "<a href='https://vgen.co/SakiKagami_'><img class='full-width-image' src='Images/Side Decorations/sylvie_in_a_box.png' aria-hidden='true' alt=''/></a>",
         "<a href='https://vgen.co/42NEDIA'><img class='full-width-image' src='Images/Side Decorations/sylvie_christmas.png' aria-hidden='true' alt='' title='gift from ghost :)'/></a>",
-        "<img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_3.png' aria-hidden='true' alt='' title='art by me'/>"    ];
+        "<img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_3.png' aria-hidden='true' alt='' title='art by me'/>"
+    ];
 
     // this chooses a random number from all available image indices
     const randomImage = images[Math.floor(Math.random() * images.length)];

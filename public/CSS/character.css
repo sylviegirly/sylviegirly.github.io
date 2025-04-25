@@ -1061,6 +1061,14 @@ button {
         0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+.accordion {
+    display: none;
+}
+
+.panel {
+    display: none;
+}
+
 /* -------------------------------------------------------- */
 /* SCROLL TO TOP */
 /* -------------------------------------------------------- */
@@ -1089,6 +1097,70 @@ button {
 /* The following CSS ONLY applies to desktop/big screens */
 
 @media screen and (min-width: 800px) {
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+        font-family: "freepixel";
+        display: block;
+        cursor: pointer;
+        padding: 8px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        border-radius: var(--border-radius);
+    }
+
+    .active,
+    .accordion:hover {
+        background-color: var(--background);
+    }
+
+    .accordion:before {
+        content: "\002B";
+        color: var(--secondary-accent);
+        font-weight: bold;
+        float: left;
+        margin-right: 5px;
+    }
+
+    .active:before {
+        content: "\2212";
+    }
+
+    .panel {
+        display: block;
+        text-align: left;
+        font-size: 0.75em;
+        padding: 0 5px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        padding-left: 25px;
+    }
+
+    .panel a {
+        color: var(--secondary-accent);
+        transition: 0.5s;
+    }
+
+    .panel a:hover {
+        color: var(--linkhover);
+    }
+
+    .panel ul {
+        list-style: square;
+    }
+
+    .panel li {
+        margin-bottom: 5px;
+    }
+
+    .panel li::marker {
+        color: var(--secondary-accent);
+    }
+
     .relationshipbox {
         flex: 0 0 30%;
         max-width: 30%;
