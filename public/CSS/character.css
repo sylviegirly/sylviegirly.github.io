@@ -887,8 +887,9 @@ button {
     border-radius: var(--border-radius);
     padding: 10px;
     width: 95%;
-    height: 100px;
+    height: auto;
     overflow: auto;
+    margin-bottom: 10px;
 }
 
 .relationshipname {
@@ -1091,6 +1092,7 @@ button {
 
     .relationshipinfo {
         height: 200px;
+        margin-bottom: 0;
     }
 
     .pal-column-alt {
