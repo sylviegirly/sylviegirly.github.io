@@ -311,7 +311,7 @@ aside a:hover {
 /* -------------------------------------------------------- */
 
 .tippy-tooltip.character-theme {
-    color: var(--font-on-accent);
+    color: black;
     letter-spacing: 1px;
     font-size: 1em;
     font-family: "atkinson";
