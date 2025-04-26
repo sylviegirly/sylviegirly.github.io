@@ -328,6 +328,7 @@ nav li.dropdown ul li.dropdown ul a {
 
 /* Images */
 .image-gallery div img {
+    aspect-ratio: 1/1;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -841,11 +842,12 @@ button {
 }
 
 .design-image-huge {
-    width: 100%;
+    min-width: 100%;
 }
 
 .design-image-huge img {
     border-radius: 20px;
+    min-width: 100%;
 }
 
 /* RELATIONSHIP LAYOUT */
