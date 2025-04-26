@@ -1113,7 +1113,7 @@ button {
     }
 
     .active,
-    .accordion:hover {
+    .accordion:hover, .accordion:focus {
         background-color: var(--background);
     }
 
