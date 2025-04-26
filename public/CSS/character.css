@@ -1090,7 +1090,8 @@ button {
     transition: 0.5s;
 }
 
-#backscroll:hover {
+#backscroll:hover,
+#backscroll:focus {
     background-color: var(--secondary-accent); /* Add a dark-grey background on hover */
 }
 
@@ -1113,7 +1114,8 @@ button {
     }
 
     .active,
-    .accordion:hover, .accordion:focus {
+    .accordion:hover,
+    .accordion:focus {
         background-color: var(--background);
     }
 
