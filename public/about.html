@@ -153,6 +153,52 @@
                 </article>
                 <article>
                     <h1>
+                        <img
+                            src="Images/General%20Decorations/hanging_flowers.gif"
+                            aria-hidden="true"
+                            alt=""
+                            loading="lazy" />
+                        They're Me FR
+                    </h1>
+
+                    <div class="image-gallery">
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Ororon - Genshin Impact">
+                            <img
+                                src="https://assetsio.gnwcdn.com/Genshin-Impact-Ororon-materials%2C-kit%2C-and-Constellations-cover.jpg?width=690&quality=70&format=jpg&auto=webp"
+                                alt=""
+                                loading="lazy"
+                                aria-hidden="true" />
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Maomao - Apothecary Diaries">
+                            <img
+                                src="https://i.pinimg.com/736x/04/df/f8/04dff883de5a60d1cf0947fdbfb52564.jpg"
+                                alt=""
+                                loading="lazy"
+                                aria-hidden="true" />
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Yusuke - Persona 5">
+                            <img
+                                src="https://i.pinimg.com/736x/e8/10/14/e81014bff2a1a3223f52ae045db2a274.jpg"
+                                alt=""
+                                loading="lazy"
+                                aria-hidden="true" />
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Castorice - Honkai Star Rail">
+                            <img
+                                    src="https://i.pinimg.com/736x/56/32/ad/5632ad8ebeebda0c213e058f8996f2c9.jpg"
+                                    alt=""
+                                    loading="lazy"
+                                    aria-hidden="true"
+                            />
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h1>
                         <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" /> Socials
                     </h1>
                     <p>
@@ -639,7 +685,17 @@
         <general-footer></general-footer>
 
         <!-- Additional JS -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
         <script src="Scripts/font_toggle.js"></script>
+        <script src="Scripts/"></script>
         <script src="Scripts/scroll-to-top.js"></script>
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
         <script src="Scripts/tabs.js"></script>

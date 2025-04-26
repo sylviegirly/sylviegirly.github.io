@@ -307,6 +307,34 @@ aside a:hover {
 }
 
 /* -------------------------------------------------------- */
+/* TIPPY STYLING */
+/* -------------------------------------------------------- */
+
+.tippy-tooltip.character-theme {
+    color: var(--font-on-accent);
+    letter-spacing: 1px;
+    font-size: 1em;
+    font-family: "atkinson";
+    background: var(--primary-accent);
+    box-shadow:
+        rgba(0, 0, 0, 0.16) 0 10px 36px 0,
+        rgba(0, 0, 0, 0.06) 0 0 0 1px;
+}
+
+.tippy-tooltip.character-theme[data-placement^="top"] .tippy-arrow {
+    border-top-color: var(--primary-accent);
+}
+.tippy-tooltip.character-theme[data-placement^="bottom"] .tippy-arrow {
+    border-bottom-color: var(--primary-accent);
+}
+.tippy-tooltip.character-theme[data-placement^="left"] .tippy-arrow {
+    border-left-color: var(--primary-accent);
+}
+.tippy-tooltip.character-theme[data-placement^="right"] .tippy-arrow {
+    border-right-color: var(--primary-accent);
+}
+
+/* -------------------------------------------------------- */
 /* HEADER */
 /* -------------------------------------------------------- */
 
@@ -918,6 +946,7 @@ footer a:hover {
 
     .image-gallery div {
         width: calc(50% - 10px);
+        overflow: hidden;
     }
 
     .intro {
@@ -1223,6 +1252,7 @@ footer a:hover {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    aspect-ratio: 1/1;
 }
 
 /* Images on Hover */
