@@ -12,16 +12,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- FavIcon -->
-        <link ref="favicon" href="favicon.ico" />
-
-        <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="styles-alt.css" />
+        <link ref="favicon" href="../favicon.ico" />
 
         <style>
             body {
                 width: 100%;
+                background-color: #211f1f;
+                color: white;
+                font-family: "freepixel";
+                line-height: 1.3rem;
+                letter-spacing: 0;
+                background-image: url(https://i.imgur.com/j5DXHGi.png);
             }
 
             .container {
@@ -36,8 +37,21 @@
                 text-align: center;
             }
 
+            a {
+                color: lightgreen;
+            }
+
+            a:hover {
+                color: white;
+            }
+
             a:visited {
-                color: var(--secondary-accent);
+                color: lightgreen;
+            }
+
+            @font-face {
+                font-family: "freepixel";
+                src: url(Fonts/FreePixel.ttf);
             }
         </style>
     </head>
