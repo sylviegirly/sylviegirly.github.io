@@ -70,7 +70,7 @@ body {
     background-color: var(--background-colour);
     color: var(--text-colour);
     font-family: "freepixel";
-    line-height: 1.3rem;
+    line-height: 1.3em;
     letter-spacing: 0;
     background-image: url(https://i.imgur.com/j5DXHGi.png);
 }
@@ -83,7 +83,7 @@ section,
 article {
     background-color: var(--article-bg);
     border-radius: var(--border-radius);
-    padding: 1rem;
+    padding: 1em;
     box-shadow: 6px 6px 0 var(--letter-glow);
 }
 
