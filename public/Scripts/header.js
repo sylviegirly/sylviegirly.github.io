@@ -28,7 +28,7 @@ const content = `
             <ul id="menu-4">
                 <li id="item-4-1-0"><a id="link-4-1-0" href="/OCs/sylvie.html">Sylvie</a></li>
                 <li id="item-4-2-0"><a id="link-4-2-0" href="/OCs/yadyra.html">Yadyra</a></li>
-                <li id="item-4-3-0"><a id="link-4-3-0" href="#" class="disabled">Nameless</a></li>
+                <li id="item-4-3-0"><a id="link-4-3-0" href="/OCs/nameless.html">Nameless</a></li>
                 <li id="item-4-4-0" class="dropdown">
                     <a id="link-4-4-0" href="#">Shrines</a>
                     <ul id="menu-4-4">
