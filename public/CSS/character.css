@@ -709,6 +709,7 @@ button {
 
 .focal {
     min-height: 400px !important;
+    background-color: var(--secondary-accent);
     background-image: var(--focal-image);
     background-size: cover;
     background-position: top;
