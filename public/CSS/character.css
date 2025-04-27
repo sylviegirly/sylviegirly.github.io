@@ -159,6 +159,9 @@ nav ul ul {
     text-transform: lowercase;
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
+    text-align: left;
+    max-width: max-content;
+        min-width: 175px;
 }
 nav ul ul a {
     color: white;
