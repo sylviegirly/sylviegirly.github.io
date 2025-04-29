@@ -580,6 +580,36 @@
                 border-right-color: var(--tippy-bg);
             }
 
+            /* BASIC INFO */
+            .info-holder {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+                gap: 8px;
+                box-sizing: border-box;
+            }
+
+            .info-container {
+                align-content: center;
+                justify-content: center;
+                font-size: 0.8em;
+                background-color: var(--background);
+                display: flex;
+                padding: 10px;
+                border-radius: var(--border-radius);
+                justify-content: space-between;
+                margin: 10px 0;
+            }
+
+            .subtle {
+                opacity: 0.7;
+            }
+
+            .info-holder img {
+                max-width: 200px;
+                border-radius: var(--border-radius);
+            }
+
             /* The following CSS ONLY applies to mobile/small screens */
 
             /* Container styling */
@@ -639,6 +669,11 @@
             /* The following CSS ONLY applies to desktop/big screens */
 
             @media screen and (min-width: 800px) {
+                /* BASIC INFO */
+            .info-holder {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
                 #content {
                     border-radius: 0px 10px 10px 0px;
                 }
@@ -698,6 +733,7 @@
                 <ul>
                     <!--Menu links-->
                     <li><a href="#" class="tab active" data-tab="home">Home</a></li>
+                    <li><a href="#" class="tab" data-tab="info">Basic Info</a></li>
                     <li><a href="#" class="tab" data-tab="history">History</a></li>
                     <li><a href="#" class="tab" data-tab="art">Artwork Gallery</a></li>
                     <li><a href="#" class="tab" data-tab="aesthetics">Aesthetics</a></li>
@@ -749,6 +785,78 @@
                                     data-tippy-content="Art by HobblyWobbly"
                                     style="max-height: 250px"
                             /></a>
+                        </div>
+                    </div>
+                    <div id="info" class="tab-panel">
+                        <div class="info-holder">
+                            <div>
+                                <div class="center-img">
+                                    <img
+                                        src="../Images/OC%20Stuff/Sylvie/gallery_1_thumb.jpg"
+                                        alt="An icon of Sylvie" />
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">gender</span>
+                                    <span>agender</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">orientation</span>
+                                    <span>demisexual</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">birthday</span>
+                                    <span>march 20th</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">height</span>
+                                    <span>6'3"</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">mbti</span>
+                                    <span>ENFP</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">element</span>
+                                    <span>dendro</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">occupation</span>
+                                    <span>traveller / adventurer</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="center-img">
+                                    <img src="../Images/OC%20Stuff/Others/zhongli.jpg" alt="An icon of Zhongli" />
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">gender</span>
+                                    <span>agender</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">orientation</span>
+                                    <span>demisexual</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">birthday</span>
+                                    <span>december 31st</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">height</span>
+                                    <span>6'1"</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">mbti</span>
+                                    <span>ISTJ</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">element</span>
+                                    <span>geo</span>
+                                </div>
+                                <div class="info-container">
+                                    <span class="subtle">occupation</span>
+                                    <span>funeral consultant</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div id="history" class="tab-panel">
