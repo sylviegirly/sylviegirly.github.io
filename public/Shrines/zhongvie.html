@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
 
+        <link rel="stylesheet" href="../CSS/lightbox.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <script src="../Scripts/lightbox-plus-jquery.js"></script>
 
         <style>
             /* The following CSS applies on all screen sizes */
@@ -140,6 +143,67 @@
                 background-position: var(--banner-position-mobile);
                 background-size: cover;
                 height: 250px;
+            }
+
+            /* -------------------------------------------------------- */
+            /* GALLERY */
+            /* -------------------------------------------------------- */
+            /* Wrapper */
+            .image-gallery {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 10px;
+            }
+
+            /* Items */
+            .image-gallery div {
+                width: calc(33% - 10px);
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border: 5px solid var(--link);
+                border-radius: var(--border-radius);
+                overflow: hidden;
+                transition: transform 0.5s ease;
+            }
+
+            /* Images */
+            .image-gallery div img {
+                aspect-ratio: 1/1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            /* Images on Hover */
+            .image-gallery div:hover img {
+                transform: scale(1.15) rotate(10deg);
+            }
+
+            .viewmore {
+                background: var(--block);
+                float: right;
+                color: var(--color);
+                border: 2px solid var(--link);
+                padding: 6px;
+                width: 100px;
+                margin: 2px;
+                border-radius: var(--border-radius);
+                transition: 0.5s;
+                margin-top: 0;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            .viewmore:hover {
+                border-color: var(--linkhover);
             }
 
             /* Aesthetic Gallery */
@@ -669,10 +733,14 @@
             /* The following CSS ONLY applies to desktop/big screens */
 
             @media screen and (min-width: 800px) {
+                .image-gallery div {
+                    width: calc(25% - 10px);
+                }
+
                 /* BASIC INFO */
-            .info-holder {
-                grid-template-columns: repeat(2, 1fr);
-            }
+                .info-holder {
+                    grid-template-columns: repeat(2, 1fr);
+                }
 
                 #content {
                     border-radius: 0px 10px 10px 0px;
@@ -1190,14 +1258,148 @@
                         </div>
                     </div>
                     <div id="art" class="tab-panel">
-                        <p>
-                            Pictures will exist here eventually when I have the brain power to haul over my gallery +
-                            lightbox CSS and HTML, for now
-                            <a href="https://toyhou.se/10313327.sylvie/14798357.zhongvie/gallery">their Toyhouse</a>
-                            will always have the bulk of their commissions / art.
-                        </p>
+                        <a href="https://toyhou.se/10313327.sylvie/14798357.zhongvie/gallery" class="viewmore"
+                            >View More</a
+                        >
+                        <h1>Artwork Gallery</h1>
                         <div class="center-img">
-                            <img src="../Images/Misc/wipatrick.png" />
+                            <img
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                    src="https://64.media.tumblr.com/3998cb463bc0795da5171abb001ff125/6b885501b1483b48-c1/s1280x1920/fbd2a113028dfeec74fe3141df862ad1bab46195.png"
+                            />
+                        </div>
+                        <div class="image-gallery">
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div data-tippy-content="Art by Artist">
+                                <a
+                                    href="https://placehold.co/700x400"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="https://placehold.co/200x200" alt=""
+                                /></a>
+                            </div>
+                        </div>
+                        <div class="center-img">
+                            <a href="https://www.tumblr.com/thecutestgrotto/776666382624587777/vines">
+                                <img
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                    src="https://64.media.tumblr.com/3998cb463bc0795da5171abb001ff125/6b885501b1483b48-c1/s1280x1920/fbd2a113028dfeec74fe3141df862ad1bab46195.png"
+                            /></a>
                         </div>
                     </div>
                     <div id="aesthetics" class="tab-panel">
