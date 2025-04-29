@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>zhongvie</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <style>
+            /* The following CSS applies on all screen sizes */
+
+            /* Colors and fonts */
+            :root {
+                /* Fonts */
+                --bodyfont: "atkinson";
+                --headerfont: "dosis";
+
+                /* Images */
+                --banner-image-mobile: url(https://f2.toyhou.se/file/f2-toyhou-se/images/94919697_H3VJZc3Brg3p6m6.png?1738119906) no-repeat; /* Banner background image for mobile (wide) */
+                --banner-image-desktop: url(https://f2.toyhou.se/file/f2-toyhou-se/images/81754819_hxk5AbXQJetdPwI.jpg)
+                    no-repeat; /* Banner background image for desktop (tall) */
+                --banner-position-mobile: center; /* Banner background position on small screens */
+                --banner-position-desktop: center; /* Banner background position on big screens */
+
+                /* Main colors */
+                --background: #617148; /* Page background */
+                --color: #1e1307;
+                --block: #ecefe1; /* Background color for the grid blocks in the content */
+                --block-outline: #cba65e;
+
+                --link: #5e731b;
+                --linkhover: #af8716;
+
+                --tippy-bg: #b1d792;
+                --footerlink: #efdf83;
+                --footerlinkhover: #b3f667;
+
+                --h1: #48480a;
+                --h2: #382408;
+                --h3: #382408;
+
+                --header: #fff7e6; /* Title color */
+                --footer: #f3f2eb; /* Footer text color */
+
+                /* Menu colors */
+                --menubg: #f1f3eb;
+                --menucolor: #475a2d;
+                --menubghover: #475a2d;
+                --menucolorhover: #f1f3eb;
+                --menuactive: #f5fabf;
+
+                /* Decorations */
+                --border-radius: 10px;
+
+                /* Aesthetics */
+                --left-1: url("https://i.pinimg.com/736x/3a/a7/70/3aa770c7dd26a736379ef34fca2761c7.jpg");
+                --left-2: url("https://i.pinimg.com/736x/eb/47/2c/eb472c451faf078a60a16ab58af8f64e.jpg");
+                --left-3: url("https://i.pinimg.com/736x/5c/a8/38/5ca838f9320cede5c04c8cff1a088c8a.jpg");
+                --middle-1: url("https://i.pinimg.com/736x/7c/76/8d/7c768d0a1cc4922d7dce1f70a3226aeb.jpg");
+                --middle-2: url("https://i.pinimg.com/736x/5e/11/f1/5e11f10db86cc3d96e00b81284b6e5ee.jpg");
+                --right-1: url("https://i.pinimg.com/736x/5b/46/ef/5b46efd44fa7f3a0f43eccba4164280f.jpg");
+                --right-2: url("https://i.pinimg.com/736x/0d/06/de/0d06de58d8c6f779af48d459d1dfcbf7.jpg");
+                --colour-1: #b4db99;
+                --colour-2: #433113;
+                --colour-3: #e7ac4b;
+                --colour-4: #e2dfcd;
+
+                --sylvie-quote: #b1d792;
+                --zhongli-quote: #e2d7af;
+
+                --border: rgba(45, 51, 36, 0.25);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --background: #191817;
+                    --color: #dbe0d0;
+                    --block: #24221f;
+                    --block-outline: #2c3126;
+
+                    --link: #c6db97;
+                    --linkhover: #f7c16b;
+
+                    --tippy-bg: #3a4530;
+
+                    --footerlink: #eff5c2;
+                    --footerlinkhover: #99ff87;
+
+                    --h1: #c8da7e;
+                    --h2: #daba7e;
+                    --h3: #d7e0d0;
+
+                    --header: #c8da7e;
+
+                    /* Menu colors */
+                    --menubg: #5a6140;
+                    --menucolor: #ffffff;
+                    --menubghover: #ffffff;
+                    --menucolorhover: #5a6140;
+                    --menuactive: #a49063;
+
+                    --sylvie-quote: #496135;
+                    --zhongli-quote: #7d501c;
+
+                    --border: rgba(223, 255, 179, 0.25);
+                }
+            }
+            @font-face {
+                font-family: "dosis";
+                src: url(../Fonts/Dosis-VariableFont_wght.ttf);
+            }
+            @font-face {
+                font-family: "atkinson";
+                src: url(../Fonts/AtkinsonHyperlegible-Regular.ttf);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Main body styling */
+            body {
+                background: var(--background);
+                font: 1rem "atkinson";
+                color: var(--color);
+            }
+
+            #main-header {
+                font: 2.5em var(--headerfont);
+                color: var(--header);
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            #banner {
+                background: var(--banner-image-mobile);
+                background-position: var(--banner-position-mobile);
+                background-size: cover;
+                height: 250px;
+            }
+
+            /* Aesthetic Gallery */
+
+            .aesthetics {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                gap: 8px;
+                height: 570px;
+            }
+
+            .left-1 {
+                grid-row: span 2 / span 2;
+                background-image: var(--left-1);
+                background-position: center;
+                background-size: cover;
+                border-radius: var(--border-radius);
+            }
+
+            .left-2 {
+                grid-row: span 3 / span 3;
+                grid-column-start: 1;
+                grid-row-start: 3;
+                background-image: var(--left-2);
+                background-position: center;
+                background-size: cover;
+                border-radius: var(--border-radius);
+            }
+
+            .left-3 {
+                grid-column-start: 1;
+                grid-row-start: 6;
+                background-image: var(--left-3);
+                background-position: center;
+                background-size: cover;
+                border-radius: var(--border-radius);
+            }
+
+            .middle-1 {
+                grid-column: span 2 / span 2;
+                grid-row: span 3 / span 3;
+                grid-column-start: 2;
+                grid-row-start: 1;
+                background-image: var(--middle-1);
+                background-position: center;
+                background-size: cover;
+                border-radius: var(--border-radius);
+            }
+
+            .middle-2 {
+                grid-column: span 2 / span 2;
+                grid-row: span 2 / span 2;
+                grid-column-start: 2;
+                grid-row-start: 4;
+                background-image: var(--middle-2);
+                background-position: center;
+                background-size: cover;
+                border-radius: var(--border-radius);
+            }
+
+            .right-1 {
+                grid-column: span 2 / span 2;
+                grid-row: span 2 / span 2;
+                grid-column-start: 4;
+                grid-row-start: 1;
+                background-image: var(--right-1);
+                background-position: center;
+                background-size: cover;
+                border-radius: var(--border-radius);
+            }
+
+            .right-2 {
+                grid-column: span 2 / span 2;
+                grid-row: span 3 / span 3;
+                grid-column-start: 4;
+                grid-row-start: 3;
+                background-image: var(--right-2);
+                background-position: center;
+                background-size: cover;
+                border-radius: var(--border-radius);
+            }
+
+            .colour-1 {
+                grid-column-start: 2;
+                grid-row-start: 6;
+                background-color: var(--colour-1);
+                border-radius: var(--border-radius);
+            }
+
+            .colour-2 {
+                grid-column-start: 3;
+                grid-row-start: 6;
+                background-color: var(--colour-2);
+                border-radius: var(--border-radius);
+            }
+
+            .colour-3 {
+                grid-row-start: 6;
+                background-color: var(--colour-3);
+                border-radius: var(--border-radius);
+            }
+
+            .colour-4 {
+                grid-row-start: 6;
+                background-color: var(--colour-4);
+                border-radius: var(--border-radius);
+            }
+
+            /* Styling for the menu */
+
+            #main-menu {
+                font: 1.1em var(--headerfont);
+                width: 100%;
+                text-align: center;
+            }
+
+            #main-menu ul {
+                list-style: none;
+            }
+
+            #main-menu li {
+                display: inline-block;
+                margin: 0.25em 0.25em 0 0;
+            }
+
+            #main-menu li a.active {
+                background-color: var(--menuactive);
+            }
+
+            .tabs-content {
+                padding: 0;
+            }
+            .tab-panel {
+                display: none;
+                animation: fadeEffect 1s; /* Fading effect takes 1 second */
+            }
+            .tab-panel.active {
+                display: block;
+            }
+
+            /* Go from zero to full opacity */
+            @keyframes fadeEffect {
+                from {
+                    opacity: 0;
+                }
+                to {
+                opacity: 1;
+                }
+            }
+
+            #main-menu li a {
+                border-radius: var(--border-radius);
+                padding: 7px;
+                background: var(--menubg);
+                color: var(--menucolor);
+                text-decoration: none;
+                transition: 0.5s ease;
+                box-shadow: 6px 6px 0 var(--block-outline);
+            }
+
+            #main-menu li a:hover,
+            #main-menu li a:focus {
+                background: var(--menubghover);
+                color: var(--menucolorhover);
+                transition: 0.5s ease;
+            }
+
+            /* SCROLLBAR STYLING */
+
+            /* Firefox */
+            * {
+                scrollbar-width: thin;
+                scrollbar-color: var(--link) var(--block);
+            }
+
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            *::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            *::-webkit-scrollbar-thumb {
+                background-color: var(--block);
+                border-radius: 10px;
+                border: 3px double var(--link);
+            }
+
+            ::selection {
+                color: #000000;
+                background: var(--link);
+            }
+
+            /* Content styling */
+
+            main {
+                margin-top: 10px;
+                background: var(--block);
+                padding: 15px;
+            }
+
+            main h1 {
+                font: 1.8em var(--headerfont);
+                color: var(--h1);
+                margin: 0 0 10px 0;
+            }
+
+            main h2 {
+                font: 1.5em var(--headerfont);
+                color: var(--h2);
+                margin: 20px 0 10px 0;
+            }
+
+            main h3 {
+                font: 1.3em var(--headerfont);
+                color: var(--h3);
+            }
+
+            main h4 {
+                font: 1em var(--headerfont);
+                font-style: italic;
+                color: var(--h4);
+            }
+
+            p {
+                line-height: 1.5;
+                margin: 10px 0 10px 0;
+            }
+
+            main a {
+                color: var(--link);
+                transition: 0.5s ease;
+            }
+
+            main a:hover,
+            main a:focus {
+                color: var(--linkhover);
+                transition: 0.5s ease;
+            }
+
+            main ul {
+                list-style-position: outside;
+                margin-left: 25px;
+            }
+
+            main ul li {
+                line-height: 1.5;
+                margin-bottom: 5px;
+            }
+
+            main ul li::marker {
+                color: var(--link);
+            }
+
+            main ul ul li::marker {
+                color: var(--linkhover);
+            }
+
+            main img {
+                max-width: 100%;
+            }
+
+            .center-img {
+                display: flex;
+                justify-content: center; /* align horizontal */
+                align-items: center; /* align vertical */
+            }
+
+            main input,
+            textarea,
+            select,
+            button {
+                background: var(--block);
+                color: var(--color);
+                font: 1rem var(--bodyfont);
+                border: 1px solid;
+                padding: 8px;
+                margin: 2px;
+            }
+
+            main blockquote,
+            main .box {
+                padding: 10px;
+                border-left: 20px solid var(--link);
+            }
+
+            main details {
+                background: rgb(0, 0, 0, 0.2);
+                border-radius: var(--border-radius);
+                padding: 10px;
+                margin: 10px 0 10px 0;
+            }
+
+            main details summary {
+                cursor: pointer;
+            }
+
+            main details summary::marker {
+                color: var(--link);
+            }
+
+            #main-footer {
+                text-align: center;
+                padding: 15px;
+                color: var(--footer);
+            }
+
+            #main-footer a {
+                color: var(--footerlink);
+                transition: 0.5s ease;
+            }
+
+            #main-footer a:hover,
+            #main-footer a:focus {
+                color: var(--footerlinkhover);
+                transition: 0.5s ease;
+            }
+
+            /* Decoration Styling */
+            b,
+            bold,
+            strong {
+                color: var(--link);
+            }
+
+            i,
+            italics,
+            em {
+                color: var(--linkhover);
+            }
+
+            u,
+            underline {
+                text-decoration-style: solid;
+                text-decoration-color: var(--linkhover);
+            }
+
+            abbr,
+            .tippy {
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                text-decoration-color: var(--linkhover);
+                cursor: pointer;
+            }
+
+            hr {
+                border: 1px solid;
+                border-color: var(--border);
+                margin: 15px 0 10px 0;
+            }
+
+            .quote-area {
+                font-size: 0.9em;
+                background-color: var(--background);
+                padding: 20px;
+                border-radius: var(--border-radius);
+                margin: 10px 0;
+            }
+
+            .quote-area .name {
+                font-weight: bold;
+                text-transform: uppercase;
+                font-style: normal;
+                letter-spacing: 1px;
+            }
+
+            .zhongli {
+                background-color: var(--zhongli-quote);
+            }
+
+            .sylvie {
+                background-color: var(--sylvie-quote);
+            }
+
+            .navigation-menu {
+                font-size: 0.9em;
+                background-color: var(--background);
+                padding: 20px;
+                border-radius: var(--border-radius);
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .navigation-menu ul {
+                display: flex;
+                gap: 9px;
+                flex-wrap: wrap;
+                list-style: none;
+                align-items: center; /* Align Items Vertically */
+                justify-content: center; /* Align Items Horizontally (with equal space in between each of them */
+            }
+            .navigation-menu li a {
+                padding: 5px 10px;
+                border-radius: var(--border-radius);
+                background-color: var(--menubg);
+                color: var(--menucolor);
+                text-decoration: none;
+                transition: 0.5s ease;
+                box-shadow: 4px 4px 0 var(--block-outline);
+            }
+
+            .navigation-menu li a:hover,
+            .navigation-menu li a:focus {
+                background: var(--menubghover);
+                color: var(--menucolorhover);
+                transition: 0.5s ease;
+            }
+
+            /* -------------------------------------------------------- */
+            /* TIPPY STYLING */
+            /* -------------------------------------------------------- */
+
+            .tippy-tooltip.character-theme {
+                color: var(--color);
+                letter-spacing: 1px;
+                font-size: 1em;
+                font-family: "atkinson";
+                text-align: center;
+                background: var(--tippy-bg);
+                box-shadow:
+                    rgba(0, 0, 0, 0.16) 0 10px 36px 0,
+                    rgba(0, 0, 0, 0.06) 0 0 0 1px;
+            }
+
+            .tippy-tooltip.character-theme[data-placement^="top"] .tippy-arrow {
+                border-top-color: var(--tippy-bg);
+            }
+            .tippy-tooltip.character-theme[data-placement^="bottom"] .tippy-arrow {
+                border-bottom-color: var(--tippy-bg));
+            }
+            .tippy-tooltip.character-theme[data-placement^="left"] .tippy-arrow {
+                border-left-color: var(--tippy-bg);
+            }
+            .tippy-tooltip.character-theme[data-placement^="right"] .tippy-arrow {
+                border-right-color: var(--tippy-bg);
+            }
+
+            /* The following CSS ONLY applies to mobile/small screens */
+
+            /* Container styling */
+            #container {
+                width: calc(100% - 20px);
+                padding: 10px;
+                margin-top: 10px;
+                border-radius: 10px;
+            }
+
+            #content {
+                border-radius: 10px 10px 10px 10px;
+                box-shadow: 6px 6px 0 var(--block-outline);
+            }
+
+            #banner {
+                border-radius: 10px;
+            }
+
+            #banner-content {
+                width: calc(100% - 20px);
+            }
+
+            #main-menu li {
+                margin-bottom: 15px;
+                display: inline-block;
+            }
+
+            #main-menu li i {
+                color: var(--menu-link);
+                font-size: 0.6em;
+                padding: 3px;
+                position: relative;
+                bottom: 2px;
+            }
+
+            /* Skip to content button */
+
+            #skip a {
+                position: absolute;
+                display: inline-block;
+                left: 0px;
+                top: -1000px;
+                overflow: hidden;
+                transition: top 0.5s ease;
+                background: var(--block);
+                color: var(--link);
+                z-index: 1000;
+                padding: 5px;
+            }
+
+            #skip a:focus {
+                top: 0;
+                transition: top 0.5s ease;
+            }
+
+            /* The following CSS ONLY applies to desktop/big screens */
+
+            @media screen and (min-width: 800px) {
+                #content {
+                    border-radius: 0px 10px 10px 0px;
+                }
+
+                #container {
+                    max-width: 900px;
+                    width: 90%;
+                    margin: 25px auto 0 auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                #main-header {
+                    flex: 1 1 100%;
+                    text-align: left;
+                }
+
+                #main-menu {
+                    flex: 1 1 100%;
+                    text-align: left;
+                }
+
+                #banner {
+                    flex: 1 1 calc(25% - 20px);
+                    margin-top: 10px;
+                    height: 600px;
+                    border-radius: 10px 0 0 10px;
+                    background: var(--banner-image-desktop);
+                    background-position: var(--banner-position-desktop);
+                    background-size: cover;
+                    box-shadow: 6px 6px 0 var(--block-outline);
+                }
+
+                main {
+                    flex: 1 1 calc(75% - 30px);
+                    overflow: auto;
+                    height: calc(600px - 30px);
+                }
+
+                #main-footer {
+                    flex: 1 1 calc(100% - 30px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Don't delete these 2 lines! -->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+
+        <div id="container">
+            <header id="main-header">
+                <!-- Site title -->
+                Zhongvie 🌿🔶
+            </header>
+            <nav id="main-menu">
+                <ul>
+                    <!--Menu links-->
+                    <li><a href="#" class="tab active" data-tab="home">Home</a></li>
+                    <li><a href="#" class="tab" data-tab="history">History</a></li>
+                    <li><a href="#" class="tab" data-tab="art">Artwork Gallery</a></li>
+                    <li><a href="#" class="tab" data-tab="aesthetics">Aesthetics</a></li>
+                    <li><a href="#" class="tab" data-tab="trivia">Trivia</a></li>
+                    <li>
+                        <a href="https://ca.pinterest.com/Asuraid/sylvie/moss-on-a-rock-zhongvie/"
+                            >Pinterest <i class="fa-solid fa-arrow-up-right-from-square"></i
+                        ></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="banner">
+                <!--This is the banner image, don't put anything here-->
+            </div>
+
+            <main id="content">
+                <div class="tabs-content">
+                    <div id="home" class="tab-panel active">
+                        <h1>Earth and Nature</h1>
+                        <blockquote>
+                            The eight love language is being a menace, a nuisance, the most insistent annoyance in
+                            someone else's life, ever present, always poking, prodding, teasing. I'm on you like a moss
+                            on a rock because I care.
+                        </blockquote>
+                        <p>
+                            Welcome to my little shrine corner for <u>Zhongvie</u>, aka my OC/Canon or
+                            <span
+                                class="tippy"
+                                data-tippy-content="No, Sylvie is not a self insert. Yes, I use yume interchangably for self ship and oc/canon"
+                                >yumeship</span
+                            >
+                            between Zhongli of Genshin Impact and my OC <a href="../OCs/sylvie.html">Sylvie</a> that's
+                            been rotting my brain since 2021.
+                        </p>
+                        <p>
+                            <b>In summary:</b> ENFP meets ISTJ, friends to lovers, autism4adhd, old gods in love,
+                            friendship at their core, I know you best, fashionista wife and simple guy
+                        </p>
+                        <p><b>Perpetual work in progress</b>, I just wanted to have it made ... 😔</p>
+                        <div class="center-img">
+                            <a href="https://toyhou.se/HobblyWobbly"
+                                ><img
+                                    src="https://f2.toyhou.se/file/f2-toyhou-se/images/86310013_32IkbNqBLvWn5zx.png"
+                                    data-tippy-content="Art by HobblyWobbly"
+                                    style="max-height: 250px"
+                            /></a>
+                        </div>
+                    </div>
+                    <div id="history" class="tab-panel">
+                        <div class="navigation-menu">
+                            <ul>
+                                <li><a href="#intro">Introduction</a></li>
+                                <li><a href="#first-meeting">First Meeting</a></li>
+                                <li><a href="#archon-war">Archon War and Death</a></li>
+                                <li><a href="#revival">Revival</a></li>
+                                <li><a href="#khaenriah">Khaenri'ah</a></li>
+                                <li><a href="#confession">Return and Confession</a></li>
+                                <li><a href="#present">Present</a></li>
+                            </ul>
+                        </div>
+                        <h1 id="intro"><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Introduction</h1>
+                        <p>
+                            A bickering, old, married couple would be the simplest and easiest way to summarize their
+                            dynamic—and it's what many think of them at first sight, though at the core of their
+                            relationship is a foundation of a friendship that has persisted for thousands of years. Both
+                            see each other as a friend and equal partner before all else, and bear a deep sense of trust
+                            and respect that runs to their very essence, having seen each other at their highest and
+                            brightest—and the lowest and ugliest.
+                        </p>
+                        <p>
+                            Interactions between the two come easy and freely as water flows, resulting in either
+                            hours-long conversations about the broadest and wildest of topics, or petty back and forth
+                            arguments over the smallest and silliest things—often instigated by Sylvie—that ends with
+                            both having a chuckle.
+                        </p>
+                        <div class="quote-area sylvie">
+                            <span class="name">Sylvie:</span> He is ... a lot to summarize, yet not; we've known each
+                            other for so long at this point that he just feels like a part of my world. Huhu ... my
+                            partner, my friend, my mate, all that cheesy stuff. A bully as well, even if many don't
+                            believe me! He acts as if I'm the only childish one between us, when he's here frowning if
+                            I'm eyeballing any Rex Lapis merch or correcting him on something. Which I'm glad for, after
+                            seeing him weighed down for so long in his role of Archon, I'm relieved he can finally relax
+                            and joke around, and I can be there by his side when doing so ... even if we both have quite
+                            a few things we still need to heal from.
+                        </div>
+                        <div class="quote-area zhongli">
+                            <span class="name">Zhongli:</span> When it comes to Sylvie, I doubt there will be enough
+                            time for me to properly discuss them. They are ... a friend I would be glad to have at my
+                            side until the last grain of sand drops from the hourglass. Although they can be eccentric
+                            in their own unique ways, it would be a folly to assume them to be silly and inattentive to
+                            the world around themselves; truth be told, it is a farce more often than not. Though I know
+                            all too well that they are quite—and I do mean this fondly—a boorish, childish idiot
+                            sometimes. Even so, I wouldn't change it for the world, nor pass the opportunity to tease
+                            them for it.
+                        </div>
+                        <hr />
+                        <h1 id="first-meeting">
+                            <i class="fa-solid fa-bookmark" aria-hidden="true"></i> First Meeting
+                        </h1>
+                        <p>
+                            A long, long time ago was when these two first met ... a time before the Seven were a thing,
+                            before the Archon Wars, and when gods were abundant and plentiful across the land; Sylvie,
+                            going as Foras back then, often travelled during the winter months (as they were known to
+                            'hibernate' by the people of Sumeru during that time). Their travels brought them to the
+                            lush lands of old Liyue, where a certain old god was taking a rest with his majestic
+                            draconic tail swaying around. Impulse and curiosity pushed the God of Trees in their feral
+                            form to bite into that tail and see how hard the scales were, only to be met with a violent
+                            whack to their head by the God of Contracts, Morax.
+                        </p>
+                        <p>
+                            Although the childish action earned some bickering between the two and butting of their
+                            heads, Foras continued to come around to visit Morax, finding amusement in his bluntness and
+                            cracking through his stoic personality. Foras's persistence in coming around on their trips,
+                            alongside their eagerness to talk, share their own stories, to spar with him, and their
+                            general carefree nature eventually warmed Morax up to their company for many years to come,
+                            and to this very day.
+                        </p>
+                        <p>
+                            Friends were made amidst the land of Liyue, and many other places, but the future land of
+                            Geo became almost like a second home for the Dendro god, making many roots and ties over the
+                            years they visited.
+                        </p>
+                        <div class="quote-area sylvie">
+                            <span class="name">Sylvie:</span> Can you blame me for biting? I didn't have hands in that
+                            form! It was the first thing that came to mind! I'm more surprised he didn't maul me alive
+                            at that moment, nor the next time I saw him. And so, that marked him as someone to befriend,
+                            hehe.
+                        </div>
+                        <div class="quote-area zhongli">
+                            <span class="name">Zhongli:</span> Days long gone ... but memories that are still fond to
+                            me; now, I find their actions to be silly, though at that moment I was more than ready to
+                            hit them for it. Regardless, I am glad at their persistence during those more ... stubborn
+                            days of mine.
+                        </div>
+                        <hr />
+                        <h1 id="archon-war">
+                            <i class="fa-solid fa-bookmark" aria-hidden="true"></i> Archon War and Death
+                        </h1>
+                        <p>
+                            The Archon War was not kind on either of them, with many gods at each other's throats for
+                            the prized seats in the heavens above, and with people—normal humans—looking to the gods for
+                            protection in a time of strife and chaos.
+                        </p>
+                        <p>
+                            Morax had the people of Liyue to protect as gods, both friends and foe alike, fell around
+                            him. No time to mourn, no time to think, no time to look at who had fallen on the
+                            battleground. Only one wilted Glaze Lily was lost right in his arms during this time, the
+                            one loss he was doomed to see with his own eyes.
+                        </p>
+                        <p>
+                            Sylvie had the people of Sumeru under their wing; although not the god of a full nation,
+                            they cherished and adored the people that looked up to them. Although they did their best to
+                            protect everyone, trees were falling, the grounds were shattering, and no amount of Dendro
+                            powers were to keep them isolated and safe. And so, in a desperate attempt to find safety
+                            for their people, they tried to get them out of Sumeru, to gods they knew even in the throes
+                            of war would still extend a hand.
+                        </p>
+                        <p>
+                            But many had their own issues, many had their hands full, their houses crumbling, to where
+                            even their own people were fighting to survive. Others were already dead.
+                        </p>
+                        <p>
+                            Their search for the safety of their people brought them out all the way to Mondstadt, that
+                            during then was a frigid iceland and battle between Andrius and Decarabian; Andrius was one
+                            of the gods that Sylvie was on relatively good terms with—even if the two disagreed on their
+                            views of humanity.
+                        </p>
+                        <p>
+                            But they never even got a chance to reach him, finding their death in the frigid wastelands
+                            of Mondstadt, and with their people left behind in Sumeru, unknowing of what happened to
+                            their god.
+                        </p>
+                        <div class="quote-area sylvie">
+                            <span class="name">Sylvie:</span> It is ... not a time I like revisiting all that much. I
+                            really did just want everyone to be safe, didn't think I'd end up all sliced in half and
+                            all, haha ...
+                        </div>
+                        <div class="quote-area zhongli">
+                            <span class="name">Zhongli:</span> ... the war was something we all agree is in the past.
+                            Many lives were lost, and said lives deserve to be remembered. Even if ... it took me until
+                            now to be able to do so properly.
+                        </div>
+                        <hr />
+                        <h1 id="revival"><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Revival and Return</h1>
+                        <p>
+                            In reality, Sylvie had died, but their abilities are rooted in regeneration, which kicked in
+                            for the very first time ever with their 'death'; their body was surrounded by enough Dendro
+                            to slowly stitch and hold their form back together and to keep it from dispersing violently.
+                            Even so, this process took a thousand years, leaving them to slumber comatose under what
+                            would be the Windrise Tree in the future.
+                        </p>
+                        <p>
+                            Their awakening brought a wave of confusion, anguish, and hurt; the war had come to an end,
+                            and their existence has come to disappear in the history of Teyvat. Who was to know Foras
+                            anymore? Did anyone look for them? Were their people okay? Were their people angry? Their
+                            death robbed them of themselves.
+                        </p>
+                        <p>
+                            What was their purpose anymore, if not to be a god? And so, their identity was shed, and so
+                            was Sylvie born. Even so, they wanted to seek out the gods that remained.
+                        </p>
+                        <p>
+                            There was relief in finding out that Morax, now under the title of Rex Lapis, was still
+                            alive—but there was a distant rift that hung awkwardly over them due to the unspoken loss
+                            between the two of them, of old friends, of people they were meant to protect, and more.
+                            Sylvie did their best to try to maintain their connection, especially as few gods remained,
+                            but the other god kept a large distance between them, coming off tired and with the
+                            responsibility of his role as Archon superseding any personal desires.
+                        </p>
+                        <p>
+                            It was frustrating, lonely, and heart-aching, only dulled by the fact that their time was
+                            occupied otherwise learning the world of the living, and what it means to be human. But they
+                            wouldn't give up on their friendship. Not when they could see how lonely it was in return to
+                            be an Archon.
+                        </p>
+                        <div class="quote-area sylvie">
+                            <span class="name">Sylvie:</span> Those years were hard. I'd be lying if I said it didn't
+                            still weigh on me how much it felt like pulling hair to try to maintain our friendship when
+                            he felt so ... distant, and tired, and changed. But I wanted to try. He was among the few
+                            things I still had left from the past. And I know how much it takes in giving up yourself to
+                            be a god to the people. I still wanted to know I saw him, for himself.
+                        </div>
+                        <div class="quote-area zhongli">
+                            <span class="name">Zhongli:</span> I still ... have regrets over those years, I would be
+                            lying if I said otherwise. Regrets over not mourning for them, regrets over how I kept them
+                            so far away, regrets for not saying anything, regrets for knowing they died alone, and that
+                            I didn't even ... realize it. I am ... merely thankful now that I have the opportunity now
+                            to thank them for all they have done for me.
+                        </div>
+                        <hr />
+                        <h1 id="khaenriah"><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Khaenri'ah</h1>
+                        <p>
+                            The Cataclysm was a catalyst for Sylvie to disappear off Teyvat for the last five-hundred
+                            years and into the Dark Sea, their anger towards Celestia too great to remain around the
+                            other gods. Although a lonely, and harrowing experience, it helped them in expanding their
+                            knowledge and even meeting some new faces they would call friends now. They still lingered
+                            on the fringes of Teyvat, catching bits and pieces of news, but not having the courage to
+                            return after so many years had now passed.
+                        </p>
+                        <p>... little did they expect the news of Rex Lapis' demise to have them running back.</p>
+                        <div class="quote-area sylvie">
+                            <span class="name">Sylvie:</span> ... honestly, I still don't know many details of what
+                            happened there. I know Zhongli can't talk about it, and I've already accepted that. Visiting
+                            the Dark Sea did expand my travelling horizons a little bit, though it is a dangerous
+                            location ... had my skull caved in there by what's now a good friend! And met a slug who is
+                            ... now I'm also good friends with.
+                        </div>
+                        <div class="quote-area zhongli">
+                            <span class="name">Zhongli:</span> I always hoped that they were doing alright in those
+                            years they were gone; I've found myself missing their company, even if much of my time was
+                            occupied with my duties then. Sometimes it does take something—someone—being gone to notice
+                            their presence having left something emptier behind.
+                        </div>
+                        <hr />
+                        <h1 id="confession">
+                            <i class="fa-solid fa-bookmark" aria-hidden="true"></i> Return and Confession
+                        </h1>
+                        <p>
+                            Upon promptly chewing out the other god for his staged death—with massive relief—Sylvie came
+                            to find that Rex Lapis was now under a new identity as the Wangsheng Funeral Parlor
+                            consultant, Zhongli. The name of Rex Lapis was left behind, along with the responsibilities
+                            of Archon. Now with ample free time on his hands and no weight to hold him back anymore,
+                            Sylvie's warmth was returned, and their friendship was rekindled in full without there being
+                            any barriers.
+                        </p>
+                        <p>
+                            Without realization (at least on Sylvie's side in the beginning), their mutual care and
+                            connection flourished into underlying romantic feelings that unfurled as the two now could
+                            truly live for themselves, with Zhongli accepting his own in full while quietly, patiently
+                            waiting for them—because it was not hard to see that they felt the same in return.
+                        </p>
+                        <p><i>(His attempts to flirt had promptly gone well over their head, though.)</i></p>
+                        <p>
+                            Sylvie, meanwhile, struggled with their own out of fear of ruining their friendship that had
+                            barely just been rekindled. But over time, over the months they've returned, over fleeting
+                            touches, compliments that held more than what was said, being welcomed so openly back into
+                            his arms and life ... it bubbled up into impulsiveness that made Sylvie take the first
+                            action in kissing him—almost causing a full-blown panic at them ruining said friendship—only
+                            for Zhongli to reassure them the feelings were shared in full.
+                        </p>
+                        <div class="quote-area sylvie">
+                            <span class="name">Sylvie:</span> It's still amazing to me how different he seemed when I
+                            returned ... I couldn't help but ... hrmn. It hit me all at once how much I missed him, how
+                            happy I was to finally, finally see him living for himself that it all just kinda coalesced
+                            into a lot of foreign feelings for him I didn't know how to handle. Gods, sometimes I wish
+                            he had just kissed me first. Embarrassing that I was the last between us two to realize it
+                            was a mutual feeling.
+                        </div>
+                        <div class="quote-area zhongli">
+                            <span class="name">Zhongli:</span> I would've been more than happy to wait for them and to
+                            tease them a little longer, though I know it would've ached them to be lost within those
+                            muddied, deep feelings. I thought I was being pretty forward with my gestures and words, but
+                            I can see from their point of view that it would be hard to think of it as such after seeing
+                            me be so withdrawn for many years, then greeting them with complete openness and trust.
+                            Truthfully, had they not taken the initiative, I would've revealed my feelings sooner or
+                            later.
+                        </div>
+                        <hr />
+                        <h1 id="present"><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Present</h1>
+                        <p>
+                            Alongside following the traveller's journey, Sylvie's return has given both the opportunity
+                            to heal and bring some doors to a close. Sylvie's death—unfortunately viewed in full by
+                            Zhongli through walking in their dreams—finally allowed him to grieve and acknowledge their
+                            death in full, and his heavy guilt in not thinking of them until much, much later.
+                        </p>
+                        <p>
+                            Visiting Sumeru, after many years of avoiding it, brought closure to Sylvie for how their
+                            past self and history had been ripped away from them with their death and the conclusion of
+                            the war, finally finding enough comfort to call Sumeru their home once more and to be
+                            welcomed with open arms by the forest that never forgot.
+                        </p>
+                        <p>
+                            A funeral was held for them, by Zhongli's gentle nudging, to fully say goodbye to Foras. A
+                            funeral that hurt, but was something for the both of them to bring closure to.
+                        </p>
+                        <p>
+                            Some other major instances include an incident at the chasm which resulted in a massive
+                            injury to Sylvie, half of their torso being completely obliterated in the process of
+                            destroying an Abyssal demon that was threatening to leak out to the chasm's surface, leaving
+                            them bedridden for a month as their body slowly purged the abyssal poison within. Zhongli
+                            carefully helped in nursing them back to health, letting Sylvie see his vulnerability and
+                            fear in losing them again after he had seen them killed once.
+                        </p>
+                        <p>
+                            Their relationship eventually culminated in an accidental marriage; the first birthday spent
+                            together with him as <i>Zhongli</i> resulted in Sylvie
+                            <a
+                                href="https://goldenorder.tumblr.com/post/672060465856266240/birthdays-are-odd-things-to-them-inconsequential"
+                                >gifting him matching rings</a
+                            >
+                            filled with materials of their respective element ... little did they realize the
+                            implications of it until others pointed it out. Later, for their birthday, he has
+                            <a href="https://sylvctica.tumblr.com/post/712356026359398400/goldenorder-sylvies"
+                                >gifted them chopsticks in return</a
+                            >
+                            that have been carved to represent both of them; jade and wood melded together in the shape
+                            of a deer and dragon ... though with full intentions as a proposal gift for them.
+                        </p>
+                        <p>
+                            Even so, their relationship truthfully hasn't changed much even with being officially
+                            together and married; they come off like old friends, or more affectionately said—like a
+                            bickering old couple, allowing their childish sides to show in jesting and affectionate
+                            jabs. Even so, in a heartbeat they'd have each other's backs. They are
+                            <span
+                                class="tippy"
+                                data-tippy-content="Although they are romantically together, Sylvie and Zhongli will always see themselves as friends first and foremost, even if they call each other husband or wife"
+                                >friends first</span
+                            >
+                            before partners, and it shows in how they interact with each other comfortably. The world of
+                            Teyvat is their oyster to explore now—as their own people and selves.
+                        </p>
+                        <div class="quote-area sylvie">
+                            <span class="name">Sylvie:</span> I will never live it down that I didn't realize how ...
+                            like, yes, gifting rings is not inherently romantic—that's all human-given meanings to
+                            items—but considering at that point we were already together, it's kinda like ... 'no shit'
+                            it comes off like a proposal. Mm ... I wouldn't have it any other way; I'm happy to call him
+                            my husband, even if he is my closest, and dearest, friend first and foremost.
+                        </div>
+                        <div class="quote-area zhongli">
+                            <span class="name">Zhongli:</span> I thought it was quite obvious to people that we were
+                            together, considering how much we are locked to each other's side ... imagine my own
+                            surprise at other people's shock when I told them I was married already while they were
+                            amusing themselves about finding a suitor for me. I don't see much need to advertise it, our
+                            companionship speaks more than enough for itself.
+                        </div>
+                    </div>
+                    <div id="art" class="tab-panel">
+                        <p>
+                            Pictures will exist here eventually when I have the brain power to haul over my gallery +
+                            lightbox CSS and HTML, for now
+                            <a href="https://toyhou.se/10313327.sylvie/14798357.zhongvie/gallery">their Toyhouse</a>
+                            will always have the bulk of their commissions / art.
+                        </p>
+                        <div class="center-img">
+                            <img src="../Images/Misc/wipatrick.png" />
+                        </div>
+                    </div>
+                    <div id="aesthetics" class="tab-panel">
+                        <div class="aesthetics">
+                            <div class="left-1"></div>
+                            <div class="left-2"></div>
+                            <div class="left-3"></div>
+                            <div class="middle-1"></div>
+                            <div class="middle-2"></div>
+                            <div class="right-1"></div>
+                            <div class="right-2"></div>
+                            <div class="colour-1"></div>
+                            <div class="colour-2"></div>
+                            <div class="colour-3"></div>
+                            <div class="colour-4"></div>
+                        </div>
+                    </div>
+                    <div id="trivia" class="tab-panel">
+                        <ul>
+                            <li>
+                                Their primary affectionate pet names/nicknames for each other are
+                                <b>𐎠𐎿𐎴 - stone (asan) / my gemstone / my mountain / my sunflower</b> for Zhongli, and
+                                <b>my forest / my deer / 林 - forest / 琳 - precious jade (lín)</b> for Sylvie.
+                            </li>
+                            <li>
+                                That's not to speak of the many nicknames Sylvie has for Zhongli with the mere purpose
+                                to annoy him (parched rock, sir consultant, dusty old man, your highness, Rex Lapis
+                                (derogatory), etc.)
+                            </li>
+                            <li>
+                                Zhongli has (unfortunately) had Sylvie's terrible humour rub off on him and has laughed
+                                at the word boobies—to his own shame and hope that Sylvie never finds out, otherwise
+                                they won't let him live it down.
+                            </li>
+                            <li>
+                                Zhongli often has his accessories stolen by Sylvie just because they want to wear them
+                                (namely his hair clasp and earring). This has culminated in him getting gifted a big
+                                green bow to use as a hair clasp because they thought it'd be silly.
+                                <a
+                                    href="https://sylvctica.tumblr.com/post/663278568464416768/in-a-way-its-a-a-matter-of-time-i-will-not-worry"
+                                    >It is now a permanent accessory for him</a
+                                >.
+                            </li>
+                            <li>
+                                Sylvie has gifted him
+                                <a
+                                    href="https://sylvctica.tumblr.com/post/661257267419725824/handmade-deer-gnosis-as-a-gift-now-with-no"
+                                    >a makeshift gnosis</a
+                                >
+                                before they had gotten together, though the purpose of it was more to help with the
+                                aches and emptiness from giving up his own; little does Sylvie know that they've given
+                                him a life-line for them to revive from that piece were they to be killed.
+                            </li>
+                            <li>
+                                Subsequently, he has later on for their first birthday gifted them one in return as a
+                                symbolic and loving gesture, though not to the same concentration of elemental energy.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+
+            <footer id="main-footer">
+                <!--Footer goes here-->
+                <p>
+                    Desktop art by <u>me</u>, mobile art by <a href="https://vgen.co/BanalRas">BanalRas</a>. Template by
+                    <a href="https://kalechips.net/">Kalechips</a>.
+                </p>
+                <p>
+                    <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                    <a href="#main-menu">Back to menu</a> <span aria-hidden="true">&bull;</span>
+                    <a href="../index.html">Back to main blog</a>
+                </p>
+            </footer>
+        </div>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const tabs = document.querySelectorAll(".tab");
+                const panels = document.querySelectorAll(".tab-panel");
+
+                tabs.forEach((tab) => {
+                    tab.addEventListener("click", function () {
+                        const targetPanel = document.getElementById(this.getAttribute("data-tab"));
+
+                        tabs.forEach((item) => {
+                            item.classList.remove("active");
+                        });
+
+                        panels.forEach((item) => {
+                            item.classList.remove("active");
+                        });
+
+                        tab.classList.add("active");
+                        targetPanel.classList.add("active");
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
