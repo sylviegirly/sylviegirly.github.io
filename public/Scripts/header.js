@@ -62,7 +62,7 @@ const content = `
                     <a id="link-4-4-0" href="#">Shrines</a>
                     <ul id="menu-4-4">
                         <li id="item-4-4-1"><a id="link-4-4-1" href="#" class="disabled">Zhongli</a></li>
-                        <li id="item-4-4-2"><a id="link-4-4-2" href="#" class="disabled">Zhongvie (🌿🔶)</a></li>
+                        <li id="item-4-4-2"><a id="link-4-4-2" href="/Shrines/zhongvie.html">Zhongvie (🌿🔶)</a></li>
                     </ul>
                 </li>
             </ul>
