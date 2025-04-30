@@ -98,7 +98,7 @@ const sidebar = `
                         src="Images/General%20Decorations/pixel_rose.gif" />
                 </a>
                 <a href="https://zhongvie.neocities.org/" target="_blank"
-                    ><img src="https://i.imgur.com/kAwdvi1.png" alt="zhongvie button"
+                    ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/siteButton.png" alt="zhongvie button"
                 /></a>
                 <a href="https://pixel-world.tumblr.com/post/46858429546/roses" target="_blank">
                     <img
@@ -109,7 +109,7 @@ const sidebar = `
             </div>
             <hr style="width: 100%" />
             <textarea id="site-button" name="site-button">
-&lt;a href=&quot;https://zhongvie.neocities.org/&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://i.imgur.com/kAwdvi1.png&quot; alt=&quot;zhongvie button&quot;&gt;&lt;/a&gt;</textarea
+&lt;a href=&quot;https://zhongvie.neocities.org/&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/siteButton.png&quot; alt=&quot;zhongvie button&quot;&gt;&lt;/a&gt;</textarea
             >
             <label for="site-button" style="font-size: 11px; text-align: center; line-height: 1em;"
                 >Site button to copy and paste. Hotlinking is fine; image is on imgur.</label
