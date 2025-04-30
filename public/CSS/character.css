@@ -222,7 +222,7 @@ nav li.dropdown ul li.dropdown ul a {
     nav .dropdown ul.show {
         position: absolute;
     }
-    nav ul ul nav .dropdown ul ul {
+    nav .dropdown ul ul {
         top: 0;
         left: 100%;
     }
@@ -238,7 +238,6 @@ nav li.dropdown ul li.dropdown ul a {
         align-items: center;
         justify-content: center;
         align-content: center;
-        width: var(--blog-size);
     }
 }
 
