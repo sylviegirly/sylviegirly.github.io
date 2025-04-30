@@ -160,8 +160,6 @@ nav ul ul {
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
     text-align: left;
-    max-width: max-content;
-        min-width: 175px;
 }
 nav ul ul a {
     color: white;
@@ -224,7 +222,7 @@ nav li.dropdown ul li.dropdown ul a {
     nav .dropdown ul.show {
         position: absolute;
     }
-    nav .dropdown ul ul {
+    nav ul ul nav .dropdown ul ul {
         top: 0;
         left: 100%;
     }
