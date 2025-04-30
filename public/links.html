@@ -32,6 +32,27 @@
         <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
         <!-- Disclosure Menu -->
         <script src="Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <!-- This is the portion of code you'll want to copy in between your opening and closing head tags to implement a working GIF toggle on your website, once you've done that, just add the class "freezeframe" to any GIF images or to any div containers that hold only GIF images -->
+        <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css" />
+        <style>
+            .ff-container {
+                display: inline-flex;
+            }
+        </style>
+        <script src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+        <script>
+            $(function () {
+                third = new freezeframe(".freezeframe").capture().setup();
+                $(".play").click(function (e) {
+                    e.preventDefault();
+                    third.trigger();
+                });
+                $(".stop").click(function (e) {
+                    e.preventDefault();
+                    third.release();
+                });
+            });
+        </script>
     </head>
     <body id="body">
         <a href="#content" id="skip-to-content-link">Skip to content</a>
@@ -79,6 +100,10 @@
                             >Site button to copy and paste. Hotlinking is fine; image is on imgur.</label
                         >
                     </div>
+                    <div class="center-img" style="gap:10px;">
+                        <button class="play">Play Gifs</button>
+                        <button class="stop">Stop Gifs</button>
+                    </div>
                 </article>
                 <article>
                     <h2>Neighbours</h2>
@@ -90,7 +115,7 @@
                         <img src="https://file.garden/Zk7Kw4iRxGzlYvGW/crotovane.gif" alt="crotovane"
                     /></a>
                     <a href="https://doglike.nekoweb.org/"
-                        ><img src="https://doglike.nekoweb.org/graphics/doglike.gif" alt="doglike"
+                        ><img src="https://doglike.nekoweb.org/graphics/doglike.gif" alt="doglike" class="freezeframe"
                     /></a>
                     <a href="https://peony-atelier.j.pl/"
                         ><img src="https://peony-atelier.j.pl/banners/8831b.png" alt="peony atelier"
@@ -99,34 +124,34 @@
                         ><img src="https://seashrine.nekoweb.org/gifs/seashrinesitebutton.gif" alt="seashrine"
                     /></a>
                     <a href="https://literallyfictional.neocities.org"
-                        ><img src="https://i.imgur.com/a5fqWpm.gif" alt="literally fictional"
+                        ><img src="https://i.imgur.com/a5fqWpm.gif" alt="literally fictional" class="freezeframe"
                     /></a>
                     <a href="https://slushiecafe.neocities.org/"
-                        ><img src="https://i.imgur.com/XyqwrKJ.gif" alt="slushie cafe"
+                        ><img src="https://i.imgur.com/XyqwrKJ.gif" alt="slushie cafe" class="freezeframe"
                     /></a>
                     <a href="https://lemonadehammer.neocities.org"
-                        ><img src="https://i.imgur.com/7xr3Lfk.gif" alt="lemonade hammer"
+                        ><img src="https://i.imgur.com/7xr3Lfk.gif" alt="lemonade hammer" class="freezeframe"
                     /></a>
                     <a href="https://mavisdeluna.art">
-                        <img src="Images/Sites/mavisdeluna.gif" alt="mavis de luna"
+                        <img src="Images/Sites/mavisdeluna.gif" alt="mavis de luna" class="freezeframe"
                     /></a>
                     <a href="https://starry-knight.neocities.org/">
                         <img src="Images/Sites/button-starrys-grove.png" alt="Starry's Grove"
                     /></a>
                     <a href="https://arataka.neocities.org/"
-                        ><img alt="Laith Rai7an" src="https://files.catbox.moe/k0v6qu.gif"
+                        ><img alt="Laith Rai7an" src="https://files.catbox.moe/k0v6qu.gif" class="freezeframe"
                     /></a>
                     <a href="https://shwintykat.neocities.org"
                         ><img alt="shwintykat" src="./Images/Sites/meerkatbutton2.png"
                     /></a>
                     <a href="https://sanchoyoscribbles.neocities.org"
-                        ><img alt="sanchoyoscribbles" src="./Images/Sites/ssws.gif"
+                        ><img alt="sanchoyoscribbles" src="./Images/Sites/ssws.gif" class="freezeframe"
                     /></a>
                     <a href="https://crowcoco.neocities.org/"
-                        ><img alt="crowcoco" src="./Images/Sites/crowcoco.gif"
+                        ><img alt="crowcoco" src="./Images/Sites/crowcoco.gif" class="freezeframe"
                     /></a>
                     <a href="https://tofutush.neocities.org/"
-                        ><img alt="tofutush" src="./Images/Sites/tofutush.gif"
+                        ><img alt="tofutush" src="./Images/Sites/tofutush.gif" class="freezeframe"
                     /></a>
                     <a href="https://aegann.neocities.org/"
                         ><img alt="aegann" src="./Images/Sites/aegcafebutton.gif"
@@ -181,10 +206,18 @@
                     <h2>Project Sites</h2>
                     <p>Specific projects, or comics, that people are making!</p>
                     <a href="https://dollzrevival.neocities.org/"
-                        ><img src="https://i.imgur.com/epZfqoP.gif" loading="lazy" alt="dollzrevival"
+                        ><img
+                            src="https://i.imgur.com/epZfqoP.gif"
+                            loading="lazy"
+                            alt="dollzrevival"
+                            class="freezeframe"
                     /></a>
                     <a href="https://tokyomiracle.net"
-                        ><img src="./Images/Sites/tm2button.gif" loading="lazy" alt="tokyo miracle comic"
+                        ><img
+                            src="./Images/Sites/tm2button.gif"
+                            loading="lazy"
+                            alt="tokyo miracle comic"
+                            class="freezeframe"
                     /></a>
                     <div class="interest-content">
                         <ul>
@@ -204,6 +237,7 @@
                         ><img
                             src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif"
                             alt="petrapixel"
+                            class="freezeframe"
                     /></a>
                     <a href="https://itinerae.blogspot.com/">
                         <img src="https://files.catbox.moe/l5jmnh.png" loading="lazy" alt="itinerae"
@@ -213,6 +247,7 @@
                             src="https://nukochannel.neocities.org/NukoChannelButton.gif"
                             loading="lazy"
                             alt="nuko channel"
+                            class="freezeframe"
                     /></a>
                     <a href="https://frutigeraeroarchive.org/">
                         <img
@@ -221,13 +256,21 @@
                             loading="lazy"
                     /></a>
                     <a href="https://pixelsafari.neocities.org/">
-                        <img src="https://i.imgur.com/blLGv5e.gif" loading="lazy" alt="pixel safari"
+                        <img
+                            src="https://i.imgur.com/blLGv5e.gif"
+                            loading="lazy"
+                            alt="pixel safari"
+                            class="freezeframe"
                     /></a>
                     <a href="https://status.cafe"
                         ><img src="https://status.cafe/assets/button.png" loading="lazy" alt="Status Cafe"
                     /></a>
                     <a href="https://goblin-heart.net/sadgrl/"
-                        ><img src="https://i.imgur.com/Kt0qhQ6.gif" loading="lazy" alt="sad grl online"
+                        ><img
+                            src="https://i.imgur.com/Kt0qhQ6.gif"
+                            loading="lazy"
+                            alt="sad grl online"
+                            class="freezeframe"
                     /></a>
                     <a href="https://pastelhello.com/"
                         ><img src="https://i.imgur.com/T1VIe9O.gif" loading="lazy" alt="pastel hell"
