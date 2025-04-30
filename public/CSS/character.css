@@ -227,7 +227,7 @@ nav li.dropdown ul li.dropdown ul a {
         left: 100%;
     }
     nav ul ul {
-        max-width: max-content;
+        width: max-content;
         min-width: 175px;
     }
     nav ul ul li {
