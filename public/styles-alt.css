@@ -376,7 +376,7 @@ aside a:hover {
     margin-right: 5px;
 }
 
-.active:before {
+.accordion .active:before {
     content: "\2212";
 }
 
