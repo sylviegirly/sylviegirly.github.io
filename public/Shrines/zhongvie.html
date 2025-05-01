@@ -29,6 +29,7 @@
 
                 /* Main colors */
                 --background: #617148; /* Page background */
+                --background-accent: #71805a;
                 --color: #1e1307;
                 --block: #ecefe1; /* Background color for the grid blocks in the content */
                 --block-outline: #cba65e;
@@ -79,6 +80,7 @@
             @media (prefers-color-scheme: dark) {
                 :root {
                     --background: #191817;
+                    --background-accent: #222420;
                     --color: #e7ecdc;
                     --block: #24221f;
                     --block-outline: #2c3126;
@@ -129,6 +131,9 @@
                 background: var(--background);
                 font: 1rem "atkinson";
                 color: var(--color);
+                background-color: var(--background);
+                background: radial-gradient(circle, transparent 20%, var(--background) 20%, var(--background) 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, var(--background) 20%, var(--background) 80%, transparent 80%, transparent) 25px 25px, linear-gradient(var(--background-accent) 2px, transparent 2px) 0 -1px, linear-gradient(90deg, var(--background-accent) 2px, var(--background) 2px) -1px 0;
+                background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
             }
 
             #main-header {
@@ -377,7 +382,7 @@
             /* Firefox */
             * {
                 scrollbar-width: thin;
-                scrollbar-color: var(--link) var(--block);
+                scrollbar-color: var(--link) transparent;
             }
 
             /* Chrome, Edge, and Safari */
