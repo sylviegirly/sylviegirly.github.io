@@ -336,6 +336,83 @@ aside a:hover {
 }
 
 /* -------------------------------------------------------- */
+/* ACCORDION */
+/* -------------------------------------------------------- */
+
+.accordion-container {
+    position: absolute;
+    left: calc(var(--blog-size) + 68px);
+    padding-top: 20px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    font-family: "freepixel";
+    display: block;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: var(--border-radius);
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.active,
+.accordion:hover,
+.accordion:focus {
+    background-color: var(--article-bg);
+}
+
+.accordion:before {
+    content: "\002B";
+    color: var(--secondary-accent);
+    font-weight: bold;
+    float: left;
+    margin-right: 5px;
+}
+
+.active:before {
+    content: "\2212";
+}
+
+.panel {
+    display: block;
+    text-align: left;
+    font-size: 0.75em;
+    padding: 0 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-top: 5px;
+}
+
+.panel a {
+    color: var(--secondary-accent);
+    transition: 0.5s;
+}
+
+.panel a:hover {
+    color: var(--link);
+}
+
+.panel ul {
+    list-style: square;
+}
+
+.panel li {
+    margin-bottom: 5px;
+}
+
+.panel li::marker {
+    color: var(--secondary-accent);
+}
+
+/* -------------------------------------------------------- */
 /* HEADER */
 /* -------------------------------------------------------- */
 
@@ -938,6 +1015,14 @@ footer a:hover {
         grid-template-rows: 1fr;
         margin-left: 5px;
         margin-right: 5px;
+    }
+
+    .accordion {
+        display: none;
+    }
+
+    .panel {
+        display: none;
     }
 
     header {

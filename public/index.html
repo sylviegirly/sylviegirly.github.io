@@ -337,15 +337,6 @@
                     /></a>
                     <!-- FC2 Clap tag ends here -->
                 </div>
-                <script type="text/javascript">
-                    boatload_puzzles_format = "CompactLandscape";
-                </script>
-                <p>
-                    Loading <a href="https://www.boatloadpuzzles.com/playcrossword"> crossword puzzle</a>. One moment
-                    please.
-                </p>
-                <script type="text/javascript" src="//www.boatloadpuzzles.com/Crossword.js"></script>
-
                 <!-- section end ---------->
             </main>
             <!-- =============================================== -->
@@ -566,12 +557,26 @@
                     </table>
                 </section>
             </aside>
+            <div class="accordion-container">
+                <button class="accordion">Crossword Puzzle</button>
+                <div class="panel">
+                    <script type="text/javascript">
+                        boatload_puzzles_format = "Portrait";
+                    </script>
+                    <p>
+                        Loading <a href="https://www.boatloadpuzzles.com/playcrossword"> crossword puzzle</a>. One
+                        moment please.
+                    </p>
+                    <script type="text/javascript" src="//www.boatloadpuzzles.com/Crossword.js"></script>
+                </div>
+            </div>
             <a
                 href="https://x.com/thepeelucof87"
                 title="Zhongvie my obssession my insanity nhrhghrhgrhg. Art by @thepeelucof87">
                 <img class="side-deco" src="Images/General Decorations/zhongvie.png" />
             </a>
         </div>
+
         <!-- =============================================== -->
         <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
         <!-- =============================================== -->
@@ -590,5 +595,6 @@
         <script src="Scripts/random-dragcave.js"></script>
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
         <script src="Scripts/loader.js"></script>
+        <script src="Scripts/accordion.js"></script>
     </body>
 </html>
