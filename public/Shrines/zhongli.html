@@ -48,39 +48,40 @@
 
                 --header: #fff7e6; /* Title color */
                 --footer: #f3f2eb; /* Footer text color */
+
+                --light: #e9ecdb;
+                --dark: #211f1f;
             }
-            @media (prefers-color-scheme: dark) {
-                :root {
-                    --background: #191717;
-                    --background-accent: #242020;
-                    --color: #ece2dc;
-                    --block: #24221f;
-                    --block-outline: #312b26;
+            body.dark {
+                --background: #191717;
+                --background-accent: #242020;
+                --color: #ece2dc;
+                --block: #24221f;
+                --block-outline: #312b26;
 
-                    --link: #dbb797;
-                    --linkhover: #d6f76b;
+                --link: #dbb797;
+                --linkhover: #d6f76b;
 
-                    --primary-accent: #d5864b;
-                    --secondary-accent: #ecc1a0;
-                    --font-on-accent: #150a0a;
-                    --divider: #ce732f;
-                    --letter-glow: rgba(135, 75, 92, 0.25);
+                --primary-accent: #d5864b;
+                --secondary-accent: #ecc1a0;
+                --font-on-accent: #150a0a;
+                --divider: #ce732f;
+                --letter-glow: rgba(135, 75, 92, 0.25);
 
-                    /* Other things */
-                    --border-radius: 10px;
-                    --subtle-line: rgba(244, 244, 244, 0.2);
-                    --bar-height: 15px;
+                /* Other things */
+                --border-radius: 10px;
+                --subtle-line: rgba(244, 244, 244, 0.2);
+                --bar-height: 15px;
 
-                    --footerlink: #efc683;
-                    --footerlinkhover: #b3f667;
+                --footerlink: #efc683;
+                --footerlinkhover: #b3f667;
 
-                    --h1: #d6901d;
-                    --h2: #d8c6ac;
-                    --h3: #d8c6ac;
+                --h1: #d6901d;
+                --h2: #d8c6ac;
+                --h3: #d8c6ac;
 
-                    --header: #fff7e6; /* Title color */
-                    --footer: #f3f2eb; /* Footer text color */
-                }
+                --header: #fff7e6; /* Title color */
+                --footer: #f3f2eb; /* Footer text color */
             }
             @font-face {
                 font-family: "dosis";
@@ -282,6 +283,62 @@
                 text-decoration-style: dotted;
                 text-decoration-color: var(--secondary-accent);
                 cursor: pointer;
+            }
+
+            /* -------------------------------------------------------- */
+            /* DARK MODE TOGGLES */
+            /* -------------------------------------------------------- */
+            .toggle-switch {
+                position: relative;
+                right: 0px;
+                top: 0px;
+                width: 50px;
+                z-index: 2;
+            }
+
+            .toggle-switch label {
+                position: absolute;
+                width: 100%;
+                height: 25px;
+                background-color: var(--light);
+                border-radius: 50px;
+                cursor: pointer;
+            }
+
+            input {
+                position: absolute;
+                display: none;
+            }
+
+            .slider {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50px;
+                transition: 0.3s;
+            }
+
+            input:checked ~ .slider {
+                background-color: var(--dark);
+            }
+
+            .toggle-switch .slider::before {
+                content: "";
+                position: absolute;
+                top: 3px;
+                right: 3px;
+                width: 19px;
+                height: 19px;
+                border-radius: 50%;
+                box-shadow: none;
+                background-color: var(--dark);
+                transition: 0.3s;
+            }
+
+            .toggle-switch input:checked ~ .slider::before {
+                transform: translateX(-24px);
+                background-color: var(--dark);
+                box-shadow: inset 4px -4px 0 0 var(--light);
             }
 
             /* -------------------------------------------------------- */
@@ -512,8 +569,17 @@
         </style>
     </head>
     <body>
+
         <div id="container">
-            <header id="main-header">Zhongli Shrine 🔶</header>
+            <header id="main-header">Zhongli Shrine 🔶
+            <div class="toggle-switch">
+            <label for="tglScheme">
+                <input type="checkbox" id="tglScheme" />
+                <span class="slider"></span>
+            </label>
+        </div></header>
+
+
             <div id="banner">
                 <!--This is the banner image, don't put anything here-->
             </div>
@@ -774,6 +840,10 @@
                 theme: "character"
             });
         </script>
+        <!-- Acessibility -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+        <!-- Dark Mode Toggle -->
+        <script src="../Scripts/Accessible/dark-mode-toggle.js"></script>
     </body>
 </html>
