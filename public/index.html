@@ -59,13 +59,20 @@
         <nav-header></nav-header>
 
         <!-- =============================================== -->
-        <!-- FONT TOGGLER. -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
         <!-- =============================================== -->
         <div id="font-toggle">
             <button type="button" id="toggle-font">toggle font</button>
         </div>
 
         <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div class="toggle-switch">
+            <label for="tglScheme">
+                <input type="checkbox" id="tglScheme" />
+                <span class="slider"></span>
+            </label>
+        </div>
 
         <!-- =============================================== -->
         <!-- BODY BEGINS. -->
@@ -409,7 +416,7 @@
                         width="190"
                         height="330"
                         style="border: none; overflow-y: hidden; overflow-x: scroll"
-                        src="https://gifypet.neocities.org/pet/pet.html?name=Sylvie&dob=1744413656&gender=undefined&element=Dendro&pet=https%3A%2F%2Fi.imgur.com%2FGau8ZdC.gif&map=forest.jpg&background=https%3A%2F%2Fi.imgur.com%2Fj5DXHGi.png&tablecolor=%788b68&textcolor=white"></iframe>
+                        src="https://gifypet.neocities.org/pet/pet.html?name=Sylvie&dob=1744413656&gender=undefined&element=Dendro&pet=https%3A%2F%2Fi.imgur.com%2FGau8ZdC.gif&map=forest.jpg&background=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2021%2F09%2F16%2F08%2F56%2Fleaves-6629581_960_720.png&tablecolor=black&textcolor=black"></iframe>
                     <p style="margin-bottom: 0; font-size: 0.9em; text-align: center">
                         Take care of my silly goober above 🥺
                     </p>
@@ -594,11 +601,21 @@
             marquee.setup();
         </script>
 
+        <!-- Dark Mode Toggle -->
+        <script src="Scripts/Accessible/dark-mode-toggle.js"></script>
+
+        <!-- Font Toggle -->
         <script src="Scripts/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
         <script src="Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+        <!-- Page Specific Scripts -->
         <script src="Scripts/random-sentence.js"></script>
         <script src="Scripts/random-dragcave.js"></script>
-        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
         <script src="Scripts/loader.js"></script>
         <script src="Scripts/accordion.js"></script>
     </body>

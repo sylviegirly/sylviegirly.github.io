@@ -43,13 +43,20 @@
         <nav-header></nav-header>
 
         <!-- =============================================== -->
-        <!-- FONT TOGGLER. -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
         <!-- =============================================== -->
         <div id="font-toggle">
             <button type="button" id="toggle-font">toggle font</button>
         </div>
 
         <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div class="toggle-switch">
+            <label for="tglScheme">
+                <input type="checkbox" id="tglScheme" />
+                <span class="slider"></span>
+            </label>
+        </div>
 
         <div class="container-grid">
             <!-- =============================================== -->
@@ -62,10 +69,6 @@
                         <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" />
                         Manifesto
                     </h1>
-                    <blockquote>
-                        just wanna find the softest grass i can find and lay down in it and look at the sky for a very
-                        very very long time
-                    </blockquote>
                     <p>
                         I&#39;ve seen these around, and I&#39;m not sure exactly still <i>what</i> to write, but I
                         really liked <a href="https://bechnokid.neocities.org/manifesto/">Bechno Kid&#39;s</a> and
@@ -113,9 +116,16 @@
         <!-- =============================================== -->
         <general-footer></general-footer>
 
-        <!-- Additional JS -->
+        <!-- Dark Mode Toggle -->
+        <script src="Scripts/Accessible/dark-mode-toggle.js"></script>
+
+        <!-- Font Toggle -->
         <script src="Scripts/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
         <script src="Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
     </body>
 </html>

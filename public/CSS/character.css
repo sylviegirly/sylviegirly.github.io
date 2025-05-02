@@ -1041,7 +1041,7 @@ button {
     position: fixed;
     width: auto;
     top: 15px;
-    left: 7px;
+    right: 7px;
     z-index: 9;
 }
 

@@ -1,23 +1,25 @@
 :root {
     /* HEADERS */
     --header-bg: #211f1f;
-    --header-title: #edf4dd;
-    --header-subtitle: #bdd7a8;
+    --background-image: url(Images/light_mode_bg.png);
+    --header-title: #e8f4dd;
+    --header-subtitle: #c8d7a8;
 
     /* BACKGROUNDS */
-    --background-colour: #211f1f;
-    --article-bg: #191717;
+    --background-colour: #879d6d;
+    --article-bg: #e9ecdb;
 
     /* PRIMARY ACCENTS */
-    --primary-accent: #788b68;
-    --secondary-accent: #cee8ba;
-    --letter-glow: rgba(74, 118, 58, 0.15);
+    --primary-accent: #4e6137;
+    --secondary-accent: #828d65;
+    --font-on-accent: #f3f4e0;
+    --letter-glow: rgba(8, 30, 1, 0.19);
 
     /* TEXT */
-    --text-colour: #f4f4f4;
-    --link-colour: #a8d38d;
-    --link-hover: #e2ae50;
-    --crossed-out: #858585;
+    --text-colour: #16190f;
+    --link-colour: #b67925;
+    --link-hover: #475407;
+    --body-deco: #f7f6e3;
 
     /* SIZES + SPACING */
     --blog-size: 1100px;
@@ -25,6 +27,34 @@
     --left-sidebar-size: 250px;
     --right-sidebar-size: 220px;
     --border-radius: 5px;
+
+    --light: #d8dbe0;
+    --dark: #28292c;
+}
+
+body.dark {
+    /* HEADERS */
+    --header-bg: #211f1f;
+    --header-title: #edf4dd;
+    --header-subtitle: #bdd7a8;
+
+    /* BACKGROUNDS */
+    --background-colour: #211f1f;
+    --background-image: url(Images/dark_mode_bg.png);
+    --article-bg: #191717;
+
+    /* PRIMARY ACCENTS */
+    --primary-accent: #788b68;
+    --secondary-accent: #cee8ba;
+    --font-on-accent: #000000;
+    --letter-glow: rgba(74, 118, 58, 0.15);
+
+    /* TEXT */
+    --text-colour: #f4f4f4;
+    --link-colour: #a8d38d;
+    --link-hover: #e2ae50;
+    --crossed-out: #858585;
+    --body-deco: #211f1f;
 }
 
 @font-face {
@@ -42,6 +72,61 @@
 @font-face {
     font-family: "atkinson";
     src: url(Fonts/AtkinsonHyperlegible-Regular.ttf);
+}
+
+/* -------------------------------------------------------- */
+/* DARK MODE TOGGLES */
+/* -------------------------------------------------------- */
+.toggle-switch {
+    position: absolute;
+    right: 115px;
+    top: 10px;
+    width: 50px;
+}
+
+.toggle-switch label {
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    background-color: var(--light);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+input {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+input:checked ~ .slider {
+    background-color: var(--dark);
+}
+
+.toggle-switch .slider::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    box-shadow: none;
+    background-color: var(--dark);
+    transition: 0.3s;
+}
+
+.toggle-switch input:checked ~ .slider::before {
+    transform: translateX(-24px);
+    background-color: var(--dark);
+    box-shadow: inset 4px -4px 0 0 var(--light);
 }
 
 /* -------------------------------------------------------- */
@@ -72,7 +157,7 @@ body {
     font-family: "freepixel";
     line-height: 1.3em;
     letter-spacing: 0;
-    background-image: url(https://i.imgur.com/j5DXHGi.png);
+    background-image: var(--background-image);
 }
 
 .accessible-font {
@@ -118,7 +203,7 @@ aside {
 h1 {
     background-color: var(--primary-accent);
     /*background-image: url(https://sadhost.neocities.org/images/tiles/bg_bluewhiteflowers.gif);*/
-    color: #0c1509;
+    color: var(--font-on-accent);
     font-family: "dosis";
     border-radius: var(--border-radius);
     letter-spacing: 2px;
@@ -131,7 +216,6 @@ h1 {
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
-    text-shadow: 2px 2px rgb(91, 118, 81);
 }
 
 h2 {
@@ -174,11 +258,11 @@ u {
 
 s,
 strikethrough {
-    color: var(--crossed-out);
+    opacity: 0.8;
 }
 
 mark {
-    text-shadow: 1px 1px 4px var(--link-colour);
+    text-shadow: 1px 1px 4px var(--letter-glow);
     background-color: inherit;
     color: var(--text-colour);
 }
@@ -186,7 +270,7 @@ mark {
 .highlight {
     background-color: var(--primary-accent);
     border-radius: var(--border-radius);
-    color: black;
+    color: var(--font-on-accent);
     padding: 1px;
     padding-left: 5px;
     padding-right: 5px;
@@ -196,7 +280,7 @@ mark {
 .subtitle {
     background-color: var(--primary-accent);
     /*background-image: url(https://sadhost.neocities.org/images/tiles/bg_bluewhiteflowers.gif);*/
-    color: black;
+    color: var(--font-on-accent);
     border-radius: var(--border-radius);
     letter-spacing: 1px;
     padding: 5px;
@@ -219,7 +303,7 @@ blockquote {
     border-right-color: var(--primary-accent);
     border-right-width: 3px;
     border-right-style: solid;
-    background-color: var(--background-colour);
+    background-color: var(--body-deco);
 }
 
 abbr {
@@ -238,7 +322,7 @@ summary {
 }
 
 details {
-    background-color: var(--background-colour);
+    background-color: var(--body-deco);
     border-radius: var(--border-radius);
     padding: 5px;
     padding-left: 10px;
@@ -284,7 +368,7 @@ aside a:hover {
 /* Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--primary-accent) var(--background-colour);
+    scrollbar-color: var(--primary-accent) transparent;
 }
 
 /* Chrome, Edge, and Safari */
@@ -297,7 +381,7 @@ aside a:hover {
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--background-colour);
+    background-color: transparent;
     border-radius: 10px;
     border: 3px double var(--primary-accent);
 }
@@ -312,7 +396,7 @@ aside a:hover {
 /* -------------------------------------------------------- */
 
 .tippy-tooltip.character-theme {
-    color: black;
+    color: var(--font-on-accent);
     letter-spacing: 1px;
     font-size: 1em;
     font-family: "atkinson";
@@ -461,7 +545,7 @@ header .subtext {
 
 nav {
     background-color: var(--primary-accent);
-    color: #000000;
+    color: var(--font-on-accent);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -477,7 +561,7 @@ nav > button {
     margin-left: auto;
     border: 0;
     background-color: var(--primary-accent);
-    color: #000000;
+    color: var(--font-on-accent);
     font-size: 2.5rem;
 }
 nav ul {
@@ -485,20 +569,20 @@ nav ul {
     margin: 0;
     padding: 0;
     background-color: var(--primary-accent);
-    color: #000000;
+    color: var(--font-on-accent);
     list-style: none;
     text-transform: uppercase;
 }
 nav ul ul {
     background-color: var(--article-bg);
     box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px;
-    color: #000000;
+    color: var(--text-colour);
     text-transform: lowercase;
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
 }
 nav ul ul a {
-    color: white;
+    color: var(--text-colour);
 }
 nav ul.show {
     display: grid;
@@ -512,7 +596,7 @@ nav a {
     align-items: center;
     padding: 0.75rem 1.5rem;
     transition: background-color 150ms ease-in-out;
-    color: #000000;
+    color: var(--font-on-accent);
     text-decoration: none;
 }
 nav a:hover {
@@ -605,7 +689,7 @@ nav li.dropdown ul li.dropdown ul a {
 }
 
 .site-button textarea {
-    color: black;
+    color: var(--font);
     font-family: monospace;
     font-size: 0.75em;
     width: 100%;
@@ -636,7 +720,7 @@ section {
 section .scrollable {
     font-size: 0.75rem;
     height: 100px;
-    background-color: var(--background-colour);
+    background-color: var(--body-deco);
     border-radius: var(--border-radius);
     overflow-y: scroll;
     padding: 7px;
@@ -677,7 +761,7 @@ section .full-width-image {
     padding-top: 3px;
     padding-bottom: 3px;
     text-decoration: none;
-    color: black;
+    color: var(--font-on-accent);
     font-size: 0.9rem !important;
     display: block;
     transition: 0.5s ease-in-out;
@@ -686,7 +770,7 @@ section .full-width-image {
 .links li a:hover {
     padding-top: 6px;
     padding-bottom: 6px;
-    color: black;
+    color: var(--font-on-accent);
     font-size: 1rem !important;
     background-color: var(--link-hover);
 }
@@ -768,7 +852,7 @@ article .checkboxdone ul li:before {
 
 article .scrollable {
     height: 250px;
-    background-color: var(--background-colour);
+    background-color: var(--body-deco);
     border-radius: var(--border-radius);
     overflow-y: scroll;
     padding: 7px;
@@ -792,7 +876,7 @@ article .columns {
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-    color: black;
+    color: var(--font-on-accent);
     background-color: var(--primary-accent);
     font-family: inherit;
     font-size: inherit;
@@ -1116,7 +1200,7 @@ footer a:hover {
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
     background-color: var(--primary-accent); /* Set a background color */
-    color: black; /* Text color */
+    color: var(--font-on-accent); /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: var(--border-radius); /* Rounded corners */
@@ -1194,7 +1278,7 @@ footer a:hover {
 
 #font-toggle button {
     font-family: inherit;
-    color: white;
+    color: var(--font-on-accent);
     width: 100px;
     height: 30px;
     background-color: var(--primary-accent);
@@ -1204,9 +1288,8 @@ footer a:hover {
 }
 
 #font-toggle button:hover {
-    font-size: 1em;
-    width: 120px;
-    height: 40px;
+    background-color: var(--secondary-accent);
+    border-color: var(--link-hover);
     box-shadow:
         0 12px 16px 0 rgba(0, 0, 0, 0.24),
         0 17px 50px 0 rgba(0, 0, 0, 0.19);

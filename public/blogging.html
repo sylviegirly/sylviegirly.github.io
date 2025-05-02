@@ -47,13 +47,20 @@
         <nav-header></nav-header>
 
         <!-- =============================================== -->
-        <!-- FONT TOGGLER. -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
         <!-- =============================================== -->
         <div id="font-toggle">
             <button type="button" id="toggle-font">toggle font</button>
         </div>
 
         <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div class="toggle-switch">
+            <label for="tglScheme">
+                <input type="checkbox" id="tglScheme" />
+                <span class="slider"></span>
+            </label>
+        </div>
 
         <div class="container-grid">
             <!-- =============================================== -->
@@ -613,9 +620,16 @@
         <!-- =============================================== -->
         <general-footer></general-footer>
 
-        <!-- Additional JS -->
+        <!-- Dark Mode Toggle -->
+        <script src="Scripts/Accessible/dark-mode-toggle.js"></script>
+
+        <!-- Font Toggle -->
         <script src="Scripts/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
         <script src="Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
     </body>
 </html>

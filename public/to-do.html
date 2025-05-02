@@ -44,10 +44,17 @@
         <nav-header></nav-header>
 
         <!-- =============================================== -->
-        <!-- FONT TOGGLER. -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
         <!-- =============================================== -->
         <div id="font-toggle">
             <button type="button" id="toggle-font">toggle font</button>
+        </div>
+
+        <div class="toggle-switch">
+            <label for="tglScheme">
+                <input type="checkbox" id="tglScheme" />
+                <span class="slider"></span>
+            </label>
         </div>
 
         <div class="container-grid">
@@ -95,7 +102,10 @@
                                 flexboxes now
                             </li>
                             <li>Find out what layout I wanna use for my bookmarks page</li>
-                            <li>Set up a light mode color scheme for general CSS</li>
+                            <li>
+                                <s>Set up a light mode color scheme for general CSS</s> Done for the actual website,
+                                just need to ponder doing it for OCs before I get in too deep ... and ... shrines?
+                            </li>
                         </ul>
                     </div>
                 </article>
@@ -106,8 +116,13 @@
         <!-- =============================================== -->
         <general-footer></general-footer>
 
-        <!-- Additional JS -->
+        <!-- Dark Mode Toggle -->
+        <script src="Scripts/Accessible/dark-mode-toggle.js"></script>
+
+        <!-- Font Toggle -->
         <script src="Scripts/font_toggle.js"></script>
+
+        <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
     </body>
 </html>
