@@ -1311,7 +1311,7 @@ footer a:hover {
 
 /* Status Cafe */
 .feed-container {
-    background-color: var(--background-colour);
+    background-color: var(--body-deco);
     font-size: 0.75em;
     font-family: "freepixel", "Courier";
     letter-spacing: normal;
