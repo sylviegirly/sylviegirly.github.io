@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+
+        <title>zhongli</title>
+        <link rel="stylesheet" href="../CSS/lightbox.css" />
+        <script src="../Scripts/lightbox-plus-jquery.js"></script>
+
+        <style>
+            :root {
+                /* Fonts */
+                --bodyfont: "atkinson";
+                --headerfont: "dosis";
+
+                /* Images */
+                --banner-image-mobile: url(https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit6.png) no-repeat; /* Banner background image for mobile (wide) */
+                --banner-position-mobile: top; /* Banner background position on small screens */
+
+                /* Main colors */
+                --background: #aa8468; /* Page background */
+                --background-accent: #a27757;
+                --color: #1e1919;
+                --block: #ede1da; /* Background color for the grid blocks in the content */
+                --block-outline: #955e40;
+
+                --link: #5a2f09;
+                --linkhover: #788b13;
+
+                --primary-accent: #764a33;
+                --secondary-accent: #9d683f;
+                --font-on-accent: #ffffff;
+                --divider: #ce732f;
+                --letter-glow: rgba(135, 75, 92, 0.25);
+
+                /* Other things */
+                --border-radius: 10px;
+                --subtle-line: rgba(244, 244, 244, 0.2);
+                --bar-height: 15px;
+
+                --footerlink: #ffdeb0;
+                --footerlinkhover: #b3f667;
+
+                --h1: #48480a;
+                --h2: #382408;
+                --h3: #382408;
+
+                --header: #fff7e6; /* Title color */
+                --footer: #f3f2eb; /* Footer text color */
+            }
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --background: #191717;
+                    --background-accent: #242020;
+                    --color: #ece2dc;
+                    --block: #24221f;
+                    --block-outline: #312b26;
+
+                    --link: #dbb797;
+                    --linkhover: #d6f76b;
+
+                    --primary-accent: #d5864b;
+                    --secondary-accent: #ecc1a0;
+                    --font-on-accent: #150a0a;
+                    --divider: #ce732f;
+                    --letter-glow: rgba(135, 75, 92, 0.25);
+
+                    /* Other things */
+                    --border-radius: 10px;
+                    --subtle-line: rgba(244, 244, 244, 0.2);
+                    --bar-height: 15px;
+
+                    --footerlink: #efc683;
+                    --footerlinkhover: #b3f667;
+
+                    --h1: #d6901d;
+                    --h2: #d8c6ac;
+                    --h3: #d8c6ac;
+
+                    --header: #fff7e6; /* Title color */
+                    --footer: #f3f2eb; /* Footer text color */
+                }
+            }
+            @font-face {
+                font-family: "dosis";
+                src: url(../Fonts/Dosis-VariableFont_wght.ttf);
+            }
+            @font-face {
+                font-family: "atkinson";
+                src: url(../Fonts/AtkinsonHyperlegible-Regular.ttf);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* Main body styling */
+            body {
+                background: var(--background);
+                font: 1rem "atkinson";
+                color: var(--color);
+                background-color: var(--background);
+                opacity: 1;
+                background-image: linear-gradient(var(--background-accent) 1px, transparent 1px),
+                    linear-gradient(to right, var(--background-accent) 1px, var(--background) 1px);
+                background-size: 20px 20px;
+            }
+
+            #bg-image {
+                background-color: #e5e5f7;
+                opacity: 0.8;
+                background-image: linear-gradient(#444cf7 1px, transparent 1px),
+                    linear-gradient(to right, #444cf7 1px, #e5e5f7 1px);
+                background-size: 20px 20px;
+            }
+
+            #main-header {
+                font: 2.5em var(--headerfont);
+                color: var(--header);
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            /* SCROLLBAR STYLING */
+
+            /* Firefox */
+            * {
+                scrollbar-width: thin;
+                scrollbar-color: var(--primary-accent) transparent;
+            }
+
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+                width: 5px;
+                border-radius: 10px;
+            }
+
+            *::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            *::-webkit-scrollbar-thumb {
+                background: transparent;
+                border-radius: 10px;
+                border: 3px double var(--primary-accent);
+            }
+
+            ::selection {
+                color: var(--font-on-accent);
+                background: var(--primary-accent);
+            }
+
+            /* Content styling */
+
+            main {
+                margin-top: 10px;
+                background: var(--block);
+                padding: 20px;
+                border-radius: var(--border-radius);
+                box-shadow: 6px 6px 0 var(--block-outline);
+            }
+
+            main h1 {
+                font: 1.8em var(--headerfont);
+                color: var(--h1);
+                margin: 0 0 10px 0;
+            }
+
+            main h2 {
+                font: 1.5em var(--headerfont);
+                color: var(--h2);
+                margin: 20px 0 10px 0;
+            }
+
+            p {
+                line-height: 1.5;
+                margin: 10px 0 10px 0;
+            }
+
+            main a {
+                color: var(--link);
+                transition: 0.5s ease;
+            }
+
+            main a:hover,
+            main a:focus {
+                color: var(--linkhover);
+                transition: 0.5s ease;
+            }
+
+            main ul {
+                list-style-position: outside;
+                list-style: square;
+                margin-left: 25px;
+            }
+
+            main ul li {
+                line-height: 1.5;
+                margin-bottom: 5px;
+            }
+
+            main ul li::marker {
+                color: var(--primary-accent);
+            }
+
+            main ul ul li::marker {
+                color: var(--secondary-accent);
+            }
+
+            main img {
+                max-width: 100%;
+                margin: 15px 0;
+                border-radius: var(--border-radius);
+            }
+
+            main hr {
+                height: 0;
+                border: none;
+                border-top: 1px solid;
+                border-color: var(--primary-accent);
+                margin: 0;
+            }
+
+            .center-img {
+                display: flex;
+                justify-content: center; /* align horizontal */
+                align-items: center; /* align vertical */
+            }
+
+            main blockquote,
+            main .box {
+                padding: 10px;
+                border-left: 20px solid var(--primary-accent);
+            }
+
+            main details {
+                background: rgba(182, 132, 109, 0.2);
+                border-radius: var(--border-radius);
+                padding: 10px;
+                margin: 10px 0 10px 0;
+            }
+
+            main details summary {
+                cursor: pointer;
+                font-family: "dosis";
+                font-weight: bold;
+            }
+
+            main details summary::marker {
+                color: var(--primary-accent);
+            }
+
+            /* Decoration Styling */
+            b,
+            bold,
+            strong {
+                color: var(--primary-accent);
+            }
+
+            i,
+            italics,
+            em {
+                color: var(--secondary-accent);
+            }
+
+            u,
+            underline {
+                text-decoration-style: solid;
+                text-decoration-color: var(--secondary-accent);
+                text-decoration-thickness: 2px;
+            }
+
+            s,
+            strikethrough {
+                opacity: 0.7;
+            }
+
+            abbr,
+            .tippy {
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                text-decoration-color: var(--secondary-accent);
+                cursor: pointer;
+            }
+
+            /* -------------------------------------------------------- */
+            /* GALLERY */
+            /* -------------------------------------------------------- */
+            /* Wrapper */
+            .image-gallery {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 10px;
+            }
+
+            .image-gallery img {
+                margin: 0 !important;
+                border-radius: 0;
+            }
+
+            /* Items */
+            .image-gallery div {
+                height: auto;
+                width: calc(33% - 10px);
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+                border: 5px solid var(--link);
+                border-radius: var(--border-radius);
+                overflow: hidden;
+                transition: transform 0.5s ease;
+            }
+
+            /* Images */
+            .image-gallery div img {
+                aspect-ratio: 1/1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            /* Images on Hover */
+            .image-gallery div:hover img {
+                transform: scale(1.15) rotate(10deg);
+            }
+
+            /* -------------------------------------------------------- */
+            /* TIPPY STYLING */
+            /* -------------------------------------------------------- */
+
+            .tippy-tooltip.character-theme {
+                color: var(--font-on-accent);
+                letter-spacing: 1px;
+                font-size: 1em;
+                font-family: "atkinson";
+                text-align: center;
+                background: var(--primary-accent);
+                box-shadow:
+                    rgba(0, 0, 0, 0.16) 0 10px 36px 0,
+                    rgba(0, 0, 0, 0.06) 0 0 0 1px;
+            }
+
+            .tippy-tooltip.character-theme[data-placement^="top"] .tippy-arrow {
+                border-top-color: var(--primary-accent);
+            }
+            .tippy-tooltip.character-theme[data-placement^="bottom"] .tippy-arrow {
+                border-bottom-color: var(--primary-accent);
+            }
+            .tippy-tooltip.character-theme[data-placement^="left"] .tippy-arrow {
+                border-left-color: var(--primary-accent);
+            }
+            .tippy-tooltip.character-theme[data-placement^="right"] .tippy-arrow {
+                border-right-color: var(--primary-accent);
+            }
+
+            #main-footer {
+                text-align: center;
+                padding: 15px;
+                color: var(--footer);
+            }
+
+            #main-footer a {
+                color: var(--footerlink);
+                transition: 0.5s ease;
+            }
+
+            #main-footer a:hover,
+            #main-footer a:focus {
+                color: var(--footerlinkhover);
+                transition: 0.5s ease;
+            }
+
+            /* Zhongli Deco */
+
+            #zhongli {
+                pointer-events: none;
+            }
+
+            #zhongli img {
+                min-height: 600px;
+
+                filter: drop-shadow(1px 1px 0 var(--primary-accent)) drop-shadow(-1px 1px 0 var(--primary-accent))
+                    drop-shadow(0 2px 0 var(--primary-accent)) drop-shadow(0 -1px 0 var(--primary-accent))
+                    drop-shadow(0 1px 1.5px var(--primary-accent)) drop-shadow(0 -1px 1.5px var(--primary-accent))
+                    drop-shadow(1px -1px 1.5px var(--primary-accent)) drop-shadow(-1px -1px 1.5px var(--primary-accent));
+            }
+
+            #zhongvie img {
+                max-height: 500px;
+                transition: 0.3s ease-in;
+            }
+
+            #zhongvie img:hover {
+                transform: scale(1.15) rotate(10deg);
+            }
+
+            /* Animation */
+
+            .img-floatinganim {
+                animation-name: floating;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
+
+            @keyframes floating {
+                0% {
+                    transform: translate(0, 0px);
+                }
+
+                50% {
+                    transform: translate(0, 15px);
+                }
+
+                100% {
+                    transform: translate(0, -0px);
+                }
+            }
+
+            #container {
+                position: relative;
+                padding: 10px;
+                margin-top: 10px;
+                border-radius: 10px;
+            }
+
+            /* MOBILE ONLY STYLING */
+            #banner {
+                display: block;
+                background: var(--banner-image-mobile);
+                background-position: var(--banner-position-mobile);
+                background-size: cover;
+                height: 250px;
+                border-radius: var(--border-radius);
+            }
+
+            #banner-content {
+                width: calc(100% - 20px);
+            }
+
+            #container {
+                width: calc(100% - 20px);
+            }
+
+            #zhongli {
+                display: none;
+            }
+
+            #zhongvie {
+                text-align: center;
+            }
+
+            /* DESKTOP ONLY STYLING */
+            @media screen and (min-width: 800px) {
+                .image-gallery div {
+                    width: calc(25% - 10px);
+                }
+
+                #zhongvie img {
+                    max-height: 190px;
+                }
+
+                #container {
+                    max-width: 900px;
+                    width: 90%;
+                    margin: 130px auto 0 auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                #banner {
+                    display: none;
+                }
+
+                main {
+                    flex: 1 1 calc(75% - 30px);
+                    overflow: auto;
+                    height: calc(600px - 30px);
+                    padding-left: 190px;
+                }
+
+                #main-header {
+                    flex: 1 1 100%;
+                    text-align: left;
+                }
+
+                #main-footer {
+                    flex: 1 1 calc(100% - 30px);
+                }
+
+                /* ZL decoration */
+                #zhongli {
+                    display: block;
+                    position: absolute;
+                    left: -114px;
+                    top: 41px;
+                }
+
+                #zhongvie {
+                    position: absolute;
+                    right: -239px;
+                    bottom: 69px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header id="main-header">Zhongli Shrine 🔶</header>
+            <div id="banner">
+                <!--This is the banner image, don't put anything here-->
+            </div>
+            <main id="content">
+                <div id="zhongli" class="img-floatinganim">
+                    <img src="../Images/OC%20Stuff/Others/editedAlt.png" aria-hidden="true" alt="" />
+                </div>
+                <h1>Welcome!!</h1>
+                <p>
+                    This is just a simple shrine dedicated to one silly old guy from Genshin Impact under the name of
+                    Zhongli <i>(yes he's C6, yes I run him on a phys DPS build out of spite)</i>. Although he wasn't the
+                    reason I began playing the game (I started upon release), he was the reason I fell completely for
+                    the game and found myself back into making <a href="../OCs/sylvie.html">a fandom OC</a>.
+                </p>
+                <blockquote>
+                    For those that live too long, the friends of days gone by and scenes from their adventures live on
+                    in their memories. As such I have no regrets in meeting you, friend. Should the day ever come that
+                    we are not together, you will continue to shine like gold in my memories.
+                </blockquote>
+                <p>
+                    An old god who has been loyal to his people for many years, who has seen and lost so many friends,
+                    who has finally found the tiny push to retire after being lost in the cyclical, day-to-day motion of
+                    godhood for the past 2,000 years. How could I not fall for him?
+                </p>
+                <p>
+                    He's such a goofy guy too!! Silly old man who finds a way to swindle free fans of himself and likes
+                    partaking in discussions (arguments) about the history of Rex Lapis as if he isn't the man himself.
+                    I'd like to believe that the people of Liyue either know it's him, <i>or</i> they know he's some
+                    adepti and are just being nice to not point it out when he's so trying to be 'just a guy'.
+                </p>
+                <details>
+                    <summary>God knows I have many thoughts about him and his fandom portrayal</summary>
+                    <p>
+                        To be fair, in part of why I also got so attached to him was my absolute 'wtf' shock at how
+                        people portray him in the fandom; unironically I saw someone call him narcissistic with how he
+                        treats Xiao ... y'know, the guy he gets medicine for? Who he worries about? Who he wants to see
+                        indulging in living life? That's his peepaw!!
+                    </p>
+                    <p>
+                        That or genuinely unfeeling / uncaring, he <i>himself</i> may have talked about having a heart
+                        of stone (considering he had to partake in a literal war), but his character is <b>not</b> any
+                        of those things. I dunno how people can portray him as unfeeling and cold and willing to use
+                        people, or harm them, but I've seen so many cases of fandom treating his past history as Morax,
+                        or even during the war era, as being ... abusive isn't the right word, but somewhere in that
+                        vein.
+                    </p>
+                    <p>
+                        That's not to even get into the whole <b>shipping</b> conundrum but the Hoyoverse fandom at
+                        large is kind of atrocious with it. 'Alpha Daddy' Zhongli can explode for all I care about; that
+                        is a gentleman through and through (that or people use Guizhong as a shitty ship device). Anyway
+                        the fandom honestly made me feel so spiteful for how they treated him in ships that I made my
+                        own OC to ship with him.
+                    </p>
+                    <p>
+                        'No Mora' and 'sugar daddy Childe' jokes are beaten to death, please stop. He may be a little
+                        cheeky when buying items (especially now that he can as his own person and with his own, not
+                        created, Mora), but yall can't tell me this man is perpetually poor and has a permanent lack of
+                        sense of spending.
+                    </p>
+                    <p>
+                        <span class="tippy" data-tippy-content="the feeling when">TFW</span> the reading comprehension
+                        of the fandom is so shit that you just adopt the canon as yours.
+                    </p>
+                </details>
+                <p>
+                    Regardless, he's captured my heart with his gorgeously warm colour palette, his gentleness, and all
+                    the delicious trauma potential that comes with godhood (AUGHH Azhdaha's quest still kills me to see
+                    him <i>SO</i> sad to have to say goodbye to a friend). Had it also not been for him, I'd have never
+                    met my friend who roleplays him on tumblr, and became close friends with her too.
+                </p>
+                <hr />
+                <h2>Personal Headcanons</h2>
+                <p>
+                    All headcanons are different and open for interpretation, but these are the ones I can't unsee or
+                    detangle from him as a character.
+                </p>
+                <ul>
+                    <li>
+                        I see him with more tanned skin and age wrinkles by his eyes, making him look closer to his 40's
+                    </li>
+                    <li>
+                        Geo arms ... permanently there, but because of how he dresses, you don't see them often; if he's
+                        forced to show his arms, he will take on a human skintone
+                    </li>
+                    <li>
+                        There's a little fork to his tongue and sharper canines, but you need to pay attention to see it
+                    </li>
+                    <li>Permanent scar on his chest from his gnosis removal</li>
+                    <li>He sometimes wears a green bow for his hair instead of his gemstone clasp</li>
+                    <li>
+                        His hair glows when embarrassed or experiencing a deep emotion, and on occasion scales will form
+                        on his skin too
+                    </li>
+                    <li>
+                        His exuvia horns are sensitive to the touch since he feels through them (think of it like
+                        exposed, raw elemental energy)
+                    </li>
+                    <li>
+                        I see him as agender, mostly due to him seeing himself as just Zhongli and an elemental being.
+                        Still goes by he/him, but he's flexible and doesn't mind what others use
+                    </li>
+                    <li>Demisexual and demiromantic</li>
+                    <li>
+                        Those who are close to him see a very mischevious side of him that errs on childish at moments
+                    </li>
+                    <li>
+                        Any injuries he sustains are like breaking open a gemstone; his body 'cracks' and shows the
+                        solid, golden insides that make him
+                    </li>
+                    <li>
+                        He likes pebbling, aka gifting small things to those he cares for; he is materialistic in the
+                        form that physical items retain sentimental value to him, especially from those who are now gone
+                    </li>
+                    <li>
+                        Due to being an elemental being made of geo (as I see archons not as <i>gods</i> but elemental
+                        beings like slimes), he can feel vibrations and movement through the ground
+                    </li>
+                    <li>
+                        Autism (man and his square cups and yap sessions about special interests and liking schedules
+                        and consistency)
+                    </li>
+                </ul>
+                <hr />
+                <h2>Edit Gallery</h2>
+                <p>Aka I went to go edit the official art with my headcanons of him.</p>
+                <div class="image-gallery">
+                    <!-- IMAGE -->
+                    <div>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit1.png"
+                            loading="lazy"
+                            data-lightbox="gallery"
+                            aria-label="open image"
+                            ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit1_thumb.png" alt=""
+                        /></a>
+                    </div>
+                    <!-- IMAGE -->
+                    <div>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit11.png"
+                            loading="lazy"
+                            data-lightbox="gallery"
+                            aria-label="open image"
+                            ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit11_thumb.png" alt=""
+                        /></a>
+                    </div>
+                    <!-- IMAGE -->
+                    <div>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit2.png"
+                            loading="lazy"
+                            data-lightbox="gallery"
+                            aria-label="open image"
+                            ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit2_thumb.png" alt=""
+                        /></a>
+                    </div>
+                    <!-- IMAGE -->
+                    <div>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit10.png"
+                            loading="lazy"
+                            data-lightbox="gallery"
+                            aria-label="open image"
+                            ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit10_thumb.png" alt=""
+                        /></a>
+                    </div>
+                    <!-- IMAGE -->
+                    <div>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit3.png"
+                            loading="lazy"
+                            data-lightbox="gallery"
+                            aria-label="open image"
+                            ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit3_thumb.png" alt=""
+                        /></a>
+                    </div>
+                    <!-- IMAGE -->
+                    <div>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit4.png"
+                            loading="lazy"
+                            data-lightbox="gallery"
+                            aria-label="open image"
+                            ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit4_thumb.png" alt=""
+                        /></a>
+                    </div>
+                    <!-- IMAGE -->
+                    <div>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit5.png"
+                            loading="lazy"
+                            data-lightbox="gallery"
+                            aria-label="open image"
+                            ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit5_thumb.png" alt=""
+                        /></a>
+                    </div>
+                    <!-- IMAGE -->
+                    <div>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit7.png"
+                            loading="lazy"
+                            data-lightbox="gallery"
+                            aria-label="open image"
+                            ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit7_thumb.png" alt=""
+                        /></a>
+                    </div>
+                    <!-- IMAGE -->
+                    <div>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit8.png"
+                            loading="lazy"
+                            data-lightbox="gallery"
+                            aria-label="open image"
+                            ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit8_thumb.png" alt=""
+                        /></a>
+                    </div>
+                    <!-- IMAGE -->
+                    <div>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit9.png"
+                            loading="lazy"
+                            data-lightbox="gallery"
+                            aria-label="open image"
+                            ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit9_thumb.png" alt=""
+                        /></a>
+                    </div>
+                </div>
+                <div id="zhongvie">
+                    <a href="zhongvie.html">
+                        <img
+                            src="../Images/OC%20Stuff/Others/transparent.png"
+                            alt="A chibi of Zhongli and an original character holding hands"
+                            data-tippy-content="Check out OC/Canon ship I've got with him!" />
+                    </a>
+                </div>
+            </main>
+            <footer id="main-footer">
+                <!--Footer goes here-->
+                <p>
+                    Template by
+                    <a href="https://kalechips.net/">Kalechips</a>. Chibi zhongvie art by
+                    <a href="https://www.tumblr.com/averaillisa">averaillisa</a>. Please do not take the edited images
+                    of Zhongli, since I made those for myself.
+                </p>
+                <p>
+                    <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                    <a href="../index.html">Back to main blog</a>
+                </p>
+            </footer>
+        </div>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    </body>
+</html>
