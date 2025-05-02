@@ -289,9 +289,9 @@
             /* DARK MODE TOGGLES */
             /* -------------------------------------------------------- */
             .toggle-switch {
-                position: relative;
-                float: right;
-                top: 32px;
+                position: absolute;
+                top: 26px;
+                right: 51px;
                 width: 50px;
                 z-index: 2;
             }
@@ -326,7 +326,7 @@
                 content: "";
                 position: absolute;
                 top: 3px;
-                right: 3px;
+                right: 26px;
                 width: 19px;
                 height: 19px;
                 border-radius: 50%;
@@ -518,6 +518,27 @@
             @media screen and (min-width: 800px) {
                 .image-gallery div {
                     width: calc(25% - 10px);
+                }
+
+                .toggle-switch {
+                    position: absolute;
+                    right: 15px;
+                    top: 32px;
+                    width: 50px;
+                    z-index: 2;
+                }
+
+                .toggle-switch .slider::before {
+                    content: "";
+                    position: absolute;
+                    top: 3px;
+                    right: 3px;
+                    width: 19px;
+                    height: 19px;
+                    border-radius: 50%;
+                    box-shadow: none;
+                    background-color: var(--dark);
+                    transition: 0.3s;
                 }
 
                 #zhongvie img {
