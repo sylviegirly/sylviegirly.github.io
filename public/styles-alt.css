@@ -28,8 +28,8 @@
     --right-sidebar-size: 220px;
     --border-radius: 5px;
 
-    --light: #d8dbe0;
-    --dark: #28292c;
+    --light: #e9ecdb;
+    --dark: #211f1f;
 }
 
 body.dark {
@@ -872,6 +872,9 @@ article .columns {
 /* Style the tab */
 .tab {
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -887,7 +890,6 @@ article .columns {
     padding: 10px 16px;
     border-radius: var(--border-radius);
     transition: 0.3s;
-    margin-right: 10px;
 }
 
 /* Change background color of buttons on hover */
