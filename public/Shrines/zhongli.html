@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "☀️";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "🌙";
+            }
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
 
@@ -9,15 +20,8 @@
         <script src="../Scripts/lightbox-plus-jquery.js"></script>
 
         <style>
-            :root {
-                /* Fonts */
-                --bodyfont: "atkinson";
-                --headerfont: "dosis";
-
-                /* Images */
-                --banner-image-mobile: url(https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit6.png) no-repeat; /* Banner background image for mobile (wide) */
-                --banner-position-mobile: top; /* Banner background position on small screens */
-
+            html,
+            html[data-theme="light"] {
                 /* Main colors */
                 --background: #aa8468; /* Page background */
                 --background-accent: #a27757;
@@ -34,10 +38,7 @@
                 --divider: #ce732f;
                 --letter-glow: rgba(135, 75, 92, 0.25);
 
-                /* Other things */
-                --border-radius: 10px;
                 --subtle-line: rgba(244, 244, 244, 0.2);
-                --bar-height: 15px;
 
                 --footerlink: #ffdeb0;
                 --footerlinkhover: #b3f667;
@@ -48,11 +49,9 @@
 
                 --header: #fff7e6; /* Title color */
                 --footer: #f3f2eb; /* Footer text color */
-
-                --light: #ede1da;
-                --dark: #ce732f;
             }
-            body.dark {
+
+            html[data-theme="dark"] {
                 --background: #191717;
                 --background-accent: #242020;
                 --color: #ece2dc;
@@ -68,10 +67,7 @@
                 --divider: #ce732f;
                 --letter-glow: rgba(135, 75, 92, 0.25);
 
-                /* Other things */
-                --border-radius: 10px;
                 --subtle-line: rgba(244, 244, 244, 0.2);
-                --bar-height: 15px;
 
                 --footerlink: #efc683;
                 --footerlinkhover: #b3f667;
@@ -82,6 +78,82 @@
 
                 --header: #fff7e6; /* Title color */
                 --footer: #f3f2eb; /* Footer text color */
+            }
+
+            @media (prefers-color-scheme: dark) {
+                html,
+                html[data-theme="dark"] {
+                    --background: #191717;
+                    --background-accent: #242020;
+                    --color: #ece2dc;
+                    --block: #24221f;
+                    --block-outline: #312b26;
+
+                    --link: #dbb797;
+                    --linkhover: #d6f76b;
+
+                    --primary-accent: #d5864b;
+                    --secondary-accent: #ecc1a0;
+                    --font-on-accent: #150a0a;
+                    --divider: #ce732f;
+                    --letter-glow: rgba(135, 75, 92, 0.25);
+
+                    --subtle-line: rgba(244, 244, 244, 0.2);
+
+                    --footerlink: #efc683;
+                    --footerlinkhover: #b3f667;
+
+                    --h1: #d6901d;
+                    --h2: #d8c6ac;
+                    --h3: #d8c6ac;
+
+                    --header: #fff7e6; /* Title color */
+                    --footer: #f3f2eb; /* Footer text color */
+                }
+
+                html[data-theme="light"] {
+                    /* Main colors */
+                    --background: #aa8468; /* Page background */
+                    --background-accent: #a27757;
+                    --color: #1e1919;
+                    --block: #ede1da; /* Background color for the grid blocks in the content */
+                    --block-outline: #955e40;
+
+                    --link: #5a2f09;
+                    --linkhover: #788b13;
+
+                    --primary-accent: #764a33;
+                    --secondary-accent: #9d683f;
+                    --font-on-accent: #ffffff;
+                    --divider: #ce732f;
+                    --letter-glow: rgba(135, 75, 92, 0.25);
+
+                    --subtle-line: rgba(244, 244, 244, 0.2);
+
+                    --footerlink: #ffdeb0;
+                    --footerlinkhover: #b3f667;
+
+                    --h1: #48480a;
+                    --h2: #382408;
+                    --h3: #382408;
+
+                    --header: #fff7e6; /* Title color */
+                    --footer: #f3f2eb; /* Footer text color */
+                }
+            }
+
+            :root {
+                /* Fonts */
+                --bodyfont: "atkinson";
+                --headerfont: "dosis";
+
+                /* Images */
+                --banner-image-mobile: url(https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit6.png) no-repeat; /* Banner background image for mobile (wide) */
+                --banner-position-mobile: top; /* Banner background position on small screens */
+
+                /* Other things */
+                --border-radius: 10px;
+                --bar-height: 15px;
             }
             @font-face {
                 font-family: "dosis";
@@ -280,57 +352,29 @@
             /* -------------------------------------------------------- */
             /* DARK MODE TOGGLES */
             /* -------------------------------------------------------- */
-            .toggle-switch {
-                position: absolute;
-                top: 26px;
-                right: 51px;
-                width: 50px;
-                z-index: 2;
+            .button {
+                float: right;
             }
 
-            .toggle-switch label {
-                position: absolute;
-                width: 100%;
-                height: 25px;
-                background-color: var(--light);
-                border-radius: 50px;
-                cursor: pointer;
+            .button button {
+                font-size: 1rem;
+                font-family: inherit;
+                color: var(--font-on-accent);
+                width: fit-content;
+                height: 40px;
+                background-color: var(--background);
+                border: 2px solid var(--primary-accent);
+                border-radius: var(--border-radius);
+                transition: 0.5s;
             }
 
-            input {
-                position: absolute;
-                display: none;
-            }
-
-            .slider {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border-radius: 50px;
-                transition: 0.3s;
-            }
-
-            input:checked ~ .slider {
-                background-color: var(--dark);
-            }
-
-            .toggle-switch .slider::before {
-                content: "";
-                position: absolute;
-                top: 3px;
-                right: 26px;
-                width: 19px;
-                height: 19px;
-                border-radius: 50%;
-                box-shadow: none;
-                background-color: var(--dark);
-                transition: 0.3s;
-            }
-
-            .toggle-switch input:checked ~ .slider::before {
-                transform: translateX(-24px);
-                background-color: var(--dark);
-                box-shadow: inset 4px -4px 0 0 var(--light);
+            .button button:hover {
+                background-color: var(--secondary-accent);
+                border-color: var(--link-hover);
+                color: var(--font-on-accent);
+                box-shadow:
+                    0 12px 16px 0 rgba(0, 0, 0, 0.24),
+                    0 17px 50px 0 rgba(0, 0, 0, 0.19);
             }
 
             /* -------------------------------------------------------- */
@@ -583,13 +627,12 @@
     </head>
     <body>
         <div id="container">
-            <header id="main-header">Zhongli Shrine 🔶</header>
-            <div class="toggle-switch">
-                <label for="tglScheme">
-                    <input type="checkbox" id="tglScheme" />
-                    <span class="slider"></span>
-                </label>
-            </div>
+            <header id="main-header">
+                Zhongli Shrine 🔶
+                <div class="button">
+                    <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+                </div>
+            </header>
 
             <div id="banner">
                 <!--This is the banner image, don't put anything here-->
@@ -855,6 +898,6 @@
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
 
         <!-- Dark Mode Toggle -->
-        <script src="../Scripts/Accessible/dark-mode-toggle.js"></script>
+        <script src="../Scripts/Accessible/dark-mode-alt.js"></script>
     </body>
 </html>
