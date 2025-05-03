@@ -31,31 +31,31 @@ function modeSwitcher() {
     if (theme === "dark") {
         document.documentElement.setAttribute("data-theme", "light");
         sessionStorage.setItem("theme", "light");
-        document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+        document.getElementById("theme-toggle").innerHTML = "🌙";
         // checks if reader selected light mode
     } else if (theme === "light") {
         document.documentElement.setAttribute("data-theme", "dark");
         sessionStorage.setItem("theme", "dark");
-        document.getElementById("theme-toggle").innerHTML = "Light Mode";
+        document.getElementById("theme-toggle").innerHTML = "☀️";
         // checks if system set dark mode
     } else if (systemInitiatedDark.matches) {
         document.documentElement.setAttribute("data-theme", "light");
         sessionStorage.setItem("theme", "light");
-        document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+        document.getElementById("theme-toggle").innerHTML = "🌙";
         // the only option left is system set light mode
     } else {
         document.documentElement.setAttribute("data-theme", "dark");
         sessionStorage.setItem("theme", "dark");
-        document.getElementById("theme-toggle").innerHTML = "Light Mode";
+        document.getElementById("theme-toggle").innerHTML = "☀️";
     }
 }
 
 if (theme === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
     sessionStorage.setItem("theme", "dark");
-    document.getElementById("theme-toggle").innerHTML = "Light Mode";
+    document.getElementById("theme-toggle").innerHTML = "☀️";
 } else if (theme === "light") {
     document.documentElement.setAttribute("data-theme", "light");
     sessionStorage.setItem("theme", "light");
-    document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+    document.getElementById("theme-toggle").innerHTML = "🌙";
 }

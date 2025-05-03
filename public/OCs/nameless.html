@@ -190,17 +190,15 @@
         <!-- =============================================== -->
         <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
         <!-- =============================================== -->
-        <div id="font-toggle">
-            <button type="button" id="toggle-font">toggle font</button>
-        </div>
 
-        <button id="theme-toggle" onclick="modeSwitcher()">toggle theme</button>
+        <div class="button-wrapper">
+            <div class="button" id="font-toggle">
+                <button class="general" type="button" id="toggle-font">toggle font</button>
+            </div>
 
-        <div class="toggle-switch">
-            <label for="tglScheme">
-                <input type="checkbox" id="tglScheme" />
-                <span class="slider"></span>
-            </label>
+            <div class="button">
+                <button id="theme-toggle" type="button" onclick="modeSwitcher()">toggle theme</button>
+            </div>
         </div>
 
         <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>

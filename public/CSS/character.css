@@ -1045,16 +1045,16 @@ button {
 /* -------------------------------------------------------- */
 /* FONT TOGGLE */
 /* -------------------------------------------------------- */
-
-#font-toggle {
+.button-wrapper {
     position: fixed;
-    width: auto;
-    top: 15px;
+    top: 12px;
     left: 7px;
     z-index: 9;
+    display: flex;
 }
 
-#font-toggle button {
+.button button {
+    font-size: 1em;
     font-family: inherit;
     color: var(--font-on-accent);
     width: fit-content;
@@ -1065,7 +1065,7 @@ button {
     transition: 0.5s;
 }
 
-#font-toggle button:hover {
+.button button:hover {
     background-color: var(--secondary-accent);
     border-color: var(--link-hover);
     color: var(--font-on-accent);
@@ -1184,6 +1184,10 @@ input:checked ~ .slider {
         font-size: 15px;
         transition: 0.4s;
         border-radius: var(--border-radius);
+    }
+
+    .button-wrapper {
+        top: 1px;
     }
 
     .toggle-switch {
