@@ -746,7 +746,6 @@ nav li.dropdown ul li.dropdown ul a {
 }
 
 .site-button textarea {
-    color: var(--font);
     font-family: monospace;
     font-size: 0.75em;
     width: 100%;
