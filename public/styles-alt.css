@@ -986,10 +986,9 @@ article .columns {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10px;
-    align-content: center;
+    gap: 10px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align-last: center;
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
