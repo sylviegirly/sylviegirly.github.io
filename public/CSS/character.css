@@ -1,11 +1,8 @@
 /* The following CSS applies on all screen sizes */
 
 /* Colors and fonts */
-:root {
-    /* Fonts */
-    --bodyfont: "atkinson";
-    --headerfont: "dosis";
-
+html,
+html[data-theme="light"] {
     /* Main colors */
     --background: #211f1f; /* Page background */
     --background-accent: #000;
@@ -28,12 +25,101 @@
     --sidebarlink: #5a094a;
     --sidebarlinkhover: #a649a9;
 
+    --subtle-line: rgba(244, 244, 244, 0.2);
+}
+
+html[data-theme="dark"] {
+    /* Main colors */
+    --background: #211f1f; /* Page background */
+    --background-accent: #000;
+    --color: #f4f4f4;
+    --block: #191717; /* Background color for the grid blocks in the content */
+    --block-deco: #000;
+
+    --link: #5a094a;
+    --linkhover: #a649a9;
+
+    --primary-accent: #000000;
+    --secondary-accent: #000000;
+    --font-on-accent: #ffffff;
+    --letter-glow: rgba(135, 75, 92, 0.25);
+
+    /* Sidebar colors */
+    --sidebar: #191717;
+    --sidebarcolor: #f4f4f4;
+    --title: #5a094a;
+    --sidebarlink: #5a094a;
+    --sidebarlinkhover: #a649a9;
+
+    --subtle-line: rgba(244, 244, 244, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+    html,
+    html[data-theme="dark"] {
+        /* Main colors */
+        --background: #211f1f; /* Page background */
+        --background-accent: #000;
+        --color: #f4f4f4;
+        --block: #191717; /* Background color for the grid blocks in the content */
+        --block-deco: #000;
+
+        --link: #5a094a;
+        --linkhover: #a649a9;
+
+        --primary-accent: #000000;
+        --secondary-accent: #000000;
+        --font-on-accent: #ffffff;
+        --letter-glow: rgba(135, 75, 92, 0.25);
+
+        /* Sidebar colors */
+        --sidebar: #191717;
+        --sidebarcolor: #f4f4f4;
+        --title: #5a094a;
+        --sidebarlink: #5a094a;
+        --sidebarlinkhover: #a649a9;
+
+        --subtle-line: rgba(244, 244, 244, 0.2);
+    }
+
+    html[data-theme="light"] {
+        /* Main colors */
+        --background: #211f1f; /* Page background */
+        --background-accent: #000;
+        --color: #f4f4f4;
+        --block: #191717; /* Background color for the grid blocks in the content */
+        --block-deco: #000;
+
+        --link: #5a094a;
+        --linkhover: #a649a9;
+
+        --primary-accent: #000000;
+        --secondary-accent: #000000;
+        --font-on-accent: #ffffff;
+        --letter-glow: rgba(135, 75, 92, 0.25);
+
+        /* Sidebar colors */
+        --sidebar: #191717;
+        --sidebarcolor: #f4f4f4;
+        --title: #5a094a;
+        --sidebarlink: #5a094a;
+        --sidebarlinkhover: #a649a9;
+
+        --subtle-line: rgba(244, 244, 244, 0.2);
+    }
+}
+
+:root {
+    /* Fonts */
+    --bodyfont: "atkinson";
+    --headerfont: "dosis";
+
     /* Other things */
     --border-radius: 10px;
     --header-image: url("https://placehold.co/1200x400");
     --focal-image: url("https://placehold.co/700x800");
     --focal-trivia-image: url("https://placehold.co/700x800");
-    --subtle-line: rgba(244, 244, 244, 0.2);
+
     --bar-height: 15px;
 
     --moodboard-1-image: url("https://placehold.co/400x400");
@@ -43,9 +129,6 @@
     --moodboard-5-image: url("https://placehold.co/400x400");
 
     --design-image: url("https://placehold.co/400x900");
-
-    --light: #e9ecdb;
-    --dark: #211f1f;
 }
 
 @font-face {
