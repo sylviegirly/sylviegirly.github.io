@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "☀️";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "🌙";
+            }
+        </script>
         <title>zhongvie</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,20 +24,8 @@
 
         <style>
             /* The following CSS applies on all screen sizes */
-
-            /* Colors and fonts */
-            :root {
-                /* Fonts */
-                --bodyfont: "atkinson";
-                --headerfont: "dosis";
-
-                /* Images */
-                --banner-image-mobile: url(https://f2.toyhou.se/file/f2-toyhou-se/images/94919697_H3VJZc3Brg3p6m6.png?1738119906) no-repeat; /* Banner background image for mobile (wide) */
-                --banner-image-desktop: url(https://f2.toyhou.se/file/f2-toyhou-se/images/81754819_hxk5AbXQJetdPwI.jpg)
-                    no-repeat; /* Banner background image for desktop (tall) */
-                --banner-position-mobile: center; /* Banner background position on small screens */
-                --banner-position-desktop: center; /* Banner background position on big screens */
-
+            html,
+            html[data-theme="light"] {
                 /* Main colors */
                 --background: #617148; /* Page background */
                 --background-accent: #71805a;
@@ -48,9 +47,6 @@
                 --header: #fff7e6; /* Title color */
                 --footer: #f3f2eb; /* Footer text color */
 
-                --light: #e9edda;
-                --dark: #90ce2f;
-
                 /* Menu colors */
                 --menubg: #f1f3eb;
                 --menucolor: #475a2d;
@@ -58,29 +54,13 @@
                 --menucolorhover: #f1f3eb;
                 --menuactive: #f5fabf;
 
-                /* Decorations */
-                --border-radius: 10px;
-
-                /* Aesthetics */
-                --left-1: url("https://i.pinimg.com/736x/3a/a7/70/3aa770c7dd26a736379ef34fca2761c7.jpg");
-                --left-2: url("https://i.pinimg.com/736x/eb/47/2c/eb472c451faf078a60a16ab58af8f64e.jpg");
-                --left-3: url("https://i.pinimg.com/736x/5c/a8/38/5ca838f9320cede5c04c8cff1a088c8a.jpg");
-                --middle-1: url("https://i.pinimg.com/736x/7c/76/8d/7c768d0a1cc4922d7dce1f70a3226aeb.jpg");
-                --middle-2: url("https://i.pinimg.com/736x/5e/11/f1/5e11f10db86cc3d96e00b81284b6e5ee.jpg");
-                --right-1: url("https://i.pinimg.com/736x/5b/46/ef/5b46efd44fa7f3a0f43eccba4164280f.jpg");
-                --right-2: url("https://i.pinimg.com/736x/0d/06/de/0d06de58d8c6f779af48d459d1dfcbf7.jpg");
-                --colour-1: #b4db99;
-                --colour-2: #433113;
-                --colour-3: #e7ac4b;
-                --colour-4: #e2dfcd;
-
                 --sylvie-quote: #b1d792;
                 --zhongli-quote: #e2d7af;
 
                 --border: rgba(30, 49, 0, 0.25);
             }
 
-            body.dark {
+            html[data-theme="dark"] {
                 --background: #191817;
                 --background-accent: #222420;
                 --color: #e7ecdc;
@@ -112,6 +92,108 @@
                 --zhongli-quote: #7d501c;
 
                 --border: rgba(223, 255, 179, 0.14);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                html,
+                html[data-theme="dark"] {
+                --background: #191817;
+                --background-accent: #222420;
+                --color: #e7ecdc;
+                --block: #24221f;
+                --block-outline: #2c3126;
+
+                --link: #c6db97;
+                --linkhover: #f7c16b;
+
+                --tippy-bg: #3a4530;
+
+                --footerlink: #eff5c2;
+                --footerlinkhover: #99ff87;
+
+                --h1: #c8da7e;
+                --h2: #daba7e;
+                --h3: #d7e0d0;
+
+                --header: #c8da7e;
+
+                /* Menu colors */
+                --menubg: #5a6140;
+                --menucolor: #ffffff;
+                --menubghover: #ffffff;
+                --menucolorhover: #5a6140;
+                --menuactive: #a49063;
+
+                --sylvie-quote: #496135;
+                --zhongli-quote: #7d501c;
+
+                --border: rgba(223, 255, 179, 0.14);
+                }
+
+                html[data-theme="light"] {
+                /* Main colors */
+                --background: #617148; /* Page background */
+                --background-accent: #71805a;
+                --color: #1e1307;
+                --block: #ecefe1; /* Background color for the grid blocks in the content */
+                --block-outline: #cba65e;
+
+                --link: #5e731b;
+                --linkhover: #af8716;
+
+                --tippy-bg: #b1d792;
+                --footerlink: #efdf83;
+                --footerlinkhover: #b3f667;
+
+                --h1: #48480a;
+                --h2: #382408;
+                --h3: #382408;
+
+                --header: #fff7e6; /* Title color */
+                --footer: #f3f2eb; /* Footer text color */
+
+                /* Menu colors */
+                --menubg: #f1f3eb;
+                --menucolor: #475a2d;
+                --menubghover: #475a2d;
+                --menucolorhover: #f1f3eb;
+                --menuactive: #f5fabf;
+
+                --sylvie-quote: #b1d792;
+                --zhongli-quote: #e2d7af;
+
+                --border: rgba(30, 49, 0, 0.25);
+                }
+            }
+
+            /* Colors and fonts */
+            :root {
+                /* Fonts */
+                --bodyfont: "atkinson";
+                --headerfont: "dosis";
+
+                /* Images */
+                --banner-image-mobile: url(https://f2.toyhou.se/file/f2-toyhou-se/images/94919697_H3VJZc3Brg3p6m6.png?1738119906) no-repeat; /* Banner background image for mobile (wide) */
+                --banner-image-desktop: url(https://f2.toyhou.se/file/f2-toyhou-se/images/81754819_hxk5AbXQJetdPwI.jpg)
+                    no-repeat; /* Banner background image for desktop (tall) */
+                --banner-position-mobile: center; /* Banner background position on small screens */
+                --banner-position-desktop: center; /* Banner background position on big screens */
+
+                /* Decorations */
+                --border-radius: 10px;
+
+                /* Aesthetics */
+                --left-1: url("https://i.pinimg.com/736x/3a/a7/70/3aa770c7dd26a736379ef34fca2761c7.jpg");
+                --left-2: url("https://i.pinimg.com/736x/eb/47/2c/eb472c451faf078a60a16ab58af8f64e.jpg");
+                --left-3: url("https://i.pinimg.com/736x/5c/a8/38/5ca838f9320cede5c04c8cff1a088c8a.jpg");
+                --middle-1: url("https://i.pinimg.com/736x/7c/76/8d/7c768d0a1cc4922d7dce1f70a3226aeb.jpg");
+                --middle-2: url("https://i.pinimg.com/736x/5e/11/f1/5e11f10db86cc3d96e00b81284b6e5ee.jpg");
+                --right-1: url("https://i.pinimg.com/736x/5b/46/ef/5b46efd44fa7f3a0f43eccba4164280f.jpg");
+                --right-2: url("https://i.pinimg.com/736x/0d/06/de/0d06de58d8c6f779af48d459d1dfcbf7.jpg");
+                --colour-1: #b4db99;
+                --colour-2: #433113;
+                --colour-3: #e7ac4b;
+                --colour-4: #e2dfcd;
             }
 
             @font-face {
@@ -155,58 +237,31 @@
             /* -------------------------------------------------------- */
             /* DARK MODE TOGGLES */
             /* -------------------------------------------------------- */
-            .toggle-switch {
+            .button-toggle {
                 position: relative;
                 float: right;
-                right: 53px;
-                top: -85px;
-                width: 50px;
-                z-index: 10;
+                top: 0px;
             }
 
-            .toggle-switch label {
-                position: absolute;
-                width: 100%;
-                height: 25px;
-                background-color: var(--light);
-                border-radius: 50px;
-                cursor: pointer;
+            .button-toggle button {
+                font-size: 1.5rem;
+                font-family: inherit;
+                color: var(--font-on-accent);
+                width: fit-content;
+                height: fit-content;
+                background-color: var(--background) !important;
+                border: 2px solid var(--block-outline);
+                border-radius: var(--border-radius);
+                transition: 0.5s;
             }
 
-            input {
-                position: absolute;
-                display: none;
-            }
-
-            .slider {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border-radius: 50px;
-                transition: 0.3s;
-            }
-
-            input:checked ~ .slider {
-                background-color: var(--dark);
-            }
-
-            .toggle-switch .slider::before {
-                content: "";
-                position: absolute;
-                top: 3px;
-                right: 3px;
-                width: 19px;
-                height: 19px;
-                border-radius: 50%;
-                box-shadow: none;
-                background-color: var(--dark);
-                transition: 0.3s;
-            }
-
-            .toggle-switch input:checked ~ .slider::before {
-                transform: translateX(-24px);
-                background-color: var(--dark);
-                box-shadow: inset 4px -4px 0 0 var(--light);
+            .button-toggle button:hover {
+                background-color: var(--menubghover);
+                border-color: var(--menubg);
+                color: var(--font-on-accent);
+                box-shadow:
+                    0 12px 16px 0 rgba(0, 0, 0, 0.24),
+                    0 17px 50px 0 rgba(0, 0, 0, 0.19);
             }
 
             /* -------------------------------------------------------- */
@@ -797,6 +852,14 @@
             /* The following CSS ONLY applies to desktop/big screens */
 
             @media screen and (min-width: 800px) {
+                .button-toggle {
+                    top: 42px;
+                }
+
+                .button-toggle button {
+                    font-size: 1rem;
+                }
+
                 .image-gallery div {
                     width: calc(25% - 10px);
                 }
@@ -869,6 +932,9 @@
             <header id="main-header">
                 <!-- Site title -->
                 Zhongvie 🌿🔶
+                <div class="button-toggle">
+                    <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+                </div>
             </header>
 
             <nav id="main-menu">
@@ -886,14 +952,7 @@
                         ></a>
                     </li>
                 </ul>
-                <div class="toggle-switch">
-                <label for="tglScheme">
-                    <input type="checkbox" id="tglScheme" />
-                    <span class="slider"></span>
-                </label>
-            </div>
             </nav>
-
 
             <div id="banner">
                 <!--This is the banner image, don't put anything here-->
@@ -1604,6 +1663,6 @@
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
 
         <!-- Dark Mode Toggle -->
-        <script src="../Scripts/Accessible/dark-mode-toggle.js"></script>
+        <script src="../Scripts/Accessible/dark-mode-alt.js"></script>
     </body>
 </html>
