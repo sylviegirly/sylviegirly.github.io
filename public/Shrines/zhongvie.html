@@ -48,6 +48,9 @@
                 --header: #fff7e6; /* Title color */
                 --footer: #f3f2eb; /* Footer text color */
 
+                --light: #e9edda;
+                --dark: #90ce2f;
+
                 /* Menu colors */
                 --menubg: #f1f3eb;
                 --menucolor: #475a2d;
@@ -77,41 +80,40 @@
                 --border: rgba(30, 49, 0, 0.25);
             }
 
-            @media (prefers-color-scheme: dark) {
-                :root {
-                    --background: #191817;
-                    --background-accent: #222420;
-                    --color: #e7ecdc;
-                    --block: #24221f;
-                    --block-outline: #2c3126;
+            body.dark {
+                --background: #191817;
+                --background-accent: #222420;
+                --color: #e7ecdc;
+                --block: #24221f;
+                --block-outline: #2c3126;
 
-                    --link: #c6db97;
-                    --linkhover: #f7c16b;
+                --link: #c6db97;
+                --linkhover: #f7c16b;
 
-                    --tippy-bg: #3a4530;
+                --tippy-bg: #3a4530;
 
-                    --footerlink: #eff5c2;
-                    --footerlinkhover: #99ff87;
+                --footerlink: #eff5c2;
+                --footerlinkhover: #99ff87;
 
-                    --h1: #c8da7e;
-                    --h2: #daba7e;
-                    --h3: #d7e0d0;
+                --h1: #c8da7e;
+                --h2: #daba7e;
+                --h3: #d7e0d0;
 
-                    --header: #c8da7e;
+                --header: #c8da7e;
 
-                    /* Menu colors */
-                    --menubg: #5a6140;
-                    --menucolor: #ffffff;
-                    --menubghover: #ffffff;
-                    --menucolorhover: #5a6140;
-                    --menuactive: #a49063;
+                /* Menu colors */
+                --menubg: #5a6140;
+                --menucolor: #ffffff;
+                --menubghover: #ffffff;
+                --menucolorhover: #5a6140;
+                --menuactive: #a49063;
 
-                    --sylvie-quote: #496135;
-                    --zhongli-quote: #7d501c;
+                --sylvie-quote: #496135;
+                --zhongli-quote: #7d501c;
 
-                    --border: rgba(223, 255, 179, 0.14);
-                }
+                --border: rgba(223, 255, 179, 0.14);
             }
+
             @font-face {
                 font-family: "dosis";
                 src: url(../Fonts/Dosis-VariableFont_wght.ttf);
@@ -148,6 +150,63 @@
                 background-position: var(--banner-position-mobile);
                 background-size: cover;
                 height: 250px;
+            }
+
+            /* -------------------------------------------------------- */
+            /* DARK MODE TOGGLES */
+            /* -------------------------------------------------------- */
+            .toggle-switch {
+                position: relative;
+                float: right;
+                right: 53px;
+                top: -85px;
+                width: 50px;
+                z-index: 10;
+            }
+
+            .toggle-switch label {
+                position: absolute;
+                width: 100%;
+                height: 25px;
+                background-color: var(--light);
+                border-radius: 50px;
+                cursor: pointer;
+            }
+
+            input {
+                position: absolute;
+                display: none;
+            }
+
+            .slider {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50px;
+                transition: 0.3s;
+            }
+
+            input:checked ~ .slider {
+                background-color: var(--dark);
+            }
+
+            .toggle-switch .slider::before {
+                content: "";
+                position: absolute;
+                top: 3px;
+                right: 3px;
+                width: 19px;
+                height: 19px;
+                border-radius: 50%;
+                box-shadow: none;
+                background-color: var(--dark);
+                transition: 0.3s;
+            }
+
+            .toggle-switch input:checked ~ .slider::before {
+                transform: translateX(-24px);
+                background-color: var(--dark);
+                box-shadow: inset 4px -4px 0 0 var(--light);
             }
 
             /* -------------------------------------------------------- */
@@ -742,6 +801,15 @@
                     width: calc(25% - 10px);
                 }
 
+                .toggle-switch {
+                    position: relative;
+                    float: right;
+                    right: 11px;
+                    top: -35px;
+                    width: 50px;
+                    z-index: 10;
+                }
+
                 /* BASIC INFO */
                 .info-holder {
                     grid-template-columns: repeat(2, 1fr);
@@ -802,6 +870,7 @@
                 <!-- Site title -->
                 Zhongvie 🌿🔶
             </header>
+
             <nav id="main-menu">
                 <ul>
                     <!--Menu links-->
@@ -817,7 +886,14 @@
                         ></a>
                     </li>
                 </ul>
+                <div class="toggle-switch">
+                <label for="tglScheme">
+                    <input type="checkbox" id="tglScheme" />
+                    <span class="slider"></span>
+                </label>
+            </div>
             </nav>
+
 
             <div id="banner">
                 <!--This is the banner image, don't put anything here-->
@@ -1526,5 +1602,8 @@
             });
         </script>
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+        <!-- Dark Mode Toggle -->
+        <script src="../Scripts/Accessible/dark-mode-toggle.js"></script>
     </body>
 </html>
