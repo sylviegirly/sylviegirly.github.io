@@ -8,8 +8,10 @@
 
     /* Main colors */
     --background: #211f1f; /* Page background */
+    --background-accent: #000;
     --color: #f4f4f4;
     --block: #191717; /* Background color for the grid blocks in the content */
+    --block-deco: #000;
 
     --link: #5a094a;
     --linkhover: #a649a9;
@@ -41,6 +43,9 @@
     --moodboard-5-image: url("https://placehold.co/400x400");
 
     --design-image: url("https://placehold.co/400x900");
+
+    --light: #e9ecdb;
+    --dark: #211f1f;
 }
 
 @font-face {
@@ -68,7 +73,10 @@
 /* Main body styling */
 body {
     background-color: var(--background);
-    background-image: url(https://i.imgur.com/j5DXHGi.png);
+    opacity: 1;
+    background-image: linear-gradient(var(--background-accent) 1px, transparent 1px),
+        linear-gradient(to right, var(--background-accent) 1px, var(--background) 1px);
+    background-size: 20px 20px;
     background-attachment: fixed;
     font: 1rem "freepixel";
     color: var(--color);
@@ -131,7 +139,7 @@ nav {
     margin-bottom: 0;
 }
 nav > button {
-    min-width: 44px;
+    min-width: 34px;
     min-height: 24px;
     display: flex;
     text-align: center;
@@ -248,7 +256,7 @@ nav li.dropdown ul li.dropdown ul a {
 /* Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--primary-accent) var(--background);
+    scrollbar-color: var(--primary-accent) transparent;
 }
 
 /* Chrome, Edge, and Safari */
@@ -261,13 +269,13 @@ nav li.dropdown ul li.dropdown ul a {
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--background);
+    background-color: transparent;
     border-radius: 10px;
     border: 3px double var(--primary-accent);
 }
 
 ::selection {
-    color: #fff;
+    color: var(--font-on-accent);
     background: var(--primary-accent);
 }
 
@@ -545,7 +553,7 @@ summary:hover {
 }
 
 details {
-    background-color: var(--background);
+    background-color: var(--body-deco);
     border-radius: var(--border-radius);
     padding: 5px;
     padding-left: 10px;
@@ -595,7 +603,7 @@ details {
 main .scrollable {
     height: fit-content;
     max-height: 250px;
-    background-color: var(--background);
+    background-color: var(--body-deco);
     border-radius: var(--border-radius);
     overflow-y: scroll;
     padding: 7px;
@@ -970,7 +978,7 @@ button {
 
 /* Badges */
 .badgeholder {
-    background-color: var(--background);
+    background-color: var(--body-deco);
     border-radius: var(--border-radius);
     padding: 10px;
     box-sizing: border-box;
@@ -1009,7 +1017,7 @@ button {
 }
 
 .progressbar {
-    background-color: #2c2c2c;
+    background-color: var(--body-deco);
     border-radius: var(--border-radius);
     height: var(--bar-height);
     margin-top: 5px;
@@ -1020,15 +1028,15 @@ button {
 .progresschunk {
     display: flex;
     justify-content: flex-end;
-    background-color: #2c2c2c;
+    background-color: var(--body-deco);
     border-radius: var(--border-radius);
     height: var(--bar-height);
 }
 
 .progressbutton {
     background-color: var(--primary-accent);
-    border-left: 2px solid var(--background);
-    border-right: 2px solid var(--background);
+    border-left: 2px solid var(--body-deco);
+    border-right: 2px solid var(--body-deco);
     width: 10px;
     height: var(--bar-height);
 }
@@ -1041,7 +1049,7 @@ button {
     position: fixed;
     width: auto;
     top: 15px;
-    right: 7px;
+    left: 7px;
     z-index: 9;
 }
 
@@ -1057,12 +1065,73 @@ button {
 }
 
 #font-toggle button:hover {
-    font-size: 1.1em;
-    height: 40px;
+    background-color: var(--secondary-accent);
+    border-color: var(--link-hover);
+    color: var(--font-on-accent);
     box-shadow:
         0 12px 16px 0 rgba(0, 0, 0, 0.24),
         0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
+/* -------------------------------------------------------- */
+/* DARK MODE TOGGLES */
+/* -------------------------------------------------------- */
+.toggle-switch {
+    position: fixed;
+    left: 121px;
+    top: 24px;
+    width: 50px;
+    z-index: 10;
+}
+
+.toggle-switch label {
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    background-color: var(--light);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+input {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+input:checked ~ .slider {
+    background-color: var(--dark);
+}
+
+.toggle-switch .slider::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    box-shadow: none;
+    background-color: var(--dark);
+    transition: 0.3s;
+}
+
+.toggle-switch input:checked ~ .slider::before {
+    transform: translateX(-24px);
+    background-color: var(--dark);
+    box-shadow: inset 4px -4px 0 0 var(--light);
+}
+
+/* -------------------------------------------------------- */
+/* CREDIT DROPDOWN */
+/* -------------------------------------------------------- */
 
 .accordion {
     display: none;
@@ -1116,7 +1185,13 @@ button {
         border-radius: var(--border-radius);
     }
 
+    .toggle-switch {
+        left: 10px;
+        top: 58px;
+    }
+
     .active,
+    .accordion:hover,
     .accordion:hover,
     .accordion:focus {
         background-color: var(--background);

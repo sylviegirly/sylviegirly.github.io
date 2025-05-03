@@ -23,8 +23,53 @@
         <!-- Disclosure Menu -->
         <script src="../Scripts/Accessible/disclosure-menu.iife.js"></script>
         <script src="../Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <script src="../Scripts/tab-title-suffix.js"></script>
         <style>
             :root {
+                /* Main colors */
+                --background: #bca0aa; /* Page background */
+                --background-accent: #ceb3bc;
+                --color: #1e0b0b;
+                --block: #f9f0f0; /* Background color for the grid blocks in the content */
+                --body-deco: #f0d9d9;
+
+                --primary-accent: #ad5f74;
+                --secondary-accent: #4d1122;
+                --font-on-accent: #ffffff;
+
+                --link: #b4254d;
+                --linkhover: #000000;
+
+                --letter-glow: rgba(177, 97, 119, 0.25);
+
+                --header-image: url("https://images.pexels.com/photos/2719301/pexels-photo-2719301.jpeg");
+                --focal-image: url("../Images/OC%20Stuff/Yadyra/focal_image.jpg");
+                --design-image: url("../Images/OC%20Stuff/Yadyra/design_image.png");
+                --focal-trivia-image: url("../Images/OC%20Stuff/Yadyra/trivia_focal.png");
+
+                --moodboard-1-image: url("https://images.unsplash.com/photo-1540458638618-893e9fb35c07");
+                --moodboard-2-image: url("https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86");
+                --moodboard-3-image: url("https://images.unsplash.com/photo-1504701954957-2010ec3bcec1");
+                --moodboard-4-image: url("https://images.unsplash.com/photo-1608303852360-97cb721e42cc");
+                --moodboard-5-image: url("https://images.unsplash.com/photo-1562048048-86d659689440");
+
+                /* Sidebar colors */
+                --sidebar: #f9f0f0;
+                --sidebarcolor: #1e0b0b;
+                --subtle-line: rgba(70, 13, 13, 0.2);
+
+                --light: #f9f0f0;
+                --dark: #b4254d;
+            }
+
+            body.dark {
+                /* Main colors */
+                --background: #1e1919; /* Page background */
+                --background-accent: #2e2222;
+                --color: #f2e6e6;
+                --block: #191717; /* Background color for the grid blocks in the content */
+                --body-deco: #141212;
+
                 --primary-accent: #ad5f74;
                 --secondary-accent: #edb4c4;
                 --font-on-accent: #ffffff;
@@ -44,6 +89,11 @@
                 --moodboard-3-image: url("https://images.unsplash.com/photo-1504701954957-2010ec3bcec1");
                 --moodboard-4-image: url("https://images.unsplash.com/photo-1608303852360-97cb721e42cc");
                 --moodboard-5-image: url("https://images.unsplash.com/photo-1562048048-86d659689440");
+
+                /* Sidebar colors */
+                --sidebar: #191717;
+                --sidebarcolor: #f2e6e6;
+                --subtle-line: rgba(249, 140, 140, 0.2);
             }
         </style>
     </head>
@@ -54,10 +104,17 @@
         <nav-header></nav-header>
 
         <!-- =============================================== -->
-        <!-- FONT TOGGLER. -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
         <!-- =============================================== -->
         <div id="font-toggle">
-            <button type="button" id="toggle-font" data-tippy-content="Switch fonts">toggle font</button>
+            <button type="button" id="toggle-font">toggle font</button>
+        </div>
+
+        <div class="toggle-switch">
+            <label for="tglScheme">
+                <input type="checkbox" id="tglScheme" />
+                <span class="slider"></span>
+            </label>
         </div>
 
         <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
@@ -1199,9 +1256,19 @@
                 theme: "character"
             });
         </script>
+        <!-- Dark Mode Toggle -->
+        <script src="../Scripts/Accessible/dark-mode-toggle.js"></script>
+
+        <!-- Font Toggle -->
         <script src="../Scripts/font_toggle.js"></script>
-        <script src="../Scripts/accordion.js"></script>
+
+        <!-- Scroll to Top -->
         <script src="../Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+        <!-- Accordion Dropdown -->
+        <script src="../Scripts/accordion.js"></script>
     </body>
 </html>
