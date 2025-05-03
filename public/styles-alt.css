@@ -916,6 +916,10 @@ article .scrollable {
     margin-top: 10px;
 }
 
+article .scrollable p:first-child {
+    margin-top: 0;
+}
+
 article .columns {
     display: flex;
     flex-direction: row;
