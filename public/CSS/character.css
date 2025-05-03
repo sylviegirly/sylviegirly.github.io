@@ -765,6 +765,7 @@ button {
     text-transform: uppercase;
     display: block !important;
     font-size: 0.8em;
+    letter-spacing: 1px;
 }
 
 .statcon {
