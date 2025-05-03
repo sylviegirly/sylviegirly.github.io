@@ -1,4 +1,6 @@
-:root {
+/* Colors and fonts */
+html,
+html[data-theme="light"] {
     /* HEADERS */
     --header-bg: #211f1f;
     --background-image: url(Images/light_mode_bg.png);
@@ -20,19 +22,9 @@
     --link-colour: #b67925;
     --link-hover: #475407;
     --body-deco: #f7f6e3;
-
-    /* SIZES + SPACING */
-    --blog-size: 1100px;
-    --grid-gap: 13px;
-    --left-sidebar-size: 250px;
-    --right-sidebar-size: 220px;
-    --border-radius: 5px;
-
-    --light: #e9ecdb;
-    --dark: #211f1f;
 }
 
-body.dark {
+html[data-theme="dark"] {
     /* HEADERS */
     --header-bg: #211f1f;
     --header-title: #edf4dd;
@@ -55,6 +47,70 @@ body.dark {
     --link-hover: #e2ae50;
     --crossed-out: #858585;
     --body-deco: #211f1f;
+}
+
+@media (prefers-color-scheme: dark) {
+    html,
+    html[data-theme="dark"] {
+        /* HEADERS */
+        --header-bg: #211f1f;
+        --header-title: #edf4dd;
+        --header-subtitle: #bdd7a8;
+
+        /* BACKGROUNDS */
+        --background-colour: #211f1f;
+        --background-image: url(Images/dark_mode_bg.png);
+        --article-bg: #191717;
+
+        /* PRIMARY ACCENTS */
+        --primary-accent: #788b68;
+        --secondary-accent: #cee8ba;
+        --font-on-accent: #000000;
+        --letter-glow: rgba(74, 118, 58, 0.15);
+
+        /* TEXT */
+        --text-colour: #f4f4f4;
+        --link-colour: #a8d38d;
+        --link-hover: #e2ae50;
+        --crossed-out: #858585;
+        --body-deco: #211f1f;
+    }
+
+    html[data-theme="light"] {
+        /* HEADERS */
+        --header-bg: #211f1f;
+        --background-image: url(Images/light_mode_bg.png);
+        --header-title: #e8f4dd;
+        --header-subtitle: #c8d7a8;
+
+        /* BACKGROUNDS */
+        --background-colour: #879d6d;
+        --article-bg: #e9ecdb;
+
+        /* PRIMARY ACCENTS */
+        --primary-accent: #4e6137;
+        --secondary-accent: #828d65;
+        --font-on-accent: #f3f4e0;
+        --letter-glow: rgba(8, 30, 1, 0.19);
+
+        /* TEXT */
+        --text-colour: #16190f;
+        --link-colour: #b67925;
+        --link-hover: #475407;
+        --body-deco: #f7f6e3;
+    }
+}
+
+:root {
+    /* SIZES + SPACING */
+    --blog-size: 1100px;
+    --grid-gap: 13px;
+    --left-sidebar-size: 250px;
+    --right-sidebar-size: 220px;
+    --border-radius: 5px;
+
+    --light: #e9ecdb;
+    --dark: #211f1f;
 }
 
 @font-face {
@@ -1189,6 +1245,16 @@ footer a:hover {
         height: fit-content;
         max-height: 400px;
     }
+
+    /* -------------------------------------------------------- */
+    /* FONT TOGGLE */
+    /* -------------------------------------------------------- */
+    .button-wrapper {
+        position: fixed;
+        left: 7px;
+        margin-top: 5px;
+        width: fit-content;
+    }
 }
 
 /* -------------------------------------------------------- */
@@ -1270,29 +1336,31 @@ footer a:hover {
 /* -------------------------------------------------------- */
 /* FONT TOGGLE */
 /* -------------------------------------------------------- */
-
-#font-toggle {
-    position: absolute;
-    width: auto;
-    top: 7px;
+.button-wrapper {
+    position: fixed;
+    top: 2px;
     right: 7px;
     z-index: 9;
+    display: flex;
+    gap: 10px;
 }
 
-#font-toggle button {
+.button button {
+    font-size: 1em;
     font-family: inherit;
     color: var(--font-on-accent);
-    width: 100px;
-    height: 30px;
+    width: fit-content;
+    height: 40px;
     background-color: var(--primary-accent);
     border: 2px solid var(--secondary-accent);
     border-radius: var(--border-radius);
     transition: 0.5s;
 }
 
-#font-toggle button:hover {
+.button button:hover {
     background-color: var(--secondary-accent);
     border-color: var(--link-hover);
+    color: var(--font-on-accent);
     box-shadow:
         0 12px 16px 0 rgba(0, 0, 0, 0.24),
         0 17px 50px 0 rgba(0, 0, 0, 0.19);

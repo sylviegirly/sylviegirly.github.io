@@ -1134,6 +1134,7 @@ button {
     left: 7px;
     z-index: 9;
     display: flex;
+    width: fit-content;
 }
 
 .button button {
