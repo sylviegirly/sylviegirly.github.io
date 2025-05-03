@@ -858,6 +858,14 @@ article {
     ); /* literally the px number is just grip-gap x2 */
 }
 
+article p:last-child {
+    margin-bottom: 0;
+}
+
+article p:first-child {
+    margin-top: 0;
+}
+
 article ul {
     line-height: 1.2rem;
     list-style-type: square;
@@ -1467,8 +1475,6 @@ footer a:hover {
     padding: 3px;
     border-radius: var(--border-radius);
     border: 3px solid var(--primary-accent);
-    margin-right: 10px;
-    margin-bottom: 10px;
     max-width: 200px;
     transition: 0.5s;
 }
