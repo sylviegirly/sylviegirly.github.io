@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "☀️";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "🌙";
+            }
+        </script>
         <!-- Site Title -->
         <title>credits / colophon</title>
 
@@ -46,18 +57,17 @@
         <!-- =============================================== -->
         <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
         <!-- =============================================== -->
-        <div id="font-toggle">
-            <button type="button" id="toggle-font">toggle font</button>
+        <div class="button-wrapper">
+            <div class="button" id="font-toggle">
+                <button class="general" type="button" id="toggle-font">toggle font</button>
+            </div>
+
+            <div class="button">
+                <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+            </div>
         </div>
 
         <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="toggle-switch">
-            <label for="tglScheme">
-                <input type="checkbox" id="tglScheme" />
-                <span class="slider"></span>
-            </label>
-        </div>
 
         <div class="container-grid">
             <!-- =============================================== -->
@@ -163,7 +173,8 @@
                         <li><a href="https://github.com/NickDJM/accessible-menu">WCAG navigation bar</a> by NickDJM</li>
                         <li><a href="https://kalechips.net/projects/layouts/">Character template</a> by kalechips</li>
                         <li>
-                            <a href="https://derekkedziora.com/blog/dark-mode-revisited">Light / dark mode JS</a> by Derek Kedziora
+                            <a href="https://derekkedziora.com/blog/dark-mode-revisited">Light / dark mode JS</a> by
+                            Derek Kedziora
                         </li>
                     </ul>
                     <h2>Decorative Items</h2>
@@ -217,7 +228,7 @@
         <general-footer></general-footer>
 
         <!-- Dark Mode Toggle -->
-        <script src="Scripts/Accessible/dark-mode-toggle.js"></script>
+        <script src="Scripts/Accessible/dark-mode-alt.js"></script>
 
         <!-- Font Toggle -->
         <script src="Scripts/font_toggle.js"></script>
