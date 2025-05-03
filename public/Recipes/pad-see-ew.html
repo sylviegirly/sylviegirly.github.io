@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "☀️";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "🌙";
+            }
+        </script>
+        <!-- Site Title -->
+        <title>pad see ew</title>
+
+        <!-- Site Description -->
+        <meta content="" name="description" />
+
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- FavIcon -->
+        <link ref="favicon" href="../favicon.ico" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" href="../styles-alt.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JavaScript: -->
+        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
+        if this HTML file is in 2 subfolders, etc. -->
+        <script src="../Scripts/sparkle_cursor.js"></script>
+        <script src="../Scripts/header.js" defer></script>
+        <script src="../Scripts/footer.js" defer></script>
+        <script src="../Scripts/tab-title-suffix.js"></script>
+
+        <script src="../Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <!-- Disclosure Menu -->
+        <script src="../Scripts/Accessible/accessible-menu.js" type="module"></script>
+    </head>
+    <body id="body">
+        <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
+        <!-- =============================================== -->
+        <div class="button-wrapper">
+            <div class="button" id="font-toggle">
+                <button class="general" type="button" id="toggle-font">toggle font</button>
+            </div>
+
+            <div class="button">
+                <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div class="container-grid">
+            <!-- =============================================== -->
+            <!-- LEFT SIDEBAR CONTENT -->
+            <!-- =============================================== -->
+            <div class="intro">
+                <section>
+                    <div class="img-floatinganim">
+                        <img class="dendro" src="../Images/dendro_symbol.png" aria-hidden="true" alt="" />
+                    </div>
+                    <img
+                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/92262681_WBR555I9TFO2wdE.png"
+                        class="full-width-image" />
+                    <div class="subtitle">
+                        <img src="Images/General%20Decorations/plant_bopping.gif" aria-hidden="true" alt="" />
+                        Welcome!!
+                        <img src="Images/General%20Decorations/plant_bopping.gif" aria-hidden="true" alt="" />
+                    </div>
+                    <div>
+                        <p style="text-align: center">
+                            <b>aid</b>
+                            <img
+                                style="padding-left: 5px; padding-right: 5px"
+                                src="https://files.catbox.moe/46vbi9.gif"
+                                aria-hidden="true"
+                                alt="" />
+                            <b>25+</b>
+                            <img
+                                style="padding-left: 5px; padding-right: 5px"
+                                src="https://files.catbox.moe/46vbi9.gif"
+                                aria-hidden="true"
+                                alt="" />
+                            <b>she/her</b>
+                        </p>
+                        <hr />
+                        <p>
+                            I hope you enjoy this recipe! My random image scroll doesn't work here so have a little
+                            custom side bar for just my recipes. 🫡
+                        </p>
+                        <hr />
+                        <div class="cool-buttons">
+                            <a
+                                href="https://www.tumblr.com/lavendergalactic"
+                                title="gifs by lavendergalactic as a commission for me. please don't use.">
+                                <img
+                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/bites%20you%20shiny%20button.gif"
+                                    aria-hidden="true"
+                                    alt="" />
+                                <img
+                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/silly%20shiny%20button.gif"
+                                    aria-hidden="true"
+                                    alt="" />
+                                <img
+                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/zhongvie%20shiny%20button.gif"
+                                    aria-hidden="true"
+                                    alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- =============================================== -->
+            <!-- RECIPE CONTENT HERE -->
+            <!-- =============================================== -->
+            <main id="content">
+                <article>
+                    <h1>
+                        <img src="../Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" />
+                        Pad See Ew
+                    </h1>
+                    <a href="../recipes.html" style="margin-top: -5px; font-style: italic">← return to recipe list</a>
+                    <div
+                        style="
+                            margin-top: 5px;
+                            display: flex;
+                            border-radius: 10px;
+                            width: 100%;
+                            max-height: 300px;
+                            overflow: hidden;
+                            justify-content: center; /* align horizontal */
+                            align-items: center; /* align vertical */
+                        ">
+                        <img
+                            style="
+                                align-self: flex-start;
+                                object-fit: cover;
+                                max-width: 100%;
+                                height: auto;
+                                margin-top: -25%;
+                            "
+                            src="https://www.recipetineats.com/tachyon/2016/03/Pad-See-Ew_2.jpg?resize=1200%2C1680&zoom=0.54" />
+                    </div>
+                    <div style="display: flex; gap: 20px; margin-top: 10px">
+                        <div
+                            style="
+                                flex: 30%;
+                                background-color: var(--body-deco);
+                                padding: 0 10px;
+                                border-radius: var(--border-radius);
+                            ">
+                            <h2>Ingredients</h2>
+                            <p>rice noodles, soy sauce, oyster sauce, sugar, eggs, flat cabbage, meat of choice</p>
+                            <p>
+                                <b>Source</b><br /><a
+                                    href="https://www.recipetineats.com/thai-stir-fried-noodles-pad-see-ew/"
+                                    >Recipe Tin Eats</a
+                                >
+                            </p>
+                        </div>
+                        <div style="flex: 70%">
+                            <h2>Introduction</h2>
+                            <p>
+                                Pad see ew is a popular stir fried noodle dish served by street food vendors in
+                                Thailand. The name of the dish translates into “fried with soy sauce” and typically
+                                utilizes both light and dark soy sauces.
+                            </p>
+                            <ul>
+                                <li><b>Prep Time:</b> 8 min prep + 10 min cooking</li>
+                                <li><b>Servings:</b> 2 servings</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h1>Ingredients</h1>
+                    <h2>Noodles</h2>
+                    <ul>
+                        <li>200g / 7 oz dried wide rice stick noodles, or 15 oz / 450g fresh wide flat rice noodles</li>
+                    </ul>
+                    <h2>Sauce</h2>
+                    <ul>
+                        <li>2 tsp dark soy sauce</li>
+                        <li>1 1/2 tbsp oyster sauce</li>
+                        <li>1 tbsp light soy sauce <i>(or all purpose)</i></li>
+                        <li>2 tsp white vinegar <i>(plain white vinegar)</i></li>
+                        <li>2 tsp sugar <i>(any type)</i></li>
+                    </ul>
+                    <h2>Stir Fry</h2>
+                    <ul>
+                        <li>4 tbsp peanut or vegetable oil, separated</li>
+                        <li>2 cloves garlic cloves, very finely chopped</li>
+                        <li>1 large egg</li>
+                        <li>
+                            Meat of choice
+                            <ul>
+                                <li>
+                                    Usually I either use shrimp or chicken breast cut into cubes and marniated in
+                                    lemongrass
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h1>Cooking Instructions</h1>
+                    <h2>Preparation</h2>
+                    <ul>
+                        <li>
+                            <b>Noodles</b> – Prepare according to packet directions and drain. Time it so they’re cooked
+                            just before using – do not leave cooked rice noodles lying around, they break in the wok.
+                            <ul><li>I usually like to just do a water soak, a few hours before I cook, I leave the rice noodles to soak in cold/semi-cold water until then. This softens the noodles up so they only need to finish cooking in the sauce</li></ul>
+                        </li>
+                        <li><b>Sauce</b> – Mix ingredients until sugar dissolves.</li>
+                    </ul>
+                    <h2>Cooking</h2>
+                    <p>This recipe is assuming you are cooking chicken, which will be cooked alongside the garlic.</p>
+                    <ol>
+                        <li>
+                            <b>Heat oil:</b> Heat 1 tbsp oil in a very large heavy based skillet or wok over high heat.
+                        </li>
+                        <li>
+                            <b>Cook and scramble egg:</b> Add egg in, set to low heat and scramble for 30 seconds,
+                            flipping it once it's puffed up.
+                        </li>
+                        <li><b>Remove egg:</b> Remove the egg from the wok onto a plate, and clean wok.</li>
+                        <li>
+                            <b>Cook garlic and chicken:</b> Add 1 tbsp oil and swirl it around, then add garlic, cook 15
+                            seconds. Add chicken, cook until it mostly changes from pink to white.
+                            <ul>
+                                <li>
+                                    Depending on the vegetable of choice, you may want to add some of the veggies here
+                                    once the outside of the chicken is mostly white, so they can also steam and cook
+                                </li>
+                            </ul>
+                        </li>
+                        <li><b>Remove chicken:</b> Remove chicken from the wok onto a plate and clean wok.</li>
+                        <li>
+                            <b>Caramelise noodles:</b> Return wok to stove, heat 2 tbsp oil over high heat until it
+                            starts smoking (HOT is key!). Add noodles and Sauce. Toss as few times as possible to
+                            disperse Sauce and make edges of noodles caramelise – about 1 to 1 1/2 minutes.
+                        </li>
+                        <li>
+                            <b>Add chicken back in:</b> Quickly add chicken and veggies of choice back in, and toss to
+                            disperse. Serve immediately!
+                        </li>
+                    </ol>
+                </article>
+            </main>
+        </div>
+        <!-- =============================================== -->
+        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
+        <!-- =============================================== -->
+        <general-footer></general-footer>
+
+        <!-- Dark Mode Toggle -->
+        <script src="../Scripts/Accessible/dark-mode-alt.js"></script>
+
+        <!-- Font Toggle -->
+        <script src="../Scripts/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
+        <script src="../Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    </body>
+</html>
