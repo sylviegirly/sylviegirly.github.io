@@ -1351,6 +1351,7 @@ footer a:hover {
     color: var(--font-on-accent);
     width: fit-content;
     height: 40px;
+    padding: 5px 10px;
     background-color: var(--primary-accent);
     border: 2px solid var(--secondary-accent);
     border-radius: var(--border-radius);
