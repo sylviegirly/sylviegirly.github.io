@@ -363,8 +363,10 @@ blockquote {
     background-color: var(--body-deco);
 }
 
-abbr {
-    text-decoration-style: dotted;
+abbr,
+.tippy {
+    text-decoration: underline;
+                text-decoration-style: dotted;
     text-decoration-color: var(--link-hover);
     cursor: pointer;
 }

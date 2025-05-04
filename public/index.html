@@ -399,8 +399,8 @@
                     </p>
                     <p>
                         <span class="highlight">Playing:</span>
-                        Minecraft, <abbr title="Honkai Star Rail">HSR</abbr>, <abbr title="Baldur's Gate 3">BG3</abbr>,
-                        V Rising
+                        Minecraft, <span class="tippy" data-tippy-content="Honkai Star Rail">HSR</span>,
+                        <span class="tippy" data-tippy-content="Baldur's Gate 3">BG3</span>, V Rising
                     </p>
                     <p>
                         <span class="highlight">Reading:</span>
@@ -607,7 +607,7 @@
             </div>
             <a
                 href="https://x.com/thepeelucof87"
-                title="Zhongvie my obssession my insanity nhrhghrhgrhg. Art by @thepeelucof87">
+                data-tippy-content="Zhongvie my obssession my insanity nhrhghrhgrhg. Art by @thepeelucof87">
                 <img class="side-deco" src="Images/General Decorations/zhongvie.png" />
             </a>
         </div>
@@ -622,6 +622,17 @@
         <!-- =============================================== -->
         <script>
             marquee.setup();
+        </script>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
         </script>
 
         <!-- Dark Mode Toggle -->
