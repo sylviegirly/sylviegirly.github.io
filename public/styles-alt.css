@@ -389,6 +389,20 @@ details {
     border-left: 5px solid var(--secondary-accent);
 }
 
+.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.column {
+    flex: 0 0 auto;
+}
+
 /* Link styling */
 
 .intro a,
@@ -929,12 +943,6 @@ article .scrollable p:first-child {
     margin-top: 0;
 }
 
-article .columns {
-    display: flex;
-    flex-direction: row;
-    vertical-align: baseline;
-}
-
 /* -------------------------------------------------------- */
 /* TABS */
 /* -------------------------------------------------------- */
@@ -988,11 +996,14 @@ article .columns {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
     align-items: center;
     justify-content: center;
-    text-align-last: center;
+    text-align: center;
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+.tabAltcontent img {
+    margin: 2.5px;
 }
 
 .interest-content ul {
@@ -1248,14 +1259,17 @@ footer a:hover {
     }
 
     article .columns {
-        display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
     }
 
     article .scrollable {
         height: fit-content;
         max-height: 400px;
+    }
+
+    /* Items */
+    .image-gallery div {
+        width: calc(50% - 10px);
     }
 
     /* -------------------------------------------------------- */
