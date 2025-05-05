@@ -507,7 +507,7 @@ main section,
 #main-menu li a:hover,
 #main-menu li a:focus {
     background: var(--linkhover);
-    color: black;
+    color: var(--font-on-accent);
     transition: 0.5s ease;
 }
 
