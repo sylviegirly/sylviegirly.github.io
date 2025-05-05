@@ -1183,6 +1183,15 @@ footer a:hover {
         margin-right: 5px;
     }
 
+    .columns {
+        flex-direction: column;
+    }
+
+    .column {
+        flex: 1 1 100% !important;
+        min-width: 100%;
+    }
+
     .accordion {
         display: none;
     }
