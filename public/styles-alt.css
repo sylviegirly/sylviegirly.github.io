@@ -297,7 +297,7 @@ bold,
 b,
 strong {
     color: var(--primary-accent);
-    font-weight: bold;
+    font-family: "dosis";
 }
 
 italics,
@@ -366,7 +366,7 @@ blockquote {
 abbr,
 .tippy {
     text-decoration: underline;
-                text-decoration-style: dotted;
+    text-decoration-style: dotted;
     text-decoration-color: var(--link-hover);
     cursor: pointer;
 }
