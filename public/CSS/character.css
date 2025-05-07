@@ -676,9 +676,13 @@ details {
 }
 
 .success i,
+.success b,
 .info i,
+.info b,
 .warning i,
-.danger i {
+.warning b,
+.danger i,
+.danger b {
     color: black;
 }
 
@@ -931,6 +935,16 @@ button {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 550px;
+    border-radius: 20px;
+}
+
+.design-image-alt {
+    width: 100%;
+    min-height: 500px;
+    background-image: var(--design-image);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 20px;
 }
 
@@ -1304,6 +1318,10 @@ button {
 
     .design-image {
         flex: 45%;
+    }
+
+    .design-image-alt {
+        min-height: auto;
     }
 
     .pal-column {
