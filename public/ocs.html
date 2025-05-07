@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "☀️";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "🌙";
+            }
+        </script>
+        <!-- Site Title -->
+        <title>oc list</title>
+
+        <!-- Site Description -->
+        <meta content="Personal to-do list for this website." name="description" />
+
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- FavIcon -->
+        <link ref="favicon" href="favicon.ico" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" href="styles-alt.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JavaScript: -->
+        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
+        if this HTML file is in 2 subfolders, etc. -->
+        <script src="Scripts/sparkle_cursor.js"></script>
+        <script src="Scripts/header.js" defer></script>
+        <script src="Scripts/left-sidebar.js" defer></script>
+        <script src="Scripts/footer.js" defer></script>
+        <script src="Scripts/tab-title-suffix.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <!-- Disclosure Menu -->
+        <script src="Scripts/Accessible/accessible-menu.js" type="module"></script>
+
+        <style>
+            .oc-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                align-items: flex-start;
+            }
+
+            /* Items */
+            .oc-gallery div {
+                margin: 5px;
+                box-sizing: border-box;
+                width: calc(25% - 10px);
+                position: relative;
+            }
+
+            /* Images */
+            .oc-gallery img {
+                width: 100%;
+                max-height: 180px;
+                border: 5px solid var(--primary-accent);
+                border-radius: var(--border-radius);
+                object-fit: cover;
+                transition: 0.5s;
+                aspect-ratio: 1/1 !important;
+            }
+
+            .oc-gallery p {
+                text-align: center;
+            }
+
+            .oc-gallery .name {
+                width: fit-content;
+                border-radius: var(--border-radius);
+                margin: auto;
+                background-color: var(--primary-accent);
+                color: var(--font-on-accent);
+                z-index: 5;
+                padding: 5px 10px;
+            }
+
+            .oc-gallery a .name {
+                text-decoration: none;
+                transition: 0.5s;
+            }
+
+            .oc-gallery a .name:hover {
+                background-color: var(--secondary-accent);
+            }
+
+            .oc-gallery .pronoun {
+                font-size: 0.9em;
+            }
+
+            /* Images on Hover */
+            .oc-gallery img:hover {
+                border: 5px solid var(--secondary-accent);
+            }
+
+            @media screen and (max-width: 800px) {
+                .oc-gallery div {
+                    width: calc(33% - 10px);
+                }
+            }
+        </style>
+    </head>
+    <body id="body">
+        <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
+        <!-- =============================================== -->
+        <div class="button-wrapper">
+            <div class="button" id="font-toggle">
+                <button class="general" type="button" id="toggle-font">toggle font</button>
+            </div>
+
+            <div class="button">
+                <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div class="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+            <main id="content">
+                <article>
+                    <h1>
+                        <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" />
+                        Character Lists
+                    </h1>
+                    <div style="text-align: center; margin-bottom: 10px">
+                        <h2>Main OCs</h2>
+                        <p>My main beloved blorbos who will have the most details written out for their characters.</p>
+                    </div>
+                    <div class="oc-gallery">
+                        <!-- IMAGE -->
+                        <div>
+                            <a href="OCs/sylvie.html">
+                                <img
+                                    src="./Images/OC%20Stuff/Sylvie/gallery_5_thumb.jpg"
+                                    alt="Sylvie, an original character for Genshin Impact"
+                                    loading="lazy"
+                            /></a>
+                            <a href=""
+                                ><div class="name">
+                                    <p>Sylvie <span class="pronoun">(they/she)</span></p>
+                                </div></a
+                            >
+                            <p>A nature god from the Genshin World. Silly n goofy to cope with it all.</p>
+                        </div>
+                        <!-- IMAGE -->
+                        <div>
+                            <a href="OCs/yadyra.html">
+                                <img
+                                    src="./Images/OC%20Stuff/Yadyra/gallery_3_thumb.jpg"
+                                    alt="Yadyra, an eldritch original character"
+                                    loading="lazy"
+                            /></a>
+                            <a href=""
+                                ><div class="name">
+                                    <p>Yadyra <span class="pronoun">(he/him)</span></p>
+                                </div></a
+                            >
+                            <p>Old guy who breaks the 4th wall and is very tired. Backrooms enjoyer.</p>
+                        </div>
+                        <!-- IMAGE -->
+                        <div>
+                            <a href="OCs/nameless.html">
+                                <img
+                                    src="./Images/OC%20Stuff/Nameless/gallery_thumb_3.jpg"
+                                    alt="Nameless, a demon original character"
+                                    loading="lazy"
+                            /></a>
+                            <a href=""
+                                ><div class="name">
+                                    <p>Nameless <span class="pronoun">(he/him)</span></p>
+                                </div></a
+                            >
+                            <p>
+                                Demon king with a sharp tongue and honestly ... who is kinda too lazy for his own good.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div style="text-align: center; margin-bottom: 10px">
+                        <h2>Other OCs</h2>
+                        <p>
+                            Other OCs who more than likely are retired at this point, so I'm not actively making or
+                            commissioning stuff for them, but I still adore.
+                        </p>
+                    </div>
+                    <div class="oc-gallery">
+                        <!-- IMAGE -->
+                        <div>
+                            <a href="">
+                                <img
+                                    src="./Images/OC%20Stuff/Sylvie/gallery_5_thumb.jpg"
+                                    alt="Khaliun Khatayin, a final fantasy 14 warrior of light"
+                                    loading="lazy"
+                            /></a>
+                            <div class="name">
+                                <p>Sylvie <span class="pronoun">(they/she)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+        <!-- =============================================== -->
+        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
+        <!-- =============================================== -->
+        <general-footer></general-footer>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+
+        <!-- Dark Mode Toggle -->
+        <script src="Scripts/Accessible/dark-mode-alt.js"></script>
+
+        <!-- Font Toggle -->
+        <script src="Scripts/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
+        <script src="Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    </body>
+</html>
