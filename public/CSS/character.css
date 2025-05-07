@@ -820,6 +820,7 @@ button {
 }
 
 .flags img {
+    background-color: var(--secondary-accent);
     margin: 5px;
     width: 60px;
 }
