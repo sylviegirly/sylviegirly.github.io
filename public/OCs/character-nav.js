@@ -54,12 +54,13 @@ const content = `
                 <li id="item-4-1-0"><a id="link-4-1-0" href="sylvie.html">Sylvie</a></li>
                 <li id="item-4-2-0"><a id="link-4-2-0" href="yadyra.html">Yadyra</a></li>
                 <li id="item-4-3-0"><a id="link-4-3-0" href="nameless.html">Nameless</a></li>
-                <li id="item-4-4-0" class="dropdown">
-                    <a id="link-4-4-0" href="#">Shrines</a>
-                    <ul id="menu-4-4">
-                        <li id="item-4-4-1"><a id="link-4-4-1" href="../Shrines/zhongli.html">Zhongli</a></li>
-                        <li id="item-4-4-2">
-                            <a id="link-4-4-2" href="../Shrines/zhongvie.html">Zhongvie (🌿🔶)</a>
+                <li id="item-4-4-0"><a id="link-4-4-0" href="/ocs.html">Other OCs</a></li>
+                <li id="item-4-5-0" class="dropdown">
+                    <a id="link-4-5-0" href="#">Shrines</a>
+                    <ul id="menu-4-5">
+                        <li id="item-4-5-1"><a id="link-4-5-1" href="../Shrines/zhongli.html">Zhongli</a></li>
+                        <li id="item-4-5-2">
+                            <a id="link-4-5-2" href="../Shrines/zhongvie.html">Zhongvie (🌿🔶)</a>
                         </li>
                     </ul>
                 </li>
