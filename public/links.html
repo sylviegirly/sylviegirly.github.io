@@ -49,6 +49,25 @@
             .ff-container {
                 display: inline-flex;
             }
+
+            #oc-webring-widget {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: auto;
+                width: fit-content;
+                gap: 1em;
+                border: 4px solid var(--primary-accent);
+                padding: 1em;
+                border-radius: 12px;
+            }
+            #oc-webring-title {
+                font-weight: bold;
+            }
+            #oc-webring-controls {
+                display: flex;
+                gap: 1em;
+            }
         </style>
         <script src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
         <script>
@@ -177,7 +196,9 @@
                     /></a>
                     <a href="https://juneish.neocities.org"><img alt="juneish" src="./Images/Sites/button.gif" /></a>
                     <a href="https://kuroi.neocities.org/"><img alt="kuroi" src="./Images/Sites/kuroi.png" /></a>
-                    <a href="https://daniele63.com/"><img alt="daniele 63" src="./Images/Sites/danieles_button.png" /></a>
+                    <a href="https://daniele63.com/"
+                        ><img alt="daniele 63" src="./Images/Sites/danieles_button.png"
+                    /></a>
                     <div class="interest-content">
                         <ul>
                             <li>
@@ -204,9 +225,7 @@
                         <img src="https://i.imgur.com/lFO9jno.png" alt="moogle boogles"
                     /></a>
                     <a href="https://winbows.neocities.org/" target="_top"
-                        ><img
-                            src="https://winbows.neocities.org/resources/winbows-btn.png"
-                            alt="Winbows XP"
+                        ><img src="https://winbows.neocities.org/resources/winbows-btn.png" alt="Winbows XP"
                     /></a>
                     <a href="https://aelita.neocities.org/"
                         ><img src="https://file.garden/ZF_HpShvAk-Bo5va/neocities/aelita/button1.png" alt="aelita"
@@ -366,6 +385,16 @@
                             <script
                                 type="text/javascript"
                                 src="https://yume-ring.neocities.org/onionring-widget2.js"></script>
+                        </div>
+                        <div id="oc-webring-widget">
+                            <div id="oc-webring-title">
+                                <a href="https://tofutush.github.io/oc-webring">OC Webring</a>
+                            </div>
+                            <div id="oc-webring-controls">
+                                <a href="https://tofutush.github.io/oc-webring/prev/?site=YOUR_SITE_NAME">Previous</a>
+                                <a href="https://tofutush.github.io/oc-webring/rand/?site=YOUR_SITE_NAME">Random</a>
+                                <a href="https://tofutush.github.io/oc-webring/next/?site=YOUR_SITE_NAME">Next</a>
+                            </div>
                         </div>
                     </div>
 
