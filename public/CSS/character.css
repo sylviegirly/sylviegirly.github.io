@@ -843,6 +843,7 @@ button {
     align-items: flex-start;
     line-height: 1;
     padding-bottom: 5px;
+    padding-right: 10px;
     box-sizing: border-box;
 }
 
