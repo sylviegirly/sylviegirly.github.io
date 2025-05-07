@@ -1,0 +1,1525 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "Light Mode";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+            }
+        </script>
+        <title>Hideki</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" type="text/css" href="../CSS/character.css" />
+        <link rel="stylesheet" href="../CSS/lightbox.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JS: -->
+        <script src="../Scripts/lightbox-plus-jquery.js"></script>
+        <script src="character-nav.js" defer></script>
+        <!-- Disclosure Menu -->
+        <script src="../Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <script src="../Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <script src="../Scripts/tab-title-suffix.js"></script>
+        <style>
+            html,
+            html[data-theme="light"] {
+                /* Main colors */
+                --background: #eac2cd; /* Page background */
+                --background-accent: #deaaba;
+                --color: #1c0e0e;
+                --block: #f9eeee; /* Background color for the grid blocks in the content */
+                --body-deco: #f0dada;
+
+                --primary-accent: #e08b8e;
+                --secondary-accent: #612b2b;
+                --font-on-accent: #000000;
+
+                --link: #b13131;
+                --linkhover: #240b0b;
+
+                --letter-glow: rgba(232, 68, 68, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #f9eeee;
+                --sidebarcolor: #1c0e0e;
+                --subtle-line: rgba(190, 22, 22, 0.2);
+            }
+
+            html[data-theme="dark"] {
+                /* Main colors */
+                --background: #1e1e1e; /* Page background */
+                --background-accent: #292929;
+                --color: #f0f0f0;
+                --block: #222222; /* Background color for the grid blocks in the content */
+                --body-deco: #333333;
+
+                --primary-accent: #a7a7a7;
+                --secondary-accent: #858585;
+                --font-on-accent: #000000;
+
+                --link: #bebebe;
+                --linkhover: #ffffff;
+
+                --letter-glow: rgba(255, 255, 255, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #222222;
+                --sidebarcolor: #f0f0f0;
+                --subtle-line: rgba(255, 255, 255, 0.2);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                html,
+                html[data-theme="dark"] {
+                    /* Main colors */
+                    --background: #1c0f0f; /* Page background */
+                    --background-accent: #2e1d1d;
+                    --color: #f0f0f0;
+                    --block: #150d0d; /* Background color for the grid blocks in the content */
+                    --body-deco: #1e1818;
+
+                    --primary-accent: #cc8e8e;
+                    --secondary-accent: #c35050;
+                    --font-on-accent: #000000;
+
+                    --link: #e08383;
+                    --linkhover: #ffffff;
+
+                    --letter-glow: rgba(159, 56, 56, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #150d0d;
+                    --sidebarcolor: #f0f0f0;
+                    --subtle-line: rgba(255, 135, 135, 0.2);
+                }
+
+                html[data-theme="light"] {
+                    /* Main colors */
+                    --background: #eac2cd; /* Page background */
+                    --background-accent: #deaaba;
+                    --color: #1c0e0e;
+                    --block: #f9eeee; /* Background color for the grid blocks in the content */
+                    --body-deco: #f0dada;
+
+                    --primary-accent: #e08b8e;
+                    --secondary-accent: #612b2b;
+                    --font-on-accent: #000000;
+
+                    --link: #b13131;
+                    --linkhover: #240b0b;
+
+                    --letter-glow: rgba(232, 68, 68, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #f9eeee;
+                    --sidebarcolor: #1c0e0e;
+                    --subtle-line: rgba(190, 22, 22, 0.2);
+                }
+
+                :root {
+                    --header-image: url("https://images.pexels.com/photos/31281710/pexels-photo-31281710/free-photo-of-vibrant-cherry-blossoms-in-full-spring-bloom.jpeg");
+                    --focal-image: url("../Images/OC%20Stuff/Hideki/focal_image.jpg");
+                    --design-image: url("../Images/OC%20Stuff/Hideki/design_image.png");
+                    --focal-trivia-image: url("../Images/OC%20Stuff/Hideki/trivia_image.jpg");
+
+                    --moodboard-1-image: url("https://images.pexels.com/photos/1517361/pexels-photo-1517361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                    --moodboard-2-image: url("https://images.pexels.com/photos/4197563/pexels-photo-4197563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                    --moodboard-3-image: url("https://images.pexels.com/photos/1210276/pexels-photo-1210276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                    --moodboard-4-image: url("https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                    --moodboard-5-image: url("https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Please don't remove the next 2 lines! -->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
+        <!-- =============================================== -->
+
+        <div class="button-wrapper">
+            <div class="button" id="font-toggle">
+                <button class="general" type="button" id="toggle-font">toggle font</button>
+            </div>
+
+            <div class="button">
+                <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div id="container">
+            <div id="sidebar">
+                <div id="sidebar-content">
+                    <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+                    <div class="icon">
+                        <img src="../Images/OC%20Stuff/Hideki/sidebar_image.jpg" alt="" aria-hidden="true" />
+                    </div>
+                    <div class="header">Hideki</div>
+
+                    <!-- Quote -->
+                    <div class="quote">I love it when people tell me about me because I have no idea who I am</div>
+
+                    <!-- Navigation menu  -->
+                    <div class="" id="main-menu">
+                        <ul>
+                            <li><a href="https://toyhou.se/3014123.hideki-alexander-hamasaki">Toyhouse</a></li>
+                            <li><a href=" https://www.pinterest.ca/Asuraid/hideki-hamasaki/">Pinterest</a></li>
+                            <li><a href=" https://open.spotify.com/playlist/6IW0AFwPqATxmZcP1QKPap">Spotify</a></li>
+                        </ul>
+                    </div>
+                    <p>
+                        My beloved sunshine, my main OC for 7 years before he got retired, and my coping companion during college and highschool
+                    </p>
+                    <hr />
+                    <button class="accordion">Credits</button>
+                    <div class="panel">
+                        <ul>
+                            <li>
+                                Stamps: <a href="https://www.deviantart.com/sinnamonstamps">sinnamonstamps</a>,
+                                <a href="https://www.deviantart.com/bulletblend">bulletblend</a>,
+                                <a href="https://www.deviantart.com/hellanator">hellanator</a>,
+                                <a href="https://www.deviantart.com/puniplush">puniplush</a>
+                            </li>
+                            <li>
+                                Flags: <a href="https://toyhou.se/21355465.my-tiny-pride-flags/gallery">l0stlights</a>
+                            </li>
+                            <li>
+                                Ribbons: <a href="https://toyhou.se/15560571.ribbon-repository-updating">repository</a>
+                            </li>
+                            <li>
+                                Header + Moodboards: <a href="https://www.pexels.com">pexels</a> +
+                                <a href="https://unsplash.com/">unsplash</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content area -->
+            <main id="content">
+                <!-- Section tags must be used for blocks -->
+
+                <!-- CHARACTER INFORMATION: DESKTOP ------------------------------>
+                <section class="twothird second-order">
+                    <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
+                    <h1>gaymer boy</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div>hideki alexander hamasaki</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>30+</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>male</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">role</div>
+                                    <div>streamer</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>neutral good</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- BIRTHDAY -->
+                                    <div class="stat-name">birthday</div>
+                                    <div>february 17, 1994</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>hide / hidi / deki / hidebro</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>
+                                        human /
+                                        <a
+                                            data-tippy-content="Hideki used to be a bleach fandom OC, but he became his own original entity. His powers are still based off the fullbringers"
+                                            href="https://toyhou.se/~r?q=https%3A%2F%2Fbleach.fandom.com%2Fwiki%2FFullbringer"
+                                            >fullbringer</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>he / him</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">mbti</div>
+                                    <div>INFP-T</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">element</div>
+                                    <div>lightning</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-gem" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GEMSTONE -->
+                                    <div class="stat-name">gemstone</div>
+                                    <div>rose quartz</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            Hideki is a towering 6'4" tall man with albinism who is living in Japan with his husband, is
+                            primarily a streamer and works part-time at his uncle's café. He also runs a Youtube channel
+                            about games on the side; cosplaying and doing make-up for others are core hobbies alongside
+                            gaming.
+                        </p>
+                        <p>
+                            He is soft, expressive, and optimistic at his core, with a heart that's too big for his own
+                            good; he is sensitive to the emotions of those around him, and he tries to see the best in
+                            everyone, sometimes offering help at the cost of not helping himself. Of course, over the
+                            years he has worked on that, but the desire to do right sometimes triumphs logic. Just know
+                            that he is a friend who will be by your side through thick and thin.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
+                <section class="third focal" data-tippy-content="Art by Chris Ibarra">
+                    <div class="flags">
+                        <img src="../Images/Flags/cis.png" alt="cis flag" data-tippy-content="Cis Male" />
+                        <img
+                            src="../Images/Flags/demirose.png"
+                            alt="Demisexual and demiromantic flag"
+                            data-tippy-content="Demirose" />
+                        <img
+                            src="../Images/Flags/GAD.png"
+                            alt="General Anxiety Disorder flag"
+                            data-tippy-content="General Anxiety Disorder" />
+                        <img
+                            src="../Images/Flags/BPD.png"
+                            alt="Borderline Personality Disorder flag"
+                            data-tippy-content="Borderline Personality Disorder (BPD)" />
+                    </div>
+                </section>
+
+                <!-- CHARACTER INFORMATION: MOBILE ------------------------------>
+                <section class="twothird first-order">
+                    <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
+                    <h1>gaymer boy</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div>hideki alexander hamasaki</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>30+</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>male</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">role</div>
+                                    <div>streamer</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>neutral good</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- BIRTHDAY -->
+                                    <div class="stat-name">birthday</div>
+                                    <div>february 17, 1994</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>hide / hidi / deki / hidebro</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>
+                                        superpowered human /
+                                        <a
+                                            data-tippy-content="Hideki used to be a bleach fandom OC, but he became his own original entity. His powers are still based off the fullbringers"
+                                            href="https://toyhou.se/~r?q=https%3A%2F%2Fbleach.fandom.com%2Fwiki%2FFullbringer"
+                                            >fullbringer</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>he / him</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">mbti</div>
+                                    <div>INFP-T</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">element</div>
+                                    <div>lightning</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-gem" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GEMSTONE -->
+                                    <div class="stat-name">gemstone</div>
+                                    <div>rose quartz</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            Hideki is a towering 6'4" tall man with albinism who is living in Japan with his husband, is
+                            primarily a streamer and works part-time at his uncle's café. He also runs a Youtube channel
+                            about games on the side; cosplaying and doing make-up for others are core hobbies alongside
+                            gaming.
+                        </p>
+                        <p>
+                            He is soft, expressive, and optimistic at his core, with a heart that's too big for his own
+                            good; he is sensitive to the emotions of those around him, and he tries to see the best in
+                            everyone, sometimes offering help at the cost of not helping himself. Of course, over the
+                            years he has worked on that, but the desire to do right sometimes triumphs logic. Just know
+                            that he is a friend who will be by your side through thick and thin.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- AESTHETIC STAMPS --------------------------------->
+                <section class="full">
+                    <div class="badgeholder" style="justify-content: space-evenly">
+                        <img src="../Images/OC%20Stuff/Hideki/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Hideki/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Hideki/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Hideki/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Hideki/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Hideki/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Hideki/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Hideki/stamp_8.png" aria-hidden="true" alt="" loading="lazy" />
+                    </div>
+                </section>
+
+                <!-- PERSONALITY SLIDERS ------------------------------>
+                <section class="full">
+                    <h1>Character</h1>
+                    <div class="sliderow">
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>friendly</span>
+                                <span>reserved</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 10%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>polite</span>
+                                <span>blunt</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 3%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>clever</span>
+                                <span>foolish</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 40%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sensitive</span>
+                                <span>tough</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 25%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>confident</span>
+                                <span>diffident</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 65%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>careful</span>
+                                <span>reckless</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 35%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sincere</span>
+                                <span>deceptive</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 15%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>diligent</span>
+                                <span>lazy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 25%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>calm</span>
+                                <span>irritable</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 50%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>hopeful</span>
+                                <span>pessimistic</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 40%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>organized</span>
+                                <span>messy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 45%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>humorous</span>
+                                <span>serious</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 25%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LIKES AND DISLIKES ------------------------------>
+                <!-- LIKES -->
+                <section class="half">
+                    <h2><i class="fa-solid fa-heart" aria-hidden="true"></i> Likes</h2>
+                    <ul>
+                        <li>colourful clothing</li>
+                        <li>cooking for friends</li>
+                        <li>dogs</li>
+                        <li>cosplaying</li>
+                        <li>coding</li>
+                    </ul>
+                </section>
+                <!-- DISLIKES -->
+                <section class="half">
+                    <h2><i class="fa-solid fa-heart-crack" aria-hidden="true"></i> Dislikes</h2>
+                    <ul>
+                        <li>ice cold foods</li>
+                        <li>neglected plants</li>
+                        <li>attention</li>
+                        <li>people staring</li>
+                        <li>rejection / critcism</li>
+                    </ul>
+                </section>
+
+                <!-- DETAILED PERSONALITY ------------------------------>
+                <section class="full">
+                    <h2><i class="fa-solid fa-folder-open" aria-hidden="true"></i> Details</h2>
+                    <!-- DETAIL BLOCK: DEMEANOR -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-masks-theater" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">demeanor</div>
+                            <div>
+                                hideki, on first glance, looks relatively withdrawn and lost in his own thoughts, often
+                                with a small slouch in his positon which is prominent due to his height. when talking to
+                                him, he often looks curious and thoughtful, with a smile on his face and expressions
+                                easy to see flickering across his features.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: TEMPERAMENT -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">temperament</div>
+                            <div>
+                                a good boy at his heart and core, hideki is gentle and positive to those who speak to
+                                him and is honestly just someone going forward with life while enjoying it day by day,
+                                which comes through. perhaps some see it as naivete, but after the life he's lived, he
+                                tries to live by the golden rule of treating others how they treat you.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: SOCIAL -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-message" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">social</div>
+                            <div>
+                                anxious, introverted, but often interested in the world; hideki finds enjoyment in
+                                sponging information mostly through observation rather than actively participating
+                                himself in discussions, but if you find the right topics to discuss, he can actively
+                                blab on for hours over his interests, namely games, ongoing internet events, and the
+                                life of streamers.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: INTELLECT -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-book" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">intellect</div>
+                            <div>
+                                average for most people, though hideki has quite a bit of street smarts picked up from
+                                his youth ... though most of it as this point feels more obsolete. although not
+                                immensely intelligent, he's pretty good at picking up new things and remembering tips
+                                and tricks learned throughout his life.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: STRENGTH -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-crown" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">strengths</div>
+                            <div>
+                                hideki is immensely optimistic, loving, and caring, and is a wonderful friend to have
+                                conidering his attentive personality and deep love for his frinds. he will always be
+                                open to helping and offering a listening ear to anyone who needs it, and tends to look
+                                on the positive side of things. although prone to a brain that struggles against
+                                himself, he does his best to keep moving forwards.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: FLAWS -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-skull" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">flaws</div>
+                            <div>
+                                prone to falling easily into thinking people are angry or upset at him and seeing signs
+                                of that even when there are none. he is very self-deprecating in some situations and
+                                doesn't easily see value in himself despite people telling him so. his personality is
+                                inconsistent around people, molding himself based on the other person.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DETAIL BLOCK: AMBITIONS -->
+                    <div class="stat-holder" style="margin-top: 10px">
+                        <div class="statcon">
+                            <i class="fa-solid fa-award" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="stat-name">ambitions</div>
+                            <div>
+                                to survive and life a happy life while working alongside his own mental health and the
+                                hurdles life has for him in general. a relatively humble goal that many people can
+                                sympathize with ... just like you and i. although he has superpowers that reveal the
+                                nonhuman world to him, he tries to not linger much around it.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- STORY DETAILS ------------------------------>
+                <section class="full">
+                    <h1>Story</h1>
+                    <section class="full warning" style="margin-bottom: 15px">
+                        <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                        <b>Sensitive topics ahead.</b> Hideki's history handles a lot of concepts like parental neglect,
+                        mental health issues, the death of a sibling, self-harm and suicide attempts, and narcotic
+                        abuse. Although they are things that have happened in the past and are not written in detail,
+                        they are still part of his history.
+                    </section>
+                    <details>
+                        <summary>Childhood</summary>
+                        <p>
+                            Hideki was raised in a household where his parents were workaholics, and he often spent more
+                            time alone than around any other person. He was a socially awkward child, often preferring
+                            to lock himself in his room and to play on his consoles, finding it hard to interact with
+                            other children without some degree of anxiety. The most consistent interaction he had with
+                            other people was with babysitters that changed yearly.
+                        </p>
+                        <p>
+                            The first 5-6 years of his life were a vicious struggle between his mother and father; his
+                            mother had always wished for a daughter and tried to mold Hideki into that desire, while his
+                            father did everything to stop that. In the end, he succeeded, but it lasted long enough to
+                            leave a permanent mark on Hideki&#39;s sense of identity. The relationship between him and
+                            his mother was anything but loving; she chided him over small things, never offered the
+                            attention he needed, put him down, and unknown to him, his father was, unfortunately, victim
+                            to her as well. She held the finance of the family and had him under her thumb, so he was
+                            unable to leave or take Hideki away. His father genuinely loved Hideki, but he didn&#39;t
+                            have much time to spend with him, and he walked on eggshells around his wife.
+                        </p>
+                        <p>
+                            This all had changed at the age of 5 when his mother became pregnant with another child and
+                            when he was six, she gave birth to a young girl bestowed with the name Hitomi, what his
+                            mother had wanted all along. The albino became next to non-existent to his mother, rather
+                            giving the young girl the attention he never got &mdash; and he grew jealous until the young
+                            girl turned her attention to her big brother and wanted to genuinely spend time with him.
+                        </p>
+                        <p>
+                            There was a struggle between him and his mother over her, but his father always made sure
+                            they found time for each other. Hitomi grew to be his best friend, helping Hideki open up
+                            and become more sociable and giving him someone to lean on for a bit when he didn&#39;t feel
+                            well. She was his light and he would protect her with his life if he could.
+                        </p>
+                        <p>
+                            It was during this time that he had also met Haru and Raiden Lemarchal, two twin brothers
+                            that were stopping in the Edogawa district in Tokyo with their father. They were roughly
+                            around Hideki&#39;s age, only older by almost a year. It took a while for him to warm up to
+                            them, but with coaxing from his sister and Haru they all grew to be relatively close,
+                            leaving the young albino to be ecstatic to have found people who wouldn&rsquo;t ignore him
+                            or drop him due to being a hard person to befriend.
+                        </p>
+                        <p>
+                            He leaned more towards the quiet twin, Raiden, due to the other having some kind of presence
+                            that Hideki didn&#39;t mind ( silences between them never really felt awkward ).
+                            Hideki&#39;s favourite thing to do was to get Raiden to smile, even though that was next to
+                            impossible &mdash; the smiles he did squeeze out made every &quot;accidental&quot; bump over
+                            objects and scraped knee worth it.
+                        </p>
+                        <p>
+                            He lead a relatively happy life, despite his parents and the trouble he got in at school
+                            when it came to fighting; he had his sister by his side and a small friend group that was
+                            tight-knit for a good handful of years. It was at the age of 15, when his sister was 9, that
+                            everything changed.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Teenage Years</summary>
+                        <p>
+                            He had lost his sister to a car accident when they were out one summer day: he had been
+                            holding on to her hand when something ahead caught her attention. Against his protests, she
+                            slipped out of his grip, running ahead through the crowds &mdash; over the noise she
+                            didn&rsquo;t hear the oncoming car, soon succumbing to internal bleeding on the way to the
+                            hospital. Hideki&rsquo;s mother ended up blaming him for her death while his father stayed
+                            silent, leaving the albino to gain a neurotic guilt complex that heavily weighed him down
+                            for many years. Around this time his own powers manifested when his anger and stress spiked,
+                            often blowing out lightbulbs or causing erratic patterns to appear on the screens of
+                            electronics.
+                        </p>
+                        <p>
+                            Haru and Raiden also disappeared not long after, leaving him alone. The albino had never
+                            learned how to properly cope with his emotions from a young age, and often got overwhelmed
+                            by his own feelings and was in a constant emotional turmoil. His anger often lashed out
+                            towards his parents or other kids at school if they provoked him; he wouldn&#39;t waste time
+                            pouncing on someone if they insulted him and he often came home bruised and hurt, even more
+                            so than before. At moments he went out himself to seek trouble, people to fight just for the
+                            thrill of it, pain, and the violent outlet.
+                        </p>
+                        <p>
+                            He had grown to have a dependency on oxycodone to drown out his emotions after he had
+                            suffered an injury and had to be on painkillers. He had contemplated ending it all by taking
+                            his own life with an overdose of them, though he always ended up backing out on any attempts
+                            or spitting out the pills. He went through a total of three attempts with the painkillers,
+                            not counting the four others across his lifetime.
+                        </p>
+                        <p>
+                            Things changed when his uncle whom he had never officially met, James King, came to visit
+                            one day from a distant town and stayed over for a few days. He and Hideki got along almost
+                            immediately and the albino latched to him, not long after he left and after a few weeks of
+                            digging up information online and from his father, Hideki had decided to run away from home
+                            and to where his uncle lived, bag packed for a new life.
+                        </p>
+                        <p>
+                            Though surprised, his uncle took him in and eventually became the father he never had truly
+                            had from the beginning. He finished high school in Karakura and settled into his life
+                            helping at his uncle&rsquo;s cafe ( Cafe Latte ). James had also helped Hideki wean off his
+                            dependency upon oxycodone, and he tried his best to offer Hideki emotional support &mdash;
+                            and to this day Hideki is thankful for everything his uncle has done for him.
+                        </p>
+                        <p>
+                            <b
+                                >( Rewrite to account for James only initially visiting and having to find some way to
+                                move to Japan. Originally James had decided to make the jump to move to Japan to try to
+                                help both his brother and his nephew. )</b
+                            >
+                        </p>
+                    </details>
+                    <img
+                        src="../Images/OC%20Stuff/Hideki/deco_image_1.png"
+                        style="max-width: 35%; float: right; margin: 5px 30px"
+                        data-tippy-content="Art by SacredNanners" />
+                    <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> 19+ Up to Present</h2>
+                    <p>
+                        Hideki continued living under his uncle&#39;s care, having finished high school and remaining to
+                        work as a waiter in the cafe his uncle had owned for a few good years now. He was in a better
+                        and healthier place for his own mental health, but life at the time was dull and things were
+                        lackluster; pain was still some way to feel something and he still sought it out in the privacy
+                        of his room with a roll of bandages by his side. Anger still flared up in small doses and his
+                        knuckles ran raw with the times he&#39;s taken it out on his surroundings.
+                    </p>
+                    <p>
+                        He met Raiden again one night in the cafe and the two reunited ( albeit they acted awkwardly
+                        around each other ). He met the girl Raiden shared an apartment with, Saki, and the albino began
+                        to branch out to meet other people, such as Llewella, Aurora, and Rafael, friends who had helped
+                        Hideki out when he wasn&#39;t feeling well and gave him support.
+                    </p>
+                    <p>
+                        The albino struggled with helping himself, and having Raiden back, he wished to help his
+                        childhood friend with the troubles he was having, leading to frequent arguments and heated
+                        moments between them as Raiden pushed him away and Hideki tried to push closer, threatening to
+                        break the two apart. It took a long time until the ravenette allowed Hideki to get close, and
+                        even longer for the two to officially be considered together. Ups and downs followed, events
+                        that left the both of them hurt &mdash; but also helped to develop them, and eventually the two
+                        got married in France on June 3, 2015.
+                    </p>
+                    <p>
+                        He got help for his own self through therapy, although it took a while to find it in Japan.
+                        Hideki is a lot happier with himself now and content, having put most of his past behind him and
+                        learning to look forward to the future. He still has moments where he becomes his own worst
+                        enemy, but he knows he has the support and aid to help when those times come around. There is a
+                        lot more confidence in his own identity and self and he&#39;s starting to branch himself out to
+                        different interests and events to try to create memorable experiences.
+                    </p>
+                    <p>
+                        Currently, he is living in a house he and Raiden share. He often visits his uncle with Raiden,
+                        and still works as a waiter at the cafe, taking it upon himself to educate new employees and
+                        including himself in most tasks in the cafe; it has done wonders to help him open up over the
+                        years and to smooth out his turbulent personality from the past. On the side, he handles a
+                        youtube channel centered around breaking games in fun ways, and does streaming as a hobby with
+                        quite a decent following. His relationship with his father, although still uneasy, is slowly
+                        starting to heal now that he has separated from his wife&mdash;Hideki&#39;s mother.
+                    </p>
+                </section>
+
+                <!-- MOODBOARD ------------------------------>
+                <section class="full">
+                    <h1>Moodboard</h1>
+                    <div class="moodboard-grid">
+                        <div class="moodboard1"></div>
+                        <div class="moodboard2"></div>
+                        <div class="moodboard3"></div>
+                        <div class="moodboard4"></div>
+                        <div class="moodboard5"></div>
+                    </div>
+                </section>
+
+                <!-- DESIGN ALTERNATIVE LAYOUT WITH IMAGE 2.0 ------------------------------>
+                <section class="half">
+                    <div class="design-info">
+                        <!-- DETAILS -->
+                        <h1>Design Notes</h1>
+                        <div class="stat-holder" style="margin-top: 10px">
+                            <div class="statcon">
+                                <i class="fa-solid fa-ruler" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">height</div>
+                                <div>6'4" / 194 cm</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">body type</div>
+                                <div>lanky, thin, wide shoulders</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">eyes</div>
+                                <div>red, white lashes</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">hair length + colour</div>
+                                <div>white, mid-back</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-question" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">extras</div>
+                                <div>freckles</div>
+                            </div>
+                        </div>
+                        <h2><i class="fa-solid fa-palette" aria-hidden="true"></i> Design Notes</h2>
+                        <ul>
+                            <li style="margin-top: 5px">
+                                His freckles cover the bulk of his face, shoulders, and torso.
+                            </li>
+                            <li>
+                                Hideki has no set outfit, but tends to wear casual, colourful, and long-sleeved clothing
+                                (outfit inspo on
+                                <a href="https://ca.pinterest.com/Asuraid/hideki-hamasaki/wardrobe/">pinterest</a>).
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="half design-image-alt" data-tippy-content="Art by mikolor"></section>
+
+                <!-- TRIVIA + FOCAL IMAGE -->
+                <section class="third triviafocal" data-tippy-content="Art by lakokoosa"></section>
+
+                <section class="twothird">
+                    <h1>Trivia</h1>
+                    <div class="scrollable">
+                        <ul>
+                            <li>
+                                He has OCA1A albinism, which affects his hair, eyes, and skin, though has learned to
+                                cope well with it throughout his life (minus having to avoid prolonged sun exposure). he
+                                also wears tinted contacts due to light sensitivity and vision problems.
+                            </li>
+                            <li>
+                                Suffers from generalized anxiety disorder and borderline personality disorder, but years
+                                of therapy and self-growth have helped with it a lot to have him reach a stable place.
+                            </li>
+                            <li>Owns a huskey but it lives with his uncle due to his husband having allergies.</li>
+                            <li>
+                                Often carries around a pokemon-themed bag with his laptop, or at least his portable
+                                consoles.
+                            </li>
+                            <li>
+                                Has a large collection of video-game themed collectibles like rare figurines and cards.
+                            </li>
+                            <li>
+                                In his teens he used to write fanfics on a small site, he gave up writing since then,
+                                but still checks in occasionally.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- RELATIONSHIPS -->
+                <section class="full">
+                    <h1>Relationships</h1>
+                    <div class="relationshipcontainer">
+                        <!-- RELATIONSHIP BOX -->
+                        <div class="relationshipbox">
+                            <div class="relationshipicon">
+                                <img
+                                    src="../Images/OC%20Stuff/Raiden/thumbnail.jpg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy" />
+                            </div>
+                            <span class="relationshipname">Raiden</span> &bull;
+                            <span class="relationshiptype">husband</span>
+                            <div class="relationshiphearts">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <div class="relationshipinfo">
+                                The love of his life and his everything. Raiden is relatively reserved; it is hard to
+                                get past the blunt and withdrawn shell he has put up, but Hideki has found a way to get
+                                past them over the years. Beyond his rougher personality, he is a completely different
+                                man, a more sociable and joking person with loyalty and love brimming out of him.
+                            </div>
+                        </div>
+                        <!-- RELATIONSHIP BOX -->
+                        <div class="relationshipbox">
+                            <div class="relationshipicon">
+                                <img
+                                    src="../Images/OC%20Stuff/James/thumbnail.jpg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy" />
+                            </div>
+                            <span class="relationshipname">James</span> &bull;
+                            <span class="relationshiptype">uncle</span>
+                            <div class="relationshiphearts">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <div class="relationshipinfo">
+                                A secondary father to Hideki and a figure he looks up to (as well as his boss at the
+                                cafe). Hideki basically considers him to be one of his closest family members and an
+                                extremely good friend at the same time. Although the two often make fun of each other,
+                                they do deeply care and worry about each other as well.
+                            </div>
+                        </div>
+                        <!-- RELATIONSHIP BOX -->
+                        <div class="relationshipbox">
+                            <div class="relationshipicon">
+                                <img
+                                    src="../Images/OC%20Stuff/Others/raiko.jpg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy" />
+                            </div>
+                            <span class="relationshipname">Raiko</span> &bull;
+                            <span class="relationshiptype">son</span>
+                            <div class="relationshiphearts">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <div class="relationshipinfo">
+                                His first son between him and Raiden, who looks almost like a duplicate of his dad minus
+                                being wildly freckled ... and absolutely nothing like him in personality. Hideki bears
+                                deep love for his son, though due to his wild, party and life-living personality, it
+                                definitely gives him a heart attack here and there. Big puppy with a bigger heart.
+                            </div>
+                        </div>
+                        <!-- RELATIONSHIP BOX -->
+                        <div class="relationshipbox">
+                            <div class="relationshipicon">
+                                <img
+                                    src="../Images/OC%20Stuff/Others/hinata.jpg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy" />
+                            </div>
+                            <span class="relationshipname">Hinata</span> &bull;
+                            <span class="relationshiptype">son</span>
+                            <div class="relationshiphearts">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <div class="relationshipinfo">
+                                His second son between him and Raiden, who unfortunately inherited some of Hideki's
+                                albinism and low self-esteem, especially when comparing himself to his brother.
+                                Thankfully, over the years that has been slowly mended, and Hinata has grown into his
+                                own person. Inherited Raiden's smarts and fierce protective love of his brother.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- RIBBON COLLECTION ------------------------------>
+                <section class="full">
+                    <h2><i class="fa-solid fa-award" aria-hidden="true"></i> Ribbons and Badges</h2>
+
+                    <div class="badgeholder">
+                        <img
+                            src="../Images/Ribbons/male.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Male: This character is male." />
+                        <img
+                            src="../Images/Ribbons/he-him.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="He/Him: This character uses he/him/himself pronouns." />
+                        <img
+                            src="../Images/Ribbons/demiaroace.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Demiaroace: This character only experiences sexual and romantic attraction after an emotional connection has been established." />
+                        <img
+                            src="../Images/Ribbons/bpd.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="BPD: This character has Borderline Personality Disorder." />
+                        <img
+                            src="../Images/Ribbons/depersonalization.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Depersonalization: This character experiences depersonalization." />
+                        <img
+                            src="../Images/Ribbons/gad.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="GAD: This character has Generalized Anxiety Disorder." />
+                        <img
+                            src="../Images/Ribbons/albinism.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="How Unique: This character is albino." />
+                        <img
+                            src="../Images/Ribbons/married.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Never Shall Us Part: This character is married." />
+                        <img
+                            src="../Images/Ribbons/cinnamon_roll.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Cinnamon Roll: This character is simply too sweet!" />
+                        <img
+                            src="../Images/Ribbons/hacker.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Mainframe Breached: This character is a hacker." />
+                        <img
+                            src="../Images/Ribbons/parental.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Parental Figure: This character is a parent or guardian." />
+                        <img
+                            src="../Images/Ribbons/loved-by-all.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Loved by All: This character has an extremely good reputation/public image." />
+                        <img
+                            src="../Images/Ribbons/INFP.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="The Mediator: This character has the INFP personality type." />
+                        <img
+                            src="../Images/Ribbons/neutral_good.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Neutral Good: This character is of the neutral good alignment." />
+                        <img
+                            src="../Images/Ribbons/february.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="February Child: This character was born in February." />
+                        <img
+                            src="../Images/Ribbons/best-everything.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Best Everything: This character has their owners favorite design and story." />
+                        <img
+                            src="../Images/Ribbons/encyclopedia.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Encyclopedia: This character's story is very detailed and thought-out." />
+                        <img
+                            src="../Images/Ribbons/retired.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Retired: This character has been retired." />
+                        <img
+                            src="../Images/Ribbons/angel-wings.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Earned their Angel Wings: This character has a strong bond with you due to them being based off of / helping you with real problems in your life." />
+                        <img
+                            src="../Images/Ribbons/revamped.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="New Face: This character was revamped at some point." />
+                        <img
+                            src="../Images/Ribbons/ex-fandom.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            style="width: 60px"
+                            data-tippy-content="Broken Links: This character used to be a fandom OC, but is no longer." />
+                        <img
+                            src="../Images/Ribbons/irl-objects.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Close Company: This character has a physical real-life item, like a plush, statue, keychain, etc." />
+                        <img
+                            src="../Images/Ribbons/most-expensive.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Most Expensive: You have spent $100+ on this character yourself." />
+                        <img
+                            src="../Images/Ribbons/250-pieces-of-art.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Piles of Notebooks: This character has 250+ pieces of art." />
+                        <img
+                            src="../Images/Ribbons/voiceclaim.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Microphone: This character has a voice claim." />
+                        <img
+                            src="../Images/Ribbons/roleplay.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Actor: This character was/is used in roleplay." />
+                        <img
+                            src="../Images/Ribbons/tumblr-rp-blog.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="AMA: This character has an Askblog." />
+                        <img
+                            src="../Images/Ribbons/2013.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="2013: This character was made in 2013." />
+                        <img
+                            src="../Images/Ribbons/oldest-ocs.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Time Ribbon: This is one of your oldest characters." />
+                    </div>
+                </section>
+
+                <!-- PHOTO GALLERY ------------------------------>
+                <section class="full">
+                    <!-- CHANGE THIS LINK TO TH GALLERY -->
+                    <a href="https://toyhou.se/3014123.hideki-alexander-hamasaki/gallery" class="viewmore">View More</a>
+                    <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Image Gallery</h2>
+
+                    <div class="image-gallery">
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by me">
+                            <a
+                                href="../Images/OC%20Stuff/Hideki/gallery_full_1.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../Images/OC%20Stuff/Hideki/gallery_thumb_1.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by vintrage">
+                            <a
+                                href="../Images/OC%20Stuff/Hideki/gallery_full_2.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../Images/OC%20Stuff/Hideki/gallery_thumb_2.png" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by Pericci">
+                            <a
+                                href="../Images/OC%20Stuff/Hideki/gallery_full_3.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../Images/OC%20Stuff/Hideki/gallery_thumb_3.png" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by gh0stnova">
+                            <a
+                                href="../Images/OC%20Stuff/Hideki/gallery_full_4.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../Images/OC%20Stuff/Hideki/gallery_thumb_4.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by skunkyfly">
+                            <a
+                                href="../Images/OC%20Stuff/Hideki/gallery_full_5.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../Images/OC%20Stuff/Hideki/gallery_thumb_5.jpg" alt=""
+                            /></a>
+                        </div>
+                    </div>
+                </section>
+
+                <footer id="main-footer">
+                    <p>
+                        Coded by <a href="https://zhongvie.neocities.org/">Aid</a>, inspired from
+                        <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's layout</a>, using kalechip's
+                        <a href="https://kalechips.net/projects/layouts/">template</a>.
+                    </p>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+        <!-- Dark Mode Toggle -->
+        <script src="../Scripts/Accessible/dark-mode-alt.js"></script>
+
+        <!-- Font Toggle -->
+        <script src="../Scripts/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
+        <script src="../Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+        <!-- Accordion Dropdown -->
+        <script src="../Scripts/accordion.js"></script>
+    </body>
+</html>
