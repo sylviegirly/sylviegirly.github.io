@@ -589,6 +589,11 @@ em {
     color: var(--secondary-accent);
 }
 
+blockquote {
+    padding: 10px;
+    border-left: 20px solid var(--primary-accent);
+}
+
 underline,
 u {
     text-decoration: underline;
