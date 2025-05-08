@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "Light Mode";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+            }
+        </script>
+        <title>Khaliun</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" type="text/css" href="../CSS/character.css" />
+        <link rel="stylesheet" href="../CSS/lightbox.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JS: -->
+        <script src="../Scripts/lightbox-plus-jquery.js"></script>
+        <script src="character-nav.js" defer></script>
+        <!-- Disclosure Menu -->
+        <script src="../Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <script src="../Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <script src="../Scripts/tab-title-suffix.js"></script>
+        <style>
+            html,
+            html[data-theme="light"] {
+                /* Main colors */
+                --background: #d0d9db; /* Page background */
+                --background-accent: #e3ebec;
+                --color: #171616;
+                --block: #ededed; /* Background color for the grid blocks in the content */
+                --body-deco: #f4f4f4;
+
+                --primary-accent: #4c787e;
+                --secondary-accent: #275965;
+                --font-on-accent: #ffffff;
+
+                --link: #3da099;
+                --linkhover: #0a4a5a;
+
+                --letter-glow: rgba(177, 177, 177, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #ededed;
+                --sidebarcolor: #171616;
+                --subtle-line: rgba(0, 0, 0, 0.2);
+            }
+
+            html[data-theme="dark"] {
+                /* Main colors */
+                --background: #161919; /* Page background */
+                --background-accent: #232a2e;
+                --color: #f0f0f0;
+                --block: #1c2021; /* Background color for the grid blocks in the content */
+                --body-deco: #232929;
+
+                --primary-accent: #85b7ae;
+                --secondary-accent: #62b0b1;
+                --font-on-accent: #000000;
+
+                --link: #47b7c6;
+                --linkhover: #c4faff;
+
+                --letter-glow: rgba(103, 222, 227, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #1c2021;
+                --sidebarcolor: #f0f0f0;
+                --subtle-line: rgba(90, 176, 203, 0.2);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                html,
+                html[data-theme="dark"] {
+                    /* Main colors */
+                    --background: #161919; /* Page background */
+                    --background-accent: #232a2e;
+                    --color: #f0f0f0;
+                    --block: #1c2021; /* Background color for the grid blocks in the content */
+                    --body-deco: #232929;
+
+                    --primary-accent: #85b7ae;
+                    --secondary-accent: #62b0b1;
+                    --font-on-accent: #000000;
+
+                    --link: #47b7c6;
+                    --linkhover: #c4faff;
+
+                    --letter-glow: rgba(103, 222, 227, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #1c2021;
+                    --sidebarcolor: #f0f0f0;
+                    --subtle-line: rgba(90, 176, 203, 0.2);
+                }
+
+                html[data-theme="light"] {
+                    /* Main colors */
+                    --background: #d0d9db; /* Page background */
+                    --background-accent: #e3ebec;
+                    --color: #171616;
+                    --block: #ededed; /* Background color for the grid blocks in the content */
+                    --body-deco: #f4f4f4;
+
+                    --primary-accent: #4c787e;
+                    --secondary-accent: #275965;
+                    --font-on-accent: #ffffff;
+
+                    --link: #3da099;
+                    --linkhover: #0a4a5a;
+
+                    --letter-glow: rgba(177, 177, 177, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #ededed;
+                    --sidebarcolor: #171616;
+                    --subtle-line: rgba(0, 0, 0, 0.2);
+                }
+            }
+
+            :root {
+                --header-image: url("https://images.pexels.com/photos/6144105/pexels-photo-6144105.jpeg");
+                --focal-image: url("../Images/OC%20Stuff/Khaliun/focal_image.jpg");
+                --design-image: url("../Images/OC%20Stuff/Khaliun/design_image.png");
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Please don't remove the next 2 lines! -->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
+        <!-- =============================================== -->
+
+        <div class="button-wrapper">
+            <div class="button" id="font-toggle">
+                <button class="general" type="button" id="toggle-font">toggle font</button>
+            </div>
+
+            <div class="button">
+                <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div id="container">
+            <div id="sidebar">
+                <div id="sidebar-content">
+                    <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+                    <div class="icon">
+                        <img
+                            src="../Images/OC%20Stuff/Khaliun/sidebar_icon.jpg"
+                            alt=""
+                            aria-hidden="true"
+                            data-tippy-content="Art by lutes" />
+                    </div>
+                    <div class="header">Khaliun</div>
+
+                    <!-- Quote -->
+                    <div class="quote">Quote will go here</div>
+
+                    <!-- Navigation menu  -->
+                    <div class="" id="main-menu">
+                        <ul>
+                            <li><a href="https://toyhou.se/26799185.khaliun-khatayin">Toyhouse</a></li>
+                            <li>
+                                <a href="https://na.finalfantasyxiv.com/lodestone/character/36288710/">Lodestone</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>
+                        Warrior of Light, though he sure ain't enjoying it. I am only up to Stormblood since I'm free
+                        trial.
+                    </p>
+                    <hr />
+                    <button class="accordion">Credits</button>
+                    <div class="panel">
+                        <ul>
+                            <li>
+                                Stamps: <a href="https://www.deviantart.com/bulletblend">bulletblend</a>,
+                                <a href="https://www.deviantart.com/kink-me">kink-me</a>,
+                                <a href="https://www.deviantart.com/prismsfairies">prismsfairies</a>
+                            </li>
+                            <li>
+                                Flags: <a href="https://toyhou.se/21355465.my-tiny-pride-flags/gallery">l0stlights</a>
+                            </li>
+                            <li>
+                                Ribbons: <a href="https://toyhou.se/15560571.ribbon-repository-updating">repository</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content area -->
+            <main id="content">
+                <!-- Section tags must be used for blocks -->
+
+                <!-- CHARACTER INFORMATION: DESKTOP ------------------------------>
+                <section class="twothird second-order">
+                    <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
+                    <h1>warrior of light</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div>khaliun khatayin</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>~30</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>male</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">job</div>
+                                    <div>
+                                        <span
+                                            class="tippy"
+                                            data-tippy-content="A lot of art has him as a summoner just because I started as that before solidifying his canon job(s)"
+                                            >lancer / warrior</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>neutral good</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- BIRTHDAY -->
+                                    <div class="stat-name">birthday</div>
+                                    <div>
+                                        <span
+                                            class="tippy"
+                                            data-tippy-content="I didn't realize I made his birthday the same as mine, oops"
+                                            >november 16th</span
+                                        >
+                                        / 17th sun of the 6th astral moon
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>unknown</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>au ra (xaela)</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>he / him</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">origin</div>
+                                    <div>azim steppe</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-cloud-moon" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">guardian</div>
+                                    <div>nophica, the matron</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-flag" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GEMSTONE -->
+                                    <div class="stat-name">grand company</div>
+                                    <div>maelstrom</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            Work in progress, I'll write out more eventually for his actual summary. The guy is just
+                            tired af with all the stuff going on right now.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
+                <section class="third focal">
+                    <div class="flags">
+                        <img src="../Images/Flags/cis.png" alt="cis flag" data-tippy-content="Cis Male" />
+                        <img src="../Images/Flags/unlabeled.png" alt="unlabeled flag" data-tippy-content="Unlabeled" />
+                    </div>
+                </section>
+
+                <!-- CHARACTER INFORMATION: MOBILE ------------------------------>
+                <section class="twothird first-order">
+                    <!-- MOBILE INFORMATION, PLEASE COPY AND PASTE TO DESKTOP -->
+                    <h1>warrior of light</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div>khaliun khatayin</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>~30</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>male</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">job</div>
+                                    <div>
+                                        <span
+                                            class="tippy"
+                                            data-tippy-content="A lot of art has him as a summoner just because I started as that before solidifying his canon job(s)"
+                                            >lancer / warrior</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>neutral good</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- BIRTHDAY -->
+                                    <div class="stat-name">birthday</div>
+                                    <div>
+                                        <span
+                                            class="tippy"
+                                            data-tippy-content="I didn't realize I made his birthday the same as mine, oops"
+                                            >november 16th</span
+                                        >
+                                        / 17th sun of the 6th astral moon
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>unknown</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>au ra (xaela)</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>he / him</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">origin</div>
+                                    <div>azim steppe</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-cloud-moon" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">guardian</div>
+                                    <div>nophica, the matron</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-flag" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GEMSTONE -->
+                                    <div class="stat-name">grand company</div>
+                                    <div>maelstrom</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            Work in progress, I'll write out more eventually for his actual summary. The guy is just
+                            tired af with all the stuff going on right now.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- AESTHETIC STAMPS --------------------------------->
+                <section class="full">
+                    <div class="badgeholder" style="justify-content: space-evenly">
+                        <img src="../Images/OC%20Stuff/Khaliun/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Khaliun/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Khaliun/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Khaliun/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Khaliun/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Khaliun/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Khaliun/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Khaliun/stamp_8.png" aria-hidden="true" alt="" loading="lazy" />
+                    </div>
+                </section>
+
+                <!-- PERSONALITY SLIDERS ------------------------------>
+                <section class="full">
+                    <h1>Character</h1>
+                    <div class="sliderow">
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>friendly</span>
+                                <span>reserved</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 60%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>polite</span>
+                                <span>blunt</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 70%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>clever</span>
+                                <span>foolish</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 30%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sensitive</span>
+                                <span>tough</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 65%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>confident</span>
+                                <span>diffident</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 20%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>careful</span>
+                                <span>reckless</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 40%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sincere</span>
+                                <span>deceptive</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 30%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>diligent</span>
+                                <span>lazy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 25%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>calm</span>
+                                <span>irritable</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 35%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>hopeful</span>
+                                <span>pessimistic</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 50%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>organized</span>
+                                <span>messy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 45%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>humorous</span>
+                                <span>serious</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 55%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LIKES AND DISLIKES ------------------------------>
+                <!-- LIKES -->
+                <section class="half">
+                    <h2><i class="fa-solid fa-heart" aria-hidden="true"></i> Likes</h2>
+                    <ul>
+                        <li>riding creatures</li>
+                        <li>wildness walks</li>
+                        <li>wood whittling</li>
+                        <li>cooking</li>
+                    </ul>
+                </section>
+                <!-- DISLIKES -->
+                <section class="half">
+                    <h2><i class="fa-solid fa-heart-crack" aria-hidden="true"></i> Dislikes</h2>
+                    <ul>
+                        <li>cocky people</li>
+                        <li>overtly sweet foods</li>
+                        <li>wasting things</li>
+                        <li>being touched randomly</li>
+                    </ul>
+                </section>
+
+                <!-- PERSONALITY ------------------------------>
+                <section class="full">
+                    <h2>Personality</h2>
+                    <p>Work in progress.</p>
+                    <ul>
+                        <li>
+                            Hard to see much expression on his face since it's always in resting bitch mode, but he's
+                            usually just in his own head
+                        </li>
+                        <li>
+                            Has a lot of random facts about animals, naturally a sponge for animal facts (and he really
+                            loves chocobos once introduced to them, Dashdorj is his companion)
+                        </li>
+                        <li>He has a sense of humour. He sure does (he likes morbid and dark humour)</li>
+                    </ul>
+                </section>
+
+                <!-- STORY DETAILS ------------------------------>
+                <section class="full">
+                    <h1>Story</h1>
+                    <section class="full warning" style="margin-bottom: 20px">
+                        <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                        <b>SPOILERS CAN AND WILL BE PRESENT</b> up until the end of Stormblood, please be aware of that
+                    </section>
+                    <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Intro</h2>
+
+                    <p>
+                        Hailing from the Azim Steppe himself under the Khatayin tribe, Khaliun has gotten fed up with
+                        the cycling, unchanging lifestyle of the nomadic goat hunters, of the Naadams he never partook
+                        in, and the feuding of the tribes. Seen as a brother and warrior to his clan, having his own
+                        Yol, it did hurt to eventually leave the clan around the age of 16-18 to find something greater
+                        in his life, even amidst the Garlean incursion in Doma.
+                    </p>
+                    <blockquote>
+                        A tribe which largely remains unseen, hunting goats in the mountains for nine moons of the year.
+                        The remaining three are spent at the foot of the great north range, where they survive off the
+                        dried meat they stocked.
+                    </blockquote>
+                    <p></p>
+                    <details>
+                        <summary>Additional Disorganized Thoughts (SPOILERS)</summary>
+                        <ul>
+                            <li>
+                                Khatayin clan were hunters (often surviving off hunting goats/wildlife for 9 months,
+                                then surviving off dried meats for the 3 others)
+                            </li>
+                            <li>
+                                Khaliun is numb to the loss of people like Haurchefant or shit that went down like the
+                                ARR banquet; has seen a lot of loss of lives? Probs the norm for nomad tribes to just
+                                lose ppl
+                            </li>
+                            <li>
+                                Strong body … same energy as ‘looks like a bookworm, could punch you in the face’
+                                <ul>
+                                    <li>
+                                        Canonically warrior/lancer in class (obvs dragoon by extension), usually does
+                                        tend to wear less clothing due to the hot weather so you do see he's more built;
+                                        applies more for covered outfits
+                                    </li>
+                                    <li>
+                                        If the ‘eyepatch’ is ever worn he only says its to fool people into thinking
+                                        he’s got a missing eye/lower their guard if they fight (even tho he can see
+                                        through it)
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Definitely has been adjusted to other races, unsure as to the <u>why</u> though and how
+                                he got out … might need food on other Xaela who left the tribes
+                            </li>
+                            <li>
+                                Thinks the naadam is silly in terms of Xaela getting so competitive over it, but he has
+                                a dislike of flaunting/pride over their ‘control’. If fighting prowess, sure, but not
+                                ‘haha hehe we’re of father azim’ like stfu
+                                <ul>
+                                    <li>
+                                        As such, gets heavily annoyed by the Oronir clan, would butt heats with Magnai
+                                        and chew on him loudly (they have not liked each other from childhood)
+                                    </li>
+                                    <li>Adopted the ‘little sun’ nickname from Y’shtola to insult him</li>
+                                    <li>Has far more respect for the Dotharl</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Took a near fatal injury in his youth, gored through the stomach by one of the steppe
+                                creatures, unsure what one tho
+                                <ul>
+                                    <li>
+                                        Most likely the
+                                        <a href="https://ffxiv.consolegameswiki.com/wiki/Steppe_Dzo">Steppe Dzo</a>
+                                    </li>
+                                    <li>
+                                        Although he's recovered from it, he still gets phantom pains and may run out of
+                                        breath faster when exerting himself, not always
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Left around 16-18, was around for Garlean occupation of Doma since he’s ~30 now, so they
+                                conquered when he was ~5
+                                <ul>
+                                    <li>
+                                        Most likely the reason was fed up with the way of living because it's very
+                                        stationary, esp since his clan doesnt partake in the Naadam
+                                    </li>
+                                    <li>
+                                        Already went through his warrior trial and had his own Yol, but it got left
+                                        behind with his clan
+                                        <ul>
+                                            <li>
+                                                Prefers his Yol over horseriding, loves chocobos hell of a lot more than
+                                                horses
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Worked at the Gold Saucer for a time as a host, origin of his bunny outfit</li>
+                                </ul>
+                            </li>
+                            <li>Only child, but basically was seen as an older brother figure in his own clan</li>
+                            <li>
+                                Passionate about hunting, basically a survivalist through and through
+                                <ul>
+                                    <li>
+                                        Omnicrafter is very fitting, though he’d work best with carpenter, weaver,
+                                        culinarian, and leatherworker, and all gathering classes (minus miner, not as
+                                        good there)
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
+                </section>
+
+                <!-- DESIGN ALTERNATIVE LAYOUT WITH IMAGE ------------------------------>
+                <section class="full">
+                    <h1>Design</h1>
+                    <div class="design-image-huge">
+                        <img
+                            src="../Images/OC%20Stuff/Khaliun/design_image.jpg"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy" />
+                        <p style="text-align: center">
+                            <i
+                                >Design sheet, needs to be remade for his lancer/canon outfit but this is his magical
+                                DPS fit</i
+                            >
+                        </p>
+                    </div>
+                    <hr />
+
+                    <div class="design-row">
+                        <div class="design-info">
+                            <!-- DETAILS -->
+                            <div class="stat-holder" style="margin-top: 10px">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-ruler" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">height</div>
+                                    <div>217 cm / 7’1”</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">body type</div>
+                                    <div>inverted triangle, lean</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">eyes</div>
+                                    <div>teal, with white limbal ring</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">hair length + colour</div>
+                                    <div>off-white, ear length outside of a strand</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-question" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">extras</div>
+                                    <div>scar from getting gored in the stomach</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="design-info" style="margin-top: 10px">
+                            <h2><i class="fa-solid fa-palette" aria-hidden="true"></i> Design Notes</h2>
+                            <ul>
+                                <li style="margin-top: 5px">
+                                    I'll eventually put up his outfits ... he has one for each 'class' of jobs (physical
+                                    DPS, healer, etc.)
+                                </li>
+                                <li>I imagine his tail longer and thicker than the base model</li>
+                                <li>
+                                    Scaled forearms with clawed hands, patches of scales across his skin, his feet are
+                                    more reptilian shaped, akin to the
+                                    <a
+                                        href="https://www.reddit.com/r/ffxiv/comments/yopdqs/au_ra_early_concept_arts_demonic_and_draconic/"
+                                        >early Au Ra concept art</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pal-column-alt">
+                            <div style="background: #be7b62" class="pal" data-tippy-content="#BE7B62 / skin"></div>
+                            <div style="background: #35755b" class="pal" data-tippy-content="#35755B / eyes"></div>
+                            <div style="background: #d5d7ca" class="pal" data-tippy-content="#D5D7CA / hair"></div>
+                            <div style="background: #2f2a27" class="pal" data-tippy-content="#2F2A27 / scales"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- RIBBON COLLECTION ------------------------------>
+                <section class="full">
+                    <h2><i class="fa-solid fa-award" aria-hidden="true"></i> Ribbons and Badges</h2>
+
+                    <div class="badgeholder">
+                        <img
+                            src="../Images/Ribbons/male.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Male: This character is male." />
+                        <img
+                            src="../Images/Ribbons/he-him.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="He/Him: This character uses he/him/himself pronouns." />
+                        <img
+                            src="../Images/Ribbons/unlabeled.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Unlabeled: This character is unlabeled." />
+                        <img
+                            src="../Images/Ribbons/ffxiv.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="A Realm Reborn: This character is a Final Fantasy XIV fancharacter." />
+                    </div>
+                </section>
+
+                <!-- PHOTO GALLERY ------------------------------>
+                <section class="full">
+                    <!-- CHANGE THIS LINK TO TH GALLERY -->
+                    <a href="https://toyhou.se/26799185.khaliun-khatayin/gallery" class="viewmore">View More</a>
+                    <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Image Gallery</h2>
+
+                    <div class="image-gallery">
+                        <!-- IMAGE -->
+                        <div>
+                            <a
+                                href="../Images/OC%20Stuff/Khaliun/gallery_full_1.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../Images/OC%20Stuff/Khaliun/gallery_thumb_1.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by PhoenixBlessed">
+                            <a
+                                href="../Images/OC%20Stuff/Khaliun/gallery_full_2.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../Images/OC%20Stuff/Khaliun/gallery_thumb_2.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div>
+                            <a
+                                href="../Images/OC%20Stuff/Khaliun/gallery_full_3.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../Images/OC%20Stuff/Khaliun/gallery_thumb_3.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by PhoenixBlessed">
+                            <a
+                                href="../Images/OC%20Stuff/Khaliun/gallery_full_4.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../Images/OC%20Stuff/Khaliun/gallery_thumb_4.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by me">
+                            <a
+                                href="../Images/OC%20Stuff/Khaliun/gallery_full_5.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../Images/OC%20Stuff/Khaliun/gallery_thumb_5.jpg" alt=""
+                            /></a>
+                        </div>
+                    </div>
+                </section>
+
+                <footer id="main-footer">
+                    <p>
+                        Coded by <a href="https://zhongvie.neocities.org/">Aid</a>, inspired from
+                        <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's layout</a>, using kalechip's
+                        <a href="https://kalechips.net/projects/layouts/">template</a>.
+                    </p>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+        <!-- Dark Mode Toggle -->
+        <script src="../Scripts/Accessible/dark-mode-alt.js"></script>
+
+        <!-- Font Toggle -->
+        <script src="../Scripts/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
+        <script src="../Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+        <!-- Accordion Dropdown -->
+        <script src="../Scripts/accordion.js"></script>
+    </body>
+</html>
