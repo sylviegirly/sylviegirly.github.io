@@ -23,7 +23,8 @@
 /* --- */
 
 body {
-    background-color: none;
+    width: 100%;
+    background-color: transparent;
     color: var(--text);
     font-size: 1em;
 }
