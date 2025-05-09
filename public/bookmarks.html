@@ -47,6 +47,81 @@
         <link rel="stylesheet" href="CSS/normalize.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
+        <style>
+            .table {
+                margin: 0 0 40px 0;
+                width: 100%;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+                display: table;
+                table-layout: auto;
+                @media screen and (max-width: 800px) {
+                    display: block;
+                }
+            }
+
+            .row {
+                display: table-row;
+                background: var(--body-deco);
+
+                &:nth-of-type(odd) {
+                    background: rgba(131, 169, 94, 0.1);
+                }
+
+                &.header {
+                    font-weight: 900;
+                    color: var(--font-on-accent);
+                    background: var(--primary-accent);
+                    letter-spacing: 1px;
+                }
+
+                @media screen and (max-width: 800px) {
+                    &.header {
+                        padding: 0;
+                        height: 6px;
+
+                        .cell {
+                            display: none;
+                        }
+                    }
+
+                    .cell {
+                        margin-bottom: 0.5em;
+
+                        &:before {
+                            margin-top: 1em;
+                            margin-bottom: 0.5em;
+                            content: attr(data-title);
+                            min-width: 98px;
+                            font-size: 0.7em;
+                            line-height: 1em;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            color: var(--primary-accent);
+                            display: block;
+                        }
+                    }
+                }
+
+                .cell {
+                    padding: 6px 12px;
+                    display: table-cell;
+                    @media screen and (max-width: 800px) {
+                        padding: 2px 16px;
+                        display: block;
+                    }
+                }
+
+                .site {
+                    width: 160px;
+                }
+            }
+
+            .tags {
+                opacity: 0.7;
+                font-size: 0.75em;
+            }
+        </style>
+
         <!-- JavaScript: -->
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
@@ -90,14 +165,91 @@
             <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
             <!-- =============================================== -->
             <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- INTRO CONTENT. -->
+            <!-- =============================================== -->
             <main id="content">
+                <article>
+                    <!-- HEADER -->
+                    <h1>
+                        <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" />
+                        Bookmarks
+                    </h1>
+                    <p>
+                        A collection of various links I've saved over the years that ranges across a
+                        <u>large variety</u> of things, from programs, coding resources, art resources, to fun sites,
+                        and so on. Anything with a star (⭐) is something I use often, or high recommend for people.
+                        I'll try not to include things I see pretty often like w3schools (though please please, if you
+                        do make your own website, it's so good for information).
+                    </p>
+                    <p>
+                        I'll try not to include things I see pretty often like w3schools (though please please, if you
+                        do make your own website, it's so good for information). Each thing will have a <u>#tag</u> if
+                        you need to ctrl + F to find it.
+                    </p>
+                    <h2>Table of Contents</h2>
+                    <div class="interest-content">
+                        <ul>
+                            <li><a href="#websites">Website Resources</a></li>
+                            <li><a href="#">Firefox Extensions</a></li>
+                            <li><a href="#">Programs and Tools</a></li>
+                            <li><a href="#">Art Resources</a></li>
+                            <li><a href="#">Game Resources</a></li>
+                            <li><a href="#">Fun Things</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <!-- HEADER -->
+                    <h1 id="websites">
+                        <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" />
+                        Website Resources
+                    </h1>
+                    <p>
+                        Centric on resources for making your own website, either in the form of templates, sites to
+                        check things, webrings/cool things, or just other resource hubs.
+                    </p>
+                    <div class="table">
+                        <div class="row header">
+                            <div class="cell">Website</div>
+                            <div class="cell">Description</div>
+                        </div>
+
+                        <!-- WEBSITE -->
+                        <div class="row">
+                            <div class="cell site" data-title="Website">
+                                <a href="https://brisray.com/web/webring-list.htm">A Webring List</a>
+                            </div>
+                            <div class="cell" data-title="Description">
+                                A list of various webrings to join if you're not sure where to start with them<br /><span
+                                    class="tags"
+                                    >#webrings</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- WEBSITE -->
+                        <div class="row">
+                            <div class="cell site" data-title="Website">
+                                <a href="https://www.realtimecolors.com">Realtime Colors</a>
+                            </div>
+                            <div class="cell" data-title="Description">
+                                This is more if your website has a few colours (like my own), real-time testing of
+                                primary, secondary, and complimentary colours on a site<br /><span class="tags"
+                                    >#tools #colors</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </article>
                 <article>
                     <div class="center-img">
                         <img src="Images/Misc/wipatrick.png" alt="" aria-hidden="true" />
                     </div>
                     <p>
-                        <b>Work in progress</b>, I'll eventually work out what links I wanna add here and what layout I
-                        wanna do ... too many things I've got saved over time.
+                        <b>Work in progress</b>, I'll eventually work out what links I wanna add here ... too many
+                        things I've got saved over time.
                     </p>
                 </article>
             </main>
