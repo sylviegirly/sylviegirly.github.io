@@ -80,7 +80,7 @@ const content = `
             <a id="link-6-0-0" href="#">Others</a>
             <ul id="menu-6">
                 <li id="item-6-1-0"><a id="link-6-1-0" href="https://asuraid.atabook.org/">Guestbook</a></li>
-                <li id="item-6-2-0"><a id="link-6-2-0" href="/bookmarks.html" class="disabled">Bookmarks</a></li>
+                <li id="item-6-2-0"><a id="link-6-2-0" href="/bookmarks.html">Bookmarks</a></li>
                 <li id="item-6-3-0"><a id="link-6-3-0" href="/sitemap.html">Sitemap</a></li>
                 <li id="item-6-4-0"><a id="link-6-4-0" href="/credits.html">Credits</a></li>
             </ul>
