@@ -1,0 +1,42 @@
+* {
+    background-color: inherit;
+    color: inherit;
+}
+
+body {
+    background-color: none;
+    color: #7c8070;
+}
+
+.feed-container {
+    font-size: 0.75em;
+    font-family: "freepixel", "Arial";
+    letter-spacing: normal;
+    overflow-y: scroll;
+}
+
+.feed-container a {
+    color: #72833d;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.feed-container a:hover {
+    color: #fff;
+}
+
+.feed-container .item {
+    border-bottom: 1px dotted #72833d;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.feed-container .title {
+    font-size: 0.75rem;
+    margin-bottom: 3px;
+}
+
+.feed-container .pubDt {
+    opacity: 0.8;
+    font-size: 0.8em;
+}
