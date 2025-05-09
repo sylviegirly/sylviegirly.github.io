@@ -9,11 +9,7 @@
 }
 
 :root {
-    --text: #000;
-
-    @media (prefers-color-scheme: dark) {
-        --text: #fff;
-    }
+    --text: #7c8070;
 }
 
 body {
@@ -46,11 +42,12 @@ body {
 }
 
 .feed-container .title {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     margin-bottom: 3px;
 }
 
 .feed-container .pubDt {
-    opacity: 0.8;
+    opacity: 0.7;
+    margin-top: 2px;
     font-size: 0.8em;
 }
