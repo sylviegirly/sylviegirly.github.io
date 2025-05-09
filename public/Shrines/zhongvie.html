@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    --->
     <head>
+        <!-- Dark Mode Toggle -->
         <script>
             if (theme === "dark") {
                 document.documentElement.setAttribute("data-theme", "dark");
@@ -12,11 +27,22 @@
                 document.getElementById("theme-toggle").innerHTML = "🌙";
             }
         </script>
-        <title>zhongvie</title>
+        <!-- Site Title -->
+        <title>zhongvie shrine</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
+        <!-- Site Description -->
+        <meta
+            content="A personal shrine dedicated to a fictional ship between Zhongli of Genshin Impact and an original character."
+            name="description" />
 
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- FavIcon -->
+        <link ref="favicon" href="favicon.ico" />
+
+        <!-- CSS -->
         <link rel="stylesheet" href="../CSS/lightbox.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
@@ -1634,6 +1660,7 @@
             </footer>
         </div>
 
+        <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
         <script>
@@ -1643,6 +1670,8 @@
                 theme: "character"
             });
         </script>
+
+        <!-- Tab Toggler -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const tabs = document.querySelectorAll(".tab");
@@ -1666,6 +1695,8 @@
                 });
             });
         </script>
+
+        <!-- Accessibility Widget -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
 
         <!-- Dark Mode Toggle -->
