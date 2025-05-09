@@ -8,6 +8,20 @@
     color: inherit;
 }
 
+:root {
+    --text: #000;
+
+    @media (prefers-color-scheme: dark) {
+        --text: #fff;
+    }
+}
+
+body {
+    background-color: none;
+    color: var(--text);
+    font-size: 1em;
+}
+
 body {
     background-color: none;
     color: #7c8070;
