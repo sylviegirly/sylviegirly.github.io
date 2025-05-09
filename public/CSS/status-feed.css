@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "freepixel";
+    src: url(../Fonts/FreePixel.ttf);
+}
+
 * {
     background-color: inherit;
     color: inherit;
