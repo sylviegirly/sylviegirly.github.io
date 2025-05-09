@@ -12,6 +12,16 @@
     --text: #7c8070;
 }
 
+/* -------------------------------------------------------- */
+/* SCROLLBAR STYLING */
+/* -------------------------------------------------------- */
+
+::selection {
+    color: #fff;
+    background: #788b68;
+}
+/* --- */
+
 body {
     background-color: none;
     color: var(--text);
