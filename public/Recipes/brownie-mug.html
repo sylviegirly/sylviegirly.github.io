@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    --->
+    <head>
+        <!-- Dark Mode Toggler -->
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "☀️";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "🌙";
+            }
+        </script>
+        <!-- Site Title -->
+        <title>brownie in a mug</title>
+
+        <!-- Site Description -->
+        <meta content="Brownie in a mug recipe." name="description" />
+
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- FavIcon -->
+        <link ref="favicon" href="../favicon.ico" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" href="../styles-alt.css" />
+        <link rel="stylesheet" href="../CSS/normalize.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JavaScript: -->
+        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
+        if this HTML file is in 2 subfolders, etc. -->
+        <script src="../Scripts/sparkle_cursor.js"></script>
+        <script src="../Scripts/header.js" defer></script>
+        <script src="../Scripts/footer.js" defer></script>
+        <script src="../Scripts/tab-title-suffix.js"></script>
+
+        <script src="../Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <!-- Disclosure Menu -->
+        <script src="../Scripts/Accessible/accessible-menu.js" type="module"></script>
+    </head>
+    <body id="body">
+        <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
+        <!-- =============================================== -->
+        <div class="button-wrapper">
+            <div class="button" id="font-toggle">
+                <button class="general" type="button" id="toggle-font">toggle font</button>
+            </div>
+
+            <div class="button">
+                <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div class="container-grid">
+            <!-- =============================================== -->
+            <!-- LEFT SIDEBAR CONTENT -->
+            <!-- =============================================== -->
+            <div class="intro">
+                <section>
+                    <div class="img-floatinganim">
+                        <img class="dendro" src="../Images/dendro_symbol.png" aria-hidden="true" alt="" />
+                    </div>
+                    <img
+                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/92262681_WBR555I9TFO2wdE.png"
+                        class="full-width-image" />
+                    <div class="subtitle">
+                        <img src="Images/General%20Decorations/plant_bopping.gif" aria-hidden="true" alt="" />
+                        Welcome!!
+                        <img src="Images/General%20Decorations/plant_bopping.gif" aria-hidden="true" alt="" />
+                    </div>
+                    <div>
+                        <p style="text-align: center">
+                            <b>aid</b>
+                            <img
+                                style="padding-left: 5px; padding-right: 5px"
+                                src="https://files.catbox.moe/46vbi9.gif"
+                                aria-hidden="true"
+                                alt="" />
+                            <b>25+</b>
+                            <img
+                                style="padding-left: 5px; padding-right: 5px"
+                                src="https://files.catbox.moe/46vbi9.gif"
+                                aria-hidden="true"
+                                alt="" />
+                            <b>she/her</b>
+                        </p>
+                        <hr />
+                        <p>
+                            I hope you enjoy this recipe! My random image scroll doesn't work here so have a little
+                            custom side bar for just my recipes. 🫡
+                        </p>
+                        <hr />
+                        <div class="cool-buttons">
+                            <a
+                                href="https://www.tumblr.com/lavendergalactic"
+                                title="gifs by lavendergalactic as a commission for me. please don't use.">
+                                <img
+                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/bites%20you%20shiny%20button.gif"
+                                    aria-hidden="true"
+                                    alt="" />
+                                <img
+                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/silly%20shiny%20button.gif"
+                                    aria-hidden="true"
+                                    alt="" />
+                                <img
+                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/zhongvie%20shiny%20button.gif"
+                                    aria-hidden="true"
+                                    alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- =============================================== -->
+            <!-- RECIPE CONTENT HERE -->
+            <!-- =============================================== -->
+            <main id="content">
+                <article>
+                    <h1>
+                        <img src="../Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" />
+                        Brownie in a Mug
+                    </h1>
+                    <a href="../recipes.html" style="margin-top: -5px; font-style: italic">← return to recipe list</a>
+                    <div
+                        style="
+                            margin-top: 5px;
+                            display: flex;
+                            border-radius: 10px;
+                            width: 100%;
+                            max-height: 300px;
+                            overflow: hidden;
+                            justify-content: center; /* align horizontal */
+                            align-items: center; /* align vertical */
+                        ">
+                        <img
+                            style="
+                                align-self: flex-start;
+                                object-fit: cover;
+                                min-width: 100%;
+                                height: auto;
+                                margin-top: -25%;
+                            "
+                            src="https://celebratingsweets.com/wp-content/uploads/2018/07/Brownie-in-a-Mug-2.jpg"
+                            alt=""
+                            aria-hidden="true" />
+                    </div>
+                    <div style="display: flex; gap: 20px; margin-top: 10px">
+                        <div
+                            style="
+                                flex: 30%;
+                                background-color: var(--body-deco);
+                                padding: 0 10px;
+                                border-radius: var(--border-radius);
+                            ">
+                            <h2>Ingredients</h2>
+                            <p>
+                                cocoa powder, sugar, flour, salt, oil or butter, milk, vanilla extract, chocolate chips
+                            </p>
+                            <p>
+                                <b>Source</b><br /><a href="https://celebratingsweets.com/brownie-in-a-mug/"
+                                    >celebratingsweets.com</a
+                                >
+                            </p>
+                        </div>
+                        <div style="flex: 70%">
+                            <h2>Introduction</h2>
+                            <p>
+                                A very simple and easy to do brownie in a mug recipe, and you can add whatever toppings
+                                you'd like to it!
+                            </p>
+                            <ul>
+                                <li><b>Prep Time:</b> 2 min prep + 1 min cooking</li>
+                                <li><b>Servings:</b> 1-2 servings</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h1>Ingredients</h1>
+                    <ul>
+                        <li>3 tablespoons granulated sugar</li>
+                        <li>3 tablespoons all-purpose flour</li>
+                        <li>1 1/2 tablespoons unsweetened cocoa powder</li>
+                        <li>pinch of salt</li>
+                        <li>2 tablespoons chocolate chips, plus more for topping</li>
+                        <li>1 1/2 tablespoons vegetable oil, melted coconut oil, or melted butter</li>
+                        <li>3 tablespoons milk</li>
+                        <li>1/4 teaspoon vanilla extract</li>
+                        <li>ice cream, whipped cream, powdered sugar, berries, optional toppings</li>
+                    </ul>
+                </article>
+                <article>
+                    <h1>Cooking Instructions</h1>
+                    <ol>
+                        <li>
+                            Place sugar, flour, cocoa powder and salt in a mug. Use a small whisk or fork, and stir
+                            until combined, and free of lumps. Stir in chocolate chips. Add oil, milk, and vanilla, stir
+                            with a spoon or small rubber spatula until just combined (try not to over mix it).
+                        </li>
+                        <li>
+                            Sprinkle a few additional chocolate chips over the top and cook in the microwave for 60
+                            seconds. Check to see if it is done (no raw batter, fudgy chocolate chips are ok). If
+                            necessary, continue cooking in 10 second increments. Time will vary a bit based on the
+                            microwave and the size of mug. Eat immediately with ice cream, whipped cream, powdered
+                            sugar, or berries.
+                        </li>
+                    </ol>
+                    <h2>Notes</h2>
+                    <p>
+                        You can use a 12 oz or 16 oz mug for this, and honestly it makes enough that two people can eat
+                        out of it ... but why would you share your brownie? <i>/silly</i>
+                    </p>
+                </article>
+            </main>
+        </div>
+        <!-- =============================================== -->
+        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
+        <!-- =============================================== -->
+        <general-footer></general-footer>
+
+        <!-- Dark Mode Toggle -->
+        <script src="../Scripts/Accessible/dark-mode-alt.js"></script>
+
+        <!-- Font Toggle -->
+        <script src="../Scripts/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
+        <script src="../Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    </body>
+</html>
