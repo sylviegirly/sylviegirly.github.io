@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-    <atom:link href="https://zhongvie.neocities.org/RSS.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://zhongvie.neocities.org/rss.xml" rel="self" type="application/rss+xml" />
     <title>Aid's Little Site Updates</title>
     <description>A simple feed mostly centric around site updates with new content or fixes</description>
     <link>https://zhongvie.neocities.org/</link>
+    <language>en-us</language>
     <lastBuildDate>Tue, 13 May 2025 20:29:56 -0400</lastBuildDate>
     <ttl>60</ttl>
 
     <item>
         <title>RSS Feed Now Exists!</title>
         <description>
-        New RSS feed has been made, it just now needs to be added to my site.
+        New RSS feed has been made, and has been added to the site!! It'll mostly house my site updates and new page infos
         </description>
         <link>https://zhongvie.neocities.org/</link>
         <guid>https://zhongvie.neocities.org/xml/item1747182596</guid>
