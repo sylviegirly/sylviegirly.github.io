@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
+    <atom:link href="https://zhongvie.neocities.org/RSS.xml" rel="self" type="application/rss+xml" />
     <title>Aid's Little Site Updates</title>
     <description>A simple feed mostly centric around site updates with new content or fixes</description>
     <link>https://zhongvie.neocities.org/</link>
