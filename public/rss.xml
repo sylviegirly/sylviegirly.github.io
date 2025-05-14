@@ -7,8 +7,18 @@
     <link>https://zhongvie.neocities.org/</link>
     <language>en-ca</language>
     <webMaster>sylviegirly@pm.me</webMaster>
-    <lastBuildDate>Tue, 13 May 2025 20:29:56 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 14 May 2025 18:47:11 -0400</lastBuildDate>
     <ttl>60</ttl>
+
+    <item>
+        <title>Program/Tools Bookmarks</title>
+        <description>
+        Began work on the program list on my bookmarks, though I know I'm still missing quite a few
+        </description>
+        <link>https://zhongvie.neocities.org/bookmarks</link>
+        <guid>https://zhongvie.neocities.org/xml/item1747262831</guid>
+        <pubDate>Wed, 14 May 2025 18:47:11 -0400</pubDate>
+    </item>
 
     <item>
         <title>RSS Feed Now Exists!</title>
