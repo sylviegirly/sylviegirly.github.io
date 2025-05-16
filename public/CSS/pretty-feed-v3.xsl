@@ -5451,7 +5451,7 @@ This file is in BETA. Please test and contribute to the discussion:
                 the URL from the address bar into your newsreader, or by grabbing the address from here!<br />
                 <code>https://zhongvie.neocities.org/rss.xml</code>
               </p>
-              <p class="text-gray">
+              <p class="text-gray-light">
                 Visit <a href="https://aboutfeeds.com">About Feeds</a> to get started with newsreaders and subscribing.
                 It’s free.
               </p>
@@ -5475,7 +5475,7 @@ This file is in BETA. Please test and contribute to the discussion:
                 </a>
               </h3>
               <p><xsl:value-of select="description" /></p>
-              <small class="text-light-gray"> <b>Published:</b> <xsl:value-of select="pubDate" /> </small>
+              <small class="text-gray-light"> <b>Published:&nbsp;</b> <xsl:value-of select="pubDate" /> </small>
             </div>
             <hr />
           </xsl:for-each>
