@@ -305,7 +305,7 @@ This file is in BETA. Please test and contribute to the discussion:
             overflow: hidden;
             background: 0 0;
             border: 0;
-            border-bottom: 1px solid #dfe2e5;
+            border-bottom: 1px solid #788b68;
           }
           .rule::before,
           hr::before {
@@ -4857,10 +4857,11 @@ This file is in BETA. Please test and contribute to the discussion:
             margin-bottom: 16px;
           }
           .markdown-body hr {
-            height: 1px;
-            border-top: 1px dashed #788b68;
+            height: 0.25em;
             padding: 0;
             margin: 24px 0;
+            background-color: #1b1a1a;
+            border: 0;
           }
           .markdown-body blockquote {
             padding: 0 1em;
