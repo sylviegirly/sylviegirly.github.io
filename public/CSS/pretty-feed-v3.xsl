@@ -5447,7 +5447,8 @@ This file is in BETA. Please test and contribute to the discussion:
             <nav class="container-md px-3 py-2 mt-2 mt-md-5 mb-5 markdown-body">
               <p class="bg-green-dark ml-n1 px-3 py-3 mb-1 rounded-2">
                 <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying
-                the URL from the address bar into your newsreader.
+                the URL from the address bar into your newsreader, or by grabbing the address from here!
+                <code>https://zhongvie.neocities.org/rss.xml</code>
               </p>
               <p class="text-gray">
                 Visit <a href="https://aboutfeeds.com">About Feeds</a> to get started with newsreaders and subscribing.
