@@ -4857,11 +4857,10 @@ This file is in BETA. Please test and contribute to the discussion:
             margin-bottom: 16px;
           }
           .markdown-body hr {
-            height: 0.25em;
+            height: 1px;
+            border-top: 1px dashed #788b68;
             padding: 0;
             margin: 24px 0;
-            background-color: #e1e4e8;
-            border: 0;
           }
           .markdown-body blockquote {
             padding: 0 1em;
@@ -5472,7 +5471,7 @@ This file is in BETA. Please test and contribute to the discussion:
                   <xsl:value-of select="title" />
                 </a>
               </h3>
-              <xsl:value-of select="description" />
+              <p><xsl:value-of select="description" /></p>
               <small class="text-light-gray"> <b>Published:</b> <xsl:value-of select="pubDate" /> </small>
             </div>
             <hr />
