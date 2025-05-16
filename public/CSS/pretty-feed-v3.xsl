@@ -4862,7 +4862,7 @@ This file is in BETA. Please test and contribute to the discussion:
             margin: 24px 0;
             background-color: #1b1a1a;
             border: 0;
-            border-bottom: 1px solid #788b68;
+            border-bottom: 1px dotted #788b68;
           }
           .markdown-body blockquote {
             padding: 0 1em;
@@ -5493,10 +5493,6 @@ This file is in BETA. Please test and contribute to the discussion:
       <xsl:call-template name="copy-xml-attributes" />
     </xsl:if>
     <xsl:choose>
-      <xsl:when test="@type='xhtml'">
-        <!-- TODO: test this actually works -->
-        <xsl:copy-of select="child::div/*" />
-      </xsl:when>
       <xsl:when test="@type='html'">
         <!-- Might be nice to use disable-output-escaping="yes", which could obviate the DOMContentLoaded JavaScript, but itâ€™s not universally supported, and Iâ€™m not going to try to conditional it because thatâ€™d be awful messy, if possible at all. -->
         <div><xsl:value-of select="." /></div>
