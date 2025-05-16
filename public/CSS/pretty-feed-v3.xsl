@@ -5474,7 +5474,9 @@ This file is in BETA. Please test and contribute to the discussion:
                   <xsl:value-of select="atom:title" />
                 </a>
               </h3>
-              <xsl:value-of select="atom:content" />
+              <xsl:if test="atom:content">
+                <xsl:apply-templates select="atom:content" />
+              </xsl:if>
               <small class="text-gray-light">
                 <b>Published: </b> <xsl:value-of select="substring(atom:updated, 0, 11)" />
               </small>
