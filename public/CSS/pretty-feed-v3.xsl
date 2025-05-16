@@ -1084,6 +1084,9 @@ This file is in BETA. Please test and contribute to the discussion:
             background-repeat: no-repeat !important;
             background-size: 100% 200px !important;
           }
+          .bg-black {
+            background-color: #262525 !important;
+          }
           .text-blue {
             color: #0366d6 !important;
           }
@@ -5404,7 +5407,7 @@ This file is in BETA. Please test and contribute to the discussion:
           }
         </style>
       </head>
-      <body class="bg-white">
+      <body class="bg-black">
         <nav class="container-md px-3 py-2 mt-2 mt-md-5 mb-5 markdown-body">
           <p class="bg-yellow-light ml-n1 px-1 py-1 mb-1">
             <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the
@@ -5440,9 +5443,9 @@ This file is in BETA. Please test and contribute to the discussion:
                 <rect width="256" height="256" rx="55" ry="55" x="0" y="0" fill="#CC5D15" />
                 <rect width="246" height="246" rx="50" ry="50" x="5" y="5" fill="#F49C52" />
                 <rect width="236" height="236" rx="47" ry="47" x="10" y="10" fill="url(#RSSg)" />
-                <circle cx="68" cy="189" r="24" fill="#262525" />
-                <path d="M160 213h-34a82 82 0 0 0 -82 -82v-34a116 116 0 0 1 116 116z" fill="#262525" />
-                <path d="M184 213A140 140 0 0 0 44 73 V 38a175 175 0 0 1 175 175z" fill="#262525" />
+                <circle cx="68" cy="189" r="24" fill="#fff" />
+                <path d="M160 213h-34a82 82 0 0 0 -82 -82v-34a116 116 0 0 1 116 116z" fill="#fff" />
+                <path d="M184 213A140 140 0 0 0 44 73 V 38a175 175 0 0 1 175 175z" fill="#fff" />
               </svg>
 
               Web Feed Preview
