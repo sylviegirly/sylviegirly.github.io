@@ -5464,7 +5464,6 @@ This file is in BETA. Please test and contribute to the discussion:
           <h2>Recent Items</h2>
           <xsl:for-each select="/rss/channel/item">
             <div class="pb-5">
-              <small class="text-light-gray"> <b>Published:</b> <xsl:value-of select="pubDate" /> </small>
               <h3 class="mb-0">
                 <a target="_blank">
                   <xsl:attribute name="href">
@@ -5474,7 +5473,9 @@ This file is in BETA. Please test and contribute to the discussion:
                 </a>
               </h3>
               <xsl:value-of select="description" />
+              <small class="text-light-gray"> <b>Published:</b> <xsl:value-of select="pubDate" /> </small>
             </div>
+            <hr />
           </xsl:for-each>
         </div>
       </body>
