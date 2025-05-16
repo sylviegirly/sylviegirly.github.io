@@ -5474,7 +5474,7 @@ This file is in BETA. Please test and contribute to the discussion:
                   <xsl:value-of select="title" />
                 </a>
               </h3>
-              <xsl:text disable-output-escaping="yes"><xsl:value-of select="description" /></xsl:text>
+              <xsl:text><xsl:value-of select="description" /></xsl:text>
               <small class="text-gray-light"> <b>Published: </b> <xsl:value-of select="pubDate" /> </small>
             </div>
             <hr />
