@@ -5119,7 +5119,7 @@ This file is in BETA. Please test and contribute to the discussion:
             padding: 0.2em 0.4em;
             margin: 0;
             font-size: 85%;
-            background-color: rgba(27, 31, 35, 0.05);
+            background-color: rgba(33, 35, 27, 0.2);
             border-radius: 3px;
           }
           .markdown-body code br,
@@ -5448,7 +5448,7 @@ This file is in BETA. Please test and contribute to the discussion:
             <nav class="container-md px-3 py-2 mt-2 mt-md-5 mb-5 markdown-body">
               <p class="bg-green-dark ml-n1 px-3 py-3 mb-1 rounded-2">
                 <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying
-                the URL from the address bar into your newsreader, or by grabbing the address from here!
+                the URL from the address bar into your newsreader, or by grabbing the address from here!<br />
                 <code>https://zhongvie.neocities.org/rss.xml</code>
               </p>
               <p class="text-gray">
