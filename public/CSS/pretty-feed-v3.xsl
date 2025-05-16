@@ -1055,6 +1055,9 @@ This file is in BETA. Please test and contribute to the discussion:
           .bg-gray-light {
             background-color: #fafbfc !important;
           }
+          .bg-green-dark {
+            background-color: #525c3b !important;
+          }
           .bg-green {
             background-color: #28a745 !important;
           }
@@ -5409,7 +5412,7 @@ This file is in BETA. Please test and contribute to the discussion:
       </head>
       <body class="bg-black">
         <nav class="container-md px-3 py-2 mt-2 mt-md-5 mb-5 markdown-body">
-          <p class="bg-yellow-light ml-n1 px-1 py-1 mb-1">
+          <p class="bg-green-dark ml-n1 px-1 py-1 mb-1 rounded-2">
             <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the
             URL from the address bar into your newsreader.
           </p>
