@@ -5475,7 +5475,7 @@ This file is in BETA. Please test and contribute to the discussion:
                 </a>
               </h3>
               <p><xsl:value-of select="description" /></p>
-              <small class="text-gray-light"> <b>Published:&nbsp;</b> <xsl:value-of select="pubDate" /> </small>
+              <small class="text-gray-light"> <b>Published: </b> <xsl:value-of select="pubDate" /> </small>
             </div>
             <hr />
           </xsl:for-each>
