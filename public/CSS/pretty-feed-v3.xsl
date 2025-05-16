@@ -5440,9 +5440,9 @@ This file is in BETA. Please test and contribute to the discussion:
                 <rect width="256" height="256" rx="55" ry="55" x="0" y="0" fill="#CC5D15" />
                 <rect width="246" height="246" rx="50" ry="50" x="5" y="5" fill="#F49C52" />
                 <rect width="236" height="236" rx="47" ry="47" x="10" y="10" fill="url(#RSSg)" />
-                <circle cx="68" cy="189" r="24" fill="#FFF" />
-                <path d="M160 213h-34a82 82 0 0 0 -82 -82v-34a116 116 0 0 1 116 116z" fill="#FFF" />
-                <path d="M184 213A140 140 0 0 0 44 73 V 38a175 175 0 0 1 175 175z" fill="#FFF" />
+                <circle cx="68" cy="189" r="24" fill="#262525" />
+                <path d="M160 213h-34a82 82 0 0 0 -82 -82v-34a116 116 0 0 1 116 116z" fill="#262525" />
+                <path d="M184 213A140 140 0 0 0 44 73 V 38a175 175 0 0 1 175 175z" fill="#262525" />
               </svg>
 
               Web Feed Preview
