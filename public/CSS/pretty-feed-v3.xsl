@@ -71,7 +71,7 @@ This file is in BETA. Please test and contribute to the discussion:
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-  <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes" />
+  <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes" doctype-system="about:legacy-compat" />
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
       <head>
@@ -5486,5 +5486,43 @@ This file is in BETA. Please test and contribute to the discussion:
         </div>
       </body>
     </html>
+  </xsl:template>
+  <xsl:template match="atom:content">
+    <xsl:param name="copy-xml-attributes" select="true" />
+    <xsl:if test="$copy-xml-attributes">
+      <xsl:call-template name="copy-xml-attributes" />
+    </xsl:if>
+    <xsl:choose>
+      <xsl:when test="@type='xhtml'">
+        <!-- TODO: test this actually works -->
+        <xsl:copy-of select="child::div/*" />
+      </xsl:when>
+      <xsl:when test="@type='html'">
+        <!-- Might be nice to use disable-output-escaping="yes", which could obviate the DOMContentLoaded JavaScript, but itâ€™s not universally supported, and Iâ€™m not going to try to conditional it because thatâ€™d be awful messy, if possible at all. -->
+        <div><xsl:value-of select="." /></div>
+        <script>
+          (e=&gt;e.outerHTML=e.textContent)(document.currentScript.previousElementSibling),document.currentScript.remove()
+        </script>
+      </xsl:when>
+      <xsl:when test="@type='text' or not(@type)">
+        <xsl:value-of select="." />
+      </xsl:when>
+      <xsl:otherwise>
+        <p>
+          (<code><xsl:value-of select="name()" /></code> is in an unknown format,
+          <code><xsl:value-of select="@type" /></code>.)
+        </p>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  <xsl:template name="copy-xml-attributes">
+    <xsl:for-each select="@xml:lang">
+      <xsl:attribute name="lang">
+        <xsl:value-of select="." />
+      </xsl:attribute>
+    </xsl:for-each>
+    <xsl:for-each select="@xml:base">
+      <xsl:copy />
+    </xsl:for-each>
   </xsl:template>
 </xsl:stylesheet>
