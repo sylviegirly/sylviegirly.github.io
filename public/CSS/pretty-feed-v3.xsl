@@ -305,7 +305,7 @@ This file is in BETA. Please test and contribute to the discussion:
             overflow: hidden;
             background: 0 0;
             border: 0;
-            border-bottom: 1px solid #788b68;
+            border-bottom: 1px dotted #788b68;
           }
           .rule::before,
           hr::before {
