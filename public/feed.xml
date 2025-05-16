@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="/CSS/pretty-feed-v3.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-CA">
+    <link href="https://zhongvie.neocities.org/feed.xml" rel="self" type="application/atom+xml" />
+    <title>Aid&#39;s Little Site Updates</title>
+    <subtitle>A simple feed mostly centric around site updates with new content or fixes</subtitle>
+    <id>https://zhongvie.neocities.org/</id>
+    <author>
+        <name>Aid</name>
+        <url>https://zhongvie.neocities.org/</url>
+    </author>
+    <updated>2025-05-16T00:31:00-04:00</updated>
+
+    <entry>
+        <title>On Being a Non-Sharing Yume</title>
+        <link href="https://zhongvie.neocities.org/blogging" />
+        <updated>2025-05-16T00:31:00-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1747369892</id>
+        <content type="html">
+            &lt;p&gt;Mostly a &lt;strong&gt;thought dump blog&lt;&#x2F;strong&gt; about how some people feel hostile
+            towards non-sharing yumes&lt;/p&gt;
+        </content>
+    </entry>
+
+    <entry>
+        <title>Airfrier Pork Tenderloin</title>
+        <link href="https://zhongvie.neocities.org/Recipes/airfry-pork-tenderloin" />
+        <updated>2025-05-15T18:09:00-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1747350596</id>
+        <content type="html"> &lt;p&gt;New recipe for pork tenderloin!!&lt;/p&gt; </content>
+    </entry>
+
+    <entry>
+        <title>Program/Tools Bookmarks</title>
+        <link href="https://zhongvie.neocities.org/bookmarks" />
+        <updated>2025-05-14T18:27:00-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1747262831</id>
+        <content type="html">
+            &lt;p&gt;Began work on the program list on my bookmarks, though I know I'm still missing quite a
+            few&lt;/p&gt;
+        </content>
+    </entry>
+
+    <entry>
+        <title>RSS Feed Now Exists!</title>
+        <link href="https://zhongvie.neocities.org/" />
+        <updated>2025-05-13T20:29:00-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1747182596</id>
+        <content type="html">
+            &lt;p&gt;New RSS feed has been made, and has been added to the site!! It'll mostly house my site updates and
+            new page infos&lt;/p&gt;
+        </content>
+    </entry>
+</feed>
