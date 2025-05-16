@@ -288,7 +288,7 @@ This file is in BETA. Please test and contribute to the discussion:
             background-color: #262525;
           }
           a {
-            color: #4fcb39;
+            color: #788b68;
             text-decoration: none;
           }
           a:hover {
@@ -4862,8 +4862,8 @@ This file is in BETA. Please test and contribute to the discussion:
           }
           .markdown-body blockquote {
             padding: 0 1em;
-            color: #6a737d;
-            border-left: 0.25em solid #dfe2e5;
+            color: #272727;
+            border-left: 0.25em solid #788b68;
           }
           .markdown-body blockquote > :first-child {
             margin-top: 0;
@@ -4901,7 +4901,7 @@ This file is in BETA. Please test and contribute to the discussion:
           .markdown-body h4 .octicon-link,
           .markdown-body h5 .octicon-link,
           .markdown-body h6 .octicon-link {
-            color: #1b1f23;
+            color: #c2deb1;
             vertical-align: middle;
             visibility: hidden;
           }
@@ -4938,12 +4938,12 @@ This file is in BETA. Please test and contribute to the discussion:
           .markdown-body h1 {
             padding-bottom: 0.3em;
             font-size: 2em;
-            border-bottom: 1px solid #eaecef;
+            border-bottom: 1px dotted #788b68;
           }
           .markdown-body h2 {
             padding-bottom: 0.3em;
             font-size: 1.5em;
-            border-bottom: 1px solid #eaecef;
+            border-bottom: 1px dotted #788b68;
           }
           .markdown-body h3 {
             font-size: 1.25em;
