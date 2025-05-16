@@ -1085,7 +1085,7 @@ This file is in BETA. Please test and contribute to the discussion:
             background-size: 100% 200px !important;
           }
           .bg-black {
-            background-color: #262525 !important;
+            background-color: #1b1a1a !important;
           }
           .text-blue {
             color: #0366d6 !important;
@@ -1094,10 +1094,10 @@ This file is in BETA. Please test and contribute to the discussion:
             color: #cb2431 !important;
           }
           .text-gray-light {
-            color: #6a737d !important;
+            color: #767d6a !important;
           }
           .text-gray {
-            color: #586069 !important;
+            color: #626958 !important;
           }
           .text-gray-dark {
             color: #24292e !important;
@@ -1127,16 +1127,16 @@ This file is in BETA. Please test and contribute to the discussion:
             color: #dbab09 !important;
           }
           .link-gray {
-            color: #586069 !important;
+            color: #898d76 !important;
           }
           .link-gray:hover {
-            color: #0366d6 !important;
+            color: #788b68 !important;
           }
           .link-gray-dark {
-            color: #24292e !important;
+            color: #2a2e24 !important;
           }
           .link-gray-dark:hover {
-            color: #0366d6 !important;
+            color: #788b68 !important;
           }
           .link-hover-blue:hover {
             color: #0366d6 !important;
@@ -5470,7 +5470,7 @@ This file is in BETA. Please test and contribute to the discussion:
                   <xsl:value-of select="title" />
                 </a>
               </h3>
-              <small class="text-gray"> Published: <xsl:value-of select="pubDate" /> </small>
+              <small class="text-light-gray"> Published: <xsl:value-of select="pubDate" /> </small>
             </div>
           </xsl:for-each>
         </div>
