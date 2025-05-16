@@ -5467,9 +5467,12 @@ This file is in BETA. Please test and contribute to the discussion:
             <div class="pb-5">
               <h3 class="mb-0">
                 <a target="_blank">
-                  <xsl:attribute name="href">
-                    <xsl:value-of select="link" />
-                  </xsl:attribute>
+                  <p>
+                    Link:
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="link" />
+                    </xsl:attribute>
+                  </p>
                   <xsl:value-of select="title" />
                 </a>
               </h3>
