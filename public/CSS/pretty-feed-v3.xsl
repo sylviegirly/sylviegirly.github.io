@@ -120,21 +120,18 @@ This file is in BETA. Please test and contribute to the discussion:
             </a>
           </header>
           <h2>Recent Items</h2>
-          <xsl:for-each select="/rss/channel/item">
-            <div class="pb-5">
-              <h3 class="mb-0">
-                <a target="_blank">
-                  <xsl:attribute name="href">
-                    <xsl:value-of select="link"/>
-                  </xsl:attribute>
-                  <xsl:value-of select="title"/>
-                </a>
-              </h3>
-              <small class="text-gray">
-                Published: <xsl:value-of select="pubDate" />
-              </small>
-            </div>
-          </xsl:for-each>
+          <h1>Recent blog posts</h1>
+      <xsl:for-each select="/atom:feed/atom:entry">
+        <a>
+          <xsl:attribute name="href">
+            <xsl:value-of select="atom:link/@href"/>
+          </xsl:attribute>
+          <xsl:value-of select="atom:title"/>
+        </a>
+        <xsl:value-of select="atom:summary"/>
+        Last updated:
+        <xsl:value-of select="substring(atom:updated, 0, 11)" />
+      </xsl:for-each>
         </div>
       </body>
     </html>
