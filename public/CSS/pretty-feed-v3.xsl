@@ -4862,6 +4862,7 @@ This file is in BETA. Please test and contribute to the discussion:
             margin: 24px 0;
             background-color: #1b1a1a;
             border: 0;
+            border-bottom: 1px solid #788b68;
           }
           .markdown-body blockquote {
             padding: 0 1em;
