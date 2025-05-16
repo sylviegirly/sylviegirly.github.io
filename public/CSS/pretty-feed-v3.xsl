@@ -5466,17 +5466,17 @@ This file is in BETA. Please test and contribute to the discussion:
           <xsl:for-each select="/rss/channel/item">
             <div class="pb-5">
               <h3 class="mb-0">
-                <a target="_blank">
-                  <p>
-                    Link:
-                    <xsl:attribute name="href">
-                      <xsl:value-of select="link" />
-                    </xsl:attribute>
-                  </p>
-                  <xsl:value-of select="title" />
-                </a>
+                <xsl:value-of select="title" />
               </h3>
-              <small class="text-light-gray"> Published: <xsl:value-of select="pubDate" /> </small>
+              <p>
+                Link:
+                <a target="_blank">
+                  <xsl:attribute name="href">
+                    <xsl:value-of select="link" />
+                  </xsl:attribute>
+                </a>
+              </p>
+              <small class="text-light-gray"> <b>Published:</b> <xsl:value-of select="pubDate" /> </small>
             </div>
           </xsl:for-each>
         </div>
