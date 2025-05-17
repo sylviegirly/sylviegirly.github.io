@@ -448,6 +448,44 @@ aside a:hover {
     cursor: not-allowed;
 }
 
+/* WARNING / INFO BANNERS */
+.warningwrapper {
+    width: auto;
+    border-radius: var(--border-radius);
+    padding: 13px;
+}
+
+.danger {
+    background-color: #c7755f;
+    color: black;
+}
+
+.warning {
+    background-color: #eac556;
+    color: black;
+}
+
+.info {
+    background-color: #ecb24e;
+    color: black;
+}
+
+.success {
+    background-color: #d5d88a;
+    color: black;
+}
+
+.success i,
+.success b,
+.info i,
+.info b,
+.warning i,
+.warning b,
+.danger i,
+.danger b {
+    color: black;
+}
+
 /* -------------------------------------------------------- */
 /* SCROLLBAR STYLING */
 /* -------------------------------------------------------- */
