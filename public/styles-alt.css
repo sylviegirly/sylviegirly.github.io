@@ -438,7 +438,7 @@ article a:hover,
 aside a:hover {
     color: var(--link-hover);
     text-decoration-color: var(--link-hover);
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
 }
 
 .intro img a {
