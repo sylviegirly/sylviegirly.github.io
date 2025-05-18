@@ -424,8 +424,9 @@ article a,
 aside a,
 footer a {
     color: var(--link-colour);
-    text-decoration-color: var(--secondary-accent);
-    transition: 0.5s;
+    text-decoration-color: var(--link-colour);
+    transition: 0.2s;
+    text-decoration-thickness: 1px;
 }
 
 article a img {
@@ -437,6 +438,7 @@ article a:hover,
 aside a:hover {
     color: var(--link-hover);
     text-decoration-color: var(--link-hover);
+    text-decoration-thickness: 3px;
 }
 
 .intro img a {
