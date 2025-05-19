@@ -948,6 +948,7 @@ article ul {
 article ul ul {
     border-left: 1px solid rgba(from var(--secondary-accent) r g b / 50%);
     border-radius: 0 0 0 10px;
+    padding-left: 2rem;
 }
 
 article ul ul li::marker {
