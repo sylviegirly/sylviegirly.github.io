@@ -1,0 +1,1115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "Light Mode";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+            }
+        </script>
+        <title>name</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" type="text/css" href="../CSS/character.css" />
+        <link rel="stylesheet" href="../CSS/lightbox.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JS: -->
+        <script src="../Scripts/lightbox-plus-jquery.js"></script>
+        <script src="character-nav.js" defer></script>
+        <!-- Disclosure Menu -->
+        <script src="../Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <script src="../Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <script src="../Scripts/tab-title-suffix.js"></script>
+        <style>
+            html,
+            html[data-theme="light"] {
+                /* Main colors */
+                --background: #9dc3a6; /* Page background */
+                --background-accent: #a9d0af;
+                --color: #171616;
+                --block: #f0f4f3; /* Background color for the grid blocks in the content */
+                --body-deco: #e3efeb;
+
+                --primary-accent: #327950;
+                --secondary-accent: #4ca974;
+                --font-on-accent: #e7f5f0;
+
+                --link: #2db461;
+                --linkhover: #1b5526;
+
+                --letter-glow: rgba(16, 82, 44, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #f0f4f3;
+                --sidebarcolor: #171616;
+                --subtle-line: rgba(17, 59, 37, 0.2);
+            }
+
+            html[data-theme="dark"] {
+                /* Main colors */
+                --background: #181f1d; /* Page background */
+                --background-accent: #2c3330;
+                --color: #e0efea;
+                --block: #222222; /* Background color for the grid blocks in the content */
+                --body-deco: #2b2b2b;
+
+                --primary-accent: #63c39b;
+                --secondary-accent: #a9ffec;
+                --font-on-accent: #000000;
+
+                --link: #5adb87;
+                --linkhover: #d3fff2;
+
+                --letter-glow: rgba(114, 232, 165, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #222222;
+                --sidebarcolor: #f0f0f0;
+                --subtle-line: rgba(255, 255, 255, 0.2);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                html,
+                html[data-theme="dark"] {
+                    /* Main colors */
+                    --background: #1e1e1e; /* Page background */
+                    --background-accent: #292929;
+                    --color: #f0f0f0;
+                    --block: #222222; /* Background color for the grid blocks in the content */
+                    --body-deco: #333333;
+
+                    --primary-accent: #a7a7a7;
+                    --secondary-accent: #858585;
+                    --font-on-accent: #000000;
+
+                    --link: #bebebe;
+                    --linkhover: #ffffff;
+
+                    --letter-glow: rgba(255, 255, 255, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #222222;
+                    --sidebarcolor: #f0f0f0;
+                    --subtle-line: rgba(255, 255, 255, 0.2);
+                }
+
+                html[data-theme="light"] {
+                    /* Main colors */
+                    --background: #9dc3a6; /* Page background */
+                    --background-accent: #a9d0af;
+                    --color: #171616;
+                    --block: #f0f4f3; /* Background color for the grid blocks in the content */
+                    --body-deco: #e3efeb;
+
+                    --primary-accent: #327950;
+                    --secondary-accent: #4ca974;
+                    --font-on-accent: #e7f5f0;
+
+                    --link: #2db461;
+                    --linkhover: #1b5526;
+
+                    --letter-glow: rgba(16, 82, 44, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #f0f4f3;
+                    --sidebarcolor: #171616;
+                    --subtle-line: rgba(17, 59, 37, 0.2);
+                }
+            }
+
+            :root {
+                --header-image: url("https://images.pexels.com/photos/3737719/pexels-photo-3737719.jpeg");
+                --focal-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/10526026_ol3pwaNBRFQlyiR.jpg?1712984831");
+                --design-image: url("../Images/OC%20Stuff/Resu/design_image.png");
+                --focal-trivia-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/10525941_gdm9Bnx3b7c5DvD.jpg?1712984974");
+
+                --moodboard-1-image: url("https://images.pexels.com/photos/6214570/pexels-photo-6214570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-2-image: url("https://images.pexels.com/photos/3737713/pexels-photo-3737713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-3-image: url("https://images.pexels.com/photos/3776939/pexels-photo-3776939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-4-image: url("https://images.pexels.com/photos/1453799/pexels-photo-1453799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-5-image: url("https://images.pexels.com/photos/10981947/pexels-photo-10981947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Please don't remove the next 2 lines! -->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
+        <!-- =============================================== -->
+
+        <div class="button-wrapper">
+            <div class="button" id="font-toggle">
+                <button class="general" type="button" id="toggle-font">toggle font</button>
+            </div>
+
+            <div class="button">
+                <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div id="container">
+            <div id="sidebar">
+                <div id="sidebar-content">
+                    <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+                    <div class="icon">
+                        <img
+                            src="../Images/OC%20Stuff/Resu/thumbnail.png"
+                            alt=""
+                            aria-hidden="true"
+                            data-tippy-content="Art by me" />
+                    </div>
+                    <div class="header">Resu Sosora</div>
+
+                    <!-- Quote -->
+                    <div class="quote">Quote will go here</div>
+
+                    <!-- Navigation menu  -->
+                    <div class="" id="main-menu">
+                        <ul>
+                            <li><a href="https://toyhou.se/3043225.resu-sosora">Toyhouse</a></li>
+                            <li><a href="https://yasei-no-umi.tumblr.com/">Old RP Blog</a></li>
+                            <li>
+                                <a href="https://bleachfanfiction.fandom.com/wiki/Resu_Hitsugaya_(future)">OC Wiki</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>
+                        Bleach OC, although retired, she was my gateway into OC/Canon and I adored her dearly for years.
+                    </p>
+                    <hr />
+                    <button class="accordion">Credits</button>
+                    <div class="panel">
+                        <ul>
+                            <li>
+                                Stamps: <a href="https://www.deviantart.com/necro-emporium">necro-emporium</a>,
+                                <a href="https://www.deviantart.com/hematology">hematology</a>,
+                                <a href="https://www.deviantart.com/laraleel">laraleel</a>
+                            </li>
+                            <li>
+                                Flags: <a href="https://toyhou.se/21355465.my-tiny-pride-flags/gallery">l0stlights</a>
+                            </li>
+                            <li>Moodboard + Header: <a href="https://www.pexels.com/">pexels</a></li>
+                            <li>
+                                Ribbons: <a href="https://toyhou.se/15560571.ribbon-repository-updating">repository</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content area -->
+            <main id="content">
+                <!-- Section tags must be used for blocks -->
+
+                <section class="full success">
+                    <i class="fas fa-lightbulb" aria-hidden="true"></i> Resu was made back in ~2010, and the writing for
+                    her personality/backstory reflects that (god knows I'd never use perverted to describe an OC now
+                    LOL).
+                </section>
+
+                <!-- CHARACTER INFORMATION: DESKTOP ------------------------------>
+                <section class="twothird second-order">
+                    <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
+                    <h1>the bright</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div>resu sosora</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>100+</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>cis female</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">role</div>
+                                    <div>division 10, 6th seat</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>chaotic good</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- BIRTHDAY -->
+                                    <div class="stat-name">birthday</div>
+                                    <div>october 8th</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>n/a</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>shinigami</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>she / her</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">mbti</div>
+                                    <div>unknown</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-cloud-moon" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">element</div>
+                                    <div>water</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-gem" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GEMSTONE -->
+                                    <div class="stat-name">gemstone</div>
+                                    <div>green sapphire</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            I'll write a better summary eventually; a shinigami girl with goals to just do her best.
+                            Manga obsessed, and may come off a little lazy no thanks to Rangiku's influence, but she
+                            does her job well when the time comes.
+                        </p>
+                        <p>
+                            She used to be shipped with
+                            <a href="https://bleach.fandom.com/wiki/T%C5%8Dshir%C5%8D_Hitsugaya">Tōshirō Hitsugaya</a>.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
+                <section class="third focal" data-tippy-content="Art by lillybraconnot">
+                    <div class="flags">
+                        <img src="../Images/Flags/cis.png" alt="cis flag" data-tippy-content="Cis Female" />
+                        <img src="../Images/Flags/bisexual.png" alt="cis flag" data-tippy-content="Bisexual" />
+                    </div>
+                </section>
+
+                <!-- CHARACTER INFORMATION: MOBILE ------------------------------>
+                <section class="twothird first-order">
+                    <!-- MOBILE INFORMATION, PLEASE COPY AND PASTE TO DESKTOP -->
+                    <h1>the bright</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div>resu sosora</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>100+</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>cis female</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">role</div>
+                                    <div>division 10, 6th seat</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>chaotic good</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- BIRTHDAY -->
+                                    <div class="stat-name">birthday</div>
+                                    <div>october 8th</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>n/a</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>shinigami</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>she / her</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">mbti</div>
+                                    <div>unknown</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-cloud-moon" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">element</div>
+                                    <div>water</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-gem" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GEMSTONE -->
+                                    <div class="stat-name">gemstone</div>
+                                    <div>green sapphire</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            I'll write a better summary eventually; a shinigami girl with goals to just do her best.
+                            Manga obsessed, and may come off a little lazy no thanks to Rangiku's influence, but she
+                            does her job well when the time comes.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- AESTHETIC STAMPS --------------------------------->
+                <section class="full">
+                    <div class="badgeholder" style="justify-content: space-evenly">
+                        <img src="../Images/OC%20Stuff/Resu/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Resu/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Resu/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Resu/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Resu/stamp_5.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Resu/stamp_6.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Resu/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../Images/OC%20Stuff/Resu/stamp_8.gif" aria-hidden="true" alt="" loading="lazy" />
+                    </div>
+                </section>
+
+                <!-- PERSONALITY SLIDERS ------------------------------>
+                <section class="full">
+                    <h1>Character</h1>
+                    <div class="sliderow">
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>friendly</span>
+                                <span>reserved</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 20%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>polite</span>
+                                <span>blunt</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 35%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>clever</span>
+                                <span>foolish</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 50%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sensitive</span>
+                                <span>tough</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 60%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>confident</span>
+                                <span>diffident</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 30%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>careful</span>
+                                <span>reckless</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 65%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sincere</span>
+                                <span>deceptive</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 20%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>diligent</span>
+                                <span>lazy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 70%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>calm</span>
+                                <span>irritable</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 40%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>hopeful</span>
+                                <span>pessimistic</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 10%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>organized</span>
+                                <span>messy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 60%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>humorous</span>
+                                <span>serious</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 5%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LIKES AND DISLIKES ------------------------------>
+                <!-- LIKES -->
+                <section class="half">
+                    <h2><i class="fa-solid fa-heart" aria-hidden="true"></i> Likes</h2>
+                    <ul>
+                        <li>reading manga</li>
+                        <li>trinket collecting</li>
+                        <li>friendly ribbing</li>
+                        <li>miniature ice sculptures</li>
+                    </ul>
+                </section>
+                <!-- DISLIKES -->
+                <section class="half">
+                    <h2><i class="fa-solid fa-heart-crack" aria-hidden="true"></i> Dislikes</h2>
+                    <ul>
+                        <li>fire (arsonphobia)</li>
+                        <li>people moving her stuff</li>
+                        <li>boring meetings</li>
+                        <li>being treated like a kid</li>
+                    </ul>
+                </section>
+
+                <!-- PERSONALITY ------------------------------>
+                <section class="full">
+                    <h2>Personality</h2>
+                    <p>
+                        Resu was raised by her brother to be respectable to the higher-ups, though she has a tendency to
+                        lose her more respectful tone and put on a more general one if she is close to that person. She
+                        tries to get along with all the people she meets and is quick to develop a friendly and general
+                        tone with people.
+                    </p>
+                    <p>
+                        Resu&rsquo;s mood fluctuates easily depending on the situation she&rsquo;s in, at one moment she
+                        could be joking around with a friend, and then irritated after what she may perceive as an
+                        insult.
+                    </p>
+                    <p>
+                        Resu has a perverted side only seen when around her usual friends and when used to tease her
+                        captain. She&rsquo;s the kind of person who would whisper fantasies into someone&rsquo;s ear, or
+                        crack a perverse joke that would make an adult blush, though when it comes to others acting like
+                        that towards her, she becomes more quiet and embarrassed.
+                    </p>
+                    <p>
+                        Her &lsquo;brother&rsquo; partially developed her perverted personality at a young age, as he
+                        was genuinely openly perverted around most people and Resu generally caught his words and asked
+                        him about them (much to Chikao&rsquo;s embarrassment). This also helped Resu bond to Rangiku,
+                        the two becoming close friends and gossipers.
+                    </p>
+                    <p>
+                        Although she has a carefree personality, Resu is dedicated to her squad and her work and has
+                        been since she joined Squad 10. Her brother also taught her at a young age to be dedicated to
+                        her position and to be of help to her captain. She tries her best to aid Toshiro when she can
+                        with paperwork. She can also lose her carefree attitude when training or in a battle, gaining a
+                        more serious one.
+                    </p>
+                    <p>
+                        Resu is one to trust people with her life, but once her trust is broken, it&rsquo;s hard to gain
+                        it back; it would take months and maybe even years to start regaining her trust. She&rsquo;ll
+                        act cold and distant to people who broke her trust.
+                    </p>
+                </section>
+
+                <!-- STORY DETAILS ------------------------------>
+                <section class="full">
+                    <h1>Story</h1>
+                    <img
+                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/32678718_ST5n7TyeshUXeSJ.png"
+                        style="max-width: 40%; float: right; margin: 5px 30px"
+                        data-tippy-content="Art by me" />
+                    <p>
+                        Resu was born on the outskirts of Karakura town and lived in a small house with her parents. Her
+                        life was one of what you&rsquo;d expect any standard young girl to be in Japan, mostly with her
+                        mother and such on. One night when she was roughly the age of 6, a riot was occurring during the
+                        middle of the night, and in the mindless rage of the villagers, the house Resu and her parents
+                        were in was caught on fire. Resu awoke first and got her parents up as well, and they got on top
+                        of the roof of their house, trapped by the flames. In panic Resu jumped off and slammed to the
+                        ground, breaking her bones. She passed away from internal bleeding and was later found by a
+                        shinigami on duty &ndash; being sent to the Soul Society afterwards.
+                    </p>
+                    <p>
+                        In the Soul Society, Resu grew up in the Junrinan and was raised by an elderly woman that
+                        offered her a job to sell merchandise (mostly food rather) in her store. During this time she
+                        met Momo and they became mutual friends. One day a shinigami stopped by the store, by the name
+                        of Chikao Sosora. The blonde wanted to adopt Resu, and explained to her what shinigami are, but
+                        he would have to sneak her in&hellip; after thinking about it for a while, Resu decided the path
+                        of a shinigami sounds like one she would enjoy, as it comes to protecting souls and actually
+                        being able to do something when the time came.
+                    </p>
+                    <p>
+                        So Resu was raised by Chikao in the thirteenth division, trained by him as well until she could
+                        join the Shino Academy. Resu got in on her first try, but in her last year she failed, having to
+                        do one more year to be able to graduate. During this time Resu got her shikai for her zanpakuto.
+                    </p>
+                    <p>Resu joined the tenth division as the sixth seat and has been there since.</p>
+                </section>
+
+                <!-- MOODBOARD ------------------------------>
+                <section class="full">
+                    <h1>Moodboard</h1>
+                    <div class="moodboard-grid">
+                        <div class="moodboard1"></div>
+                        <div class="moodboard2"></div>
+                        <div class="moodboard3"></div>
+                        <div class="moodboard4"></div>
+                        <div class="moodboard5"></div>
+                    </div>
+                </section>
+
+                <!-- DESIGN ALTERNATIVE LAYOUT WITH IMAGE 2.0 ------------------------------>
+                <section class="half">
+                    <div class="design-info">
+                        <!-- DETAILS -->
+                        <h1>Design Notes</h1>
+                        <div class="stat-holder" style="margin-top: 10px">
+                            <div class="statcon">
+                                <i class="fa-solid fa-ruler" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">height</div>
+                                <div>155 cm (5'1")</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">body type</div>
+                                <div>slim, little to no definition</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">eyes</div>
+                                <div>forest green</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">hair length + colour</div>
+                                <div>brown, straight, mid-back</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-question" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">extras</div>
+                                <div>altered outfit</div>
+                            </div>
+                        </div>
+                        <h2><i class="fa-solid fa-palette" aria-hidden="true"></i> Design Notes</h2>
+                        <ul>
+                            <li style="margin-top: 5px">
+                                Resu’s outfit has also been altered a slight amount. Her shitagi and kosode are more
+                                fitted to her body and the shoulders are also cut and the edges are sown to make it look
+                                natural.
+                            </li>
+                        </ul>
+                        <div class="pal-column-alt" style="flex-direction: row">
+                            <div style="background: #4a2d28" class="pal" data-tippy-content="#4a2d28 / hair"></div>
+                            <div style="background: #000000" class="pal" data-tippy-content="#000000 / outfit"></div>
+                            <div style="background: #fccab5" class="pal" data-tippy-content="#fccab5 / skin"></div>
+                            <div style="background: #00890b" class="pal" data-tippy-content="#00890b / eyes"></div>
+                            <div
+                                style="background: #fbfdfc"
+                                class="pal"
+                                data-tippy-content="#fbfdfc / outfit accents"></div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="half design-image-alt"
+                    data-tippy-content="Art by me, I don't remember the base"></section>
+
+                <!-- TRIVIA + FOCAL IMAGE -->
+                <section class="third triviafocal" data-tippy-content="Art by afunny"></section>
+
+                <section class="twothird">
+                    <h1>Trivia</h1>
+                    <div class="scrollable">
+                        <ul>
+                            <li>
+                                She used to be shipped with Toshiro Hitsugaya, though by the end of it, I dropped that
+                                ship.
+                            </li>
+                            <li>She was more prominent as an OC way back in 2012-2014.</li>
+                            <li>
+                                Sadly, a lot of the old art I had made of her got nuked with my deviantART account I
+                                deactivated, minus stray files in my folders.
+                            </li>
+                            <li>She has a fear of fire (arsonphobia), or more specifically, having fire trap her.</li>
+                            <li>
+                                One of Resu&rsquo;s hobbies is making miniature sculptures out of water, turning them
+                                into ice if she likes them, or animating them (like a small cat that could walk around
+                                on the desk).
+                            </li>
+                            <li>
+                                Resu does have a habit of keeping her manga collection in a specific order, and will
+                                snap at anyone who dares rearrange it, or put a book back in the wrong place.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- RIBBON COLLECTION ------------------------------>
+                <section class="full">
+                    <h2><i class="fa-solid fa-award" aria-hidden="true"></i> Ribbons and Badges</h2>
+
+                    <div class="badgeholder">
+                        <img
+                            src="../Images/Ribbons/cisgender.png"
+                            data-tippy-content="Cisgender: This character is cisgender."
+                            aria-hidden="true"
+                            alt=""
+                            loading="lazy" />
+                        <img
+                            src="../Images/Ribbons/she-her.png"
+                            data-tippy-content="She/Her: This character uses she/her pronouns."
+                            aria-hidden="true"
+                            alt=""
+                            loading="lazy" />
+                        <img
+                            src="../Images/Ribbons/bisexual.png"
+                            data-tippy-content="Bisexual: This character is bisexual."
+                            aria-hidden="true"
+                            alt=""
+                            loading="lazy" />
+                        <img
+                            src="../Images/Ribbons/bleach.png"
+                            data-tippy-content="Number One: This character is a Bleach fancharacter."
+                            aria-hidden="true"
+                            alt=""
+                            loading="lazy" />
+                        <img
+                            src="../Images/Ribbons/water-magic.png"
+                            data-tippy-content="Refreshing: This character uses water-related magic or abilities."
+                            aria-hidden="true"
+                            alt=""
+                            loading="lazy" />
+                        <img
+                            src="../Images/Ribbons/chaotic-good.png"
+                            data-tippy-content="Chaotic Good: This character is of the chaotic good alignment."
+                            aria-hidden="true"
+                            loading="lazy"
+                            alt="" />
+                        <img
+                            src="../Images/Ribbons/writer.png"
+                            data-tippy-content="The Write One: This character is a writer."
+                            aria-hidden="true"
+                            loading="lazy"
+                            alt="" />
+                        <img
+                            src="../Images/Ribbons/october.png"
+                            data-tippy-content="October Child: This character was born in October."
+                            aria-hidden="true"
+                            loading="lazy"
+                            alt="" />
+                        <img
+                            src="../Images/Ribbons/retired.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Retired: This character has been retired." />
+                        <img
+                            src="../Images/Ribbons/angel-wings.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Earned their Angel Wings: This character has a strong bond with you due to them being based off of / helping you with real problems in your life." />
+                        <img
+                            src="../Images/Ribbons/ex-comfort.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Thank You: This character was once a comfort character but isn't anymore." />
+                        <img
+                            src="../Images/Ribbons/roleplay.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Actor: This character was/is used in roleplay." />
+                        <img
+                            src="../Images/Ribbons/tumblr-rp-blog.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="AMA: This character has an Askblog." />
+                        <img
+                            src="../Images/Ribbons/2011.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="2011: This character was made in 2011." />
+                        <img
+                            src="../Images/Ribbons/oldest-ocs.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Time Ribbon: This is one of your oldest characters." />
+                    </div>
+                </section>
+
+                <!-- PHOTO GALLERY ------------------------------>
+                <section class="full">
+                    <!-- CHANGE THIS LINK TO TH GALLERY -->
+                    <a href="https://toyhou.se/3043225.resu-sosora/gallery" class="viewmore">View More</a>
+                    <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Image Gallery</h2>
+
+                    <div class="image-gallery">
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by me">
+                            <a
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/80570743_2uUIDoXlJv7Zz3J.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/80570743_2uU.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by hahalyssa">
+                            <a
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/80571127_BY2cXJNmJdCNASz.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/80571127_BY2.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by kyrukei">
+                            <a
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/10526008_rIHkpq860bWpZ30.jpg?1616000053"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img
+                                    src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/10526008_rIH_3043225.jpg?1616000053"
+                                    alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by me">
+                            <a
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/10527047_rfHnlnPoq44rbKz.jpg?1713551288"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img
+                                    src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/10527047_rfH_3043225.jpg?1713551288"
+                                    alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by ChoiRiRa">
+                            <a
+                                href="https://f2.toyhou.se/file/f2-toyhou-se/images/10526044_rhyObtjqwd3vUBi.png?1712984956"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                data-title="The artist's devART is deactivated, but this was a big group commission of other Bleach OCs"
+                                ><img
+                                    src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/10526044_rhy_3043225.png?1712984956"
+                                    alt=""
+                            /></a>
+                        </div>
+                    </div>
+                </section>
+
+                <footer id="main-footer">
+                    <p>
+                        Coded by <a href="https://zhongvie.neocities.org/">Aid</a>, inspired from
+                        <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's layout</a>, using kalechip's
+                        <a href="https://kalechips.net/projects/layouts/">template</a>.
+                    </p>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+        <!-- Dark Mode Toggle -->
+        <script src="../Scripts/Accessible/dark-mode-alt.js"></script>
+
+        <!-- Font Toggle -->
+        <script src="../Scripts/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
+        <script src="../Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+        <!-- Accordion Dropdown -->
+        <script src="../Scripts/accordion.js"></script>
+    </body>
+</html>

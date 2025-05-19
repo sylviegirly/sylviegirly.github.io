@@ -461,7 +461,8 @@ main section,
 
 #sidebar-content p a:hover {
     color: var(--linkhover);
-    transition: 0.5s ease;
+    transition: 0.2s ease;
+    text-decoration-thickness: 2px;
 }
 
 #sidebar-content .quote {
@@ -710,7 +711,8 @@ main a {
 main a:hover,
 main a:focus {
     color: var(--linkhover);
-    transition: 0.5s ease;
+    transition: 0.2s ease;
+    text-decoration-thickness: 2px;
 }
 
 main ul {
