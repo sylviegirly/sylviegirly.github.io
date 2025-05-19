@@ -31,6 +31,23 @@
         <!-- FavIcon -->
         <link ref="favicon" href="../favicon.ico" />
 
+        <script>
+            function getNestingString() {
+                // This function prepares the "nesting" variable for your header and footer (see below).
+                // Only change this function if you know what you're doing.
+                const currentUrl = window.location.href
+                    .replace("http://", "")
+                    .replace("https://", "")
+                    .replace("/public/", "/");
+                const numberOfSlahes = currentUrl.split("/").length - 1;
+                if (numberOfSlahes == 1) return ".";
+                if (numberOfSlahes == 2) return "..";
+                return ".." + "/..".repeat(numberOfSlahes - 2);
+            }
+
+            const nesting = getNestingString();
+        </script>
+
         <style>
             body {
                 width: 100%;
@@ -40,7 +57,7 @@
                 font-size: 1em;
                 letter-spacing: 0;
                 background-color: #211f1f;
-                background-image: url(./Images/dark_mode_bg.png);
+                background-image: url(/Images/dark_mode_bg.png);
             }
 
             .container {
@@ -79,7 +96,7 @@
                 body {
                     background-color: #879d6d;
                     color: #16190f;
-                    background-image: url(./Images/light_mode_bg.png);
+                    background-image: url(/Images/light_mode_bg.png);
                 }
 
                 h1 {
@@ -101,7 +118,7 @@
 
             @font-face {
                 font-family: "freepixel";
-                src: url(./Fonts/FreePixel.ttf);
+                src: url(/Fonts/FreePixel.ttf);
             }
         </style>
     </head>
