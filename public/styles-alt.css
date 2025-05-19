@@ -945,6 +945,11 @@ article ul {
     list-style-type: square;
 }
 
+article ul ul {
+    border-left: 1px solid rgba(from var(--secondary-accent) r g b / 50%);
+    border-radius: 0 0 0 10px;
+}
+
 article ul ul li::marker {
     color: var(--primary-accent);
 }
