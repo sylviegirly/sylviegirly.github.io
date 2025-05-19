@@ -57,7 +57,9 @@
                 font-size: 1em;
                 letter-spacing: 0;
                 background-color: #211f1f;
-                background-image: url(/Images/dark_mode_bg.png);
+                opacity: 1;
+                background-size: 10px 10px;
+                background-image: repeating-linear-gradient(45deg, #131212 0, #131212 1px, #211f1f 0, #211f1f 50%);
             }
 
             .container {
@@ -94,9 +96,12 @@
 
             @media (prefers-color-scheme: light) {
                 body {
-                    background-color: #879d6d;
                     color: #16190f;
-                    background-image: url(/Images/light_mode_bg.png);
+                    background-color: #dfe0d2;
+                    background-color: #dfe0d2;
+                    opacity: 1;
+                    background-size: 10px 10px;
+                    background-image: repeating-linear-gradient(45deg, #eceeda 0, #eceeda 1px, #dfe0d2 0, #dfe0d2 50%);
                 }
 
                 h1 {
