@@ -34,12 +34,13 @@
         <style>
             body {
                 width: 100%;
-                background-color: #211f1f;
                 color: white;
                 font-family: "freepixel";
                 line-height: 1.3rem;
+                font-size: 1em;
                 letter-spacing: 0;
-                background-image: url(https://i.imgur.com/j5DXHGi.png);
+                background-color: #211f1f;
+                background-image: url(./Images/dark_mode_bg.png);
             }
 
             .container {
@@ -54,8 +55,16 @@
                 text-align: center;
             }
 
+            h1 {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 2em;
+                color: #788b68;
+            }
+
             a {
-                color: lightgreen;
+                color: #c6e886;
+                transition: 0.5s;
             }
 
             a:hover {
@@ -63,12 +72,36 @@
             }
 
             a:visited {
-                color: lightgreen;
+                color: #c6e886;
+            }
+
+            @media (prefers-color-scheme: light) {
+                body {
+                    background-color: #879d6d;
+                    color: #16190f;
+                    background-image: url(./Images/light_mode_bg.png);
+                }
+
+                h1 {
+                    color: #4e6137;
+                }
+
+                a {
+                    color: #b67925;
+                }
+
+                a:hover {
+                    color: black;
+                }
+
+                a:visited {
+                    color: #b67925;
+                }
             }
 
             @font-face {
                 font-family: "freepixel";
-                src: url(Fonts/FreePixel.ttf);
+                src: url(./Fonts/FreePixel.ttf);
             }
         </style>
     </head>
