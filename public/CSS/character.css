@@ -1153,7 +1153,9 @@ button {
 
 .music-player marquee {
     font-size: 1em;
-    font-family: "freepixel";
+    font-family: "atkinson";
+    font-weight: bold;
+    letter-spacing: 1px;
     color: var(--primary-accent);
 }
 
