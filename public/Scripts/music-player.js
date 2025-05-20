@@ -18,7 +18,7 @@ let audio = new Audio(songs[currentSongIndex].src);
 let isPlaying = false;
 
 const playPauseButton = document.getElementById("play-pause");
-const skipButton = document.getElementById("skip");
+const skipButton = document.getElementById("skip-song");
 const rewindButton = document.getElementById("rewind");
 const songDropdown = document.getElementById("song-dropdown");
 
