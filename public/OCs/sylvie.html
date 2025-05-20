@@ -36,6 +36,7 @@
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
         <link rel="stylesheet" type="text/css" href="../CSS/character.css" />
+        <link rel="stylesheet" type="text/css" href="../CSS/music-player.css" />
         <link rel="stylesheet" href="../CSS/lightbox.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
@@ -218,6 +219,18 @@
                         </ul>
                     </div>
                     <p>My utterly beloved most precious my baby my sunshine!! Zhongli kisser 💖💖💖</p>
+                    <hr />
+                    <div class="music-player">
+                        <marquee id="current-song" behavior="scroll" direction="left">Song 1</marquee>
+                        <div class="controls">
+                            <div class="button-group">
+                                <button id="rewind" title="Rewind"><i class="fa fa-backward"></i></button>
+                                <button id="play-pause" title="Play"><i class="fa fa-play"></i></button>
+                                <button id="skip-song" title="Skip"><i class="fa fa-forward"></i></button>
+                            </div>
+                            <select id="song-dropdown"></select>
+                        </div>
+                    </div>
                     <hr />
                     <button class="accordion">Credits</button>
                     <div class="panel">
@@ -1984,6 +1997,9 @@
                 theme: "character"
             });
         </script>
+        <!-- Music Player -->
+        <script src="../Scripts/music-player.js"></script>
+
         <!-- Dark Mode Toggle -->
         <script src="../Scripts/Accessible/dark-mode-alt.js"></script>
 
