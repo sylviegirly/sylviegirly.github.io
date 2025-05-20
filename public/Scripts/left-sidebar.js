@@ -35,7 +35,7 @@ const sidebar = `
 <!-- =============================================== -->
 <!-- LEFT SIDEBAR CONTENT -->
 <!-- =============================================== -->
-<div class="intro">
+<div class="intro hide-mobile">
     <section>
         <div class="img-floatinganim">
             <img class="dendro"
