@@ -116,7 +116,7 @@ const sidebar = `
             >
         </div>
     </section>
-    <div class="lazy-flex-images" style="margin-top: 20px;">
+    <div class="lazy-flex-images hide-mobile" style="margin-top: 20px;">
     <a href="https://tamanotchi.world/22103c">
     <img src="https://tamanotchi.world/i/22103" alt="It's tamaNOTchi! Click to feed!">
     </a>

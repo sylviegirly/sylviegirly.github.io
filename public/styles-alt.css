@@ -834,6 +834,10 @@ aside {
     grid-column: 3;
 }
 
+.feeder {
+    height: 540px;
+}
+
 /* -------------------------------------------------------- */
 /* SIDEBAR CONTENTS */
 /* -------------------------------------------------------- */
@@ -1240,9 +1244,10 @@ footer a:hover {
 
 @media screen and (max-width: 800px) {
     .container-grid {
-        width: 99%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        display: flex;
+        flex: 100%;
+        flex-direction: column-reverse;
+        width: auto;
         margin-left: 5px;
         margin-right: 5px;
     }
@@ -1289,6 +1294,12 @@ footer a:hover {
         position: inherit; /* disable the sticky */
     }
 
+    aside {
+        position: inherit !important; /* disable the sticky */
+        width: auto !important;
+        max-width: 100%;
+    }
+
     .intro,
     aside,
     main {
@@ -1296,15 +1307,36 @@ footer a:hover {
         grid-row: auto;
     }
 
+    .feeder {
+        height: 200px;
+        top: 75px;
+    }
+
     section,
     article {
         box-shadow: none;
     }
 
-    /* Would prefer to not hide it, but need to figure out how to make it mobile friendly */
-    .intro,
-    aside {
+    .dendro {
         display: none;
+    }
+
+    /* Would prefer to not hide it, but need to figure out how to make it mobile friendly */
+    .intro {
+        width: auto;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #img-load {
+        max-width: 200px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    aside {
+        width: auto;
+        max-width: 100%;
     }
 
     header,
@@ -1312,7 +1344,7 @@ footer a:hover {
     header .title,
     header .subtext {
         flex-direction: column;
-        max-width: 100%;
+        flex: 100%;
     }
 
     article {
