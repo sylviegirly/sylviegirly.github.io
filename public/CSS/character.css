@@ -947,7 +947,7 @@ button {
 }
 
 .design-image-alt {
-    width: 100%;
+    flex: 100%;
     min-height: 500px;
     background-image: var(--design-image);
     background-size: contain;
