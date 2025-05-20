@@ -1166,6 +1166,7 @@ button {
 
 .song-list li {
     padding: 10px;
+    font-family: "atkinson";
     background-color: #fff;
     border: 1px solid #ddd;
     margin-bottom: 10px;
