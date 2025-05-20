@@ -1,11 +1,6 @@
-const songsByStyle = {
-    Commissions: [
-        { title: "Seeds and Cycles — Baywatch", src: "https://file.garden/Zq0xOX6Iv3i3b1te/Seeds%20and%20Cycles" },
-        {
-            title: "Mischevious Dance of Verdure — Damahysk",
-            src: "https://file.garden/Zq0xOX6Iv3i3b1te/Mischevious%20Dance%20of%20Verdure"
-        }
-    ]
+const songsByStyle = window.songsByStyle || {
+    // fallback default playlist
+    Rock: [{ title: "Default Song", src: "path/to/default.mp3" }]
 };
 
 // Flatten for player logic
