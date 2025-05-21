@@ -1517,6 +1517,20 @@ footer a:hover {
     bottom: 10px;
 }
 
+#quizzes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    #quizzes {
+        grid-template-columns: 100%;
+    }
+}
+
 /* Status Cafe
 .feed-container {
     background-color: var(--body-deco);
