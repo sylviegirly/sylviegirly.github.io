@@ -40,8 +40,39 @@ function openAltTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+function openBlog(evt, blogName) {
+    // Declare all variables
+    var i, blogcontent, bloglinks;
+
+    // Get all elements with class="blogContent" and hide them
+    blogcontent = document.getElementsByClassName("blogContent");
+    for (i = 0; i < blogcontent.length; i++) {
+        blogcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    bloglinks = document.getElementsByClassName("blogLinks");
+    for (i = 0; i < bloglinks.length; i++) {
+        bloglinks[i].className = bloglinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(blogName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultAltOpen").click();
+if (document.getElementById("defaultOpen") != null) {
+    document.getElementById("defaultOpen").click();
+}
+
+// Get the element with id="defaultAltOpen" and click on it
+if (document.getElementById("defaultAltOpen") != null) {
+    document.getElementById("defaultAltOpen").click();
+}
+
+// Get the element with id="blogActive" and click on it
+// Get the element with id="defaultAltOpen" and click on it
+if (document.getElementById("blogActive") != null) {
+    document.getElementById("blogActive").click();
+}

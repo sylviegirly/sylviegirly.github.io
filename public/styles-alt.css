@@ -1107,6 +1107,29 @@ article .scrollable p:first-child {
     }
 }
 
+.blogContent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+.blogLink {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    /*input has OS specific font-family*/
+    color: var(--link-colour);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.blogLink:hover {
+    color: var(--link-hover);
+    text-decoration-thickness: 2px;
+}
+
+.bloglink.active {
+    color: white !important;
+}
+
 /* -------------------------------------------------------- */
 /* CONTENT IMAGES */
 /* -------------------------------------------------------- */
