@@ -13,7 +13,7 @@ html[data-theme="light"] {
 
     /* PRIMARY ACCENTS */
     --primary-accent: #4e6137;
-    --secondary-accent: #828d65;
+    --secondary-accent: #60732f;
     --font-on-accent: #f3f4e0;
     --letter-glow: rgba(8, 30, 1, 0.19);
 
@@ -89,7 +89,7 @@ html[data-theme="dark"] {
 
         /* PRIMARY ACCENTS */
         --primary-accent: #4e6137;
-        --secondary-accent: #828d65;
+        --secondary-accent: #60732f;
         --font-on-accent: #f3f4e0;
         --letter-glow: rgba(8, 30, 1, 0.19);
 
