@@ -430,6 +430,16 @@ article a img {
     line-height: 0;
 }
 
+article aside {
+    width: 30%;
+    border-top: 3px solid var(--primary-accent);
+    border-bottom: 3px solid var(--primary-accent);
+    background-color: var(--body-deco);
+    padding: 20px 10px;
+    margin: 10px;
+    float: right;
+}
+
 .intro a:hover,
 article a:hover,
 aside a:hover {
@@ -1400,6 +1410,11 @@ footer a:hover {
     /* Items */
     .image-gallery div {
         width: calc(50% - 10px);
+    }
+
+    article aside {
+        width: 100%;
+        float: none;
     }
 
     /* -------------------------------------------------------- */
