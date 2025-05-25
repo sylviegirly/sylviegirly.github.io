@@ -9,7 +9,17 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-05-19T14:06:01-04:00</updated>
+    <updated>2025-05-25T17:57:33-04:00</updated>
+
+    <entry>
+        <title>Now Page Update!</title>
+        <link href="https://zhongvie.neocities.org/now" />
+        <updated>2025-05-25T17:57:33-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1748210253</id>
+        <content type="html">
+            &#x3C;p&#x3E;New /now entry! Just new life updates + what&#x27;s been going on&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New Blog ... Diary-esque Post</title>
