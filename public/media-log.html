@@ -164,6 +164,10 @@
                     flex: 2 1;
                     width: 100%;
                 }
+
+                .media-image {
+                    height: 100%;
+                }
             }
         </style>
     </head>
@@ -222,8 +226,8 @@
                                 Games
                             </button>
                             <button class="tablinks" onclick="openMediaTab(event, 'Books')">Books</button>
-                            <button class="tablinks" onclick="openMediaTab(event, 'Shows')">TV Shows</button>
-                            <button class="tablinks" onclick="openMediaTab(event, 'Anime')">Anime</button>
+                            <button class="tablinks" onclick="openMediaTab(event, 'Movies')">Movies</button>
+                            <button class="tablinks" onclick="openMediaTab(event, 'Shows')">TV Shows / Anime</button>
                             <button class="tablinks" onclick="openMediaTab(event, 'Manga')">Manga</button>
                         </div>
                         <!-- WATCHING STATUS -->
@@ -234,7 +238,6 @@
                                 <span aria-hidden="true">✅</span> Completed<br />
                                 <span aria-hidden="true">⏸️</span> Paused / shelved<br />
                                 <span aria-hidden="true">❌</span> Abandoned / didn't finish<br />
-                                <span aria-hidden="true">⏪</span> Rewatch / read / play<br />
                             </p>
                         </div>
                         <!-- RATING -->
@@ -326,6 +329,7 @@
                             <p>No but seriously there is a reason I have 460+ hours even on free trial.</p>
                         </div>
                     </div>
+                    <!-- ENTRY END -->
 
                     <!-- ENTRY -->
                     <div>
@@ -336,7 +340,7 @@
                             </div>
                             <div class="media-info">
                                 <h2>Pokemon Platinum</h2>
-                                <p><b>Author:</b> Game Freak, Nintendo</p>
+                                <p><b>Developer(s):</b> Game Freak, Nintendo</p>
                                 <p><b>Genre:</b> Adventure, RPG, Turn Based</p>
                                 <p><b>Year:</b> 2008</p>
                                 <p><b>Status:</b> <span aria-hidden="true">✅</span> Completed (multiple times)</p>
@@ -380,6 +384,7 @@
                             </p>
                         </div>
                     </div>
+                    <!-- ENTRY END -->
                 </article>
 
                 <!-- BOOKS -->
@@ -441,82 +446,162 @@
                             </blockquote>
                         </div>
                     </div>
+                    <!-- ENTRY END -->
                 </article>
 
                 <!-- SHOWS -->
-                <article class="mediaTab" id="Shows">
-                    <div class="center-img">
-                        <img src="Images/Misc/wipatrick.png" alt="" aria-hidden="true" />
-                    </div>
-                    <p><b>Work in progress</b>, I'll add things when I'm finished with them</p>
-                </article>
-
-                <!-- ANIME -->
-                <article class="mediaTab" id="Anime">
-                    <div class="center-img">
-                        <img src="Images/Misc/wipatrick.png" alt="" aria-hidden="true" />
-                    </div>
-                    <p><b>Work in progress</b>, I'll add things when I'm finished with them</p>
-                </article>
-
-                <!-- MANGA -->
-                <article class="mediaTab" id="Manga">
-                    <div class="center-img">
-                        <img src="Images/Misc/wipatrick.png" alt="" aria-hidden="true" />
-                    </div>
-                    <p><b>Work in progress</b>, I'll add things when I'm finished with them</p>
+                <article class="mediaTab" id="Movies">
                     <!-- ENTRY -->
                     <div>
                         <!-- INFO BAR -->
-                        <div class="media-container">
+                        <div class="media-container no-top-border">
                             <div class="media-image">
-                                <img src="https://placedog.net/600/600" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="Images/Media/TF_one.jpg" alt="" aria-hidden="true" />
                             </div>
                             <div class="media-info">
-                                <h2>Title</h2>
-                                <p><b>Author:</b> author name</p>
-                                <p><b>Genre:</b> genre, genre</p>
-                                <p><b>Year:</b> year</p>
-                                <p><b>Status:</b> status status</p>
+                                <h2>Transformers One</h2>
+                                <p><b>Director(s):</b> Josh Cooley</p>
+                                <p><b>Genre:</b> Action Epic, Sci-fi, Animated</p>
+                                <p><b>Year:</b> 2024</p>
                                 <p>
-                                    <b>Rating:</b>
-                                    <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" loading="lazy" /><img
+                                    <b>Rating:</b> <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" /><img
                                         src="Images/Misc/star_gif.png"
                                         alt=""
-                                        aria-hidden="true"
-                                        loading="lazy" /><img
+                                        aria-hidden="true" /><img src="Images/Misc/star_gif.png" alt="" /><img
                                         src="Images/Misc/star_gif.png"
                                         alt=""
-                                        aria-hidden="true"
-                                        loading="lazy" /><img
+                                        aria-hidden="true" /><img
                                         src="Images/Misc/star_gif.png"
                                         alt=""
-                                        aria-hidden="true"
-                                        loading="lazy" /><img
-                                        src="Images/Misc/star_gif.png"
-                                        alt=""
-                                        aria-hidden="true"
-                                        loading="lazy" />
+                                        aria-hidden="true" />
                                     Excellent
                                 </p>
-                                <blockquote>Cool quote goes here</blockquote>
+                                <blockquote>
+                                    Orion Pax and D-16 my pookie wookies ...
+                                    <img src="./Images/Nuko/nukoHeartsLaying.gif" alt="" aria-hidden="true" />
+                                </blockquote>
                             </div>
                         </div>
                         <!-- SUMMARY -->
                         <div class="media-summary">
                             <p>
-                                Pokem ipsum dolor sit amet Rhyhorn Wartortle Bill Steel Gulpin lorem ipsum dolor sit
-                                amet. Sand-Attack Golbat Shedinja Ash Ketchum Rhydon ullamco laboris nisi Escavalier.
-                                Steel Houndoom to catch them is my real test Pidgey Lillipup Hitmonlee Dunsparce. Wing
-                                Attack Salamence Scratch Misty Vine Whip Horsea Metapod. Earthquake Machop Staravia
-                                Porygon-Z Magneton Altaria Celebi. Boulder Badge Chatot they're comfy and easy to wear
-                                Nuzleaf Shuckle Togepi Electabuzz. Swift Feebas Lillipup Staryu Wormadam Loudred
-                                Flaaffy. Charizard Nosepass Drifblim Gary Castform Shaymin Kyogre. Fog Badge Magmar Abra
-                                et dolore magna aliqua Petilil what kind of Pokemon are you Pachirisu. Ruby Lileep Aipom
-                                Youngster wants to fight Omanyte prepare for trouble Spearow.
+                                My slip'n'slide into the Transformers hole (like me and many others apparently); I
+                                missed a lot of the callbacks to other TF Shows and comics, but I was enamoured by the
+                                heartaching friendship between D-16 and Orion Pax not knowing the outcome of it. So you
+                                can imagine it's even more heartwrenching after Knowing everything and indulging further
+                                into Transformers media ... 10/10 would rewatch again to have my heart ripped out (MAKE
+                                A SECOND ONE!!!).
                             </p>
                         </div>
                     </div>
+                    <!-- ENTRY END -->
+                </article>
+
+                <!-- ANIME -->
+                <article class="mediaTab" id="Shows">
+                    <!-- ENTRY -->
+                    <div>
+                        <!-- INFO BAR -->
+                        <div class="media-container no-top-border">
+                            <div class="media-image">
+                                <img src="Images/Media/apothecary_diaries.jpg" alt="" aria-hidden="true" />
+                            </div>
+                            <div class="media-info">
+                                <h2>The Apothecary Diaries</h2>
+                                <p><b>Studio(s):</b> OLM, TOHO animation STUDIO</p>
+                                <p><b>Genre:</b> Drama, Mystery, Historical</p>
+                                <p><b>Year:</b> 2023</p>
+                                <p>
+                                    <b>Status:</b> <span aria-hidden="true">🟢</span>
+                                    <span class="tippy" data-tippy-content="Following the season 2 release"
+                                        >Watching</span
+                                    >
+                                </p>
+                                <p>
+                                    <b>Rating:</b> <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true" /><img src="Images/Misc/star_gif.png" alt="" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true" />
+                                    Excellent
+                                </p>
+                                <blockquote>
+                                    Maomao me for real in spirit
+                                    <img src="./Images/Nuko/nukoNod.gif" alt="" aria-hidden="true" />
+                                </blockquote>
+                            </div>
+                        </div>
+                        <!-- SUMMARY -->
+                        <div class="media-summary">
+                            <p>
+                                As someone who loves intrigue, I am <u>hooked</u> in what's happening, and I love the
+                                details that were put even into side characters, that they're all memorable in their
+                                designs and personalities. Maomao aspec rep icon (even though I know there's the whole
+                                romance aspect with Jinshi she's so like ... <i>girl</i> ...). Good story, good
+                                character development, funny humour balanced out with seriousness, and characters I
+                                adore.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ENTRY END -->
+                </article>
+
+                <!-- MANGA -->
+                <article class="mediaTab" id="Manga">
+                    <!-- ENTRY -->
+                    <div>
+                        <!-- INFO BAR -->
+                        <div class="media-container no-top-border">
+                            <div class="media-image">
+                                <img src="Images/Media/bleach.jpg" alt="" aria-hidden="true" />
+                            </div>
+                            <div class="media-info">
+                                <h2>Bleach</h2>
+                                <p><b>Author(s):</b> Tite Kubo</p>
+                                <p><b>Genre:</b> Action, Supernatural, Shounen</p>
+                                <p><b>Year:</b> 2001</p>
+                                <p><b>Status:</b> <span aria-hidden="true">✅</span> Completed</p>
+                                <p>
+                                    <b>Rating:</b> <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true" /><img src="Images/Misc/star_gif.png" alt="" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true" /><img
+                                        src="Images/Misc/star_empty.png"
+                                        alt=""
+                                        aria-hidden="true" />
+                                    Good
+                                </p>
+                                <blockquote>
+                                    Kubo when I get you--
+                                    <img src="./Images/Nuko/nukoFireBreath.gif" alt="" aria-hidden="true" />
+                                </blockquote>
+                            </div>
+                        </div>
+                        <!-- SUMMARY -->
+                        <div class="media-summary">
+                            <p>
+                                My love and hate fandom for the last decade or so; I got into Bleach when catching the
+                                anime late at night, and eventually began reading the manga itself. Hell, it was the
+                                fandom that got me into making my first true fandom OC and where I was embroiled in for
+                                at least 5-6 years. I love it, but I have many mixed feelings on the characters and
+                                story choices (Byakuya should've died, thematically it'd make so much more sense), and
+                                I'm still stupidly wounded over Ukitake's stupid death and it's why I'm taking a star
+                                off. He deserved SO much better than how his story ended (and the shock I had when they
+                                revealed in a later story that he ended up taking over as a judge/executioner of hell
+                                ... and that's <u>years</u> after the manga was over).
+                            </p>
+                            <p>Anyway, one of the big 3 from the early 2000's and the bane of my existence.</p>
+                        </div>
+                    </div>
+                    <!-- ENTRY END -->
                 </article>
             </main>
         </div>
