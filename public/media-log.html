@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    --->
+    <head>
+        <!-- Site Title -->
+        <title>media log</title>
+
+        <!-- Site Description -->
+        <meta content="A collection of media I have consumed + my thoughts on it." name="description" />
+
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- FavIcon -->
+        <link ref="favicon" href="./favicon.ico" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" href="styles-alt.css" />
+        <link rel="stylesheet" href="CSS/normalize.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JavaScript: -->
+        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
+        if this HTML file is in 2 subfolders, etc. -->
+        <script src="Scripts/sparkle_cursor.js"></script>
+        <script src="Scripts/header.js" defer></script>
+        <script src="Scripts/left-sidebar.js" defer></script>
+        <script src="Scripts/footer.js" defer></script>
+        <script src="Scripts/tab-title-suffix.js"></script>
+
+        <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <!-- Disclosure Menu -->
+        <script src="Scripts/Accessible/accessible-menu.js" type="module"></script>
+
+        <style>
+            /* page specific styling */
+            .rating,
+            .status,
+            .nav-buttons-container {
+                flex: 1;
+            }
+
+            /* Style the tab */
+            .nav-container {
+                display: flex;
+                align-content: center;
+                gap: 20px;
+            }
+
+            .nav-buttons-container {
+                overflow: hidden;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                align-content: center;
+            }
+
+            /* Style the buttons that are used to open the tab content */
+            .nav-buttons-container button {
+                color: var(--font-on-accent);
+                width: 100%;
+                background-color: var(--primary-accent);
+                font-family: inherit;
+                font-size: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 5px;
+                border-radius: var(--border-radius);
+                transition: 0.3s;
+            }
+
+            /* Change background color of buttons on hover */
+            .nav-container button:hover {
+                background-color: var(--secondary-accent);
+            }
+
+            /* Create an active/current tablink class */
+            .nav-container button.active {
+                background-color: var(--secondary-accent);
+            }
+
+            .no-top-border {
+                border-top: none !important;
+                padding-top: 0 !important;
+            }
+
+            .media-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                margin: 10px 0;
+                padding: 10px 0px;
+                border-bottom: 1px dotted var(--secondary-accent);
+                border-top: 4px solid var(--primary-accent);
+            }
+
+            .media-image {
+                width: 200px;
+                height: 300px;
+                flex: 1 0;
+            }
+
+            .media-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: var(--border-radius);
+                border: 4px solid var(--primary-accent);
+                text-align: center;
+            }
+
+            .media-info {
+                flex: 3 0;
+            }
+
+            .media-info p {
+                padding-left: 10px;
+            }
+
+            .media-info b {
+                text-transform: uppercase;
+            }
+
+            .media-info p b {
+                padding-right: 5px;
+            }
+
+            .media-summary {
+                padding-bottom: 10px;
+            }
+
+            .mediaTab {
+                animation: fadeEffect 1s; /* Fading effect takes 1 second */
+            }
+
+            @media screen and (max-width: 800px) {
+                .media-info {
+                    flex: 2 1;
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body id="body">
+        <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
+        <!-- =============================================== -->
+        <div class="button-wrapper">
+            <div class="button" id="font-toggle">
+                <button class="general" type="button" id="toggle-font">toggle font</button>
+            </div>
+
+            <div class="button">
+                <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div class="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+            <main id="content">
+                <article>
+                    <h1>
+                        <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" /> Media
+                        Log
+                    </h1>
+                    <p>
+                        A little place to coalesce all of my tracking items from different sites (considering the
+                        breadth of my media logs are across Backloggd, Goodreads, Serializd, etc). I'll mostly only add
+                        new things when I genuinely begin consuming them!! Or err ... preferably finish them fully.
+                    </p>
+                    <p>
+                        Each section will be put alphabetically rather than in any played order. Inspired from
+                        <a href="https://willdotjpg.gay/templates/media/media">will.jpg's media template</a> and using
+                        the stars from there.
+                    </p>
+                    <hr />
+                    <div class="nav-container">
+                        <!-- MEDIA TABS -->
+                        <div class="nav-buttons-container">
+                            <!-- Tab links -->
+                            <button class="tablinks" onclick="openMediaTab(event, 'Games')" id="mediaActive">
+                                Games
+                            </button>
+                            <button class="tablinks" onclick="openMediaTab(event, 'Books')">Books</button>
+                            <button class="tablinks" onclick="openMediaTab(event, 'Shows')">TV Shows</button>
+                            <button class="tablinks" onclick="openMediaTab(event, 'Anime')">Anime</button>
+                            <button class="tablinks" onclick="openMediaTab(event, 'Manga')">Manga</button>
+                        </div>
+                        <!-- WATCHING STATUS -->
+                        <div class="status">
+                            <b>Status</b>
+                            <p>
+                                <span aria-hidden="true">🟢</span> Started / Playing<br />
+                                <span aria-hidden="true">✅</span> Completed<br />
+                                <span aria-hidden="true">⏸️</span> Paused / shelved<br />
+                                <span aria-hidden="true">❌</span> Abandoned / didn't finish<br />
+                                <span aria-hidden="true">⏪</span> Rewatch / read / play<br />
+                            </p>
+                        </div>
+                        <!-- RATING -->
+                        <div class="rating">
+                            <p><b>Rating</b></p>
+                            <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" /><img
+                                src="Images/Misc/star_empty.png"
+                                alt=""
+                                aria-hidden="true" /><img src="Images/Misc/star_empty.png" alt="" /><img
+                                src="Images/Misc/star_empty.png"
+                                alt=""
+                                aria-hidden="true" /><img src="Images/Misc/star_empty.png" alt="" aria-hidden="true" />
+                            Bad<br />
+                            <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" /><img
+                                src="Images/Misc/star_gif.png"
+                                alt=""
+                                aria-hidden="true" /><img src="Images/Misc/star_empty.png" alt="" /><img
+                                src="Images/Misc/star_empty.png"
+                                alt=""
+                                aria-hidden="true" /><img src="Images/Misc/star_empty.png" alt="" aria-hidden="true" />
+                            Meh<br />
+                            <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" /><img
+                                src="Images/Misc/star_gif.png"
+                                alt=""
+                                aria-hidden="true" /><img src="Images/Misc/star_gif.png" alt="" /><img
+                                src="Images/Misc/star_empty.png"
+                                alt=""
+                                aria-hidden="true" /><img src="Images/Misc/star_empty.png" alt="" aria-hidden="true" />
+                            Okay<br />
+                            <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" /><img
+                                src="Images/Misc/star_gif.png"
+                                alt=""
+                                aria-hidden="true" /><img src="Images/Misc/star_gif.png" alt="" /><img
+                                src="Images/Misc/star_gif.png"
+                                alt=""
+                                aria-hidden="true" /><img src="Images/Misc/star_empty.png" alt="" aria-hidden="true" />
+                            Good<br />
+                            <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" /><img
+                                src="Images/Misc/star_gif.png"
+                                alt=""
+                                aria-hidden="true" /><img src="Images/Misc/star_gif.png" alt="" /><img
+                                src="Images/Misc/star_gif.png"
+                                alt=""
+                                aria-hidden="true" /><img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" />
+                            Excellent
+                        </div>
+                    </div>
+                </article>
+
+                <!-- GAMES -->
+                <article id="Games" class="mediaTab">
+                    <!-- ENTRY -->
+                    <div>
+                        <!-- INFO BAR -->
+                        <div class="media-container no-top-border">
+                            <div class="media-image">
+                                <img src="Images/Media/FFXIV.jpg" alt="" aria-hidden="true" />
+                            </div>
+                            <div class="media-info">
+                                <h2>Final Fantasy 14 Online</h2>
+                                <p><b>Developer(s):</b> Square Enix</p>
+                                <p><b>Genre:</b> MMO, RPG</p>
+                                <p><b>Year:</b> 2013</p>
+                                <p><b>Status:</b> <span aria-hidden="true">🟢</span> Playing</p>
+                                <p>
+                                    <b>Rating:</b> <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true" /><img src="Images/Misc/star_gif.png" alt="" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true" />
+                                    Excellent
+                                </p>
+                                <blockquote>I love 15 minute DPS queues it's fine!!!</blockquote>
+                            </div>
+                        </div>
+                        <!-- SUMMARY -->
+                        <div class="media-summary">
+                            <p>
+                                Have you heard of the critically acclaimed MMORPG Final Fantasy XIV? With an expanded
+                                free trial which you can play through the entirety of A Realm Reborn and the
+                                award-winning Heavensward, and thrilling Stormblood expansions up to level 70 for free
+                                with no restrictions on playtime.
+                            </p>
+                            <p>No but seriously there is a reason I have 460+ hours even on free trial.</p>
+                        </div>
+                    </div>
+
+                    <!-- ENTRY -->
+                    <div>
+                        <!-- INFO BAR -->
+                        <div class="media-container">
+                            <div class="media-image">
+                                <img src="Images/Media/platinum.jpg" alt="" aria-hidden="true" loading="lazy" />
+                            </div>
+                            <div class="media-info">
+                                <h2>Pokemon Platinum</h2>
+                                <p><b>Author:</b> Game Freak, Nintendo</p>
+                                <p><b>Genre:</b> Adventure, RPG, Turn Based</p>
+                                <p><b>Year:</b> 2008</p>
+                                <p><b>Status:</b> <span aria-hidden="true">✅</span> Completed (multiple times)</p>
+                                <p>
+                                    <b>Rating:</b>
+                                    <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" loading="lazy" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                        loading="lazy" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                        loading="lazy" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                        loading="lazy" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                        loading="lazy" />
+                                    Excellent
+                                </p>
+                                <blockquote>
+                                    Giratina's design still fucks to this day, convince me otherwise
+                                </blockquote>
+                            </div>
+                        </div>
+                        <!-- SUMMARY -->
+                        <div class="media-summary">
+                            <p>
+                                What can I say about the Pokemon game that I started on? I remember watching a Lets Play
+                                before I even had a Nintendo DS and being so enamoured with Giratina's design, and I
+                                think I remember actually naming my Starly turned Staraptor after that Lets Player's
+                                Staraptor as well. I remember staying up stupidly late to beat Cynthia for the first
+                                time, who gave me such a challenge back then, I remember falling in love with Garchomp's
+                                design, and the Distortion World mechanics of flipping around, and spending hours on the
+                                stupid contests and making poffins for everyone. 10/10 game would love to wipe my memory
+                                and play it again.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BOOKS -->
+                <article class="mediaTab" id="Books">
+                    <div class="center-img">
+                        <img src="Images/Misc/wipatrick.png" alt="" aria-hidden="true" />
+                    </div>
+                    <p><b>Work in progress</b>, I'll add things when I'm finished with them</p>
+                </article>
+
+                <!-- SHOWS -->
+                <article class="mediaTab" id="Shows">
+                    <div class="center-img">
+                        <img src="Images/Misc/wipatrick.png" alt="" aria-hidden="true" />
+                    </div>
+                    <p><b>Work in progress</b>, I'll add things when I'm finished with them</p>
+                </article>
+
+                <!-- ANIME -->
+                <article class="mediaTab" id="Anime">
+                    <div class="center-img">
+                        <img src="Images/Misc/wipatrick.png" alt="" aria-hidden="true" />
+                    </div>
+                    <p><b>Work in progress</b>, I'll add things when I'm finished with them</p>
+                </article>
+
+                <!-- MANGA -->
+                <article class="mediaTab" id="Manga">
+                    <div class="center-img">
+                        <img src="Images/Misc/wipatrick.png" alt="" aria-hidden="true" />
+                    </div>
+                    <p><b>Work in progress</b>, I'll add things when I'm finished with them</p>
+                    <!-- ENTRY -->
+                    <div>
+                        <!-- INFO BAR -->
+                        <div class="media-container">
+                            <div class="media-image">
+                                <img src="https://placedog.net/600/600" alt="" aria-hidden="true" loading="lazy" />
+                            </div>
+                            <div class="media-info">
+                                <h2>Title</h2>
+                                <p><b>Author:</b> author name</p>
+                                <p><b>Genre:</b> genre, genre</p>
+                                <p><b>Year:</b> year</p>
+                                <p><b>Status:</b> status status</p>
+                                <p>
+                                    <b>Rating:</b>
+                                    <img src="Images/Misc/star_gif.png" alt="" aria-hidden="true" loading="lazy" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                        loading="lazy" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                        loading="lazy" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                        loading="lazy" /><img
+                                        src="Images/Misc/star_gif.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                        loading="lazy" />
+                                    Excellent
+                                </p>
+                                <blockquote>Cool quote goes here</blockquote>
+                            </div>
+                        </div>
+                        <!-- SUMMARY -->
+                        <div class="media-summary">
+                            <p>
+                                Pokem ipsum dolor sit amet Rhyhorn Wartortle Bill Steel Gulpin lorem ipsum dolor sit
+                                amet. Sand-Attack Golbat Shedinja Ash Ketchum Rhydon ullamco laboris nisi Escavalier.
+                                Steel Houndoom to catch them is my real test Pidgey Lillipup Hitmonlee Dunsparce. Wing
+                                Attack Salamence Scratch Misty Vine Whip Horsea Metapod. Earthquake Machop Staravia
+                                Porygon-Z Magneton Altaria Celebi. Boulder Badge Chatot they're comfy and easy to wear
+                                Nuzleaf Shuckle Togepi Electabuzz. Swift Feebas Lillipup Staryu Wormadam Loudred
+                                Flaaffy. Charizard Nosepass Drifblim Gary Castform Shaymin Kyogre. Fog Badge Magmar Abra
+                                et dolore magna aliqua Petilil what kind of Pokemon are you Pachirisu. Ruby Lileep Aipom
+                                Youngster wants to fight Omanyte prepare for trouble Spearow.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+        <!-- =============================================== -->
+        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
+        <!-- =============================================== -->
+        <general-footer></general-footer>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+
+        <!-- JAVASCRIPT FOR NAV -->
+        <script>
+            function openTab(tabName) {
+                var i;
+                var x = document.getElementsByClassName("tab");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                document.getElementById(tabName).style.display = "block";
+            }
+        </script>
+
+        <!-- Dark Mode Toggle -->
+        <script src="Scripts/Accessible/dark-mode-alt.js"></script>
+
+        <!-- Font Toggle -->
+        <script src="Scripts/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
+        <script src="Scripts/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+        <!-- Page Specific -->
+        <script src="Scripts/tabs.js"></script>
+    </body>
+</html>

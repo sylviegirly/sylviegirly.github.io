@@ -9,7 +9,19 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-05-25T17:57:33-04:00</updated>
+    <updated>2025-05-27T01:24:16-04:00</updated>
+
+    <entry>
+        <title>New Media Logging Page</title>
+        <link href="https://zhongvie.neocities.org/media-logging" />
+        <updated>2025-05-27T01:24:16-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1748323456</id>
+        <content type="html">
+            &#x3C;p&#x3E;I caved and made a media log to document some of my tracked media in a single place; although
+            it won&#x27;t be everything I list in my tracking specific sites, I&#x27;d like to show off the stuff
+            I&#x27;ve consumed and my thoughts on them!&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Now Page Update!</title>
