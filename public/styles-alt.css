@@ -1050,6 +1050,10 @@ article .scrollable p:first-child {
     background-color: var(--secondary-accent);
 }
 
+.tab button:focus {
+    border: 5px solid var(--link-colour);
+}
+
 /* Create an active/current tablink class */
 .tab button.active {
     background-color: var(--secondary-accent);
