@@ -7,6 +7,7 @@ const sentence = [
         "why cant my support system be my beautiful stable mind and problem solving skills and nothing else<br/><i>— <a href='https://www.tumblr.com/3000s/715936227540582400' style='font-size: 0.8em'>3000s</a></i>",
         "think about your blorbos ON THE CLOCK<br/><i>— <a href='https://www.tumblr.com/blorbobrain/775964211427803136' style='font-size: 0.8em'>blorbobrain</a></i>",
         "85% tired 15% also tired<br/><i>— <a href='https://1st-1.tumblr.com/post/183847953452' style='font-size: 0.8em'>1st-1</a></i>",
+        "being crazy over fictional characters is so funny cuz you'll be fine all day and then you start Thinking and then you can feel yourself transform in real time<br/><i>— <a href='https://www.tumblr.com/lvmimis/778773766824247296' style='font-size: 0.8em'>lvmimis</a></i>",
         "might seem like a harmless quirk but once you start typing in exclusively lowercase you can never capitalize anything again outside the designated midsentence Gay Emphasis Zones or anyone following you for longer than a week will think you're about to commit murder<br/><i>— <a href='https://www.tumblr.com/bisopod/181325591472' style='font-size: 0.8em'>bisopod</a></i>",
         "what a day!!!!!!!! nothing happened and i was tired<br/><i>— <a href='https://sylviegirly.tumblr.com/post/107949319872' style='font-size: 0.8em'>largecoin</a></i>",
         "“man i am so tired” stays up for 3 more hours doing absolutely nothing<br/><i>— <a href='https://sylviegirly.tumblr.com/post/106024681557' style='font-size: 0.8em'>thebagofholding</a></i>",
