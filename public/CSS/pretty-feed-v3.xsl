@@ -1113,8 +1113,6 @@ This file is in BETA. Please test and contribute to the discussion:
             .bg-black {
               background-color: #e9ecdb !important;
             }
-            .bg-black p {
-            }
           }
 
           .text-blue {
