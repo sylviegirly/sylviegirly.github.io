@@ -1090,6 +1090,10 @@ This file is in BETA. Please test and contribute to the discussion:
           .bg-black {
             background-color: #1b1a1a !important;
           }
+          @media (prefers-color-scheme: light) {
+            background-color: #e9ecdb !important;
+          }
+
           .text-blue {
             color: #0366d6 !important;
           }
