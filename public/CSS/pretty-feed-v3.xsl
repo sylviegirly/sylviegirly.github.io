@@ -1058,6 +1058,11 @@ This file is in BETA. Please test and contribute to the discussion:
           .bg-green-dark {
             background-color: #525c3b !important;
           }
+          @media (prefers-color-scheme: light) {
+            .bg-green-dark {
+              background-color: #4e6137 !important;
+            }
+          }
           .bg-green {
             background-color: #28a745 !important;
           }
@@ -1091,7 +1096,9 @@ This file is in BETA. Please test and contribute to the discussion:
             background-color: #1b1a1a !important;
           }
           @media (prefers-color-scheme: light) {
-            background-color: #e9ecdb !important;
+            .bg-black {
+              background-color: #e9ecdb !important;
+            }
           }
 
           .text-blue {
