@@ -1076,6 +1076,10 @@ This file is in BETA. Please test and contribute to the discussion:
             .bg-green-dark {
               background-color: #4e6137 !important;
             }
+
+            .bg-green-dark p {
+              color: #e9ecdb;
+            }
           }
           .bg-green {
             background-color: #28a745 !important;
