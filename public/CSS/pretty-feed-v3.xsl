@@ -1075,6 +1075,7 @@ This file is in BETA. Please test and contribute to the discussion:
           @media (prefers-color-scheme: light) {
             .bg-green-dark {
               background-color: #4e6137 !important;
+              color: #e9ecdb;
             }
 
             .bg-green-dark p {
