@@ -5491,7 +5491,7 @@ This file is in BETA. Please test and contribute to the discussion:
                 It’s free.
               </p>
             </nav>
-            <a class="head_link" target="_blank">
+            <a class="head_link">
               <xsl:attribute name="href">
                 <xsl:value-of select="/atom:feed/atom:id" />
               </xsl:attribute>
