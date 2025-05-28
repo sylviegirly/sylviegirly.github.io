@@ -291,6 +291,14 @@ This file is in BETA. Please test and contribute to the discussion:
             color: #788b68;
             text-decoration: none;
           }
+          @media (prefers-color-scheme: light) {
+            body {
+              color: #16190f;
+            }
+            a {
+              color: #b67925;
+            }
+          }
           a:hover {
             text-decoration: underline;
           }
@@ -306,6 +314,12 @@ This file is in BETA. Please test and contribute to the discussion:
             background: 0 0;
             border: 0;
             border-bottom: 1px dotted #788b68;
+          }
+          @media (prefers-color-scheme: light) {
+            .rule,
+            hr {
+              border-bottom: 1px dotted #4e6137;
+            }
           }
           .rule::before,
           hr::before {
@@ -1098,6 +1112,8 @@ This file is in BETA. Please test and contribute to the discussion:
           @media (prefers-color-scheme: light) {
             .bg-black {
               background-color: #e9ecdb !important;
+            }
+            .bg-black p {
             }
           }
 
@@ -4874,6 +4890,12 @@ This file is in BETA. Please test and contribute to the discussion:
             background-color: #1b1a1a;
             border: 0;
             border-bottom: 1px dotted #788b68;
+          }
+          @media (prefers-color-scheme: light) {
+            .markdown-body hr {
+              background-color: #e9ecdb;
+              border-bottom: 1px dotted #4e6137;
+            }
           }
           .markdown-body blockquote {
             padding: 0 1em;
