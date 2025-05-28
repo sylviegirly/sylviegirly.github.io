@@ -12,6 +12,17 @@
     <updated>2025-05-27T01:24:16-04:00</updated>
 
     <entry>
+        <title>New Blog Entry!</title>
+        <link href="https://zhongvie.neocities.org/blogging" />
+        <updated>2025-05-27T01:24:16-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1748323456</id>
+        <content type="html">
+            &#x3C;p&#x3E;New blog entry yapping mostly about recognizing traits of myself (some of which I didn&#x27;t know) in my own OCs.&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;em&#x3E;(I also expanded more on my media log, but that&#x27;s minor compared to this &#x3C;/em&#x3E;&#x1F609;&#x3C;em&#x3E;)&#x3C;/em&#x3E;&#x3C;/p&#x3E;
+        </content>
+    </entry>
+
+    <entry>
         <title>New Media Logging Page</title>
         <link href="https://zhongvie.neocities.org/media-log" />
         <updated>2025-05-27T01:24:16-04:00</updated>
