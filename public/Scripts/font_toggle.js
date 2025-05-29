@@ -26,10 +26,10 @@ function toggleFont() {
     }
 }
 
-if (font === "freepixel") {
+if (onpageLoad === "freepixel") {
     sessionStorage.setItem("blogFont", "freepixel");
     document.body.style.fontFamily = "freepixel";
-} else if (theme === "light") {
+} else if (onpageLoad === "atkinson") {
     sessionStorage.setItem("blogFont", "atkinson");
     document.body.style.fontFamily = "atkinson";
 }

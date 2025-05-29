@@ -73,25 +73,25 @@
 
             html[data-theme="dark"] {
                 /* Main colors */
-                --background: #1e1e1e; /* Page background */
-                --background-accent: #292929;
+                --background: #1c0f0f; /* Page background */
+                --background-accent: #2e1d1d;
                 --color: #f0f0f0;
-                --block: #222222; /* Background color for the grid blocks in the content */
-                --body-deco: #333333;
+                --block: #150d0d; /* Background color for the grid blocks in the content */
+                --body-deco: #1e1818;
 
-                --primary-accent: #a7a7a7;
-                --secondary-accent: #858585;
+                --primary-accent: #cc8e8e;
+                --secondary-accent: #c35050;
                 --font-on-accent: #000000;
 
-                --link: #bebebe;
+                --link: #e08383;
                 --linkhover: #ffffff;
 
-                --letter-glow: rgba(255, 255, 255, 0.25);
+                --letter-glow: rgba(159, 56, 56, 0.25);
 
                 /* Sidebar colors */
-                --sidebar: #222222;
+                --sidebar: #150d0d;
                 --sidebarcolor: #f0f0f0;
-                --subtle-line: rgba(255, 255, 255, 0.2);
+                --subtle-line: rgba(255, 135, 135, 0.2);
             }
 
             @media (prefers-color-scheme: dark) {
@@ -162,20 +162,6 @@
         <div id="top"></div>
         <div id="skip"><a href="#content">Skip to content</a></div>
         <nav-header></nav-header>
-
-        <!-- =============================================== -->
-        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
-        <!-- =============================================== -->
-
-        <div class="button-wrapper">
-            <div class="button" id="font-toggle">
-                <button class="general" type="button" id="toggle-font">toggle font</button>
-            </div>
-
-            <div class="button">
-                <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
-            </div>
-        </div>
 
         <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
 

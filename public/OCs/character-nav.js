@@ -90,6 +90,19 @@ const content = `
 </nav>
 <header></header>
 
+<!-- =============================================== -->
+<!-- FONT TOGGLER + DARK MODE TOGGLER. -->
+<!-- =============================================== -->
+
+<div class="button-wrapper">
+    <div class="button">
+        <button id="font-toggle" type="button" onclick="toggleFont()">toggle font</button>
+    </div>
+
+    <div class="button">
+        <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+    </div>
+</div>
 `;
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
