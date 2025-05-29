@@ -97,7 +97,7 @@ const content = `
     <div class="clock">
         <iframe
             title="clock"
-            src="https://free.timeanddate.com/clock/i9wy7dlf/n1184/fn8/fcf3f4e0/tct/pct/pd2/th1"
+            src="https://free.timeanddate.com/clock/i9wycd32/n250/fn8/fcfcf3f4/tct/pct/pd2/ts1"
             style="border: 0; margin: 10px"
             width="69"
             height="18"></iframe>
