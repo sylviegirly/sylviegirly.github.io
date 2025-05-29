@@ -1,17 +1,44 @@
+// the system preferences
+let onpageLoad = sessionStorage.getItem("blogFont");
+let element = document.body;
+element.style.fontFamily = sessionStorage.getItem("font") || "freepixel";
+
 // On page load set the theme.
 (function () {
-    let onpageLoad = localStorage.getItem("font");
-    const font = localStorage.getItem("font");
+    let onpageLoad = sessionStorage.getItem("blogFont");
+    const font = sessionStorage.getItem("blogFont");
     let element = document.body;
-    element.style.fontFamily = localStorage.getItem("font") || "freepixel";
+    element.style.fontFamily = sessionStorage.getItem("blogFont") || "freepixel";
 })();
 
+function toggleFont() {
+    // it’s important to check for overrides again
+    let font = sessionStorage.getItem("blogFont");
+    // checks if reader selected freepixel mode
+    if (font === "atkinson") {
+        sessionStorage.setItem("blogFont", "freepixel");
+        document.body.style.fontFamily = "freepixel";
+        // checks if reader selected atkinson
+    } else {
+        sessionStorage.setItem("blogFont", "atkinson");
+        document.body.style.fontFamily = "atkinson";
+        // checks if system set dark mode
+    }
+}
+
+if (font === "freepixel") {
+    sessionStorage.setItem("blogFont", "freepixel");
+    document.body.style.fontFamily = "freepixel";
+} else if (theme === "light") {
+    sessionStorage.setItem("blogFont", "atkinson");
+    document.body.style.fontFamily = "atkinson";
+}
+
 // Function to toggle font mode
-const toggleFont = () => {
+const toggleFontOld = () => {
     let font = localStorage.getItem("font");
     console.log("The current body font is " + document.body.style.fontFamily);
     if (document.body.style.fontFamily === "freepixel") {
-        console.log("Swap to Arial");
         document.body.style.fontFamily = "atkinson";
         localStorage.setItem("font", "atkinson");
         // document.documentElement.classList.add('accessible-font');
@@ -24,4 +51,4 @@ const toggleFont = () => {
 };
 
 // Attach the toggle function to the button
-document.getElementById("toggle-font").addEventListener("click", toggleFont);
+//document.getElementById("toggle-font").addEventListener("click", toggleFont);

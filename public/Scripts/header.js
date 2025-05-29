@@ -90,6 +90,26 @@ const content = `
     </ul>
 </nav>
 
+<!-- =============================================== -->
+<!-- FONT TOGGLER + DARK MODE TOGGLER. -->
+<!-- =============================================== -->
+<div class="button-wrapper">
+    <div class="clock">
+        <iframe
+            title="clock"
+            src="https://free.timeanddate.com/clock/i9wy7dlf/n1184/fn8/fcf3f4e0/tct/pct/pd2/th1"
+            style="border: 0; margin: 10px"
+            width="69"
+            height="18"></iframe>
+    </div>
+    <div class="button">
+        <button id="font-toggle" type="button" onclick="toggleFont()">toggle font</button>
+    </div>
+
+    <div class="button">
+        <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+    </div>
+</div>
 `;
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */

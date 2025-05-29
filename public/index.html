@@ -90,19 +90,6 @@
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <!-- =============================================== -->
-        <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
-        <!-- =============================================== -->
-        <div class="button-wrapper">
-            <div class="button" id="font-toggle">
-                <button class="general" type="button" id="toggle-font">toggle font</button>
-            </div>
-
-            <div class="button">
-                <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
-            </div>
-        </div>
-
         <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
 
         <!-- =============================================== -->
@@ -853,6 +840,24 @@
         <!-- =============================================== -->
         <script>
             marquee.setup();
+        </script>
+
+        <!-- Clock Script -->
+        <script>
+                        const clockElement = document.getElementById('clock');
+                if (clockElement) {
+                    const options = {
+                        timeZone: 'Europe/Belgrade',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: true
+                    };
+                    const now = new Date().toLocaleString('en-US', options);
+                    clockElement.innerHTML = `current time in &#x1f1f7;&#x1f1f8;: ${now}`;
+                }
+            }
+            setInterval(updateClock, 60000);
+            updateClock();```
         </script>
 
         <!-- Tippy.js -->

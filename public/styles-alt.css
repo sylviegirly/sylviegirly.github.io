@@ -1425,10 +1425,16 @@ footer a:hover {
     /* FONT TOGGLE */
     /* -------------------------------------------------------- */
     .button-wrapper {
+        float: left !important;
         position: fixed;
+        margin: 0;
         left: 7px;
         margin-top: 5px;
         width: fit-content;
+    }
+
+    .clock {
+        display: none;
     }
 }
 
@@ -1512,8 +1518,10 @@ footer a:hover {
 /* FONT TOGGLE */
 /* -------------------------------------------------------- */
 .button-wrapper {
-    position: fixed;
+    position: sticky;
     top: 2px;
+    margin-top: -62px;
+    float: right;
     right: 7px;
     z-index: 9;
     display: flex;
