@@ -304,8 +304,8 @@ h3 {
 }
 
 hr {
-    border: 1px dashed;
-    border-color: var(--secondary-accent);
+    border: 0;
+    border-bottom: 1px dotted var(--secondary-accent);
 }
 
 bold,
