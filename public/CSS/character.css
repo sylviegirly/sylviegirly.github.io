@@ -244,16 +244,16 @@ nav ul {
     text-transform: uppercase;
 }
 nav ul ul {
-    background-color: var(--primary-accent);
+    background-color: var(--block);
     box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px;
-    color: var(--font-on-accent);
+    color: var(--color);
     text-transform: lowercase;
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
     text-align: left;
 }
 nav ul ul a {
-    color: white;
+    color: var(--color);
 }
 nav ul.show {
     display: grid;
@@ -272,6 +272,7 @@ nav a {
 }
 nav a:hover {
     background-color: var(--secondary-accent);
+    color: var(--color);
 }
 nav li {
     padding: 0.2rem;
