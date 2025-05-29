@@ -99,7 +99,7 @@ const content = `
             title="clock"
             src="https://free.timeanddate.com/clock/i9wycd32/n250/fn8/fcfcf3f4/tct/pct/pd2"
             style="border: 0; margin: 10px"
-            width="69"
+            width="100"
             height="18"></iframe>
     </div>
     <div class="button">
