@@ -39,6 +39,26 @@ const content = `
     <div class="title">aid's small corner</div>
     <div class="subtext">a little personal site</div>
 </header>
+<!-- =============================================== -->
+<!-- FONT TOGGLER + DARK MODE TOGGLER. -->
+<!-- =============================================== -->
+<div class="button-wrapper">
+    <div class="clock">
+        <iframe
+            title="clock"
+            src="https://free.timeanddate.com/clock/i9wycd32/n250/fn8/fcfcf3f4/tct/pct/pd2"
+            style="border: 0; margin: 10px"
+            width="100"
+            height="18"></iframe>
+    </div>
+    <div class="button">
+        <button id="font-toggle" type="button" onclick="toggleFont()">toggle font</button>
+    </div>
+
+    <div class="button">
+        <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+    </div>
+</div>
 <nav>
     <button id="toggle-0" aria-label="Toggle main menu">☰</button>
     <ul id="menu-0">
@@ -89,27 +109,6 @@ const content = `
         </li>
     </ul>
 </nav>
-
-<!-- =============================================== -->
-<!-- FONT TOGGLER + DARK MODE TOGGLER. -->
-<!-- =============================================== -->
-<div class="button-wrapper">
-    <div class="clock">
-        <iframe
-            title="clock"
-            src="https://free.timeanddate.com/clock/i9wycd32/n250/fn8/fcfcf3f4/tct/pct/pd2"
-            style="border: 0; margin: 10px"
-            width="100"
-            height="18"></iframe>
-    </div>
-    <div class="button">
-        <button id="font-toggle" type="button" onclick="toggleFont()">toggle font</button>
-    </div>
-
-    <div class="button">
-        <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
-    </div>
-</div>
 `;
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */

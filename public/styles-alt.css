@@ -1427,10 +1427,11 @@ footer a:hover {
     /* -------------------------------------------------------- */
     .button-wrapper {
         float: left !important;
-        position: fixed;
+        position: sticky;
         margin: 0;
+        top: 0;
         left: 7px;
-        margin-top: 5px;
+        margin-top: 4px !important;
         width: fit-content;
     }
 
@@ -1521,10 +1522,10 @@ footer a:hover {
 .button-wrapper {
     position: sticky;
     top: 2px;
-    margin-top: -62px;
     float: right;
     right: 7px;
     z-index: 9;
+    margin-top: 2px;
     display: flex;
     gap: 10px;
 }
