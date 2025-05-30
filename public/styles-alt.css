@@ -1741,6 +1741,11 @@ footer a:hover {
     transform: rotate(-25deg);
 }
 
+/* Img Shadows */
+.img-box img {
+    box-shadow: 2px 2px var(--primary-accent);
+}
+
 /* -------------------------------------------------------- */
 /* ANIMATIONS */
 /* -------------------------------------------------------- */
