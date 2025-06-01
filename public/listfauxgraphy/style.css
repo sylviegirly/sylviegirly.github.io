@@ -311,6 +311,13 @@ h2 a:hover {
     border-radius: 5px;
 }
 
+.center-deco {
+    float: none !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* List content */
 
 .listtext {
