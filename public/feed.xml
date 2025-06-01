@@ -9,7 +9,23 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-05-27T01:24:16-04:00</updated>
+    <updated>2025-05-31T22:17:04-04:00</updated>
+
+    <entry>
+        <title>Created a faux listography page</title>
+        <link href="https://zhongvie.neocities.org/listfauxgraphy/" />
+        <updated>2025-05-31T22:17:04-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1748744224</id>
+        <content type="html">
+            &#x3C;p&#x3E;I found Kalechip&#x27;s &#x3C;a
+            href=&#x22;https://kalechips.net/projects/code/listfauxgraphy&#x22;&#x3E;cool fake listography page
+            template&#x3C;/a&#x3E; and I wanted to make a little page for just thought dumps + random links I feel
+            won&#x27;t fit into my bookmarks page ... I probably won&#x27;t make any update posts when I add stuff to
+            it, since that&#x27;s literally just a brain dump zone, but it&#x27;s a nice little slice of life area where
+            everything is gathered more nicely.&#x3C;/p&#x3E; &#x3C;p&#x3E;I am terrible at knowing what to make lists
+            of though, even though I love the concept a lot :P&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New Blog Entry!</title>
@@ -17,8 +33,9 @@
         <updated>2025-05-27T01:24:16-04:00</updated>
         <id>https://zhongvie.neocities.org/xml/item1748323456</id>
         <content type="html">
-            &#x3C;p&#x3E;New blog entry yapping mostly about recognizing traits of myself (some of which I didn&#x27;t know) in my own OCs.&#x3C;/p&#x3E;
-&#x3C;p&#x3E;&#x3C;em&#x3E;(I also expanded more on my media log, but that&#x27;s minor compared to this &#x3C;/em&#x3E;&#x1F609;&#x3C;em&#x3E;)&#x3C;/em&#x3E;&#x3C;/p&#x3E;
+            &#x3C;p&#x3E;New blog entry yapping mostly about recognizing traits of myself (some of which I didn&#x27;t
+            know) in my own OCs.&#x3C;/p&#x3E; &#x3C;p&#x3E;&#x3C;em&#x3E;(I also expanded more on my media log, but
+            that&#x27;s minor compared to this &#x3C;/em&#x3E;&#x1F609;&#x3C;em&#x3E;)&#x3C;/em&#x3E;&#x3C;/p&#x3E;
         </content>
     </entry>
 
