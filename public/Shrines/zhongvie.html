@@ -261,6 +261,10 @@
                 height: 250px;
             }
 
+            #side-deco {
+                display: none;
+            }
+
             /* -------------------------------------------------------- */
             /* DARK MODE TOGGLES */
             /* -------------------------------------------------------- */
@@ -880,6 +884,18 @@
             /* The following CSS ONLY applies to desktop/big screens */
 
             @media screen and (min-width: 800px) {
+                /* Zhongvie Corner Deco */
+                #side-deco {
+                    display: block;
+                    max-width: 300px;
+                    height: auto;
+                    float: right;
+                    position: fixed;
+                    right: 10px;
+                    bottom: 10px;
+                    pointer-events: none;
+                }
+
                 .button-toggle {
                     top: 42px;
                 }
@@ -1646,6 +1662,8 @@
                     </div>
                 </div>
             </main>
+
+            <img id="side-deco" src="../Images/Side Decorations/zhongvieStands.png" />
 
             <footer id="main-footer">
                 <!--Footer goes here-->
