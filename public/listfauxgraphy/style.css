@@ -40,6 +40,9 @@
         --background: #211f1f;
         --background-accent: #34382f;
 
+        /* Image deco outlines (if using) */
+        --deco-outlines: rgba(152, 216, 106, 0.29);
+
         /* Universal text and link colors */
         --color: #f7eee0;
         --link: #ccaf33;
