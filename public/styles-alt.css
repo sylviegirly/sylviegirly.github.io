@@ -1643,6 +1643,17 @@ footer a:hover {
     padding-top: 10px;
 }
 
+#zhongvie-stamps {
+    margin-top: -7px;
+    overflow: hidden;
+    max-width: 604px;
+}
+
+#zhongvie-stamps img {
+    height: 100%;
+    width: auto;
+}
+
 .marquee-guts {
     padding-top: 10px;
 }
