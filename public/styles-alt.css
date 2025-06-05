@@ -322,7 +322,6 @@ em {
 
 underline,
 u {
-    text-decoration: wav;
     text-decoration-thickness: 2px;
     text-decoration-color: rgba(120, 139, 104, 0.71);
 }
