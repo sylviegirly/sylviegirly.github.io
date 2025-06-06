@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = [
         "<img class='full-width-image' src='Images/Side%20Decorations/sylvie_sunflower.jpg' aria-hidden='true' alt='' title='art by me'/>",
         "<img class='full-width-image' src='Images/Side%20Decorations/sylvie_chibi_2.png' aria-hidden='true' alt='' title='art by me'/>",
-        "<img class='full-width-image' src='Images/Side%20Decorations/zhongvieStands.png' aria-hidden='true' alt='' />",
+        "<img class='full-width-image' src='Images/Side%20Decorations/zhongvieStands.png' aria-hidden='true' alt='' title='zhongli nendo and sylvie clay figurine by littlest gifts'/>",
         "<img class='full-width-image' src='https://f2.toyhou.se/file/f2-toyhou-se/images/85730612_3J07ioqrEo7BBgg.gif' aria-hidden='true' alt='' title='art by me'/>",
         "<a href='https://x.com/_camberry'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_icon.png' aria-hidden='true' alt=''/></a>",
         "<a href='https://www.tumblr.com/scarameownya/'><img class='full-width-image' src='Images/Side%20Decorations/tinyvie.png' aria-hidden='true' alt=''/></a>",
