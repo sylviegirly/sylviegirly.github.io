@@ -1,25 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     // define your images here
     const images = [
-        "<img class='full-width-image' src='Images/Side Decorations/sylvie_sunflower.jpg' aria-hidden='true' alt='' title='art by me'/>",
-        "<img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_2.png' aria-hidden='true' alt='' title='art by me'/>",
+        "<img class='full-width-image' src='Images/Side%20Decorations/sylvie_sunflower.jpg' aria-hidden='true' alt='' title='art by me'/>",
+        "<img class='full-width-image' src='Images/Side%20Decorations/sylvie_chibi_2.png' aria-hidden='true' alt='' title='art by me'/>",
         "<img class='full-width-image' src='https://f2.toyhou.se/file/f2-toyhou-se/images/85730612_3J07ioqrEo7BBgg.gif' aria-hidden='true' alt='' title='art by me'/>",
-        "<a href='https://x.com/_camberry'><img class='full-width-image' src='Images/Side Decorations/sylvie_icon.png' aria-hidden='true' alt=''/></a>",
-        "<a href='https://www1.flightrising.com/clan-profile/257170'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_7.png' aria-hidden='true' alt=''/></a>",
-        "<a href='https://www1.flightrising.com/clan-profile/674713'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_6.png' aria-hidden='true' alt=''/></a>",
-        "<a href='https://vgen.co/EFR4INZ'><img class='full-width-image' src='Images/Side Decorations/sylvie_emote.png' aria-hidden='true' alt=''/></a>",
-        "<a href='https://toyhou.se/Opossun'><img class='full-width-image' src='Images/Side Decorations/sylvie_deer_1.png' aria-hidden='true' alt=''/></a>",
-        "<a href='https://www1.flightrising.com/clan-profile/394089'><img class='full-width-image' src='Images/Side Decorations/sylvie_deer_2.png' aria-hidden='true' alt=''/></a>",
-        "<a href='https://leeleesart.tumblr.com/'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_5.jpg' aria-hidden='true' alt='' title='thank you lily for the bday gift :)'/></a>",
-        "<a href='https://x.com/mawbyte'><img class='full-width-image' src='Images/Side Decorations/sylvie_plant.png' aria-hidden='true' alt=''/></a>",
-        "<a href='https://www1.flightrising.com/clan-profile/348859'><img class='full-width-image' src='Images/Side Decorations/sylvie_deer.png' aria-hidden='true' alt=''/></a>",
-        "<a href='https://x.com/potato_bananaz'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_1.jpg' aria-hidden='true' alt=''/></a>",
-        "<a href='https://vgen.co/DonutHead21'><img class='full-width-image' src='Images/Side Decorations/sylvie_fishing.jpg' aria-hidden='true' alt=''/></a>",
-        "<a href='https://vgen.co/Julieta__Sophia'><img class='full-width-image' src='Images/Side Decorations/sylvie_demi.jpg' aria-hidden='true' alt=''/></a>",
-        "<a href='https://twitter.com/magaridilatte'><img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_4.jpg' aria-hidden='true' alt=''/></a>",
-        "<a href='https://vgen.co/SakiKagami_'><img class='full-width-image' src='Images/Side Decorations/sylvie_in_a_box.png' aria-hidden='true' alt=''/></a>",
-        "<a href='https://vgen.co/42NEDIA'><img class='full-width-image' src='Images/Side Decorations/sylvie_christmas.jpg' aria-hidden='true' alt='' title='gift from ghost :)'/></a>",
-        "<img class='full-width-image' src='Images/Side Decorations/sylvie_chibi_3.png' aria-hidden='true' alt='' title='art by me'/>"
+        "<a href='https://x.com/_camberry'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_icon.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://www.tumblr.com/scarameownya/'><img class='full-width-image' src='Images/Side%20Decorations/tinyvie.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://x.com/thepeelucof87'><img class='full-width-image' src='Images/General%20Decorations/zhongvie.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://www1.flightrising.com/clan-profile/257170'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_chibi_7.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://www1.flightrising.com/clan-profile/674713'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_chibi_6.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/EFR4INZ'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_emote.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://toyhou.se/Opossun'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_deer_1.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://www1.flightrising.com/clan-profile/394089'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_deer_2.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://leeleesart.tumblr.com/'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_chibi_5.jpg' aria-hidden='true' alt='' title='thank you lily for the bday gift :)'/></a>",
+        "<a href='https://x.com/mawbyte'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_plant.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://www1.flightrising.com/clan-profile/348859'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_deer.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://x.com/potato_bananaz'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_chibi_1.jpg' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/DonutHead21'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_fishing.jpg' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/Julieta__Sophia'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_demi.jpg' aria-hidden='true' alt=''/></a>",
+        "<a href='https://twitter.com/magaridilatte'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_chibi_4.jpg' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/SakiKagami_'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_in_a_box.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/42NEDIA'><img class='full-width-image' src='Images/Side%20Decorations/sylvie_christmas.jpg' aria-hidden='true' alt='' title='gift from ghost :)'/></a>",
+        "<img class='full-width-image' src='Images/Side%20Decorations/sylvie_chibi_3.png' aria-hidden='true' alt='' title='art by me'/>"
     ];
 
     // this chooses a random number from all available image indices
