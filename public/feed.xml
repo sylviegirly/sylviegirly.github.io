@@ -9,7 +9,18 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-06-04T11:55:39-04:00</updated>
+    <updated>2025-06-06T09:11:31-04:00</updated>
+
+    <entry>
+        <title>Added cool video section to front page</title>
+        <link href="https://zhongvie.neocities.org" />
+        <updated>2025-06-06T09:11:31-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1749215491</id>
+        <content type="html">
+            &#x3C;p&#x3E;Added a YouTube video to the front page! :P I&#x27;ll just be using it to drop cool videos I
+            enjoyed on a [unknown] time basis&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New Blog Entry: Journaling</title>
