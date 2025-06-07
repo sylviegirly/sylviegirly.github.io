@@ -72,6 +72,23 @@
         <!-- Disclosure Menu -->
         <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
         <script src="Scripts/Accessible/accessible-menu.js" type="module"></script>
+
+        <style>
+            #videoWrapper {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 */
+                height: 0;
+                overflow: hidden;
+            }
+
+            #videoWrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
     </head>
     <body id="body">
         <!-- =============================================== -->
@@ -398,6 +415,9 @@
                         </p>
                     </div>
                 </article>
+                <!-- =============================================== -->
+                <!-- STATUS CAFE YAPPING. -->
+                <!-- =============================================== -->
                 <article>
                     <h1>
                         <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" />
@@ -424,6 +444,30 @@
                             alt=""
                             aria-hidden="true"
                             class="hide-mobile" />
+                    </div>
+                </article>
+                <!-- =============================================== -->
+                <!-- YOUTUBE VIDEO RECOMMENDATIONS. -->
+                <!-- =============================================== -->
+                <article>
+                    <h1>
+                        <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" />
+                        Cool Video Corner
+                    </h1>
+                    <p>
+                        Simple corner for any recent YouTube video I enjoyed a lot.
+                        <img src="Images/Nuko/nukoBigHeart.gif" alt="" aria-hidden="true" />
+                    </p>
+                    <div id="videoWrapper">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/_l_TglbeHjE?si=Dr5-T9RlTvQBvP71"
+                            title="YouTube video player"
+                            style="border: 0; border-radius: 10px"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
                     </div>
                 </article>
                 <!-- =============================================== -->
@@ -784,6 +828,27 @@
                     <p style="text-align: center; font-size: 0.75em; line-height: 1em">
                         You can check out my <a href="/links.html">links</a> for even more webrings too :3
                     </p>
+                </section>
+                <section>
+                   <!-- HEADER -->
+                    <h4>
+                        <img src="Images/General%20Decorations/plant_bopping.gif" aria-hidden="true" alt="" />
+                        Cliques
+                        <img src="Images/General%20Decorations/plant_bopping.gif" aria-hidden="true" alt="" />
+                    </h4>
+                    <ul style="list-style: none; margin-left: -40px">
+                        <li>
+                            <a href="https://petrapixel.neocities.org/cliques">love tropes</a>
+                            // friends to lovers
+                        </li>
+                        <li><a href="https://petrapixel.neocities.org/cliques">youtube</a> // caddicarus</li>
+                        <li><a href="https://dust.kuchiki.net/">celestial divine</a> // scorpio</li>
+                        <li><a href="https://scented.minty.nu//">scented</a> // green tea</li>
+                        <li>
+                            <a href="https://pkmn.caelestis.nu" rel="noopener noreferrer">I Choose You!</a> |
+                            <img src="Images/Misc/giratina_sprite.png" data-tippy-content="Giratina" />
+                        </li>
+                    </ul>
                 </section>
             </aside>
             <!-- =============================================== -->
