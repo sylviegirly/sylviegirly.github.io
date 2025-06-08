@@ -1585,6 +1585,14 @@ footer a:hover {
     bottom: 10px;
 }
 
+.hover-grow a {
+    transition: transform 0.2s ease-in-out; /* Animation */
+}
+
+.hover-grow a:hover {
+    transform: scale(1.1);
+}
+
 #quizzes {
     display: grid;
     grid-template-columns: 50% 50%;
