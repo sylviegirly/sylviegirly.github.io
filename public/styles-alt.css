@@ -131,61 +131,6 @@ html[data-theme="dark"] {
 }
 
 /* -------------------------------------------------------- */
-/* DARK MODE TOGGLES */
-/* -------------------------------------------------------- */
-.toggle-switch {
-    position: absolute;
-    right: 115px;
-    top: 10px;
-    width: 50px;
-}
-
-.toggle-switch label {
-    position: absolute;
-    width: 100%;
-    height: 25px;
-    background-color: var(--light);
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-input {
-    position: absolute;
-    display: none;
-}
-
-.slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    transition: 0.3s;
-}
-
-input:checked ~ .slider {
-    background-color: var(--dark);
-}
-
-.toggle-switch .slider::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    right: 3px;
-    width: 19px;
-    height: 19px;
-    border-radius: 50%;
-    box-shadow: none;
-    background-color: var(--dark);
-    transition: 0.3s;
-}
-
-.toggle-switch input:checked ~ .slider::before {
-    transform: translateX(-24px);
-    background-color: var(--dark);
-    box-shadow: inset 4px -4px 0 0 var(--light);
-}
-
-/* -------------------------------------------------------- */
 /* BASICS */
 /* -------------------------------------------------------- */
 
