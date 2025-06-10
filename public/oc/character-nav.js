@@ -58,9 +58,9 @@ const content = `
                 <li id="item-4-5-0" class="dropdown">
                     <a id="link-4-5-0" href="#">Shrines</a>
                     <ul id="menu-4-5">
-                        <li id="item-4-5-1"><a id="link-4-5-1" href="../Shrines/zhongli.html">Zhongli</a></li>
+                        <li id="item-4-5-1"><a id="link-4-5-1" href="../shrines/zhongli.html">Zhongli</a></li>
                         <li id="item-4-5-2">
-                            <a id="link-4-5-2" href="../Shrines/zhongvie.html">Zhongvie (🌿🔶)</a>
+                            <a id="link-4-5-2" href="../shrines/zhongvie.html">Zhongvie (🌿🔶)</a>
                         </li>
                     </ul>
                 </li>
