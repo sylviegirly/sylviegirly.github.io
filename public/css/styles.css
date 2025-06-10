@@ -39,7 +39,7 @@ html[data-theme="dark"] {
     --primary-accent: #788b68;
     --secondary-accent: #cee8ba;
     --font-on-accent: #000000;
-    --letter-glow: rgba(74, 118, 58, 0.15);
+    --letter-glow: rgba(74, 118, 58, 0.46);
 
     /* TEXT */
     --text-colour: #f4f4f4;
@@ -66,7 +66,7 @@ html[data-theme="dark"] {
         --primary-accent: #788b68;
         --secondary-accent: #cee8ba;
         --font-on-accent: #000000;
-        --letter-glow: rgba(74, 118, 58, 0.15);
+        --letter-glow: rgba(74, 118, 58, 0.46);
 
         /* TEXT */
         --text-colour: #f4f4f4;
@@ -277,9 +277,8 @@ strikethrough {
 }
 
 mark {
-    text-shadow: 1px 1px 4px var(--letter-glow);
-    background-color: inherit;
     color: var(--text-colour);
+    background-color: var(--letter-glow);
 }
 
 .highlight {
