@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "<img class='full-width-image' src='img/sidebar/zhongvieStands.png' aria-hidden='true' alt='' title='zhongli nendo and sylvie clay figurine by littlest gifts'/>",
         "<img class='full-width-image' src='https://f2.toyhou.se/file/f2-toyhou-se/images/85730612_3J07ioqrEo7BBgg.gif' aria-hidden='true' alt='' title='art by me'/>",
         "<a href='https://x.com/_camberry'><img class='full-width-image' src='img/sidebar/sylvie_icon.png' aria-hidden='true' alt=''/></a>",
+        "<a href='https://vgen.co/cakepawzz'><img class='full-width-image' src='img/sidebar/yippe.gif' aria-hidden='true' alt=''/></a>",
         "<a href='https://www.tumblr.com/scarameownya/'><img class='full-width-image' src='img/sidebar/tinyvie.png' aria-hidden='true' alt=''/></a>",
         "<a href='https://x.com/thepeelucof87'><img class='full-width-image' src='img/decos/zhongvie.png' aria-hidden='true' alt=''/></a>",
         "<a href='https://www1.flightrising.com/clan-profile/257170'><img class='full-width-image' src='img/sidebar/sylvie_chibi_7.png' aria-hidden='true' alt=''/></a>",
