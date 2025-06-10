@@ -15,6 +15,16 @@
 
     --->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Site Title -->
+        <title>sitemap</title>
+
+        <!-- Site Description -->
+        <meta content="A sitemap linking to every page on this site." name="description" />
+
         <!-- Dark Mode Toggle -->
         <script>
             if (theme === "dark") {
@@ -27,38 +37,26 @@
                 document.getElementById("theme-toggle").innerHTML = "🌙";
             }
         </script>
-        <!-- Site Title -->
-        <title>sitemap</title>
-
-        <!-- Site Description -->
-        <meta content="A sitemap linking to every page on this site." name="description" />
-
-        <!-- Setting character encoding and viewport size. Do not remove. -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- FavIcon -->
-        <link ref="favicon" href="favicon.ico" />
 
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="styles-alt.css" />
-        <link rel="stylesheet" href="CSS/normalize.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JavaScript: -->
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
-        <script src="Scripts/sparkle_cursor.js"></script>
-        <script src="Scripts/header.js" defer></script>
-        <script src="Scripts/left-sidebar.js" defer></script>
-        <script src="Scripts/footer.js" defer></script>
-        <script src="Scripts/tab-title-suffix.js"></script>
+        <script src="js/sparkle_cursor.js"></script>
+        <script src="js/header.js" defer></script>
+        <script src="js/left-sidebar.js" defer></script>
+        <script src="js/footer.js" defer></script>
+        <script src="js/tab-title-suffix.js"></script>
 
-        <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <script src="js/accessibility/disclosure-menu.iife.js"></script>
         <!-- Disclosure Menu -->
-        <script src="Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <script src="js/accessibility/accessible-menu.js" type="module"></script>
     </head>
     <body id="body">
         <a href="#content" id="skip-to-content-link">Skip to content</a>
@@ -79,9 +77,7 @@
             <left-sidebar></left-sidebar>
             <main id="content">
                 <article>
-                    <h1>
-                        <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" /> Sitemap
-                    </h1>
+                    <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Sitemap</h1>
                     <p>
                         To be fair even <b><i>I</i></b> don't know exactly what all my links will be nor the sections of
                         my website, so I guess this is kinda a semi not-to-do-but-to-do list as well for places to put
@@ -104,11 +100,11 @@
                         <li style="list-style-type: none">
                             <ul>
                                 <li><a href="ocs.html">All OCs</a></li>
-                                <li><a href="OCs/hideki.html">Hideki</a></li>
-                                <li><a href="OCs/khaliun.html">Khaliun</a></li>
-                                <li><a href="OCs/nameless.html">Nameless</a></li>
-                                <li><a href="OCs/sylvie.html">Sylvie</a></li>
-                                <li><a href="OCs/yadyra.html">Yadyra</a></li>
+                                <li><a href="oc/hideki.html">Hideki</a></li>
+                                <li><a href="oc/khaliun.html">Khaliun</a></li>
+                                <li><a href="oc/nameless.html">Nameless</a></li>
+                                <li><a href="oc/sylvie.html">Sylvie</a></li>
+                                <li><a href="oc/yadyra.html">Yadyra</a></li>
                             </ul>
                         </li>
                         <li>Shrines</li>
@@ -117,8 +113,8 @@
                                 <li><s>Dragon Age 2</s></li>
                                 <li><s>Elsword</s></li>
                                 <li><s>Flight Rising</s></li>
-                                <li><a href="Shrines/zhongli.html">Zhongli</a></li>
-                                <li><a href="Shrines/zhongvie.html">Zhongvie</a></li>
+                                <li><a href="shrines/zhongli.html">Zhongli</a></li>
+                                <li><a href="shrines/zhongvie.html">Zhongvie</a></li>
                             </ul>
                         </li>
                         <li>Fun Things</li>
@@ -130,15 +126,15 @@
                                     <a href="recipes.html">Recipes</a>
                                     <ul>
                                         <li>
-                                            <a href="Recipes/airfry-pork-tenderloin.html">Airfry Pork Tenderloin</a>
+                                            <a href="recipes/airfry-pork-tenderloin.html">Airfry Pork Tenderloin</a>
                                         </li>
                                         <li><s>Basa Filet</s></li>
-                                        <li><a href="Recipes/brownie-mug.html">Brownie in a Mug</a></li>
-                                        <li><a href="Recipes/fried-rice.html">Fried Rice</a></li>
-                                        <li><a href="Recipes/hot-and-sour.html">Hot and Sour Soup</a></li>
+                                        <li><a href="recipes/brownie-mug.html">Brownie in a Mug</a></li>
+                                        <li><a href="recipes/fried-rice.html">Fried Rice</a></li>
+                                        <li><a href="recipes/hot-and-sour.html">Hot and Sour Soup</a></li>
                                         <li><s>Japanese Curry</s></li>
                                         <li><s>Matcha Cookies</s></li>
-                                        <li><a href="Recipes/pad-see-ew.html">Pad See Ew</a></li>
+                                        <li><a href="recipes/pad-see-ew.html">Pad See Ew</a></li>
                                         <li><s>Portugese Rice</s></li>
                                     </ul>
                                 </li>
@@ -169,13 +165,13 @@
         </script>
 
         <!-- Dark Mode Toggle -->
-        <script src="Scripts/Accessible/dark-mode-alt.js"></script>
+        <script src="js/accessibility/dark-mode-alt.js"></script>
 
         <!-- Font Toggle -->
-        <script src="Scripts/font_toggle.js"></script>
+        <script src="js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
-        <script src="Scripts/scroll-to-top.js"></script>
+        <script src="js/scroll-to-top.js"></script>
 
         <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>

@@ -77,15 +77,15 @@ const content = `
         <li id="item-4-0-0" class="dropdown">
             <a id="link-4-0-0" href="#">OCs / Shrines</a>
             <ul id="menu-4">
-                <li id="item-4-1-0"><a id="link-4-1-0" href="/OCs/sylvie.html">Sylvie</a></li>
-                <li id="item-4-2-0"><a id="link-4-2-0" href="/OCs/yadyra.html">Yadyra</a></li>
-                <li id="item-4-3-0"><a id="link-4-3-0" href="/OCs/nameless.html">Nameless</a></li>
+                <li id="item-4-1-0"><a id="link-4-1-0" href="/oc/sylvie.html">Sylvie</a></li>
+                <li id="item-4-2-0"><a id="link-4-2-0" href="/oc/yadyra.html">Yadyra</a></li>
+                <li id="item-4-3-0"><a id="link-4-3-0" href="/oc/nameless.html">Nameless</a></li>
                 <li id="item-4-4-0"><a id="link-4-4-0" href="/ocs.html">Other OCs</a></li>
                 <li id="item-4-5-0" class="dropdown">
                     <a id="link-4-5-0" href="#">Shrines</a>
                     <ul id="menu-4-5">
-                        <li id="item-4-5-1"><a id="link-4-5-1" href="/Shrines/zhongli.html">Zhongli</a></li>
-                        <li id="item-4-5-2"><a id="link-4-5-2" href="/Shrines/zhongvie.html">Zhongvie (🌿🔶)</a></li>
+                        <li id="item-4-5-1"><a id="link-4-5-1" href="/shrines/zhongli.html">Zhongli</a></li>
+                        <li id="item-4-5-2"><a id="link-4-5-2" href="/shrines/zhongvie.html">Zhongvie (🌿🔶)</a></li>
                     </ul>
                 </li>
             </ul>

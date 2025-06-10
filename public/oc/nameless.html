@@ -19,10 +19,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Yadyra</title>
+        <title>Nameless</title>
 
         <!-- FavIcon Gif -->
-        <link rel="icon" type="image/gif" href="../Images/OC%20Stuff/Yadyra/favicon.gif" />
+        <link rel="icon" type="image/gif" href="../img/oc/Nameless/favicon.gif" />
 
         <!-- Dark Mode Toggle -->
         <script>
@@ -40,126 +40,134 @@
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" type="text/css" href="../CSS/character.css" />
-        <link rel="stylesheet" href="../CSS/lightbox.css" />
+        <link rel="stylesheet" type="text/css" href="../css/character.css" />
+        <link rel="stylesheet" href="../css/lightbox.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-        <script src="../Scripts/tab-title-suffix.js"></script>
 
         <!-- JS: -->
-        <script src="../Scripts/lightbox-plus-jquery.js"></script>
+        <script src="../js/lightbox-plus-jquery.js"></script>
         <script src="character-nav.js" defer></script>
         <!-- Disclosure Menu -->
-        <script src="../Scripts/Accessible/disclosure-menu.iife.js"></script>
-        <script src="../Scripts/Accessible/accessible-menu.js" type="module"></script>
-        <script src="../Scripts/tab-title-suffix.js"></script>
+        <script src="../js/accessibility/disclosure-menu.iife.js"></script>
+        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
+        <script src="../js/tab-title-suffix.js"></script>
         <style>
             html,
             html[data-theme="light"] {
                 /* Main colors */
-                --background: #bca0aa; /* Page background */
-                --background-accent: #ceb3bc;
-                --color: #1e0b0b;
-                --block: #f9f0f0; /* Background color for the grid blocks in the content */
-                --body-deco: #f0d9d9;
+                --background: #cecece; /* Page background */
+                --background-accent: #e7e7e7;
+                --color: #171616;
+                --block: #ededed; /* Background color for the grid blocks in the content */
 
-                --primary-accent: #ad5f74;
-                --secondary-accent: #4d1122;
+                --link: #171717;
+                --linkhover: #cccccc;
+
+                --letter-glow: rgba(177, 177, 177, 0.25);
+
+                --primary-accent: #454545;
+                --secondary-accent: #777777;
+                --body-deco: #ffffff;
                 --font-on-accent: #ffffff;
 
-                --link: #b4254d;
-                --linkhover: #291616;
-
-                --letter-glow: rgba(177, 97, 119, 0.25);
+                --letter-glow: rgba(18, 14, 14, 0.25);
 
                 /* Sidebar colors */
-                --sidebar: #f9f0f0;
-                --sidebarcolor: #1e0b0b;
-                --subtle-line: rgba(70, 13, 13, 0.2);
+                --sidebar: #ededed;
+                --sidebarcolor: #171616;
+                --subtle-line: rgba(0, 0, 0, 0.2);
             }
 
             html[data-theme="dark"] {
                 /* Main colors */
-                --background: #1e1919; /* Page background */
-                --background-accent: #2e2222;
-                --color: #f2e6e6;
+                --background: #211f1f; /* Page background */
+                --background-accent: #2c2c2c;
+                --color: #f4f4f4;
                 --block: #191717; /* Background color for the grid blocks in the content */
-                --body-deco: #141212;
 
-                --primary-accent: #ad5f74;
-                --secondary-accent: #edb4c4;
+                --link: #ffffff;
+                --linkhover: #555555;
+
+                --letter-glow: rgba(177, 177, 177, 0.25);
+
+                --primary-accent: #676767;
+                --secondary-accent: #bcbcbc;
+                --body-deco: #2b2b2b;
                 --font-on-accent: #ffffff;
-
-                --link: #c38798;
-                --linkhover: #ffffff;
-
-                --letter-glow: rgba(177, 97, 119, 0.25);
 
                 /* Sidebar colors */
                 --sidebar: #191717;
-                --sidebarcolor: #f2e6e6;
-                --subtle-line: rgba(249, 140, 140, 0.2);
+                --sidebarcolor: #f4f4f4;
+                --sidebartitle: #000;
+                --subtle-line: rgba(244, 244, 244, 0.2);
             }
 
             @media (prefers-color-scheme: dark) {
                 html,
                 html[data-theme="dark"] {
                     /* Main colors */
-                    --background: #1e1919; /* Page background */
-                    --background-accent: #2e2222;
-                    --color: #f2e6e6;
+                    --background: #211f1f; /* Page background */
+                    --background-accent: #2c2c2c;
+                    --color: #f4f4f4;
                     --block: #191717; /* Background color for the grid blocks in the content */
-                    --body-deco: #141212;
 
-                    --primary-accent: #ad5f74;
-                    --secondary-accent: #edb4c4;
+                    --link: #ffffff;
+                    --linkhover: #555555;
+
+                    --letter-glow: rgba(177, 177, 177, 0.25);
+
+                    --primary-accent: #676767;
+                    --secondary-accent: #bcbcbc;
+                    --body-deco: #2b2b2b;
                     --font-on-accent: #ffffff;
-
-                    --link: #c38798;
-                    --linkhover: #ffffff;
-
-                    --letter-glow: rgba(177, 97, 119, 0.25);
 
                     /* Sidebar colors */
                     --sidebar: #191717;
-                    --sidebarcolor: #f2e6e6;
-                    --subtle-line: rgba(249, 140, 140, 0.2);
+                    --sidebarcolor: #f4f4f4;
+                    --sidebartitle: #000;
+                    --subtle-line: rgba(244, 244, 244, 0.2);
                 }
 
                 html[data-theme="light"] {
                     /* Main colors */
-                    --background: #bca0aa; /* Page background */
-                    --background-accent: #ceb3bc;
-                    --color: #1e0b0b;
-                    --block: #f9f0f0; /* Background color for the grid blocks in the content */
-                    --body-deco: #f0d9d9;
+                    --background: #cecece; /* Page background */
+                    --background-accent: #e7e7e7;
+                    --color: #171616;
+                    --block: #ededed; /* Background color for the grid blocks in the content */
 
-                    --primary-accent: #ad5f74;
-                    --secondary-accent: #4d1122;
+                    --link: #171717;
+                    --linkhover: #cccccc;
+
+                    --letter-glow: rgba(177, 177, 177, 0.25);
+
+                    --primary-accent: #454545;
+                    --secondary-accent: #777777;
+                    --body-deco: #ffffff;
                     --font-on-accent: #ffffff;
 
-                    --link: #b4254d;
-                    --linkhover: #291616;
-
-                    --letter-glow: rgba(177, 97, 119, 0.25);
+                    --letter-glow: rgba(18, 14, 14, 0.25);
 
                     /* Sidebar colors */
-                    --sidebar: #f9f0f0;
-                    --sidebarcolor: #1e0b0b;
-                    --subtle-line: rgba(70, 13, 13, 0.2);
+                    --sidebar: #ededed;
+                    --sidebarcolor: #171616;
+                    --subtle-line: rgba(0, 0, 0, 0.2);
                 }
             }
 
             :root {
-                --header-image: url("https://images.pexels.com/photos/2719301/pexels-photo-2719301.jpeg");
-                --focal-image: url("../Images/OC%20Stuff/Yadyra/focal_image.jpg");
-                --design-image: url("../Images/OC%20Stuff/Yadyra/design_image.png");
-                --focal-trivia-image: url("../Images/OC%20Stuff/Yadyra/trivia_focal.png");
+                --header-image: url("https://images.pexels.com/photos/557782/pexels-photo-557782.jpeg");
+                --focal-image: url("../img/oc/Nameless/focal_image.png");
+                --design-image: url("../img/oc/Nameless/design_image.jpg");
+                --focal-trivia-image: url("../img/oc/Nameless/trivia_image.jpg");
 
-                --moodboard-1-image: url("https://images.unsplash.com/photo-1540458638618-893e9fb35c07");
-                --moodboard-2-image: url("https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86");
-                --moodboard-3-image: url("https://images.unsplash.com/photo-1504701954957-2010ec3bcec1");
-                --moodboard-4-image: url("https://images.unsplash.com/photo-1608303852360-97cb721e42cc");
-                --moodboard-5-image: url("https://images.unsplash.com/photo-1562048048-86d659689440");
+                --moodboard-1-image: url("https://images.unsplash.com/photo-1476370648495-3533f64427a2");
+                --moodboard-2-image: url("https://images.unsplash.com/photo-1581373563031-48bd9ead7137");
+                --moodboard-3-image: url("https://images.unsplash.com/photo-1644430261439-beb2db7ae22a");
+                --moodboard-4-image: url("https://images.unsplash.com/photo-1538712088957-c1295ab4b803");
+                --moodboard-5-image: url("https://images.unsplash.com/photo-1520262494112-9fe481d36ec3");
+
+                --light: #fff;
+                --dark: #000;
             }
         </style>
     </head>
@@ -177,48 +185,42 @@
                     <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
                     <div class="icon">
                         <img
-                            src="../Images/OC%20Stuff/Yadyra/sidebar_image.jpg"
+                            src="../img/oc/Nameless/sidebar_icon.jpg"
                             alt=""
-                            data-tippy-content="Art by vanillssugar"
-                            aria-hidden="true" />
+                            aria-hidden="true"
+                            data-tippy-content="Art by Redeum" />
                     </div>
-                    <div class="header">Yadyra Chóros</div>
+                    <div class="header">Nameless</div>
 
                     <!-- Quote -->
-                    <div class="quote">
-                        You'd be amazed as to how gods enjoy feeding on 'stories' and reading; I am one of those myself,
-                        but rather than a 'reader', I'd call myself a ... ghostwriter, perhaps
-                    </div>
+                    <div class="quote">ohhh fuck off. someone learned my summoning ritual again. ill be right back</div>
 
                     <!-- Navigation menu  -->
                     <div class="" id="main-menu">
                         <ul>
-                            <li><a href="https://toyhou.se/5806515.yadyra">Toyhouse</a></li>
-                            <li><a href="https://ca.pinterest.com/Asuraid/yadyra/">Pinterest</a></li>
+                            <li><a href="https://toyhou.se/5877378.nameless">Toyhouse</a></li>
+                            <li><a href="https://ca.pinterest.com/Asuraid/nameless/">Pinterest</a></li>
                         </ul>
                     </div>
-                    <p>Stinky eldritch abomination man ... can you tell he's the guardian of life?</p>
+                    <p>Embodiment of pride and whatever other sins you wanna tick off a checklist.</p>
                     <hr />
                     <button class="accordion">Credits</button>
                     <div class="panel">
                         <ul>
                             <li>
-                                Stamps: <a href="https://www.deviantart.com/bulletblend">bulletblend</a>,
-                                <a href="https://www.deviantart.com/stu-pixels">stu-pixels</a>,
-                                <a href="https://www.deviantart.com/catstam">catstam</a>,
-                                <a href="https://www.deviantart.com/toydotpng">toydotpng</a>,
-                                <a href="https://www.deviantart.com/sinnamonstamps">sinnamonstamps</a>
+                                Stamps: <a href="https://www.deviantart.com/sinnamonstamps">sinnamonstamps</a>,
+                                <a href="https://www.deviantart.com/reykholtz">reykholtz</a>,
+                                <a href="https://www.deviantart.com/justyoungheroes">justyoungheroes</a>,
+                                <a href="https://www.deviantart.com/prince-deer">prince-deer</a>,
+                                <a href="https://www.deviantart.com/cobrastamps">cobrastamps</a>
                             </li>
                             <li>
                                 Flags: <a href="https://toyhou.se/21355465.my-tiny-pride-flags/gallery">l0stlights</a>
                             </li>
                             <li>
-                                Moodboard + Header: <a href="https://unsplash.com/">unsplash</a>,
-                                <a href="https://www.pexels.com/">pexels</a>
-                            </li>
-                            <li>
                                 Ribbons: <a href="https://toyhou.se/15560571.ribbon-repository-updating">repository</a>
                             </li>
+                            <li>Header + Moodboard: <a href="https://unsplash.com/">unsplash</a></li>
                         </ul>
                     </div>
                 </div>
@@ -231,7 +233,7 @@
                 <!-- CHARACTER INFORMATION: DESKTOP ------------------------------>
                 <section class="twothird second-order">
                     <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
-                    <h1>the ultimate universe hopper</h1>
+                    <h1>ruler of all divine evils</h1>
                     <div class="row">
                         <div class="column">
                             <div class="stat-holder">
@@ -241,7 +243,7 @@
                                 <div>
                                     <!-- NAME -->
                                     <div class="stat-name">name</div>
-                                    <div>yadyra chóros</div>
+                                    <div>nameless</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -253,11 +255,7 @@
                                     <div class="stat-name">age</div>
                                     <div>
                                         very, <i>very</i>
-                                        <span
-                                            class="tippy"
-                                            data-tippy-content="Like billions of years old, it's not worth tracking to him"
-                                            >old</span
-                                        >
+                                        <span class="tippy" data-tippy-content="Billions of years old">old</span>
                                     </div>
                                 </div>
                             </div>
@@ -268,14 +266,7 @@
                                 <div>
                                     <!-- GENDER -->
                                     <div class="stat-name">gender</div>
-                                    <div>
-                                        agender /
-                                        <span
-                                            class="tippy"
-                                            data-tippy-content="Removed entirely from the concept of gender"
-                                            >apogender</span
-                                        >
-                                    </div>
+                                    <div>agender</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -284,7 +275,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">role</div>
-                                    <div>overseer and guardian of life</div>
+                                    <div>king / ruler</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -292,9 +283,9 @@
                                     <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <!-- AGE -->
+                                    <!-- ALIGNMENT -->
                                     <div class="stat-name">alignment</div>
-                                    <div>true neutral</div>
+                                    <div>chaotic neutral</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -304,7 +295,7 @@
                                 <div>
                                     <!-- BIRTHDAY -->
                                     <div class="stat-name">birthday</div>
-                                    <div>january 1st</div>
+                                    <div>april 1st</div>
                                 </div>
                             </div>
                         </div>
@@ -316,7 +307,7 @@
                                 <div>
                                     <!-- NICKNAMES / ALT NAMES -->
                                     <div class="stat-name">called</div>
-                                    <div>the pink man / guardian</div>
+                                    <div>demon king / ruler of all hells</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -326,7 +317,7 @@
                                 <div>
                                     <!-- SPECIES -->
                                     <div class="stat-name">species</div>
-                                    <div>celestial being / god</div>
+                                    <div>true demon</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -336,7 +327,7 @@
                                 <div>
                                     <!-- PRONOUNS -->
                                     <div class="stat-name">pronouns</div>
-                                    <div>he/him (or any)</div>
+                                    <div>he / him</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -345,7 +336,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">mbti</div>
-                                    <div>INTJ-A</div>
+                                    <div>ESTP-A</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -354,7 +345,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">element</div>
-                                    <div>time / space</div>
+                                    <div>darkness</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -364,55 +355,47 @@
                                 <div>
                                     <!-- GEMSTONE -->
                                     <div class="stat-name">gemstone</div>
-                                    <div>cobaltoan calcite</div>
+                                    <div>obsidian</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="scrollable">
+                        <p><i>"The soul is richest when it's desperate."</i></p>
                         <p>
-                            Yadyra is what many would consider being an enigma; known as the balance and overseer of the
-                            universe as it is, a creature able to tear time and space asunder. The man easily scoffs at
-                            these stories and plays them down, though not out of humbleness, but more the desire to
-                            shrug them off&mdash;he sees no reason to awe over what to him merely seems like child&#39;s
-                            play.
+                            A demon among the world of the living ... well, among them only when he's craving his
+                            favourite food: <b>souls</b>. With a smooth tongue and charming persona, it's not hard for
+                            him to lure in unsuspecting humans with a thirst for something more, for an answer or
+                            resolution that he can happily provide ... <b>at a price</b>, of course.
                         </p>
-
                         <p>
-                            Yadyra, at his core, is an old being born out of existence itself with a purpose to make
-                            sure the delicate balance of life and death is not disrupted throughout this reality and
-                            many others.
+                            He spends his spare time managing the other demons; with his power, he ranks higher than
+                            most and many respect him almost to a fault. Some call him a king, along with many other
+                            ostentatious titles, but he shrugs them off as he feels no true desire for them — their
+                            purpose is merely to survive by the end of it, not to rise up and overtake their food
+                            resource.
                         </p>
-
+                        <p>( Though he'd be lying if he said he didn't enjoy watching humans undermine themselves. )</p>
                         <p>
-                            Out of sheer curiosity and boredom, he often traverses across different planets and
-                            realities to satisfy his itch to observe and see how possibilities play out (sometimes with
-                            a little nudge from him one way or another), but otherwise remains impartial in his
-                            observations an actions; only those daring to toy with the flow of life itself will see him
-                            stepping in.
-                        </p>
-
-                        <p>
-                            He is quite a stoic and serious man with a shitlord energy about him, quick witted and able
-                            to throw quips and verbal stabs towards others. Often accompanied by his &#39;son&#39; and
-                            companion star who is used as a stress ball to squeeze.
+                            To those willing to deal with the devil (or just talk to him), he makes a wonderful
+                            conversation partner; millenniums of living have given him a vast depth of knowledge and
+                            experience to discuss, though one still has to tread carefully with him.
                         </p>
                     </div>
                 </section>
 
                 <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
-                <section class="third focal" data-tippy-content="Art by forcedcoma">
+                <section class="third focal" data-tippy-content="Art by Sasu">
                     <div class="flags">
-                        <img src="../Images/Flags/aroace.png" alt="aroace flag" data-tippy-content="AroAce" />
-                        <img src="../Images/Flags/agender.png" alt="agender flag" data-tippy-content="Agender" />
-                        <img src="../Images/Flags/apogender.png" alt="apogender flag" data-tippy-content="Apogender" />
+                        <img src="../img/flags/aroace.png" alt="aroace flag" data-tippy-content="AroAce" />
+                        <img src="../img/flags/agender.png" alt="agender flag" data-tippy-content="Agender" />
                     </div>
                 </section>
 
                 <!-- CHARACTER INFORMATION: MOBILE ------------------------------>
-                <section class="twothird first-order" aria-hidden="true">
+                <section class="twothird first-order">
                     <!-- MOBILE INFORMATION, PLEASE COPY AND PASTE TO DESKTOP -->
-                    <h1>the ultimate universe hopper</h1>
+                    <h1>ruler of all divine evils</h1>
                     <div class="row">
                         <div class="column">
                             <div class="stat-holder">
@@ -422,7 +405,7 @@
                                 <div>
                                     <!-- NAME -->
                                     <div class="stat-name">name</div>
-                                    <div>yadyra chóros</div>
+                                    <div>nameless</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -434,11 +417,7 @@
                                     <div class="stat-name">age</div>
                                     <div>
                                         very, <i>very</i>
-                                        <span
-                                            class="tippy"
-                                            data-tippy-content="Like billions of years old, it's not worth tracking to him"
-                                            >old</span
-                                        >
+                                        <span class="tippy" data-tippy-content="Billions of years old">old</span>
                                     </div>
                                 </div>
                             </div>
@@ -449,14 +428,7 @@
                                 <div>
                                     <!-- GENDER -->
                                     <div class="stat-name">gender</div>
-                                    <div>
-                                        agender /
-                                        <span
-                                            class="tippy"
-                                            data-tippy-content="Removed entirely from the concept of gender"
-                                            >apogender</span
-                                        >
-                                    </div>
+                                    <div>agender</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -465,7 +437,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">role</div>
-                                    <div>overseer and guardian of life</div>
+                                    <div>king / ruler</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -473,9 +445,9 @@
                                     <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <!-- AGE -->
+                                    <!-- ALIGNMENT -->
                                     <div class="stat-name">alignment</div>
-                                    <div>true neutral</div>
+                                    <div>chaotic neutral</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -485,7 +457,7 @@
                                 <div>
                                     <!-- BIRTHDAY -->
                                     <div class="stat-name">birthday</div>
-                                    <div>january 1st</div>
+                                    <div>april 1st</div>
                                 </div>
                             </div>
                         </div>
@@ -497,7 +469,7 @@
                                 <div>
                                     <!-- NICKNAMES / ALT NAMES -->
                                     <div class="stat-name">called</div>
-                                    <div>the pink man / guardian</div>
+                                    <div>demon king / ruler of all hells</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -507,7 +479,7 @@
                                 <div>
                                     <!-- SPECIES -->
                                     <div class="stat-name">species</div>
-                                    <div>celestial being / god</div>
+                                    <div>true demon</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -517,7 +489,7 @@
                                 <div>
                                     <!-- PRONOUNS -->
                                     <div class="stat-name">pronouns</div>
-                                    <div>he/him (or any)</div>
+                                    <div>he / him</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -526,7 +498,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">mbti</div>
-                                    <div>INTJ-A</div>
+                                    <div>ESTP-A</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -535,7 +507,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">element</div>
-                                    <div>time / space</div>
+                                    <div>darkness</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -545,38 +517,31 @@
                                 <div>
                                     <!-- GEMSTONE -->
                                     <div class="stat-name">gemstone</div>
-                                    <div>cobaltoan calcite</div>
+                                    <div>obsidian</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="scrollable">
+                        <p><i>"The soul is richest when it's desperate."</i></p>
                         <p>
-                            Yadyra is what many would consider being an enigma; known as the balance and overseer of the
-                            universe as it is, a creature able to tear time and space asunder. The man easily scoffs at
-                            these stories and plays them down, though not out of humbleness, but more the desire to
-                            shrug them off&mdash;he sees no reason to awe over what to him merely seems like child&#39;s
-                            play.
+                            A demon among the world of the living ... well, among them only when he's craving his
+                            favourite food: <b>souls</b>. With a smooth tongue and charming persona, it's not hard for
+                            him to lure in unsuspecting humans with a thirst for something more, for an answer or
+                            resolution that he can happily provide ... <b>at a price</b>, of course.
                         </p>
-
                         <p>
-                            Yadyra, at his core, is an old being born out of existence itself with a purpose to make
-                            sure the delicate balance of life and death is not disrupted throughout this reality and
-                            many others.
+                            He spends his spare time managing the other demons; with his power, he ranks higher than
+                            most and many respect him almost to a fault. Some call him a king, along with many other
+                            ostentatious titles, but he shrugs them off as he feels no true desire for them — their
+                            purpose is merely to survive by the end of it, not to rise up and overtake their food
+                            resource.
                         </p>
-
+                        <p>( Though he'd be lying if he said he didn't enjoy watching humans undermine themselves. )</p>
                         <p>
-                            Out of sheer curiosity and boredom, he often traverses across different planets and
-                            realities to satisfy his itch to observe and see how possibilities play out (sometimes with
-                            a little nudge from him one way or another), but otherwise remains impartial in his
-                            observations an actions; only those daring to toy with the flow of life itself will see him
-                            stepping in.
-                        </p>
-
-                        <p>
-                            He is quite a stoic and serious man with a shitlord energy about him, quick witted and able
-                            to throw quips and verbal stabs towards others. Often accompanied by his &#39;son&#39; and
-                            companion star who is used as a stress ball to squeeze.
+                            To those willing to deal with the devil (or just talk to him), he makes a wonderful
+                            conversation partner; millenniums of living have given him a vast depth of knowledge and
+                            experience to discuss, though one still has to tread carefully with him.
                         </p>
                     </div>
                 </section>
@@ -584,14 +549,14 @@
                 <!-- AESTHETIC STAMPS --------------------------------->
                 <section class="full">
                     <div class="badgeholder" style="justify-content: space-evenly">
-                        <img src="../Images/OC%20Stuff/Yadyra/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../Images/OC%20Stuff/Yadyra/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../Images/OC%20Stuff/Yadyra/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../Images/OC%20Stuff/Yadyra/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../Images/OC%20Stuff/Yadyra/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../Images/OC%20Stuff/Yadyra/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../Images/OC%20Stuff/Yadyra/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../Images/OC%20Stuff/Yadyra/stamp_8.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/Nameless/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/Nameless/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/Nameless/stamp_3.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/Nameless/stamp_4.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/Nameless/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/Nameless/stamp_6.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/Nameless/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/Nameless/stamp_8.gif" aria-hidden="true" alt="" loading="lazy" />
                     </div>
                 </section>
 
@@ -607,7 +572,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 99%">
+                                    <div class="progresschunk" style="width: 30%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -621,7 +586,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 92%">
+                                    <div class="progresschunk" style="width: 80%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -635,7 +600,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 3%">
+                                    <div class="progresschunk" style="width: 5%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -649,7 +614,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 85%">
+                                    <div class="progresschunk" style="width: 75%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -663,7 +628,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 3%">
+                                    <div class="progresschunk" style="width: 4%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -677,7 +642,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 22%">
+                                    <div class="progresschunk" style="width: 25%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -691,7 +656,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 87%">
+                                    <div class="progresschunk" style="width: 100%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -705,7 +670,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 13%">
+                                    <div class="progresschunk" style="width: 5%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -719,7 +684,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 3%">
+                                    <div class="progresschunk" style="width: 10%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -747,7 +712,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 3%">
+                                    <div class="progresschunk" style="width: 12%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -761,7 +726,7 @@
                             </div>
                             <div class="slidecontainer">
                                 <div class="progressbar">
-                                    <div class="progresschunk" style="width: 69%">
+                                    <div class="progresschunk" style="width: 40%">
                                         <div class="progressbutton"></div>
                                     </div>
                                 </div>
@@ -775,21 +740,21 @@
                 <section class="half">
                     <h2><i class="fa-solid fa-heart" aria-hidden="true"></i> Likes</h2>
                     <ul>
-                        <li>books, many books...</li>
-                        <li>odd artifacts</li>
-                        <li>people doing the unexpected</li>
-                        <li>schedules and timeliness</li>
-                        <li>deflating big egos</li>
+                        <li>luxurious, gaudy items</li>
+                        <li>breaking people</li>
+                        <li>red meats, complex meals</li>
+                        <li>organization</li>
+                        <li>watching conflict</li>
                     </ul>
                 </section>
                 <!-- DISLIKES -->
                 <section class="half">
                     <h2><i class="fa-solid fa-heart-crack" aria-hidden="true"></i> Dislikes</h2>
                     <ul>
-                        <li>loud people</li>
-                        <li>most other celestials / gods</li>
-                        <li>minimalism aesthetics</li>
-                        <li>veering off schedules</li>
+                        <li>weak willed people</li>
+                        <li>other gods / those above</li>
+                        <li>boring outcomes</li>
+                        <li>art and poetry</li>
                         <li>uncontrolled temper tantrums</li>
                     </ul>
                 </section>
@@ -798,98 +763,157 @@
                 <section class="full">
                     <h1>Story</h1>
                     <img
-                        src="../Images/OC%20Stuff/Yadyra/content_deco_1.png"
-                        style="max-width: 40%; float: right; margin: 5px 30px"
-                        alt=""
-                        aria-hidden="true"
-                        data-tippy-content="Art by nekodoruBox" />
-                    <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Intro</h2>
+                        src="../img/oc/Nameless/content_image_1.png"
+                        style="max-width: 40%; float: left; margin: 5px 30px" />
+                    <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Summary</h2>
                     <p>
-                        Space is vast, full of endless possibilities, the ancient one whose eyes have seen the worlds
-                        beyond him, and all around him, full of precious life, knowledge, people, more ... he goes on to
-                        the next peak of his endless interests. There is so much to see, even if he knows it all, and
-                        the possibilities they have laid before themselves. Eyes that reach vastly across all time and
-                        space. The toothy grin of perhaps pride grows on him. It was always so fascinating to see change
-                        and how species grow.
+                        The deep, pale depths of this kingdom only knew my heels, and no others that weren't my cloned
+                        army.
                     </p>
                     <p>
-                        The worlds he has visited were always short visits, nothing ever beyond a few months since he's
-                        his curiosity was generally filled within the time frame, he couldn't say it was especially
-                        boring or unfilling, but he never really had any reason to stay to them, almost all of
-                        everything was the life that had a purpose that kept them moving in a rhythmic existence, and
-                        you cannot completely wish to watch more of it.
+                        I built this place to suit me, and <i>only</i> me. I see countless painted murals, all showing a
+                        different version of me. My <i>eyes</i>, my <i>darkness</i>, and my <i>elegance</i>. My purity
+                        in the shadows. I walk across halls that only have my wonderful and flawless face across it all.
+                        My strength won me the throne of all the Hells.
                     </p>
                     <p>
-                        But the planet Earth caught his interest, more than others since living here, the humans, had
-                        odd movements of life, they acted in harmony, others times pure chaos. His toothy grinned
-                        returned. This was interesting to him, how they reacted to him was also new. He mimicked their
-                        humanness for a little while, getting used to the human language as a whole.
+                        I smile as I see my throne, and breathe in the room deeply as I push further in, alarming the
+                        living throne, that I would soon be sitting on it. The throne itself is very alive—adorably
+                        waiting for me—because there's not much it can do, but sit there. Of course, anyone else who
+                        isn't me, will die upon sitting on the thing. I remember testing it, putting a poor pathetic
+                        demonic on it who was all too busy stammering its pleas, and then <b>pop</b>! It was splattered
+                        everywhere on the floor, on the walls, on me, yet the throne was as clean as if it didn't
+                        happen!
                     </p>
-                    <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> Origin</h2>
                     <p>
-                        A life that started with one thing. A wish. A desire to protect and prolong life. The beast
-                        opened his eyes for the first time upon this request. He doesn&#39;t know his birth, just his
-                        purpose. Watch, prolong, and react when necessary. Yes, that was right. He was a simple word, a
-                        guardian. Knowledge of it all belonged to him. All of it. He knows you, me, and the universe.
-                        But he will not mind it, at all.
+                        I tried with another demon, and another pop. Slower this time. The screaming of agony upon the
+                        realization, and the incapability to move from said throne, made me laugh. Watching them choke
+                        as the blood from their throat started to rise and spill out, and they slowly cracked and split
+                        too. Cruel. But as fun as that was, I decided to stop doing so; it was <i>oh so</i> very messy,
+                        and I don't have time to enjoy such slow torture all the time.
                     </p>
-
                     <p>
-                        He simply wishes to watch life go on and observe the actions all forms of life take, be it with
-                        the simplest organism that actions are moving its cells around or the largest action of life
-                        moving in wars, the stars going out, or starting a new course of a sun. He sighs as the flow of
-                        the universe is ever unpredictable, but predictable at the same time.
+                        Someone needs to grow this hell, so I take my seat, and see the extreme pale lady residing from
+                        within. She looks at where I entered from, glaring for a moment, then not staying anymore. She
+                        was the one who I bent to my will, regardless of how she felt about me. I broke into her, and
+                        now I owned her. She disliked me, but I don't think she ever liked anyone, and that doesn't
+                        matter to me.
                     </p>
-
                     <p>
-                        He landed on one of the many human parallel planets, unpredictable some of these humans are.
-                        Their feelings are sometimes too much of a &quot;thing.&quot; He found them interesting,
-                        hilarious, and something to observe more in-depth when he had a chance from his other
-                        curiosities. He walked with his self-made star, they were basically just a brilliant source of
-                        magic put into a star, giving them a will, but it&#39;s really just an acting program with a
-                        &quot;soul&quot;.
+                        Things were clean now, the bounds of hell no longer a fight for one to survive. It's a fight to
+                        win favors from <b>me</b>, otherwise you'll die in a delightfully painfully manner, which I
+                        often choose. People screamed, begged for mercy where there was none. For their hunger to
+                        survive was strong, but they were stupid and eager little <i>pigs</i> that didn't understand the
+                        greater point of it being my Hell. And only <b><i>my</i></b> Hell.
                     </p>
-
                     <p>
-                        As he was going about his day in this world, he came across a horrific scene&mdash;well ...
-                        horrific for a human. He had seen this before, a caravan attacked, looted, and left to burn, the
-                        one who likely drove this was either taken or killed. Sad as it was. It wasn&#39;t new to him,
-                        but what was the tiny life he found, the star that followed him pointed it out, still breathing,
-                        but not crying, and very weak.
-                    </p>
-
-                    <p>
-                        Yadyra had an idea. He would take the child, and see if he could change it. If not, it was going
-                        to die either way, so why not? There was so much time, for the little things. So, taking the
-                        child from the women&#39;s hands, he left. After many years, the child, he would name Glosyia, a
-                        play on to an ancient hero name, and quite a popular name around this time, even if it was a
-                        female&#39;s name, that didn&#39;t matter to him.
-                    </p>
-
-                    <p>
-                        He had planned to let the child go at some point, but he was, while experimenting, screwed it
-                        up, and accidentally implanted a small piece of himself into the child. Oh, well, a 1/5th of a
-                        personality, but ... he sighed, well, his child now, as it goes.
-                    </p>
-
-                    <p>
-                        As times passed, and the three, yes, three now, moved worlds together, regardless if had to be a
-                        little fetch story for his son, but that wasn&#39;t a story he was going to tell, no way in
-                        hell.
-                    </p>
-
-                    <p>
-                        ...He&#39;s been smiling at you, you know. Listening to his story, even if you are to never meet
-                        him again, he will always have known of you, and your story, rest assured, he found you
-                        interesting for the time, as you read, and for the time you were around.
-                    </p>
-
-                    <p>He won&#39;t wish anything for you, he has only seen you. And now you have seen him.</p>
-
-                    <p>
-                        &quot;Pleasent beginnings, is it not?&quot; He said, coldly, a toothy grin on his face. &mdash;
+                        You <b>bow</b>, <b>obey</b>, and <b>listen</b>. &mdash;
                         <a href="https://toyhou.se/RuinedCrown">RuinedCrown</a>
                     </p>
+
+                    <details>
+                        <summary>Additional Blurb</summary>
+                        <p>
+                            You could call him many names, King of Demons, Ruler of the divine Evils. All of them to be
+                            true, but to be called one title is flat out boring. His joy to play with human life in
+                            itself, that alone the definition of demons to a human minded fellow. He doesn't care,
+                            however. It's simple, people can call him whatever they want, but he knows the truth of
+                            himself and the other demons that fear him with respect.
+                        </p>
+                        <p>
+                            To put simply who this man is, the one who rules over your simple nightmares, life ends with
+                            him in a situation of humans if he's involved. His smile is like that of snakes locking onto
+                            a simple mouse before it strikes at the neck, choking it and stealing its last breath for
+                            pleasure. His words the viper's venom. But sometimes... the price was worth it, for what
+                            they wanted. Since a demon won't lie to you, but also won't tell you the truth of what you
+                            signed up for.
+                        </p>
+                        <p>
+                            A mastermind of despair, someone who wants the equal value of his work, of course. What
+                            demon do you know works for free?
+                        </p>
+                        <p>But what if they try to flee without payment? Become rats or be content?</p>
+                        <p>
+                            Eyes float around him, laughing and mocking the victim after they got what they wanted, and
+                            didn't want to pay the price. He laughs at them, gives them time to see if they can flee.
+                            But of course, they can't. It was hilarious to see many tries, however.
+                        </p>
+                        <p>But what can create something so dark, so unruly?</p>
+                        <p>
+                            It's very simple. Human desire is as dark and hateful as it is bright and lovely. You can't
+                            live truly without either. You have desires, your neighbor has desires. You have hate, as
+                            does someone else. Human desires birthed this dark soul, and human desires bring forth as
+                            the years go by. He knows he was born from a devil's egg in an unexpecting village that
+                            homed a murderer, whose soul so dark... gave birth to a demon that destroyed the whole
+                            village overnight.
+                        </p>
+                        <p>A feast just for one.</p>
+                        <p>
+                            It was, delicious, one by one, another meal, another after another! How could he dare forget
+                            that feeling? It was so filling, but now the feeling sometimes become bland, and he's very
+                            picky about who he chooses to "help" now. The soul is richest when it's desperate.
+                        </p>
+                        <p>
+                            But whose that desperate to call the King himself? Only he knows that's the answer, and he
+                            can't wait to see the next rat that becomes his victim. He's waiting, knowing, they will
+                            show up one day... and he will be as devilish ready as he could be. &mdash;
+                            <a href="https://toyhou.se/RuinedCrown">RuinedCrown</a>
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Origins</summary>
+                        <p>
+                            A demon amongst demons ... demons are often born of tainted and corrupt souls, but few are
+                            just
+                            <i>born</i>, made of raw and pure darkness and void. Nameless is one of those very few, a
+                            demon in all his fullness. But even he needed to start from the very bottom, scraping what
+                            morsel of souls he could get his hands on.
+                        </p>
+                        <p>
+                            But with time comes practice, and with practice things get easier. His tongue got smoother
+                            and sharper, his patience slowly lengthened to where he would be happy to patiently wait
+                            ten, twenty, if not a hundred years of a meal if need be. Soon, even longer.
+                        </p>
+                        <p>
+                            In the realm back then, it was a dog eat dog world, everyone fended for themselves and
+                            'alliances' were forged wearily; your allegiance was often to yourself, even if you said
+                            differently. Survival was a goal, yes ... but some had their sights set much higher, to the
+                            throne governing the entirety of the demon realm.
+                        </p>
+                        <p>
+                            ... he wished he had a grandiose tale on how he came to take it, but by the end, it felt
+                            like child's play to merely sit on the throne and have it take to his whims.
+                        </p>
+
+                        <ul>
+                            <li>Born from the FE world, caused by a mass murderer in a village.</li>
+                            <li>Born from the malice of the killer, feasted upon the leftovers of everyone there.</li>
+                            <li>Found by his future mentor and taken under her wing.</li>
+                            <li>
+                                Ascended to the throne by basically killing the previous king and taking over the throne
+                                of hell. He says the way hell was previously ruled over sucked shit (Ahaur and Yadyra
+                                may have had a hand in this).
+                            </li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Abilities</summary>
+                        <p>
+                            His primary power lies in shadow and spatial manipulation which makes travelling easier for
+                            him around the area; transitioning between the world of demons and humans to him is the
+                            equivalent of an easy flick of the hand. His raw physical strength is well above the average
+                            human and most other species within the world, having the ability to tear and unearth trees
+                            if he so wished to.
+                        </p>
+                        <p>
+                            He also has the ability to shapeshift and take on any form he so wishes; the current one is
+                            one he created for himself to keep as an appearance, but in reality demons are forever
+                            shifting in what they look like, with no true form of their own besides what they choose to
+                            look like. He's always found the elder and younger appearances to be the easiest to use if
+                            needing to scout or interact with humans.
+                        </p>
+                    </details>
                 </section>
 
                 <!-- MOODBOARD ------------------------------>
@@ -916,7 +940,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">height</div>
-                                    <div>5'7" / 170 cm</div>
+                                    <div>7'1" / 216 cm</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -925,7 +949,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">body type</div>
-                                    <div>slim and masculine, no definition</div>
+                                    <div>heavily masculine and beefy</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -934,7 +958,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">eyes</div>
-                                    <div>crimson, subtle pink around pupil</div>
+                                    <div>dark sclera, white</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -943,7 +967,7 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">hair length + colour</div>
-                                    <div>above shoulders, mid-pink</div>
+                                    <div>dark grey, gradient to softer white</div>
                                 </div>
                             </div>
                             <div class="stat-holder">
@@ -952,101 +976,36 @@
                                 </div>
                                 <div>
                                     <div class="stat-name">extras</div>
-                                    <div>stubble, lines on his face, feathered ears</div>
+                                    <div>4 pitch black horns, wings merged with hair, multiple eyes</div>
                                 </div>
                             </div>
                             <h2><i class="fa-solid fa-palette" aria-hidden="true"></i> Design Notes</h2>
                             <ul>
                                 <li style="margin-top: 5px">
-                                    He has no human-like ears; the feathers adorning the sides of his head are his
-                                    'ears'.
+                                    He has multiple pupils within his eye, though they are optional to draw.
                                 </li>
+                                <li>He has 'stitches' at the corner of his mouth, also optional.</li>
+                                <li>The eyes floating around him are also optional.</li>
                                 <li>
-                                    The lines going down his face extend from jaw all the way up to underneath his hair.
-                                </li>
-                                <li>Multiple eyes are optional; they have no set place they appear on his body.</li>
-                                <li>
-                                    His arms and neck are 'feathered', following the same colour of his ear feathers,
-                                    though it is <u>not</u> a necessity to draw his hands feathered. His neck is a
-                                    <b>must</b> though.
-                                </li>
-                                <li>
-                                    Please view his
-                                    <a href="https://toyhou.se/5806515.yadyra/88363890">ref sheet</a> for full details.
+                                    His hair wings move around actively, so they don't need to be drawn in the same
+                                    position as any other drawings.
                                 </li>
                             </ul>
                         </div>
-                        <div class="design-image"></div>
+                        <div
+                            class="design-image"
+                            style="background-size: cover"
+                            data-tippy-content="Art by Redeum"></div>
                         <div class="pal-column">
-                            <div style="background: #ffe5d4" class="pal" data-tippy-content="#FFE5D4 / skin"></div>
-                            <div style="background: #d7788a" class="pal" data-tippy-content="#D7788A / hair"></div>
+                            <div style="background: #684e42" class="pal" data-tippy-content="#684E42 / skin"></div>
+                            <div style="background: #363636" class="pal" data-tippy-content="#363636 / hair"></div>
                             <div
-                                style="background: #bc1f3d"
+                                style="background: #c4c4c4"
                                 class="pal"
-                                data-tippy-content="#BC1F3D / inner clothing"></div>
-                            <div style="background: #f18045" class="pal" data-tippy-content="#F18045 / gold trim"></div>
-                            <div style="background: #201513" class="pal" data-tippy-content="#201513 / cloth"></div>
-                            <div style="background: #613d38" class="pal" data-tippy-content="#613D38 / feathers"></div>
+                                data-tippy-content="#C4C4C4 / white accents"></div>
+                            <div style="background: #222222" class="pal" data-tippy-content="#222222 / clothing"></div>
+                            <div style="background: #000000" class="pal" data-tippy-content="#000000 / horns"></div>
                         </div>
-                    </div>
-                </section>
-
-                <!-- TRIVIA + FOCAL IMAGE -->
-                <section class="third triviafocal" data-tippy-content="Art by vanillssugar"></section>
-
-                <section class="twothird">
-                    <h1>Trivia</h1>
-                    <div class="scrollable">
-                        <ul>
-                            <li>
-                                Literal embodiment of the
-                                <a href="https://www.youtube.com/watch?v=nfdEdE96En0">cuil theory</a>, like full
-                                seriously it's just him
-                                <ul>
-                                    <li>
-                                        To be fair, any weird, surreal things like the backrooms or endless ikea or
-                                        stuff like that is the type of 'aesthetic' he is, non-sensical, otherwordly
-                                        bullshit
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                He has no true form; as a celestial being and with a celestial body, there is no
-                                solidness to his form. As such, he's decided upon a humanlike body that he's been
-                                maintaining for years, though devoid of any parts he deems unnecessary like organs.
-                            </li>
-                            <li>
-                                As a hobby, he tends to place himself into worlds through what he likes to call
-                                'simulations', suppressing his memory and living in a world for as long as it amuses him
-                                or serves a purpose; this is among the few ways he finds amusement (and is an apt excuse
-                                for me to have him explore medias).
-                            </li>
-                            <li>
-                                Will break the fourth wall, considering he's made to be a being that's not constrained
-                                by such concepts. You know he can also talk to you, right?
-                            </li>
-                            <li>
-                                Although impartial, he has very much pushed and manipulated some planets to incite chaos
-                                and disorder for the sheer curiosity in what the outcome would be, though none of his
-                                adjustments are to lead to mass extinction.
-                            </li>
-                            <li>
-                                In the line of 'guardians', he is currently the fourth; it was only through meeting
-                                Ahaur that he even gained the knowledge of the existence of the other three who are now
-                                either retired or have been killed.
-                            </li>
-                            <li>
-                                He and Ahaur tend to oversee the flow of life and death, which includes the
-                                reincarnation cycle of souls ... and the disposal and trimming of them through the demon
-                                network (with Nameless at its head).
-                            </li>
-                            <li>Unfortunate owner of a very pink cowboy hat ... thanks to Ahaur, mostly.</li>
-                            <li>
-                                Many tend to call him either the Guardian or Pink Man (derogatory); saying his name,
-                                although not taboo, is often avoided by most people.
-                            </li>
-                            <li>Makes some nice bread.</li>
-                        </ul>
                     </div>
                 </section>
 
@@ -1057,56 +1016,59 @@
                         <!-- RELATIONSHIP BOX -->
                         <div class="relationshipbox">
                             <div class="relationshipicon">
-                                <img
-                                    src="../Images/OC%20Stuff/Others/glos.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                    aria-hidden="true" />
+                                <a href="yadyra.html"
+                                    ><img
+                                        src="../img/oc/Yadyra/sidebar_image.jpg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        loading="lazy"
+                                /></a>
                             </div>
-                            <span class="relationshipname">Glosyia Chóros</span> &bull;
-                            <span class="relationshiptype">'son'</span>
+                            <span class="relationshipname">Yadyra</span> &bull;
+                            <span class="relationshiptype">annoying 'boss'</span>
                             <div class="relationshiphearts">
                                 <i class="fa-solid fa-heart" aria-hidden="true"></i
                                 ><i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i>
                             </div>
                         </div>
                         <!-- RELATIONSHIP BOX -->
                         <div class="relationshipbox">
                             <div class="relationshipicon">
                                 <img
-                                    src="../Images/OC%20Stuff/Others/ahaur.jpg"
-                                    loading="lazy"
+                                    src="../img/oc/Others/ahaur.jpg"
                                     alt=""
-                                    aria-hidden="true" />
+                                    aria-hidden="true"
+                                    loading="lazy" />
                             </div>
-
                             <span class="relationshipname">Ahaur</span> &bull;
-                            <span class="relationshiptype">sibling / sister</span>
+                            <span class="relationshiptype">annoying 'boss' 2</span>
                             <div class="relationshiphearts">
                                 <i class="fa-solid fa-heart" aria-hidden="true"></i
                                 ><i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i>
                             </div>
                         </div>
                         <!-- RELATIONSHIP BOX -->
                         <div class="relationshipbox">
                             <div class="relationshipicon">
-                                <img
-                                    src="../Images/OC%20Stuff/Nameless/gallery_thumb_1.jpg"
-                                    loading="lazy"
-                                    alt=""
-                                    aria-hidden="true" />
+                                <a href="sylvie.html"
+                                    ><img
+                                        src="../img/oc/Sylvie/sidebar_image.jpg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        loading="lazy"
+                                /></a>
                             </div>
-                            <span class="relationshipname">Nameless</span> &bull;
-                            <span class="relationshiptype">fun to bully</span>
+                            <span class="relationshipname">Sylvie</span> &bull;
+                            <span class="relationshiptype">nuisance</span>
                             <div class="relationshiphearts">
-                                <i class="fa-solid fa-heart" aria-hidden="true"></i
-                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                <i class="fa-regular fa-heart" aria-hidden="true"></i
+                                ><i class="fa-regular fa-heart" aria-hidden="true"></i
                                 ><i class="fa-regular fa-heart" aria-hidden="true"></i
                                 ><i class="fa-regular fa-heart" aria-hidden="true"></i
                                 ><i class="fa-regular fa-heart" aria-hidden="true"></i>
@@ -1121,191 +1083,189 @@
 
                     <div class="badgeholder">
                         <img
-                            src="../Images/Ribbons/agender.png"
-                            loading="lazy"
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/53915244_cMZV1mKUUW7T9rF.png"
+                            data-tippy-content="Agender: This character has no gender."
                             aria-hidden="true"
                             alt=""
-                            data-tippy-content="Agender: This character has no gender." />
+                            loading="lazy" />
                         <img
-                            src="../Images/Ribbons/apogender.png"
-                            loading="lazy"
-                            aria-hidden="true"
-                            alt=""
-                            data-tippy-content="Apogender: This character is apogender." />
-                        <img
-                            src="../Images/Ribbons/he-him.png"
+                            src="../img/ribbons/he-him.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="He/Him: This character uses he/him/himself pronouns." />
                         <img
-                            src="../Images/Ribbons/aroace.png"
+                            src="../img/ribbons/aroace.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Aromantic Asexual: This character does not experience romantic or sexual attraction." />
                         <img
-                            src="../Images/Ribbons/parental.png"
+                            src="../img/ribbons/parental.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Parental Figure: This character is a parent or guardian." />
                         <img
-                            src="../Images/Ribbons/time-power.png"
+                            src="../img/ribbons/darkness.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
-                            data-tippy-content="Time: This character uses magic or has abilities relating to time." />
+                            data-tippy-content="Darkness: This character uses magic or has abilities relating to darkness." />
                         <img
-                            src="../Images/Ribbons/space-power.png"
+                            src="../img/ribbons/demonic.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
-                            data-tippy-content="Space: This character uses Space/Cosmic Magic." />
+                            data-tippy-content="Demonic: This character is a demon, devil, or imp." />
                         <img
-                            src="../Images/Ribbons/god.png"
+                            src="../img/ribbons/horns.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
-                            data-tippy-content="God: This character is (a) God." />
+                            data-tippy-content="Am I Scary?: This character has horns." />
                         <img
-                            src="../Images/Ribbons/outer-space.png"
+                            src="../img/ribbons/hated_by_many.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
-                            data-tippy-content="Shooting Star: This character originates from outer space." />
+                            data-tippy-content="Hated by many: This character has an extremely bad reputation/public image." />
                         <img
-                            src="../Images/Ribbons/multiverse.png"
+                            src="../img/ribbons/king.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="King: This character is a king." />
+                        <img
+                            src="../img/ribbons/multiverse.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Multiverse: This character exists in multiple universes or is part of a multiverse." />
                         <img
-                            src="../Images/Ribbons/INTJ.png"
+                            src="../img/ribbons/ESTP.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
-                            data-tippy-content=" The Architect: This character has the INTJ personality type." />
+                            data-tippy-content="The Entrepreneur: This character has the ESTP personality type." />
                         <img
-                            src="../Images/Ribbons/true-neutral.png"
+                            src="../img/ribbons/chaotic-neutral.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
-                            data-tippy-content="True Neutral: This character is of the true neutral alignment." />
+                            data-tippy-content="Chaotic Neutral: This character is of the chaotic neutral alignment." />
                         <img
-                            src="../Images/Ribbons/best-everything.png"
+                            src="../img/ribbons/pride.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
-                            data-tippy-content="Best Everything: This character has their owners favorite design and story." />
+                            data-tippy-content="Pride: This character's predominant sin is Pride." />
                         <img
-                            src="../Images/Ribbons/encyclopedia.png"
+                            src="../img/ribbons/gluttony.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Gluttony: This character's predominant sin is Gluttony." />
+                        <img
+                            src="../img/ribbons/best-dressed.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Best Dressed: This character's design is among their owners' favorites." />
+                        <img
+                            src="../img/ribbons/encyclopedia.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Encyclopedia: This character's story is very detailed and thought-out." />
                         <img
-                            src="../Images/Ribbons/main-character.png"
+                            src="../img/ribbons/main-character.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Main Character: This character is high priority, very important character." />
                         <img
-                            src="../Images/Ribbons/voiceclaim.png"
+                            src="../img/ribbons/voiceclaim.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Microphone: This character has a voice claim." />
                         <img
-                            src="../Images/Ribbons/roleplay.png"
+                            src="../img/ribbons/roleplay.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Actor: This character was/is used in roleplay." />
                         <img
-                            src="../Images/Ribbons/2018.png"
+                            src="../img/ribbons/revamped.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
-                            data-tippy-content="2018: This character was made in 2018." />
+                            data-tippy-content="New Face: This character was revamped at some point." />
+                        <img
+                            src="../img/ribbons/2017.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="2017: This character was made in 2017." />
                     </div>
                 </section>
 
                 <!-- PHOTO GALLERY ------------------------------>
                 <section class="full">
                     <!-- CHANGE THIS LINK TO TH GALLERY -->
-                    <a href="https://toyhou.se/5806515.yadyra/gallery" class="viewmore">View More</a>
+                    <a href="https://toyhou.se/5877378.nameless/gallery" class="viewmore">View More</a>
                     <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Image Gallery</h2>
 
                     <div class="image-gallery">
                         <!-- IMAGE -->
-                        <div data-tippy-content="Art by @_yaseii">
+                        <div data-tippy-content="Art by Sylkoli">
                             <a
-                                href="../Images/OC%20Stuff/Yadyra/gallery_1_full.jpg"
+                                href="../img/oc/Nameless/gallery_full_1.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img
-                                    src="../Images/OC%20Stuff/Yadyra/gallery_1_thumb.jpg"
-                                    alt=""
-                                    loading="lazy"
-                                    aria-hidden="true"
+                                ><img src="../img/oc/Nameless/gallery_thumb_1.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
-                        <div data-tippy-content="Art by Boludmilaz">
+                        <div data-tippy-content="Art by Matejko">
                             <a
-                                href="../Images/OC%20Stuff/Yadyra/gallery_2_full.jpg"
+                                href="../img/oc/Nameless/gallery_full_2.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img
-                                    src="../Images/OC%20Stuff/Yadyra/gallery_2_thumb.jpg"
-                                    alt=""
-                                    loading="lazy"
-                                    aria-hidden="true"
+                                ><img src="../img/oc/Nameless/gallery_thumb_2.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by me">
                             <a
-                                href="../Images/OC%20Stuff/Yadyra/gallery_3_full.jpg"
+                                href="../img/oc/Nameless/gallery_full_3.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img
-                                    src="../Images/OC%20Stuff/Yadyra/gallery_3_thumb.jpg"
-                                    alt=""
-                                    loading="lazy"
-                                    aria-hidden="true"
+                                ><img src="../img/oc/Nameless/gallery_thumb_3.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
-                        <div data-tippy-content="Art by Beelzebubx">
+                        <div data-tippy-content="Art by PhoenixBlessed">
                             <a
-                                href="../Images/OC%20Stuff/Yadyra/gallery_4_full.jpg"
+                                href="../img/oc/Nameless/gallery_full_4.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img
-                                    src="../Images/OC%20Stuff/Yadyra/gallery_4_thumb.jpg"
-                                    alt=""
-                                    loading="lazy"
-                                    aria-hidden="true"
+                                ><img src="../img/oc/Nameless/gallery_thumb_4.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
-                        <div data-tippy-content="Art by Sylkoli">
+                        <div data-tippy-content="Art by cataclysmicTilde">
                             <a
-                                href="../Images/OC%20Stuff/Yadyra/gallery_5_full.jpg"
+                                href="../img/oc/Nameless/gallery_full_5.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img
-                                    src="../Images/OC%20Stuff/Yadyra/gallery_5_thumb.jpg"
-                                    alt=""
-                                    loading="lazy"
-                                    aria-hidden="true"
+                                ><img src="../img/oc/Nameless/gallery_thumb_5.jpg" alt=""
                             /></a>
                         </div>
                     </div>
@@ -1335,18 +1295,18 @@
             });
         </script>
         <!-- Dark Mode Toggle -->
-        <script src="../Scripts/Accessible/dark-mode-alt.js"></script>
+        <script src="../js/accessibility/dark-mode-alt.js"></script>
 
         <!-- Font Toggle -->
-        <script src="../Scripts/font_toggle.js"></script>
+        <script src="../js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
-        <script src="../Scripts/scroll-to-top.js"></script>
+        <script src="../js/scroll-to-top.js"></script>
 
         <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
 
         <!-- Accordion Dropdown -->
-        <script src="../Scripts/accordion.js"></script>
+        <script src="../js/accordion.js"></script>
     </body>
 </html>

@@ -15,6 +15,16 @@
 
     --->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Site Title -->
+        <title>recipe list</title>
+
+        <!-- Site Description -->
+        <meta content="A list of my favourite recipes." name="description" />
+
         <!-- Dark Mode Toggle -->
         <script>
             if (theme === "dark") {
@@ -27,38 +37,26 @@
                 document.getElementById("theme-toggle").innerHTML = "🌙";
             }
         </script>
-        <!-- Site Title -->
-        <title>recipe list</title>
-
-        <!-- Site Description -->
-        <meta content="A list of my favourite recipes." name="description" />
-
-        <!-- Setting character encoding and viewport size. Do not remove. -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- FavIcon -->
-        <link ref="favicon" href="./favicon.ico" />
 
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="styles-alt.css" />
-        <link rel="stylesheet" href="CSS/normalize.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JavaScript: -->
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
-        <script src="Scripts/sparkle_cursor.js"></script>
-        <script src="Scripts/header.js" defer></script>
-        <script src="Scripts/left-sidebar.js" defer></script>
-        <script src="Scripts/footer.js" defer></script>
-        <script src="Scripts/tab-title-suffix.js"></script>
+        <script src="js/sparkle_cursor.js"></script>
+        <script src="js/header.js" defer></script>
+        <script src="js/left-sidebar.js" defer></script>
+        <script src="js/footer.js" defer></script>
+        <script src="js/tab-title-suffix.js"></script>
 
-        <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <script src="js/accessibility/disclosure-menu.iife.js"></script>
         <!-- Disclosure Menu -->
-        <script src="Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <script src="js/accessibility/accessible-menu.js" type="module"></script>
     </head>
     <body id="body">
         <a href="#content" id="skip-to-content-link">Skip to content</a>
@@ -79,9 +77,7 @@
             <left-sidebar></left-sidebar>
             <main id="content">
                 <article>
-                    <h1>
-                        <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" /> Recipes
-                    </h1>
+                    <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Recipes</h1>
                     <blockquote>
                         These are a collection of the recipes I like using; I do host most of my recipes on my Notion,
                         but I wanna share them too with people!! Most are from online/video recipes, I'm just collecting
@@ -90,7 +86,7 @@
                     <div class="image-gallery">
                         <!-- IMAGE -->
                         <div>
-                            <a href="Recipes/airfry-pork-tenderloin.html">
+                            <a href="recipes/airfry-pork-tenderloin.html">
                                 <img
                                     src="https://recipeteacher.com/wp-content/uploads/2019/12/best-damn-air-fryer-pork-tenderloin-2.jpg"
                                     alt=""
@@ -101,7 +97,7 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="Recipes/basa-filet.html" class="disabled">
+                            <a href="recipes/basa-filet.html" class="disabled">
                                 <img
                                     src="https://spcdn.shortpixel.ai/spio/ret_img,q_orig,to_webp,s_webp/ilonaspassion.com/wp-content/uploads/2019/02/Baked-Basa-Fish-Fillet-3.jpg"
                                     alt=""
@@ -112,7 +108,7 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="Recipes/brownie-mug.html">
+                            <a href="recipes/brownie-mug.html">
                                 <img
                                     src="https://celebratingsweets.com/wp-content/uploads/2018/07/Brownie-in-a-Mug-3.jpg"
                                     alt=""
@@ -123,7 +119,7 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="Recipes/japanese-curry.html" class="disabled">
+                            <a href="recipes/japanese-curry.html" class="disabled">
                                 <img
                                     src="https://www.justonecookbook.com/wp-content/uploads/2021/10/Japanese-Chicken-Curry-3769-II.jpg"
                                     alt=""
@@ -134,14 +130,14 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="Recipes/matcha-cookies.html" class="disabled">
-                                <img src="./Images/Misc/matcha_cookies.JPG" alt="" loading="lazy" aria-hidden="true" />
+                            <a href="recipes/matcha-cookies.html" class="disabled">
+                                <img src="img/misc/matcha_cookies.JPG" alt="" loading="lazy" aria-hidden="true" />
                                 <span>Matcha Cookies</span></a
                             >
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="Recipes/pad-see-ew.html">
+                            <a href="recipes/pad-see-ew.html">
                                 <img
                                     src="https://www.recipetineats.com/tachyon/2016/03/Pad-See-Ew_2.jpg?resize=1200%2C1680&zoom=0.54"
                                     alt=""
@@ -152,7 +148,7 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="Recipes/portugese-rice.html" class="disabled">
+                            <a href="recipes/portugese-rice.html" class="disabled">
                                 <img
                                     src="https://nishkitchen.com/wp-content/uploads/2018/09/Portuguese-rice-3B.jpg"
                                     alt=""
@@ -163,7 +159,7 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="Recipes/fried-rice.html">
+                            <a href="recipes/fried-rice.html">
                                 <img
                                     src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt=""
@@ -174,7 +170,7 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="Recipes/hot-and-sour.html">
+                            <a href="recipes/hot-and-sour.html">
                                 <img
                                     src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/10/24/09/picaRNwV2.jpg"
                                     alt=""
@@ -204,13 +200,13 @@
         </script>
 
         <!-- Dark Mode Toggle -->
-        <script src="Scripts/Accessible/dark-mode-alt.js"></script>
+        <script src="js/accessibility/dark-mode-alt.js"></script>
 
         <!-- Font Toggle -->
-        <script src="Scripts/font_toggle.js"></script>
+        <script src="js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
-        <script src="Scripts/scroll-to-top.js"></script>
+        <script src="js/scroll-to-top.js"></script>
 
         <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>

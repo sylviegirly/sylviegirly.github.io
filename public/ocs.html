@@ -15,6 +15,16 @@
 
     --->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Site Title -->
+        <title>oc list</title>
+
+        <!-- Site Description -->
+        <meta content="A list of various original characters." name="description" />
+
         <!-- Dark Mode Toggle -->
         <script>
             if (theme === "dark") {
@@ -27,40 +37,28 @@
                 document.getElementById("theme-toggle").innerHTML = "🌙";
             }
         </script>
-        <!-- Site Title -->
-        <title>oc list</title>
-
-        <!-- Site Description -->
-        <meta content="A list of various original characters." name="description" />
-
-        <!-- Setting character encoding and viewport size. Do not remove. -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- FavIcon -->
-        <link ref="favicon" href="favicon.ico" />
 
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="styles-alt.css" />
-        <link rel="stylesheet" href="CSS/normalize.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JavaScript: -->
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
-        <script src="Scripts/sparkle_cursor.js"></script>
-        <script src="Scripts/header.js" defer></script>
-        <script src="Scripts/left-sidebar.js" defer></script>
-        <script src="Scripts/footer.js" defer></script>
-        <script src="Scripts/tab-title-suffix.js"></script>
+        <script src="js/sparkle_cursor.js"></script>
+        <script src="js/header.js" defer></script>
+        <script src="js/left-sidebar.js" defer></script>
+        <script src="js/footer.js" defer></script>
+        <script src="js/tab-title-suffix.js"></script>
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-        <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <script src="js/accessibility/disclosure-menu.iife.js"></script>
         <!-- Disclosure Menu -->
-        <script src="Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <script src="js/accessibility/accessible-menu.js" type="module"></script>
 
         <style>
             .oc-gallery {
@@ -154,7 +152,7 @@
             <main id="content">
                 <article>
                     <h1>
-                        <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" />
+                        <img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" />
                         Character Lists
                     </h1>
                     <div style="text-align: center; margin-bottom: 10px">
@@ -170,9 +168,9 @@
                     <div class="oc-gallery">
                         <!-- IMAGE -->
                         <div>
-                            <a href="OCs/sylvie.html">
+                            <a href="oc/sylvie.html">
                                 <img
-                                    src="./Images/OC%20Stuff/Sylvie/gallery_5_thumb.jpg"
+                                    src="img/oc/Sylvie/gallery_5_thumb.jpg"
                                     alt="Sylvie, an original character for Genshin Impact"
                                     loading="lazy"
                             /></a>
@@ -183,9 +181,9 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="OCs/yadyra.html">
+                            <a href="oc/yadyra.html">
                                 <img
-                                    src="./Images/OC%20Stuff/Yadyra/gallery_3_thumb.jpg"
+                                    src="img/oc/Yadyra/gallery_3_thumb.jpg"
                                     alt="Yadyra, an eldritch original character"
                                     loading="lazy"
                             /></a>
@@ -196,9 +194,9 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="OCs/nameless.html">
+                            <a href="oc/nameless.html">
                                 <img
-                                    src="./Images/OC%20Stuff/Nameless/gallery_thumb_3.jpg"
+                                    src="img/oc/Nameless/gallery_thumb_3.jpg"
                                     alt="Nameless, a demon original character"
                                     loading="lazy"
                             /></a>
@@ -211,9 +209,9 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="OCs/khaliun.html">
+                            <a href="oc/khaliun.html">
                                 <img
-                                    src="./Images/OC%20Stuff/Khaliun/thumbnail.jpg"
+                                    src="img/oc/Khaliun/thumbnail.jpg"
                                     alt="Khaliun Khatayin, a final fantasy 14 warrior of light"
                                     loading="lazy"
                             /></a>
@@ -237,9 +235,9 @@
                     <div class="oc-gallery">
                         <!-- IMAGE -->
                         <div>
-                            <a href="OCs/hideki.html">
+                            <a href="oc/hideki.html">
                                 <img
-                                    src="./Images/OC%20Stuff/Hideki/thumbnail.jpg"
+                                    src="img/oc/hideki/thumbnail.jpg"
                                     alt="Hideki, a human with white hair, red eyes, and freckles"
                                     loading="lazy"
                             /></a>
@@ -249,9 +247,9 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="OCs/resu.html">
+                            <a href="oc/resu.html">
                                 <img
-                                    src="./Images/OC%20Stuff/Resu/thumbnail.png"
+                                    src="img/oc/Resu/thumbnail.jpg"
                                     alt="Resu, a Bleach original character with green eyes and brown hair"
                                     loading="lazy"
                             /></a>
@@ -261,9 +259,9 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="OCs/aries.html" style="cursor: not-allowed">
+                            <a href="oc/aries.html" style="cursor: not-allowed">
                                 <img
-                                    src="./Images/OC%20Stuff/Aries/thumbnail.png"
+                                    src="img/oc/Aries/thumbnail.png"
                                     alt="Aries, a non-human bird-shaped being"
                                     loading="lazy"
                             /></a>
@@ -273,9 +271,9 @@
                         </div>
                         <!-- IMAGE -->
                         <div>
-                            <a href="OCs/james.html" style="cursor: not-allowed">
+                            <a href="oc/james.html" style="cursor: not-allowed">
                                 <img
-                                    src="./Images/OC%20Stuff/James/thumbnail.jpg"
+                                    src="img/oc/James/thumbnail.jpg"
                                     alt="James, a human with dirty blonde and brown hair, and freckles"
                                     loading="lazy"
                             /></a>
@@ -304,13 +302,13 @@
         </script>
 
         <!-- Dark Mode Toggle -->
-        <script src="Scripts/Accessible/dark-mode-alt.js"></script>
+        <script src="js/accessibility/dark-mode-alt.js"></script>
 
         <!-- Font Toggle -->
-        <script src="Scripts/font_toggle.js"></script>
+        <script src="js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
-        <script src="Scripts/scroll-to-top.js"></script>
+        <script src="js/scroll-to-top.js"></script>
 
         <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>

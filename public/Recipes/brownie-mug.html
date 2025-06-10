@@ -15,6 +15,16 @@
 
     --->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Site Title -->
+        <title>brownie in a mug</title>
+
+        <!-- Site Description -->
+        <meta content="Brownie in a mug recipe." name="description" />
+
         <!-- Dark Mode Toggler -->
         <script>
             if (theme === "dark") {
@@ -27,37 +37,25 @@
                 document.getElementById("theme-toggle").innerHTML = "🌙";
             }
         </script>
-        <!-- Site Title -->
-        <title>brownie in a mug</title>
-
-        <!-- Site Description -->
-        <meta content="Brownie in a mug recipe." name="description" />
-
-        <!-- Setting character encoding and viewport size. Do not remove. -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- FavIcon -->
-        <link ref="favicon" href="../favicon.ico" />
 
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="../styles-alt.css" />
-        <link rel="stylesheet" href="../CSS/normalize.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/normalize.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JavaScript: -->
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
-        <script src="../Scripts/sparkle_cursor.js"></script>
-        <script src="../Scripts/header.js" defer></script>
-        <script src="../Scripts/footer.js" defer></script>
-        <script src="../Scripts/tab-title-suffix.js"></script>
+        <script src="../js/sparkle_cursor.js"></script>
+        <script src="../js/header.js" defer></script>
+        <script src="../js/footer.js" defer></script>
+        <script src="../js/tab-title-suffix.js"></script>
 
-        <script src="../Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <script src="../js/accessibility/disclosure-menu.iife.js"></script>
         <!-- Disclosure Menu -->
-        <script src="../Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
     </head>
     <body id="body">
         <a href="#content" id="skip-to-content-link">Skip to content</a>
@@ -84,9 +82,9 @@
                         src="https://f2.toyhou.se/file/f2-toyhou-se/images/92262681_WBR555I9TFO2wdE.png"
                         class="full-width-image" />
                     <div class="subtitle">
-                        <img src="Images/General%20Decorations/plant_bopping.gif" aria-hidden="true" alt="" />
+                        <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
                         Welcome!!
-                        <img src="Images/General%20Decorations/plant_bopping.gif" aria-hidden="true" alt="" />
+                        <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
                     </div>
                     <div>
                         <p style="text-align: center">
@@ -138,7 +136,7 @@
             <main id="content">
                 <article>
                     <h1>
-                        <img src="../Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" />
+                        <img src="../img/decos/hanging_flowers.gif" aria-hidden="true" alt="" />
                         Brownie in a Mug
                     </h1>
                     <a href="../recipes.html" style="margin-top: -5px; font-style: italic">← return to recipe list</a>
@@ -240,13 +238,13 @@
         <general-footer></general-footer>
 
         <!-- Dark Mode Toggle -->
-        <script src="../Scripts/Accessible/dark-mode-alt.js"></script>
+        <script src="../js/accessibility/dark-mode-alt.js"></script>
 
         <!-- Font Toggle -->
-        <script src="../Scripts/font_toggle.js"></script>
+        <script src="../js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
-        <script src="../Scripts/scroll-to-top.js"></script>
+        <script src="../js/scroll-to-top.js"></script>
 
         <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>

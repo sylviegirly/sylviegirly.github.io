@@ -15,38 +15,35 @@
 
     --->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <!-- Site Title -->
         <title>media log</title>
 
         <!-- Site Description -->
         <meta content="A collection of media I have consumed + my thoughts on it." name="description" />
 
-        <!-- Setting character encoding and viewport size. Do not remove. -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- FavIcon -->
-        <link ref="favicon" href="./favicon.ico" />
-
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="styles-alt.css" />
-        <link rel="stylesheet" href="CSS/normalize.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JavaScript: -->
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
-        <script src="Scripts/sparkle_cursor.js"></script>
-        <script src="Scripts/header.js" defer></script>
-        <script src="Scripts/left-sidebar.js" defer></script>
-        <script src="Scripts/footer.js" defer></script>
-        <script src="Scripts/tab-title-suffix.js"></script>
+        <script src="js/sparkle_cursor.js"></script>
+        <script src="js/header.js" defer></script>
+        <script src="js/left-sidebar.js" defer></script>
+        <script src="js/footer.js" defer></script>
+        <script src="js/tab-title-suffix.js"></script>
 
-        <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <script src="js/accessibility/disclosure-menu.iife.js"></script>
         <!-- Disclosure Menu -->
-        <script src="Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <script src="js/accessibility/accessible-menu.js" type="module"></script>
 
         <style>
             /* page specific styling */
@@ -225,10 +222,7 @@
             <left-sidebar></left-sidebar>
             <main id="content">
                 <article>
-                    <h1>
-                        <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" /> Media
-                        Log
-                    </h1>
+                    <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Media Log</h1>
                     <p>
                         A little place to coalesce all of my tracking items from different sites (considering the
                         breadth of my media logs are across Backloggd, Goodreads, Serializd, etc). I'll mostly only add
@@ -2407,18 +2401,18 @@
         </script>
 
         <!-- Dark Mode Toggle -->
-        <script src="Scripts/Accessible/dark-mode-alt.js"></script>
+        <script src="js/accessibility/dark-mode-alt.js"></script>
 
         <!-- Font Toggle -->
-        <script src="Scripts/font_toggle.js"></script>
+        <script src="js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
-        <script src="Scripts/scroll-to-top.js"></script>
+        <script src="js/scroll-to-top.js"></script>
 
         <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
 
         <!-- Page Specific -->
-        <script src="Scripts/tabs.js"></script>
+        <script src="js/tabs.js"></script>
     </body>
 </html>

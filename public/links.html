@@ -40,22 +40,22 @@
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="styles-alt.css" />
-        <link rel="stylesheet" href="CSS/normalize.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JavaScript: -->
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
-        <script src="Scripts/sparkle_cursor.js"></script>
-        <script src="Scripts/header.js" defer></script>
-        <script src="Scripts/left-sidebar.js" defer></script>
-        <script src="Scripts/footer.js" defer></script>
-        <script src="Scripts/tab-title-suffix.js"></script>
+        <script src="js/sparkle_cursor.js"></script>
+        <script src="js/header.js" defer></script>
+        <script src="js/left-sidebar.js" defer></script>
+        <script src="js/footer.js" defer></script>
+        <script src="js/tab-title-suffix.js"></script>
 
-        <script src="Scripts/Accessible/disclosure-menu.iife.js"></script>
+        <script src="js/accessibility/disclosure-menu.iife.js"></script>
         <!-- Disclosure Menu -->
-        <script src="Scripts/Accessible/accessible-menu.js" type="module"></script>
+        <script src="js/accessibility/accessible-menu.js" type="module"></script>
         <!-- This is the portion of code you'll want to copy in between your opening and closing head tags to implement a working GIF toggle on your website, once you've done that, just add the class "freezeframe" to any GIF images or to any div containers that hold only GIF images -->
         <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css" />
         <style>
@@ -116,10 +116,7 @@
             <left-sidebar></left-sidebar>
             <main id="content">
                 <article>
-                    <h1>
-                        <img src="Images/General%20Decorations/hanging_flowers.gif" aria-hidden="true" alt="" /> Wall of
-                        Links
-                    </h1>
+                    <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Wall of Links</h1>
                     <p>
                         A list of cool neighbours, sites I like in general, and resource sites!! Inspired off
                         <a href="https://slushiecafe.neocities.org/links">Slushiecafe's</a> layout since it hits how I
@@ -169,48 +166,44 @@
                         ><img src="https://i.imgur.com/a5fqWpm.gif" alt="literally fictional" class="freezeframe"
                     /></a>
                     <a href="https://slushiecafe.neocities.org/"
-                        ><img src="Images/Sites/slushiecafebutton.gif" alt="slushie cafe" class="freezeframe"
+                        ><img src="img/sites/slushiecafebutton.gif" alt="slushie cafe" class="freezeframe"
                     /></a>
                     <a href="https://lemonadehammer.neocities.org"
                         ><img src="https://i.imgur.com/7xr3Lfk.gif" alt="lemonade hammer" class="freezeframe"
                     /></a>
                     <a href="https://mavisdeluna.art">
-                        <img src="Images/Sites/mavisdeluna.gif" alt="mavis de luna" class="freezeframe"
+                        <img src="img/sites/mavisdeluna.gif" alt="mavis de luna" class="freezeframe"
                     /></a>
                     <a href="https://starry-knight.neocities.org/">
-                        <img src="Images/Sites/button-starrys-grove.png" alt="Starry's Grove"
+                        <img src="img/sites/button-starrys-grove.png" alt="Starry's Grove"
                     /></a>
                     <a href="https://arataka.moe"
                         ><img alt="Laith Rai7an" src="https://files.catbox.moe/k0v6qu.gif" class="freezeframe"
                     /></a>
                     <a href="https://shwintykat.neocities.org"
-                        ><img alt="shwintykat" src="./Images/Sites/meerkatbutton2.png"
+                        ><img alt="shwintykat" src="./img/sites/meerkatbutton2.png"
                     /></a>
                     <a href="https://sanchoyoscribbles.neocities.org"
-                        ><img alt="sanchoyoscribbles" src="./Images/Sites/ssws.gif" class="freezeframe"
+                        ><img alt="sanchoyoscribbles" src="./img/sites/ssws.gif" class="freezeframe"
                     /></a>
                     <a href="https://crowcoco.neocities.org/"
-                        ><img alt="crowcoco" src="./Images/Sites/crowcoco.gif" class="freezeframe"
+                        ><img alt="crowcoco" src="./img/sites/crowcoco.gif" class="freezeframe"
                     /></a>
                     <a href="https://tofutush.neocities.org/"
-                        ><img alt="tofutush" src="./Images/Sites/tofutush.gif" class="freezeframe"
+                        ><img alt="tofutush" src="./img/sites/tofutush.gif" class="freezeframe"
                     /></a>
                     <a href="https://aegann.neocities.org/"
-                        ><img alt="aegann" src="./Images/Sites/aegcafebutton.gif" class="freezeframe"
+                        ><img alt="aegann" src="./img/sites/aegcafebutton.gif" class="freezeframe"
                     /></a>
-                    <a href="https://juneish.neocities.org"><img alt="juneish" src="./Images/Sites/button.gif" /></a>
-                    <a href="https://kuroi.neocities.org/"><img alt="kuroi" src="./Images/Sites/kuroi.png" /></a>
-                    <a href="https://daniele63.com/"
-                        ><img alt="daniele 63" src="./Images/Sites/danieles_button.png"
-                    /></a>
-                    <a href="https://divergentrays.com"
-                        ><img alt="divergent rays" src="./Images/Sites/drbutton2.png"
-                    /></a>
+                    <a href="https://juneish.neocities.org"><img alt="juneish" src="./img/sites/button.gif" /></a>
+                    <a href="https://kuroi.neocities.org/"><img alt="kuroi" src="./img/sites/kuroi.png" /></a>
+                    <a href="https://daniele63.com/"><img alt="daniele 63" src="./img/sites/danieles_button.png" /></a>
+                    <a href="https://divergentrays.com"><img alt="divergent rays" src="./img/sites/drbutton2.png" /></a>
                     <a href="https://moonside-inn.neocities.org/"
                         ><img src="https://files.catbox.moe/2va2li.png" alt="moonside" loading="lazy"
                     /></a>
                     <a href="https://sodarain.neocities.org"
-                        ><img src="./Images/Sites/sodarain.gif" alt="soda rain" loading="lazy" class="freezeframe"
+                        ><img src="./img/sites/sodarain.gif" alt="soda rain" loading="lazy" class="freezeframe"
                     /></a>
                     <a href="https://lazer-bunny.neocities.org/"
                         ><img
@@ -220,15 +213,11 @@
                             class="freezeframe"
                     /></a>
                     <a href="https://cheruehai.neocities.org/"
-                        ><img
-                            src="./Images/Sites/cheruehai_button.gif"
-                            alt="cheruehai"
-                            loading="lazy"
-                            class="freezeframe"
+                        ><img src="./img/sites/cheruehai_button.gif" alt="cheruehai" loading="lazy" class="freezeframe"
                     /></a>
                     <a href="https://nomnomnami.com/"
                         ><img
-                            src="./Images/Sites/nomnomnami_button.gif"
+                            src="./img/sites/nomnomnami_button.gif"
                             alt="nom nom nami"
                             loading="lazy"
                             class="freezeframe"
@@ -237,59 +226,49 @@
                         <img src="https://i.imgur.com/lFO9jno.png" alt="moogle boogles" loading="lazy"
                     /></a>
                     <a href="https://badgraph1csghost.neocities.org/">
-                        <img src="./Images/Sites/8s_badgraph1csghost.png" alt="bad graphics ghost" loading="lazy"
+                        <img src="./img/sites/8s_badgraph1csghost.png" alt="bad graphics ghost" loading="lazy"
                     /></a>
                     <a href="https://keysklubhouse.com">
-                        <img src="./Images/Sites/keys_by_pastelhello2.png" alt="keys clubhouse" loading="lazy"
+                        <img src="./img/sites/keys_by_pastelhello2.png" alt="keys clubhouse" loading="lazy"
                     /></a>
                     <a href="https://bulltown.neocities.org/">
-                        <img src="./Images/Sites/b-n-button.png" alt="bull town" loading="lazy"
+                        <img src="./img/sites/b-n-button.png" alt="bull town" loading="lazy"
                     /></a>
                     <a href="https://wizardhell.neocities.org/">
-                        <img src="./Images/Sites/wizardhellbutton.png" alt="wizard hell" loading="lazy"
+                        <img src="./img/sites/wizardhellbutton.png" alt="wizard hell" loading="lazy"
                     /></a>
                     <a href="https://kkb.online"
                         ><img
-                            src="./Images/Sites/kkbutton.gif"
+                            src="./img/sites/kkbutton.gif"
                             alt="kkb.online 88x31 button"
                             loading="lazy"
                             class="freezeframe"
                     /></a>
                     <a href="https://drinkmoretea.neocities.org/">
-                        <img src="./Images/Sites/drinkmoreteasitebutt.png" alt="drink more tea" loading="lazy"
+                        <img src="./img/sites/drinkmoreteasitebutt.png" alt="drink more tea" loading="lazy"
                     /></a>
                     <a href="https://mioasis.neocities.org/">
-                        <img src="./Images/Sites/mibutton.gif" loading="lazy" alt="mioasis" class="freezeframe"
+                        <img src="./img/sites/mibutton.gif" loading="lazy" alt="mioasis" class="freezeframe"
                     /></a>
                     <a href="https://cyberstheb.neocities.org/">
-                        <img src="./Images/Sites/cyberstheb.gif" loading="lazy" alt="cyberstheb" class="freezeframe"
+                        <img src="./img/sites/cyberstheb.gif" loading="lazy" alt="cyberstheb" class="freezeframe"
                     /></a>
                     <a href="https://ordainedmotion.neocities.org"
                         ><img
-                            src="./Images/Sites/ordainedmotion.png"
+                            src="./img/sites/ordainedmotion.png"
                             width="88"
                             height="31"
                             loading="lazy"
                             alt="Mizumiya - Water Palace"
                     /></a>
                     <a href="https://ventablack.neocities.org"
-                        ><img
-                            src="./Images/Sites/ventablack.png"
-                            width="88"
-                            height="31"
-                            loading="lazy"
-                            alt="ventablack"
+                        ><img src="./img/sites/ventablack.png" width="88" height="31" loading="lazy" alt="ventablack"
                     /></a>
                     <a href="https://hitokage.neocities.org/"
-                        ><img
-                            src="./Images/Sites/hitokage-2.png"
-                            width="88"
-                            height="31"
-                            loading="lazy"
-                            alt="ventablack"
+                        ><img src="./img/sites/hitokage-2.png" width="88" height="31" loading="lazy" alt="ventablack"
                     /></a>
                     <a href="https://mintywyvern.neocities.org"
-                        ><img src="./Images/Sites/MintyWyvern_button.png" loading="lazy" alt="minty wyvern"
+                        ><img src="./img/sites/MintyWyvern_button.png" loading="lazy" alt="minty wyvern"
                     /></a>
                     <div class="interest-content">
                         <ul>
@@ -338,13 +317,13 @@
                             alt="neonbandit"
                     /></a>
                     <a href="https://ivyswell-tavern.neocities.org/"
-                        ><img alt="ivyswell tavern" loading="lazy" src="./Images/Sites/ivystavern.png"
+                        ><img alt="ivyswell tavern" loading="lazy" src="./img/sites/ivystavern.png"
                     /></a>
                     <a href="https://armaina.com/"
-                        ><img alt="armaina" loading="lazy" src="./Images/Sites/armaina.jpg"
+                        ><img alt="armaina" loading="lazy" src="./img/sites/armaina.jpg"
                     /></a>
                     <a href="https://solaria.neocities.org/"
-                        ><img alt="solaria" loading="lazy" src="./Images/Sites/solaria.png"
+                        ><img alt="solaria" loading="lazy" src="./img/sites/solaria.png"
                     /></a>
                     <a href="https://mei.nekoweb.org/"
                         ><img
@@ -354,10 +333,10 @@
                             class="freezeframe"
                     /></a>
                     <a href="https://luvstarkei.com"
-                        ><img src="Images/Sites/LuvstarKeiButton-1.png" alt="Luvstar Kei" loading="lazy"
+                        ><img src="img/sites/LuvstarKeiButton-1.png" alt="Luvstar Kei" loading="lazy"
                     /></a>
                     <a href="https://hekate.neocities.org/"
-                        ><img src="Images/Sites/hekate.png" alt="hekate" loading="lazy"
+                        ><img src="img/sites/hekate.png" alt="hekate" loading="lazy"
                     /></a>
                     <div class="interest-content">
                         <ul>
@@ -379,21 +358,21 @@
                     /></a>
                     <a href="https://tokyomiracle.net"
                         ><img
-                            src="./Images/Sites/tm2button.gif"
+                            src="./img/sites/tm2button.gif"
                             loading="lazy"
                             alt="tokyo miracle comic"
                             class="freezeframe"
                     /></a>
                     <a href="https://sunnysvideo.neocities.org/"
                         ><img
-                            src="Images/Sites/Sunnys_Video_Website_Button.gif"
+                            src="img/sites/Sunnys_Video_Website_Button.gif"
                             alt="Sunny's Video Store Website Link"
                             width="88"
                             height="31"
                             class="freezeframe"
                     /></a>
                     <a href="https://letsfindpokemon.info"
-                        ><img src="./Images/Sites/pokemon_found.png" loading="lazy" alt="Let's Find Pokemon! FOUND"
+                        ><img src="./img/sites/pokemon_found.png" loading="lazy" alt="Let's Find Pokemon! FOUND"
                     /></a>
                     <div class="interest-content">
                         <ul>
@@ -407,7 +386,7 @@
                 <article>
                     <h2>Resource Sites</h2>
                     <p>
-                        Sites centric on categorizing resources (scripts/templates/images), are widgets, or have helpful
+                        Sites centric on categorizing resources (js/templates/images), are widgets, or have helpful
                         tutorials.
                     </p>
                     <a href="https://petrapixel.neocities.org/"
@@ -463,7 +442,7 @@
                             class="freezeframe"
                     /></a>
                     <a href="https://discourse.32bit.cafe/"
-                        ><img src="Images/Sites/32bitcafe.png" loading="lazy" alt="32 bit cafe"
+                        ><img src="img/sites/32bitcafe.png" loading="lazy" alt="32 bit cafe"
                     /></a>
                 </article>
                 <article>
@@ -574,7 +553,7 @@
                                 <li><a href="https://scented.minty.nu//">scented</a> // green tea</li>
                                 <li>
                                     <a href="https://pkmn.caelestis.nu" rel="noopener noreferrer">I Choose You!</a> |
-                                    <img src="Images/Misc/giratina_sprite.png" data-tippy-content="Giratina" />
+                                    <img src="img/misc/giratina_sprite.png" data-tippy-content="Giratina" />
                                 </li>
                             </ul>
                         </div>
@@ -598,10 +577,7 @@
                                 data-tippy-content="the spring event egg hunt was fun :)"
                         /></a>
                         <a href="https://splattacks.neocities.org/main">
-                            <img
-                                src="Images/Misc/white_puffle.gif"
-                                loading="lazy"
-                                alt="white puffle from club penguin" />
+                            <img src="img/misc/white_puffle.gif" loading="lazy" alt="white puffle from club penguin" />
                         </a>
                         <div style="text-align: center">
                             <a href="https://www.pokemon-adoption.de">
@@ -634,13 +610,13 @@
         </script>
 
         <!-- Dark Mode Toggle -->
-        <script src="Scripts/Accessible/dark-mode-alt.js"></script>
+        <script src="js/accessibility/dark-mode-alt.js"></script>
 
         <!-- Font Toggle -->
-        <script src="Scripts/font_toggle.js"></script>
+        <script src="js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
-        <script src="Scripts/scroll-to-top.js"></script>
+        <script src="js/scroll-to-top.js"></script>
 
         <!-- Accessibility Button -->
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>

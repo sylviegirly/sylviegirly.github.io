@@ -133,19 +133,19 @@ html[data-theme="dark"] {
 
 @font-face {
     font-family: "venice";
-    src: url(../Fonts/VeniceClassic.ttf);
+    src: url(../fonts/VeniceClassic.ttf);
 }
 @font-face {
     font-family: "freepixel";
-    src: url(../Fonts/FreePixel.ttf);
+    src: url(../fonts/FreePixel.ttf);
 }
 @font-face {
     font-family: "dosis";
-    src: url(../Fonts/Dosis-VariableFont_wght.ttf);
+    src: url(../fonts/Dosis-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: "atkinson";
-    src: url(../Fonts/AtkinsonHyperlegible-Regular.ttf);
+    src: url(../fonts/AtkinsonHyperlegible-Regular.ttf);
 }
 
 * {
