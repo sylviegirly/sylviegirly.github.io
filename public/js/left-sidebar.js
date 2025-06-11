@@ -115,8 +115,8 @@ const sidebar = `
             <textarea id="site-button" name="site-button">
 &lt;a href=&quot;https://zhongvie.neocities.org/&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/siteButton.png&quot; alt=&quot;zhongvie button&quot;&gt;&lt;/a&gt;</textarea
             >
-            <label for="site-button" class="subtle" style="text-align: center; line-height: 1em;"
-                >Site button to copy and paste. Hotlinking is fine; image is on imgur.</label
+            <label for="site-button" class="subtle" style="text-align: center;"
+                >Site button; hotlinking is fine; image is on filegarden.</label
             >
         </div>
     </section>
