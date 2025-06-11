@@ -310,6 +310,13 @@ mark {
     font-weight: 500;
 }
 
+.subtle {
+    font-family: "atkinson";
+    line-height: 1.1em;
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
 h4 {
     background-color: var(--primary-accent);
     /*background-image: url(https://sadhost.neocities.org/images/tiles/bg_bluewhiteflowers.gif);*/
