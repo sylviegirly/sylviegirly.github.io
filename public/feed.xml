@@ -9,7 +9,15 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-06-06T09:11:31-04:00</updated>
+    <updated>2025-06-11T10:52:35-04:00</updated>
+
+    <entry>
+        <title>Updated now page</title>
+        <link href="https://zhongvie.neocities.org/now" />
+        <updated>2025-06-11T10:52:35-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1749653555</id>
+        <content type="html"> &#x3C;p&#x3E;New /now entry to catch everything up to the present&#x3C;/p&#x3E; </content>
+    </entry>
 
     <entry>
         <title>Added cool video section to front page</title>
