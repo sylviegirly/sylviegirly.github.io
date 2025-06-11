@@ -937,7 +937,7 @@ article ul {
 article ul ul {
     border-left: 1px solid rgba(from var(--secondary-accent) r g b / 50%);
     border-radius: 0 0 0 10px;
-    padding-left: 2.5rem;
+    padding-left: 2.3rem;
     margin-left: -0.8rem;
 }
 
@@ -1066,15 +1066,16 @@ article .scrollable p:first-child {
 
 .interest-content ul {
     padding: 0;
+    list-style: none;
 }
 
 .interest-content li {
     display: inline;
-    line-height: 1.5rem;
+    line-height: 1.5em;
 }
 
 .interest-content li:after {
-    content: " ⋅ ";
+    content: " -";
     color: var(--secondary-accent);
 }
 
