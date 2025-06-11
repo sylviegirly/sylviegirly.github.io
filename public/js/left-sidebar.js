@@ -46,11 +46,11 @@ const sidebar = `
                 src="Images/dendro_symbol.png" aria-hidden='true' alt='' />
         </div>
         <div id="img-load"></div>
-        <div class="subtitle">
+        <h4>
             <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
             Welcome!!
             <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
-        </div>
+        </h4>
         <div>
             <p style="text-align: center">
                 <b>aid</b>
@@ -93,6 +93,11 @@ const sidebar = `
         </div>
     </section>
     <section>
+        <h4>
+            <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
+            Site Button
+            <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
+        </h4>
         <div class="site-button">
             <div class="images-row">
                 <a href="https://pixel-world.tumblr.com/post/46858429546/roses" target="_blank">
