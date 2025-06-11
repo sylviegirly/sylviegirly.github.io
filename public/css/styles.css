@@ -276,6 +276,7 @@ b,
 strong {
     color: var(--primary-accent);
     font-weight: normal;
+    text-transform: uppercase;
 }
 
 italics,
