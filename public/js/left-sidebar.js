@@ -122,13 +122,13 @@ const sidebar = `
     </section>
     <div class="lazy-flex-images hide-mobile" style="margin-top: 20px;">
     <a href="https://tamanotchi.world/22103c">
-    <img src="https://tamanotchi.world/i/22103" alt="It's tamaNOTchi! Click to feed!">
+    <img src="https://tamanotchi.world/i/22103" class="tilt-hover" aria-hidden="true" alt="">
     </a>
     <a href="https://tamanotchi.world/22050c">
-    <img src="https://tamanotchi.world/i/22050" alt="It's tamaNOTchi! Click to feed!">
+    <img src="https://tamanotchi.world/i/22050" class="tilt-hover" aria-hidden="true" alt="">
     </a>
     <a href="https://tamanotchi.world/22258c">
-    <img src="https://tamanotchi.world/i/22258" alt="It's tamaNOTchi! Click to feed!">
+    <img src="https://tamanotchi.world/i/22258" class="tilt-hover" aria-hidden="true" alt="">
     </a>
     </div>
 </div>

@@ -1533,11 +1533,11 @@ footer a:hover {
     bottom: 10px;
 }
 
-.hover-grow a {
+.hover-grow a img {
     transition: transform 0.2s ease-in-out; /* Animation */
 }
 
-.hover-grow a:hover {
+.hover-grow a img:hover {
     transform: scale(1.1);
 }
 
@@ -1756,6 +1756,22 @@ footer a:hover {
     100% {
         transform: translate(0, 0);
     }
+}
+
+.tilt-hover {
+    transition: 0.2s ease-in-out;
+}
+
+.tilt-hover:hover {
+    transform: rotate(-15deg);
+}
+
+.grow-hover {
+    transition: 0.2s ease-in-out;
+}
+
+.grow-hover:hover {
+    transform: scale(1.1);
 }
 
 /* Heart Hover */
