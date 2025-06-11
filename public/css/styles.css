@@ -261,6 +261,7 @@ bold,
 b,
 strong {
     color: var(--primary-accent);
+    font-weight: normal;
 }
 
 italics,
