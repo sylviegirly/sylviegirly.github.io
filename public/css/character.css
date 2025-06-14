@@ -604,8 +604,7 @@ bold,
 b,
 strong {
     color: var(--primary-accent);
-    font-weight: bold;
-    font-family: "dosis";
+    text-transform: uppercase;
 }
 
 italics,
@@ -742,6 +741,10 @@ main a:focus {
 main ul {
     list-style-position: outside;
     margin-left: 25px;
+}
+
+font-fix ul li {
+    margin-left: 0.5px;
 }
 
 main ul li {
@@ -960,7 +963,7 @@ button {
 }
 
 .design-info {
-    flex: 62%;
+    flex: auto;
 }
 
 .design-image {
@@ -997,7 +1000,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 15px;
+    gap: 7px;
     margin-top: 15px;
 }
 
