@@ -44,8 +44,10 @@ const content = `
             <a id="link-3-0-0" href="#">Personal</a>
             <ul id="menu-3">
                 <li id="item-3-1-0"><a id="link-3-1-0" href="../blogging.html">Blog</a></li>
-                <li id="item-3-2-0"><a id="link-3-2-0" href="../manifesto.html">Manifesto</a></li>
-                <li id="item-3-3-0"><a id="link-3-3-0" href="../to-do.html">To-Do List</a></li>
+                <li id="item-3-2-0"><a id="link-3-2-0" href="../listfauxgraphy">Listography</a></li>
+                <li id="item-3-3-0"><a id="link-3-3-0" href="../manifesto.html">Manifesto</a></li>
+                <li id="item-3-4-0"><a id="link-3-4-0" href="../now.html">Now</a></li>
+                <li id="item-3-5-0"><a id="link-3-5-0" href="../to-do.html">To-Do List</a></li>
             </ul>
         </li>
         <li id="item-4-0-0" class="dropdown">
@@ -71,8 +73,7 @@ const content = `
             <ul id="menu-5">
                 <li id="item-5-1-0"><a id="link-5-1-0" href="/media-log.html">Media Log</a></li>
                 <li id="item-5-2-0"><a id="link-5-2-0" href="/minecraft.html">Minecraft Forever World</a></li>
-                <li id="item-5-3-0"><a id="link-5-3-0" href="/links.html">Neighbours / Webrings</a></li>
-                <li id="item-5-4-0"><a id="link-5-4-0" href="/recipes.html">Recipes</a></li>
+                <li id="item-5-3-0"><a id="link-5-3-0" href="/recipes.html">Recipes</a></li>
             </ul>
         </li>
         <li id="item-6-0-0" class="dropdown">
@@ -82,8 +83,9 @@ const content = `
                 <li id="item-6-2-0">
                     <a id="link-6-2-0" href="../bookmarks.html">Bookmarks</a>
                 </li>
-                <li id="item-6-3-0"><a id="link-6-3-0" href="../sitemap.html">Sitemap</a></li>
-                <li id="item-6-4-0"><a id="link-6-4-0" href="../credits.html">Credits</a></li>
+                <li id="item-6-3-0"><a id="link-6-3-0" href="/links.html">Neighbours / Webrings</a></li>
+                <li id="item-6-4-0"><a id="link-6-4-0" href="../sitemap.html">Sitemap</a></li>
+                <li id="item-6-5-0"><a id="link-6-5-0" href="../credits.html">Credits</a></li>
             </ul>
         </li>
     </ul>
