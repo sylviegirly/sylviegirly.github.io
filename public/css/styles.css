@@ -1824,3 +1824,8 @@ footer a:hover {
     -webkit-mask-position: center;
     mask-position: center;
 }
+
+/* Homebrew CSS */
+.HBRarrow {
+    max-width: 50px;
+}
