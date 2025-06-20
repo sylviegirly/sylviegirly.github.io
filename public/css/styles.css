@@ -174,16 +174,27 @@ body {
     font-size: 1rem;
     background-color: var(--background-colour);
     color: var(--text-colour);
-    font-family: "freepixel", sans-serif;
+    font-family:
+        "freepixel",
+        -apple-system,
+        BlinkMacSystemFont,
+        avenir next,
+        avenir,
+        segoe ui,
+        helvetica neue,
+        Adwaita Sans,
+        Cantarell,
+        Ubuntu,
+        roboto,
+        noto,
+        helvetica,
+        arial,
+        sans-serif;
     line-height: 1.3em;
     letter-spacing: 0;
     background-image: var(--background-image);
     background-attachment: fixed;
     cursor: url(http://www.rw-designer.com/cursor-extern.php?id=186458), auto;
-}
-
-.accessible-font {
-    font-family: "Arial";
 }
 
 section,
