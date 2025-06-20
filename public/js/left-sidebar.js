@@ -79,15 +79,15 @@ const sidebar = `
                 <img
                     src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/bites%20you%20shiny%20button.gif"
                     aria-hidden="true"
-                    alt="">
+                    alt="shiny button that says bites you">
                 <img
                     src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/silly%20shiny%20button.gif"
                     aria-hidden="true"
-                    alt="">
+                    alt="shiny button that says silly">
                 <img
                     src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/zhongvie%20shiny%20button.gif"
                     aria-hidden="true"
-                    alt="">
+                    alt="shiny button that says zhongvie">
                 </a>
             </div>
         </div>

@@ -20,7 +20,7 @@ html[data-theme="light"] {
 
     /* TEXT */
     --text-colour: #16190f;
-    --link-colour: #b67925;
+    --link-colour: #9a5b1a;
     --link-hover: #475407;
     --body-deco: #f7f6e3;
 }
@@ -99,7 +99,7 @@ html[data-theme="dark"] {
 
         /* TEXT */
         --text-colour: #16190f;
-        --link-colour: #b67925;
+        --link-colour: #9a5b1a;
         --link-hover: #475407;
         --body-deco: #f7f6e3;
     }
