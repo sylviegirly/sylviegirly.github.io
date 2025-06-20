@@ -9,7 +9,7 @@ const image =
     randomDragon +
     "'><img src='https://dragcave.net/image/" +
     randomDragon +
-    ".gif' class='image' style='margin-left: auto; margin-right: auto; padding: 10px; margin-bottom: 0' alt='a pixel dragon from dragon cave' aria-hidden='true' loading='lazy'/></a>";
+    ".gif' class='image' style='margin-left: auto; margin-right: auto; padding: 10px; margin-bottom: 0' alt='a pixel dragon from dragon cave' loading='lazy'/></a>";
 
 // append to the div
 document.getElementById("dragon-cave").innerHTML = image;
