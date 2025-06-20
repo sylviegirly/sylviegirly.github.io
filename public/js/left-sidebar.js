@@ -78,15 +78,12 @@ const sidebar = `
                 title="gifs by lavendergalactic as a commission for me. please don't use.">
                 <img
                     src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/bites%20you%20shiny%20button.gif"
-                    aria-hidden="true"
                     alt="shiny button that says bites you">
                 <img
                     src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/silly%20shiny%20button.gif"
-                    aria-hidden="true"
                     alt="shiny button that says silly">
                 <img
                     src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/zhongvie%20shiny%20button.gif"
-                    aria-hidden="true"
                     alt="shiny button that says zhongvie">
                 </a>
             </div>
@@ -102,8 +99,7 @@ const sidebar = `
             <div class="images-row">
                 <a href="https://pixel-world.tumblr.com/post/46858429546/roses" target="_blank">
                     <img
-                        aria-hidden="true"
-                        alt=""
+                        alt="yellow pixel rose"
                         src="img/decos/pixel_rose.gif" />
                 </a>
                 <a href="https://zhongvie.neocities.org/" target="_blank"
@@ -111,8 +107,7 @@ const sidebar = `
                 /></a>
                 <a href="https://pixel-world.tumblr.com/post/46858429546/roses" target="_blank">
                     <img
-                        aria-hidden="true"
-                        alt=""
+                        alt="yellow pixel rose"
                         src="img/decos/pixel_rose.gif" />
                 </a>
             </div>
@@ -127,13 +122,13 @@ const sidebar = `
     </section>
     <div class="lazy-flex-images hide-mobile" style="margin-top: 20px;">
     <a href="https://tamanotchi.world/22103c">
-    <img src="https://tamanotchi.world/i/22103" class="tilt-hover" aria-hidden="true" alt="">
+    <img src="https://tamanotchi.world/i/22103" class="tilt-hover" alt="green tamanotchi pixel">
     </a>
     <a href="https://tamanotchi.world/22050c">
-    <img src="https://tamanotchi.world/i/22050" class="tilt-hover" aria-hidden="true" alt="">
+    <img src="https://tamanotchi.world/i/22050" class="tilt-hover" alt="yellow tamanotchi pixel">
     </a>
     <a href="https://tamanotchi.world/22258c">
-    <img src="https://tamanotchi.world/i/22258" class="tilt-hover" aria-hidden="true" alt="">
+    <img src="https://tamanotchi.world/i/22258" class="tilt-hover" alt="purple tamanotchi pixel">
     </a>
     </div>
 </div>
