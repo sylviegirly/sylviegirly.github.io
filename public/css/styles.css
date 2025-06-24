@@ -1811,6 +1811,16 @@ footer a:hover {
     transform: scale(1.05);
 }
 
+.lift-hover a img {
+    transition: 0.3s ease-in-out;
+    position: relative;
+    top: 0;
+}
+
+.lift-hover a img:hover {
+    top: -5px;
+}
+
 /* Heart Hover */
 
 .img-hearthover {

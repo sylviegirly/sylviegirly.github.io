@@ -74,6 +74,7 @@ const content = `
                 <li id="item-5-1-0"><a id="link-5-1-0" href="/media-log.html">Media Log</a></li>
                 <li id="item-5-2-0"><a id="link-5-2-0" href="/minecraft.html">Minecraft Forever World</a></li>
                 <li id="item-5-3-0"><a id="link-5-3-0" href="/recipes.html">Recipes</a></li>
+                <li id="item-5-4-0"><a id="link-5-4-0" href="/toybox.html">Toybox</a></li>
             </ul>
         </li>
         <li id="item-6-0-0" class="dropdown">
