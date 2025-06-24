@@ -61,11 +61,11 @@
         <style>
             .curiocabinet {
                 display: block;
-                width: 700px;
+                width: 632px;
                 max-width: 100vw;
                 height: auto;
-                border: 6px solid transparent;
-                border-image: url("img/misc/curio.png") 6;
+                border: 34px solid transparent;
+                border-image: url("img/misc/curio.png") 34;
                 border-image-outset: 0;
                 image-rendering: pixelated;
                 position: relative;
@@ -74,18 +74,28 @@
             }
 
             .shelves {
-                line-height: 137px;
+                line-height: 123px;
                 background: url("img/misc/shelf.png") repeat-y;
                 text-align: center;
                 display: inline-block;
                 width: 100%;
-                background-size: 689px 137px;
+                background-size: 564px 123px;
+            }
+
+            .shelvesdeco {
+                position: absolute;
+                width: 632px;
+                max-width: 100vw;
+                height: auto;
+                z-index: 2;
+                top: -5px;
+                pointer-events: none;
             }
 
             .shelves img {
                 vertical-align: bottom !important;
                 display: inline-block;
-                margin: 5px 4px;
+                margin: 7px 4px;
                 filter: drop-shadow(2px 2px 2px #34180e);
             }
         </style>
@@ -113,10 +123,12 @@
                     <p>
                         Pixel collection inspired from
                         <a href="https://lazer-bunny.neocities.org/Toybox">lazer-bunny</a> using
-                        <a href="https://hillhouse.neocities.org/cliques">hillhouse's</a> free curio layout! I like
-                        pixels ... I'll eventually make nicer shelves.
+                        <a href="https://hillhouse.neocities.org/cliques">hillhouse's</a> free curio layout! I edited
+                        the shelf from there to fit the blog colours + err ... will eventually make hanging vines that
+                        look nicer.
                     </p>
                     <div class="curiocabinet">
+                        <div class="shelvesdeco"><img src="img/misc/tempVines.png" /></div>
                         <div class="shelves lift-hover">
                             <a href="https://www.deviantart.com/early2000s-witch/art/F2U-Bongo-Cat-gif-777527448"
                                 ><img src="img/toybox/bongo-cat.gif" loading="lazy" alt="bongo cat"
