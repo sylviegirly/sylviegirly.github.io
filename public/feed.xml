@@ -9,7 +9,18 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-06-11T10:52:35-04:00</updated>
+    <updated>2025-06-24T03:44:11-04:00</updated>
+
+    <entry>
+        <title>Made a toybox page!</title>
+        <link href="https://zhongvie.neocities.org/toybox" />
+        <updated>2025-06-24T03:44:11-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1750751051</id>
+        <content type="html">
+            &#x3C;p&#x3E;Added a toybox page to store cute pixels, inspired off other toyboxes!! I ... do need to make a
+            nicer pixel shelf though ...&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Updated now page</title>
