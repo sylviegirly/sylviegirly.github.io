@@ -1338,6 +1338,11 @@ button {
     background-color: var(--secondary-accent); /* Add a dark-grey background on hover */
 }
 
+/* Shadow CSS Deco */
+.dropdown {
+    filter: drop-shadow(3px 3px 0 var(--primary-accent));
+}
+
 /* The following CSS ONLY applies to desktop/big screens */
 
 @media screen and (min-width: 800px) {
