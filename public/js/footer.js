@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const footer = `
 <footer>
     <p>
-        2025 — forevermore <i>/</i> lovingly coded by <a href="https://zhongvie.neocities.org">aid</a> / <a href="https://zhongvie.neocities.org/credits">credits</a> / <a href="https://asuraid.atabook.org/">guestbook</a> / <a href="mailto:sylviegirly@pm.me">contact me</a>
+        2025 — forevermore <i>/</i> lovingly coded by <a href="https://justinjackson.ca/webmaster/">aid</a> / <a href="https://zhongvie.neocities.org/credits">credits</a> / <a href="https://asuraid.atabook.org/">guestbook</a> / <a href="mailto:sylviegirly@pm.me">contact me</a>
     </p>
 </footer>
 `;
