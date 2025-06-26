@@ -1339,7 +1339,7 @@ button {
 }
 
 /* Shadow CSS Deco */
-.dropdown {
+.image-shadow {
     filter: drop-shadow(3px 3px 0 var(--primary-accent));
 }
 
