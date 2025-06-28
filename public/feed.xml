@@ -9,7 +9,19 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-06-24T03:44:11-04:00</updated>
+    <updated>2025-06-28T02:45:25-04:00</updated>
+
+    <entry>
+        <title>Updated now page</title>
+        <link href="https://zhongvie.neocities.org/now" />
+        <updated>2025-06-28T02:45:25-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1751093125</id>
+        <content type="html">
+            &#x3C;p&#x3E;Updated now page again! ... I didn&#x27;t realize it&#x27;s been a bit over two weeks since my
+            last update; I wanna try to keep them to a bi-weekly basis for my own tracking as well to look back on for
+            funsies&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Made a toybox page!</title>
