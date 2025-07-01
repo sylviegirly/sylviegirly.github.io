@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    --->
+    <head>
+        <!-- Dark Mode Toggle -->
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "Light Mode";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+            }
+        </script>
+        <title>Raiden</title>
+
+        <!-- FavIcon Gif -->
+        <link rel="icon" type="image/gif" href="../img/oc/hideki/favicon.gif" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" type="text/css" href="../css/character.css" />
+        <link rel="stylesheet" href="../css/lightbox.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JS: -->
+        <script src="../js/lightbox-plus-jquery.js"></script>
+        <script src="character-nav.js" defer></script>
+        <!-- Disclosure Menu -->
+        <script src="../js/accessibility/disclosure-menu.iife.js"></script>
+        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
+        <script src="../js/tab-title-suffix.js"></script>
+        <style>
+            html,
+            html[data-theme="light"] {
+                /* Main colors */
+                --background: #d5e3e4; /* Page background */
+                --background-accent: #c0cbd1;
+                --color: #0e131c;
+                --block: #eef8f9; /* Background color for the grid blocks in the content */
+                --body-deco: #dae7f0;
+
+                --primary-accent: #5a768d;
+                --secondary-accent: #2b3b61;
+                --font-on-accent: #ffffff;
+
+                --link: #3178b1;
+                --linkhover: #0b0b24;
+
+                --letter-glow: rgba(68, 168, 232, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #eef8f9;
+                --sidebarcolor: #0e131c;
+                --subtle-line: rgba(22, 83, 190, 0.2);
+            }
+
+            html[data-theme="dark"] {
+                /* Main colors */
+                --background: #1a1e2a; /* Page background */
+                --background-accent: #1d272e;
+                --color: #eff1f5;
+                --block: #0d1015; /* Background color for the grid blocks in the content */
+                --body-deco: #181a1e;
+
+                --primary-accent: #8ea6cc;
+                --secondary-accent: #798b99;
+                --font-on-accent: #000000;
+
+                --link: #7ed3ed;
+                --linkhover: #ffffff;
+
+                --letter-glow: rgba(56, 145, 159, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #0d1015;
+                --sidebarcolor: #eff1f5;
+                --subtle-line: rgba(135, 181, 255, 0.2);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                html,
+                html[data-theme="dark"] {
+                    /* Main colors */
+                    --background: #1a1e2a; /* Page background */
+                    --background-accent: #1d272e;
+                    --color: #eff1f5;
+                    --block: #0d1015; /* Background color for the grid blocks in the content */
+                    --body-deco: #181a1e;
+
+                    --primary-accent: #8ea6cc;
+                    --secondary-accent: #798b99;
+                    --font-on-accent: #000000;
+
+                    --link: #7ed3ed;
+                    --linkhover: #ffffff;
+
+                    --letter-glow: rgba(56, 145, 159, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #0d1015;
+                    --sidebarcolor: #eff1f5;
+                    --subtle-line: rgba(135, 181, 255, 0.2);
+                }
+
+                html[data-theme="light"] {
+                    /* Main colors */
+                    --background: #d5e3e4; /* Page background */
+                    --background-accent: #c0cbd1;
+                    --color: #0e131c;
+                    --block: #eef8f9; /* Background color for the grid blocks in the content */
+                    --body-deco: #dae7f0;
+
+                    --primary-accent: #5a768d;
+                    --secondary-accent: #2b3b61;
+                    --font-on-accent: #ffffff;
+
+                    --link: #3178b1;
+                    --linkhover: #0b0b24;
+
+                    --letter-glow: rgba(68, 168, 232, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #eef8f9;
+                    --sidebarcolor: #0e131c;
+                    --subtle-line: rgba(22, 83, 190, 0.2);
+                }
+            }
+
+            :root {
+                --header-image: url("https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg");
+                --focal-image: url("../img/oc/raiden/focal_image.png");
+                --focal-trivia-image: url("../img/oc/raiden/trivia_focal.jpg");
+
+                --moodboard-1-image: url("https://plus.unsplash.com/premium_photo-1674684223407-13e383e1f0e6?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                --moodboard-2-image: url("https://images.unsplash.com/photo-1548620848-d375c7919ea2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                --moodboard-3-image: url("https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg");
+                --moodboard-4-image: url("https://images.pexels.com/photos/6008956/pexels-photo-6008956.jpeg");
+                --moodboard-5-image: url("https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg");
+            }
+
+            .focal {
+                background-position: center !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Please don't remove the next 2 lines! -->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+        <nav-header></nav-header>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div id="container">
+            <div id="sidebar">
+                <div id="sidebar-content">
+                    <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+                    <div class="icon">
+                        <img src="../img/oc/raiden/sidebar_image.jpg" alt="" aria-hidden="true" />
+                    </div>
+                    <div class="header">Raiden</div>
+
+                    <!-- Quote -->
+                    <div class="quote">"but i'm too good to kill anyone! :(" i'm not. give me the gun.</div>
+
+                    <!-- Navigation menu  -->
+                    <div class="" id="main-menu">
+                        <ul>
+                            <li><a href="https://ca.pinterest.com/Asuraid/raiden-hamasaki/">Pinterest</a></li>
+                            <li><a href="https://open.spotify.com/playlist/5OG2vIreuAcpizYXkYoDmh">Spotify</a></li>
+                        </ul>
+                    </div>
+                    <p>Hideki's hubby which I kinda sorta adopted by now</p>
+                    <hr />
+                    <button class="accordion">Credits</button>
+                    <div class="panel">
+                        <ul>
+                            <li>
+                                Stamps: <a href="https://www.deviantart.com/catstam">catstam</a>,
+                                <a href="https://www.deviantart.com/justyoungheroes">justyoungheroes</a>,
+                                <a href="https://www.deviantart.com/ahoy-des">ahoy-des</a>,
+                                <a href="https://www.deviantart.com/anti-clive-lbp">anti-clive-lbp</a>,
+                                <a href="https://www.deviantart.com/cobrastamps">cobrastamps</a>,
+                                <a href="https://www.deviantart.com/generatordupereli">generatordupereli</a>
+                            </li>
+                            <li>
+                                Flags: <a href="https://toyhou.se/21355465.my-tiny-pride-flags/gallery">l0stlights</a>
+                            </li>
+                            <li>
+                                Ribbons: <a href="https://toyhou.se/15560571.ribbon-repository-updating">repository</a>
+                            </li>
+                            <li>
+                                Header + Moodboards: <a href="https://www.pexels.com">pexels</a> +
+                                <a href="https://unsplash.com/">unsplash</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content area -->
+            <main id="content">
+                <!-- Section tags must be used for blocks -->
+
+                <!-- CHARACTER INFORMATION: DESKTOP ------------------------------>
+                <section class="twothird second-order">
+                    <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
+                    <h1>meow meow man</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div><s>arsene</s> raiden hamasaki</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>30+</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>male</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">role</div>
+                                    <div>firefighter</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>chaotic neutral</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- BIRTHDAY -->
+                                    <div class="stat-name">birthday</div>
+                                    <div>september 2, 1993</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>rai</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>
+                                        human /
+                                        <a
+                                            data-tippy-content="Raiden used to be a bleach fandom OC, but he became his own original entity. His powers are still based off the fullbringers"
+                                            href="https://bleach.fandom.com/wiki/Fullbringer"
+                                            >fullbringer</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>he / him</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">mbti</div>
+                                    <div>itsp-a</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">element</div>
+                                    <div>darkness</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-gem" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GEMSTONE -->
+                                    <div class="stat-name">gemstone</div>
+                                    <div>onyx</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            Raiden stands at 5'9", with a permanent resting bitch face to most people who will come to
+                            meet him. Although abrasive, to the point, and blunt with most people, at his heart there is
+                            still some warmth reserved for those close to him. Otherwise kind of odd, though in truth,
+                            it is a defense mechanism from his own past.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
+                <section class="third focal">
+                    <div class="flags">
+                        <img src="../img/flags/cis.png" alt="cis flag" data-tippy-content="Cis Male" />
+                        <img
+                            src="../img/flags/demirose.png"
+                            alt="Demisexual and demiromantic flag"
+                            data-tippy-content="Demirose" />
+                        <img
+                            src="../img/flags/bipolar.png"
+                            alt="Bipolar Disorder"
+                            data-tippy-content="Bipolar Disorder" />
+                    </div>
+                </section>
+
+                <!-- CHARACTER INFORMATION: MOBILE ------------------------------>
+                <section class="twothird first-order">
+                    <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
+                    <h1>meow meow man</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div><s>arsene</s> raiden hamasaki</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>30+</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>male</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">role</div>
+                                    <div>firefighter</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>chaotic neutral</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- BIRTHDAY -->
+                                    <div class="stat-name">birthday</div>
+                                    <div>september 2, 1993</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>rai</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>
+                                        human /
+                                        <a
+                                            data-tippy-content="Raiden used to be a bleach fandom OC, but he became his own original entity. His powers are still based off the fullbringers"
+                                            href="https://bleach.fandom.com/wiki/Fullbringer"
+                                            >fullbringer</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>he / him</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">mbti</div>
+                                    <div>itsp-a</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">element</div>
+                                    <div>darkness</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-gem" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GEMSTONE -->
+                                    <div class="stat-name">gemstone</div>
+                                    <div>onyx</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            Raiden stands at 5'9", with a permanent resting bitch face to most people who will come to
+                            meet him. Although abrasive, to the point, and blunt with most people, at his heart there is
+                            still some warmth reserved for those close to him. Otherwise kind of odd, though in truth,
+                            it is a defense mechanism from his own past.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- AESTHETIC STAMPS --------------------------------->
+                <section class="full">
+                    <div class="badgeholder" style="justify-content: space-evenly">
+                        <img src="../img/oc/raiden/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/raiden/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/raiden/stamp_3.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/raiden/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/raiden/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/raiden/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/raiden/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/raiden/stamp_8.gif" aria-hidden="true" alt="" loading="lazy" />
+                    </div>
+                </section>
+
+                <!-- PERSONALITY SLIDERS ------------------------------>
+                <section class="full">
+                    <h1>Character</h1>
+                    <div class="sliderow">
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>friendly</span>
+                                <span>reserved</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 98%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>polite</span>
+                                <span>blunt</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 100%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>clever</span>
+                                <span>foolish</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 20%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sensitive</span>
+                                <span>tough</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 85%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>confident</span>
+                                <span>diffident</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 50%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>careful</span>
+                                <span>reckless</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 75%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sincere</span>
+                                <span>deceptive</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 65%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>diligent</span>
+                                <span>lazy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 40%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>calm</span>
+                                <span>irritable</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 40%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>hopeful</span>
+                                <span>pessimistic</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 80%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>organized</span>
+                                <span>messy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 75%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>humorous</span>
+                                <span>serious</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 65%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LIKES AND DISLIKES ------------------------------>
+                <!-- LIKES -->
+                <section class="half">
+                    <h2><i class="fa-solid fa-heart" aria-hidden="true"></i> Likes</h2>
+                    <ul>
+                        <li>cats</li>
+                        <li>reading</li>
+                        <li>late night hours</li>
+                        <li>sweets</li>
+                    </ul>
+                </section>
+                <!-- DISLIKES -->
+                <section class="half">
+                    <h2><i class="fa-solid fa-heart-crack" aria-hidden="true"></i> Dislikes</h2>
+                    <ul>
+                        <li style="margin-left: 0.5px">technology</li>
+                        <li style="margin-left: 0.5px">social events</li>
+                        <li style="margin-left: 0.5px">loud places</li>
+                        <li style="margin-left: 0.5px">narcoleptic episodes</li>
+                    </ul>
+                </section>
+
+                <!-- PERSONALITY ------------------------------>
+                <section class="full">
+                    <h2>Personality</h2>
+                    <ul>
+                        <li>
+                            <strong>stoic, kinda comes off like an asshole</strong> to strangers or
+                            disinterested&mdash;but if you know him, you'd know he's just a meme who likes to joke and
+                            just has <strong>grey morals</strong>.
+                        </li>
+                        <li>
+                            somewhat <strong>withdrawn</strong> and heavily <strong>keeps to himself</strong>; the type
+                            to more often just throw in quips during conversations.
+                        </li>
+                        <li>will not beat around the bush and will be <strong>blunt as hell</strong>.</li>
+                        <li>
+                            <strong>not very technologically advanced</strong>, it took hideki at least 3 years to
+                            convince him to drop his nokia brick to get something more modern.
+                        </li>
+                        <li>
+                            <strong>scarily intelligent</strong> and <strong>observant</strong>, he seems to know a lot
+                            of unusual and odd things you wouldn't expect of him to know.
+                        </li>
+                        <li>enjoys new knowledge and weird facts.</li>
+                        <li>he will hug all the cats and you can't stop him.</li>
+                    </ul>
+                    <hr />
+                    <p>
+                        Raiden has a rather severe form of Bipolar Disorder, often making his moods rather
+                        unpredictable. He can be easily triggered by things that happen in every day life, but this is
+                        controlled by the medicine he takes for the most part.
+                    </p>
+
+                    <p>
+                        Stoic and rather introverted, Raiden tends to keep to himself for the most part. Emotion is hard
+                        to draw out of him unless you spend more than a few minutes with him. He is hard to get to know,
+                        simply because of the harsh emotional walls he tries to keep up. He can also be rather blunt,
+                        speaking openly and without any care that he may hurt another’s feelings.
+                    </p>
+
+                    <p>
+                        He is more relaxed around the people he has gotten close to or is comfortable with–seen joking
+                        around and teasing them. He also happens to be more gentle like this, though his blunt nature
+                        still shows through. His trust is hard to gain, but easy to break.
+                    </p>
+
+                    <p>
+                        Raiden’s rough exterior hides how truly intelligent he is. He is quick to assess situations and
+                        find a perfect outcome for them. He is an experienced liar and conman from his past job as a
+                        thief, but he tries to avoid doing that now.
+                    </p>
+                </section>
+
+                <!-- STORY DETAILS ------------------------------>
+                <section class="full">
+                    <h1>Story</h1>
+                    <section class="full warning" style="margin-bottom: 15px">
+                        <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                        <b>Sensitive topics ahead.</b> Raiden's history handles a lot of concepts like parental abuse,
+                        mental health issues, the death of a sibling, self-harm and suicide attempts. Although they are
+                        things that have happened in the past and are not written in detail, they are still part of his
+                        history.<br /><br />... this needs rewriting as well due to it being my friend's old history for
+                        him.
+                    </section>
+                    <img
+                        src="../img/oc/raiden/content_deco.png"
+                        style="max-width: 35%; float: right; margin: 5px 30px"
+                        class="image-shadow"
+                        data-tippy-content="Art by SacredNanners" />
+                    <p>
+                        Raiden was the eldest of a set of identical twins, his mother being born and from France and
+                        having a Japanese father. The family lived in France until the twins were about seven, their
+                        parents divorcing for reasons unknown to them. The two boys were then taken to Japan with their
+                        father, never hearing from their mother again.
+                    </p>
+                    <p>
+                        Raiden and his twin brother had a strange life growing up due to their father&rsquo;s
+                        profession. Their father was an infamous thief, extremely skilled in his job. He quickly taught
+                        the boys their skill, delighted at how they were actually better than him.
+                    </p>
+                    <p>
+                        When Raiden was about ten, he met a girl named Saki Himura while escaping the police with his
+                        twin. He continued to run into the girl, eventually befriending her. The three grew close
+                        quickly, spending much of their time together when the twins weren&rsquo;t doing their job of
+                        stealing.
+                    </p>
+                    <p>
+                        Tragedy struck when the twins were just eleven. Their father took them along on another job. The
+                        job went entirely wrong due to the fact Saki had somehow followed them. Raiden dove into protect
+                        her, his twin being killed as he couldn&rsquo;t protect both of them.
+                    </p>
+                    <p>
+                        Raiden grew to hate his father for this, taking up his French mother&rsquo;s last name instead
+                        of his father&rsquo;s Japanese one. He detached himself from the man and became an
+                        &ldquo;orphan.&rdquo; He continued to remain close to Saki, though he wasn&rsquo;t as open with
+                        her anymore.
+                    </p>
+                    <p>
+                        After the death of his twin, that was when his Fullbringer abilities began to show. He trained
+                        himself to control his abilities, though he still struggles with them sometimes to this day.
+                    </p>
+                </section>
+
+                <!-- MOODBOARD ------------------------------>
+                <section class="full">
+                    <h1>Moodboard</h1>
+                    <div class="moodboard-grid">
+                        <div class="moodboard1"></div>
+                        <div class="moodboard2"></div>
+                        <div class="moodboard3"></div>
+                        <div class="moodboard4"></div>
+                        <div class="moodboard5"></div>
+                    </div>
+                </section>
+
+                <!-- DESIGN ALTERNATIVE LAYOUT WITH IMAGE 2.0 ------------------------------>
+                <section class="full">
+                    <div class="design-info">
+                        <!-- DETAILS -->
+                        <h1>Design Notes</h1>
+                        <div class="stat-holder" style="margin-top: 10px">
+                            <div class="statcon">
+                                <i class="fa-solid fa-ruler" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">height</div>
+                                <div>5'9" / 175cm</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">body type</div>
+                                <div>lean, subtle muscles</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">eyes</div>
+                                <div>grey, central heterochromia in left eye with hazel colour</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">hair length + colour</div>
+                                <div>black, messy, ear length</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-question" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">extras</div>
+                                <div>scars</div>
+                            </div>
+                        </div>
+                        <h2><i class="fa-solid fa-palette" aria-hidden="true"></i> Design Notes</h2>
+                        <p>
+                            Raiden is extremely lean, built more like a runner than anything else. He is not extremely
+                            muscular, but he does have some muscle to him. He has messy black hair that sticks up in
+                            random places, almost always hanging in his face. He has central heterochromia in his left
+                            eye–the pale grey disrupted by a bright hazel ring extending from his pupil. His right is
+                            the same pale grey color, but lacking that pop of color in it. Scars riddle his knuckles,
+                            forearms, and on his legs–even more scars hidden beneath his clothing.
+                        </p>
+                    </div>
+                </section>
+                <!-- TRIVIA + FOCAL IMAGE -->
+                <section class="third triviafocal" data-tippy-content="Moodboard by wiara #393023"></section>
+
+                <section class="twothird">
+                    <h1>Trivia</h1>
+                    <div class="scrollable">
+                        <ul>
+                            <li>
+                                He's technically an OC written by a friend, but because she's basically dropped writing
+                                him and because I was writing his husband, I kinda ended up adopting him and continuing
+                                to write and create content for him. So a lot of his history is rooted in her creation
+                                and development, but I basically carried it on.
+                            </li>
+                            <li>
+                                He is a bendy straw; aka he's eerily flexible. He likes sitting in weird, uncomfortable
+                                positions because to him they <i>are</i> comfortable to his joints.
+                            </li>
+                            <li>He likes doing parkour as a hobby and things he enjoys.</li>
+                            <li>
+                                His abilities manifest in shadows; he can hide himself in the shadows of people and move
+                                through it.
+                            </li>
+                            <li>
+                                He used to work as a sheet metal worker for years, though firefighting offers the
+                                adrenaline and activity for his brain.
+                            </li>
+                            <li>His last name used to be Lemarchal, though he took on Hideki's last name.</li>
+                            <li>Allergic to dogs, though not to cats.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- RELATIONSHIPS -->
+                <section class="full">
+                    <h1>Relationships</h1>
+                    <div class="relationshipcontainer">
+                        <!-- RELATIONSHIP BOX -->
+                        <div class="relationshipbox">
+                            <div class="relationshipicon">
+                                <a href="hideki.html"
+                                    ><img src="../img/oc/hideki/thumbnail.jpg" alt="" aria-hidden="true" loading="lazy"
+                                /></a>
+                            </div>
+                            <span class="relationshipname">Hideki</span> &bull;
+                            <span class="relationshiptype">husband</span>
+                            <div class="relationshiphearts">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <!-- RELATIONSHIP BOX -->
+                        <div class="relationshipbox">
+                            <div class="relationshipicon">
+                                <a href="hideki.html"
+                                    ><img src="../img/oc/james/thumbnail.jpg" alt="" aria-hidden="true" loading="lazy"
+                                /></a>
+                            </div>
+                            <span class="relationshipname">James</span> &bull;
+                            <span class="relationshiptype">uncle-in-law</span>
+                            <div class="relationshiphearts">
+                                <i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i
+                                ><i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- RIBBON COLLECTION ------------------------------>
+                <section class="full">
+                    <h2><i class="fa-solid fa-award" aria-hidden="true"></i> Ribbons and Badges</h2>
+
+                    <div class="badgeholder">
+                        <img
+                            src="../img/ribbons/male.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Male: This character is male." />
+                        <img
+                            src="../img/ribbons/he-him.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="He/Him: This character uses he/him/himself pronouns." />
+                        <img
+                            src="../img/ribbons/demiaroace.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Demiaroace: This character only experiences sexual and romantic attraction after an emotional connection has been established." />
+                        <img
+                            src="../img/ribbons/bipolar.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Bipolar: This character has Bipolar Disorder." />
+                        <img
+                            src="../img/ribbons/narcolepsy.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Narcolepsy: This character has Narcolepsy." />
+                        <img
+                            src="../img/ribbons/kleptomania.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Kleptomania: This character has kleptomania." />
+                        <img
+                            src="../img/ribbons/married.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Never Shall Us Part: This character is married." />
+                        <img
+                            src="../img/ribbons/parental.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Parental Figure: This character is a parent or guardian." />
+                        <img
+                            src="../img/ribbons/criminal.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Wanted: This character is a criminal." />
+                        <img
+                            src="../img/ribbons/near_death.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Near-Death: This character had a near-death experience." />
+                        <img
+                            src="../img/ribbons/bloody.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Bloody Knife: This character has killed." />
+                        <img
+                            src="../img/ribbons/darkness.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Darkness: This character uses magic or has abilities relating to darkness." />
+                        <img
+                            src="../img/ribbons/ISTP.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="The Virtuoso: This character has the ISTP personality type." />
+                        <img
+                            src="../img/ribbons/chaotic-neutral.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Neutral Good: This character is of the chaotic neutral alignment." />
+                        <img
+                            src="../img/ribbons/september.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="September Child: This character was born in September. " />
+                        <img
+                            src="../img/ribbons/retired.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Retired: This character has been retired." />
+                        <img
+                            src="../img/ribbons/beloved.png"
+                            data-tippy-content="Beloved: A character that is dearly beloved by the owner."
+                            aria-hidden="true"
+                            loading="lazy"
+                            alt="" />
+                        <img
+                            src="../img/ribbons/ex-fandom.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            style="width: 60px"
+                            data-tippy-content="Broken Links: This character used to be a fandom OC, but is no longer." />
+                        <img
+                            src="../img/ribbons/irl-objects.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Close Company: This character has a physical real-life item, like a plush, statue, keychain, etc." />
+                        <img
+                            src="../img/ribbons/roleplay.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Actor: This character was/is used in roleplay." />
+                        <img
+                            src="../img/ribbons/tumblr-rp-blog.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="AMA: This character has an Askblog." />
+                        <img
+                            src="../img/ribbons/2013.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="2013: This character was made in 2013." />
+                    </div>
+                </section>
+
+                <!-- PHOTO GALLERY ------------------------------>
+                <section class="full">
+                    <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Image Gallery</h2>
+
+                    <div class="image-gallery">
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by skunkyfly">
+                            <a
+                                href="../img/oc/raiden/gallery_full_1.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../img/oc/raiden/gallery_thumb_1.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by me">
+                            <a
+                                href="../img/oc/raiden/gallery_full_2.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../img/oc/raiden/gallery_thumb_2.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by me">
+                            <a
+                                href="../img/oc/raiden/gallery_full_3.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../img/oc/raiden/gallery_thumb_3.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by lxnahl">
+                            <a
+                                href="../img/oc/raiden/gallery_full_4.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../img/oc/raiden/gallery_thumb_4.jpg" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by reveriesky">
+                            <a
+                                href="../img/oc/raiden/gallery_full_5.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../img/oc/raiden/gallery_thumb_5.jpg" alt=""
+                            /></a>
+                        </div>
+                    </div>
+                </section>
+
+                <footer id="main-footer">
+                    <p>
+                        Coded by <a href="https://zhongvie.neocities.org/">Aid</a>, inspired from
+                        <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's layout</a>, using kalechip's
+                        <a href="https://kalechips.net/projects/layouts/">template</a>.
+                    </p>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+        <!-- Dark Mode Toggle -->
+        <script src="../js/accessibility/dark-mode-alt.js"></script>
+
+        <!-- Font Toggle -->
+        <script src="../js/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
+        <script src="../js/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+        <!-- Accordion Dropdown -->
+        <script src="../js/accordion.js"></script>
+    </body>
+</html>
