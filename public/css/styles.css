@@ -1069,6 +1069,16 @@ article .scrollable p:first-child {
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
+.align-items-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+}
+
 /* Style the tab content */
 .tabAltcontent {
     display: flex;
