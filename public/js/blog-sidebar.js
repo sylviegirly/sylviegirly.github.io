@@ -25,7 +25,7 @@ const sidebar = `
                 <a href="https://spacehey.com/asuraid">SpaceHey</a>.
             </p>
             <div class="home">▶ <a href="../blogging.html">Go Home</a></div>
-            <details style="max-height: 50%; overflow: auto;">
+            <details style="max-height: 205px; overflow: auto;">
                 <summary>2025</summary>
                 <ul style="margin-top: 0; margin-bottom: 0; line-height: 120%; list-style-type: square; margin-left: -15px;">
                     <li>
