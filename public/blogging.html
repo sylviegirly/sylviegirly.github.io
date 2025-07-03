@@ -49,7 +49,6 @@
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
         <script src="js/header.js" defer></script>
-        <script src="js/left-sidebar.js" defer></script>
         <script src="js/footer.js" defer></script>
         <script src="js/tab-title-suffix.js"></script>
 
@@ -78,285 +77,128 @@
 
         <div class="container-grid">
             <!-- =============================================== -->
-            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- LEFT SIDEBAR CONTENT -->
             <!-- =============================================== -->
-            <left-sidebar></left-sidebar>
+            <div class="intro">
+                <section>
+                    <div class="img-floatinganim">
+                        <img class="dendro" src="./img/dendro_symbol.png" aria-hidden="true" alt="" />
+                    </div>
+                    <div class="subtitle">
+                        <img src="./img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
+                        Welcome!!
+                        <img src="./img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
+                    </div>
+                    <div>
+                        <p>
+                            Although I call it a blog, this is a hodgepodge of more of my own personal thoughts put into
+                            larger text chunks. The most recent blog post will be first and foremost, but you can check
+                            out previous blog posts below! I also cross-post some blogs on my
+                            <a href="https://spacehey.com/asuraid">SpaceHey</a>.
+                        </p>
+                        <div class="home">▶ <a href="blogging.html">Go Home</a></div>
+                        <details style="max-height: 50%; overflow: auto">
+                            <summary>2025</summary>
+                            <ul
+                                style="
+                                    margin-top: 0;
+                                    margin-bottom: 0;
+                                    line-height: 120%;
+                                    list-style-type: square;
+                                    margin-left: -15px;
+                                ">
+                                <li>
+                                    <a href="blogging/060425.html"> Journaling and the Struggles </a>
+                                    — June 4, 2025
+                                </li>
+                                <li>
+                                    <a href="blogging/052825.html"> Blurb about my OCs and Me </a>
+                                    — May 28, 2025
+                                </li>
+                                <li>
+                                    <a href="blogging/052325.html"> My Own Feelings on My Identity </a>
+                                    — May 23, 2025
+                                </li>
+                                <li>
+                                    <a href="blogging/051525.html"> Non-Sharing Yumes + Thoughts </a>
+                                    — May 15, 2025
+                                </li>
+                                <li>
+                                    <a href="blogging/043025.html"> Nostalgia for MMO </a>
+                                    — April 30, 2025
+                                </li>
+                                <li>
+                                    <a href="blogging/041225.html"> On ADHD and Myself + Tools </a>
+                                    — April 12, 2025
+                                </li>
+                                <li>
+                                    <a href="blogging/041025.html"> Let's Start! I Suppose ... </a>
+                                    — April 10, 2025
+                                </li>
+                            </ul>
+                        </details>
+                    </div>
+                </section>
+            </div>
             <main id="content">
-                <article>
-                    <h1>
-                        <img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" />
-                        Blogging / Diary Center
-                    </h1>
-                    <p>
-                        Although I call it a blog, this is a hodgepodge of more of my own personal thoughts put into
-                        larger text chunks. The most recent blog post will be first and foremost, but you can check out
-                        previous blog posts below! I also cross-post some blogs on my
-                        <a href="https://spacehey.com/asuraid">SpaceHey</a>.
-                    </p>
-                    <details>
-                        <summary>2025</summary>
-                        <ul style="margin-top: 0; margin-bottom: 0; line-height: 120%; list-style-type: square">
-                            <li>
-                                <button class="blogLink" onclick="openBlog(event, '06/04/25')" id="blogActive">
-                                    Journaling and the Struggles
-                                </button>
-                                — June 4, 2025
-                            </li>
-                            <li>
-                                <button class="blogLink" onclick="openBlog(event, '05/28/25')">
-                                    Blurb about my OCs and Me
-                                </button>
-                                — May 28, 2025
-                            </li>
-                            <li>
-                                <button class="blogLink" onclick="openBlog(event, '05/23/25')">
-                                    My Own Feelings on My Identity
-                                </button>
-                                — May 23, 2025
-                            </li>
-                            <li>
-                                <button class="blogLink" onclick="openBlog(event, '05/15/25')">
-                                    Non-Sharing Yumes + Thoughts
-                                </button>
-                                — May 15, 2025
-                            </li>
-                            <li>
-                                <button class="blogLink" onclick="openBlog(event, '04/30/25')">
-                                    Nostalgia for MMO
-                                </button>
-                                — April 30, 2025
-                            </li>
-                            <li>
-                                <button class="blogLink" onclick="openBlog(event, '04/12/25')">
-                                    On ADHD and Myself + Tools
-                                </button>
-                                — April 12, 2025
-                            </li>
-                            <li>
-                                <button class="blogLink" onclick="openBlog(event, '04/10/25')">
-                                    Let's Start! I Suppose ...
-                                </button>
-                                — April 10, 2025
-                            </li>
-                        </ul>
-                    </details>
-                </article>
                 <!-- =============================================== -->
                 <!-- ENTRY -->
                 <!-- =============================================== -->
-                <article id="06/04/25" class="blogContent">
-                    <h2>Journaling and the Struggles</h2>
-                    <p><em>&mdash; June 4, 2025</em></p>
+                <article>
+                    <h1>Journaling and the Struggles</h1>
+                    <p>
+                        <em>&mdash;<time datetime="2025-06-04"> June 4, 2025</time></em>
+                    </p>
                     <hr />
                     <p>
                         The title probably isn't&nbsp;<em>exactly</em> the wording of it, but yesterday was the first
                         time I wrote in my physical journal after 6 months of not doing it; my last entry was
                         mid-December, but I sorely needed to dump my thoughts out somewhere more tangible. I do still
-                        want to pick up physical journaling for the tactile feel of writing and truly having a
-                        non-digital way to blurt out my thoughts or the mundane things of life, I do realize I also
-                        already do journal in many different facets, which is probably why it also makes it harder to
-                        feel the need to physically journal.
+                        want to ...
                     </p>
-                    <p>Cause I:</p>
-                    <ul>
-                        <li>Write here on this blog to thought dump in a more cohesive manner</li>
-                        <li>Use status.cafe to offload 'at the moment' thoughts so they don't sit in my skull</li>
-                        <li>
-                            Have my <a href="https://zhongvie.neocities.org/listfauxgraphy/">listography page</a> for
-                            scattered ideas in one area
-                        </li>
-                        <li>Write on tumblr to also offload momentary thoughts in a more public/interactive place</li>
-                        <li>Talk to friends to offload thoughts</li>
-                    </ul>
-                    <p>
-                        ... but I still want to do physical journaling to have something in my hands that I can look
-                        back on; it was fun flipping through my journal and seeing what I wrote about 6 months ago, plus
-                        I like decorating it with stickers. Though I think the urge to be uh ... what's the word ... to
-                        have a pretty looking journal brought me as well to a weird barrier, as well as feeling the need
-                        to do it daily and needing to write more than just a single line or two. As fun as it is looking
-                        through how others do their own for inspiration, it's hard not to feel a trickle of the&nbsp;<em
-                            >need</em
-                        >
-                        to join in, and write that much, and have nice journals.
-                    </p>
-                    <p>
-                        Well, I'm going to force myself to at least write&nbsp;<em>just</em>&nbsp;a line, and no more. A
-                        simple highlight of the day. If I need to write more, I will, if I don't ... I don't and just
-                        leave it to the next day for another highlight. If I want to do stickers, I will, but
-                        I&nbsp;<span style="text-decoration: underline">need</span> to not make myself think it needs
-                        them.
-                    </p>
-                    <p>
-                        Journaling is&nbsp;<em>definitely</em> hard with ADHD, but it can definitely be done in a lot of
-                        different forms; I've seen people who have digital diaries logged on their sites, or /now pages
-                        documenting what's been happening, or status updates, and so on. There's definitely catharsis
-                        and something about having a document of your life somewhere tangible, either in HTML, or
-                        handwritten. Especially as someone with subpar memory, it helps to be able to look back on a
-                        part of the past and know it happened, and what was going on then.
-                    </p>
-                    <p>
-                        Anyway, this is me just rambling about my recognition of journaling in different forms and the
-                        desire to try to pick up handwritten journaling again.
-                    </p>
+                    <button onclick="window.location.href='blogging/060425.html';">Read More</button>
                 </article>
                 <!-- =============================================== -->
                 <!-- ENTRY -->
                 <!-- =============================================== -->
-                <article id="05/28/25" class="blogContent">
-                    <h2>Blurb about my OCs and Me</h2>
-                    <p><em>&mdash; May 28, 2025</em></p>
+                <article>
+                    <h1>Blurb about my OCs and Me</h1>
+                    <p>
+                        <em>&mdash;<time datetime="2025-05-28"> May 28, 2025</time></em>
+                    </p>
                     <hr />
                     <p>
                         Not too sure where I wanna go with this, but I was mostly just thinking about how my main OC(s)
                         end up having a lot more overlaps with me than I sometimes realize, and I realize far too late
-                        about it.
+                        about it. Mostly cause I realize ...
+                        <a href="https://zhongvie.neocities.org/OCs/sylvie">Sylvie</a> has a thought process where they
+                        don't ...
                     </p>
-                    <p>
-                        Mostly cause I realize ... <a href="https://zhongvie.neocities.org/OCs/sylvie">Sylvie</a> has a
-                        thought process where they don't think that people will remember them. Obviously they are a god
-                        who <em>has</em> been forgotten/left behind, so their train of thought isn't all too surprising,
-                        especially when they will outlive even human companions that have a short hundred-year lifespan
-                        to cram people and events and things. But I realized today that I ... also struggle with
-                        conceptualizing that people think of me outside a bubble, if that makes sense. It's weird to
-                        wrap my brain around the concept that I can be admired, or talked about outside of conversations
-                        ... I guess kinda like ...
-                    </p>
-                    <p>
-                        God fuck it all cycles
-                        <a href="https://www.simplypsychology.org/object-permanence-and-adhd.html">back to ADHD</a>
-                        doesn't it LMFAO, I was gonna say it's like object permanence and the idea of being out of
-                        sight, out of mind. If it's the case, it's probably why it's hard for me to imagine that I
-                        remain in people's memories or that people admire me/things I've done, cause my own brain is
-                        lost in its own world until I have visual reminders of someone/something (even though I also
-                        have people I admire for what they've done, I dunno why my brain just has a blocker thinking the
-                        other way around).
-                    </p>
-                    <p>... and I only realize this now fully in looking at my own OC.</p>
-                    <p>
-                        Obviously, there's more than just that, Sylvie emulates a lot of the energy I'd <em>like</em> to
-                        have, though my pool of energy is very subpar 99% of the time. Also ENFP (them) vs INFP (me), a
-                        love of trying out new things, of food, and ... y'know, getting the ADHD beam after I began
-                        researching it for myself. Though ironically, unlike my suspected inattentive ADHD, theirs is
-                        hyperactivity and moving at 100% almost all the time and being unable to sit still.
-                    </p>
-                    <p>
-                        <a href="https://zhongvie.neocities.org/OCs/hideki">Hideki</a> was the other main OC I had for 7
-                        years before Sylvie took that mantle, and because he had been with me for so long (literally
-                        through high-school and my college years), he's absorbed a <em>lot</em> from me.
-                    </p>
-                    <ul>
-                        <li>INFP personality type</li>
-                        <li>Gamers</li>
-                        <li>Subpar confidence from back then and bad social anxiety</li>
-                        <li>Overthinkers</li>
-                        <li>Love language is cooking</li>
-                        <li>Easily emotional and turning to crying to cope</li>
-                        <li>Tries their best to be nice to everyone, surprised when it's returned</li>
-                    </ul>
-                    <p>I lived a lot through him in a way, in his successes and his sadness as an outlet.</p>
-                    <p>... so yeah ... har har, boo boo the fool is I ...</p>
-                    <p>
-                        Although my other big OCs (<a href="https://zhongvie.neocities.org/OCs/yadyra">Yadyra</a> and
-                        <a href="https://zhongvie.neocities.org/OCs/nameless">Nameless</a>) do not have that emotional
-                        tie-in to my heart as coping mechanisms, and considering how much they are their own characters
-                        standing on their own feet (also immensely non-human and <em>not</em> like my personality at
-                        all), parts of me still slip in. Hell, food as a joy will always tend to remain in all my
-                        characters, even if they don't need to eat, or they're more specific enjoyments (inside joke
-                        between a friend and I is that Yadyra currently has a burrito obsession).
-                    </p>
-                    <p>Anyway! Incoherent blog post yapping that you bleed in over your OCs more than you realize 🫣</p>
+                    <button onclick="window.location.href='blogging/052825.html';">Read More</button>
                 </article>
                 <!-- =============================================== -->
                 <!-- ENTRY -->
                 <!-- =============================================== -->
-                <article id="05/23/25" class="blogContent">
-                    <h2>My Own Feelings on My Identity</h2>
-                    <p><em>&mdash; May 23, 2025</em></p>
+                <article>
+                    <h1>My Own Feelings on My Identity</h1>
+                    <p>
+                        <em>&mdash;<time datetime="2025-05-23"> May 23, 2025</time></em>
+                    </p>
                     <hr />
                     <p>
                         I dunno why it spooks me to write about it, I guess because there's some part of me that still
                         feels like I'm a black sheep, because I only have being ace to my name, and some part of me
-                        worries about being seen as 'invading' due to still IDing as cis, and heteroromantic, or that my
-                        aceness isn't valid because of it (and god knows I've also seen my share of aphobia, not towards
-                        myself but in general from even within LGBTQ+ communities).
+                        worries about being seen as 'invading' due to still IDing as cis, and heteroromantic ...
                     </p>
-                    <p>
-                        It's not that I haven't questioned how I personally feel about my own gender, cause unironically
-                        I've found
-                        <a
-                            href="https://sylviegirly.tumblr.com/post/100048176672/i-sometimes-idk-what-gender-i-am-like-idk-how-to"
-                            >a Tumblr post</a
-                        >
-                        from way back in 2014 when I was ~16 years old talking about it.
-                    </p>
-                    <blockquote>
-                        <p>i sometimes&ndash; idk what gender i am? like idk how to classify myself</p>
-                        <p>i know im a girl and i feel like a girl but&hellip; i dont too?</p>
-                        <p>like i dont care that im a girl</p>
-                        <p>i accept it but just&hellip; shrugs towards the gender????</p>
-                        <p>maybe demigirl?????</p>
-                    </blockquote>
-                    <p>
-                        I've sat and thought about it and ruminated and revisited it over the years, and still circle
-                        back that I'm ok with just IDing as a girl, even if in concept it's not really integral to
-                        me/not something I'm deeply connected to; it's like a container full of one type of goop
-                        (feminine) but it's an immensely muted colour.
-                    </p>
-                    <p>
-                        Funnily enough, I lived more gender euphoria through exploring
-                        <a href="https://zhongvie.neocities.org/OCs/sylvie">Sylvie's</a> gender identity (considering in
-                        the years I've had them it's shifted from masc he/they, to fully agender they/them&mdash;since
-                        he/him for them made me feel uncomfortable&mdash;to finding a wild joy in they/she and how much
-                        I feel that it fits them&nbsp;<em>perfectly</em>),
-                        <a href="https://zhongvie.neocities.org/OCs/hideki">Hideki's</a> exploration of presenting
-                        himself as more fem and that it makes him happy, and finding
-                        <a href="https://new.lgbtqia.wiki/wiki/Cassgender">cassgender</a> cause it hit the nail on the
-                        head how I feel about myself; although I am comfortable IDing as a girl, and it is my identity I
-                        am also comfy with, I feel disconnected to being it/it's not a huge part of how I see myself.
-                    </p>
-                    <p>
-                        <i
-                            >(Might also kinda speak to why a lot of my OCs are agender, or don't see it as important to
-                            their own identities.)</i
-                        >
-                    </p>
-                    <p>
-                        As for romantic interest ... I think I like guys by the process of elimination more than
-                        anything (no attraction to girls, single IRL crush was a guy, I like fictional men&mdash;though
-                        I do have some fictional women I like, ex. Acheron who I like more in awe of cause I
-                        <em>love</em> her as a character). Truthfully I also have very little interest in the concept of
-                        dating, though I think the concept of more romantic interactions is cute (albeit I think
-                        romance, if pursued, needs a basis of friendship and someone you'd trust to talk about with
-                        stuff like you would with friends ... I don't see much of a difference between a romantic
-                        relationship and a friendship, minus some additional aspects ... and I mean this in the sense
-                        for myself, everyone views the two in their own personal ways).
-                    </p>
-                    <p>
-                        Although I feel muddied and bland with my own self, I love seeing other people, and the
-                        characters people make, and what they are and what is comfortable to them. I love learning about
-                        different identities and how one expresses themselves and how they best feel comfortable in whom
-                        (or what) they are, I love seeing people's posts about their progress, transitions, their
-                        thoughts and ideas and posts talking about themselves, of stories from people who are in their
-                        old ages who have found new pieces of themselves or the openness to be themselves after so long.
-                        And I hope everyone finds somewhere safe they can exist, considering the state of the world
-                        today (and even before today too).
-                    </p>
-                    <p>
-                        Not really a coherent blog post, it's more akin to a verbal and personal diary dump in trying to
-                        sort out my thoughts (maybe I need to rename this section to blog/diary) ... and who knows,
-                        maybe like that Tumblr post from earlier, I'll revisit this later down in my life and see how I
-                        feel. Something in my chest feels a little lighter talking about it, putting it into words that
-                        I know won't quite as easily disappear under the copious amounts of posts on my own blog.
-                    </p>
-                    <p>If you got to the end, thank you. 🖤🩶🤍💜</p>
+                    <button onclick="window.location.href='blogging/052325.html';">Read More</button>
                 </article>
                 <!-- =============================================== -->
                 <!-- ENTRY -->
                 <!-- =============================================== -->
-                <article id="05/15/25" class="blogContent">
-                    <h2>Non-Sharing Yumes + Thoughts</h2>
+                <article>
+                    <h1>Non-Sharing Yumes + Thoughts</h1>
                     <p>
-                        <em>— <time class="dateline">May 15, 2025</time></em>
+                        <em>— <time datetime="2025-05-15">May 15, 2025</time></em>
                     </p>
                     <hr />
                     <p>
@@ -364,450 +206,51 @@
                         <u>why are people so weird about someone being non-sharing</u>
                         when it comes to yumeshipping / OC x canon? It's not the first time I've seen posts around like
                         'I don't believe in non-sharing, media characters belong to everyone' like ... ??? Why are you
-                        to dictate if ... it exists or doesn't? Does someone not wanting to see content of their
-                        <span class="tippy" data-tippy-content="fictional other">f/o</span> in a romantic light offend
-                        you? Do you think non-sharing people will grip their pitchforks and yell at you that you like or
-                        make ship content including their f/o?
+                        ...
                     </p>
-                    <p>
-                        This is more I suppose a personal gripe/vent blog post, but I've never understood the general
-                        catch-all mentality some people have that non-sharing people are 'hogging' a character, or that
-                        characters need to be shared. It's not one I often see, but the few times I have seen it baffles
-                        me.
-                    </p>
-                    <p>
-                        This is not counting those who have seen non-sharing people who <em>do</em> go out of their way
-                        to harass others sharing their f/o's, or have ... weirdly aggressive
-                        <span class="tippy" data-tippy-content="do not interact">DNIs</span> (which I've seen as well,
-                        like literally the level of 'do not interact with me if you even <strong>simp</strong> for my
-                        very real boyfriends!!!'), but to lump most people which I know generally tend to stick to their
-                        own lanes into a bubble of 'you are wrong for wanting to keep this private' is. Weird as fuck to
-                        me.
-                    </p>
-                    <p>
-                        I say this as a non-sharing person who does curate my space, literally block buttons exists,
-                        filters exist, <em>not looking at blogs and sites exist</em>. Yes, I could say the same that I
-                        can just opt to not look at the people who complain about 'non-sharing people', but it is
-                        frustrating to me when people look at others sitting in their own corners, doing their own
-                        thing, and think it's&nbsp;<strong>wrong</strong> for them to want to not see certain content of
-                        something that is a comfort to them.
-                    </p>
-                    <p>
-                        No, I don't want to see Zhongli ships. I am happy for those who make OCs that kiss him,
-                        genuinely I do mean it cause he is a wonderful character, but I do not want to see it because my
-                        ship has an emotional comfort for me. I rarely will ever block someone for it, and if I can opt
-                        to filter tags, I will happily do so as well. But never will I go chase down someone because
-                        they have an OC/selfship with him, or they like some ship with him. All I ever ask, for those
-                        who do talk to me, is merely that if those topics come up, I will step out of the convo until it
-                        is over.
-                    </p>
-                    <p>
-                        So again, it's why I'm always very confused why people treat non-sharers like we're hoarding
-                        characters or gonna chew out people who like/have ships with that character. Most people will
-                        just sit in their corners and do what makes them happy; it's the same energy as pointing to
-                        someone just standing in a corner and being like 'this person offends me'. God forbid people set
-                        up their own boundaries for their comfort and people get offended for it.
-                    </p>
-                    <p>
-                        (The DNI thing will bring me to another tangent I also think about a lot, but TL;DR
-                        <a href="https://www.tumblr.com/peachdoxie/763010439828340736">this tumblr post</a> summarizes
-                        it very well as to how I feel about DNIs in this day and age on sites/rentries/carrds.)
-                    </p>
-                    <blockquote>
-                        Ah, I think I figured out why I dislike DNIs conceptually so much: they're attempts to set
-                        boundaries but are actually the complete opposite of how boundaries are supposed to work. A
-                        boundary is not a demand you make of someone else (which is what a DNI is) but instead an action
-                        you take against someone else's behavior. In this case, setting a boundary would be blocking
-                        people who violate the DNI criteria, not making a statement about how they shouldn't follow you.
-                        Making a DNI is requesting a courtesy from other people, but it is not establishing a boundary.
-                    </blockquote>
-                    <p>
-                        Anyway, that's all to say I'm rambling on and just very sad when I see non-sharing people like
-                        myself essentially get told that our comfort levels don't matter or exist or are supported, that
-                        because we'd like to keep our ships to our heart and not see others ... that we're 'bad' for
-                        doing so.
-                    </p>
+                    <button onclick="window.location.href='blogging/051525.html';">Read More</button>
                 </article>
                 <!-- =============================================== -->
                 <!-- ENTRY -->
                 <!-- =============================================== -->
-                <article id="04/30/25" class="blogContent">
-                    <h2>Nostalgia for MMOs</h2>
+                <article>
+                    <h1>Nostalgia for MMOs</h1>
                     <p>
-                        <em>— <time class="dateline">April 30, 2025</time></em>
+                        <em>— <time datetime="2025-04-30">April 30, 2025</time></em>
                     </p>
                     <hr />
                     <p>
                         Sighs, game nostalgia ... though mine usually always swirls around the old MMOs I used to play.
-                        Well, one isn&#39;t even all that old, considering I only quit it just 1&ndash;2 years ago.
+                        Well, one isn&#39;t even all that old, considering I only quit it just 1&ndash;2 years ago. I
+                        love <a href="https://elsword.koggames.com">Elsword</a> still as a game, but I miss the old era
+                        of it, when the level cap wasn&#39;t 99, it was ...
                     </p>
-                    <p>
-                        I love <a href="https://elsword.koggames.com">Elsword</a> still as a game, but I miss the old
-                        era of it, when the level cap wasn&#39;t 99, it was 60, when the newest character was my future
-                        main LuCiel, when the graphics and UI were chunky and dungeons took 10 minutes to clear vs the 2
-                        minutes they take now. And it sucks because the private servers I&#39;ve found rarely ever
-                        capture the essence of that time in the 2012-2015 era (minus one I just <i>literally</i> found
-                        that&#39;s <a href="https://www.classicels.com/">barely getting its legs as of April 25th</a>)
-                        because most move to the modern game, which I dislike.
-                    </p>
-                    <div class="center-img">
-                        <a
-                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/maxresdefault.jpg"
-                            data-lightbox="04-30-2024"
-                            aria-label="open image"
-                            data-title="This was the super old UI from way back when, although I caught the end cusp of it before it got a revamp in ~2015."
-                            ><img
-                                class="full-width-image"
-                                alt="Old user interface for Elsword"
-                                src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/maxresdefault.jpg"
-                        /></a>
-                    </div>
-                    <div class="center-img"></div>
-                    <details>
-                        <summary>Other older elsword screenshots</summary>
-                        <div class="center-img" style="margin-bottom: 10px">
-                            <a
-                                href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/Screenshot%202025-05-01%20003836.png"
-                                data-lightbox="04-30-2024"
-                                aria-label="open image"
-                                ><img
-                                    class="full-width-image"
-                                    alt=""
-                                    aria-hidden="true"
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/Screenshot%202025-05-01%20003836.png"
-                            /></a>
-                        </div>
-                        <div class="center-img" style="margin-bottom: 10px">
-                            <a
-                                href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/tumblr_nyrq6zhybx1rac176o1_1280.jpg"
-                                data-lightbox="04-30-2024"
-                                aria-label="open image"
-                                ><img
-                                    class="full-width-image"
-                                    alt=""
-                                    aria-hidden="true"
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/tumblr_nyrq6zhybx1rac176o1_1280.jpg"
-                            /></a>
-                        </div>
-                        <div class="center-img" style="margin-bottom: 10px">
-                            <a
-                                href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/tumblr_nyrq6zhybx1rac176o2_1280.jpg"
-                                data-lightbox="04-30-2024"
-                                aria-label="open image"
-                                ><img
-                                    class="full-width-image"
-                                    alt=""
-                                    aria-hidden="true"
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/tumblr_nyrq6zhybx1rac176o2_1280.jpg"
-                            /></a>
-                        </div>
-                        <div class="center-img" style="margin-bottom: 10px">
-                            <a
-                                href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/tumblr_nyrq6zhybx1rac176o4_1280.jpg"
-                                data-lightbox="04-30-2024"
-                                aria-label="open image"
-                                ><img
-                                    class="full-width-image"
-                                    alt=""
-                                    aria-hidden="true"
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/tumblr_nyrq6zhybx1rac176o4_1280.jpg"
-                            /></a>
-                        </div>
-                        <div class="center-img" style="margin-bottom: 10px">
-                            <a
-                                href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/tumblr_nyrq6zhybx1rac176o5_1280.jpg"
-                                data-lightbox="04-30-2024"
-                                aria-label="open image"
-                                ><img
-                                    class="full-width-image"
-                                    alt=""
-                                    aria-hidden="true"
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/tumblr_nyrq6zhybx1rac176o5_1280.jpg"
-                            /></a>
-                        </div>
-                        <div class="center-img" style="margin-bottom: 10px">
-                            <a
-                                href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/tumblr_nyrq6zhybx1rac176o6_1280.jpg"
-                                data-lightbox="04-30-2024"
-                                aria-label="open image"
-                                ><img
-                                    class="full-width-image"
-                                    alt=""
-                                    aria-hidden="true"
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/tumblr_nyrq6zhybx1rac176o6_1280.jpg"
-                            /></a>
-                        </div>
-                    </details>
-                    <p>
-                        There&#39;s a tinge of nostalgia that lingers for that era of 2013 Elsword, and for the time I
-                        used to play <a href="https://www.playpwi.com/en">Perfect World International</a> too, one which
-                        has so many private servers that it&#39;s not hard to find one covering the classic era I played
-                        it in (also in the 2010-2013 range), but unlike Elsword ... trying to play it ends up with me
-                        just dropping it a couple of days later. Some servers allow you to boost to level cap, but I
-                        don&#39;t see the joy in that when I never got to level cap and experienced endgame; to me, I
-                        liked the idea of leveling and going through dungeons on my own, but even in private servers
-                        that have a boost in EXP, it still unfortunately feels tedious and clunky and awkward!!!
-                    </p>
-                    <div class="center-img">
-                        <a
-                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/68-1456751955.jpg"
-                            data-lightbox="04-30-2024"
-                            aria-label="open image">
-                            <img
-                                class="image"
-                                style="width: 500px"
-                                alt="Screenshot of a barbarian class in perfect world"
-                                src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/68-1456751955.jpg"
-                        /></a>
-                    </div>
-                    <p>
-                        And it makes me sad, because Perfect World International has SUCH a gorgeous landscape,
-                        <a href="https://youtu.be/H0YuBmN6nNM">beautiful music</a> I still enjoy tenderly to this day,
-                        and allowed you to take a mount and fly across the entire map if you wanted to.
-                    </p>
-                    <p>
-                        It&#39;s a nostalgia, but it&#39;s one that makes me sad to some degree because I wish I could
-                        enjoy those games like I did when I was young, where I remember losing hours staying up late to
-                        play and grind, with the guilds I used to be in ... and perhaps It&#39;s because I don&#39;t
-                        have the people anymore that brought light to those games that makes it so much harder to get
-                        back into them. I don&#39;t mind solo grinding, but a lot of my fun was in partaking in guild
-                        PVP fights and running dungeons and just talking with people while playing dress-up with my cute
-                        fox-girl summoner (funnily enough my nostalgia here was from a private server, I never got far
-                        in the official game and instead opted to play long-term in a private server).
-                    </p>
-                    <p>
-                        Elsword I just straight up quit alongside my bestie, so that&#39;s less a case of
-                        <i>community</i> and more a case that there aren&#39;t many private servers that cover the era
-                        we both knew. Otherwise, the game as it is <b>sucks</b>, more in terms that raids and continual
-                        enhancements have made the game a riddled, pay-to-win elitist mess, where if you decided to main
-                        the &#39;wrong class&#39; people don&#39;t want you in the most recent raids (case in point, my
-                        class was considered a sub-par DPS and only could work alongside a second DPS instead of
-                        carrying a raid like other more <i>powerful</i> DPS classes, so I was shafted a lot when it came
-                        to finding raid parties vs my friend who played a support that was always in demand ... and
-                        since we were a duo pair, and we didn&#39;t go into separate parties, it made progressing in the
-                        game stressful because of how people were about it).
-                    </p>
-
-                    <div class="center-img">
-                        <a
-                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/SC_L.230705.1_1_%202023-07-15%2018-50-19-879.png"
-                            data-lightbox="04-30-2024"
-                            aria-label="open image">
-                            <img
-                                class="full-width-image"
-                                loading="lazy"
-                                alt="Me and my bestie on our LuCiels as we sat on a bench"
-                                src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/SC_L.230705.1_1_%202023-07-15%2018-50-19-879.png"
-                        /></a>
-                    </div>
-                    <p style="text-align: center">(das me and my friend there, I'm on the right)</p>
-                    <p>
-                        I&#39;m glad FFXIV (even if on hiatus for me at the moment) fills a lot of that hole of an MMO I
-                        can see myself dedicating time into ... and that I already have; although it cannot replace the
-                        ache and longing for those games of the past, at least it can give me something new to pour
-                        myself into.
-                    </p>
-                    <p>
-                        Although it makes me sad to think about sometimes, I&#39;m glad there are places trying to
-                        preserve the older times, even if the people that made those times good are gone now, it
-                        doesn&#39;t hurt to live a little bit of nostalgia before shelving it again.
-                    </p>
-                    <p>
-                        (I realize this is the same case with Club Penguin for me, a deeply nostalgic game, but I can't
-                        play it anymore like I used to because it's such a community centric game, and doing stuff on
-                        your own is only so much fun)
-                    </p>
+                    <button onclick="window.location.href='blogging/043025.html';">Read More</button>
                 </article>
                 <!-- =============================================== -->
                 <!-- ENTRY -->
                 <!-- =============================================== -->
-                <article id="04/12/25" class="blogContent">
-                    <h2>On ADHD and Myself + Tools</h2>
+                <article>
+                    <h1>On ADHD and Myself + Tools</h1>
                     <p>
-                        <em>— <time class="dateline">April 12, 2025</time></em>
+                        <em>— <time datetime="2025-04-12">April 12, 2025</time></em>
                     </p>
                     <hr />
                     <p>
                         On the topic of ADHD ... it&#39;s still something I&#39;m rolling around in my brain; it&#39;s
                         only been in the last 6&ndash;8 months that I&#39;ve really settled with the idea that I may
                         most likely have inattentive ADHD ... I don&#39;t have a way of getting assessed for it (not
-                        until I move out anyway), but my head has been deep into videos and research and what not, and
-                        helping a friend realize she also most likely has it (and her scoring high on an actual
-                        assessment test) also settled it in my own brain.
+                        until I move out ...
                     </p>
-
-                    <p>
-                        It&#39;s kinda funny cause I&#39;ve had someone point out some posts I&#39;ve made (on tumblr)
-                        align a lot with ADHD in the past, and I was there like &#39;haha it&#39;s a mood, but I
-                        don&#39;t have it&#39; while also finding myself nodding and agreeing with other posts people
-                        made about their ADHD/neurodivergent moods and experiences ... and while thinking &#39;yeah, I
-                        feel that a lot, but I probably don&#39;t have it as bad as other people&#39;.
-                    </p>
-
-                    <p>
-                        At least until I saw
-                        <a href="https://sylviegirly.tumblr.com/post/765567124634763264">this post</a>
-                        and something made it click in a way where I was like <i>&#39;oh&#39;</i>.
-                    </p>
-                    <img
-                        class="full-width-image"
-                        src="https://i.imgur.com/jJer7Fp.png"
-                        alt="a tumblr screenshot, the first post writes: generally speaking when it comes to mental and physical health, if you're asked 'do you struggle with this' and your answer is 'no, Because I Have A System,' then your answer is actually yes" />
-                    <p>
-                        Because ... I&#39;ve had a lot of systems I put in place over the years. Reminders for my
-                        &#39;subpar memory&#39; even for minor tasks like showering, setting tiny work amounts
-                        (pomodoro), always relying on background noise, running timers for even small things like my tea
-                        steeping, doing things on call with my friend, schedules, doing things half-way and at least
-                        taking stride in that over nothing at all, subconscious fidgeting, putting things in easy access
-                        and view, and probably other things I can&#39;t quite think of.
-                    </p>
-
-                    <p>
-                        And it&#39;s funny because my long-term bestie of 8+ years now told me &#39;I always thought you
-                        had it&#39; or something akin to basically having it like a red stamp on my forehead LOOOL. On
-                        top of other people also pointing it out, and that the love and fixation I have for Sylvie is
-                        definitely beyond the norm (for a normal, neurotypical person anyway). Obviously growing on the
-                        internet, being fixated on your own OCs and fictional faves wasn&#39;t unusual to me so it&#39;s
-                        why that didn&#39;t seem <i>weird</i> to me, and that normal not-online people either way
-                        aren&#39;t weird about their own characters (if they even make any) but yeah. Never really
-                        clicked.
-                    </p>
-
-                    <p>But it feels like an answer to a lot of things of how I am.</p>
-
-                    <p>
-                        My memory <i>is</i> terrible, yesterday blends into the past, and it&#39;s blurry. I remember
-                        going to a cool food festival event with some coworkers and having the time of my life ... but
-                        as soon as I get home/the next day, the event feels like it happened so long ago, like years.
-                        Things don&#39;t feel real in particular, even though I know I was there, there&#39;s some weird
-                        disconnect that I never really have been able to change. And I&#39;m sad because many fun events
-                        I know I&#39;ve enjoyed myself at, I have no memories of if I never noted them down in some form
-                        (pictures, writings), or if they were significant enough. And even those blend: ex. we&#39;ve
-                        been to Cuba multiple times on vacation and I remember general strokes and chunks like me
-                        finding a living starfish, but if you asked me which of those trips it was, I could not tell
-                        you.
-                    </p>
-
-                    <p>
-                        I remembered a friend&#39;s birthday once because she shared it with my favourite fictional
-                        character at the time, otherwise I need to write them down in my reminders to remember, even if
-                        I love them.
-                    </p>
-
-                    <p>
-                        Time blindness is a <b>bitch</b>, and so is <b>task paralysis</b> (spinning random wheels/coin
-                        flips are a nice solution for that).
-                    </p>
-
-                    <p>
-                        I am cursed to enjoy staring new projects and the hype and fixation rush (to be fair, this site
-                        is one right now!!), but to not have the capability to carry most projects to their completion
-                        without either working in a team, or having deadlines imposed on me with consequences due to
-                        stress overwriting the ADHD part of the brain (I do not look at the amount of projects I began
-                        around Sylvie, like a visual novel and RPG Maker game that are half done).
-                    </p>
-
-                    <p>
-                        My thoughts are jumbled and messy and jump in places, I can go from topic to topic without
-                        finding it weird, I like using my own experiences to connect to situations. To be fair,
-                        recognizing that it most likely is ADHD that is causing this has helped me view things in a
-                        different light. Why I struggle to want to start something, why I like having an item here but
-                        not there, what works for my focus and when my focus is absolutely shot (I usually try to do
-                        10&ndash;20 minutes of work even then, sometimes even just <i>starting</i> is enough to get me
-                        to do a little more work than planned).
-                    </p>
-
-                    <p>
-                        I tried to journal, but both physical and digital journals flopped for me (I know I do not have
-                        to write in them every day, but if I don&#39;t try to keep consistency in some form, I then
-                        forget to do the thing ... as soon as I slip, I usually stop doing it). Audio journaling has
-                        been good to thought dump without feeling some looming pressure to write, or want to decorate,
-                        and I don&#39;t feel the need to do it daily.
-                    </p>
-
-                    <p>
-                        Aside from that, I usually rely on my phone reminders and timers to keep some semblance of
-                        organization in my life, and I like organizing things in other facets of my life to scratch an
-                        itch (like this site, my tumblr blog, my Notion, etc).
-                    </p>
-
-                    <p>But here are some of the tools I&#39;ve liked to use:</p>
-
-                    <ul>
-                        <li>
-                            <a href="https://structured.app/">Structured</a> &mdash; a scheduling app, I use it on and
-                            off, but I really like how it visualizes your free time + how your day is filled; it&#39;s
-                            indie made as well
-                        </li>
-                        <li>
-                            <a href="https://www.screenzen.co/">ScreenZen</a> &mdash; to avoid the time blindness
-                            pitfall and to just help scrolling habits in general (or not getting lost in Cookie Run
-                            games for 2&mdash;3 hours), also an indie app
-                        </li>
-                        <li>
-                            <a href="https://www.untoldapp.com/">Untold</a>&nbsp;&mdash; my audio journaling app, sadly
-                            only for iOS
-                        </li>
-                        <li>
-                            <a href="https://habitica.com/">Habitica</a>&nbsp;&mdash; I&#39;ve fallen off using Habitica
-                            and already migrated my whole system to iOS&#39;s native Reminders, but it&#39;s honestly a
-                            pretty good interactive habit tracker/to-do for those who&#39;d like a little RPG aspect to
-                            it
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=RqzGzwTY-6w">Brown noise</a>
-                            (sometimes
-                            <a href="https://www.youtube.com/watch?v=b7pFajGkDHs">with rain</a>)&nbsp;&mdash; good for
-                            anything I need to focus on intensely and don&#39;t want voices for (since otherwise I rely
-                            on YouTube videos), case in point with me writing this blog
-                        </li>
-                    </ul>
-
-                    <p>Some of my favourite YouTubers for information:</p>
-
-                    <ul>
-                        <li><a href="https://www.youtube.com/@HowtoADHD">How to ADHD</a></li>
-                        <li><a href="https://www.youtube.com/@RickHasADHD">Rick Has ADHD</a></li>
-                        <li><a href="https://www.youtube.com/@lifeactuator">Life Actuator</a></li>
-                        <li>
-                            <a href="https://www.youtube.com/@theminiadhdcoach">The Mini ADHD Coach</a>
-                        </li>
-                    </ul>
-
-                    <p>And some of my favourite (standalone) videos:</p>
-
-                    <ul>
-                        <li>
-                            <a href="https://youtu.be/2fYg5hSgtug?list=PLuLLTHKmqBuMFGoSpvQYWxOvRNatkrwjW"
-                                >ADHD Simulator</a
-                            >
-                            (her channel in general has good ADHD stuff)
-                        </li>
-                        <li><a href="https://www.youtube.com/@ADHD_love/shorts">ADHD Love</a> shorts in general</li>
-                        <li>
-                            <a href="https://youtu.be/2_4BYjdEHp4">ADHD Test</a> (had some thoughtful prompts in it)
-                        </li>
-                    </ul>
-
-                    <p>
-                        Not too sure what else to say outside of ... adult ADHD being hard to diagnose sucks!! I think I
-                        know where mine came from if it is genetic (staring holes into my own dad), but it&#39;s
-                        definitely not something like I feel like I can bring up with my own family. Thankfully the
-                        online sphere is full of wonderful people, and information to see and get from people who
-                        genuinely have it as well, so ... I am glad I&#39;ve learned a little more about myself and
-                        understand myself a little better through it. Perhaps one day I can get a full confirmation
-                        (hard not to have the lingering doubts about faking it eugh), but until then I learn what works
-                        for me, and helps my brain a little more.
-                    </p>
-                    <p>(It's actually the 13th as I finish writing this, but it's ok, shh.)</p>
+                    <button onclick="window.location.href='blogging/041225.html';">Read More</button>
                 </article>
                 <!-- =============================================== -->
                 <!-- ENTRY -->
                 <!-- =============================================== -->
-                <article id="04/10/25" class="blogContent">
-                    <h2>Let's Start! I Suppose ...</h2>
+                <article>
+                    <h1>Let's Start! I Suppose ...</h1>
                     <p>
-                        <em>— <time class="dateline">April 10, 2025</time></em>
+                        <em>— <time datetime="2025-04-10">April 10, 2025</time></em>
                     </p>
                     <hr />
                     <p>
@@ -820,88 +263,9 @@
                             class="image"
                             src="https://64.media.tumblr.com/2213cb8d339100c53d6f7f2de59abd01/e6482d172fd5f133-00/s500x750/dd66bfd84c0990e0f465aac25c504372b4d03824.gif"
                             alt="pixels of sanrio characters"
-                            style="margin-left: auto; margin-right: auto" />
+                            style="margin-left: auto; margin-right: auto; margin-bottom: 10px" />
                     </a>
-                    <p>
-                        <b>And it works!!</b> Neat knowing block images can be centered with auto left/right margins.
-                        Anyway, onto the actual blog post ... it&#39;s kinda hard cause when I do sit to think about
-                        what I wanna write, I blank out; audio journalling has helped a lot on days I need to thought
-                        dump (thanks <a href="https://www.untoldapp.com/">Untold</a> for that, very sad it&#39;s iOS
-                        only) but it&#39;s rare that I <i>do</i> need to do it.
-                    </p>
-
-                    <p>
-                        So blog posts here will probably be very sporadic, but I will try to document things to the best
-                        of my ability, might it be something I&#39;m working on or learning.
-                    </p>
-
-                    <p>
-                        Right now, I&#39;m definitely in the trenches with the last 2 weeks of school, considering
-                        assignments are heavily piled on right now. I&#39;m not terribly worried since I&#39;ve got good
-                        grades in all of my classes, and my projects that are heavier work (Unity ones) I managed to get
-                        an extension on. I hate to admit that Copilot is perfect for coding prototype stuff
-                        <b><u>really</u></b> fast, especially since my brain isn&#39;t a coder one (funny how I decided
-                        to code a whole website then), and it&#39;s been easing up a lot of the stress I&#39;ve had with
-                        this game project. Making curling into a VR game is ... <i>weird</i>, but I&#39;ve got an idea,
-                        and it&#39;s slowly shaping into something more solid. Thankfully, it&#39;s only a prototype, so
-                        I&#39;m not going super in-depth.
-                    </p>
-                    <a href="https://www.tumblr.com/srsmitty/61354341160">
-                        <img
-                            src="https://64.media.tumblr.com/c91a0b1ef763084a7a3e134cbbdf3bec/tumblr_mt2z9712vP1qfmj62o1_100.gif"
-                            class="image"
-                            style="float: left; padding-right: 10px"
-                            alt=""
-                            aria-hidden="true"
-                    /></a>
-                    <p>
-                        The other is just interactables, and it might take me more to make some shitty and quick
-                        ProBuilder models to do a base colour on, vs just having physics based items you interact with
-                        to simulate the tea-making industrial process (which surprisingly is still very hands-on, this
-                        <a href="https://www.youtube.com/watch?v=LqDk2swTiB8">wonderful video</a> by Wu Mountain Tea is
-                        what I&#39;m going to base it off, and probably do the oolong tea process in a more simplified
-                        version.
-                    </p>
-
-                    <p>
-                        Aside from that, working on this site has helped me to understand HTML/CSS better, though
-                        Javascript is still a mystifying beast to me. Most likely because I know nothing about the
-                        syntax they use for functions and things. Like I understand at a vague level (duh, I had C#
-                        drilled into my brain for years in Game Design), but otherwise ... icky, <i>spooky</i>. Still a
-                        lot to do, and I&#39;m very stumped on how I wanna handle OC profiles. It might be the one
-                        instance where I do make a different CSS layout just for OCs and place them in a folder to
-                        figure that out.
-                    </p>
-
-                    <p>
-                        Otherwise, I do hope to get some work done on that because I wanna join the yume ring that&#39;s
-                        here, but it requires a completed shrine. I guess if I think about it, shrines are also ways to
-                        make new css/HTML layouts for something you like to dedicate to it. I do really like ... yeah
-                        yeah, it is <b>homogenizing</b>, but I do like consistency across the look of a website for
-                        anything that isn&#39;t a special page. I have mad respect for the people who can make new
-                        layouts for pages, cause I definitely could never (both in energy and my brain fighting against
-                        it). Part of me wonders if I can just reuse my &lt;intro&gt; and &lt;aside&gt; sections and
-                        modify them with my existing CSS, but also blehhhh. If there&#39;s a code that allows you to
-                        &#39;merge&#39; columns (aka have one div that spans two of your defined columns) I might be
-                        able to just use my old CSS, but some part of me also just wants to say fuck it and just make an
-                        altered version only for OCs.
-                    </p>
-
-                    <p>
-                        I do have <a href="https://toyhou.se/">Toyhouse</a> for all of them, and I prefer that as my OC
-                        hub for hosting everything + uploading all of my art and commissions, but I think it&#39;d be so
-                        cool to make something a little more custom (I say as if my layout isn&#39;t inspo&#39;d by the
-                        CSS layout I have on there, which speaking of I should credit in my footer as inspo). I most
-                        likely will end up doing the same for my character layouts, or see what other people have done
-                        on here, or see if any existing templates I can adjust/gut to work with my current CSS ...
-                        anyway, plans and plans.
-                    </p>
-
-                    <p>
-                        I should be playing the new HSR update, but I&#39;ve been <i>so</i> sucked into either website
-                        work, or school work. Hell, even poor Minecraft got left behind which was my fixation ... but
-                        that&#39;s it for now!! Till next time I get brainworms I need to offload.
-                    </p>
+                    <button onclick="window.location.href='blogging/041025.html';">Read More</button>
                 </article>
                 <!-- ENTRY ENDS -------------------------------->
             </main>

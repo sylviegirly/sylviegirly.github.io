@@ -941,6 +941,21 @@ article {
     ); /* literally the px number is just grip-gap x2 */
 }
 
+article button {
+    width: 100%;
+    padding: 8px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--primary-accent);
+    background-color: var(--article-bg);
+    transition: 0.3s;
+    color: var(--text-colour);
+}
+
+article button:hover {
+    background-color: var(--body-deco);
+    border: 2px solid var(--secondary-accent);
+}
+
 article p:last-child {
     margin-bottom: 0;
 }
@@ -1015,6 +1030,17 @@ article .scrollable {
 
 article .scrollable p:first-child {
     margin-top: 0;
+}
+
+.intro .home {
+    color: var(--secondary-accent);
+    display: block;
+    width: 96%;
+    background-color: var(--body-deco);
+    border-radius: var(--border-radius);
+    padding: 12px;
+    margin: 5px;
+    border-left: 5px solid var(--secondary-accent);
 }
 
 /* -------------------------------------------------------- */
@@ -1290,7 +1316,7 @@ footer a:hover {
     .container-grid {
         display: flex;
         flex: 100%;
-        flex-direction: column-reverse;
+        flex-direction: column;
         width: auto;
         margin-left: 5px;
         margin-right: 5px;
@@ -1336,6 +1362,8 @@ footer a:hover {
 
     .intro {
         position: inherit; /* disable the sticky */
+        width: auto;
+        max-width: 100%;
     }
 
     aside {
@@ -1365,11 +1393,11 @@ footer a:hover {
         display: none;
     }
 
-    /* Would prefer to not hide it, but need to figure out how to make it mobile friendly */
-    .intro {
-        width: auto;
-        max-width: 100%;
-        margin-bottom: 10px;
+    .intro img {
+        max-width: 200px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #img-load {

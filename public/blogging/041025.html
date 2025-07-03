@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    --->
+    <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Site Title -->
+        <title>Let's Start! I Suppose ...</title>
+
+        <!-- Site Description -->
+        <meta content="A blogging and journaling corner." name="description" />
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Dark Mode Toggle -->
+        <script>
+            if (theme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                sessionStorage.setItem("theme", "dark");
+                document.getElementById("theme-toggle").innerHTML = "☀️";
+            } else if (theme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                sessionStorage.setItem("theme", "light");
+                document.getElementById("theme-toggle").innerHTML = "🌙";
+            }
+        </script>
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/normalize.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JavaScript: -->
+        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
+        if this HTML file is in 2 subfolders, etc. -->
+        <script src="../js/header.js" defer></script>
+        <script src="../js/blog-sidebar.js" defer></script>
+        <script src="../js/footer.js" defer></script>
+        <script src="../js/tab-title-suffix.js"></script>
+
+        <script src="../js/accessibility/disclosure-menu.iife.js"></script>
+        <!-- Disclosure Menu -->
+        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
+
+        <script src="../js/lightbox-plus-jquery.js"></script>
+        <link href="../css/lightbox.css" rel="stylesheet" />
+    </head>
+    <body id="body">
+        <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <main class="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- =============================================== -->
+            <blog-sidebar></blog-sidebar>
+            <!-- =============================================== -->
+            <!-- ENTRY -->
+            <!-- =============================================== -->
+            <article>
+                <h1>
+                    <img src="../img/decos/hanging_flowers.gif" aria-hidden="true" alt="" />
+                    Let's Start! I Suppose ...
+                </h1>
+                <p>
+                    <em>&mdash;<time datetime="2025-04-10"> April 10, 2025</time></em>
+                </p>
+                <hr />
+                <p>
+                    Hrrrr, well I guess it might be best to start the blogging page with err, <i>a blog</i>. It might be
+                    a good way to also test out placing in images into actual article pages and see how they function in
+                    the first place.
+                </p>
+                <a href="https://arunyi.art"
+                    ><img
+                        class="image"
+                        src="https://64.media.tumblr.com/2213cb8d339100c53d6f7f2de59abd01/e6482d172fd5f133-00/s500x750/dd66bfd84c0990e0f465aac25c504372b4d03824.gif"
+                        alt="pixels of sanrio characters"
+                        style="margin-left: auto; margin-right: auto" />
+                </a>
+                <p>
+                    <b>And it works!!</b> Neat knowing block images can be centered with auto left/right margins.
+                    Anyway, onto the actual blog post ... it&#39;s kinda hard cause when I do sit to think about what I
+                    wanna write, I blank out; audio journalling has helped a lot on days I need to thought dump (thanks
+                    <a href="https://www.untoldapp.com/">Untold</a> for that, very sad it&#39;s iOS only) but it&#39;s
+                    rare that I <i>do</i> need to do it.
+                </p>
+
+                <p>
+                    So blog posts here will probably be very sporadic, but I will try to document things to the best of
+                    my ability, might it be something I&#39;m working on or learning.
+                </p>
+
+                <p>
+                    Right now, I&#39;m definitely in the trenches with the last 2 weeks of school, considering
+                    assignments are heavily piled on right now. I&#39;m not terribly worried since I&#39;ve got good
+                    grades in all of my classes, and my projects that are heavier work (Unity ones) I managed to get an
+                    extension on. I hate to admit that Copilot is perfect for coding prototype stuff
+                    <b><u>really</u></b> fast, especially since my brain isn&#39;t a coder one (funny how I decided to
+                    code a whole website then), and it&#39;s been easing up a lot of the stress I&#39;ve had with this
+                    game project. Making curling into a VR game is ... <i>weird</i>, but I&#39;ve got an idea, and
+                    it&#39;s slowly shaping into something more solid. Thankfully, it&#39;s only a prototype, so I&#39;m
+                    not going super in-depth.
+                </p>
+                <a href="https://www.tumblr.com/srsmitty/61354341160">
+                    <img
+                        src="https://64.media.tumblr.com/c91a0b1ef763084a7a3e134cbbdf3bec/tumblr_mt2z9712vP1qfmj62o1_100.gif"
+                        class="image"
+                        style="float: left; padding-right: 10px"
+                        alt=""
+                        aria-hidden="true"
+                /></a>
+                <p>
+                    The other is just interactables, and it might take me more to make some shitty and quick ProBuilder
+                    models to do a base colour on, vs just having physics based items you interact with to simulate the
+                    tea-making industrial process (which surprisingly is still very hands-on, this
+                    <a href="https://www.youtube.com/watch?v=LqDk2swTiB8">wonderful video</a> by Wu Mountain Tea is what
+                    I&#39;m going to base it off, and probably do the oolong tea process in a more simplified version.
+                </p>
+
+                <p>
+                    Aside from that, working on this site has helped me to understand HTML/CSS better, though Javascript
+                    is still a mystifying beast to me. Most likely because I know nothing about the syntax they use for
+                    functions and things. Like I understand at a vague level (duh, I had C# drilled into my brain for
+                    years in Game Design), but otherwise ... icky, <i>spooky</i>. Still a lot to do, and I&#39;m very
+                    stumped on how I wanna handle OC profiles. It might be the one instance where I do make a different
+                    CSS layout just for OCs and place them in a folder to figure that out.
+                </p>
+
+                <p>
+                    Otherwise, I do hope to get some work done on that because I wanna join the yume ring that&#39;s
+                    here, but it requires a completed shrine. I guess if I think about it, shrines are also ways to make
+                    new css/HTML layouts for something you like to dedicate to it. I do really like ... yeah yeah, it is
+                    <b>homogenizing</b>, but I do like consistency across the look of a website for anything that
+                    isn&#39;t a special page. I have mad respect for the people who can make new layouts for pages,
+                    cause I definitely could never (both in energy and my brain fighting against it). Part of me wonders
+                    if I can just reuse my &lt;intro&gt; and &lt;aside&gt; sections and modify them with my existing
+                    CSS, but also blehhhh. If there&#39;s a code that allows you to &#39;merge&#39; columns (aka have
+                    one div that spans two of your defined columns) I might be able to just use my old CSS, but some
+                    part of me also just wants to say fuck it and just make an altered version only for OCs.
+                </p>
+
+                <p>
+                    I do have <a href="https://toyhou.se/">Toyhouse</a> for all of them, and I prefer that as my OC hub
+                    for hosting everything + uploading all of my art and commissions, but I think it&#39;d be so cool to
+                    make something a little more custom (I say as if my layout isn&#39;t inspo&#39;d by the CSS layout I
+                    have on there, which speaking of I should credit in my footer as inspo). I most likely will end up
+                    doing the same for my character layouts, or see what other people have done on here, or see if any
+                    existing templates I can adjust/gut to work with my current CSS ... anyway, plans and plans.
+                </p>
+
+                <p>
+                    I should be playing the new HSR update, but I&#39;ve been <i>so</i> sucked into either website work,
+                    or school work. Hell, even poor Minecraft got left behind which was my fixation ... but that&#39;s
+                    it for now!! Till next time I get brainworms I need to offload.
+                </p>
+            </article>
+        </main>
+        <!-- =============================================== -->
+        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
+        <!-- =============================================== -->
+        <general-footer></general-footer>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+
+        <!-- Dark Mode Toggle -->
+        <script src="../js/accessibility/dark-mode-alt.js"></script>
+
+        <!-- Font Toggle -->
+        <script src="../js/font_toggle.js"></script>
+
+        <!-- Scroll to Top -->
+        <script src="../js/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    </body>
+</html>
