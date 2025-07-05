@@ -166,7 +166,7 @@
                         settle here.
                     </p>
                     <hr />
-                    <div class="marquee alt" id="zhongvie-stamps">
+                    <div class="marquee alt" data-speed="30" id="zhongvie-stamps">
                         <img
                             src="img/stamps/sylvie%20stamp%20(1).png"
                             loading="lazy"
@@ -227,47 +227,13 @@
                         <img src="img/decos/hanging_flowers.gif" loading="lazy" aria-hidden="true" alt="" />
                         Monthly Poll
                     </h1>
-                    <form method="post" action="https://poll.pollcode.com/39269987">
-                        <div
-                            style="
-                                background-color: none;
-                                padding: 2px;
-                                width: auto;
-                                text-align: center;
-                                color: var(--text-colour);
-                            ">
-                            <div style="padding: 2px 0px 4px 2px">
-                                <strong>basic one, but favourite season?</strong>
-                            </div>
-                            <div>
-                                <input type="radio" name="answer" value="1" id="answer392699871" />
-                                <label for="answer392699871">spring</label>
-                                <input type="radio" name="answer" value="2" id="answer392699872" />
-                                <label for="answer392699872">summer</label>
-                                <input type="radio" name="answer" value="3" id="answer392699873" />
-                                <label for="answer392699873">autumn</label>
-                                <input type="radio" name="answer" value="4" id="answer392699874" />
-                                <label for="answer392699874">winter</label>
-                                <input type="radio" name="answer" value="5" id="answer392699875" />
-                                <label for="answer392699875">i like multiple equally</label>
-                                <input type="radio" name="answer" value="6" id="answer392699876" />
-                                <label for="answer392699876">i like them all</label>
-                                <input type="radio" name="answer" value="7" id="answer392699877" />
-                                <label for="answer392699877">none</label>
-                                <input type="radio" name="answer" value="8" id="answer392699878" />
-                                <label for="answer392699878">bald/nuanced answer</label>
-
-                                <input type="submit" value=" Vote " formtarget="_blank" />&nbsp;<input
-                                    type="submit"
-                                    name="view"
-                                    value=" View "
-                                    formtarget="_blank" />
-                            </div>
-                            <div align="right" style="font-size: 10px">
-                                pollcode.com <a href="https://pollcode.com/">free polls</a>
-                            </div>
-                        </div>
-                    </form>
+                    <iframe
+                        src="polls.html"
+                        title="poll"
+                        id="poll-code"
+                        target="_blank"
+                        style="border: none; width: 100%; height: 121px; min-height: none !important">
+                    </iframe>
                 </article>
                 <!-- =============================================== -->
                 <!-- ABOUT ME. -->
@@ -284,7 +250,7 @@
                                 <a href="https://picrew.me/en/image_maker/599056">
                                     <img
                                         src="img/decos/about_me_1.png"
-                                        style="width: 100%; height: auto"
+                                        style="width: 100%; height: fit-content"
                                         loading="lazy"
                                         alt="a chibi picrew of the webmaster with brown hair and glasses" />
                                 </a>
