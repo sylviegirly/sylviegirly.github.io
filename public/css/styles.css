@@ -955,6 +955,10 @@ article .tab button {
     width: fit-content !important;
 }
 
+article .tab button:hover {
+    border: none;
+}
+
 article button:hover {
     background-color: var(--body-deco);
     border: 2px solid var(--secondary-accent);
