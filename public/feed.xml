@@ -9,7 +9,20 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-06-30T23:28:05-04:00</updated>
+    <updated>2025-07-05T20:15:12-04:00</updated>
+
+    <entry>
+        <title>Polls now work!</title>
+        <link href="https://zhongvie.neocities.org" />
+        <updated>2025-07-05T20:15:12-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1751760912</id>
+        <content type="html">
+            &#x3C;p&#x3E;Added polls to the index page, even though it&#x27;s fucking &#x3C;em&#x3E;ass&#x3C;/em&#x3E;
+            to set up; thanks to &#x3C;a
+            href=&#x22;https://starry-knight.neocities.org/&#x22;&#x3E;starry-knight&#x3C;/a&#x3E; for figuring out how
+            to do it (aka github page you embed)&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New OC page!</title>
