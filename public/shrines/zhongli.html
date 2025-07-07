@@ -146,6 +146,10 @@
                 background-image: linear-gradient(var(--background-accent) 1px, transparent 1px),
                     linear-gradient(to right, var(--background-accent) 1px, var(--background) 1px);
                 background-size: 20px 20px;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                font-smoothing: antialiased;
+                font-weight: 400;
             }
 
             #main-header {
@@ -289,6 +293,8 @@
             bold,
             strong {
                 color: var(--primary-accent);
+                font-weight: 400;
+                text-transform: uppercase;
             }
 
             i,

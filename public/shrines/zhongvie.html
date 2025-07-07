@@ -171,6 +171,10 @@
                 background-color: var(--background);
                 background: radial-gradient(circle, transparent 20%, var(--background) 20%, var(--background) 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, var(--background) 20%, var(--background) 80%, transparent 80%, transparent) 25px 25px, linear-gradient(var(--background-accent) 2px, transparent 2px) 0 -1px, linear-gradient(90deg, var(--background-accent) 2px, var(--background) 2px) -1px 0;
                 background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                font-smoothing: antialiased;
+                font-weight: 400;
             }
 
             #main-header {
@@ -564,6 +568,8 @@
 
             main details summary {
                 cursor: pointer;
+                font-family: "dosis";
+                font-weight: bold;
             }
 
             main details summary::marker {
@@ -592,6 +598,8 @@
             bold,
             strong {
                 color: var(--link);
+                font-weight: 400;
+                text-transform: uppercase;
             }
 
             i,
