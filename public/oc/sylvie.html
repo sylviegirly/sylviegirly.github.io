@@ -33,19 +33,6 @@
         <!-- FavIcon Gif -->
         <link rel="icon" type="image/gif" href="../img/oc/sylvie/favicon.gif" />
 
-        <!-- Dark Mode Toggle -->
-        <script>
-            if (theme === "dark") {
-                document.documentElement.setAttribute("data-theme", "dark");
-                sessionStorage.setItem("theme", "dark");
-                document.getElementById("theme-toggle").innerHTML = "Light Mode";
-            } else if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-                sessionStorage.setItem("theme", "light");
-                document.getElementById("theme-toggle").innerHTML = "Dark Mode";
-            }
-        </script>
-
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
@@ -116,6 +103,49 @@
                     --sidebar: #191717;
                     --sidebarcolor: #f4f4f4;
                     --subtle-line: rgba(193, 227, 175, 0.2);
+                }
+            }
+
+            .skill-kit details {
+                background: none;
+                border: none;
+                margin-left: -10px;
+                margin-right: -5px;
+            }
+
+            .skill-kit summary {
+                background-color: var(--primary-accent);
+                padding: 10px;
+                border-radius: var(--border-radius);
+                text-align: center;
+                color: var(--font-on-accent);
+                font-family: "dosis";
+                font-size: 1.2em;
+            }
+
+            .skill-kit summary::marker {
+                content: none;
+            }
+
+            .dual-column {
+                padding-top: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .dual-left {
+                flex: 0 0 20%;
+                text-align: center;
+            }
+
+            .dual-right {
+                flex: 0 0 75%;
+            }
+
+            @media screen and (min-width: 800px) {
+                .dual-column {
+                    flex-direction: row;
                 }
             }
         </style>
@@ -1227,6 +1257,122 @@
                                 class="pal"
                                 data-tippy-content="#F4DDB3 / gold accents + hooves"></div>
                         </div>
+                    </div>
+                </section>
+
+                <!-- GENSHIN SKILLS -->
+                <section class="full">
+                    <h1>Genshin Kit</h1>
+                    <p>
+                        Sylvie's kit falls under a very standard Dendro claymore DPS, centric around being the main
+                        damage dealer and active on-field character; their kit can lean into being a full ATK based
+                        build, an EM build, or something of a hybrid between the two of them. They can self heal and can
+                        inflict a semi-consistent Dendro application to enemies.
+                    </p>
+                    <p>
+                        They do benefit from having a team that has a variety of elements, as such mono teams are not
+                        recommended for them.
+                    </p>
+                    <hr />
+                    <div class="skill-kit">
+                        <details>
+                            <summary>View Skills</summary>
+                            <!-- NORMAL -->
+                            <div class="dual-column">
+                                <div class="dual-left">
+                                    <img src="../img/oc/sylvie/skill-normal.png" />
+                                    <p><b>Brutal Strike</b><br /><i>Normal Attack</i></p>
+                                </div>
+                                <div class="dual-right">
+                                    <p><strong>Normal Attack</strong><br />Performs up to 4 consecutive strikes.</p>
+                                    <p>
+                                        <strong>Charged Attack</strong><br />Drains Stamina over time to perform
+                                        continuous slashes.<br /><strong
+                                            >At the end of the sequence, perform a more powerful slash.</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        <strong>Plunging Attack</strong><br />Plunges from mid-air to strike the ground,
+                                        damaging opponents along the path and dealing AoE DMG upon impact.
+                                    </p>
+                                    <details>
+                                        <summary>Gameplay Notes</summary>
+                                        <ul>
+                                            <li>
+                                                After using Overgrowth, Sylvie's Normal, Charged, and Plunging Attack
+                                                DMG will be converted to Dendro DMG for 12 seconds.
+                                            </li>
+                                        </ul>
+                                        <h3>Constellation Effects</h3>
+                                        <ul>
+                                            <li>
+                                                Constellation Level 4, Honeypot: "When Sylvie takes DMG, their ATK
+                                                increases by 10% and their EM increases by 50. Lasts for 10s. This
+                                                effect can stack up to 3 times and can only occur once every 2.5s."
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <!-- NORMAL -->
+                            <div class="dual-column">
+                                <div class="dual-left">
+                                    <img src="../img/oc/sylvie/skill-normal.png" />
+                                    <p><b>Brutal Strike</b><br /><i>Normal Attack</i></p>
+                                </div>
+                                <div class="dual-right">
+                                    <p><strong>Normal Attack</strong><br />Performs up to 4 consecutive strikes.</p>
+                                    <p>
+                                        <strong>Charged Attack</strong><br />Drains Stamina over time to perform
+                                        continuous slashes.<br /><strong
+                                            >At the end of the sequence, perform a more powerful slash.</strong
+                                        >
+                                    </p>
+                                    <p>
+                                        <strong>Plunging Attack</strong><br />Plunges from mid-air to strike the ground,
+                                        damaging opponents along the path and dealing AoE DMG upon impact.
+                                    </p>
+                                    <details>
+                                        <summary>Gameplay Notes</summary>
+                                        <ul>
+                                            <li>
+                                                After using Overgrowth, Sylvie's Normal, Charged, and Plunging Attack
+                                                DMG will be converted to Dendro DMG for 12 seconds.
+                                            </li>
+                                        </ul>
+                                        <h3>Constellation Effects</h3>
+                                        <ul>
+                                            <li>
+                                                Constellation Level 4, Honeypot: "When Sylvie takes DMG, their ATK
+                                                increases by 10% and their EM increases by 50. Lasts for 10s. This
+                                                effect can stack up to 3 times and can only occur once every 2.5s."
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <hr />
+                        </details>
+
+                        <hr />
+
+                        <details>
+                            <summary>View Constellations</summary>
+                            <p>Come back when I can lazily copy and paste these in ...</p>
+                        </details>
+
+                        <hr />
+
+                        <h2 style="text-align: center">Recommended Artifacts</h2>
+                        <p>Soon.</p>
+
+                        <hr />
+                        <h2 style="text-align: center">Recommended Weapons</h2>
+                        <p>Soon.</p>
                     </div>
                 </section>
 
