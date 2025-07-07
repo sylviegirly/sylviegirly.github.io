@@ -33,19 +33,6 @@
         <!-- FavIcon Gif -->
         <link rel="icon" type="image/gif" href="../img/oc/hideki/favicon.gif" />
 
-        <!-- Dark Mode Toggle -->
-        <script>
-            if (theme === "dark") {
-                document.documentElement.setAttribute("data-theme", "dark");
-                sessionStorage.setItem("theme", "dark");
-                document.getElementById("theme-toggle").innerHTML = "Light Mode";
-            } else if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-                sessionStorage.setItem("theme", "light");
-                document.getElementById("theme-toggle").innerHTML = "Dark Mode";
-            }
-        </script>
-
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
@@ -61,8 +48,18 @@
         <script src="../js/accessibility/accessible-menu.js" type="module"></script>
         <script src="../js/tab-title-suffix.js"></script>
         <style>
-            html,
-            html[data-theme="light"] {
+            :root {
+                --header-image: url("https://images.pexels.com/photos/31281710/pexels-photo-31281710/free-photo-of-vibrant-cherry-blossoms-in-full-spring-bloom.jpeg");
+                --focal-image: url("../img/oc/hideki/focal_image.jpg");
+                --design-image: url("../img/oc/hideki/design_image.png");
+                --focal-trivia-image: url("../img/oc/hideki/trivia_image.jpg");
+
+                --moodboard-1-image: url("https://images.pexels.com/photos/1517361/pexels-photo-1517361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-2-image: url("https://images.pexels.com/photos/4197563/pexels-photo-4197563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-3-image: url("https://images.pexels.com/photos/1210276/pexels-photo-1210276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-4-image: url("https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                --moodboard-5-image: url("https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
                 /* Main colors */
                 --background: #eac2cd; /* Page background */
                 --background-accent: #deaaba;
@@ -83,34 +80,8 @@
                 --sidebar: #f9eeee;
                 --sidebarcolor: #1c0e0e;
                 --subtle-line: rgba(190, 22, 22, 0.2);
-            }
 
-            html[data-theme="dark"] {
-                /* Main colors */
-                --background: #1c0f0f; /* Page background */
-                --background-accent: #2e1d1d;
-                --color: #f0f0f0;
-                --block: #150d0d; /* Background color for the grid blocks in the content */
-                --body-deco: #1e1818;
-
-                --primary-accent: #cc8e8e;
-                --secondary-accent: #c35050;
-                --font-on-accent: #000000;
-
-                --link: #e08383;
-                --linkhover: #ffffff;
-
-                --letter-glow: rgba(159, 56, 56, 0.25);
-
-                /* Sidebar colors */
-                --sidebar: #150d0d;
-                --sidebarcolor: #f0f0f0;
-                --subtle-line: rgba(255, 135, 135, 0.2);
-            }
-
-            @media (prefers-color-scheme: dark) {
-                html,
-                html[data-theme="dark"] {
+                @media (prefers-color-scheme: dark) {
                     /* Main colors */
                     --background: #1c0f0f; /* Page background */
                     --background-accent: #2e1d1d;
@@ -132,42 +103,6 @@
                     --sidebarcolor: #f0f0f0;
                     --subtle-line: rgba(255, 135, 135, 0.2);
                 }
-
-                html[data-theme="light"] {
-                    /* Main colors */
-                    --background: #eac2cd; /* Page background */
-                    --background-accent: #deaaba;
-                    --color: #1c0e0e;
-                    --block: #f9eeee; /* Background color for the grid blocks in the content */
-                    --body-deco: #f0dada;
-
-                    --primary-accent: #e08b8e;
-                    --secondary-accent: #612b2b;
-                    --font-on-accent: #000000;
-
-                    --link: #b13131;
-                    --linkhover: #240b0b;
-
-                    --letter-glow: rgba(232, 68, 68, 0.25);
-
-                    /* Sidebar colors */
-                    --sidebar: #f9eeee;
-                    --sidebarcolor: #1c0e0e;
-                    --subtle-line: rgba(190, 22, 22, 0.2);
-                }
-            }
-
-            :root {
-                --header-image: url("https://images.pexels.com/photos/31281710/pexels-photo-31281710/free-photo-of-vibrant-cherry-blossoms-in-full-spring-bloom.jpeg");
-                --focal-image: url("../img/oc/hideki/focal_image.jpg");
-                --design-image: url("../img/oc/hideki/design_image.png");
-                --focal-trivia-image: url("../img/oc/hideki/trivia_image.jpg");
-
-                --moodboard-1-image: url("https://images.pexels.com/photos/1517361/pexels-photo-1517361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-                --moodboard-2-image: url("https://images.pexels.com/photos/4197563/pexels-photo-4197563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-                --moodboard-3-image: url("https://images.pexels.com/photos/1210276/pexels-photo-1210276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-                --moodboard-4-image: url("https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-                --moodboard-5-image: url("https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             }
         </style>
     </head>
@@ -1544,11 +1479,6 @@
                 theme: "character"
             });
         </script>
-        <!-- Dark Mode Toggle -->
-        <script src="../js/accessibility/dark-mode-alt.js"></script>
-
-        <!-- Font Toggle -->
-        <script src="../js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
         <script src="../js/scroll-to-top.js"></script>

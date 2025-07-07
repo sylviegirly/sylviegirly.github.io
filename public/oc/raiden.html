@@ -33,19 +33,6 @@
         <!-- FavIcon Gif -->
         <link rel="icon" type="image/gif" href="../img/oc/raiden/favicon.gif" />
 
-        <!-- Dark Mode Toggle -->
-        <script>
-            if (theme === "dark") {
-                document.documentElement.setAttribute("data-theme", "dark");
-                sessionStorage.setItem("theme", "dark");
-                document.getElementById("theme-toggle").innerHTML = "Light Mode";
-            } else if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-                sessionStorage.setItem("theme", "light");
-                document.getElementById("theme-toggle").innerHTML = "Dark Mode";
-            }
-        </script>
-
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
             if this HTML file is in 2 subfolders, etc. -->
@@ -61,8 +48,17 @@
         <script src="../js/accessibility/accessible-menu.js" type="module"></script>
         <script src="../js/tab-title-suffix.js"></script>
         <style>
-            html,
-            html[data-theme="light"] {
+            :root {
+                --header-image: url("https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg");
+                --focal-image: url("../img/oc/raiden/focal_image.png");
+                --focal-trivia-image: url("../img/oc/raiden/trivia_focal.jpg");
+
+                --moodboard-1-image: url("https://plus.unsplash.com/premium_photo-1674684223407-13e383e1f0e6?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                --moodboard-2-image: url("https://images.unsplash.com/photo-1548620848-d375c7919ea2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                --moodboard-3-image: url("https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg");
+                --moodboard-4-image: url("https://images.pexels.com/photos/6008956/pexels-photo-6008956.jpeg");
+                --moodboard-5-image: url("https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg");
+
                 /* Main colors */
                 --background: #d5e3e4; /* Page background */
                 --background-accent: #c0cbd1;
@@ -83,34 +79,8 @@
                 --sidebar: #eef8f9;
                 --sidebarcolor: #0e131c;
                 --subtle-line: rgba(22, 83, 190, 0.2);
-            }
 
-            html[data-theme="dark"] {
-                /* Main colors */
-                --background: #1a1e2a; /* Page background */
-                --background-accent: #1d272e;
-                --color: #eff1f5;
-                --block: #0d1015; /* Background color for the grid blocks in the content */
-                --body-deco: #181a1e;
-
-                --primary-accent: #8ea6cc;
-                --secondary-accent: #798b99;
-                --font-on-accent: #000000;
-
-                --link: #7ed3ed;
-                --linkhover: #ffffff;
-
-                --letter-glow: rgba(56, 145, 159, 0.25);
-
-                /* Sidebar colors */
-                --sidebar: #0d1015;
-                --sidebarcolor: #eff1f5;
-                --subtle-line: rgba(135, 181, 255, 0.2);
-            }
-
-            @media (prefers-color-scheme: dark) {
-                html,
-                html[data-theme="dark"] {
+                @media (prefers-color-scheme: dark) {
                     /* Main colors */
                     --background: #1a1e2a; /* Page background */
                     --background-accent: #1d272e;
@@ -133,44 +103,9 @@
                     --subtle-line: rgba(135, 181, 255, 0.2);
                 }
 
-                html[data-theme="light"] {
-                    /* Main colors */
-                    --background: #d5e3e4; /* Page background */
-                    --background-accent: #c0cbd1;
-                    --color: #0e131c;
-                    --block: #eef8f9; /* Background color for the grid blocks in the content */
-                    --body-deco: #dae7f0;
-
-                    --primary-accent: #5a768d;
-                    --secondary-accent: #2b3b61;
-                    --font-on-accent: #ffffff;
-
-                    --link: #3178b1;
-                    --linkhover: #0b0b24;
-
-                    --letter-glow: rgba(68, 168, 232, 0.25);
-
-                    /* Sidebar colors */
-                    --sidebar: #eef8f9;
-                    --sidebarcolor: #0e131c;
-                    --subtle-line: rgba(22, 83, 190, 0.2);
+                .focal {
+                    background-position: center !important;
                 }
-            }
-
-            :root {
-                --header-image: url("https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg");
-                --focal-image: url("../img/oc/raiden/focal_image.png");
-                --focal-trivia-image: url("../img/oc/raiden/trivia_focal.jpg");
-
-                --moodboard-1-image: url("https://plus.unsplash.com/premium_photo-1674684223407-13e383e1f0e6?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-                --moodboard-2-image: url("https://images.unsplash.com/photo-1548620848-d375c7919ea2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-                --moodboard-3-image: url("https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg");
-                --moodboard-4-image: url("https://images.pexels.com/photos/6008956/pexels-photo-6008956.jpeg");
-                --moodboard-5-image: url("https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg");
-            }
-
-            .focal {
-                background-position: center !important;
             }
         </style>
     </head>
@@ -1251,11 +1186,6 @@
                 theme: "character"
             });
         </script>
-        <!-- Dark Mode Toggle -->
-        <script src="../js/accessibility/dark-mode-alt.js"></script>
-
-        <!-- Font Toggle -->
-        <script src="../js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
         <script src="../js/scroll-to-top.js"></script>

@@ -3,6 +3,31 @@ document.addEventListener("DOMContentLoaded", function () {
     new NavHeader();
 
     // Add any custom JavaScript code here...
+    var bodyElem = document.querySelector("body");
+    var fontForm = document.getElementById("fontFamily");
+
+    if (!localStorage.getItem("fontFamily")) {
+        console.log("trying to populate fonts");
+        populateStorage();
+    } else {
+        console.log("trying to set existing styles");
+        setStyles();
+    }
+
+    function populateStorage() {
+        localStorage.setItem("fontFamily", document.getElementById("fontFamily").value);
+        setStyles();
+    }
+
+    function setStyles() {
+        var currentFont = localStorage.getItem("fontFamily");
+        console.log("help, what the fuck is the current font: " + currentFont);
+        document.getElementById("fontFamily").value = currentFont;
+
+        bodyElem.style.fontFamily = currentFont;
+    }
+
+    fontForm.onchange = populateStorage;
 });
 
 function getNestingString() {
@@ -35,6 +60,23 @@ const nesting = getNestingString();
  */
 
 const content = `
+<!-- =============================================== -->
+<!-- FONT TOGGLER -->
+<!-- =============================================== -->
+
+<div class="button-wrapper">
+    <label for="fontFamily">Font:</label>
+        <select name="fontFamily" id="fontFamily">
+            <option value="freepixel">Free Pixel</option>
+            <option value="atkinson">Atkinson Hyperlegible</option>
+            <option value="intel one">Intel One Mono</option>
+            <option value="open dyslexic">Open Dyslexic</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Arial">Arial</option>
+    </select>
+</div>
+
 <nav>
     <button id="toggle-0" aria-label="Toggle main menu">☰</button>
     <ul id="menu-0">
@@ -92,20 +134,6 @@ const content = `
     </ul>
 </nav>
 <header></header>
-
-<!-- =============================================== -->
-<!-- FONT TOGGLER + DARK MODE TOGGLER. -->
-<!-- =============================================== -->
-
-<div class="button-wrapper">
-    <div class="button">
-        <button id="font-toggle" type="button" onclick="toggleFont()">toggle font</button>
-    </div>
-
-    <div class="button">
-        <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
-    </div>
-</div>
 `;
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */

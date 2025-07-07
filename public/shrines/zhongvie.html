@@ -15,29 +15,19 @@
 
     --->
     <head>
-        <!-- Dark Mode Toggle -->
-        <script>
-            if (theme === "dark") {
-                document.documentElement.setAttribute("data-theme", "dark");
-                sessionStorage.setItem("theme", "dark");
-                document.getElementById("theme-toggle").innerHTML = "☀️";
-            } else if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-                sessionStorage.setItem("theme", "light");
-                document.getElementById("theme-toggle").innerHTML = "🌙";
-            }
-        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <!-- Site Title -->
         <title>zhongvie shrine</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
 
         <!-- Site Description -->
         <meta
             content="A personal shrine dedicated to a fictional ship between Zhongli of Genshin Impact and an original character."
             name="description" />
-
-        <!-- Setting character encoding and viewport size. Do not remove. -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- FavIcon -->
         <link ref="favicon" href="favicon.ico" />
@@ -51,149 +41,6 @@
 
         <style>
             /* The following CSS applies on all screen sizes */
-            html,
-            html[data-theme="light"] {
-                /* Main colors */
-                --background: #617148; /* Page background */
-                --background-accent: #71805a;
-                --color: #1e1307;
-                --block: #ecefe1; /* Background color for the grid blocks in the content */
-                --block-outline: #cba65e;
-
-                --link: #5e731b;
-                --linkhover: #af8716;
-
-                --tippy-bg: #b1d792;
-                --footerlink: #efdf83;
-                --footerlinkhover: #b3f667;
-
-                --h1: #48480a;
-                --h2: #382408;
-                --h3: #382408;
-
-                --header: #fff7e6; /* Title color */
-                --footer: #f3f2eb; /* Footer text color */
-
-                /* Menu colors */
-                --menubg: #f1f3eb;
-                --menucolor: #475a2d;
-                --menubghover: #475a2d;
-                --menucolorhover: #f1f3eb;
-                --menuactive: #f5fabf;
-
-                --sylvie-quote: #b1d792;
-                --zhongli-quote: #e2d7af;
-
-                --border: rgba(30, 49, 0, 0.25);
-            }
-
-            html[data-theme="dark"] {
-                --background: #191817;
-                --background-accent: #222420;
-                --color: #e7ecdc;
-                --block: #24221f;
-                --block-outline: #2c3126;
-
-                --link: #c6db97;
-                --linkhover: #f7c16b;
-
-                --tippy-bg: #3a4530;
-
-                --footerlink: #eff5c2;
-                --footerlinkhover: #99ff87;
-
-                --h1: #c8da7e;
-                --h2: #daba7e;
-                --h3: #d7e0d0;
-
-                --header: #c8da7e;
-
-                /* Menu colors */
-                --menubg: #5a6140;
-                --menucolor: #ffffff;
-                --menubghover: #ffffff;
-                --menucolorhover: #5a6140;
-                --menuactive: #a49063;
-
-                --sylvie-quote: #496135;
-                --zhongli-quote: #7d501c;
-
-                --border: rgba(223, 255, 179, 0.14);
-            }
-
-            @media (prefers-color-scheme: dark) {
-                html,
-                html[data-theme="dark"] {
-                --background: #191817;
-                --background-accent: #222420;
-                --color: #e7ecdc;
-                --block: #24221f;
-                --block-outline: #2c3126;
-
-                --link: #c6db97;
-                --linkhover: #f7c16b;
-
-                --tippy-bg: #3a4530;
-
-                --footerlink: #eff5c2;
-                --footerlinkhover: #99ff87;
-
-                --h1: #c8da7e;
-                --h2: #daba7e;
-                --h3: #d7e0d0;
-
-                --header: #c8da7e;
-
-                /* Menu colors */
-                --menubg: #5a6140;
-                --menucolor: #ffffff;
-                --menubghover: #ffffff;
-                --menucolorhover: #5a6140;
-                --menuactive: #a49063;
-
-                --sylvie-quote: #496135;
-                --zhongli-quote: #7d501c;
-
-                --border: rgba(223, 255, 179, 0.14);
-                }
-
-                html[data-theme="light"] {
-                /* Main colors */
-                --background: #617148; /* Page background */
-                --background-accent: #71805a;
-                --color: #1e1307;
-                --block: #ecefe1; /* Background color for the grid blocks in the content */
-                --block-outline: #cba65e;
-
-                --link: #5e731b;
-                --linkhover: #af8716;
-
-                --tippy-bg: #b1d792;
-                --footerlink: #efdf83;
-                --footerlinkhover: #b3f667;
-
-                --h1: #48480a;
-                --h2: #382408;
-                --h3: #382408;
-
-                --header: #fff7e6; /* Title color */
-                --footer: #f3f2eb; /* Footer text color */
-
-                /* Menu colors */
-                --menubg: #f1f3eb;
-                --menucolor: #475a2d;
-                --menubghover: #475a2d;
-                --menucolorhover: #f1f3eb;
-                --menuactive: #f5fabf;
-
-                --sylvie-quote: #b1d792;
-                --zhongli-quote: #e2d7af;
-
-                --border: rgba(30, 49, 0, 0.25);
-                }
-            }
-
-            /* Colors and fonts */
             :root {
                 /* Fonts */
                 --bodyfont: "atkinson";
@@ -221,6 +68,73 @@
                 --colour-2: #433113;
                 --colour-3: #e7ac4b;
                 --colour-4: #e2dfcd;
+
+                /* Main colors */
+                --background: #617148; /* Page background */
+                --background-accent: #71805a;
+                --color: #1e1307;
+                --block: #ecefe1; /* Background color for the grid blocks in the content */
+                --block-outline: #cba65e;
+
+                --link: #5e731b;
+                --linkhover: #af8716;
+
+                --tippy-bg: #b1d792;
+                --footerlink: #efdf83;
+                --footerlinkhover: #b3f667;
+
+                --h1: #48480a;
+                --h2: #382408;
+                --h3: #382408;
+
+                --header: #fff7e6; /* Title color */
+                --footer: #f3f2eb; /* Footer text color */
+
+                /* Menu colors */
+                --menubg: #f1f3eb;
+                --menucolor: #475a2d;
+                --menubghover: #475a2d;
+                --menucolorhover: #f1f3eb;
+                --menuactive: #f5fabf;
+
+                --sylvie-quote: #b1d792;
+                --zhongli-quote: #e2d7af;
+
+                --border: rgba(30, 49, 0, 0.25);
+
+                @media (prefers-color-scheme: dark) {
+                --background: #191817;
+                --background-accent: #222420;
+                --color: #e7ecdc;
+                --block: #24221f;
+                --block-outline: #2c3126;
+
+                --link: #c6db97;
+                --linkhover: #f7c16b;
+
+                --tippy-bg: #3a4530;
+
+                --footerlink: #eff5c2;
+                --footerlinkhover: #99ff87;
+
+                --h1: #c8da7e;
+                --h2: #daba7e;
+                --h3: #d7e0d0;
+
+                --header: #c8da7e;
+
+                /* Menu colors */
+                --menubg: #5a6140;
+                --menucolor: #ffffff;
+                --menubghover: #ffffff;
+                --menucolorhover: #5a6140;
+                --menuactive: #a49063;
+
+                --sylvie-quote: #496135;
+                --zhongli-quote: #7d501c;
+
+                --border: rgba(223, 255, 179, 0.14);
+                }
             }
 
             @font-face {
@@ -230,6 +144,18 @@
             @font-face {
                 font-family: "atkinson";
                 src: url(../fonts/AtkinsonHyperlegible-Regular.ttf);
+            }
+            @font-face {
+                font-family: "freepixel";
+                src: url(../fonts/FreePixel.ttf);
+            }
+            @font-face {
+                font-family: "open dyslexic";
+                src: url(../fonts/OpenDyslexic-Regular.otf);
+            }
+            @font-face {
+                font-family: "intel one";
+                src: url(../fonts/IntelOneMono-Regular.ttf);
             }
 
             * {
@@ -268,32 +194,17 @@
             /* -------------------------------------------------------- */
             /* DARK MODE TOGGLES */
             /* -------------------------------------------------------- */
-            .button-toggle {
-                position: relative;
+            .button {
                 float: right;
-                top: 0px;
                 width: fit-content;
+                font-size: 1rem;
+                margin-top: 15px;
+                margin-bottom: auto;
             }
 
-            .button-toggle button {
-                font-size: 1.5rem;
-                font-family: inherit;
-                color: var(--font-on-accent);
-                width: fit-content;
-                height: fit-content;
-                background-color: var(--background) !important;
-                border: 2px solid var(--block-outline);
+            .button select {
+                border: none;
                 border-radius: var(--border-radius);
-                transition: 0.5s;
-            }
-
-            .button-toggle button:hover {
-                background-color: var(--menubghover);
-                border-color: var(--menubg);
-                color: var(--font-on-accent);
-                box-shadow:
-                    0 12px 16px 0 rgba(0, 0, 0, 0.24),
-                    0 17px 50px 0 rgba(0, 0, 0, 0.19);
             }
 
             /* -------------------------------------------------------- */
@@ -976,8 +887,44 @@
             <header id="main-header">
                 <!-- Site title -->
                 Zhongvie 🌿🔶
-                <div class="button-toggle">
-                    <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+                <div class="button">
+                    <label for="fontFamily">Font:</label>
+                    <select name="fontFamily" id="fontFamily">
+                        <option value="freepixel">Free Pixel</option>
+                        <option value="atkinson">Atkinson Hyperlegible</option>
+                        <option value="intel one">Intel One Mono</option>
+                        <option value="open dyslexic">Open Dyslexic</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Arial">Arial</option>
+                    </select>
+                    <script>
+                        var bodyElem = document.querySelector("body");
+                        var fontForm = document.getElementById("fontFamily");
+
+                        if (!localStorage.getItem("fontFamily")) {
+                            console.log("trying to populate fonts");
+                            populateStorage();
+                        } else {
+                            console.log("trying to set existing styles");
+                            setStyles();
+                        }
+
+                        function populateStorage() {
+                            localStorage.setItem("fontFamily", document.getElementById("fontFamily").value);
+                            setStyles();
+                        }
+
+                        function setStyles() {
+                            var currentFont = localStorage.getItem("fontFamily");
+                            console.log("help, what the fuck is the current font: " + currentFont);
+                            document.getElementById("fontFamily").value = currentFont;
+
+                            bodyElem.style.fontFamily = currentFont;
+                        }
+
+                        fontForm.onchange = populateStorage;
+                    </script>
                 </div>
             </header>
 

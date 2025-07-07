@@ -62,8 +62,18 @@
         <script src="../js/accessibility/accessible-menu.js" type="module"></script>
         <script src="../js/tab-title-suffix.js"></script>
         <style>
-            html,
-            html[data-theme="light"] {
+            :root {
+                --header-image: url("../img/oc/sylvie/header.jpg");
+                --focal-image: url("../img/oc/sylvie/focal_image.jpg");
+                --design-image: url("https://i.imgur.com/1pSE61i.png");
+                --focal-trivia-image: url("../img/oc/sylvie/trivia_focal.jpg");
+
+                --moodboard-1-image: url("https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-2-image: url("https://images.pexels.com/photos/3329812/pexels-photo-3329812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-3-image: url("https://images.pexels.com/photos/3283453/pexels-photo-3283453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-4-image: url("https://images.pexels.com/photos/14483287/pexels-photo-14483287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                --moodboard-5-image: url("https://images.pexels.com/photos/1302675/pexels-photo-1302675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+
                 /* Main colors */
                 --background: #b3bca0; /* Page background */
                 --background-accent: #9da983;
@@ -84,34 +94,8 @@
                 --sidebar: #ededed;
                 --sidebarcolor: #171616;
                 --subtle-line: rgba(0, 0, 0, 0.2);
-            }
 
-            html[data-theme="dark"] {
-                /* Main colors */
-                --background: #211f1f; /* Page background */
-                --background-accent: #333631;
-                --color: #f4f4f4;
-                --block: #191717; /* Background color for the grid blocks in the content */
-                --body-deco: #2b2b2b;
-
-                --primary-accent: #788b68;
-                --secondary-accent: #cee8ba;
-                --font-on-accent: #ffffff;
-
-                --link: #a2c387;
-                --linkhover: #ffffff;
-
-                --letter-glow: #788b6840;
-
-                /* Sidebar colors */
-                --sidebar: #191717;
-                --sidebarcolor: #f4f4f4;
-                --subtle-line: rgba(193, 227, 175, 0.2);
-            }
-
-            @media (prefers-color-scheme: dark) {
-                html,
-                html[data-theme="dark"] {
+                @media (prefers-color-scheme: dark) {
                     /* Main colors */
                     --background: #211f1f; /* Page background */
                     --background-accent: #333631;
@@ -133,45 +117,6 @@
                     --sidebarcolor: #f4f4f4;
                     --subtle-line: rgba(193, 227, 175, 0.2);
                 }
-
-                html[data-theme="light"] {
-                    /* Main colors */
-                    --background: #b3bca0; /* Page background */
-                    --background-accent: #9da983;
-                    --color: #171616;
-                    --block: #ededed; /* Background color for the grid blocks in the content */
-                    --body-deco: #f5f5f4;
-
-                    --primary-accent: #788b68;
-                    --secondary-accent: #3a4d2c;
-                    --font-on-accent: #ffffff;
-
-                    --link: #4c6c32;
-                    --linkhover: #1f2c14;
-
-                    --letter-glow: #788b6840;
-
-                    /* Sidebar colors */
-                    --sidebar: #ededed;
-                    --sidebarcolor: #171616;
-                    --subtle-line: rgba(0, 0, 0, 0.2);
-                }
-            }
-
-            :root {
-                --header-image: url("../img/oc/sylvie/header.jpg");
-                --focal-image: url("../img/oc/sylvie/focal_image.jpg");
-                --design-image: url("https://i.imgur.com/1pSE61i.png");
-                --focal-trivia-image: url("../img/oc/sylvie/trivia_focal.jpg");
-
-                --moodboard-1-image: url("https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-                --moodboard-2-image: url("https://images.pexels.com/photos/3329812/pexels-photo-3329812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-                --moodboard-3-image: url("https://images.pexels.com/photos/3283453/pexels-photo-3283453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-                --moodboard-4-image: url("https://images.pexels.com/photos/14483287/pexels-photo-14483287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-                --moodboard-5-image: url("https://images.pexels.com/photos/1302675/pexels-photo-1302675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-
-                --light: #ededed;
-                --dark: #3a4d2c;
             }
         </style>
     </head>
@@ -1984,12 +1929,6 @@
             };
         </script>
         <script src="../js/music-player.js"></script>
-
-        <!-- Dark Mode Toggle -->
-        <script src="../js/accessibility/dark-mode-alt.js"></script>
-
-        <!-- Font Toggle -->
-        <script src="../js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
         <script src="../js/scroll-to-top.js"></script>

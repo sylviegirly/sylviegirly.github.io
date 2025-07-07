@@ -39,19 +39,6 @@
         <!-- FavIcon -->
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-        <!-- Dark Mode Toggle -->
-        <script>
-            if (theme === "dark") {
-                document.documentElement.setAttribute("data-theme", "dark");
-                sessionStorage.setItem("theme", "dark");
-                document.getElementById("theme-toggle").innerHTML = "☀️";
-            } else if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-                sessionStorage.setItem("theme", "light");
-                document.getElementById("theme-toggle").innerHTML = "🌙";
-            }
-        </script>
-
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
@@ -76,6 +63,9 @@
         <!-- Disclosure Menu -->
         <script src="js/accessibility/disclosure-menu.iife.js"></script>
         <script src="js/accessibility/accessible-menu.js" type="module"></script>
+
+        <!-- Font Toggle -->
+        <script src="js/main.js"></script>
 
         <style>
             #videoWrapper {
@@ -1084,24 +1074,6 @@
             marquee.setup();
         </script>
 
-        <!-- Clock Script -->
-        <script>
-                        const clockElement = document.getElementById('clock');
-                if (clockElement) {
-                    const options = {
-                        timeZone: 'Europe/Belgrade',
-                        hour: '2-digit',
-                        minute: '2-digit',
-                        hour12: true
-                    };
-                    const now = new Date().toLocaleString('en-US', options);
-                    clockElement.innerHTML = `current time in &#x1f1f7;&#x1f1f8;: ${now}`;
-                }
-            }
-            setInterval(updateClock, 60000);
-            updateClock();```
-        </script>
-
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
@@ -1112,12 +1084,6 @@
                 theme: "character"
             });
         </script>
-
-        <!-- Dark Mode Toggle -->
-        <script src="js/accessibility/dark-mode-alt.js"></script>
-
-        <!-- Font Toggle -->
-        <script src="js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
         <script src="js/scroll-to-top.js"></script>

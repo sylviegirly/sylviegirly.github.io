@@ -33,19 +33,6 @@
         <!-- FavIcon Gif -->
         <link rel="icon" type="image/gif" href="../img/oc/yadyra/favicon.gif" />
 
-        <!-- Dark Mode Toggle -->
-        <script>
-            if (theme === "dark") {
-                document.documentElement.setAttribute("data-theme", "dark");
-                sessionStorage.setItem("theme", "dark");
-                document.getElementById("theme-toggle").innerHTML = "Light Mode";
-            } else if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-                sessionStorage.setItem("theme", "light");
-                document.getElementById("theme-toggle").innerHTML = "Dark Mode";
-            }
-        </script>
-
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
@@ -62,8 +49,18 @@
         <script src="../js/accessibility/accessible-menu.js" type="module"></script>
         <script src="../js/tab-title-suffix.js"></script>
         <style>
-            html,
-            html[data-theme="light"] {
+            :root {
+                --header-image: url("https://images.pexels.com/photos/2719301/pexels-photo-2719301.jpeg");
+                --focal-image: url("../img/oc/yadyra/focal_image.jpg");
+                --design-image: url("../img/oc/yadyra/design_image.png");
+                --focal-trivia-image: url("../img/oc/yadyra/trivia_focal.png");
+
+                --moodboard-1-image: url("https://images.unsplash.com/photo-1540458638618-893e9fb35c07");
+                --moodboard-2-image: url("https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86");
+                --moodboard-3-image: url("https://images.unsplash.com/photo-1504701954957-2010ec3bcec1");
+                --moodboard-4-image: url("https://images.unsplash.com/photo-1608303852360-97cb721e42cc");
+                --moodboard-5-image: url("https://images.unsplash.com/photo-1562048048-86d659689440");
+
                 /* Main colors */
                 --background: #bca0aa; /* Page background */
                 --background-accent: #ceb3bc;
@@ -84,34 +81,8 @@
                 --sidebar: #f9f0f0;
                 --sidebarcolor: #1e0b0b;
                 --subtle-line: rgba(70, 13, 13, 0.2);
-            }
 
-            html[data-theme="dark"] {
-                /* Main colors */
-                --background: #1e1919; /* Page background */
-                --background-accent: #2e2222;
-                --color: #f2e6e6;
-                --block: #191717; /* Background color for the grid blocks in the content */
-                --body-deco: #141212;
-
-                --primary-accent: #ad5f74;
-                --secondary-accent: #edb4c4;
-                --font-on-accent: #ffffff;
-
-                --link: #c38798;
-                --linkhover: #ffffff;
-
-                --letter-glow: rgba(177, 97, 119, 0.25);
-
-                /* Sidebar colors */
-                --sidebar: #191717;
-                --sidebarcolor: #f2e6e6;
-                --subtle-line: rgba(249, 140, 140, 0.2);
-            }
-
-            @media (prefers-color-scheme: dark) {
-                html,
-                html[data-theme="dark"] {
+                @media (prefers-color-scheme: dark) {
                     /* Main colors */
                     --background: #1e1919; /* Page background */
                     --background-accent: #2e2222;
@@ -133,42 +104,6 @@
                     --sidebarcolor: #f2e6e6;
                     --subtle-line: rgba(249, 140, 140, 0.2);
                 }
-
-                html[data-theme="light"] {
-                    /* Main colors */
-                    --background: #bca0aa; /* Page background */
-                    --background-accent: #ceb3bc;
-                    --color: #1e0b0b;
-                    --block: #f9f0f0; /* Background color for the grid blocks in the content */
-                    --body-deco: #f0d9d9;
-
-                    --primary-accent: #ad5f74;
-                    --secondary-accent: #4d1122;
-                    --font-on-accent: #ffffff;
-
-                    --link: #b4254d;
-                    --linkhover: #291616;
-
-                    --letter-glow: rgba(177, 97, 119, 0.25);
-
-                    /* Sidebar colors */
-                    --sidebar: #f9f0f0;
-                    --sidebarcolor: #1e0b0b;
-                    --subtle-line: rgba(70, 13, 13, 0.2);
-                }
-            }
-
-            :root {
-                --header-image: url("https://images.pexels.com/photos/2719301/pexels-photo-2719301.jpeg");
-                --focal-image: url("../img/oc/yadyra/focal_image.jpg");
-                --design-image: url("../img/oc/yadyra/design_image.png");
-                --focal-trivia-image: url("../img/oc/yadyra/trivia_focal.png");
-
-                --moodboard-1-image: url("https://images.unsplash.com/photo-1540458638618-893e9fb35c07");
-                --moodboard-2-image: url("https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86");
-                --moodboard-3-image: url("https://images.unsplash.com/photo-1504701954957-2010ec3bcec1");
-                --moodboard-4-image: url("https://images.unsplash.com/photo-1608303852360-97cb721e42cc");
-                --moodboard-5-image: url("https://images.unsplash.com/photo-1562048048-86d659689440");
             }
         </style>
     </head>
@@ -1336,11 +1271,6 @@
                 theme: "character"
             });
         </script>
-        <!-- Dark Mode Toggle -->
-        <script src="../js/accessibility/dark-mode-alt.js"></script>
-
-        <!-- Font Toggle -->
-        <script src="../js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
         <script src="../js/scroll-to-top.js"></script>

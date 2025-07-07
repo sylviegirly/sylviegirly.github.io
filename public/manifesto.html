@@ -30,19 +30,6 @@
         <!-- Site Description -->
         <meta content="A personal manifesto on the nature of this website." name="description" />
 
-        <!-- Dark Mode Toggle -->
-        <script>
-            if (theme === "dark") {
-                document.documentElement.setAttribute("data-theme", "dark");
-                sessionStorage.setItem("theme", "dark");
-                document.getElementById("theme-toggle").innerHTML = "☀️";
-            } else if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-                sessionStorage.setItem("theme", "light");
-                document.getElementById("theme-toggle").innerHTML = "🌙";
-            }
-        </script>
-
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
@@ -250,12 +237,6 @@
                 theme: "character"
             });
         </script>
-
-        <!-- Dark Mode Toggle -->
-        <script src="js/accessibility/dark-mode-alt.js"></script>
-
-        <!-- Font Toggle -->
-        <script src="js/font_toggle.js"></script>
 
         <!-- Scroll to Top -->
         <script src="js/scroll-to-top.js"></script>

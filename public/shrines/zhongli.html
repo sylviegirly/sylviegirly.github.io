@@ -15,20 +15,14 @@
 
     --->
     <head>
-        <!-- Dark Mode Toggle -->
-        <script>
-            if (theme === "dark") {
-                document.documentElement.setAttribute("data-theme", "dark");
-                sessionStorage.setItem("theme", "dark");
-                document.getElementById("theme-toggle").innerHTML = "☀️";
-            } else if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-                sessionStorage.setItem("theme", "light");
-                document.getElementById("theme-toggle").innerHTML = "🌙";
-            }
-        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <!-- Site Title -->
         <title>zhongli shrine</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
 
         <!-- FavIcon Gif -->
         <link rel="icon" type="image/png" href="../img/misc/geo.png" />
@@ -37,8 +31,6 @@
         <meta content="A personal shrine dedicated to Zhongli from Genshin Impact." name="description" />
 
         <!-- Setting character encoding and viewport size. Do not remove. -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
@@ -49,8 +41,19 @@
 
         <!-- CSS RAW: -->
         <style>
-            html,
-            html[data-theme="light"] {
+            :root {
+                /* Fonts */
+                --bodyfont: "atkinson";
+                --headerfont: "dosis";
+
+                /* Images */
+                --banner-image-mobile: url(https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit6.png) no-repeat; /* Banner background image for mobile (wide) */
+                --banner-position-mobile: top; /* Banner background position on small screens */
+
+                /* Other things */
+                --border-radius: 10px;
+                --bar-height: 15px;
+
                 /* Main colors */
                 --background: #aa8468; /* Page background */
                 --background-accent: #a27757;
@@ -78,40 +81,8 @@
 
                 --header: #fff7e6; /* Title color */
                 --footer: #f3f2eb; /* Footer text color */
-            }
 
-            html[data-theme="dark"] {
-                --background: #191717;
-                --background-accent: #242020;
-                --color: #ece2dc;
-                --block: #24221f;
-                --block-outline: #312b26;
-
-                --link: #dbb797;
-                --linkhover: #d6f76b;
-
-                --primary-accent: #d5864b;
-                --secondary-accent: #ecc1a0;
-                --font-on-accent: #150a0a;
-                --divider: #ce732f;
-                --letter-glow: rgba(135, 75, 92, 0.25);
-
-                --subtle-line: rgba(244, 244, 244, 0.2);
-
-                --footerlink: #efc683;
-                --footerlinkhover: #b3f667;
-
-                --h1: #d6901d;
-                --h2: #d8c6ac;
-                --h3: #d8c6ac;
-
-                --header: #fff7e6; /* Title color */
-                --footer: #f3f2eb; /* Footer text color */
-            }
-
-            @media (prefers-color-scheme: dark) {
-                html,
-                html[data-theme="dark"] {
+                @media (prefers-color-scheme: dark) {
                     --background: #191717;
                     --background-accent: #242020;
                     --color: #ece2dc;
@@ -139,50 +110,6 @@
                     --header: #fff7e6; /* Title color */
                     --footer: #f3f2eb; /* Footer text color */
                 }
-
-                html[data-theme="light"] {
-                    /* Main colors */
-                    --background: #aa8468; /* Page background */
-                    --background-accent: #a27757;
-                    --color: #1e1919;
-                    --block: #ede1da; /* Background color for the grid blocks in the content */
-                    --block-outline: #955e40;
-
-                    --link: #5a2f09;
-                    --linkhover: #788b13;
-
-                    --primary-accent: #764a33;
-                    --secondary-accent: #9d683f;
-                    --font-on-accent: #ffffff;
-                    --divider: #ce732f;
-                    --letter-glow: rgba(135, 75, 92, 0.25);
-
-                    --subtle-line: rgba(244, 244, 244, 0.2);
-
-                    --footerlink: #ffdeb0;
-                    --footerlinkhover: #b3f667;
-
-                    --h1: #48480a;
-                    --h2: #382408;
-                    --h3: #382408;
-
-                    --header: #fff7e6; /* Title color */
-                    --footer: #f3f2eb; /* Footer text color */
-                }
-            }
-
-            :root {
-                /* Fonts */
-                --bodyfont: "atkinson";
-                --headerfont: "dosis";
-
-                /* Images */
-                --banner-image-mobile: url(https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit6.png) no-repeat; /* Banner background image for mobile (wide) */
-                --banner-position-mobile: top; /* Banner background position on small screens */
-
-                /* Other things */
-                --border-radius: 10px;
-                --bar-height: 15px;
             }
             @font-face {
                 font-family: "dosis";
@@ -191,6 +118,18 @@
             @font-face {
                 font-family: "atkinson";
                 src: url(../fonts/AtkinsonHyperlegible-Regular.ttf);
+            }
+            @font-face {
+                font-family: "freepixel";
+                src: url(../fonts/FreePixel.ttf);
+            }
+            @font-face {
+                font-family: "open dyslexic";
+                src: url(../fonts/OpenDyslexic-Regular.otf);
+            }
+            @font-face {
+                font-family: "intel one";
+                src: url(../fonts/IntelOneMono-Regular.ttf);
             }
 
             * {
@@ -384,27 +323,26 @@
             .button {
                 float: right;
                 width: fit-content;
-            }
-
-            .button button {
                 font-size: 1rem;
-                font-family: inherit;
-                color: var(--font-on-accent);
-                width: 40px;
-                height: 40px;
-                background-color: var(--background);
-                border: 2px solid var(--primary-accent);
-                border-radius: var(--border-radius);
-                transition: 0.5s;
+                margin-top: 15px;
+                margin-bottom: auto;
             }
 
-            .button button:hover {
-                background-color: var(--secondary-accent);
-                border-color: var(--link-hover);
-                color: var(--font-on-accent);
-                box-shadow:
-                    0 12px 16px 0 rgba(0, 0, 0, 0.24),
-                    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            .button select {
+                border: none;
+                border-radius: var(--border-radius);
+            }
+
+            main input,
+            textarea,
+            select,
+            button {
+                background: var(--block);
+                color: var(--color);
+                font: 1rem var(--bodyfont);
+                border: 1px solid;
+                padding: 8px;
+                margin: 2px;
             }
 
             /* -------------------------------------------------------- */
@@ -660,7 +598,43 @@
             <header id="main-header">
                 Zhongli Shrine 🔶
                 <div class="button">
-                    <button id="theme-toggle" type="button" onclick="modeSwitcher()">☀️</button>
+                    <label for="fontFamily">Font:</label>
+                    <select name="fontFamily" id="fontFamily">
+                        <option value="freepixel">Free Pixel</option>
+                        <option value="atkinson">Atkinson Hyperlegible</option>
+                        <option value="intel one">Intel One Mono</option>
+                        <option value="open dyslexic">Open Dyslexic</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Arial">Arial</option>
+                    </select>
+                    <script>
+                        var bodyElem = document.querySelector("body");
+                        var fontForm = document.getElementById("fontFamily");
+
+                        if (!localStorage.getItem("fontFamily")) {
+                            console.log("trying to populate fonts");
+                            populateStorage();
+                        } else {
+                            console.log("trying to set existing styles");
+                            setStyles();
+                        }
+
+                        function populateStorage() {
+                            localStorage.setItem("fontFamily", document.getElementById("fontFamily").value);
+                            setStyles();
+                        }
+
+                        function setStyles() {
+                            var currentFont = localStorage.getItem("fontFamily");
+                            console.log("help, what the fuck is the current font: " + currentFont);
+                            document.getElementById("fontFamily").value = currentFont;
+
+                            bodyElem.style.fontFamily = currentFont;
+                        }
+
+                        fontForm.onchange = populateStorage;
+                    </script>
                 </div>
             </header>
 
