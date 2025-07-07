@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Status Cafe</title>
+
+        <link href="../css/styles.css" rel="stylesheet" />
+
+        <style>
+            body {
+                background-color: var(--body-deco);
+                background-image: none;
+                font-family: "Courier New", arial;
+                text-align: center;
+                line-height: 1.5em;
+            }
+
+            .vote-buttons {
+                padding: 8px 28px;
+                width: fit-content !important;
+                border-radius: var(--border-radius);
+                border: 2px solid var(--primary-accent);
+                background-color: var(--article-bg);
+                transition: 0.3s;
+                color: var(--text-colour);
+            }
+
+            .vote-buttons:hover {
+                border-color: var(--secondary-accent);
+                background-color: var(--body-deco);
+            }
+
+            #statuscafe-username {
+                margin-bottom: 0.5em;
+            }
+
+            #statuscafe-username a {
+                display: none;
+            }
+
+            #statuscafe-content {
+                margin: 0 1em 0.5em 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="statuscafe">
+            <div id="statuscafe-username"></div>
+            <div id="statuscafe-content"></div>
+        </div>
+        <script src="https://status.cafe/current-status.js?name=sylviegirly" defer></script>
+    </body>
+</html>
