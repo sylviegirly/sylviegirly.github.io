@@ -4,7 +4,7 @@ const dragon = ["2lmti", "Rc5jM", "2CKWM", "7uEPu", "Snw0U", "PEjso", "Cmq6d"];
 var randomDragon = dragon[Math.floor(Math.random() * dragon.length)];
 
 // make the URL into a proper image tag
-const image =
+const dragonImage =
     "<a href='https://dragcave.net/view/" +
     randomDragon +
     "'><img src='https://dragcave.net/image/" +
@@ -12,4 +12,4 @@ const image =
     ".gif' class='image' style='margin-left: auto; margin-right: auto; padding: 10px; margin-bottom: 0' alt='a pixel dragon from dragon cave' loading='lazy'/></a>";
 
 // append to the div
-document.getElementById("dragon-cave").innerHTML = image;
+document.getElementById("dragon-cave").innerHTML = dragonImage;
