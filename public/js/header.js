@@ -68,14 +68,6 @@ const content = `
 <!-- FONT TOGGLER + DARK MODE TOGGLER. -->
 <!-- =============================================== -->
 <div class="button-wrapper">
-    <div class="clock">
-        <iframe
-            title="clock"
-            src="https://free.timeanddate.com/clock/i9wycd32/n250/fn8/fcfcf3f4/tct/pct/pd2"
-            style="border: 0; margin: 10px"
-            width="100"
-            height="18"></iframe>
-    </div>
     <label for="fontFamily">Font:</label>
         <select name="fontFamily" id="fontFamily">
             <option value="freepixel">Free Pixel</option>
