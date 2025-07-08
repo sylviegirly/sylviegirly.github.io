@@ -859,7 +859,7 @@ section .full-width-image {
 
 .links li {
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     transition: 0.5s ease-in-out;
     display: block;
 }
@@ -877,10 +877,7 @@ section .full-width-image {
 }
 
 .links li a:hover {
-    padding-top: 6px;
-    padding-bottom: 6px;
     color: var(--font-on-accent);
-    font-size: 1rem !important;
     background-color: var(--link-hover);
 }
 
@@ -1696,7 +1693,6 @@ footer a:hover {
     width: auto;
     height: auto;
     max-width: 100%;
-    float: left;
 }
 
 .image-deco img {
