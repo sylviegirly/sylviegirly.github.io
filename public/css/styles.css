@@ -1534,7 +1534,7 @@ footer a:hover {
 /* -------------------------------------------------------- */
 .button-wrapper {
     position: sticky;
-    top: 2px;
+    top: 7px;
     float: right;
     right: 7px;
     z-index: 9;
