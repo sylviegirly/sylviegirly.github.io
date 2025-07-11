@@ -9,12 +9,25 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-07-10T01:14:53-05:00</updated>
+    <updated>2025-07-11T13:17:37-04:00</updated>
+
+    <entry>
+        <title>Art Gallery Created</title>
+        <link href="https://zhongvie.neocities.org/gallery" />
+        <updated>2025-07-11T13:17:37-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1752254257</id>
+        <content type="html">
+            &#x3C;p&#x3E;Created an art page! I finally caved to make one to document my artwork throughout the years,
+            though I&#x27;ll be curating which ones I add. So far it&#x27;s only 2025 and
+            &#x3C;em&#x3E;part&#x3C;/em&#x3E; of 2012 and earlier since there&#x27;s some art I haven&#x27;t uploaded
+            yet&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Media Log Update</title>
         <link href="https://zhongvie.neocities.org/media-log" />
-        <updated>2025-07-10T01:14:53-05:00</updated>
+        <updated>2025-07-10T01:14:53-04:00</updated>
         <id>https://zhongvie.neocities.org/xml/item1752128093</id>
         <content type="html">
             &#x3C;p&#x3E;Small update just for the RSS feed this time! I added three new games and a movie and show to
