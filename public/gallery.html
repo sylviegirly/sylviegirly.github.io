@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+
+        <!-- Send to not found page is there's no javascript -->
+        <noscript> <meta http-equiv="Refresh" content="0;URL=not_found.html" /> </noscript>
+
+        <!-- Site Title -->
+        <title>gallery</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="A collection of media I have consumed + my thoughts on it." name="description" />
+
+        <link rel="stylesheet" href="./css/normalize.css" />
+
+        <script src="./js/lightbox-plus-jquery.js"></script>
+        <link href="./css/lightbox.css" rel="stylesheet" />
+
+        <style>
+            :root {
+                --bodyfont: "freepixel";
+                --headerfont: "dosis";
+                --titlefont: "dosis";
+
+                --pagebg: url(./img/light_mode_bg.png) #879d6d;
+
+                --border-radius: 10px;
+
+                --boxbg: #e9ecdb;
+                --boxshadow: rgba(74, 118, 58, 0.46);
+                --color: #16190f;
+                --headers: #4e6137;
+
+                --link: #4e6137;
+                --linkhover: #73582f;
+
+                --titlecolor: #f0fce0;
+
+                --sidebarbg: rgba(0, 0, 0, 0.3);
+                --menutext: #ffffff;
+                --menubg: #4e6137;
+                --menucolor: #e4e9d5;
+                --menubghover: #615037;
+                --menucolorhover: #eee3d4;
+                --menuborder: #c6d2b7;
+
+                --formbg: #e8f1c4;
+                --formcolor: #344c16;
+
+                --detailsbg: #f5f8f0;
+                --hr: #4e6137;
+
+                @media (prefers-color-scheme: dark) {
+                    --pagebg: url(./img/dark_mode_bg.png) #211f1f;
+
+                    --boxbg: #191717;
+                    --boxshadow: rgba(74, 118, 58, 0.15);
+                    --color: #f4f4f4;
+                    --headers: #778d60;
+
+                    --link: #a8d38d;
+                    --linkhover: #e2ae50;
+
+                    --titlecolor: #f0fce0;
+
+                    --sidebarbg: rgba(156, 179, 139, 0.3);
+
+                    --formbg: #252720;
+                    --formcolor: #d3e2c0;
+
+                    --detailsbg: #211f1f;
+                    --hr: #9ab37c;
+                }
+            }
+
+            @font-face {
+                font-family: "venice";
+                src: url(./fonts/VeniceClassic.ttf);
+            }
+            @font-face {
+                font-family: "freepixel";
+                src: url(./fonts/FreePixel.ttf);
+            }
+            @font-face {
+                font-family: "dosis";
+                src: url(./fonts/Dosis-VariableFont_wght.ttf);
+            }
+            @font-face {
+                font-family: "atkinson";
+                src: url(./fonts/AtkinsonHyperlegible-Regular.ttf);
+            }
+
+            @font-face {
+                font-family: "open dyslexic";
+                src: url(./fonts/OpenDyslexic-Regular.otf);
+            }
+
+            @font-face {
+                font-family: "intel one";
+                src: url(./fonts/IntelOneMono-Regular.ttf);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                transition:
+                    background 0.5s ease,
+                    color 0.5s ease;
+            }
+
+            html {
+                position: relative;
+                min-height: 100%;
+                font-size: 1rem;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                font-smoothing: antialiased;
+                font-weight: 400;
+            }
+
+            img {
+                margin: 2px;
+                max-width: 100%;
+                height: auto;
+            }
+
+            body {
+                background: var(--pagebg);
+                color: var(--color);
+                font: 1rem "freepixel";
+                background-attachment: fixed;
+                cursor: url(http://www.rw-designer.com/cursor-extern.php?id=186458), auto;
+            }
+
+            #skip a {
+                position: absolute;
+                display: inline-block;
+                left: 0px;
+                top: -1000px;
+                overflow: hidden;
+                transition: top 0.5s ease;
+                background: var(--boxbg);
+                color: var(--link);
+                z-index: 1000;
+                padding: 5px;
+            }
+
+            #skip a:focus {
+                top: 0;
+                transition: top 0.5s ease;
+            }
+
+            #container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            /* MENU */
+
+            #sidebar-container {
+                flex: 1 1 calc(10% - 20px);
+                min-width: 150px;
+                box-shadow: 1px 1px 3px rgb(0, 0, 0, 0.5);
+                background: var(--sidebarbg);
+                border-radius: 0;
+            }
+
+            #sidebar {
+                position: sticky;
+                width: calc(100% - 20px);
+                padding: 10px;
+                text-align: center;
+                font: 1.2rem var(--headerfont);
+                top: 10px;
+                padding-top: 50px;
+            }
+
+            #sidebar img {
+                max-width: 100%;
+            }
+
+            #sidebar p {
+                color: var(--menutext);
+                line-height: 1.5em;
+                font-size: 1rem;
+                margin: auto;
+                padding: 10px 0;
+            }
+
+            #sidebar label {
+                color: var(--menutext);
+                font-size: 1rem;
+            }
+
+            #sidebar select {
+                max-width: 100%;
+            }
+
+            #main-navigation ul {
+                list-style-type: none;
+            }
+            #main-navigation li {
+                margin-bottom: 5px;
+                font-size: 1rem;
+            }
+
+            #main-navigation li a {
+                text-decoration: none;
+                display: inline-block;
+                width: 90%;
+                background: var(--menubg);
+                border-radius: var(--border-radius);
+                padding: 5px;
+                text-align: center;
+                color: var(--menucolor);
+                border: 0.5px solid var(--menuborder);
+            }
+
+            #main-navigation li a:hover,
+            nav li a:focus {
+                background: var(--menubghover);
+                color: var(--menucolorhover);
+            }
+
+            /* HEADER */
+
+            #main-header {
+                font: 1.5em var(--titlefont);
+                color: var(--titlecolor);
+                font-style: italic;
+            }
+
+            /* CONTENT */
+
+            main {
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                flex: 1 1 calc(85% - 20px);
+            }
+
+            main section,
+            #footer {
+                padding: 15px;
+                margin: 12px;
+                background: var(--boxbg);
+                box-shadow: 6px 6px 0 var(--boxshadow);
+                border-radius: var(--border-radius);
+            }
+
+            #footer {
+                text-align: center;
+                margin-top: 20px;
+                flex: 1 1 100%;
+                padding: 15px;
+                background: var(--boxbg);
+                box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.5);
+            }
+
+            main a {
+                color: var(--link);
+            }
+
+            main a:hover,
+            main a:focus {
+                color: var(--linkhover);
+                text-decoration-thickness: 2px;
+            }
+
+            main a img:hover,
+            main a:focus img {
+                opacity: 0.7;
+            }
+
+            main p {
+                margin: 10px 0;
+                line-height: 1.5em;
+                text-align: center;
+            }
+
+            main underline,
+            main u {
+                text-decoration-line: underline;
+                text-decoration-style: double;
+                text-decoration-color: var(--hr);
+            }
+
+            main .tippy,
+            main abbr {
+                text-decoration-line: underline;
+                text-decoration-style: dotted;
+                text-decoration-color: var(--hr);
+            }
+
+            main h1 {
+                font: 2em var(--headerfont);
+                margin: 5px 0 5px 0;
+                color: var(--headers);
+                font-weight: bold;
+            }
+
+            main h2 {
+                margin: 10px 0 10px 0;
+                font: 1.7em var(--headerfont);
+                color: var(--headers);
+                text-align: center;
+                font-weight: bold;
+            }
+
+            main h3 {
+                margin: 5px 0 5px 0;
+                font: 1.4em var(--headerfont);
+                color: var(--headers);
+            }
+
+            main h4 {
+                font: 1.2em var(--headerfont);
+                margin: 5px 0 5px 0;
+                color: var(--headers);
+            }
+
+            main input,
+            textarea,
+            select,
+            button {
+                background: var(--formbg);
+                color: var(--formcolor);
+                font: 1rem var(--bodyfont);
+                border: 1px solid var(--hr);
+                padding: 5px;
+                margin: 5px;
+            }
+
+            main ul,
+            ol {
+                list-style-position: outside;
+            }
+
+            main li {
+                margin: 5px 0 5px 0;
+                line-height: 1.4;
+                margin-left: 30px;
+            }
+
+            main summary {
+                cursor: pointer;
+                margin: 5px 0px 5px 0px;
+            }
+
+            main details {
+                padding: 8px;
+                background: var(--detailsbg);
+                margin: 5px 0 5px 0;
+                border-radius: 5px;
+            }
+
+            main hr {
+                border: 0.5px solid var(--hr);
+                margin: 20px;
+            }
+
+            #organization {
+                text-align: center;
+            }
+
+            main #organization ul {
+                padding: 0;
+                list-style: none;
+                display: inline-block;
+            }
+
+            main #organization li {
+                display: inline;
+                line-height: 1.5em;
+                margin: 0;
+            }
+
+            main #organization li:after {
+                content: " -";
+                color: var(--hr);
+            }
+
+            main #organization ul li:first-child {
+                padding-left: 0;
+            }
+
+            main #organization ul li:last-child {
+                padding-right: 0;
+            }
+
+            main #organization ul li:last-child:after {
+                content: "";
+            }
+
+            /* FLEX AND GRID */
+
+            .flexcontainer {
+                display: flex;
+                flex-wrap: wrap;
+                margin: auto;
+            }
+
+            .full {
+                flex: 1 1 calc(100% - 30px);
+            }
+            .half {
+                flex: 1 1 calc(50% - 55px);
+            }
+            .third {
+                flex: 1 1 calc(33% - 55px);
+            }
+            .twothird {
+                flex: 1 1 calc(66% - 55px);
+            }
+            .quarter {
+                flex: 1 1 calc(25% - 60px);
+            }
+            .threequarter {
+                flex: 1 1 calc(75% - 55px);
+            }
+
+            .gridcontainer {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-gap: 10px;
+                margin: auto;
+            }
+
+            /* Gallery Alt */
+            /* Wrapper */
+            .image-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            /* Items */
+            .image-gallery a {
+                box-sizing: border-box;
+                width: calc(11% - 10px);
+                border: 5px solid var(--hr);
+                border-radius: 10px;
+                overflow: hidden;
+                transition: transform 0.5s ease;
+                aspect-ratio: 1/1;
+                background-color: var(--formbg);
+            }
+
+            /* Images */
+            .image-gallery a img {
+                width: 100%;
+                height: 100%;
+                max-width: 200px;
+                object-fit: cover;
+                margin: 0;
+                transition: 0.5s;
+                aspect-ratio: 1/1;
+            }
+
+            /* Images on Hover */
+            .image-gallery a:hover img {
+                filter: none;
+                -webkit-filter: grayscale(50%);
+                -moz-filter: grayscale(50%);
+                -ms-filter: grayscale(50%);
+                -o-filter: grayscale(50%);
+            }
+
+            #left-text p {
+                text-align: left;
+            }
+
+            @media screen and (max-width: 1024px) {
+                main {
+                    padding: 0;
+                    flex: 0 0 100%;
+                    display: block;
+                }
+
+                .flexcontainer {
+                    display: block;
+                }
+
+                #footer {
+                    margin-top: 20px;
+                }
+
+                #sidebar-container {
+                    flex: 0 0 100%;
+                }
+
+                #sidebar {
+                    position: relative;
+                    height: auto;
+                    text-align: center;
+                    margin-bottom: 1em;
+                    padding-top: 0;
+                }
+
+                #sidebar img {
+                    display: none;
+                }
+
+                #main-navigation li {
+                    display: inline-block;
+                    margin-bottom: 0.75em;
+                }
+
+                #main-navigation li a {
+                    display: inline;
+                    padding: 5px 20px;
+                }
+
+                .image-gallery a {
+                    width: calc(20% - 10px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+        <div id="container">
+            <div id="sidebar-container">
+                <div id="sidebar">
+                    <img
+                        src="./img/sidebar/sylvie_chibi_2.png"
+                        style="max-width: 100%; margin-bottom: 5px"
+                        alt=""
+                        aria-hidden="true" />
+                    <header id="main-header">Art Corner</header>
+                    <p>Gallery collection of my artwork across the years.</p>
+                    <nav id="main-navigation">
+                        <ul>
+                            <li><a href="../index.html">Back to Site</a></li>
+                            <li><a href="https://vgen.co/asuraid">VGen</a></li>
+                            <li><a href="https://asuraid.art/">Carrd</a></li>
+                            <li><a href="https://bsky.app/profile/asuraid.art">Bluesky</a></li>
+                            <li><a href="https://asuraid.tumblr.com/">Tumblr</a></li>
+                            <li><a href="https://ko-fi.com/asuraid">Ko-fi</a></li>
+                            <li><a href="https://artfight.net/~Asuraid">ArtFight</a></li>
+                        </ul>
+                    </nav>
+                    <br />
+                    <label for="fontFamily">Font:</label>
+                    <select name="fontFamily" id="fontFamily">
+                        <option value="freepixel">Free Pixel</option>
+                        <option value="atkinson">Atkinson Hyperlegible</option>
+                        <option value="intel one">Intel One Mono</option>
+                        <option value="open dyslexic">Open Dyslexic</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Arial">Arial</option>
+                    </select>
+                    <script>
+                        var bodyElem = document.querySelector("body");
+                        var sideElem = document.getElementById("sidebar");
+                        var fontForm = document.getElementById("fontFamily");
+
+                        if (!localStorage.getItem("fontFamily")) {
+                            populateStorage();
+                        } else {
+                            setStyles();
+                        }
+
+                        function populateStorage() {
+                            localStorage.setItem("fontFamily", document.getElementById("fontFamily").value);
+                            setStyles();
+                        }
+
+                        function setStyles() {
+                            var currentFont = localStorage.getItem("fontFamily");
+                            document.getElementById("fontFamily").value = currentFont;
+
+                            bodyElem.style.fontFamily = currentFont;
+                            sideElem.style.fontFamily = currentFont;
+                        }
+
+                        fontForm.onchange = populateStorage;
+                    </script>
+                </div>
+            </div>
+
+            <main id="content">
+                <!-- Section tags must be used for blocks -->
+                <section class="full">
+                    <img
+                        src="./img/sidebar/sylvie_chibi_3.png"
+                        style="float: right; max-width: 200px; margin: 5px"
+                        alt=""
+                        aria-hidden="true" />
+                    <h1>Aid's Art Gallery</h1>
+                    <div id="left-text">
+                        <p>
+                            A simple page to slowly, <i>slowly</i> host my artwork in a singular place that isn't all
+                            across my social media (or err ... nuked off my
+                            <span
+                                class="tippy"
+                                data-tippy-content="TL;DR I was forced by my parents to delete my really old account from back in 2012 and I lost a lot of artwork, so they aren't really hosted anywhere"
+                                >DeviantART</span
+                            >). Of course, all my art social medias are linked here! Sketches will usually not be
+                            included unless I <i>really</i> like them or feel like I wanna show them off (I usually only
+                            ever post those on my
+                            <a href="https://sylviegirly.tumblr.com/tagged/my+art">personal tumblr</a> or the
+                            character's associated toyhouse). NSFW artwork will <u>not</u> be present here.
+                        </p>
+                        <p>
+                            Art for the most part will not be organized by when it was made in the year, though newer
+                            art I will add after the creation of the page will be at the front. I will try my best to
+                            have alt text for everything, but some might be a lot less detailed.
+                        </p>
+                        <p>
+                            I draw using a <u>6th gen 13-inch iPad Pro</u> and in <u>Clip Studio Paint</u> (though I
+                            still have my Wacom Pro, it's just been retired for the time being).
+                        </p>
+                    </div>
+                </section>
+
+                <section class="full">
+                    <div id="organization">
+                        <ul>
+                            <li><a href="#2025">2025</a></li>
+                            <li>2024</li>
+                            <li>2023</li>
+                            <li>2022</li>
+                            <li>2021</li>
+                            <li>2020</li>
+                            <li>2019</li>
+                            <li>2018</li>
+                            <li>2017</li>
+                            <li>2016</li>
+                            <li>2015</li>
+                            <li>2014</li>
+                            <li>2013</li>
+                            <li><a href="#2012">2012 and earlier</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="full">
+                    <h2 id="2025">2025</h2>
+                    <p>
+                        Unfortunately this year has kinda been a <i>major</i> burnout for me, so for the time being I'm
+                        kind of in recovery mode.
+                    </p>
+                    <div class="image-gallery">
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/cerni_sylvie_maid"
+                            loading="lazy"
+                            data-lightbox="2025"
+                            data-alt="Sylvie, a green haired character, and Cerni, a blue haired character, making a heart together with their hands as they're dressed in maid dresses"
+                            ><img
+                                src="./img/art/2025/cerni_sylvie_maid.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                alt="A green haired character, and a blue haired character, smiling at the viewer"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/pinup_sylvie.jpg"
+                            loading="lazy"
+                            data-lightbox="2025"
+                            data-alt="A drawing of Sylvie, an original genshin character with green hair and pointy ears, lying on an ornate chair in a pin-up pose with their legs crossed and in the air, while wearing heels, dark maroon lipstick, and a dark green frilly dress. They are reading a book and grabbing a chocolate wafer from a box while looking at the viewer with a wink. A chibi Zhongli from Genshin is seen in the corner with wide eyes and a flushed expression. A signature with the name Asuraid is present."
+                            ><img
+                                src="./img/art/2025/sylvie_pinup.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                alt="A green haired character smirking at the viewer"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/zhongvie_remake.png"
+                            loading="lazy"
+                            data-lightbox="2025"
+                            data-title="This is actually a remake of an art piece I did back in 2021."
+                            data-alt="A doodle of Sylvie, an original genshin character, and Zhongli. Zhongli is lying on his back, partially sitting up, with Sylvie sitting on his lap. They are holding his hand with a gentle squeeze as they are smiling down towards him, a flush on both their cheeks."
+                            ><img
+                                src="./img/art/2025/zhongvie.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                alt="A character with elf-life ears grinning down towards Zhongli from Genshin Impact"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/smiling.png"
+                            loading="lazy"
+                            data-lightbox="2025"
+                            data-title="First time using my Wacom tablet in like ... two years or something"
+                            data-alt="A coloured doodle of an original character with green hair and pointy elf-like ears, they are looking towards the viewer and are laughing happily with a flush across their face. A signature is in the right corner that writes out Asuraid."
+                            ><img
+                                src="./img/art/2025/smiling.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                alt="A character with green hair and elf-like ears laughing with their sharp teeth showing"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/bath.png"
+                            loading="lazy"
+                            data-lightbox="2025"
+                            data-alt="A black and white sketch of an original character with pointy ears sitting in water up to their waist. A long scar decorates their back, alongside birthmarks. Their long hair falls over their shoulders as they're washing it and are looking over their shoulder towards the viewer. A question mark bubble is next to their head. A signature is in the corner, with the name Asuraid."
+                            ><img
+                                src="./img/art/2025/bath.jpg"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                alt="A character with green hair and elf-like looking over their bare shoulder at the viewer"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/bana.jpg"
+                            loading="lazy"
+                            data-lightbox="2025"
+                            data-title="Made for a secret santa exchange"
+                            data-alt="An illustration of Al Haitham from Genshin Impact and an original character with white hair and droopy animal ears. Both are wearing thick winter sweaters. Text to the right of the original character says 'it's so silly to see you so casual like this'. A small sketchy doodle above it has Al Haitham responding 'I could opt for nothing as well' whereas the original character looks flustered in response."
+                            ><img
+                                src="./img/art/2025/bana.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                alt="Al Haitham from Genshin and an original character with white hair and droopy animal ears"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/christmas.png"
+                            loading="lazy"
+                            data-lightbox="2025"
+                            data-title="Made for a secret santa exchange"
+                            data-alt="A digital artwork of a pokemon original character, and glitchy red from pokemon creepy pastas; the image is in a photo frame decorated by a lapras and snorlax sticker, and small green and red hearts. The two characters are standing shoulder to shoulder, making a cute heart with both their hands."
+                            ><img
+                                src="./img/art/2025/christmas.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                alt="A glitchy Red from Pokemon and an original character making a heart together"
+                        /></a>
+                    </div>
+                </section>
+
+                <section class="full">
+                    <h2 id="2012">2012 and earlier</h2>
+                    <p>
+                        Hodgepodge of whatever other files I've got saved on my laptop, some of these range from 2012,
+                        to 2009. It's a combination of my beginning tablet days (Wacom Bamboo Fun) and my mouse + MS
+                        paint + devART bases era. Roughly from 'newest' to oldest.
+                    </p>
+                    <div class="image-gallery">
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/___Snow_Angel____by_CockatielLover.png"
+                            loading="lazy"
+                            data-title="Self insert x Toshiro, before I ended up making an OC for him"
+                            data-alt="A drawing of a self insert with black hair and front red streaks, with Toshiro Hitsugaya from Bleach"
+                            data-lightbox="2012"
+                            ><img
+                                src="./img/art/2012/snow_angel.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A drawing of a self insert with black hair and front red streaks, with Toshiro Hitsugaya from Bleach"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/A_Sweet_Embrace_by_CockatielLover.png"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A drawing of a self insert with brown hair, with Roxas from Kingdom Hearts"
+                            data-title="Self insert x Roxas"
+                            ><img
+                                src="./img/art/2012/a_sweet_embrace.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A drawing of a self insert with brown hair, with Roxas from Kingdom Hearts"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/AxenRoxu___Midnight_Stroll_by_CockatielLover.png"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A drawing of a brown haired self insert with Roxas lovingly looking at each other under the moon"
+                            data-title="Self insert x Roxas"
+                            ><img
+                                src="./img/art/2012/midnight_stroll.jpg"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A drawing of a brown haired self insert with Roxas lovingly looking at each other under the moon"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/KH___Xen_x_Roxas_by_CockatielLover.png"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A drawing of a self insert with brown hair, with Roxas from Kingdom Hearts"
+                            data-title="Xen x Roxas"
+                            ><img
+                                src="./img/art/2012/older_xen_roxas.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A drawing of a self insert with brown hair, with Roxas from Kingdom Hearts"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/KH___Xen_by_CockatielLover.png"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A drawing of a self insert with brown hair, making a heart emote with her fingers"
+                            data-title="Self insert for Kingdom Hearts"
+                            ><img
+                                src="./img/art/2012/xen.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A drawing of a self insert with brown hair, making a heart emote with her fingers"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/baby_lugia_by_lugia435_d21y6wn-375w-2x.jpg"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A small, baby lugia alongside a purple, shadow lugia overseeing it"
+                            data-title="A baby lugia with a shadow lugia"
+                            ><img
+                                src="./img/art/2012/baby_lugia.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A small, baby lugia alongside a purple, shadow lugia overseeing it"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/black_beauty_by_lugia435_d26kvw0-375w-2x.jpg"
+                            loading="lazy"
+                            data-alt="A black coloured dragon with red eyes"
+                            data-lightbox="2012"
+                            ><img
+                                src="./img/art/2012/black_beauty.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A black coloured dragon with red eyes"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/computers_are_evil____by_lugia435_d22f27o-375w-2x.jpg"
+                            loading="lazy"
+                            data-alt="A brown haired girl looking exhausted as she sits at a computer"
+                            data-lightbox="2012"
+                            ><img
+                                src="./img/art/2012/evil_comps.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A brown haired girl looking exhausted as she sits at a computer"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/cockatiel_trainer_by_lugia435_d28ehf2-375w-2x.jpg"
+                            loading="lazy"
+                            data-alt="A brown haired girl with a cockatiel bird sitting on her shoulder"
+                            data-lightbox="2012"
+                            ><img
+                                src="./img/art/2012/cockatiel_trainer.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A brown haired girl with a cockatiel bird sitting on her shoulder"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/elf_dragon_by_lugia435_d23du2y-fullview.jpg"
+                            loading="lazy"
+                            data-alt="A green coloured wyvern with yellow eyes"
+                            data-lightbox="2012"
+                            ><img
+                                src="./img/art/2012/elf_dragon.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A green coloured wyvern with yellow eyes"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/garchomp_by_lugia435_d24ook0-375w-2x.jpg"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A garchomp from pokemon with a red scar on the shoulder. The garchomp is crying while a thunderstorm occurs in the background"
+                            ><img
+                                src="./img/art/2012/garchomp.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A garchomp from pokemon"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/happy_b_day_by_lugia435_d245n7i-fullview.jpg"
+                            loading="lazy"
+                            data-title="Not sure who's birthday it was"
+                            data-alt="A browned haired person celebrating a birthday, with various gift boxes on a table"
+                            data-lightbox="2012"
+                            ><img
+                                src="./img/art/2012/happy_birthday.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A browned haired person celebrating a birthday, with various gift boxes on a table"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/jun_x_me_by_lugia435_d274tst-375w-2x.jpg"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A pixel base of Barry from Pokemon, and a brown haired girl nuzzling under an umbrella"
+                            data-title="... yeah I had a self ship with Barry from Pokemon as well."
+                            ><img
+                                src="./img/art/2012/jun_x_me.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A pixel base of Barry from Pokemon, and a brown haired girl nuzzling under an umbrella"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/lugia_by_lugia435_d21wxf0-375w-2x.jpg"
+                            loading="lazy"
+                            data-alt="A lugia that is flying midair"
+                            data-lightbox="2012"
+                            ><img
+                                src="./img/art/2012/lugia.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A lugia that is flying midair"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/my_poke_character_by_lugia435_d234i82-375w-2x.jpg"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A brown haired girl with a white hat, and an orange and white t-shirt"
+                            ><img
+                                src="./img/art/2012/self_pokemon.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A brown haired girl with a white hat, and an orange and white t-shirt"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/new_eii_dee_by_lugia435_d26z68u-414w-2x.jpg"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A flygon with a light blue scarf, looking happy"
+                            ><img
+                                src="./img/art/2012/flygon.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A flygon with a light blue scarf, looking happy"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/orange_lugia_by_lugia435_d221nud-fullview.jpg"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A lugia with orange highlights instead of blue"
+                            ><img
+                                src="./img/art/2012/orange_lugia.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A lugia with orange highlights instead of blue"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/renamon_by_lugia435_d270cfx-375w-2x.jpg"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="Renamon from Digimon"
+                            ><img
+                                src="./img/art/2012/renamon.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="Renamon from Digimon"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/sea_dragon_by_lugia435_d27worf-375w-2x.jpg"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="A blue water dragon with flippers and yellow highlights"
+                            ><img
+                                src="./img/art/2012/water_dragon.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="A blue water dragon with flippers and yellow highlights"
+                        /></a>
+                        <a
+                            href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/thinkin__of_you_by_lugia435_d26z2o8-414w-2x.jpg"
+                            loading="lazy"
+                            data-lightbox="2012"
+                            data-alt="An Eevee from pokemon sitting in a field of grass and looking up thoughtfully at birds flying"
+                            ><img
+                                src="./img/art/2012/eevee.png"
+                                loading="lazy"
+                                aria-label="open image"
+                                alt="An Eevee from pokemon sitting in a field of grass and looking up thoughtfully at birds flying"
+                        /></a>
+                    </div>
+                </section>
+
+                <footer id="footer">
+                    <p>
+                        Template by <a href="https://kalechips.net/">Kalechips</a>. All artwork belongs to me otherwise.
+                    </p>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+
+        <!-- Scroll to Top -->
+        <script src="./js/scroll-to-top.js"></script>
+
+        <!-- Accessibility Button -->
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    </body>
+</html>

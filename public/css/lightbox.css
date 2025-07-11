@@ -115,6 +115,11 @@ body.lb-disable-scrolling {
   opacity: 1;
 }
 
+.lb-nav a.lb-prev:focus {
+  opacity: 1;
+  outline: 3px solid orange;
+}
+
 .lb-nav a.lb-next {
   width: 64%;
   right: 0;
@@ -129,6 +134,11 @@ body.lb-disable-scrolling {
 
 .lb-nav a.lb-next:hover {
   opacity: 1;
+}
+
+.lb-nav a.lb-next:focus {
+  opacity: 1;
+  outline: 3px solid orange;
 }
 
 .lb-dataContainer {
@@ -188,6 +198,10 @@ body.lb-disable-scrolling {
   -moz-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
+}
+
+.lb-close:focus {
+  outline: 3px solid orange;
 }
 
 .lb-data .lb-close:hover {
