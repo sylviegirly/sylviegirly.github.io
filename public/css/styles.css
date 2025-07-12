@@ -1004,6 +1004,33 @@ article .scrollable p:first-child {
     margin-top: 0;
 }
 
+.talkingbox {
+    background-color: var(--body-deco);
+    border-radius: var(--border-radius);
+    padding: 7px;
+    margin-top: 10px;
+    height: 115px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.talkingbox::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 237px;
+    top: 87px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 15px solid var(--body-deco);
+    box-sizing: border-box;
+}
+
 .intro .home {
     color: var(--secondary-accent);
     display: block;
