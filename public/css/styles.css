@@ -69,7 +69,7 @@
 }
 @font-face {
     font-family: "dosis";
-    font-display: optional;
+    font-display: swap;
     src: url(../fonts/Dosis-VariableFont_wght.ttf);
 }
 @font-face {
@@ -194,7 +194,7 @@ h1 {
     background-color: var(--primary-accent);
     /*background-image: url(https://sadhost.neocities.org/images/tiles/bg_bluewhiteflowers.gif);*/
     color: var(--font-on-accent);
-    font-family: "dosis";
+    font-family: "dosis", sans-serif;
     border-radius: var(--border-radius);
     letter-spacing: 2px;
     padding: 5px;
@@ -212,7 +212,7 @@ h2 {
     background-color: var(--primary-accent);
     /*background-image: url(https://sadhost.neocities.org/images/tiles/bg_bluewhiteflowers.gif);*/
     color: var(--font-on-accent);
-    font-family: "dosis";
+    font-family: "dosis", sans-serif;
     border-radius: var(--border-radius);
     letter-spacing: 2px;
     padding: 5px;
@@ -227,7 +227,7 @@ h2 {
 }
 
 h3 {
-    font-family: "dosis";
+    font-family: "dosis", sans-serif;
     font-size: 1.3em;
     font-weight: bold;
     letter-spacing: 1px;
