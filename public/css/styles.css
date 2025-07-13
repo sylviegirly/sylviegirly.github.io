@@ -90,6 +90,7 @@
 
 * {
     box-sizing: border-box;
+    scrollbar-color: var(--primary-accent) var(--article-bg);
 }
 
 html {
@@ -1459,8 +1460,8 @@ footer a:hover {
     }
 
     .talkingbox::after {
-    display: none;
-}
+        display: none;
+    }
 
     /* -------------------------------------------------------- */
     /* FONT TOGGLE */
