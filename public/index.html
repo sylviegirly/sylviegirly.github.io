@@ -39,6 +39,11 @@
         <!-- FavIcon -->
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
+        <!-- Lite Youtube -->
+        <!-- Include the CSS & JS.. (This could be direct from the package or bundled) -->
+        <link rel="stylesheet" href="js/lite-youtube/lite-yt-embed.css" />
+        <script src="js/lite-youtube/lite-yt-embed.js"></script>
+
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
@@ -527,17 +532,15 @@
                         <img src="img/nuko/nukoBigHeart.gif" loading="lazy" alt="" aria-hidden="true" />
                         Cool Video Corner
                     </h1>
-                    <div id="videoWrapper">
-                        <iframe
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/6JPMiLcCzz0?si=oa2HoFr0_D85v-jd"
-                            title="YouTube video player"
-                            style="border: 0; border-radius: 10px"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen></iframe>
-                    </div>
+                    <lite-youtube
+                        videoid="6JPMiLcCzz0"
+                        style="background-image: url(&quot;https://i.ytimg.com/vi/6JPMiLcCzz0/hqdefault.jpg&quot;)">
+                        <a href="https://youtube.com/watch?v=6JPMiLcCzz0" class="lyt-playbtn" title="Play Video">
+                            <span class="lyt-visually-hidden"
+                                >Play Video: How to ruin a franchise - Dragon Age: The Veilguard</span
+                            >
+                        </a>
+                    </lite-youtube>
                     <div style="text-align: center; margin-top: 5px">
                         <p class="subtle">
                             <i
