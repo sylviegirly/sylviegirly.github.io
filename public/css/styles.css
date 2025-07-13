@@ -59,28 +59,34 @@
 
 @font-face {
     font-family: "venice";
+    font-display: optional;
     src: url(../fonts/VeniceClassic.ttf);
 }
 @font-face {
     font-family: "freepixel";
+    font-display: optional;
     src: url(../fonts/FreePixel.ttf);
 }
 @font-face {
     font-family: "dosis";
+    font-display: optional;
     src: url(../fonts/Dosis-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: "atkinson";
+    font-display: swap;
     src: url(../fonts/AtkinsonHyperlegible-Regular.ttf);
 }
 
 @font-face {
     font-family: "open dyslexic";
+    font-display: swap;
     src: url(../fonts/OpenDyslexic-Regular.otf);
 }
 
 @font-face {
     font-family: "intel one";
+    font-display: swap;
     src: url(../fonts/IntelOneMono-Regular.ttf);
 }
 
