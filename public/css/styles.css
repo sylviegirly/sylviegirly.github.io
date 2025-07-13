@@ -64,7 +64,7 @@
 }
 @font-face {
     font-family: "freepixel";
-    font-display: optional;
+    font-display: swap;
     src: url(../fonts/FreePixel.ttf);
 }
 @font-face {
