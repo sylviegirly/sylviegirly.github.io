@@ -26,9 +26,9 @@
         --hover-color: #b9cc67;
         --post-text: #f4f4f4;
         --button-bg: #211f1f;
-        --border-color: #3f4c08;
+        --border-color: #414729;
         --accent-color: #778d60;
-        --border-shadow: rgba(74, 118, 58, 0.15);
+        --border-shadow: rgba(74, 118, 58, 0.45);
 
         /*these next two colors are for when you highlight text on the page*/
         --selected-bg: #ffecbd;
