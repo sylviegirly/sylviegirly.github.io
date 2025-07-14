@@ -11,6 +11,7 @@
     --button-bg: #f7f6e3;
     --border-color: #bac58a;
     --accent-color: #4e6137;
+    --bold-color: #4e6137;
     --border-shadow: rgba(74, 118, 58, 0.46);
 
     /*these next two colors are for when you highlight text on the page*/
@@ -388,7 +389,7 @@ main {
 .post strong,
 .post b {
     font-weight: normal;
-    color: var(--hover-color);
+    color: var(--bold-color);
     text-transform: uppercase;
     text-decoration: underline;
     text-decoration-color: var(--accent-color);
