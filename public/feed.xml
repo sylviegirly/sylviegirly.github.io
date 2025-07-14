@@ -9,7 +9,24 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-07-12T13:23:46-04:00</updated>
+    <updated>2025-07-14T02:30:15-04:00</updated>
+
+    <entry>
+        <title>Updated Blog Page!</title>
+        <link href="https://zhongvie.neocities.org/blog" />
+        <updated>2025-07-14T02:30:15-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1752474615</id>
+        <content type="html">
+            &#x3C;p&#x3E;Rehauled the blog page and reinstated the previous blog entries I had there, though now
+            they&#x27;re just all on one page, which ... undoes all my previous work. Oh well! I really like this layout
+            though by &#x3C;a href=&#x22;https://nomnomnami.com/&#x22;&#x3E;NomNomNami&#x3C;/a&#x3E;, it makes it feel
+            more freeing to write small posts like I would on my tumblr, and some of the &#x27;fluff&#x27; posts are
+            actually pulled from there.&#x3C;/p&#x3E; &#x3C;p&#x3E;I&#x27;ll be adding more &#x27;filler&#x27; posts
+            over time, since it looks a little weird to me to just have continual chunks of long form posts. Maybe
+            I&#x27;ll upload some of my sketches here as well, and photos I take of my lunches since I&#x27;ve been
+            documenting my bentos I take to school for the last few months.&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Now Page Updated</title>

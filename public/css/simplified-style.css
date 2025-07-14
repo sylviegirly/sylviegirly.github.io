@@ -383,6 +383,24 @@ main {
     text-decoration-thickness: 2px;
 }
 
+/*formatting*/
+.post bold,
+.post strong,
+.post b {
+    font-weight: normal;
+    color: var(--hover-color);
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 2px;
+}
+
+.center-img {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
 /*this is for lists*/
 .post li {
     /*you can change the normal dot to anything you want :)*/
@@ -483,8 +501,11 @@ main {
 .tagged:has(#all:checked) article,
 .tagged:has(#games:checked) article[class~="games"],
 .tagged:has(#personal:checked) article[class~="personal"],
+.tagged:has(#blabber:checked) article[class~="blabber"],
 .tagged:has(#sylvie:checked) article[class~="sylvie"],
+.tagged:has(#long:checked) article[class~="long"],
 .tagged:has(#ocs:checked) article[class~="ocs"],
+.tagged:has(#yume:checked) article[class~="yume"],
 .tagged:has(#art:checked) article[class~="art"] {
     display: inline-block;
 }
