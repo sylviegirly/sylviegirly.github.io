@@ -406,7 +406,10 @@ main {
 
 .post blockquote {
     border-left: 2px dashed var(--accent-color);
-    padding-left: 10px;
+    padding-left: 15px;
+    background-color: var(--button-bg);
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .center-img {
