@@ -500,7 +500,7 @@ main {
  * remember on the actual page you can write the tag however you want!*/
 .tagged:has(#all:checked) article,
 .tagged:has(#games:checked) article[class~="games"],
-.tagged:has(#personal:checked) article[class~="personal"],
+.tagged:has(#ffxiv:checked) article[class~="ffxiv"],
 .tagged:has(#blabber:checked) article[class~="blabber"],
 .tagged:has(#sylvie:checked) article[class~="sylvie"],
 .tagged:has(#long:checked) article[class~="long"],
