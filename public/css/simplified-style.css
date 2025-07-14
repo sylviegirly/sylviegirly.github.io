@@ -514,6 +514,7 @@ main {
 
 /*tag filter button styles (there's a lot)*/
 #tag-filters label {
+    font-family: "dosis";
     background: var(--button-bg);
     border: 1px solid var(--accent-color);
     border-radius: 0.5em;
