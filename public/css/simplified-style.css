@@ -397,6 +397,11 @@ main {
     text-decoration-color: var(--border-shadow);
 }
 
+.post blockquote {
+    border-left: 2px dashed var(--accent-color);
+    padding-left: 10px;
+}
+
 .center-img {
     display: flex;
     justify-content: center; /* align horizontal */
