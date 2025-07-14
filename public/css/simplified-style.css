@@ -29,6 +29,7 @@
         --button-bg: #211f1f;
         --border-color: #414729;
         --accent-color: #778d60;
+        --bold-color: #acd17f;
         --border-shadow: rgba(74, 118, 58, 0.45);
 
         /*these next two colors are for when you highlight text on the page*/
@@ -392,8 +393,8 @@ main {
     color: var(--bold-color);
     text-transform: uppercase;
     text-decoration: underline;
-    text-decoration-color: var(--accent-color);
-    text-decoration-thickness: 2px;
+    text-decoration-style: dashed;
+    text-decoration-color: var(--border-shadow);
 }
 
 .center-img {
