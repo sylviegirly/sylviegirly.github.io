@@ -35,6 +35,21 @@
         if this HTML file is in 2 subfolders, etc. -->
         <script src="js/tab-title-suffix.js"></script>
         <script src="js/accessibility/accessible-menu.js" type="module"></script>
+        <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css" />
+        <script src="https://unpkg.com/freezeframe@3.0.10/build/js/freezeframe.pkgd.min.js"></script>
+        <script>
+            $(function () {
+                third = new freezeframe(".freezeframe").capture().setup();
+                $(".play").click(function (e) {
+                    e.preventDefault();
+                    third.trigger();
+                });
+                $(".stop").click(function (e) {
+                    e.preventDefault();
+                    third.release();
+                });
+            });
+        </script>
 
         <!-- Lightbox: -->
         <script src="js/lightbox-plus-jquery.js"></script>
@@ -49,7 +64,8 @@
                 alt=""
                 aria-hidden="true"
                 style="max-width: 300px; height: auto"
-                title="art by LunnieTunes on hoyolab" />
+                title="art by LunnieTunes on hoyolab"
+                class="freezeframe" />
         </div>
 
         <!--keep everything inside a container so we can change the layout for mobile easily-->
@@ -116,6 +132,10 @@
                         <option value="Verdana">Verdana</option>
                         <option value="Arial">Arial</option>
                     </select>
+                    <div class="center-img" style="gap: 10px">
+                        <button class="play">Play Gifs</button>
+                        <button class="stop">Stop Gifs</button>
+                    </div>
                     <script>
                         var bodyElem = document.querySelector("body");
                         var sideElem = document.getElementById("sidebar");
