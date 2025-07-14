@@ -508,6 +508,7 @@ main {
 .tagged:has(#long:checked) article[class~="long"],
 .tagged:has(#ocs:checked) article[class~="ocs"],
 .tagged:has(#yume:checked) article[class~="yume"],
+.tagged:has(#sketch:checked) article[class~="sketch"],
 .tagged:has(#art:checked) article[class~="art"] {
     display: inline-block;
 }
