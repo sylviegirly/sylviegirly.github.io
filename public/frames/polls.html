@@ -9,9 +9,19 @@
             body {
                 background-color: var(--article-bg);
                 background-image: none;
-                font-family: "Courier New", arial;
+                font-family: tahoma;
                 text-align: center;
                 line-height: 1.5em;
+            }
+
+            strong {
+                font-weight: bold;
+                font-family: "Courier New", arial;
+                font-size: 1rem;
+            }
+
+            .vote {
+                font-size: 0.8rem;
             }
 
             .vote-buttons {
@@ -33,7 +43,7 @@
     <body>
         <form method="post" action="https://poll.pollcode.com/39269987">
             <strong>basic one, but favourite season?</strong>
-            <div>
+            <div class="vote">
                 <input type="radio" name="answer" value="1" id="answer392699871" />
                 <label for="answer392699871">spring</label>
                 <input type="radio" name="answer" value="2" id="answer392699872" />
