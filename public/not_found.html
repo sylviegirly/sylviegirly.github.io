@@ -25,7 +25,7 @@
         <meta content="Error page." name="description" />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="./css/normalize.css" />
 
         <script>
             function getNestingString() {
@@ -48,7 +48,7 @@
             body {
                 width: 100%;
                 color: white;
-                font-family: "freepixel";
+                font-family: "atkinson", sans-serif;
                 line-height: 1.3rem;
                 font-size: 1em;
                 letter-spacing: 0;
@@ -75,6 +75,7 @@
                 letter-spacing: 1px;
                 font-size: 2em;
                 color: #788b68;
+                font-family: "dosis", sans-serif;
             }
 
             a {
@@ -94,15 +95,11 @@
                 body {
                     color: #16190f;
                     background-color: #dfe0d2;
-                    background-color: #dfe0d2;
-                    opacity: 1;
-                    background-size: 10px 10px;
                     background-image: repeating-linear-gradient(45deg, #eceeda 0, #eceeda 1px, #dfe0d2 0, #dfe0d2 50%);
                 }
 
                 h1 {
                     color: #4e6137;
-                    font-family: "dosis";
                 }
 
                 a {
@@ -120,12 +117,14 @@
             }
 
             @font-face {
-                font-family: "freepixel";
-                src: url("https://zhongvie.neocities.org/fonts/FreePixel.ttf");
+                font-family: "atkinson";
+                font-display: swap;
+                src: url("https://zhongvie.neocities.org/fonts/AtkinsonHyperlegible-Regular.ttf");
             }
 
             @font-face {
                 font-family: "dosis";
+                font-display: swap;
                 src: url("https://zhongvie.neocities.org/fonts/Dosis-VariableFont_wght.ttf");
             }
         </style>
