@@ -15,27 +15,19 @@
                 line-height: 1.5em;
             }
 
-            .vote-buttons {
-                padding: 8px 28px;
-                width: fit-content !important;
-                border-radius: var(--border-radius);
-                border: 2px solid var(--primary-accent);
-                background-color: var(--article-bg);
-                transition: 0.3s;
-                color: var(--text-colour);
-            }
-
-            .vote-buttons:hover {
-                border-color: var(--secondary-accent);
-                background-color: var(--body-deco);
-            }
-
             #statuscafe-username {
                 margin-bottom: 0.5em;
             }
 
             #statuscafe-username a {
-                display: none;
+                color: var(--link-colour);
+                transition: 0.5s;
+            }
+
+            #statuscafe.username a::hover {
+                color: var(--link-hover);
+                text-decoration-color: var(--link-hover);
+                text-decoration-thickness: 2px;
             }
 
             #statuscafe-content {
