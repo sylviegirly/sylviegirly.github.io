@@ -54,6 +54,10 @@
 }
 
 #siwebring #webringdescbox {
+    color: inherit;
+}
+
+#siwebring #webringdescbox b {
     width: auto;
 }
 
