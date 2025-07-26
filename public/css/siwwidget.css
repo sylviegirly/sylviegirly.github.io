@@ -14,8 +14,8 @@
         trebuchet ms,
         sans-serif;
     text-align: center;
-    width: 315px;
-    height: 175px;
+    width: 100%;
+    height: fit-content;
     background: url("/siwebring/siwidgetbg.png") no-repeat;
     background-size: cover;
     border: 3px #ff74b8 solid;
@@ -32,10 +32,12 @@
 
 #siwebring #webringboxes {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 10px;
-    height: 100px;
+    height: auto;
+    margin-bottom: -10px;
 }
 
 #siwebring #webringiconbox,
@@ -48,11 +50,11 @@
 #siwebring #webringiconbox {
     border: 3px solid #ff74b8;
     border-radius: 4px;
+    overflow: hidden;
 }
 
 #siwebring #webringdescbox {
-    width: 170px;
-    margin-left: 20px;
+    width: auto;
 }
 
 #siwebring #webringdesc {
@@ -63,4 +65,8 @@
 #siwebring #webringlinks {
     width: 100%;
     margin: auto;
+}
+
+#siwebring #webringlinks p {
+    font-size: 0.8rem !important;
 }
