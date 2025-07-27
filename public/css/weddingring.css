@@ -21,6 +21,7 @@
 }
 #weddingring h2 {
     font-size: 12px;
+    padding: 1px;
     font-weight: normal !important;
     text-align: center;
     color: rgb(58, 99, 19) !important;
@@ -112,8 +113,8 @@
     padding: 9px;
     margin-top: 5px;
     font-family: "Rainy Hearts";
-    height: 70px;
     font-weight: normal !important;
+    height: 100px !important;
 }
 .yume-desc p {
     text-shadow:
