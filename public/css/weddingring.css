@@ -5,7 +5,7 @@
 
 #weddingring {
     color: rgb(43, 73, 16) !important;
-    background-image: linear-gradient(to bottom, #e7f4e5, #8aba83) !important;
+    background-image: linear-gradient(to bottom, #e9ecdb, #8fb35a) !important;
     background-size: cover;
     height: fit-content;
     width: 300px;
@@ -14,6 +14,7 @@
     border-radius: 15px;
     font-size: 15px;
     box-sizing: content-box;
+    border: 3px solid #8fb35a;
 }
 #weddingring p {
     padding: 0 !important;
