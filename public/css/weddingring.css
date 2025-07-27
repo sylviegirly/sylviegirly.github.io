@@ -4,8 +4,6 @@
 }
 
 #weddingring {
-    margin: 0 auto;
-    padding: 10px; /* creates some space around the widget */
     color: rgb(173, 96, 100);
     background-image: linear-gradient(to bottom, #fff9f9, #f7dae1);
     background-size: cover;
@@ -16,8 +14,11 @@
     border-radius: 15px;
     font-size: 15px;
 }
+#weddingring p {
+    padding: 0 !important;
+}
 #weddingring h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     color: rgb(173, 96, 100);
     margin: 0;
