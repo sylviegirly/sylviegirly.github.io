@@ -18,13 +18,13 @@
     height: fit-content !important;
     background: url("../img/misc/selfinsertBG.png") no-repeat !important;
     background-size: cover;
-    border: 3px #b6ff74 solid !important;
+    border: 3px #577d34 solid !important;
     font-size: 16px;
     margin-top: 8px;
 }
 
 #siwebring #templateWebring a {
-    color: #97e733;
+    color: #495738;
 }
 
 #siwebring #templateWebring a:hover {
@@ -60,6 +60,8 @@
 
 #siwebring #webringdescbox b {
     width: auto;
+    color: inherit;
+    font-weight: bold;
 }
 
 #siwebring #webringdesc {
