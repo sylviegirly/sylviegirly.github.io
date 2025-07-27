@@ -43,7 +43,7 @@
 #weddingring p {
     font-size: 1em !important;
     font-weight: normal !important;
-    letter-spacing: 0 !important;
+    letter-spacing: -1px !important;
 }
 
 .title a {
