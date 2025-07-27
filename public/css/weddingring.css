@@ -4,8 +4,8 @@
 }
 
 #weddingring {
-    color: rgb(94, 135, 56);
-    background-image: linear-gradient(to bottom, #d4ead1, #b2ddac);
+    color: rgb(43, 73, 16) !important;
+    background-image: linear-gradient(to bottom, #d4ead1, #b2ddac) !important;
     background-size: cover;
     height: fit-content;
     width: 300px;
@@ -17,17 +17,16 @@
 }
 #weddingring p {
     padding: 0 !important;
-    margin: 0 !important;
+    margin-top: -5px;
 }
 #weddingring h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
-    color: rgb(94, 135, 56);
+    color: rgb(58, 99, 19) !important;
     margin: 0;
     margin-bottom: 4px;
     background-color: transparent;
-    font-family: "Rainy Hearts";
-    letter-spacing: 1px;
+    font-family: "MS Gothic";
     text-shadow:
         -1px -1px 0 #fff,
         1px -1px 0 #fff,
@@ -35,14 +34,15 @@
         1px 1px 0 #fff;
 }
 
-#weddingring h2 a {
+.title a {
     text-decoration: none;
     color: inherit;
     text-shadow: inherit;
+    letter-spacing: 1px;
     transition-duration: 0.4s;
 }
-#weddingring h2 a:hover {
-    letter-spacing: 5px;
+.title a:hover {
+    letter-spacing: 5px !important;
 }
 
 .mainbox1 {
@@ -97,9 +97,9 @@
 .yume-desc {
     border-width: 10px;
     border-style: solid;
-    border-image: url("../img/decos/laceborder.gif") 8 fill round;
+    border-image: url("../img/decos/laceborder.png") 8 fill round !important;
     background-clip: padding-box;
-    background-color: #fff3f6;
+    background-color: #fafff3 !important;
     padding: 9px;
     margin-top: 5px;
     font-family: "Rainy Hearts";
@@ -107,10 +107,10 @@
 }
 .yume-desc p {
     text-shadow:
-        -1px -1px 0 #ffd0d0,
-        1px -1px 0 #ffd0d0,
-        -1px 1px 0 #ffd0d0,
-        1px 1px 0 #ffd0d0;
+        -1px -1px 0 #deffd0,
+        1px -1px 0 #deffd0,
+        -1px 1px 0 #deffd0,
+        1px 1px 0 #deffd0 !important;
 }
 
 .yume-links {
