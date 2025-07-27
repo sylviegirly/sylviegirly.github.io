@@ -40,6 +40,11 @@
     content: "♡ ";
 }
 
+#weddingring p {
+    font-size: 1rem !important;
+    font-weight: normal !important;
+}
+
 .title a {
     text-decoration: none;
     color: inherit;
@@ -114,7 +119,7 @@
     margin-top: 5px;
     font-family: "Rainy Hearts";
     font-weight: normal !important;
-    height: 100px !important;
+    height: 70px !important;
 }
 .yume-desc p {
     text-shadow:
