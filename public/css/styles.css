@@ -1651,6 +1651,8 @@ footer a:hover {
 /* ADHD ring */
 #adhdring p {
     font-size: 0.8rem;
+    font-family: "atkinson";
+    text-align: center;
 }
 
 /* Zhongvie Corner Deco */
