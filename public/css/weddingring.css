@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "Rainy Hearts";
+    src: url(https://files.catbox.moe/r4oudq.ttf) format(truetype);
+}
+
+#weddingring {
+    margin: 0 auto;
+    padding: 10px; /* creates some space around the widget */
+    color: rgb(173, 96, 100);
+    background-image: linear-gradient(to bottom, #fff9f9, #f7dae1);
+    background-size: cover;
+    height: fit-content;
+    width: 300px;
+    margin: 5px auto; /* centers the widget */
+    padding: 10px; /* creates some space between the links and text inside the widget */
+    border-radius: 15px;
+    font-size: 15px;
+}
+#weddingring h2 {
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(173, 96, 100);
+    margin: 0;
+    margin-bottom: 4px;
+    background-color: transparent;
+    font-family: "Rainy Hearts";
+    letter-spacing: 1px;
+    text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+}
+
+#weddingring h2 a {
+    text-decoration: none;
+    color: inherit;
+    text-shadow: inherit;
+    transition-duration: 0.4s;
+}
+#weddingring h2 a:hover {
+    letter-spacing: 5px;
+}
+
+.mainbox1 {
+    columns: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.mainbox2 {
+    columns: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+.yume-icon {
+    width: fit-content !important;
+    margin: 0 auto;
+    padding: 6px;
+}
+.yume-icon img {
+    filter: brightness(130%) saturate(60%);
+}
+
+.yume-icon2 {
+    margin: 0 auto;
+    padding: 6px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.yume-icon2 img {
+    transition: all 0.7s;
+    transition: 0.7s ease;
+    -webkit-mask-image: url(https://dl.dropbox.com/s/2kih8ox9q2czjeg/pngfind.com-kawaii-transparent-png-621355.png);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    width: 95px;
+}
+.yume-icon2 img:hover {
+    transition: all 0.7s;
+    border-radius: 15px;
+    -webkit-mask-image: url(https://dl.dropbox.com/s/2kih8ox9q2czjeg/pngfind.com-kawaii-transparent-png-621355.png);
+    -webkit-mask-size: 220%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+.yume-desc {
+    border-width: 10px;
+    border-style: solid;
+    border-image: url("laceborder.gif") 8 fill round;
+    background-clip: padding-box;
+    background-color: #fff3f6;
+    padding: 9px;
+    margin-top: 5px;
+    font-family: "Rainy Hearts";
+    height: 70px;
+}
+.yume-desc p {
+    text-shadow:
+        -1px -1px 0 #ffd0d0,
+        1px -1px 0 #ffd0d0,
+        -1px 1px 0 #ffd0d0,
+        1px 1px 0 #ffd0d0;
+}
+
+.yume-links {
+    padding: 2px;
+    margin-top: px;
+    text-align: center;
+}
+
+.yume-links a {
+    color: inherit;
+    font-family: "MS PGothic";
+    font-weight: bold;
+}
+
+/* index css? if it works? */
+
+#index {
+    width: auto;
+    height: auto;
+    margin: 10px;
+}
