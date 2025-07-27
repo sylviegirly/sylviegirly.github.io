@@ -9,7 +9,21 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-07-16T09:12:28-04:00</updated>
+    <updated>2025-07-27T19:18:49-04:00</updated>
+
+    <entry>
+        <title>Now Page Updated + Re-organized Home Page</title>
+        <link href="https://zhongvie.neocities.org" />
+        <updated>2025-07-27T19:18:49-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1753658329</id>
+        <content type="html">
+            &#x3C;p&#x3E;Updated my &#x3C;a href=&#x22;https://zhongvie.neocities.org/now&#x22;&#x3E;now
+            page&#x3C;/a&#x3E; to be caught up to my ongoings, and I ended up reorganizing my front page to introduce
+            two new webrings. I also changed the cool video of the week to one of adef&#x27;s cool Pok&#x26;eacute;mon
+            challenges where he sees if the Elite 4 of the regions can get all the way through the gyms to earn their
+            spots&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Art Gallery is now caught up to 2015</title>
