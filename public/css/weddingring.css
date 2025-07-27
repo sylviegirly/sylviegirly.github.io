@@ -13,7 +13,6 @@
     padding: 10px; /* creates some space between the links and text inside the widget */
     border-radius: 15px;
     font-size: 15px;
-    box-sizing: content-box;
     border: 3px solid #8fb35a;
 }
 #weddingring p {
@@ -119,10 +118,10 @@
     background-clip: padding-box;
     background-color: #fafff3 !important;
     padding: 9px;
-    margin-top: 5px;
+    margin-top: 0 !important;
     font-family: "Rainy Hearts";
     font-weight: normal !important;
-    height: 70px !important;
+    height: 90px !important;
 }
 .yume-desc p {
     text-shadow:
