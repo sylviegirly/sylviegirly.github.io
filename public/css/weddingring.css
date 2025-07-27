@@ -95,7 +95,7 @@
 .yume-desc {
     border-width: 10px;
     border-style: solid;
-    border-image: url("laceborder.gif") 8 fill round;
+    border-image: url("../img/decos/laceborder.gif") 8 fill round;
     background-clip: padding-box;
     background-color: #fff3f6;
     padding: 9px;
