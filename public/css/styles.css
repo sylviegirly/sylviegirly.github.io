@@ -371,6 +371,25 @@ details {
     flex: 50%;
 }
 
+/* COLUMNS: */
+
+.two-columns {
+    display: flex;
+}
+
+.two-columns > * {
+    flex: 1 1 0;
+    margin: 0;
+}
+
+.two-columns > *:first-child {
+    padding-right: 0.75em;
+}
+
+.two-columns > *:last-child {
+    padding-left: 0.75em;
+}
+
 /* Link styling */
 
 .intro a,

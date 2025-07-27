@@ -10,14 +10,15 @@
                 background-color: var(--article-bg);
                 background-image: none;
                 font-family: tahoma;
-                text-align: center;
+                text-align: left;
                 line-height: 1.5em;
             }
 
-            strong {
+            .title {
                 font-weight: bold;
                 font-family: "Courier New", arial;
                 font-size: 1rem;
+                text-align: center;
             }
 
             .vote {
@@ -42,30 +43,59 @@
     </head>
     <body>
         <form method="post" action="https://poll.pollcode.com/39269987">
-            <strong>basic one, but favourite season?</strong>
-            <div class="vote">
-                <input type="radio" name="answer" value="1" id="answer392699871" />
-                <label for="answer392699871">spring</label>
-                <input type="radio" name="answer" value="2" id="answer392699872" />
-                <label for="answer392699872">summer</label>
-                <input type="radio" name="answer" value="3" id="answer392699873" />
-                <label for="answer392699873">autumn</label>
-                <input type="radio" name="answer" value="4" id="answer392699874" />
-                <label for="answer392699874">winter</label>
-                <input type="radio" name="answer" value="5" id="answer392699875" />
-                <label for="answer392699875">i like multiple equally</label>
-                <input type="radio" name="answer" value="6" id="answer392699876" />
-                <label for="answer392699876">i like them all</label>
-                <input type="radio" name="answer" value="7" id="answer392699877" />
-                <label for="answer392699877">none</label>
-                <input type="radio" name="answer" value="8" id="answer392699878" />
-                <label for="answer392699878">bald/nuanced answer</label>
+            <div class="title">basic one, but favourite season?</div>
+            <br /><input type="radio" name="answer" value="1" id="answer392699871" style="float: left" /><label
+                for="answer392699871"
+                style="float: left; width: 150px"
+                >spring</label
+            >
+            <div style="clear: both; height: 2px"></div>
+            <input type="radio" name="answer" value="2" id="answer392699872" style="float: left" /><label
+                for="answer392699872"
+                style="float: left; width: 150px"
+                >summer</label
+            >
+            <div style="clear: both; height: 2px"></div>
+            <input type="radio" name="answer" value="3" id="answer392699873" style="float: left" /><label
+                for="answer392699873"
+                style="float: left; width: 150px"
+                >autumn</label
+            >
+            <div style="clear: both; height: 2px"></div>
+            <input type="radio" name="answer" value="4" id="answer392699874" style="float: left" /><label
+                for="answer392699874"
+                style="float: left; width: 150px"
+                >winter</label
+            >
+            <div style="clear: both; height: 2px"></div>
+            <input type="radio" name="answer" value="5" id="answer392699875" style="float: left" /><label
+                for="answer392699875"
+                style="float: left; width: 150px"
+                >i like multiple equally</label
+            >
+            <div style="clear: both; height: 2px"></div>
+            <input type="radio" name="answer" value="6" id="answer392699876" style="float: left" /><label
+                for="answer392699876"
+                style="float: left; width: 150px"
+                >i like them all</label
+            >
+            <div style="clear: both; height: 2px"></div>
+            <input type="radio" name="answer" value="7" id="answer392699877" style="float: left" /><label
+                for="answer392699877"
+                style="float: left; width: 150px"
+                >none</label
+            >
+            <div style="clear: both; height: 2px"></div>
+            <input type="radio" name="answer" value="8" id="answer392699878" style="float: left" /><label
+                for="answer392699878"
+                style="float: left; width: 150px"
+                >bald/nuanced answer</label
+            >
+            <div style="clear: both; height: 2px">
                 <br />
-                <div style="margin-top: 10px">
                     <input type="submit" value=" Vote " formtarget="_blank" class="vote-buttons" />
                     &nbsp;
                     <input type="submit" name="view" value=" View " formtarget="_blank" class="vote-buttons" />
-                </div>
             </div>
         </form>
 
