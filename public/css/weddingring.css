@@ -4,8 +4,8 @@
 }
 
 #weddingring {
-    color: rgb(173, 96, 100);
-    background-image: linear-gradient(to bottom, #fff9f9, #f7dae1);
+    color: rgb(94, 135, 56);
+    background-image: linear-gradient(to bottom, #d4ead1, #b2ddac);
     background-size: cover;
     height: fit-content;
     width: 300px;
@@ -22,7 +22,7 @@
 #weddingring h2 {
     font-size: 1.2rem;
     text-align: center;
-    color: rgb(173, 96, 100);
+    color: rgb(94, 135, 56);
     margin: 0;
     margin-bottom: 4px;
     background-color: transparent;
