@@ -13,9 +13,11 @@
     padding: 10px; /* creates some space between the links and text inside the widget */
     border-radius: 15px;
     font-size: 15px;
+    box-sizing: content-box;
 }
 #weddingring p {
     padding: 0 !important;
+    margin: 0 !important;
 }
 #weddingring h2 {
     font-size: 1.2rem;
