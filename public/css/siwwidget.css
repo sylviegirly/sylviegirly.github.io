@@ -62,6 +62,7 @@
     width: auto;
     color: inherit;
     font-weight: bold;
+    text-transform: none;
 }
 
 #siwebring #webringdesc {
