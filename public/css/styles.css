@@ -1741,6 +1741,11 @@ footer a:hover {
     text-decoration: none;
 }
 
+/* YT Button Fix */
+lite-youtube:hover > .lty-playbtn {
+    background-color: transparent !important;
+}
+
 /* Marquee Replacement */
 
 .marquee-wrapper {
