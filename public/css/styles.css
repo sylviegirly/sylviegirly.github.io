@@ -91,6 +91,12 @@
     src: url(../fonts/IntelOneMono-Regular.ttf);
 }
 
+@font-face {
+    font-family: "MS Gothic";
+    font-display: swap;
+    src: url(../fonts/MS-Gothic.ttf);
+}
+
 /* -------------------------------------------------------- */
 /* BASICS */
 /* -------------------------------------------------------- */
