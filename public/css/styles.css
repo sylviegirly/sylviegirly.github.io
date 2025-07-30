@@ -1057,7 +1057,7 @@ article .scrollable p:first-child {
     border-radius: var(--border-radius);
     padding: 7px;
     margin-top: 10px;
-    height: 115px;
+    height: 125px;
     width: 100%;
     overflow: hidden;
     display: flex;
