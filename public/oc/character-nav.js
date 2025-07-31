@@ -107,6 +107,7 @@ const content = `
                         <li id="item-4-5-2">
                             <a id="link-4-5-2" href="../shrines/zhongvie.html">Zhongvie (🌿🔶)</a>
                         </li>
+                        <li id="item-4-5-3"><a id="link-4-5-3" href="/shrines/ukitake.html">Jushiro Ukitake</a></li>
                     </ul>
                 </li>
             </ul>

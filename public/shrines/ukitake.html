@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Site Title -->
+        <title>ukitake shrine</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- FavIcon Gif -->
+        <link rel="icon" type="image/png" href="../img/misc/geo.png" />
+
+        <!-- Site Description -->
+        <meta content="A personal shrine dedicated to Jushiro Ukitake from Bleach." name="description" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" href="../css/lightbox.css" />
+        <link rel="stylesheet" href="../css/normalize.css" />
+        <script src="../js/lightbox-plus-jquery.js"></script>
+
+        <!-- CSS RAW: -->
+        <style>
+            /* COLORS, IMAGES, AND FONTS */
+            :root {
+                /* FONTS */
+                --bodyfont: Tahoma, Arial, sans-serif;
+                --headerfont: "dosis", "Century Gothic", Futura, sans-serif;
+
+                /* COLORS */
+                --background-color: #fdf6e3; /*Background color*/
+                --background: var(
+                    --background-color
+                ); /*You can add an image here using the usual CSS shorthand: url(PATH TO IMAGE)*/
+                --color: #002b36; /*Text color*/
+
+                /* Header background image, using the usual CSS shorthand. Experiment with placements! */
+                --headerbackground: #657b83 url(../img/ukitake/jushiroHeader.png) no-repeat center;
+
+                /* Navigation buttons */
+                --nav: #0e9aaa; /*Background color*/
+                --navcolor: #f8f8f2; /*Text color*/
+                --navhover: #0cc4ad; /*Hover background*/
+                --navhovercolor: #f8f8f2; /*Text color on hover*/
+
+                /* Body links */
+                --link: #690036;
+                --linkhover: #0eaaa5;
+
+                /* Accent colors */
+                --accent: #117c74;
+                --borders: #586e75;
+            }
+
+            @media screen and (prefers-color-scheme: dark) {
+                :root {
+                    --background-color: #002b36;
+                    --background: var(--background-color);
+                    --color: #95b1bb;
+
+                    --nav: #d33682;
+                    --navcolor: #002b36;
+                    --navhover: #ee4898;
+                    --navhovercolor: #282a36;
+
+                    --link: #88cf76;
+                    --linkhover: #d33682;
+
+                    --accent: #43b8c3;
+                    --borders: #657b83;
+                }
+            }
+            @font-face {
+                font-family: "dosis";
+                src: url(../fonts/Dosis-VariableFont_wght.ttf);
+            }
+            @font-face {
+                font-family: "freepixel";
+                src: url(../fonts/FreePixel.ttf);
+            }
+            @font-face {
+                font-family: "atkinson";
+                src: url(../fonts/AtkinsonHyperlegible-Regular.ttf);
+            }
+            @font-face {
+                font-family: "open dyslexic";
+                src: url(../fonts/OpenDyslexic-Regular.otf);
+            }
+            @font-face {
+                font-family: "intel one";
+                src: url(../fonts/IntelOneMono-Regular.ttf);
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                transition:
+                    color 0.4s ease,
+                    background 0.4s ease,
+                    box-shadow 0.4s ease,
+                    opacity 0.4s ease;
+            }
+
+            html {
+                position: relative;
+                min-height: 100%;
+                font-size: 1rem;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                font-smoothing: antialiased;
+                font-weight: 400;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            body {
+                background: var(--background);
+                color: var(--color);
+                font:
+                    1.05rem var(--bodyfont),
+                    Tahoma,
+                    Arial,
+                    sans-serif;
+                line-height: 1.5;
+                letter-spacing: 0.2px;
+            }
+
+            header {
+                background: var(--headerbackground);
+                background-size: cover;
+                background-position: top;
+                height: 300px;
+            }
+
+            #container {
+                max-width: 900px;
+                width: calc(100% - 40px);
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #sidebar {
+                padding: 15px;
+                margin-top: 10px;
+                flex: 1 1 calc(20% - 30px);
+                flex-wrap: wrap;
+            }
+
+            #font-select {
+                max-width: 135px;
+                text-align: center;
+            }
+
+            #font-select select {
+                max-width: 100%;
+            }
+
+            .menu {
+                position: sticky;
+                top: 10px;
+            }
+
+            .menu li {
+                list-style: none;
+                display: block;
+                font: 1.4rem var(--headerfont);
+            }
+
+            .menu a {
+                display: block;
+                text-decoration: none;
+                padding: 10px;
+                background: var(--nav);
+                color: var(--navcolor);
+                margin-bottom: 5px;
+                border-radius: 5px;
+            }
+
+            .menu a:hover {
+                background: var(--navhover);
+                color: var(--navhovercolor);
+            }
+
+            main {
+                padding: 15px;
+                flex: 1 1 calc(80% - 30px);
+            }
+
+            main p,
+            footer p {
+                margin: 0.5em 0 0.5em 0;
+            }
+
+            main a,
+            footer a {
+                color: var(--link);
+            }
+
+            main a:hover,
+            footer a:hover {
+                color: var(--linkhover);
+            }
+
+            main b,
+            main bold,
+            main strong,
+            main i,
+            main italics,
+            main em {
+                color: var(--accent);
+            }
+
+            main li {
+                margin-left: 30px;
+            }
+
+            main h1 {
+                font: 2em var(--headerfont);
+                font-weight: bold;
+                border-bottom: 3px dotted var(--borders);
+                margin-bottom: 5px;
+            }
+
+            main h1::first-letter {
+                font-size: 1.1em;
+                color: var(--accent);
+            }
+
+            main h2 {
+                font: 1.8em var(--headerfont);
+                margin-bottom: 5px;
+                margin-top: 10px;
+            }
+
+            main h3 {
+                font: 1.5em var(--headerfont);
+                margin-bottom: 5px;
+                margin-top: 10px;
+            }
+
+            main hr {
+                border: none;
+                border-top: 2px dotted var(--borders);
+                margin: 10px 0;
+            }
+
+            main summary {
+                cursor: pointer;
+                margin: 5px 0px 5px 0px;
+            }
+
+            main details {
+                padding: 10px;
+                background: rgb(0, 0, 0, 0.06);
+                margin: 5px 0 5px 0;
+                border-radius: 5px;
+            }
+
+            main input,
+            textarea,
+            select,
+            button {
+                background: var(--background-color);
+                color: var(--color);
+                font: 1rem var(--bodyfont);
+                border: 1px solid var(--borders);
+                padding: 8px;
+                margin: 2px;
+            }
+
+            footer {
+                text-align: center;
+                font-size: 0.9em;
+                flex: 1 1 calc(100% - 20px);
+                padding: 10px;
+                border-top: 2px dotted var(--borders);
+            }
+
+            .visually-hidden {
+                position: absolute;
+                clip: rect(0 0 0 0);
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+                filter: none;
+                -webkit-filter: grayscale(50%);
+                -moz-filter: grayscale(50%);
+                -ms-filter: grayscale(50%);
+                -o-filter: grayscale(50%);
+            }
+
+            .ukicollection {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            #skip a {
+                position: absolute;
+                display: inline-block;
+                left: 0px;
+                top: -1000px;
+                overflow: hidden;
+                transition: top 0.5s ease;
+                background: var(--background);
+                color: var(--link);
+                z-index: 1000;
+                padding: 5px;
+            }
+
+            #skip a:focus {
+                top: 0;
+                transition: top 0.5s ease;
+            }
+
+            @media screen and (max-width: 799px) {
+                header {
+                    height: 200px;
+                }
+
+                #container {
+                    display: block;
+                }
+
+                #sidebar {
+                    text-align: center;
+                    margin: 0;
+                    padding: 10px;
+                }
+
+                .menu {
+                    position: relative;
+                }
+
+                .menu li,
+                .menu a {
+                    display: inline-block;
+                    padding: 10px 15px;
+                    margin: 0;
+                }
+
+                #font-select {
+                    width: 100%;
+                    display: flex;
+                    margin-left: auto;
+                    margin-right: auto;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+
+                #font-select label {
+                    padding-right: 10px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Don't remove!-->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+
+        <!-- Put your site title here - it won't be visible, but screen readers can read it -->
+        <header><div class="visually-hidden">Website title</div></header>
+        <div id="container">
+            <div id="sidebar">
+                <nav id="main-menu" class="menu">
+                    <ul>
+                        <!-- Put links here. You can put as many as you want but they might not look good at high volumes-->
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="https://bleach.fandom.com/wiki/J%C5%ABshir%C5%8D_Ukitake">Wiki</a></li>
+                    </ul>
+                    <div id="font-select">
+                        <label for="fontFamily">Font:</label><br />
+                        <select name="fontFamily" id="fontFamily">
+                            <option value="freepixel">Free Pixel</option>
+                            <option value="atkinson">Atkinson Hyperlegible</option>
+                            <option value="intel one">Intel One Mono</option>
+                            <option value="open dyslexic">Open Dyslexic</option>
+                            <option value="Tahoma">Tahoma</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Arial">Arial</option>
+                        </select>
+                        <script>
+                            var bodyElem = document.querySelector("body");
+                            var fontForm = document.getElementById("fontFamily");
+
+                            if (!localStorage.getItem("fontFamily")) {
+                                console.log("trying to populate fonts");
+                                populateStorage();
+                            } else {
+                                console.log("trying to set existing styles");
+                                setStyles();
+                            }
+
+                            function populateStorage() {
+                                localStorage.setItem("fontFamily", document.getElementById("fontFamily").value);
+                                setStyles();
+                            }
+
+                            function setStyles() {
+                                var currentFont = localStorage.getItem("fontFamily");
+                                console.log("help, what the fuck is the current font: " + currentFont);
+                                document.getElementById("fontFamily").value = currentFont;
+
+                                bodyElem.style.fontFamily = currentFont;
+                            }
+
+                            fontForm.onchange = populateStorage;
+                        </script>
+                    </div>
+                </nav>
+            </div>
+            <main id="content">
+                <!-- Content goes here -->
+                <h1>Jūshirō Ukitake</h1>
+                <p>
+                    A shrine dedicated to Jushiro Ukitake from the show <i>Bleach</i>; I grew up on Bleach and honestly
+                    it was my introduction to both self-shipping and OC/Canon ... but it was not with Ukitake, it was
+                    actually with
+                    <a href="https://bleach.fandom.com/wiki/T%C5%8Dshir%C5%8D_Hitsugaya">Toshiro Hitsugaya</a> that I
+                    was head over heels when I was a kid, and who I made an <a href="../oc/resu.html">OC</a> to ship
+                    with.
+                </p>
+
+                <p>
+                    Obviously as time passed, I grew up and didn't find much appeal in him anymore, instead finding
+                    myself oftened up more and more towards Ukitake instead, especially as I was actively following the
+                    manga release.
+                </p>
+                <p>
+                    Count me still kinda pissed off with how his character was handled for reasons below that are
+                    spoilers.
+                </p>
+                <details>
+                    <summary>Spoilers below</summary>
+                    <p>
+                        Ukitake's death to me felt so ... <i>hollow</i>, pun not intended. But to have him basically
+                        carrying a part of the Soul King all along who gave him a second lease on life, to accept his
+                        duty as taking on the role of a new Soul King ... only to have Yhwach suck out Mimihagi to leave
+                        him to die?
+                    </p>
+                    <p>
+                        Nothing ... nothing else? Just an arc released years later as a manga that showed he basically
+                        was sent to hell? Like the fact <i>he</i> was used to show that Captains never properly return
+                        to the cycle of souls felt almost like a spit.
+                    </p>
+                    <p>
+                        Anyway I'm still mad he never had a Bankai reveal. I don't know if the anime changes anything
+                        regarding his death but most likely it hasn't.
+                    </p>
+                </details>
+                <p>
+                    I never ended up falling into the OC/Canon hole for him because my OTP is him with
+                    <a href="https://bleach.fandom.com/wiki/Shunsui_Ky%C5%8Draku">Shunsui Kyoraku</a>, but I'm also very
+                    weak for academy friends who deeply understand each other better than anything else.
+                </p>
+                <p>
+                    It's hard to put into exact words why I'm so stupidly head over heels over this man even years
+                    later, but gentle personality and treated like shit by the source material would be the easiest way
+                    to put it. I have a couple fanfic recs as well that expand a lot on his character or offer
+                    alternatives of how he could've survived:
+                </p>
+                <ul>
+                    <li><a href="https://archiveofourown.org/series/1747750">Vestige</a></li>
+                    <li><a href="https://archiveofourown.org/works/298857/chapters/478445">Twin Souls</a></li>
+                    <li><a href="https://archiveofourown.org/works/4549188">To Take a Stand</a></li>
+                    <li><a href="https://archiveofourown.org/series/1201744">In All, But Blood</a></li>
+                </ul>
+                <h2>Bleach Brave Souls Collection</h2>
+                <p>
+                    Here are all the Ukitake alts I have so far in the game Bleach Brave Souls (which I've been playing
+                    on and off since it's release in 2016 world-wide, though I lost my original account).
+                </p>
+                <hr />
+                <h3>5/6-Stars</h3>
+                <div class="ukicollection">
+                    <img
+                        src="../img/ukitake/6s-Jushiro-The-Past-Resurrection-Power.webp"
+                        class="disabled"
+                        alt="The Past Version" />
+                    <img
+                        src="../img/ukitake/6s-Jushiro-Resurrection-Speed.webp"
+                        class="disabled"
+                        alt="Speed Attribute" />
+                    <img src="../img/ukitake/6s-Jushiro-Resurrection-Mind.webp" class="disabled" alt="Mind Attribute" />
+                    <img src="../img/ukitake/6s-Jushiro-Brave-Power.webp" class="disabled" alt="Brave Version" />
+                    <img
+                        src="../img/ukitake/6s-Jushiro-SAFWY-Untold-Stories-Speed.webp"
+                        alt="SAFWY - Untold Stories Version" />
+                    <img
+                        src="../img/ukitake/6s-Jushiro-The-Lost-Agent-Resurrection-Mind.webp"
+                        alt="The Lost Agent Version" />
+                    <img src="../img/ukitake/6s-Jushiro-TYBW-2025-Power.webp" alt="Thousand-Year Blood War 2025" />
+                    <img src="../img/ukitake/6s-Jushiro-Kido-Tournament-Technique.webp" alt="Kido Tournament Version" />
+                    <img src="../img/ukitake/6s-Jushiro-Tag-Team-Resurrection-Heart.webp" alt="Tag Team Version" />
+                    <img
+                        src="../img/ukitake/6s-Jushiro-Christmas-Resurrection-Mind.webp"
+                        alt="Christmas Version"
+                        class="disabled" />
+                    <img src="../img/ukitake/6s-Jushiro-2023-Swimsuit-Technique.webp" alt="Swimsuit Version" />
+                    <img
+                        src="../img/ukitake/6s-Jushiro-Japanese-Parasol-Resurrection-Heart.webp"
+                        alt="Japanese Parasol Version" />
+                </div>
+                <hr />
+                <h3>4-Stars</h3>
+                <div class="ukicollection">
+                    <img src="../img/ukitake/4s-Jushiro-The-Past-Arc-Mind.webp" alt="Mind Past Jushiro" />
+                    <img
+                        src="../img/ukitake/4s-Jushiro-The-Past-Arc-Power.webp"
+                        alt="Power Past Jushiro"
+                        class="disabled" />
+                    <img
+                        src="../img/ukitake/4s-Jushiro-The-Past-Arc-Technique.webp"
+                        alt="Power Past Jushiro"
+                        class="disabled" />
+                    <img src="../img/ukitake/4s-Jushiro-The-Past-Arc-Speed.webp" alt="Speed Past Jushiro" />
+                    <img src="../img/ukitake/4s-Jushiro-Speed.webp" alt="Speed Jushiro" class="disabled" />
+                    <img src="../img/ukitake/4s-Jushiro-Power.webp" alt="Power Jushiro" class="disabled" />
+                    <img src="../img/ukitake/4s-Jushiro-Technique.webp" alt="Technique Jushiro" class="disabled" />
+                    <img src="../img/ukitake/4s-Jushiro-Mind.webp" alt="Mind Jushiro" />
+                    <img src="../img/ukitake/4s-Jushiro-Heart.webp" alt="Heart Jushiro" />
+                </div>
+                <hr />
+                <h3>3-Stars</h3>
+                <div class="ukicollection">
+                    <img src="../img/ukitake/3s-Jushiro-Mind.webp" alt="Mind Jushiro" class="disabled" />
+                    <img src="../img/ukitake/3s-Jushiro-Technique.webp" alt="Technique Jushiro" />
+                </div>
+            </main>
+            <footer>
+                <!-- Footer -->
+                <p>All art sourced from Bleach Brave Souls. Template by <a href="">Kalechips</a></p>
+
+                <nav>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </nav>
+            </footer>
+        </div>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+    </body>
+</html>
