@@ -191,6 +191,34 @@
                 color: rgba(from var(--secondary-accent) r g b / 50%);
             }
 
+            table.unstyledTable {
+                text-align: center;
+                width: 100%;
+                color: black;
+                font-family: "atkinson";
+            }
+            table.unstyledTable td,
+            table.unstyledTable th {
+            }
+            table.unstyledTable thead {
+                background: var(--article);
+            }
+            table.unstyledTable thead th {
+                font-weight: normal;
+            }
+            table.unstyledTable thead th:first-child {
+                border-left: none;
+            }
+
+            table.unstyledTable td {
+                width: 25%;
+                padding: 5px;
+            }
+
+            table.unstyledTable tfoot {
+                font-weight: bold;
+            }
+
             @media screen and (max-width: 800px) {
                 .media-container {
                     flex-direction: column;
@@ -229,8 +257,7 @@
                     <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Media Log</h1>
                     <p>
                         A little place to coalesce all of my tracking items from different sites, though it'll probably
-                        be primarily <mark>games</mark>. I'll mostly only add new things when I genuinely begin
-                        consuming them!! Or err ... preferably finish them fully. <b><u>SPOILERS MAY BE PRESENT</u></b
+                        be primarily games. <b><u>SPOILERS MAY BE PRESENT</u></b
                         >, I will try to keep it vague but sometimes I <u>will</u> mention more concrete things.
                     </p>
                     <p>
@@ -243,6 +270,15 @@
                         the Dragon Age series) or if I feel the need to talk about different parts of it. Inspired from
                         <a href="https://willdotjpg.gay/templates/media/media">will.jpg's media template</a> and using
                         the stars from there.
+                    </p>
+                    <p>
+                        Star rating system inspired off
+                        <a href="https://yogomagpie.neocities.org/garden/books">YogoMagpie's</a> rating system which was
+                        inspired from
+                        <a
+                            href="https://www.tumblr.com/aromanticduck/782551947956928512/i-came-up-with-this-three-way-table-to-help-me"
+                            >aromanticduck</a
+                        >. I also won't be specifying if it's spicy or bland.
                     </p>
                     <hr />
                     <div class="nav-container">
@@ -312,6 +348,56 @@
                             Excellent
                         </div>
                     </div>
+                    <hr />
+                    <table class="unstyledTable">
+                        <tbody>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td style="background-color: lightgrey">Nothing really wrong with it</td>
+                                <td style="background-color: lightgrey">A few things wrong with it</td>
+                                <td style="background-color: lightgrey">So many things wrong with it</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #dea5ef">Lots of awesome things</td>
+                                <td style="background-color: lightblue">5 stars</td>
+                                <td style="background-color: lightgreen">4 stars (spicy)</td>
+                                <td style="background-color: #f4e175">3 stars (spicy)</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #dea5ef">A few awesome things</td>
+                                <td style="background-color: lightgreen">4 stars (bland)</td>
+                                <td style="background-color: #f4e175">3 stars (mild)</td>
+                                <td style="background-color: #f2bf60">2 stars (spicy)</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #dea5ef">Nothing really awesome</td>
+                                <td style="background-color: #f4e175">3 stars (bland)</td>
+                                <td style="background-color: #f2bf60">2 stars (bland)</td>
+                                <td style="background-color: #ff6d6d">1 star</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <details>
+                        <summary>Understanding the rating system</summary>
+                        <p>
+                            The idea is that you rate the thing on how much stuff you loved and how much stuff you
+                            hated, and those things weight against each other. There's only one way to get 5 stars or 1
+                            star, so those should end up as the rarest ratings, wtih 3 stars being the most common.
+                        </p>
+                        <p>
+                            'Spicy' means that the thing inspires emotion, whether positive or negative, while 'bland'
+                            means it doesn't affect you much either way.
+                        </p>
+                        <p>
+                            An example of a 3-star (spicy) - for me personally - would be the Twilight series, because
+                            there's plenty of garbage in there but also some things that are like crack to me. I can't
+                            think of an example of a 3 star (bland) because by nature they don't stick in the mind.
+                        </p>
+                        <p>(This also assumes giving 0 stars isn't allowed. That'd throw it out of whack...)</p>
+                        <p>
+                            <i>— <a href="">aromanticduck</a></i>
+                        </p>
+                    </details>
                 </article>
 
                 <!-- GAMES -->
@@ -631,11 +717,11 @@
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy" /><img
-                                        src="img/misc/star_gif.png"
+                                        src="img/misc/star_empty.png"
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy" />
-                                    Excellent
+                                    Good
                                 </p>
                                 <blockquote>It is anime dark souls for a reason</blockquote>
                             </div>
@@ -676,7 +762,7 @@
                                 <p><b>Developer(s):</b> toby fox</p>
                                 <p><b>Genre:</b> Adventure, RPG</p>
                                 <p><b>Year:</b> 2025</p>
-                                <p><b>Status:</b> <span aria-hidden="true">🟢</span> Playing</p>
+                                <p><b>Status:</b> <span aria-hidden="true">✅</span> Completed</p>
                                 <p>
                                     <b>Rating:</b>
                                     <img src="img/misc/star_gif.png" alt="" aria-hidden="true" loading="lazy" /><img
@@ -706,8 +792,9 @@
                             <details>
                                 <summary>Expanded Thoughts / Review</summary>
                                 <p>
-                                    Since I'm still going through the story right now, I don't have any concrete
-                                    thoughts but like ... it's Deltarune. Obviously it'll be good.
+                                    10/10 fucks as a game. Knight fight sucks ass tho, how the hell did Toby manage to
+                                    make a fight more annoying than Sans. Anyway, I can't wait for the next chapter
+                                    releases I am trembling.
                                 </p>
                             </details>
                         </div>

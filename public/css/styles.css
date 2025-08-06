@@ -173,7 +173,7 @@ article {
 /* GRID LAYOUT */
 /* -------------------------------------------------------- */
 
-        .container-grid {
+.container-grid {
     margin-left: 50px;
     display: grid;
     grid-gap: var(--grid-gap);
@@ -352,7 +352,7 @@ summary {
     font-size: 1em;
     color: var(--secondary-accent);
     text-decoration: underline;
-    text-decoration-style: double;
+    text-decoration-style: dotted;
     padding: 5px;
     margin-bottom: 5px;
 }
@@ -411,7 +411,7 @@ footer a {
 /* Focus Styling */
 
 a:focus {
-    outline: 3px dashed var(--link-hover);
+    outline: 3px solid var(--link-hover);
     border-radius: var(--border-radius);
 }
 
