@@ -124,18 +124,35 @@
 
             .media-image {
                 width: 200px;
-                height: 300px;
+                flex-grow: 1;
                 flex: 1 0;
             }
 
             .media-image img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                width: 200px;
+                height: 283px;
+                object-fit: fit;
                 border-radius: var(--border-radius);
                 border: 4px solid var(--primary-accent);
                 text-align: center;
                 padding: 5px;
+            }
+
+            .media-image .padding {
+                display: block;
+                height: calc(100% - 288px);
+                width: 100%;
+                border: 1px solid var(--primary-accent);
+                border-radius: var(--border-radius);
+                opacity: 0.8;
+                background-size: 10px 10px;
+                background-image: repeating-linear-gradient(
+                    45deg,
+                    var(--primary-accent) 0,
+                    var(--primary-accent) 1px,
+                    transparent 0,
+                    transparent 50%
+                );
             }
 
             .media-info {
@@ -233,6 +250,10 @@
                     height: 100%;
                     align-self: center;
                     margin-bottom: -20px;
+                }
+
+                .media-image .padding {
+                    display: none;
                 }
             }
         </style>
@@ -344,7 +365,7 @@
                             <button class="tablinks" onclick="openMediaTab(event, 'Manga')">Manga</button>
                         </div>
                         <!-- WATCHING STATUS -->
-                        <div class="status" style="padding-left: 1px">
+                        <div class="status" style="padding-left: 2px">
                             <b>Status</b>
                             <p>
                                 <span aria-hidden="true">🟢</span> Started / Playing<br />
@@ -363,12 +384,14 @@
                         <!-- INFO BAR -->
                         <div class="media-container no-top-border">
                             <div class="media-image">
-                                <img src="img/media/aceattorney.jpg" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="img/media/aceattorney.png" alt="" aria-hidden="true" loading="lazy" />
+                                <div class="padding"></div>
                             </div>
                             <div class="media-info">
                                 <h2>Ace Attorney</h2>
                                 <p><b>Developer(s):</b> Capcom, Nintendo</p>
                                 <p><b>Genre:</b> Adventure, Puzzle, Visual Novel</p>
+                                <p><b>Platform(s):</b> Nintendo DS, Nintendo 3DS</p>
                                 <p><b>Year:</b> 2006</p>
                                 <p><b>Status:</b> <span aria-hidden="true">✅</span> Completed</p>
                                 <p>
@@ -445,12 +468,14 @@
                         <!-- INFO BAR -->
                         <div class="media-container">
                             <div class="media-image">
-                                <img src="img/media/aoe.jpg" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="img/media/aoe.png" alt="" aria-hidden="true" loading="lazy" />
+                                <div class="padding"></div>
                             </div>
                             <div class="media-info">
                                 <h2>Age of Mythology</h2>
                                 <p><b>Developer(s):</b> Ensemble Studios, Microsoft Game Studios</p>
                                 <p><b>Genre:</b> Real Time Strategy</p>
+                                <p><b>Platform(s):</b> PC</p>
                                 <p><b>Year:</b> 2002</p>
                                 <p><b>Status:</b> <span aria-hidden="true">✅</span> Completed (multiple times)</p>
                                 <p>
@@ -504,12 +529,14 @@
                         <!-- INFO BAR -->
                         <div class="media-container">
                             <div class="media-image">
-                                <img src="img/media/bg3.jpg" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="img/media/bg3.png" alt="" aria-hidden="true" loading="lazy" />
+                                <div class="padding"></div>
                             </div>
                             <div class="media-info">
                                 <h2>Baldur's Gate 3</h2>
                                 <p><b>Developer(s):</b> Larian Studio</p>
                                 <p><b>Genre:</b> RPG, Strategy</p>
+                                <p><b>Platform(s):</b> PC</p>
                                 <p><b>Year:</b> 2023</p>
                                 <p><b>Status:</b> <span aria-hidden="true">✅</span> Completed (multiple times)</p>
                                 <p>
@@ -568,12 +595,14 @@
                         <!-- INFO BAR -->
                         <div class="media-container">
                             <div class="media-image">
-                                <img src="img/media/bleach3rd.jpg" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="img/media/bleach3rd.png" alt="" aria-hidden="true" loading="lazy" />
+                                <div class="padding"></div>
                             </div>
                             <div class="media-info">
                                 <h2>Bleach: The 3rd Phantom</h2>
                                 <p><b>Developer(s):</b> Sega Corporation</p>
                                 <p><b>Genre:</b> RPG, Strategy</p>
+                                <p><b>Platform(s):</b> Nintendo DS</p>
                                 <p><b>Year:</b> 2008</p>
                                 <p><b>Status:</b> <span aria-hidden="true">🟢</span> Replaying</p>
                                 <p>
@@ -594,7 +623,7 @@
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy" />
-                                    4-stars (I really like it though)
+                                    4-stars
                                 </p>
                                 <blockquote>
                                     Fire Emblem gameplay meets Bleach ... and honestly it kinda fucks
@@ -651,7 +680,8 @@
                         <!-- INFO BAR -->
                         <div class="media-container">
                             <div class="media-image">
-                                <img src="img/media/code_vein.jpg" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="img/media/code_vein.png" alt="" aria-hidden="true" loading="lazy" />
+                                <div class="padding"></div>
                             </div>
                             <div class="media-info">
                                 <h2>Code Vein</h2>
@@ -2765,7 +2795,8 @@
                         <!-- INFO BAR -->
                         <div class="media-container">
                             <div class="media-image">
-                                <img src="img/media/apothecary_diaries.jpg" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="img/media/apothecary_diaries.png" alt="" aria-hidden="true" loading="lazy" />
+                                <div class="padding"></div>
                             </div>
                             <div class="media-info">
                                 <h2>The Apothecary Diaries</h2>
@@ -2824,7 +2855,8 @@
                         <!-- INFO BAR -->
                         <div class="media-container no-top-border">
                             <div class="media-image">
-                                <img src="img/media/bleach.jpg" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="img/media/bleach.png" alt="" aria-hidden="true" loading="lazy" />
+                                <div class="padding"></div>
                             </div>
                             <div class="media-info">
                                 <h2>Bleach</h2>
