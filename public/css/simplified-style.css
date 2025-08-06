@@ -353,6 +353,18 @@ main {
 .pos a img {
     max-width: 100%;
 }
+/*make sure videos stay in the post */
+.post .video-element {
+    display: flex;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 5px;
+}
+
+.video-element video {
+    width: 100%;
+    height: auto; /* spec says no percent allowed here */
+}
 /*add some space from the post header if you have an image first*/
 .post div + img,
 .post div + a img {
