@@ -211,11 +211,12 @@
             table.unstyledTable {
                 text-align: center;
                 width: 100%;
-                color: black;
+                color: var(--text-colour);
                 font-family: "atkinson";
             }
             table.unstyledTable td,
             table.unstyledTable th {
+                background-blend-mode: lighten;
             }
             table.unstyledTable thead {
                 background: var(--article);
@@ -234,6 +235,65 @@
 
             table.unstyledTable tfoot {
                 font-weight: bold;
+            }
+
+            table .grey {
+                background-color: rgba(211, 211, 211, 0.75);
+            }
+
+            table .purple {
+                background-color: rgba(222, 165, 239, 0.75);
+            }
+
+            table .blue {
+                background-color: rgba(173, 216, 230, 0.75);
+            }
+
+            table .green {
+                background-color: lightgreen;
+            }
+
+            table .yellow {
+                background-color: #f4e175;
+            }
+
+            table .orange {
+                background-color: #f2bf60;
+            }
+
+            table .red {
+                background-color: #ff6d6d;
+            }
+
+            /* Dark Mode for table */
+            @media (prefers-color-scheme: dark) {
+                table .grey {
+                    background-color: rgba(89, 89, 89, 0.75);
+                }
+
+                table .purple {
+                    background-color: rgba(115, 88, 123, 0.75);
+                }
+
+                table .blue {
+                    background-color: rgba(103, 155, 170, 0.75);
+                }
+
+                table .green {
+                    background-color: rgba(93, 174, 93, 0.75);
+                }
+
+                table .yellow {
+                    background-color: rgba(239, 194, 89, 0.75);
+                }
+
+                table .orange {
+                    background-color: rgba(231, 161, 27, 0.75);
+                }
+
+                table .red {
+                    background-color: rgba(231, 49, 49, 0.75);
+                }
             }
 
             @media screen and (max-width: 800px) {
@@ -303,27 +363,27 @@
                         <tbody>
                             <tr>
                                 <td>&nbsp;</td>
-                                <td style="background-color: lightgrey">Nothing really wrong with it</td>
-                                <td style="background-color: lightgrey">A few things wrong with it</td>
-                                <td style="background-color: lightgrey">So many things wrong with it</td>
+                                <td class="grey">Nothing really wrong with it</td>
+                                <td class="grey">A few things wrong with it</td>
+                                <td class="grey">So many things wrong with it</td>
                             </tr>
                             <tr>
-                                <td style="background-color: #dea5ef">Lots of awesome things</td>
-                                <td style="background-color: lightblue">5 stars</td>
-                                <td style="background-color: lightgreen">4 stars (spicy)</td>
-                                <td style="background-color: #f4e175">3 stars (spicy)</td>
+                                <td class="purple">Lots of awesome things</td>
+                                <td class="blue">5 stars</td>
+                                <td class="green">4 stars (spicy)</td>
+                                <td class="yellow">3 stars (spicy)</td>
                             </tr>
                             <tr>
-                                <td style="background-color: #dea5ef">A few awesome things</td>
-                                <td style="background-color: lightgreen">4 stars (bland)</td>
-                                <td style="background-color: #f4e175">3 stars (mild)</td>
-                                <td style="background-color: #f2bf60">2 stars (spicy)</td>
+                                <td class="purple">A few awesome things</td>
+                                <td class="green">4 stars (bland)</td>
+                                <td class="yellow">3 stars (mild)</td>
+                                <td class="orange">2 stars (spicy)</td>
                             </tr>
                             <tr>
-                                <td style="background-color: #dea5ef">Nothing really awesome</td>
-                                <td style="background-color: #f4e175">3 stars (bland)</td>
-                                <td style="background-color: #f2bf60">2 stars (bland)</td>
-                                <td style="background-color: #ff6d6d">1 star</td>
+                                <td class="purple">Nothing really awesome</td>
+                                <td class="yellow">3 stars (bland)</td>
+                                <td class="orange">2 stars (bland)</td>
+                                <td class="red">1 star</td>
                             </tr>
                         </tbody>
                     </table>
