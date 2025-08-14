@@ -620,9 +620,14 @@ footer {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
     max-width: 100%;
     margin: 0 auto;
+}
+
+.flex-container img {
+    height: 100%;
+    object-fit: cover;
 }
 
 .two-col {
