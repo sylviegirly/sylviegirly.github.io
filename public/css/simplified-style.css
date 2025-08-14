@@ -616,6 +616,27 @@ footer {
     transition: top 0.5s ease;
 }
 
+/* Column Sizing */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.two-col {
+    flex: 1 1 calc(50% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.three-col {
+    flex: 1 1 calc(33.333% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
 @media only screen and (max-width: 800px) {
     .mobile-only {
         display: block;
