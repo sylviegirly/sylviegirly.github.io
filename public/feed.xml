@@ -9,7 +9,18 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-07-31T12:14:21-04:00</updated>
+    <updated>2025-08-14T17:42:25-04:00</updated>
+
+    <entry>
+        <title>New Blog Entry: Bentos!</title>
+        <link href="https://zhongvie.neocities.org/blog" />
+        <updated>2025-08-14T17:42:25-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1755207745</id>
+        <content type="html">
+            &#x3C;p&#x3E;New blog entry documenting the bentos I&#x27;ve made for myself during my semester!
+            They&#x27;re all under a &#x27;read more&#x27; on the blog&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New Shrine: Jushiro Ukitake</title>
