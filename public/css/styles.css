@@ -370,7 +370,7 @@ details {
     display: flex;
     gap: 10px;
     align-items: center;
-    justify-content: baseline;
+    justify-content: center;
 }
 
 .column {
@@ -641,7 +641,7 @@ aside a:hover {
 /* -------------------------------------------------------- */
 
 header {
-    max-width: 100hv;
+    max-width: 100%;
     align-content: center;
 }
 
@@ -1782,7 +1782,8 @@ lite-youtube:hover > .lty-playbtn {
 /* Image Decorative (for body mostly) */
 
 .image-deco {
-    display: inline-flexbox;
+    display: flexbox;
+    text-align: center;
     width: auto;
     height: auto;
     max-width: 100%;
