@@ -1,9 +1,4 @@
 const sentence = [
-        "just wanna find the softest grass i can find and lay down in it and look at the sky for a very very very long time<br/><i>— <a href='https://www.tumblr.com/art-notart-blog/145110445718' style='font-size: 0.8em'>art-notart-blog</a></i>",
-        "it’s just me and the 5 people on here who know my oc by name against the world<br/><i>— <a href='https://everchased.tumblr.com/post/773625369494536192' style='font-size: 0.8em'>everchased</a></i>",
-        "huge cheeseburger and $5000 dollars could fix me<br/><i>— <a href='https://sylviegirly.tumblr.com/post/779849877674917888' style='font-size: 0.8em'>superbellsubways</a></i>",
-        "having long distance friends is so fucked. do you wanna come over to my house and play (it will cost us 1 william dollars)<br/><i>— <a href='https://molabuddy.tumblr.com/post/775189590322593792' style='font-size: 0.8em'>molabuddy</a></i>",
-        "gooodbyee 200 dollars helloo piece of pleastic<br/><i>— <a href='https://www.tumblr.com/emetiq/754135509162409984' style='font-size: 0.8em' target='_blank'>emetiq</a></i>",
         "why cant my support system be my beautiful stable mind and problem solving skills and nothing else<br/><i>— <a href='https://www.tumblr.com/3000s/715936227540582400' style='font-size: 0.8em'>3000s</a></i>",
         "think about your blorbos ON THE CLOCK<br/><i>— <a href='https://www.tumblr.com/blorbobrain/775964211427803136' style='font-size: 0.8em'>blorbobrain</a></i>",
         "ah yes. the classic 'I can't sleep because it will be tomorrow in an instant and tomorrow requires things of me and I Simply Do Not Vibe With That'. so I'll go through said tomorrow on 2 hours of sleep. very smart and once again no lessons will be learned<br/><i>— <a href='https://anguishmacgyver.tumblr.com/post/683189434946060289' style='font-size: 0.8em'>anguishmacgyver</a></i>",
@@ -76,8 +71,53 @@ const sentence = [
         "everything was better in the early 2000s esp. my extreme ignorance of the world and roller coaster tycoon 2<br/><i>— <a href='https://sylviegirly.tumblr.com/post/780472611839885312' style='font-size: 0.8em'>nosdrinker</a></i>"
 ];
 
-// this chooses a random number from all available text indices
-var randomQuote = sentence[Math.floor(Math.random() * sentence.length)];
-console.log(randomQuote);
-// append to the div
-document.getElementById("quote-spit").innerHTML = randomQuote;
+const quotes = [
+        {
+                quote: "gooodbyee 200 dollars helloo piece of pleastic",
+                author: "emetiq",
+                url: "https://www.tumblr.com/emetiq/754135509162409984"
+        },
+        {
+                quote: "just wanna find the softest grass i can find and lay down in it and look at the sky for a very very very long time",
+                author: "art-notart-blog",
+                url: "https://www.tumblr.com/art-notart-blog/145110445718"
+        },
+        {
+                quote: "it’s just me and the 5 people on here who know my oc by name against the world",
+                author: "everchased",
+                url: "https://everchased.tumblr.com/post/773625369494536192"
+        },
+        {
+                quote: "having long distance friends is so fucked. do you wanna come over to my house and play (it will cost us 1 william dollars)",
+                author: "molabuddy",
+                url: "https://molabuddy.tumblr.com/post/775189590322593792"
+        },
+        {
+                quote: "huge cheeseburger and $5000 dollars could fix me",
+                author: "superbellsubways",
+                url: "https://sylviegirly.tumblr.com/post/779849877674917888"
+        }
+];
+
+// alternative
+var randomIndex = Math.floor(Math.random() * quotes.length);
+const finalQuote =
+        quotes[randomIndex].quote +
+        "<br/><i>— <a href='" +
+        quotes[randomIndex].url +
+        "' style='font-size: 0.8em'>" +
+        quotes[randomIndex].author +
+        "</a></i>";
+document.getElementById("quote-spit").innerHTML = finalQuote;
+
+function generateQuote() {
+        var randomIndex = Math.floor(Math.random() * quotes.length);
+        const finalQuote =
+                quotes[randomIndex].quote +
+                "<br/><i>— <a href='" +
+                quotes[randomIndex].url +
+                "' style='font-size: 0.8em'>" +
+                quotes[randomIndex].author +
+                "</a></i>";
+        document.getElementById("quote-spit").innerHTML = finalQuote;
+}

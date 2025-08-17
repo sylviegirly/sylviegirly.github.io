@@ -154,6 +154,36 @@
                 max-width: 150px;
             }
 
+            .long-quote {
+                background-color: var(--primary-accent);
+                color: var(--font-on-accent);
+                text-align: center;
+            }
+
+            .long-quote:before {
+                position: absolute;
+                left: 1px;
+                top: -30px;
+                font-family: Arial;
+                float: left;
+
+                content: "\201C";
+                font-size: 117px;
+                color: var(--secondary-accent);
+
+                opacity: 0.7;
+            }
+
+            .long-quote .subtitle {
+                font-style: italic;
+                font-size: 0.8rem;
+                opacity: 0.8;
+            }
+
+            .long-quote .subtitle a {
+                color: var(--font-on-accent);
+            }
+
             @media screen and (min-width: 800px) {
                 .dual-column {
                     flex-direction: row;
@@ -579,6 +609,14 @@
                         <img src="../img/oc/sylvie/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
                         <img src="../img/oc/sylvie/stamp_8.png" aria-hidden="true" alt="" loading="lazy" />
                     </div>
+                </section>
+
+                <!-- QUOTE HOLDER ------------------------------------->
+                <section class="full long-quote">
+                    <div id="quote-spit"></div>
+                    <a onclick="generateQuote()" style="float: right; margin-top: -26px" data-tippy-content="New Quote"
+                        >🌿</a
+                    >
                 </section>
 
                 <!-- PERSONALITY SLIDERS ------------------------------>
@@ -2616,5 +2654,8 @@
 
         <!-- Accordion Dropdown -->
         <script src="../js/accordion.js"></script>
+
+        <!-- Random Quote -->
+        <script src="sylvie-quote.js"></script>
     </body>
 </html>
