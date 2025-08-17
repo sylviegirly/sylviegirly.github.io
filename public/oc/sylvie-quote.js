@@ -94,14 +94,17 @@ const finalQuote =
 document.getElementById("quote-spit").innerHTML = finalQuote;
 
 function generateQuote() {
-    var randomIndex = Math.floor(Math.random() * quotes.length);
-    const finalQuote =
-        "<p>" +
-        quotes[randomIndex].quote +
-        "<br/><span class='subtitle'>~ <a href='" +
-        quotes[randomIndex].url +
-        "'>" +
-        quotes[randomIndex].author +
-        "</a></span></p>";
-    document.getElementById("quote-spit").innerHTML = finalQuote;
+    var lastValue = document.getElementById("quote-spit").innerHTML;
+    do {
+        var randomIndex = Math.floor(Math.random() * quotes.length);
+        const finalQuote =
+            "<p>" +
+            quotes[randomIndex].quote +
+            "<br/><span class='subtitle'>~ <a href='" +
+            quotes[randomIndex].url +
+            "'>" +
+            quotes[randomIndex].author +
+            "</a></span></p>";
+        document.getElementById("quote-spit").innerHTML = finalQuote;
+    } while (lastValue == document.getElementById("quote-spit").innerHTML);
 }

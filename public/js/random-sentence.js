@@ -1,14 +1,4 @@
 const sentence = [
-        "she will NOT be hearing from me tonight #avoidant<br/><i>— <a href='https://human-pet-they.tumblr.com/post/784093603292217345' style='font-size: 0.8em'>human-pet-they</a></i>",
-        "The little-known 10th circle of hell, known as 'Favorite character is extremely popular but you are also extremely particular and everyone is wrong'.<br/><i>— <a href='https://x23innocencelost.tumblr.com/post/783922971720941569' style='font-size: 0.8em'>x23innocencelost</a></i>",
-        "my vocabulary is rapidly dwindling. 'yay' is one of my default responses now<br/><i>— <a href='https://www.tumblr.com/angelpuppyfromheaven/782182678151708672' style='font-size: 0.8em'>angelpuppyfromheaven</a></i>",
-        "sorry for being so obsessed with that little man who lives in my head. as if i have any choice<br/><i>— <a href='https://retquits.tumblr.com/post/777396671347867648' style='font-size: 0.8em'>retquits</a></i>",
-        "there’s nothing wrong with me plus i don’t have any wants or needs plus i don’t feel or think at all<br/><i>— <a href='https://leofwines.tumblr.com/post/784404840121090048' style='font-size: 0.8em'>leofwines</a></i>",
-        "it's always a damn picture of a deer on here<br/><i>— <a href='https://papayajuan2019.tumblr.com/post/780035574488842240' style='font-size: 0.8em'>papayajuan2019</a></i>",
-        "you have to be around asexual perverts it’s good for your health<br/><i>— <a href='https://www.tumblr.com/secretyurigarden/783736757858484224' style='font-size: 0.8em'>secretyurigarden</a></i>",
-        "born to draw ocs 2 trillion times. forced to not have energy to do so<br/><i>— <a href='https://npdkondraki.tumblr.com/post/783469090263154688' style='font-size: 0.8em'>npdkondraki</a></i>",
-        "me writing posts about media no one cares about: and another thing,<br/><i>— <a href='https://butchniqabi.tumblr.com/post/780409205943336960' style='font-size: 0.8em'>butchniqabi</a></i>",
-        "me [coming to terms with a truth about myself]:<br/>hm..................................................... unfortunate<br/><i>— <a href='https://100493503004422.tumblr.com/post/650469399177969664/' style='font-size: 0.8em'>100493503004422</a></i>",
         "getting big 45 minute vibes from this 15 minute recipe<br/><i>— <a href='https://rapidhighway.tumblr.com/post/782784810713219072' style='font-size: 0.8em'>rapidhighway</a></i>",
         "unfortunately I am a yapper and I am an oversharer i am just not a nonchalant mysterious person<br/><i>— <a href='https://bakwaaas.tumblr.com/post/784653778859245568' style='font-size: 0.8em'>bakwaaas</a></i>",
         "They should invent a not being exhausted<br/><i>— <a href='https://sylviegirly.tumblr.com/post/791229543111409664' style='font-size: 0.8em'>gaaaaaay</a></i>",
@@ -70,6 +60,56 @@ const sentence = [
 
 const quotes = [
         {
+                quote: "me [coming to terms with a truth about myself]:<br/>hm..................................................... unfortunate",
+                author: "100493503004422",
+                url: "https://100493503004422.tumblr.com/post/650469399177969664/"
+        },
+        {
+                quote: "me writing posts about media no one cares about: and another thing,",
+                author: "butchniqabi",
+                url: "https://butchniqabi.tumblr.com/post/780409205943336960"
+        },
+        {
+                quote: "born to draw ocs 2 trillion times. forced to not have energy to do so",
+                author: "npdkondraki",
+                url: "https://npdkondraki.tumblr.com/post/783469090263154688"
+        },
+        {
+                quote: "you have to be around asexual perverts it’s good for your health",
+                author: "secretyurigarden",
+                url: "https://www.tumblr.com/secretyurigarden/783736757858484224"
+        },
+        {
+                quote: "it's always a damn picture of a deer on here",
+                author: "papayajuan2019",
+                url: "https://papayajuan2019.tumblr.com/post/780035574488842240"
+        },
+        {
+                quote: "there’s nothing wrong with me plus i don’t have any wants or needs plus i don’t feel or think at all",
+                author: "leofwines",
+                url: "https://leofwines.tumblr.com/post/784404840121090048"
+        },
+        {
+                quote: "sorry for being so obsessed with that little man who lives in my head. as if i have any choice",
+                author: "retquits",
+                url: "https://retquits.tumblr.com/post/777396671347867648"
+        },
+        {
+                quote: "my vocabulary is rapidly dwindling. 'yay' is one of my default responses now",
+                author: "angelpuppyfromheaven",
+                url: "https://www.tumblr.com/angelpuppyfromheaven/782182678151708672"
+        },
+        {
+                quote: "The little-known 10th circle of hell, known as 'Favorite character is extremely popular but you are also extremely particular and everyone is wrong'.",
+                author: "x23innocencelost",
+                url: "https://x23innocencelost.tumblr.com/post/783922971720941569"
+        },
+        {
+                quote: "she will NOT be hearing from me tonight #avoidant",
+                author: "human-pet-they",
+                url: "https://human-pet-they.tumblr.com/post/784093603292217345"
+        },
+        {
                 quote: "ah yes. the classic 'I can't sleep because it will be tomorrow in an instant and tomorrow requires things of me and I Simply Do Not Vibe With That'. so I'll go through said tomorrow on 2 hours of sleep. very smart and once again no lessons will be learned",
                 author: "anguishmacgyver",
                 url: "https://anguishmacgyver.tumblr.com/post/683189434946060289"
@@ -123,13 +163,16 @@ const finalQuote =
 document.getElementById("quote-spit").innerHTML = finalQuote;
 
 function generateQuote() {
-        var randomIndex = Math.floor(Math.random() * quotes.length);
-        const finalQuote =
-                quotes[randomIndex].quote +
-                "<br/><i>— <a href='" +
-                quotes[randomIndex].url +
-                "' style='font-size: 0.8em'>" +
-                quotes[randomIndex].author +
-                "</a></i>";
-        document.getElementById("quote-spit").innerHTML = finalQuote;
+        var lastValue = document.getElementById("quote-spit").innerHTML;
+        do {
+                var randomIndex = Math.floor(Math.random() * quotes.length);
+                const finalQuote =
+                        quotes[randomIndex].quote +
+                        "<br/><i>— <a href='" +
+                        quotes[randomIndex].url +
+                        "' style='font-size: 0.8em'>" +
+                        quotes[randomIndex].author +
+                        "</a></i>";
+                document.getElementById("quote-spit").innerHTML = finalQuote;
+        } while (lastValue == document.getElementById("quote-spit").innerHTML);
 }
