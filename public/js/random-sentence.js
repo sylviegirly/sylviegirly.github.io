@@ -1,7 +1,4 @@
 const sentence = [
-        "why cant my support system be my beautiful stable mind and problem solving skills and nothing else<br/><i>— <a href='https://www.tumblr.com/3000s/715936227540582400' style='font-size: 0.8em'>3000s</a></i>",
-        "think about your blorbos ON THE CLOCK<br/><i>— <a href='https://www.tumblr.com/blorbobrain/775964211427803136' style='font-size: 0.8em'>blorbobrain</a></i>",
-        "ah yes. the classic 'I can't sleep because it will be tomorrow in an instant and tomorrow requires things of me and I Simply Do Not Vibe With That'. so I'll go through said tomorrow on 2 hours of sleep. very smart and once again no lessons will be learned<br/><i>— <a href='https://anguishmacgyver.tumblr.com/post/683189434946060289' style='font-size: 0.8em'>anguishmacgyver</a></i>",
         "she will NOT be hearing from me tonight #avoidant<br/><i>— <a href='https://human-pet-they.tumblr.com/post/784093603292217345' style='font-size: 0.8em'>human-pet-they</a></i>",
         "The little-known 10th circle of hell, known as 'Favorite character is extremely popular but you are also extremely particular and everyone is wrong'.<br/><i>— <a href='https://x23innocencelost.tumblr.com/post/783922971720941569' style='font-size: 0.8em'>x23innocencelost</a></i>",
         "my vocabulary is rapidly dwindling. 'yay' is one of my default responses now<br/><i>— <a href='https://www.tumblr.com/angelpuppyfromheaven/782182678151708672' style='font-size: 0.8em'>angelpuppyfromheaven</a></i>",
@@ -72,6 +69,21 @@ const sentence = [
 ];
 
 const quotes = [
+        {
+                quote: "ah yes. the classic 'I can't sleep because it will be tomorrow in an instant and tomorrow requires things of me and I Simply Do Not Vibe With That'. so I'll go through said tomorrow on 2 hours of sleep. very smart and once again no lessons will be learned",
+                author: "anguishmacgyver",
+                url: "https://anguishmacgyver.tumblr.com/post/683189434946060289"
+        },
+        {
+                quote: "think about your blorbos ON THE CLOCK",
+                author: "blorbobrain",
+                url: "https://www.tumblr.com/blorbobrain/775964211427803136"
+        },
+        {
+                quote: "why cant my support system be my beautiful stable mind and problem solving skills and nothing else",
+                author: "3000s",
+                url: "https://www.tumblr.com/3000s/715936227540582400"
+        },
         {
                 quote: "gooodbyee 200 dollars helloo piece of pleastic",
                 author: "emetiq",
