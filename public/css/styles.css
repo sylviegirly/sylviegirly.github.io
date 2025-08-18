@@ -1959,3 +1959,23 @@ lite-youtube:hover > .lty-playbtn {
 .HBRarrow {
     max-width: 20px;
 }
+
+/* OC Webring */
+#oc-webring-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    gap: 1em;
+    border: 4px solid var(--primary-accent);
+    padding: 1em;
+    border-radius: 12px;
+}
+#oc-webring-title {
+    font-weight: bold;
+}
+#oc-webring-controls {
+    display: flex;
+    gap: 1em;
+}
