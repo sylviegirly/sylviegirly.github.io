@@ -878,7 +878,6 @@ section {
 
 /* Scrollable section for updates */
 section .scrollable {
-    font-size: 0.75rem;
     height: 100px;
     background-color: var(--body-deco);
     border-radius: var(--border-radius);
