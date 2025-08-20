@@ -841,10 +841,6 @@ nav li.dropdown ul li.dropdown ul a {
     align-items: center;
 }
 
-.site-button a {
-    text-decoration: none;
-}
-
 .site-button textarea {
     font-family: monospace;
     font-size: 0.75em;

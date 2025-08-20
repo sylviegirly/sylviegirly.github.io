@@ -105,7 +105,7 @@ const sidebar = `
 &lt;a href="https://zhongvie.neocities.org/"&gt;&lt;img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/sylvieButton.gif" alt="zhongvie button" loading="lazy"&gt;&lt;/a&gt;</textarea
             >
             <label for="site-button" class="subtle" style="text-align: center; margin-top: 3px;"
-                >Site button; hotlinking is fine; image is on filegarden.</label
+                >Site button; hotlinking is fine; image is on filegarden. Alt buttons can be found <a href="./links.html">here</a></label
             >
         </div>
     </section>
