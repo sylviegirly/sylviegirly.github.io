@@ -1,9 +1,4 @@
 const sentence = [
-        "getting big 45 minute vibes from this 15 minute recipe<br/><i>— <a href='https://rapidhighway.tumblr.com/post/782784810713219072' style='font-size: 0.8em'>rapidhighway</a></i>",
-        "unfortunately I am a yapper and I am an oversharer i am just not a nonchalant mysterious person<br/><i>— <a href='https://bakwaaas.tumblr.com/post/784653778859245568' style='font-size: 0.8em'>bakwaaas</a></i>",
-        "They should invent a not being exhausted<br/><i>— <a href='https://sylviegirly.tumblr.com/post/791229543111409664' style='font-size: 0.8em'>gaaaaaay</a></i>",
-        "forever grateful i was simply too lazy to let the make up industrial complex get its hooks in me. I was just like im not doing all of that. im doing none of that in fact <br/><i>— <a href='https://wulfhalls.tumblr.com/post/783092871415857152' style='font-size: 0.8em'>wulfhalls</a></i>",
-        "how the fuck am i supposed to act like a normal functional human being when The Character exists<br/><i>— <a href='https://yardsards.tumblr.com/post/727929306703134720' style='font-size: 0.8em'>yardsards</a></i>",
         "'kill them with kindness' WRONG. GET RECLAIMED BY THE EARTH <span style='aria-hidden='true''>🌱🌺🌷🌹🌲☘️🍃🌼🌳🌱🍀🌿🌷🌹🌳🌲🌿🍀🌿🌲🌿☘️🌱🌸🌼🌲☘️🌻🍄🌿🌳🍀🍀🌱🌺🌷🌹🍄🌲☘️🍃🌼🌳🌱🍀🌿🌷🌹🌳🌲🌿🍀🌿🪻🌲🌿☘️🌱🌸🌼🌲☘️🌻</span><br/><i>— <a href='https://sister-lucifer.tumblr.com/post/737189175582965761' style='font-size: 0.8em'>sister-lucifer</a></i>",
         "'Not everything is about your blorbos' to you maybe. To me every other song and probably that car commercial is about them <br/><i>— <a href='https://kanerallels.tumblr.com/post/701758111930810369' style='font-size: 0.8em'>kanerallels</a></i>",
         "ah yes. the classic 'I can't sleep because it will be tomorrow in an instant and tomorrow requires things of me and I Simply Do Not Vibe With That'. so I'll go through said tomorrow on 2 hours of sleep. very smart and once again no lessons will be learned <br/><i>— <a href='https://anguishmacgyver.tumblr.com/post/683189434946060289' style='font-size: 0.8em'>anguishmacgyver</a></i>",
@@ -59,6 +54,31 @@ const sentence = [
 ];
 
 const quotes = [
+        {
+                quote: "how the fuck am i supposed to act like a normal functional human being when The Character exists",
+                author: "yardsards",
+                url: "https://yardsards.tumblr.com/post/727929306703134720"
+        },
+        {
+                quote: "forever grateful i was simply too lazy to let the make up industrial complex get its hooks in me. I was just like im not doing all of that. im doing none of that in fact",
+                author: "wulfhalls",
+                url: "https://wulfhalls.tumblr.com/post/783092871415857152"
+        },
+        {
+                quote: "They should invent a not being exhausted",
+                author: "gaaaaaay",
+                url: "https://sylviegirly.tumblr.com/post/791229543111409664"
+        },
+        {
+                quote: "unfortunately I am a yapper and I am an oversharer i am just not a nonchalant mysterious person",
+                author: "bakwaaas",
+                url: "https://bakwaaas.tumblr.com/post/784653778859245568"
+        },
+        {
+                quote: "getting big 45 minute vibes from this 15 minute recipe",
+                author: "rapidhighway",
+                url: "https://rapidhighway.tumblr.com/post/782784810713219072"
+        },
         {
                 quote: "me [coming to terms with a truth about myself]:<br/>hm..................................................... unfortunate",
                 author: "100493503004422",
