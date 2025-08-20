@@ -1,4 +1,4 @@
-const dragon = ["5P8Tc", "DnF0C", "QnAf9", "YlqVm"];
+const dragon = ["5P8Tc", "DnF0C", "QnAf9", "YlqVm", "CZIYJ", "NCNmy", "apDJc", "iI4dE", "J7xUb"];
 
 // this chooses a random number from all available text indices
 var randomDragon = dragon[Math.floor(Math.random() * dragon.length)];
