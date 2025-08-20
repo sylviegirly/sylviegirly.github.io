@@ -97,25 +97,14 @@ const sidebar = `
         </h4>
         <div class="site-button">
             <div class="images-row">
-                <a href="https://pixel-world.tumblr.com/post/46858429546/roses" target="_blank">
-                    <img
-                        alt="yellow pixel rose"
-                        src="img/decos/pixel_rose.gif" />
-                </a>
                 <a href="https://zhongvie.neocities.org/" target="_blank"
                     ><img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/sylvieButton.gif" alt="zhongvie button"
                 /></a>
-                <a href="https://pixel-world.tumblr.com/post/46858429546/roses" target="_blank">
-                    <img
-                        alt="yellow pixel rose"
-                        src="img/decos/pixel_rose.gif" />
-                </a>
             </div>
-            <hr style="width: 100%" />
             <textarea id="site-button" name="site-button">
 &lt;a href="https://zhongvie.neocities.org/"&gt;&lt;img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/sylvieButton.gif" alt="zhongvie button" loading="lazy"&gt;&lt;/a&gt;</textarea
             >
-            <label for="site-button" class="subtle" style="text-align: center;"
+            <label for="site-button" class="subtle" style="text-align: center; margin-top: 3px;"
                 >Site button; hotlinking is fine; image is on filegarden.</label
             >
         </div>
