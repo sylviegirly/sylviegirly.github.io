@@ -1,10 +1,4 @@
 const sentence = [
-        "'kill them with kindness' WRONG. GET RECLAIMED BY THE EARTH <span style='aria-hidden='true''>🌱🌺🌷🌹🌲☘️🍃🌼🌳🌱🍀🌿🌷🌹🌳🌲🌿🍀🌿🌲🌿☘️🌱🌸🌼🌲☘️🌻🍄🌿🌳🍀🍀🌱🌺🌷🌹🍄🌲☘️🍃🌼🌳🌱🍀🌿🌷🌹🌳🌲🌿🍀🌿🪻🌲🌿☘️🌱🌸🌼🌲☘️🌻</span><br/><i>— <a href='https://sister-lucifer.tumblr.com/post/737189175582965761' style='font-size: 0.8em'>sister-lucifer</a></i>",
-        "'Not everything is about your blorbos' to you maybe. To me every other song and probably that car commercial is about them <br/><i>— <a href='https://kanerallels.tumblr.com/post/701758111930810369' style='font-size: 0.8em'>kanerallels</a></i>",
-        "ah yes. the classic 'I can't sleep because it will be tomorrow in an instant and tomorrow requires things of me and I Simply Do Not Vibe With That'. so I'll go through said tomorrow on 2 hours of sleep. very smart and once again no lessons will be learned <br/><i>— <a href='https://anguishmacgyver.tumblr.com/post/683189434946060289' style='font-size: 0.8em'>anguishmacgyver</a></i>",
-        "The little-known 10th circle of hell, known as 'Favorite character is extremely popular but you are also extremely particular and everyone is wrong'.<br/><i>— <a href='https://x23innocencelost.tumblr.com/post/783922971720941569' style='font-size: 0.8em'>x23innocencelost</a></i>",
-        "it's so wild to me that you absolutely cannot force a hyperfixation to happen. like you'll watch the most perfectly tailor-made-for-you content that everyone says you'll love and feel absolutely nothing, and then the thing you watch on a whim to fill time will reach through the screen and put its damn fingers in your brain and start rearranging the neurons right in front of you and every single time you're like THIS??? THIS??????? and this happens like every 6-12 months forever<br/><i>— <a href='https://www.tumblr.com/skulandcrossbones/774278189517357056' style='font-size: 0.8em'>skulandcrossbones</a></i>",
-        "(crawls on all fours with blood drenched on me) I have to do arts and crafts<br/><i>— <a href='https://horrificgoth.tumblr.com/post/779211164269920256' style='font-size: 0.8em'>horrificgoth</a></i>",
         "I am a grown ass adult and I still get nausea when I feel like I'm in trouble. They're gonna send me to the principals office and take away my toys for a week. Can you just fucking kill me instead of making me stew in my fucking anxiety<br/><i>— <a href='https://www.tumblr.com/pokeballvictim/781557497418956800' style='font-size: 0.8em'>pokeballvictim</a></i>",
         "Having one-sided beef with one specific character is so funny. Like I can see a million characters who do terrible things and be like “whatever.” But then there’s one specific motherfucker who pissed me off so bad that I’d run them over at a red light if given the chance. <br/><i>— <a href='https://phantomrose96.tumblr.com/post/785706745505906688' style='font-size: 0.8em'>phantomrose96</a></i>",
         "'being obsessed with your ocs is so embarrassing' no it isn't. we're returning to our noble roots of playing dolls. stop self depricating and tell me about your guy.<br/><i>— <a href='https://www.tumblr.com/reliquarian/768853194256351232' style='font-size: 0.8em'>reliquarian</a></i>",
@@ -54,6 +48,26 @@ const sentence = [
 ];
 
 const quotes = [
+        {
+                quote: "it's so wild to me that you absolutely cannot force a hyperfixation to happen. like you'll watch the most perfectly tailor-made-for-you content that everyone says you'll love and feel absolutely nothing, and then the thing you watch on a whim to fill time will reach through the screen and put its damn fingers in your brain and start rearranging the neurons right in front of you and every single time you're like THIS??? THIS??????? and this happens like every 6-12 months forever",
+                author: "skulandcrossbones",
+                url: "https://www.tumblr.com/skulandcrossbones/774278189517357056"
+        },
+        {
+                quote: "(crawls on all fours with blood drenched on me) I have to do arts and crafts",
+                author: "horrificgoth",
+                url: "https://horrificgoth.tumblr.com/post/779211164269920256"
+        },
+        {
+                quote: "'Not everything is about your blorbos' to you maybe. To me every other song and probably that car commercial is about them",
+                author: "kanerallels",
+                url: "https://kanerallels.tumblr.com/post/701758111930810369"
+        },
+        {
+                quote: "'kill them with kindness' WRONG. GET RECLAIMED BY THE EARTH <span style='aria-hidden='true''>🌱🌺🌷🌹🌲☘️🍃🌼🌳🌱🍀🌿🌷🌹🌳🌲🌿🍀🌿🌲🌿☘️🌱🌸🌼🌲☘️🌻🍄🌿🌳🍀🍀🌱🌺🌷🌹🍄🌲☘️🍃🌼🌳🌱🍀🌿🌷🌹🌳🌲🌿🍀🌿🪻🌲🌿☘️🌱🌸🌼🌲☘️🌻",
+                author: "sister-lucifer",
+                url: "https://sister-lucifer.tumblr.com/post/737189175582965761"
+        },
         {
                 quote: "how the fuck am i supposed to act like a normal functional human being when The Character exists",
                 author: "yardsards",
