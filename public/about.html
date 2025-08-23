@@ -48,6 +48,98 @@
         <!-- Disclosure Menu -->
         <script src="js/accessibility/disclosure-menu.iife.js"></script>
         <script src="js/accessibility/accessible-menu.js" type="module"></script>
+
+        <!-- Page Only Styling -->
+        <style>
+            /* Style the tab */
+            .tab {
+                overflow: hidden;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            /* Style the buttons that are used to open the tab content */
+            .tab button {
+                color: var(--font-on-accent);
+                background-color: var(--primary-accent);
+                font-family: inherit;
+                font-size: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 10px 16px;
+                border-radius: var(--border-radius);
+                transition: 0.3s;
+            }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                background-color: var(--secondary-accent);
+            }
+
+            .tab button:focus {
+                box-shadow: inset 0 0 0 5px var(--link-colour);
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+                background-color: var(--secondary-accent);
+            }
+
+            /* Style the tab content */
+            .tabcontentinside {
+                height: fit-content;
+                background-color: var(--body-deco);
+                border-radius: var(--border-radius);
+                margin-top: 10px;
+                padding: 12px;
+                border-top: none;
+                animation: fadeEffect 1s; /* Fading effect takes 1 second */
+            }
+
+            .tabcontentinside .flexbox {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 13px;
+                width: 100%;
+            }
+
+            .flexbox div {
+                width: calc(20% - 13px);
+                text-align: center;
+            }
+
+            .flexbox div img {
+                outline: 2px solid var(--primary-accent);
+                border-radius: var(--border-radius);
+                max-width: 100%;
+                height: 180px;
+                object-fit: cover;
+            }
+
+            .flexbox div p {
+                margin-top: 0;
+            }
+
+            .flexbox div class .tabcontent .interest-content ul {
+                margin: 0;
+            }
+
+            .tabcontent h1 {
+                animation: fadeEffect 1s; /* Fading effect takes 1 second */
+            }
+
+            @media screen and (max-width: 800px) {
+                .flexbox div {
+                    width: calc(33% - 10px);
+                    text-align: center;
+                }
+            }
+        </style>
     </head>
     <body id="body">
         <!-- =============================================== -->
@@ -136,212 +228,62 @@
                         </div>
                     </div>
                     <hr />
-                    <p>
-                        As the info on the front says, hi! Name's <b>Aid</b>, mostly based off <i>Asuraid</i> which is
-                        my usual online handle in
-                        <span
-                            class="tippy"
-                            data-tippy-content="Asuraid is mostly used for my art accounts or general accounts, so sometimes with personal accounts i use different names ... like this site!"
-                            >most places</span
-                        >. Just a gal floating by in life and wishing for her own place one day.
-                    </p>
-                    <p>
-                        I'm on the cusp between a millennial and Gen Z (though honestly I'd rather just call myself a
-                        <u>millennial</u>, I <b>do not</b> relate to zoomers). I grew up with Club Penguin,
-                        DragonAdopters, Webkinz, the OG Xbox, Tamagothchis, SSX3, Jet Set Radio Future, Jazz Jackrabbit
-                        2, Sims 1 and 2 (and the fuckass weird PS2 version), and
-                        <a href="https://backloggd.com/u/Asuraid/list/nostalgia--games-i-grew-up-on/"
-                            >many other things</a
-                        >.
-                    </p>
-                    <p>
-                        I
-                        <span
-                            class="tippy"
-                            data-tippy-content="I have no way to get diagnosed right now/not in a comfortable place to do it, but considering I've been looking into it for well over half a year, to a year now, I'm like 99% sure of it ... and been clocked by uh ... multiple people thinking I have traits of it ..."
-                            >think</span
-                        >
-                        I have inattentive ADHD and I'm a chronic 'jumps between fixations like a mad person' sufferer,
-                        which also means I like trying out new things a lot and fixating on them for a set time before
-                        something else hits me like a truck (which also means chronic collection of projects I never
-                        finish fully). Forever stuck with the 'hyperfixation for two weeks' bug even with games
-                        sometimes. But hey, it means I know a lot of random stuff I've tried out and piles of resources
-                        for said things.
-                    </p>
-                    <p>
-                        I've also been an artist since I was a wee bab and a digital artist for most of my lifetime; I
-                        enjoy learning new things and finding ways to put my blorbo into them (like ... making them into
-                        a 3D model using VRoid). I used to be a big
-                        <a href="https://web.archive.org/web/20120120140004/http://cockatiellover.deviantart.com/"
-                            >deviantART kid</a
-                        >
-                        before it went into the shitter. I've also been a chronic tumblr user since 2012 and I still
-                        have my original blog, plus I've roleplayed there a large portion of my lifetime. 🫡
-                    </p>
-                    <p>
-                        Otherwise I actually have a
-                        <span class="tippy" data-tippy-content="Bachelor's degree">BA</span> in Game Design!! As of
-                        writing this, it's kinda been hell getting a job though with this shit market (just as the
-                        internet has been shittified, so has AAA gaming). I don't have many <i>(completed)</i> solo
-                        projects since it's hard for me to do them on my own without a team, but I love consuming games
-                        and analyzing them.
-                    </p>
-                    <p>
-                        I'm not very good at talking about myself, but I do like finding shared interests with others.
-                    </p>
-                    <details>
-                        <summary>Questionnaire!</summary>
-                        <p>From <a href="https://mouseling.net">Mousecky's questionnaire</a>!</p>
-                        <div class="columns" style="align-items: flex-start">
-                            <div class="column">
-                                <ul>
-                                    <li><b>Name</b>: Aid</li>
-                                    <li><b>Origin of name</b>: Asuraid but shorter and the nickname I got</li>
-                                    <li><b>Sex</b>: F</li>
-                                    <li><b>Birthdate</b>: November 16th</li>
-                                    <li><b>Constellation</b>: Scorpio</li>
-                                    <li><b>Blood type</b>: No idea</li>
-                                    <li><b>In a past life I was</b>: Probably a cook</li>
-                                    <li><b>Lives in</b>: Canada</li>
-                                    <li><b>Born in</b>: Romania</li>
-                                    <li><b>Piercings</b>: One earring in each ear</li>
-                                    <li>
-                                        <b>Occupation</b>: Unemployed rn, in the Game Design field or freelance artist
-                                    </li>
-                                    <li><b>Year level</b>: Graduated</li>
-                                    <li><b>Similar to</b>: Ororon (Genshin Impact)</li>
-                                    <li><b>Height</b>: 165 cm / 5'4"</li>
-                                    <li><b>Weight</b>: naw</li>
-                                    <li><b>Foot size</b>: 7 / 23.5 cm</li>
-                                    <li><b>Hand size</b>: Dunno?</li>
-                                    <li><b>Hobby</b>: Drawing, video games, reading, trying out new hobbies</li>
-                                    <li>
-                                        <b>Special skill</b>: Resource hunting, picking up new random projects (and not
-                                        finishing it)
-                                    </li>
-                                    <li><b>Grip strength</b>: Weak LOL</li>
-                                    <li>
-                                        <b>Hairstyle</b>: Natural, I just have lightly curled ends and leave it to sit
-                                        naturally
-                                    </li>
-                                    <li><b>Catchphrase</b>: NAURRRRR</li>
-                                    <li>
-                                        <b>Luxury items</b>: Physical clay figurine of my OC and a physical plush, Liyue
-                                        music box from Genshin
-                                    </li>
-                                    <li>
-                                        <b>Proud of</b>: All the new things I've learned over time, my ability to adapt
-                                        to things
-                                    </li>
-                                    <li>
-                                        <b>Qualifications</b>: Bachelor's in Game Design + 2 years of working as such,
-                                        8+ years of freelance commissions
-                                    </li>
-                                    <li><b>Phone</b>: iPhone 12 Pro Max</li>
-                                    <li>
-                                        <b>Type in men</b>: Prefer a guy who actually has nerdy hobbies and isn't some
-                                        cishet masculine focused guy
-                                    </li>
-                                    <li><b>Type in women</b>: Not into girls 😔</li>
-                                    <li><b>Fav. word</b>: bruh, fuck</li>
-                                    <li><b>Fav. celebrity</b>: I don't care for them like that</li>
-                                    <li><b>Fav. food</b>: Spaghetti, sushi, chicken soup</li>
-                                </ul>
-                            </div>
-                            <div class="column">
-                                <ul>
-                                    <li>
-                                        <b>Disliked food</b>: More not a fan of cartiledge/fats on meat due to texture
-                                    </li>
-                                    <li><b>Fav. drink</b>: Tea and Coffee</li>
-                                    <li><b>Disliked drink</b>: None</li>
-                                    <li><b>Fav. subject</b>: Art</li>
-                                    <li><b>Disliked subject</b>: Math</li>
-                                    <li><b>Fav. show</b>: Too many</li>
-                                    <li><b>Fav. movie</b>: Too many</li>
-                                    <li><b>Fav. book</b>: Too many</li>
-                                    <li>
-                                        <b>Fav. sport</b>:
-                                        <span
-                                            class="tippy"
-                                            data-tippy-content="I don't mean American football I mean soccer. Sorry I think it's stupid that football is used for that and not Soccer"
-                                            >Football</span
-                                        >
-                                    </li>
-                                    <li><b>Fav. music</b>: EDM, rock</li>
-                                    <li><b>Fav. brand</b>: None in particular</li>
-                                    <li><b>Fav. flower</b>: Honeysuckles and Lily of the Valley</li>
-                                    <li><b>Fav. game</b>: Too many</li>
-                                    <li><b>My car</b>: None</li>
-                                    <li><b>Future dream</b>: A stable job and more money to commission art</li>
-                                    <li><b>Fav. animal</b>: Dragons</li>
-                                    <li><b>I spend my holidays</b>: With family</li>
-                                    <li>
-                                        <b>I respect</b>: People who struggle with life and their own physical and
-                                        mental health
-                                    </li>
-                                    <li><b>Most wanted</b>: More commissions of my OC blorbos</li>
-                                    <li><b>Want to go to</b>: Visit friends in America</li>
-                                    <li><b>Want to do</b>: Finish more personal projects</li>
-                                    <li><b>Hangs out at</b>: Home mostly</li>
-                                    <li><b>At karaoke I sing</b>: I don't</li>
-                                    <li><b>First CD bought</b>: Probably an old PC, Xbox, or PS2 game</li>
-                                    <li><b>Lately really into</b>: Minecraft challenge videos</li>
-                                    <li><b>Secretly into</b>: Nothing I'm not vocal about</li>
-                                    <li><b>If I was reborn</b>: I'd hope not</li>
-                                    <li><b>Needed for world peace</b>: Open mind and empathy</li>
-                                    <li>
-                                        <b>I want to stress</b>: Be gentle to yourself, even one thing done (even if
-                                        partially) is still something done
-                                    </li>
-                                    <li><b>Doubts about</b>: The state of the game industry right now</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </details>
-                </article>
-                <!-- =============================================== -->
-                <!-- KINS (in a fun way). -->
-                <!-- =============================================== -->
-                <article>
-                    <h1 aria-hidden="true">
-                        <img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" loading="lazy" />
-                        They're Me FR
-                    </h1>
-
-                    <div class="image-gallery">
-                        <!-- IMAGE -->
-                        <div data-tippy-content="Ororon - Genshin Impact">
-                            <img
-                                src="https://assetsio.gnwcdn.com/Genshin-Impact-Ororon-materials%2C-kit%2C-and-Constellations-cover.jpg?width=690&quality=70&format=jpg&auto=webp"
-                                alt=""
-                                loading="lazy"
-                                aria-hidden="true" />
-                        </div>
-                        <!-- IMAGE -->
-                        <div data-tippy-content="Maomao - Apothecary Diaries">
-                            <img
-                                src="https://i.pinimg.com/736x/04/df/f8/04dff883de5a60d1cf0947fdbfb52564.jpg"
-                                alt=""
-                                loading="lazy"
-                                aria-hidden="true" />
-                        </div>
-                        <!-- IMAGE -->
-                        <div data-tippy-content="Yusuke - Persona 5">
-                            <img
-                                src="https://i.pinimg.com/736x/e8/10/14/e81014bff2a1a3223f52ae045db2a274.jpg"
-                                alt=""
-                                loading="lazy"
-                                aria-hidden="true" />
-                        </div>
-                        <!-- IMAGE -->
-                        <div data-tippy-content="Castorice - Honkai Star Rail">
-                            <img
-                                src="https://i.pinimg.com/736x/56/32/ad/5632ad8ebeebda0c213e058f8996f2c9.jpg"
-                                alt=""
-                                loading="lazy"
-                                aria-hidden="true" />
-                        </div>
+                    <div class="scrollable">
+                        <p>
+                            As the info on the front says, hi! Name's <b>Aid</b>, mostly based off <i>Asuraid</i> which
+                            is my usual online handle in
+                            <span
+                                class="tippy"
+                                data-tippy-content="Asuraid is mostly used for my art accounts or general accounts, so sometimes with personal accounts i use different names ... like this site!"
+                                >most places</span
+                            >. Just a gal floating by in life and wishing for her own place one day.
+                        </p>
+                        <p>
+                            I'm on the cusp between a millennial and Gen Z (though honestly I'd rather just call myself
+                            a
+                            <u>millennial</u>, I <b>do not</b> relate to zoomers). I grew up with Club Penguin,
+                            DragonAdopters, Webkinz, the OG Xbox, Tamagothchis, SSX3, Jet Set Radio Future, Jazz
+                            Jackrabbit 2, Sims 1 and 2 (and the fuckass weird PS2 version), and
+                            <a href="https://backloggd.com/u/Asuraid/list/nostalgia--games-i-grew-up-on/"
+                                >many other things</a
+                            >.
+                        </p>
+                        <p>
+                            I
+                            <span
+                                class="tippy"
+                                data-tippy-content="I have no way to get diagnosed right now/not in a comfortable place to do it, but considering I've been looking into it for well over half a year, to a year now, I'm like 99% sure of it ... and been clocked by uh ... multiple people thinking I have traits of it ..."
+                                >think</span
+                            >
+                            I have inattentive ADHD and I'm a chronic 'jumps between fixations like a mad person'
+                            sufferer, which also means I like trying out new things a lot and fixating on them for a set
+                            time before something else hits me like a truck (which also means chronic collection of
+                            projects I never finish fully). Forever stuck with the 'hyperfixation for two weeks' bug
+                            even with games sometimes. But hey, it means I know a lot of random stuff I've tried out and
+                            piles of resources for said things.
+                        </p>
+                        <p>
+                            I've also been an artist since I was a wee bab and a digital artist for most of my lifetime;
+                            I enjoy learning new things and finding ways to put my blorbo into them (like ... making
+                            them into a 3D model using VRoid). I used to be a big
+                            <a href="https://web.archive.org/web/20120120140004/http://cockatiellover.deviantart.com/"
+                                >deviantART kid</a
+                            >
+                            before it went into the shitter. I've also been a chronic tumblr user since 2012 and I still
+                            have my original blog, plus I've roleplayed there a large portion of my lifetime. 🫡
+                        </p>
+                        <p>
+                            Otherwise I actually have a
+                            <span class="tippy" data-tippy-content="Bachelor's degree">BA</span> in Game Design!! As of
+                            writing this, it's kinda been hell getting a job though with this shit market (just as the
+                            internet has been shittified, so has AAA gaming). I don't have many <i>(completed)</i> solo
+                            projects since it's hard for me to do them on my own without a team, but I love consuming
+                            games and analyzing them.
+                        </p>
+                        <p>
+                            I'm not very good at talking about myself, but I do like finding shared interests with
+                            others.
+                        </p>
                     </div>
                 </article>
                 <!-- =============================================== -->
@@ -430,140 +372,238 @@
                 <!-- INTERESTS. -->
                 <!-- =============================================== -->
                 <article>
-                    <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> My Favourites</h1>
                     <div class="tab">
                         <!-- Tab links -->
                         <button class="tablinks" onclick="openTab(event, 'Games')" id="defaultOpen">Games</button>
                         <button class="tablinks" onclick="openTab(event, 'Characters')">Characters</button>
                         <button class="tablinks" onclick="openTab(event, 'Media')">Media</button>
+                        <button class="tablinks" onclick="openTab(event, 'Stamps')">Stamps</button>
+                        <button class="tablinks" onclick="openTab(event, 'Blinkies')">Blinkies</button>
+                        <button class="tablinks" onclick="openTab(event, 'Shiny')">Shiny Buttons</button>
+                        <button class="tablinks" onclick="openTab(event, 'Fanlistings')">Fanlists</button>
+                        <button class="tablinks" onclick="openTab(event, 'UserBoxes')">User Boxes</button>
+                        <button class="tablinks" onclick="openTab(event, 'quizzes')">Quiz Results</button>
                     </div>
-                    <div class="scrollable">
-                        <!-- Tab content -->
-                        <div id="Games" class="tabcontent interest-content">
-                            <ul>
-                                <li>Ace Attorney</li>
-                                <li>Age of Empires 3</li>
-                                <li><u>Age of Mythology</u></li>
-                                <li>Balatro</li>
-                                <li><u>Baldur's Gate 3</u></li>
-                                <li>Bayonetta</li>
-                                <li>Blinx 2</li>
-                                <li><u>Code Vein</u></li>
-                                <li><u>Dragon Age Series</u></li>
-                                <li>
-                                    <span
-                                        class="tippy"
-                                        data-tippy-content="i quit, but i'll rant if you ask me about it"
-                                        >Elsword</span
-                                    >
-                                </li>
-                                <li><u>FAITH the Unholy Trinity</u></li>
-                                <li>Final Fantasy 14</li>
-                                <li><u>Genshin Impact</u></li>
-                                <li>Honkai Star Rail</li>
-                                <li>Insaniqarium!</li>
-                                <li>Jazz Jackrabbit 2</li>
-                                <li>Jet Set Radio Future</li>
-                                <li>Luxor 3</li>
-                                <li><u>Mass Effect Series</u></li>
-                                <li>Minecraft</li>
-                                <li><u>Need for Speed Most Wanted (2005)</u></li>
-                                <li>Pokemon Mystery Dungeon</li>
-                                <li><u>Pokemon Platinum</u></li>
-                                <li>Pokemon Soul Silver</li>
-                                <li>Sims 2 / 3</li>
-                                <li><u>Spore</u></li>
-                                <li>SSX3</li>
-                                <li>Stardew Valley</li>
-                                <li>Vampire Survivors</li>
-                                <li>The Witcher Series</li>
-                                <li>Zoo Tycoon 2</li>
-                            </ul>
-                            <p>
-                                ... and probably others I don't remember right now. This is a non-exhaustive list, so
-                                check out my
-                                <a href="https://backloggd.com/u/Asuraid/">backloggd</a> for more games I've played in
-                                general (which I also update).
-                            </p>
+                </article>
+                <article>
+                    <div>
+                        <!-- Tab Content: Games -->
+                        <div id="Games" class="tabcontent">
+                            <h1>
+                                <img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Favourite Games
+                            </h1>
+                            <div class="tabcontentinside interest-content">
+                                <div class="flexbox">
+                                    <div>
+                                        <img src="img/media/aceattorney.png" alt="" />
+                                        <p>Ace Attorney Series</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/ao3.png" alt="" />
+                                        <p>Age of Empires III</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/aoe.png" alt="" />
+                                        <p>Age of Mythology</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/bg3.png" alt="" />
+                                        <p>Baldur's Gate 3</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/bayonetta.png" alt="" />
+                                        <p>Bayonetta Series</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/bioshock2.png" alt="" />
+                                        <p>Bioshock 2</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/blinx2.png" alt="" />
+                                        <p>Blinx 2: Masters of Time &amp; Space</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/code_vein.png" alt="" />
+                                        <p>Code Vein</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/deltarune.png" alt="" />
+                                        <p>Deltarune</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/da_2.png" alt="" />
+                                        <p>Dragon Age Series</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/faith.png" alt="" />
+                                        <p>Faith: The Unholy Trinity</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/FFXIV.png" alt="" />
+                                        <p>Final Fantasy 14</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/genshin.png" alt="" />
+                                        <p>Genshin Impact</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/hades.png" alt="" />
+                                        <p>Hades</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/touhou8.png" alt="" />
+                                        <p>Imperishable Night</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/insaniquarium.png" alt="" />
+                                        <p>Insaniquarium! Deluxe</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/jazz2.png" alt="" />
+                                        <p>Jazz Jackrabbit 2</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/jsrf.png" alt="" />
+                                        <p>Jet Set Radio Future</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/spyrotrio.png" alt="" />
+                                        <p>The Legend of Spyro: Dawn of the Dragon</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/nfsmw.png" alt="" />
+                                        <p>Need for Speed Most Wanted</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/platinum.png" alt="" />
+                                        <p>Pokemon Platinum</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/pokemon_soulsilver.png" alt="" />
+                                        <p>Pokemon Soul Silver</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/spore.png" alt="" />
+                                        <p>Spore</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/ssx3.png" alt="" />
+                                        <p>SSX 3</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/stardew.png" alt="" />
+                                        <p>Stardew Valley</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/twewy.png" alt="" />
+                                        <p>The World Ends With You</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/undertale.png" alt="" />
+                                        <p>Undertale</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/vampire_survivors.png" alt="" />
+                                        <p>Vampire Survivors</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/witcher.png" alt="" />
+                                        <p>The Witcher Series</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/zt2.png" alt="" />
+                                        <p>Zoo Tycoon 2</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div id="Characters" class="tabcontent align-items-center interest-content">
-                            <img
-                                src="img/characters/acheron.png"
-                                alt="Acheron from Honkai Star Rail"
-                                data-tippy-content="Acheron (Honkai Star Rail)" />
-                            <img
-                                src="img/characters/castorice.png"
-                                alt="Castorice from Honkai Star Rail"
-                                data-tippy-content="Castorice (Honkai Star Rail)" />
-                            <img
-                                src="img/characters/fenris.png"
-                                alt="Fenris from Dragon Age 2"
-                                data-tippy-content="Fenris (Dragon Age 2)" />
-                            <img
-                                src="img/characters/furina.png"
-                                alt="Furina from Genshin Impact"
-                                data-tippy-content="Furina (Genshin Impact)" />
-                            <img
-                                src="img/characters/gale.png"
-                                alt="Gale Dekarios from Baldur's Gate 3"
-                                data-tippy-content="Gale Dekarios (Baldur's Gate 3)" />
-                            <img
-                                src="img/characters/garrus.png"
-                                alt="Garrus from Mass Effect"
-                                data-tippy-content="Garrus (Mass Effect)" />
-                            <img
-                                src="img/characters/hot_rod.png"
-                                alt="Hot Rod from Transformers"
-                                data-tippy-content="Hot Rod / Rodimus (Transformers)" />
-                            <img
-                                src="img/characters/ukitake.png"
-                                alt="Jushiro Ukitake from Bleach"
-                                data-tippy-content="Jushiro Ukitake (Bleach)" />
-                            <img
-                                src="img/characters/karna.png"
-                                alt="Karna from Fate"
-                                data-tippy-content="Karna (Fate Series)" />
-                            <img
-                                src="img/characters/kaveh.png"
-                                alt="Kaveh from Genshin Impact"
-                                data-tippy-content="Kaveh (Genshin Impact)" />
-                            <img
-                                src="img/characters/kim_dokja.png"
-                                alt="Kim Dokja from Omniscient Reader's Viewpoint"
-                                data-tippy-content="Kim Dokja (ORV)" />
-                            <img
-                                src="img/characters/knockout.png"
-                                alt="Knock Out from Transformers"
-                                data-tippy-content="Knock Out (Transformers)" />
-                            <img
-                                src="img/characters/luciel.png"
-                                alt="Karna from Fate"
-                                data-tippy-content="Luciel (Elsword), art by ionite" />
-                            <img
-                                src="img/characters/madoka.png"
-                                alt="Madoka Kaname from Puella Madoka Magica"
-                                data-tippy-content="Madoka Kaname (PMMM)" />
-                            <img
-                                src="img/characters/phoenix.png"
-                                alt="Phoenix Wright from Ace Attorney"
-                                data-tippy-content="Phoenix Wright (Ace Attorney)" />
-                            <img
-                                src="img/characters/sampo.png"
-                                alt="Sampo from Honkai Star Rail"
-                                data-tippy-content="Sampo (HSR); my favourite in that I wish my period cramps upon him (lovingly)" />
-                            <img
-                                src="img/characters/xie_lian.png"
-                                alt="Xie Lian from Heaven Official's Blessing"
-                                data-tippy-content="Xie Lian (TGCF)" />
-                            <img
-                                src="img/characters/wei_wuxian.png"
-                                alt="Wei Wuxian from Grandmaster of Demonic Cultivation "
-                                data-tippy-content="Wei Wuxian (MDZS)" />
-                            <img
-                                src="img/characters/zhongli.png"
-                                alt="Zhongli from Genshin Impact"
-                                data-tippy-content="Zhongli (Genshin Impact)" />
+                        <div id="Characters" class="tabcontent">
+                            <h1>
+                                <img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Fave Characters
+                            </h1>
+                            <p>
+                                Anything with a <span role="img" aria-label="moon">&#x1F319;</span> is a character I
+                                relate to (usually in their personality/struggles).
+                            </p>
+                            <div class="tabcontentinside interest-content align-items-center">
+                                <img
+                                    src="img/characters/acheron.png"
+                                    alt="Acheron from Honkai Star Rail"
+                                    data-tippy-content="Acheron (Honkai Star Rail)" />
+                                <img
+                                    src="img/characters/castorice.png"
+                                    alt="Castorice from Honkai Star Rail"
+                                    data-tippy-content="Castorice (Honkai Star Rail)" />
+                                <img
+                                    src="img/characters/fenris.png"
+                                    alt="Fenris from Dragon Age 2"
+                                    data-tippy-content="Fenris (Dragon Age 2)" />
+                                <img
+                                    src="img/characters/furina.png"
+                                    alt="Furina from Genshin Impact"
+                                    data-tippy-content="Furina (Genshin Impact)" />
+                                <img
+                                    src="img/characters/gale.png"
+                                    alt="Gale Dekarios from Baldur's Gate 3"
+                                    data-tippy-content="Gale Dekarios (Baldur's Gate 3)" />
+                                <img
+                                    src="img/characters/garrus.png"
+                                    alt="Garrus from Mass Effect"
+                                    data-tippy-content="Garrus (Mass Effect)" />
+                                <img
+                                    src="img/characters/hot_rod.png"
+                                    alt="Hot Rod from Transformers"
+                                    data-tippy-content="Hot Rod / Rodimus (Transformers)" />
+                                <img
+                                    src="img/characters/ukitake.png"
+                                    alt="Jushiro Ukitake from Bleach"
+                                    data-tippy-content="Jushiro Ukitake (Bleach)" />
+                                <img
+                                    src="img/characters/karna.png"
+                                    alt="Karna from Fate"
+                                    data-tippy-content="Karna (Fate Series)" />
+                                <img
+                                    src="img/characters/kaveh.png"
+                                    alt="Kaveh from Genshin Impact"
+                                    data-tippy-content="Kaveh (Genshin Impact)" />
+                                <img
+                                    src="img/characters/kim_dokja.png"
+                                    alt="Kim Dokja from Omniscient Reader's Viewpoint"
+                                    data-tippy-content="Kim Dokja (ORV)" />
+                                <img
+                                    src="img/characters/knockout.png"
+                                    alt="Knock Out from Transformers"
+                                    data-tippy-content="Knock Out (Transformers)" />
+                                <img
+                                    src="img/characters/luciel.png"
+                                    alt="Karna from Fate"
+                                    data-tippy-content="Luciel (Elsword), art by ionite" />
+                                <img
+                                    src="img/characters/madoka.png"
+                                    alt="Madoka Kaname from Puella Madoka Magica"
+                                    data-tippy-content="Madoka Kaname (PMMM)" />
+                                <img
+                                    src="img/characters/phoenix.png"
+                                    alt="Phoenix Wright from Ace Attorney"
+                                    data-tippy-content="Phoenix Wright (Ace Attorney)" />
+                                <img
+                                    src="img/characters/sampo.png"
+                                    alt="Sampo from Honkai Star Rail"
+                                    data-tippy-content="Sampo (HSR); my favourite in that I wish my period cramps upon him (lovingly)" />
+                                <img
+                                    src="img/characters/xie_lian.png"
+                                    alt="Xie Lian from Heaven Official's Blessing"
+                                    data-tippy-content="Xie Lian (TGCF)" />
+                                <img
+                                    src="img/characters/wei_wuxian.png"
+                                    alt="Wei Wuxian from Grandmaster of Demonic Cultivation "
+                                    data-tippy-content="Wei Wuxian (MDZS)" />
+                                <img
+                                    src="img/characters/zhongli.png"
+                                    alt="Zhongli from Genshin Impact"
+                                    data-tippy-content="Zhongli (Genshin Impact)" />
+                            </div>
                         </div>
 
                         <div id="Media" class="tabcontent interest-content">
@@ -591,34 +631,8 @@
                                 <li>... <a href="https://myanimelist.net/animelist/Asuraid">+ more</a></li>
                             </ul>
                         </div>
-                    </div>
-                </article>
-                <!-- =============================================== -->
-                <!-- BLINKIES AND STAMPS. -->
-                <!-- =============================================== -->
-                <article>
-                    <h1>
-                        <img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" />
-                        Blinkies + Stamps
-                    </h1>
-                    <p>
-                        All credits can be either found in my <a href="credits.html">credits page</a> or by hovering on
-                        the image (if it grows in size, it links to its original spot ... if there's no link attached, I
-                        cannot find the original).
-                    </p>
-                    <div class="tab">
-                        <!-- Tab links -->
-                        <button class="tabAltlinks" onclick="openAltTab(event, 'Stamps')" id="defaultAltOpen">
-                            Stamps
-                        </button>
-                        <button class="tabAltlinks" onclick="openAltTab(event, 'Blinkies')">Blinkies</button>
-                        <button class="tabAltlinks" onclick="openAltTab(event, 'Shiny')">Shiny Buttons</button>
-                        <button class="tabAltlinks" onclick="openAltTab(event, 'Fanlistings')">Fanlistings</button>
-                        <button class="tabAltlinks" onclick="openAltTab(event, 'UserBoxes')">User Boxes</button>
-                    </div>
-                    <div class="scrollable">
-                        <!-- Tab content -->
-                        <div id="Stamps" class="tabAltcontent hover-grow">
+
+                        <div id="Stamps" class="tabcontent hover-grow">
                             <a
                                 href="https://www.tumblr.com/lovisu/770256337094475776/day-04-spending-christmas-your-favorite?source=share"
                                 ><img src="img/stamps/zhongli.png" loading="lazy" alt="zhongli stamp"
@@ -861,7 +875,7 @@
                             /></a>
                         </div>
                         <!-- Tab content -->
-                        <div id="Shiny" class="tabAltcontent hover-grow">
+                        <div id="Shiny" class="tabcontent hover-grow">
                             <a href="https://rentry.org/lavender-buttons">
                                 <img src="img/shiny/Archon.gif" loading="lazy" alt="" aria-hidden="true" /><img
                                     src="img/shiny/Dendro.gif"
@@ -920,7 +934,7 @@
                                     aria-hidden="true" />
                             </a>
                         </div>
-                        <div id="Blinkies" class="tabAltcontent hover-grow">
+                        <div id="Blinkies" class="tabcontent hover-grow">
                             <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; height: auto">
                                 <a href="https://lovesick.cafe/shrines/gfx/blinkies-1" style="height: 0"
                                     ><img
@@ -1087,7 +1101,7 @@
                             /></a>
                         </div>
 
-                        <div id="Fanlistings" class="tabAltcontent hover-grow" style="gap: 0">
+                        <div id="Fanlistings" class="tabcontent hover-grow" style="gap: 0">
                             <a href="https://glitterskies.org/bg3/index.php"
                                 ><img src="img/fanlistings/bg3.png" loading="lazy" alt="Baldur's Gate 3"
                             /></a>
@@ -1126,7 +1140,7 @@
                             /></a>
                         </div>
 
-                        <div id="UserBoxes" class="tabAltcontent hover-grow">
+                        <div id="UserBoxes" class="tabcontent hover-grow">
                             <div class="images">
                                 <img
                                     style="max-width: 239px"
@@ -1185,17 +1199,8 @@
                                     loading="lazy" />
                             </div>
                         </div>
-                    </div>
-                </article>
-                <!-- =============================================== -->
-                <!-- QUIZZES. -->
-                <!-- =============================================== -->
-                <article>
-                    <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Quizzes and Results</h1>
-                    <!-- Collapsible Text: -->
-                    <details>
-                        <summary>Open it up!</summary>
-                        <div id="quizzes" class="hover-grow">
+
+                        <div id="quizzes" class="tabcontent hover-grow">
                             <div>
                                 <table
                                     style="
@@ -1443,7 +1448,7 @@
                                 >, courtesy of Easydamus <a href="mailto:zybstrski@excite.com">(e-mail)</a><br /><br />
                             </div>
                         </div>
-                    </details>
+                    </div>
                 </article>
             </main>
         </div>
