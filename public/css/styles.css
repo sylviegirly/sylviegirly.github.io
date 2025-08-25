@@ -965,7 +965,7 @@ article button {
 }
 
 article .tab button {
-    width: fit-content !important;
+    width: fit-content;
 }
 
 article .tab button:hover {

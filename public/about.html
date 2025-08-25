@@ -64,15 +64,14 @@
             .tab button {
                 color: var(--font-on-accent);
                 background-color: var(--primary-accent);
-                font-family: inherit;
+                font-family: "dosis";
                 font-size: inherit;
-                float: left;
                 border: none;
                 outline: none;
                 cursor: pointer;
-                padding: 10px 16px;
                 border-radius: var(--border-radius);
                 transition: 0.3s;
+                width: calc(20% - 20px) !important;
             }
 
             /* Change background color of buttons on hover */
@@ -119,7 +118,7 @@
                 border-radius: var(--border-radius);
                 max-width: 100%;
                 max-height: 180px;
-                object-fit: cover;
+                object-fit: contain;
             }
 
             .flexbox div p {
@@ -144,6 +143,29 @@
                 flex-wrap: wrap;
                 gap: 5px;
                 width: 100%;
+            }
+
+            .tabcontentinside .picrews {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 5px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .tabcontentinside .picrews div {
+                width: calc(33% - 10px) !important;
+                object-fit: contain;
+            }
+
+            .tabcontentinside .picrews div img {
+                width: 100%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: var(--border-radius);
+                outline: 2px solid var(--primary-accent);
             }
 
             .flexstamps a {
@@ -390,13 +412,12 @@
                         <!-- Tab links -->
                         <button class="tablinks" onclick="openTab(event, 'Games')" id="defaultOpen">Games</button>
                         <button class="tablinks" onclick="openTab(event, 'Characters')">Characters</button>
-                        <button class="tablinks" onclick="openTab(event, 'Media')">Shows / Books / Movies</button>
+                        <button class="tablinks" onclick="openTab(event, 'Media')">Media</button>
                         <button class="tablinks" onclick="openTab(event, 'Stamps')">Stamps</button>
-                        <button class="tablinks" onclick="openTab(event, 'Blinkies')">
-                            Blinkies / Shiny / User Boxes
-                        </button>
+                        <button class="tablinks" onclick="openTab(event, 'Blinkies')">Blinkies + More</button>
                         <button class="tablinks" onclick="openTab(event, 'Fanlistings')">Fanlists</button>
                         <button class="tablinks" onclick="openTab(event, 'quizzes')">Quizzes</button>
+                        <button class="tablinks" onclick="openTab(event, 'Picrews')">Picrew</button>
                     </div>
                 </article>
                 <article>
@@ -548,6 +569,10 @@
                                         <p>Acheron<br /><i>Honkai Star Rail</i></p>
                                     </div>
                                     <div>
+                                        <img src="img/characters/bluewhale.png" alt="" loading="lazy" />
+                                        <p>Blue Whale Cookie<br /><i>Cookie Run Ovenbreak</i></p>
+                                    </div>
+                                    <div>
                                         <img src="img/characters/castorice.png" alt="" loading="lazy" />
                                         <p>
                                             Castorice (<span role="img" aria-label="moon">&#x1F319;</span>)<br /><i
@@ -566,6 +591,10 @@
                                     <div>
                                         <img src="img/characters/gale.png" alt="" loading="lazy" />
                                         <p>Gale<br /><i>Baldur's Gate 3</i></p>
+                                    </div>
+                                    <div>
+                                        <img src="img/characters/garchomp.jpg" alt="" loading="lazy" />
+                                        <p>Garchomp<br /><i>Pokemon</i></p>
                                     </div>
                                     <div>
                                         <img src="img/characters/garrus.png" alt="" loading="lazy" />
@@ -620,6 +649,14 @@
                                         </p>
                                     </div>
                                     <div>
+                                        <img src="img/characters/maya.png" alt="" loading="lazy" />
+                                        <p>Maya Fey<br /><i>Ace Attorney</i></p>
+                                    </div>
+                                    <div>
+                                        <img src="img/characters/millennium.png" alt="" loading="lazy" />
+                                        <p>Millennium Tree<br /><i>Cookie Run Ovenbreak</i></p>
+                                    </div>
+                                    <div>
                                         <img src="img/characters/ororon.png" alt="" loading="lazy" />
                                         <p>
                                             Ororon (<span role="img" aria-label="moon">&#x1F319;</span>)<br /><i
@@ -630,6 +667,10 @@
                                     <div>
                                         <img src="img/characters/phoenix.png" alt="" loading="lazy" />
                                         <p>Phoenix Wright<br /><i>Ace Attorney</i></p>
+                                    </div>
+                                    <div>
+                                        <img src="img/characters/queen.png" alt="" loading="lazy" />
+                                        <p>Queen<br /><i>Deltarune</i></p>
                                     </div>
                                     <div>
                                         <img src="img/characters/sampo.png" alt="" loading="lazy" />
@@ -1387,291 +1428,342 @@
                             </div>
                         </div>
 
-                        <div id="Fanlistings" class="tabcontent hover-grow" style="gap: 0">
-                            <a href="https://glitterskies.org/bg3/index.php"
-                                ><img src="img/fanlistings/bg3.png" loading="lazy" alt="Baldur's Gate 3"
-                            /></a>
-                            <a href="https://fan.shinshoku.net/fenris/"
-                                ><img src="img/fanlistings/fenris.png" loading="lazy" alt="Fenris Dragon Age"
-                            /></a>
-                            <a href="https://garrus.palaven.org/"
-                                ><img src="img/fanlistings/garrus.png" loading="lazy" alt="Garrus Vakarian"
-                            /></a>
-                            <a href="https://genshin.celestia.nu"
-                                ><img src="img/fanlistings/genshin_50x50_01.gif" loading="lazy" alt="Genshin Impact"
-                            /></a>
-                            <a href="https://hades.redcrown.net/fan/"
-                                ><img src="img/fanlistings/hades.png" loading="lazy" alt="Hades Game"
-                            /></a>
-                            <a href="https://www.marheavenj.net/madoka/index.php"
-                                ><img src="img/fanlistings/madoka.jpg" loading="lazy" alt="Madoka Kaname"
-                            /></a>
-                            <a href="https://sky-petals.org/wright/"
-                                ><img src="img/fanlistings/phoenix.gif" loading="lazy" alt="Phoenix Wright"
-                            /></a>
-                            <a href="https://shadow-lord.com/atlantis/about.php"
-                                ><img
-                                    src="img/fanlistings/stargate_atlantis.png"
-                                    loading="lazy"
-                                    alt="Stargate Atlantis"
-                            /></a>
-                            <a href="https://psyche.nu/wwx/index.php"
-                                ><img src="img/fanlistings/weiwuxian.jpg" loading="lazy" alt="Wei Wuxian"
-                            /></a>
-                            <a href="https://fan.kirai.org/miko/"
-                                ><img src="img/fanlistings/yae.png" loading="lazy" alt="Yae Miko"
-                            /></a>
-                            <a href="https://zhongli.celestia.nu/index.php"
-                                ><img src="img/fanlistings/zhongli.png" loading="lazy" alt="Zhongli"
-                            /></a>
+                        <div id="Fanlistings" class="tabcontent" style="gap: 0">
+                            <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Fanlists</h1>
+                            <div
+                                class="tabcontentinside hover-grow"
+                                style="justify-content: center; text-align: center">
+                                <a href="https://glitterskies.org/bg3/index.php"
+                                    ><img src="img/fanlistings/bg3.png" loading="lazy" alt="Baldur's Gate 3"
+                                /></a>
+                                <a href="https://fan.shinshoku.net/fenris/"
+                                    ><img src="img/fanlistings/fenris.png" loading="lazy" alt="Fenris Dragon Age"
+                                /></a>
+                                <a href="https://garrus.palaven.org/"
+                                    ><img src="img/fanlistings/garrus.png" loading="lazy" alt="Garrus Vakarian"
+                                /></a>
+                                <a href="https://genshin.celestia.nu"
+                                    ><img
+                                        src="img/fanlistings/genshin_50x50_01.gif"
+                                        loading="lazy"
+                                        alt="Genshin Impact"
+                                /></a>
+                                <a href="https://hades.redcrown.net/fan/"
+                                    ><img src="img/fanlistings/hades.png" loading="lazy" alt="Hades Game"
+                                /></a>
+                                <a href="https://www.marheavenj.net/madoka/index.php"
+                                    ><img src="img/fanlistings/madoka.jpg" loading="lazy" alt="Madoka Kaname"
+                                /></a>
+                                <a href="https://sky-petals.org/wright/"
+                                    ><img src="img/fanlistings/phoenix.gif" loading="lazy" alt="Phoenix Wright"
+                                /></a>
+                                <a href="https://shadow-lord.com/atlantis/about.php"
+                                    ><img
+                                        src="img/fanlistings/stargate_atlantis.png"
+                                        loading="lazy"
+                                        alt="Stargate Atlantis"
+                                /></a>
+                                <a href="https://psyche.nu/wwx/index.php"
+                                    ><img src="img/fanlistings/weiwuxian.jpg" loading="lazy" alt="Wei Wuxian"
+                                /></a>
+                                <a href="https://fan.kirai.org/miko/"
+                                    ><img src="img/fanlistings/yae.png" loading="lazy" alt="Yae Miko"
+                                /></a>
+                                <a href="https://zhongli.celestia.nu/index.php"
+                                    ><img src="img/fanlistings/zhongli.png" loading="lazy" alt="Zhongli"
+                                /></a>
+                            </div>
                         </div>
 
-                        <div id="quizzes" class="tabcontent hover-grow">
-                            <div>
-                                <table
+                        <div id="quizzes" class="tabcontent">
+                            <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Quiz Results</h1>
+                            <div class="tabcontentinside hover-grow">
+                                <div>
+                                    <table
+                                        style="
+                                            font-size: 0.8em;
+                                            border: 0;
+                                            padding: 0;
+                                            border-spacing: 4px;
+                                            background-color: var(--body-deco);
+                                            width: 100%;
+                                        ">
+                                        <tbody>
+                                            <tr>
+                                                <td>Type 1</td>
+                                                <td>Orderliness</td>
+                                                <td style="width: 50px; text-align: left">||||||||||</td>
+                                                <td style="width: 30px">34%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type 2</td>
+                                                <td>Helpfulness</td>
+                                                <td style="width: 50px; text-align: left">||||||||||||||||</td>
+                                                <td style="width: 30px">66%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type 3</td>
+                                                <td>Image Focus</td>
+                                                <td style="width: 50px; text-align: left">||||</td>
+                                                <td style="width: 30px">14%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type 4</td>
+                                                <td>Individualism</td>
+                                                <td style="width: 50px; text-align: left">||||||||||||</td>
+                                                <td style="width: 30px">50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type 5</td>
+                                                <td>Intellectualism</td>
+                                                <td style="width: 50px; text-align: left">||</td>
+                                                <td style="width: 30px">10%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type 6</td>
+                                                <td>Security Focus</td>
+                                                <td style="width: 50px; text-align: left">||||||||||||</td>
+                                                <td style="width: 30px">50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type 7</td>
+                                                <td>Adventurousness</td>
+                                                <td style="width: 50px; text-align: left">||||||||||||</td>
+                                                <td style="width: 30px">50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type 8</td>
+                                                <td>Aggressiveness</td>
+                                                <td style="width: 50px; text-align: left">||</td>
+                                                <td style="width: 30px">10%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type 9</td>
+                                                <td>Calmness</td>
+                                                <td style="width: 50px; text-align: left">||||||||||||||||||||</td>
+                                                <td style="width: 30px">82%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <a href="https://similarminds.com/enneagram-test.html">enneagram test</a>
+                                </div>
+                                <a href="https://10fastfingers.com/typing-test/english"
+                                    ><img
+                                        src="http://img.10fastfingers.com/badge/typing-test_1_DE.png"
+                                        style="max-width: 100%"
+                                        loading="lazy"
+                                        alt="Typing Test"
+                                /></a>
+                                <a href="https://theotaku.com/quizzes/view/2970/which_madoka_magical_girl_are_you%3F"
+                                    ><img
+                                        src="http://www.theotaku.com/guru_results/2970_Tomoe.jpg"
+                                        style="max-width: 100%"
+                                        loading="lazy"
+                                        alt="Which Madoka Magical Girl Are You?" /></a
+                                ><a href="http://www.nerdtests.com/ft_nq.php">
+                                    <img
+                                        src="https://www.nerdtests.com/images/ft/nq/8e3afb633e.gif"
+                                        loading="lazy"
+                                        style="max-width: 100%"
+                                        alt="I am nerdier than 56% of all people. Are you a nerd? Click here to take the Nerd Test, get geeky images and jokes, and write on the nerd forum!" /></a
+                                ><a href="https://linwood.neocities.org/quiz/weirddoll">
+                                    <img
+                                        src="https://i.imgur.com/yMepcUM.png"
+                                        alt="I am a weird doll"
+                                        loading="lazy"
+                                        style="max-width: 100%"
+                                /></a>
+                                <a href="https://troy-sucks.neocities.org/shrines/animalcrossing"
+                                    ><img
+                                        src="https://troy-sucks.neocities.org/shrines/ac/quiz/r3.png"
+                                        alt="Normal"
+                                        loading="lazy"
+                                        style="max-width: 100%"
+                                        data-tippy-content="Ummmmmmm Hi. You're kind of just the default settings for a human. May I reccommend picking up a hobby?"
+                                /></a>
+                                <a
+                                    href="https://www.theotaku.com/quizzes/view/2118/which_phoenix_wright_character_are_you%3F"
+                                    ><img
+                                        src="http://www.theotaku.com/guru_results/2118_You_are_Mia_Fey.jpg"
+                                        loading="lazy"
+                                        style="max-width: 100%"
+                                        alt="Which Phoenix Wright Character Are You?" /><br
+                                /></a>
+                                <a href="http://rice.place/quiz.html"
+                                    ><img
+                                        src="https://rice.place/quiz/sweetrice.png"
+                                        alt="you are sweet rice"
+                                        loading="lazy"
+                                        style="max-width: 100%"
+                                /></a>
+                                <a href="https://www.theotaku.com/quizzes/view/4031/which_undertale_soul_are_you%3F"
+                                    ><img
+                                        loading="lazy"
+                                        style="max-width: 100%"
+                                        src="http://www.theotaku.com/guru_results/4031_Integrity.jpg"
+                                        alt="Which Undertale Soul Are You?" /><br
+                                /></a>
+                                <a href="https://dog-house.neocities.org/quiz/ac/villager_quiz"
+                                    ><img
+                                        loading="lazy"
+                                        style="max-width: 100%"
+                                        src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/wade.png"
+                                        alt="Which Undertale Soul Are You?" /><br
+                                /></a>
+                                <a href="https://theotaku.com/quizzes/view/4097/what_dere_type_are_you%3F"
+                                    ><img
+                                        style="border: 0; max-width: 100%"
+                                        loading="lazy"
+                                        src="http://www.theotaku.com/guru_results/4097_Dandere.jpg"
+                                        alt="What Dere Type Are You?" /><br
+                                /></a>
+                                <a href="https://theotaku.com/quizzes/view/4102/which_final_fantasy_job_are_you_1.5"
+                                    ><img
+                                        style="border: 0; max-width: 100%"
+                                        loading="lazy"
+                                        src="http://www.theotaku.com/guru_results/4102_White_Mage.jpg"
+                                        alt="Which Final Fantasy Job Are You 1.5"
+                                /></a>
+                                <a href="https://www.dragonflycave.com/quizzes/what-type-are-you/bug"
+                                    ><img
+                                        src="https://www.dragonflycave.com/typequiz/bug.png"
+                                        alt="Bug"
+                                        loading="lazy"
+                                        title="I am a Bug-type!"
+                                /></a>
+                                <div
+                                    class="results"
                                     style="
-                                        font-size: 0.8em;
-                                        border: 0;
-                                        padding: 0;
-                                        border-spacing: 4px;
-                                        background-color: var(--body-deco);
                                         width: 100%;
+                                        text-align: center;
+                                        background-color: #fff;
+                                        color: #000;
+                                        display: block;
+                                        padding: 10px;
+                                        border: 1px solid;
+                                        margin: 0 auto;
                                     ">
-                                    <tbody>
-                                        <tr>
-                                            <td>Type 1</td>
-                                            <td>Orderliness</td>
-                                            <td style="width: 50px; text-align: left">||||||||||</td>
-                                            <td style="width: 30px">34%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type 2</td>
-                                            <td>Helpfulness</td>
-                                            <td style="width: 50px; text-align: left">||||||||||||||||</td>
-                                            <td style="width: 30px">66%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type 3</td>
-                                            <td>Image Focus</td>
-                                            <td style="width: 50px; text-align: left">||||</td>
-                                            <td style="width: 30px">14%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type 4</td>
-                                            <td>Individualism</td>
-                                            <td style="width: 50px; text-align: left">||||||||||||</td>
-                                            <td style="width: 30px">50%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type 5</td>
-                                            <td>Intellectualism</td>
-                                            <td style="width: 50px; text-align: left">||</td>
-                                            <td style="width: 30px">10%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type 6</td>
-                                            <td>Security Focus</td>
-                                            <td style="width: 50px; text-align: left">||||||||||||</td>
-                                            <td style="width: 30px">50%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type 7</td>
-                                            <td>Adventurousness</td>
-                                            <td style="width: 50px; text-align: left">||||||||||||</td>
-                                            <td style="width: 30px">50%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type 8</td>
-                                            <td>Aggressiveness</td>
-                                            <td style="width: 50px; text-align: left">||</td>
-                                            <td style="width: 30px">10%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type 9</td>
-                                            <td>Calmness</td>
-                                            <td style="width: 50px; text-align: left">||||||||||||||||||||</td>
-                                            <td style="width: 30px">82%</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="https://similarminds.com/enneagram-test.html">enneagram test</a>
+                                    <p style="margin: 0">This page is protected by a</p>
+                                    <h3 style="margin: 0">TAPIR</h3>
+                                    <img
+                                        style="
+                                            max-width: 160px;
+                                            border: 1px solid;
+                                            margin-left: auto;
+                                            margin-right: auto;
+                                        "
+                                        alt="TAPIR"
+                                        loading="lazy"
+                                        src="https://i.ibb.co/10FV850/tapir.jpg" />
+                                    <p class="description">
+                                        Tapirs have changed very little over the past 20 million years.
+                                    </p>
+                                    <small>
+                                        <a href="https://hekate.neocities.org"
+                                            >Want your own? Visit hekate.neocities.org!</a
+                                        >
+                                    </small>
+                                </div>
+                                <a href="https://allyratworld.com/quiz/nitrochiral"
+                                    ><img
+                                        src="img/misc/nitrochiral_protag.png"
+                                        alt="Nitro Chiral protag results"
+                                        loading="lazy"
+                                /></a>
+                                <a
+                                    href="https://www.theotaku.com/quizzes/view/3913/which_hatsune_miku_nendoroid_model_are_you%3F"
+                                    ><img
+                                        src="http://www.theotaku.com/guru_results/3913_Sakura_Miku.jpg"
+                                        loading="lazy"
+                                        style="max-width: 100%"
+                                        alt="Which Hatsune Miku Nendoroid Model Are You?"
+                                /></a>
+                                <a
+                                    href="https://www.theotaku.com/quizzes/view/1486/what_are_your_last_words_before_game_over%3F"
+                                    ><img
+                                        src="http://www.theotaku.com/guru_results/1486_well_this_sucks.jpg"
+                                        loading="lazy"
+                                        style="max-width: 100%"
+                                        alt="What Are Your Last Words Before GAME OVER?"
+                                /></a>
+                                <a href="https://swiftyshq.neocities.org/fun/quiz/rock"
+                                    ><img
+                                        src="https://swiftyshq.neocities.org/img/quiz/rock/r6.png"
+                                        alt="mossy guy"
+                                        data-tippy-content="youre really big and really friendly. ur friends think you have inner rage but you have the temperament of a newborn puppy. this rock is as unmoving as you!"
+                                /></a>
+                                <div class="scrollable">
+                                    <b>I Am A:</b> True Neutral Halfling Bard (3rd Level) <br /><br /><u
+                                        >Ability Scores:</u
+                                    ><br />
+                                    <b>Strength-</b>11<br />
+                                    <b>Dexterity-</b>12<br />
+                                    <b>Constitution-</b>12<br />
+                                    <b>Intelligence-</b>13<br />
+                                    <b>Wisdom-</b>13<br />
+                                    <b>Charisma-</b>11 <br /><br /><u>Alignment:</u><br /><b>True Neutral</b> A true
+                                    neutral character does what seems to be a good idea. He doesn't feel strongly one
+                                    way or the other when it comes to good vs. evil or law vs. chaos. Most true neutral
+                                    characters exhibit a lack of conviction or bias rather than a commitment to
+                                    neutrality. Such a character thinks of good as better than evil after all, he would
+                                    rather have good neighbors and rulers than evil ones. Still, he's not personally
+                                    committed to upholding good in any abstract or universal way. Some true neutral
+                                    characters, on the other hand, commit themselves philosophically to neutrality. They
+                                    see good, evil, law, and chaos as prejudices and dangerous extremes. They advocate
+                                    the middle way of neutrality as the best, most balanced road in the long run. True
+                                    neutral is the best alignment you can be because it means you act naturally, without
+                                    prejudice or compulsion. However, true neutral can be a dangerous alignment when it
+                                    represents apathy, indifference, and a lack of conviction.<br />
+                                    <br /><u>Race:</u><br /><b>Halflings</b> are clever, capable and resourceful
+                                    survivors. They are notoriously curious and show a daring that many larger people
+                                    can't match. They can be lured by wealth but tend to spend rather than hoard. They
+                                    prefer practical clothing and would rather wear a comfortable shirt than jewelry.
+                                    Halflings stand about 3 feet tall and commonly live to see 150. <br /><br /><u
+                                        >Class:</u
+                                    ><br /><b>Bards</b>
+                                    often serve as negotiators, messengers, scouts, and spies. They love to accompany
+                                    heroes (and villains) to witness heroic (or villainous) deeds firsthand, since a
+                                    bard who can tell a story from personal experience earns renown among his fellows. A
+                                    bard casts arcane spells without any advance preparation, much like a sorcerer.
+                                    Bards also share some specialized skills with rogues, and their knowledge of item
+                                    lore is nearly unmatched. A high Charisma score allows a bard to cast high-level
+                                    spells.
+                                    <br /><br />Find out
+                                    <a href="http://www.easydamus.com/character.html" target="mt"
+                                        >What Kind of Dungeons and Dragons Character Would You Be?</a
+                                    >, courtesy of Easydamus <a href="mailto:zybstrski@excite.com">(e-mail)</a
+                                    ><br /><br />
+                                </div>
                             </div>
-                            <a href="https://10fastfingers.com/typing-test/english"
-                                ><img
-                                    src="http://img.10fastfingers.com/badge/typing-test_1_DE.png"
-                                    style="max-width: 100%"
-                                    loading="lazy"
-                                    alt="Typing Test"
-                            /></a>
-                            <a href="https://theotaku.com/quizzes/view/2970/which_madoka_magical_girl_are_you%3F"
-                                ><img
-                                    src="http://www.theotaku.com/guru_results/2970_Tomoe.jpg"
-                                    style="max-width: 100%"
-                                    loading="lazy"
-                                    alt="Which Madoka Magical Girl Are You?" /></a
-                            ><a href="http://www.nerdtests.com/ft_nq.php">
-                                <img
-                                    src="https://www.nerdtests.com/images/ft/nq/8e3afb633e.gif"
-                                    loading="lazy"
-                                    style="max-width: 100%"
-                                    alt="I am nerdier than 56% of all people. Are you a nerd? Click here to take the Nerd Test, get geeky images and jokes, and write on the nerd forum!" /></a
-                            ><a href="https://linwood.neocities.org/quiz/weirddoll">
-                                <img
-                                    src="https://i.imgur.com/yMepcUM.png"
-                                    alt="I am a weird doll"
-                                    loading="lazy"
-                                    style="max-width: 100%"
-                            /></a>
-                            <a href="https://troy-sucks.neocities.org/shrines/animalcrossing"
-                                ><img
-                                    src="https://troy-sucks.neocities.org/shrines/ac/quiz/r3.png"
-                                    alt="Normal"
-                                    loading="lazy"
-                                    style="max-width: 100%"
-                                    data-tippy-content="Ummmmmmm Hi. You're kind of just the default settings for a human. May I reccommend picking up a hobby?"
-                            /></a>
-                            <a
-                                href="https://www.theotaku.com/quizzes/view/2118/which_phoenix_wright_character_are_you%3F"
-                                ><img
-                                    src="http://www.theotaku.com/guru_results/2118_You_are_Mia_Fey.jpg"
-                                    loading="lazy"
-                                    style="max-width: 100%"
-                                    alt="Which Phoenix Wright Character Are You?" /><br
-                            /></a>
-                            <a href="http://rice.place/quiz.html"
-                                ><img
-                                    src="https://rice.place/quiz/sweetrice.png"
-                                    alt="you are sweet rice"
-                                    loading="lazy"
-                                    style="max-width: 100%"
-                            /></a>
-                            <a href="https://www.theotaku.com/quizzes/view/4031/which_undertale_soul_are_you%3F"
-                                ><img
-                                    loading="lazy"
-                                    style="max-width: 100%"
-                                    src="http://www.theotaku.com/guru_results/4031_Integrity.jpg"
-                                    alt="Which Undertale Soul Are You?" /><br
-                            /></a>
-                            <a href="https://dog-house.neocities.org/quiz/ac/villager_quiz"
-                                ><img
-                                    loading="lazy"
-                                    style="max-width: 100%"
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/wade.png"
-                                    alt="Which Undertale Soul Are You?" /><br
-                            /></a>
-                            <a href="https://theotaku.com/quizzes/view/4097/what_dere_type_are_you%3F"
-                                ><img
-                                    style="border: 0; max-width: 100%"
-                                    loading="lazy"
-                                    src="http://www.theotaku.com/guru_results/4097_Dandere.jpg"
-                                    alt="What Dere Type Are You?" /><br
-                            /></a>
-                            <a href="https://theotaku.com/quizzes/view/4102/which_final_fantasy_job_are_you_1.5"
-                                ><img
-                                    style="border: 0; max-width: 100%"
-                                    loading="lazy"
-                                    src="http://www.theotaku.com/guru_results/4102_White_Mage.jpg"
-                                    alt="Which Final Fantasy Job Are You 1.5"
-                            /></a>
-                            <a href="https://www.dragonflycave.com/quizzes/what-type-are-you/bug"
-                                ><img
-                                    src="https://www.dragonflycave.com/typequiz/bug.png"
-                                    alt="Bug"
-                                    loading="lazy"
-                                    title="I am a Bug-type!"
-                            /></a>
-                            <div
-                                class="results"
-                                style="
-                                    width: 100%;
-                                    text-align: center;
-                                    background-color: #fff;
-                                    color: #000;
-                                    display: block;
-                                    padding: 10px;
-                                    border: 1px solid;
-                                    margin: 0 auto;
-                                ">
-                                <p style="margin: 0">This page is protected by a</p>
-                                <h3 style="margin: 0">TAPIR</h3>
-                                <img
-                                    style="max-width: 160px; border: 1px solid; margin-left: auto; margin-right: auto"
-                                    alt="TAPIR"
-                                    loading="lazy"
-                                    src="https://i.ibb.co/10FV850/tapir.jpg" />
-                                <p class="description">
-                                    Tapirs have changed very little over the past 20 million years.
-                                </p>
-                                <small>
-                                    <a href="https://hekate.neocities.org"
-                                        >Want your own? Visit hekate.neocities.org!</a
-                                    >
-                                </small>
-                            </div>
-                            <a href="https://allyratworld.com/quiz/nitrochiral"
-                                ><img
-                                    src="img/misc/nitrochiral_protag.png"
-                                    alt="Nitro Chiral protag results"
-                                    loading="lazy"
-                            /></a>
-                            <a
-                                href="https://www.theotaku.com/quizzes/view/3913/which_hatsune_miku_nendoroid_model_are_you%3F"
-                                ><img
-                                    src="http://www.theotaku.com/guru_results/3913_Sakura_Miku.jpg"
-                                    loading="lazy"
-                                    style="max-width: 100%"
-                                    alt="Which Hatsune Miku Nendoroid Model Are You?"
-                            /></a>
-                            <a
-                                href="https://www.theotaku.com/quizzes/view/1486/what_are_your_last_words_before_game_over%3F"
-                                ><img
-                                    src="http://www.theotaku.com/guru_results/1486_well_this_sucks.jpg"
-                                    loading="lazy"
-                                    style="max-width: 100%"
-                                    alt="What Are Your Last Words Before GAME OVER?"
-                            /></a>
-                            <a href="https://swiftyshq.neocities.org/fun/quiz/rock"
-                                ><img
-                                    src="https://swiftyshq.neocities.org/img/quiz/rock/r6.png"
-                                    alt="mossy guy"
-                                    data-tippy-content="youre really big and really friendly. ur friends think you have inner rage but you have the temperament of a newborn puppy. this rock is as unmoving as you!"
-                            /></a>
-                            <div style="max-height: 200px; overflow: auto">
-                                <b>I Am A:</b> True Neutral Halfling Bard (3rd Level) <br /><br /><u>Ability Scores:</u
-                                ><br />
-                                <b>Strength-</b>11<br />
-                                <b>Dexterity-</b>12<br />
-                                <b>Constitution-</b>12<br />
-                                <b>Intelligence-</b>13<br />
-                                <b>Wisdom-</b>13<br />
-                                <b>Charisma-</b>11 <br /><br /><u>Alignment:</u><br /><b>True Neutral</b> A true neutral
-                                character does what seems to be a good idea. He doesn't feel strongly one way or the
-                                other when it comes to good vs. evil or law vs. chaos. Most true neutral characters
-                                exhibit a lack of conviction or bias rather than a commitment to neutrality. Such a
-                                character thinks of good as better than evil after all, he would rather have good
-                                neighbors and rulers than evil ones. Still, he's not personally committed to upholding
-                                good in any abstract or universal way. Some true neutral characters, on the other hand,
-                                commit themselves philosophically to neutrality. They see good, evil, law, and chaos as
-                                prejudices and dangerous extremes. They advocate the middle way of neutrality as the
-                                best, most balanced road in the long run. True neutral is the best alignment you can be
-                                because it means you act naturally, without prejudice or compulsion. However, true
-                                neutral can be a dangerous alignment when it represents apathy, indifference, and a lack
-                                of conviction.<br />
-                                <br /><u>Race:</u><br /><b>Halflings</b> are clever, capable and resourceful survivors.
-                                They are notoriously curious and show a daring that many larger people can't match. They
-                                can be lured by wealth but tend to spend rather than hoard. They prefer practical
-                                clothing and would rather wear a comfortable shirt than jewelry. Halflings stand about 3
-                                feet tall and commonly live to see 150. <br /><br /><u>Class:</u><br /><b>Bards</b>
-                                often serve as negotiators, messengers, scouts, and spies. They love to accompany heroes
-                                (and villains) to witness heroic (or villainous) deeds firsthand, since a bard who can
-                                tell a story from personal experience earns renown among his fellows. A bard casts
-                                arcane spells without any advance preparation, much like a sorcerer. Bards also share
-                                some specialized skills with rogues, and their knowledge of item lore is nearly
-                                unmatched. A high Charisma score allows a bard to cast high-level spells.
-                                <br /><br />Find out
-                                <a href="http://www.easydamus.com/character.html" target="mt"
-                                    >What Kind of Dungeons and Dragons Character Would You Be?</a
-                                >, courtesy of Easydamus <a href="mailto:zybstrski@excite.com">(e-mail)</a><br /><br />
+                        </div>
+
+                        <div id="Picrews" class="tabcontent hover-grow">
+                            <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Picrews</h1>
+                            <p>
+                                I don't usually make picrews of myself, but I <u>love</u> making picrews of my OCs (if
+                                ... they have the proper things for it; some are edited by me).
+                            </p>
+                            <div class="tabcontentinside hover-grow">
+                                <div class="picrews">
+                                    <div>
+                                        <a href="https://picrew.me/en/image_maker/41"
+                                            ><img src="img/picrews/sylvie1e.png" alt="picrew of sylvie" loading="lazy"
+                                        /></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://picrew.me/en/image_maker/1548736"
+                                            ><img src="img/picrews/sylvie5_e.png" alt="picrew of sylvie" loading="lazy"
+                                        /></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://picrew.me/en/image_maker/1548736"
+                                            ><img
+                                                src="img/picrews/sylvie5a_e.png"
+                                                alt="picrew of sylvie"
+                                                loading="lazy"
+                                        /></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
