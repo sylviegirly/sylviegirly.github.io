@@ -9,7 +9,22 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-08-15T15:42:25-04:00</updated>
+    <updated>2025-08-26T12:51:03-04:00</updated>
+
+    <entry>
+        <title>New Blog About Sims 3 + Minecraft Page Retiring (Temporarily)</title>
+        <link href="https://zhongvie.neocities.org/blog" />
+        <updated>2025-08-26T12:51:03-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1756227063</id>
+        <content type="html">
+            &#x3C;p&#x3E;Temporarily archived my minecraft page, just until I pick it up again and can return to my
+            forever world in full (it&#x27;s not deleted, it&#x27;s just in an archived folder that doesn&#x27;t get
+            pushed to Github). Added a new &#x3C;a href=&#x22;blog.html&#x22;&#x3E;blog post&#x3C;/a&#x3E; as well about
+            my new Sims 3 legacy challenge ... maybe if I ever do finish it, I&#x27;ll make a page here about it
+            (miracle if I ever do)&#x3C;/p&#x3E;&#x3C;p&#x3E;Fixed up index page with a new video +
+            dragons.&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Now page updated!</title>
