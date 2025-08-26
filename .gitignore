@@ -61,6 +61,7 @@ node_modules/
 /build
 /dist
 /public/Testing/
+/public/archive/
 
 # ignore composer vendor directory
 /vendor
