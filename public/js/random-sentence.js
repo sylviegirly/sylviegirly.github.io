@@ -1,53 +1,259 @@
-const sentence = [
-        "I am a grown ass adult and I still get nausea when I feel like I'm in trouble. They're gonna send me to the principals office and take away my toys for a week. Can you just fucking kill me instead of making me stew in my fucking anxiety<br/><i>— <a href='https://www.tumblr.com/pokeballvictim/781557497418956800' style='font-size: 0.8em'>pokeballvictim</a></i>",
-        "Having one-sided beef with one specific character is so funny. Like I can see a million characters who do terrible things and be like “whatever.” But then there’s one specific motherfucker who pissed me off so bad that I’d run them over at a red light if given the chance. <br/><i>— <a href='https://phantomrose96.tumblr.com/post/785706745505906688' style='font-size: 0.8em'>phantomrose96</a></i>",
-        "'being obsessed with your ocs is so embarrassing' no it isn't. we're returning to our noble roots of playing dolls. stop self depricating and tell me about your guy.<br/><i>— <a href='https://www.tumblr.com/reliquarian/768853194256351232' style='font-size: 0.8em'>reliquarian</a></i>",
-        "unfortunately I am a yapper and I am an oversharer i am just not a nonchalant mysterious person<br/><i>— <a href='https://www.tumblr.com/bakwaaas/784653778859245568' style='font-size: 0.8em'>bakwaaas</a></i>",
-        "being crazy over fictional characters is so funny cuz you'll be fine all day and then you start Thinking and then you can feel yourself transform in real time<br/><i>— <a href='https://www.tumblr.com/lvmimis/778773766824247296' style='font-size: 0.8em'>lvmimis</a></i>",
-        "might seem like a harmless quirk but once you start typing in exclusively lowercase you can never capitalize anything again outside the designated midsentence Gay Emphasis Zones or anyone following you for longer than a week will think you're about to commit murder<br/><i>— <a href='https://www.tumblr.com/bisopod/181325591472' style='font-size: 0.8em'>bisopod</a></i>",
-        "what a day!!!!!!!! nothing happened and i was tired<br/><i>— <a href='https://sylviegirly.tumblr.com/post/107949319872' style='font-size: 0.8em'>largecoin</a></i>",
-        "hate when I wanna talk to a person but I don’t really have anything to say. but I yearn for the connection. can’t just message someone like, hi I have nothing in particular to say but you’re fun and cool and I would like to have a conversation<br/><i>— <a href='https://www.tumblr.com/bramble-berries/763913039327199232' style='font-size: 0.8em'>bramble-berries</a></i>",
-        "if u are ever scared of yapping about your blorbo or your life or your creative projects on the dash bc u are worried that no one wants to see it. know that I am holding your hand and supporting you. I want to see it. make that shitpost I need to read it posthaste<br/><i>— <a href='https://yinyuedijun.tumblr.com/post/772054085890342912' style='font-size: 0.8em'>yinyuedijun</a></i>",
-        "blorbo art should take zero effort and time to make. It should just manifest straight out of your mind whenever you want it to<br/><i>— <a href='https://thetwilightroadtonightfall.tumblr.com/post/781575863127900160' style='font-size: 0.8em'>thetwilightroadtonightfall</a></i>",
-        "sorry i never replied. everyday is blending together and im losing sense of time<br/><i>— <a href='https://www.tumblr.com/godofthelairrss/780564313029197824' style='font-size: 0.8em'>godofthelairrss</a></i>",
-        "“man i am so tired” stays up for 3 more hours doing absolutely nothing<br/><i>— <a href='https://sylviegirly.tumblr.com/post/106024681557' style='font-size: 0.8em'>thebagofholding</a></i>",
-        "one of my best skills is being able to tell which download button is the actual download button<br/><i>— <a href='https://sylviegirly.tumblr.com/post/106011329887' style='font-size: 0.8em'>fartgallery</a></i>",
-        "I’ve mastered the art of pretending to be tired instead of admitting I’m sad<br/><i>— <a href='https://nerdysarcasm.tumblr.com/post/103775237548' style='font-size: 0.8em'>nerdysarcasm</a></i>",
-        "here’s to the kids that use fictional characters as a way of coping. here’s to the kids that stay up late crying to their favourite characters. here’s to the kids that imagine their favourite character by their side when they’re experiencing bad anxiety in public. here’s to the kids that need works of fiction to keep on surviving.<br/><i>— <a href='https://sylviegirly.tumblr.com/post/104310655597' style='font-size: 0.8em'>arodaryldixon</a></i>",
-        "dude god could come down from heaven with a million angels and tell me that gif is pronounced “jif” and i still wouldn’t fucking do it<br/><i>— <a href='https://sylviegirly.tumblr.com/post/102759006337' style='font-size: 0.8em'>johnkatier</a></i>",
-        "ARE YOU READY TO SEE SOME CHARACTERS DRAWN FROM 3/4THS VIEW FACING LEEEFFFTTT [AUDIENCE ROARS]<br/><i>— <a href='https://sylviegirly.tumblr.com/post/95745379327' style='font-size: 0.8em'>[nsfw name sowwy]/a></i>",
-        "50 shades of dark circles under my eyes<br/><i>— <a href='https://sylviegirly.tumblr.com/post/95569538452' style='font-size: 0.8em'>macklemack</a></i>",
-        "people who don't experience hyperfixation don't know what it feels like to hyperfixate so much on something that it becomes not only your subject of obsession but also your source of happiness and literally the main reason why you still keep going; literal source of strength and life.<br/><br/>shoutout to my favorite fictional characters, favorite people, favorite ships, favorite movies, favorite tv shows, fanfics and archive of our own <br/><i>— <a href='https://www.tumblr.com/001x456/778084143075557376' style='font-size: 0.8em'>001x456</a></i>",
-        "ahaha yeah my feelings for that character have totally calmed down [sees picture of them] ahaha never mind. aha. ha. i lied. <i>i fucking lied. i lied so much ahahaha i’m a fucking liar i have no control in my life ahaha help me</i><br/><i>— <a href='https://www.tumblr.com/greelin/66636772627' style='font-size: 0.8em'>greelin</a></i>",
-        "i struggle between wanting to stay up late and wanting extra hours of sleep<br/><i>— <a href='https://www.tumblr.com/vaniccio/50789714025' style='font-size: 0.8em'>vaniccio</a></i>",
-        "*likes your personal post that i don’t fully understand or have context for just so you know i’m listening and i care about you*<br/><i>— <a href='https://nicollekidman.tumblr.com/post/110421882191' style='font-size: 0.8em'>nicollekidman</a></i>",
-        "Sorry for being incapable of answering a question without like 900 'It dependssss' prefaces. Unfortunately too many things depend on too many things<br/><i>— <a href='https://www.tumblr.com/bongjoonheaux/743601781950562304' style='font-size: 0.8em'>bongjoonheaux</a></i>",
-        "'cozy game' maybe for YOU. I have spreadsheets<br/><i>— <a href='https://pancakeke.tumblr.com/post/779132355587850240' style='font-size: 0.8em'>pancakeke</a></i>",
-        "my new hobby is saying “sorry I’ve been in a weird place recently” like I’ve ever been in a normal place to begin with <br/><i>— <a href='https://www.tumblr.com/prinxessinwonderlxnd/773842357217001472' style='font-size: 0.8em'>prinxessinwonderlxnd</a></i>",
-        "so embarrassing to have a favorite character honestly. like yes that's my specialest guy <span style='aria-hidden='true''>🙄</span> yes i have 200 photos of him saved <span style='aria-hidden='true''>😑</span> if i don't look at him or hear him talk every 2 minutes i'll start killing the hostages <span style='aria-hidden='true''>😕</span> i think about him every day. because he's my favorite. whatever<br/><i>— <a href='https://sylviegirly.tumblr.com/post/782557603776675840' style='font-size: 0.8em'>eastgaysian</a></i>",
-        "i hope i am not only a mutual to you but also someone you can point at a fictional character and go 'oh shit that guy on tumblr is super fucking mentally unwell about that one' about<br/><i>— <a href='https://www.tumblr.com/adolescenceknight/754619849466118144' style='font-size: 0.8em'>adolescenceknight</a></i>",
-        "clocking in for another day at the i dont wanna factory<br/><i>— <a href='https://cbc-bb.tumblr.com/post/744838020593827840' style='font-size: 0.8em' target='_blank'>cbc-bb</a></i>",
-        "Get up girls we have another day of obsessing over fictional characters to cope with reality ahead of us <br/><i>— <a href='https://sylviegirly.tumblr.com/post/775491641278595072' style='font-size: 0.8em'>euphoricfez</a></i>",
-        "[about my own oc, who i created] in theory its possible she would say that, but we just dont know for sure<br/><i>— <a href='https://earthmoveryuri.tumblr.com/post/775330353635262464' style='font-size: 0.8em'>earthmoveryuri</a></i>",
-        "fucking whatever man. [my plumbob changes from green to red instantly]<br/><i>— <a href='https://rabbitscreams.tumblr.com/post/773796722000478208' style='font-size: 0.8em'>rabbitscreams</a></i>",
-        "No no you don't understand! I <i>want</i> to watch this show/movie, read this book, listen to this podcast, etc.! But I <i>must</i> be in the right mindset and the exact head space to begin, or I just <i>can't</i>!<br/><i>— <a href='https://crazycatsiren.tumblr.com/post/702924648274444288' style='font-size: 0.8em'>crazycatsiren</a></i>",
-        "wow! that was a fun accidental 2 hour session of video's game. now to go to the kitchen to check on my pet Pot Of Boiling Water...<br/><i>— <a href='https://st4rm41d.tumblr.com/post/759360073079373824' style='font-size: 0.8em'>st4rm41d</a></i>",
-        "god I would be UNSTOPPABLE if I was capable of consistently initiating tasks. just you wait. you'll be waiting a while but just you wait<br/><i>— <a href='https://www.tumblr.com/bookwyrminspiration/741545331079233536' style='font-size: 0.8em'>bookwyrminspiration</a></i>",
-        "my OCs are sooo cool you guys don't know what you're missing. if you could see the show i'm watching in my head rn you'd go so crazy i'm telling u<br/><i>— <a href='https://www.tumblr.com/dogboygirl/774879317337554944' style='font-size: 0.8em'>dogboygirl</a></i>",
-        "I only have 5 hp please be gentle with me<br/><i>— <a href='https://sexygaywizard.tumblr.com/post/770969616628547584' style='font-size: 0.8em'>sexygaywizard</a></i>",
-        "hyperfixation please stay with me long enough to complete the project. hyperfixation do not fade. hyperfixation finish what you started for the love of god<br/><i>— <a href='https://sourdough-seal.tumblr.com/post/770167035926872064' style='font-size: 0.8em'>sourdough-seal</a></i>",
-        "I swear to god I am going to (remembers nothing) (stares directly at the fucking<br/><i>— <a href='https://footlongdingledong.tumblr.com/post/759469279462703104' style='font-size: 0.8em'>footlongdingledong</a></i>",
-        "if you have ocs it is so so so important that you have Barbie Time™ (drawing them over and over wearing all sorts of different outfits)<br/><i>— <a href='https://sabertoothwalrus.tumblr.com/post/778247723113644032' style='font-size: 0.8em'>sabertoothwalrus</a></i>",
-        "the fact that i have to be in the “right headspace” to do even the simplest tasks. absolutely humiliating <br/><i>— <a href='https://www.tumblr.com/dumbsuicidalteen/687722284317884416' style='font-size: 0.8em'>dumbsuicidalteen</a></i>",
-        "i wish we could have subtitles in real life bc i really can’t hear anything anyone is saying to me<br/><i>— <a href='https://lylylylylylylylyly.tumblr.com/post/627989621255634944' style='font-size: 0.8em'>lylylylylylylylyly</a></i>",
-        "Oh that two year gap on my resume was when I was the architect of my own hell<br/><i>— <a href='https://nerdjpg.com/post/749751284544995328' style='font-size: 0.8em'>nerdjpg</a></i>",
-        "me (insane) talking to myself (still insane): youre not insane. and neither am i<br/><i>— <a href='https://www.tumblr.com/jesuschristfinalgirl/733303956491665408' style='font-size: 0.8em'>jesuschristfinalgirl</a></i>",
-        "stop talking to me I just woke up seven (7) hours ago<br/><i>— <a href='https://www.tumblr.com/andreweatspussy111/771865146875379712' style='font-size: 0.8em'>[nsfw username sowwy]</a></i>",
-        "people might think creating OC lore involves a lot of thinking & planning, but in my personal experience, OC development is more like a divine vision from a god slamming you over the head with a mallet while ur doing the fuckin dishes or folding laundry<br/><i>— <a href='https://retquits.tumblr.com/post/780394196519518208' style='font-size: 0.8em'>retquits</a></i>",
-        "everything was better in the early 2000s esp. my extreme ignorance of the world and roller coaster tycoon 2<br/><i>— <a href='https://sylviegirly.tumblr.com/post/780472611839885312' style='font-size: 0.8em'>nosdrinker</a></i>"
-];
-
 const quotes = [
+        {
+                quote: "Nothing will force you to level up your art skills quite like the desire to see your OC bang a canon character",
+                author: "full---ofstarlight",
+                url: "https://full---ofstarlight.tumblr.com/post/791953808968253440"
+        },
+        {
+                quote: "Please don’t send me mixed signals i barely understand the direct ones",
+                author: "dont-give-a-fuck",
+                url: "https://dont-give-a-fuck-club.tumblr.com"
+        },
+        {
+                quote: "coffee isn’t enough i need to get electrocuted",
+                author: "disgustinggf",
+                url: "https://disgustinggf.tumblr.com/post/772386149443485696"
+        },
+        {
+                quote: "you might ship the same characters as me but i ship them in a far acer and more asexual way than you ever will",
+                author: "whywoulditho",
+                url: "https://www.tumblr.com/whywoulditho/671088273218846720"
+        },
+        {
+                quote: "girls love having their little digital archives",
+                author: "pikopuri",
+                url: "https://pikopuri.tumblr.com/post/734912155519991808"
+        },
+        {
+                quote: "everything was better in the early 2000s esp. my extreme ignorance of the world and roller coaster tycoon 2",
+                author: "nosdrinker",
+                url: "https://sylviegirly.tumblr.com/post/780472611839885312"
+        },
+        {
+                quote: "people might think creating OC lore involves a lot of thinking & planning, but in my personal experience, OC development is more like a divine vision from a god slamming you over the head with a mallet while ur doing the fuckin dishes or folding laundry",
+                author: "retquits",
+                url: "https://retquits.tumblr.com/post/780394196519518208"
+        },
+        {
+                quote: "stop talking to me I just woke up seven (7) hours ago",
+                author: "[nsfw username sowwy]",
+                url: "https://www.tumblr.com/andreweatspussy111/771865146875379712"
+        },
+        {
+                quote: "me (insane) talking to myself (still insane): youre not insane. and neither am i",
+                author: "jesuschristfinalgirl",
+                url: "https://www.tumblr.com/jesuschristfinalgirl/733303956491665408"
+        },
+        {
+                quote: "Oh that two year gap on my resume was when I was the architect of my own hell",
+                author: "nerdjpg",
+                url: "https://nerdjpg.com/post/749751284544995328"
+        },
+        {
+                quote: "i wish we could have subtitles in real life bc i really can’t hear anything anyone is saying to me",
+                author: "lylylylylylylylyly",
+                url: "https://lylylylylylylylyly.tumblr.com/post/627989621255634944"
+        },
+        {
+                quote: "the fact that i have to be in the “right headspace” to do even the simplest tasks. absolutely humiliating",
+                author: "dumbsuicidalteen",
+                url: "https://www.tumblr.com/dumbsuicidalteen/687722284317884416"
+        },
+        {
+                quote: "if you have ocs it is so so so important that you have Barbie Time™ (drawing them over and over wearing all sorts of different outfits)",
+                author: "sabertoothwalrus",
+                url: "https://sabertoothwalrus.tumblr.com/post/778247723113644032"
+        },
+        {
+                quote: "I swear to god I am going to (remembers nothing) (stares directly at the fucking",
+                author: "footlongdingledong",
+                url: "https://footlongdingledong.tumblr.com/post/759469279462703104"
+        },
+        {
+                quote: "hyperfixation please stay with me long enough to complete the project. hyperfixation do not fade. hyperfixation finish what you started for the love of god",
+                author: "sourdough-seal",
+                url: "https://sourdough-seal.tumblr.com/post/770167035926872064"
+        },
+        {
+                quote: "I only have 5 hp please be gentle with me",
+                author: "sexygaywizard",
+                url: "https://sexygaywizard.tumblr.com/post/770969616628547584"
+        },
+        {
+                quote: "my OCs are sooo cool you guys don't know what you're missing. if you could see the show i'm watching in my head rn you'd go so crazy i'm telling u",
+                author: "dogboygirl",
+                url: "https://www.tumblr.com/dogboygirl/774879317337554944"
+        },
+        {
+                quote: "god I would be UNSTOPPABLE if I was capable of consistently initiating tasks. just you wait. you'll be waiting a while but just you wait",
+                author: "bookwyrminspiration",
+                url: "https://www.tumblr.com/bookwyrminspiration/741545331079233536"
+        },
+        {
+                quote: "wow! that was a fun accidental 2 hour session of video's game. now to go to the kitchen to check on my pet Pot Of Boiling Water...",
+                author: "st4rm41d",
+                url: "https://st4rm41d.tumblr.com/post/759360073079373824"
+        },
+        {
+                quote: "No no you don't understand! I <i>want</i> to watch this show/movie, read this book, listen to this podcast, etc.! But I <i>must</i> be in the right mindset and the exact head space to begin, or I just <i>can't</i>!",
+                author: "crazycatsiren",
+                url: "https://crazycatsiren.tumblr.com/post/702924648274444288"
+        },
+        {
+                quote: "fucking whatever man. [my plumbob changes from green to red instantly]",
+                author: "rabbitscreams",
+                url: "https://rabbitscreams.tumblr.com/post/773796722000478208"
+        },
+        {
+                quote: "[about my own oc, who i created] in theory its possible she would say that, but we just dont know for sure",
+                author: "earthmoveryuri",
+                url: "https://earthmoveryuri.tumblr.com/post/775330353635262464"
+        },
+        {
+                quote: "Get up girls we have another day of obsessing over fictional characters to cope with reality ahead of us",
+                author: "euphoricfez",
+                url: "https://sylviegirly.tumblr.com/post/775491641278595072"
+        },
+        {
+                quote: "clocking in for another day at the i dont wanna factory",
+                author: "cbc-bb",
+                url: "https://cbc-bb.tumblr.com/post/744838020593827840"
+        },
+        {
+                quote: "i hope i am not only a mutual to you but also someone you can point at a fictional character and go 'oh shit that guy on tumblr is super fucking mentally unwell about that one' about",
+                author: "adolescenceknight",
+                url: "https://www.tumblr.com/adolescenceknight/754619849466118144"
+        },
+        {
+                quote: "so embarrassing to have a favorite character honestly. like yes that's my specialest guy <span style='aria-hidden='true''>🙄</span> yes i have 200 photos of him saved <span style='aria-hidden='true''>😑</span> if i don't look at him or hear him talk every 2 minutes i'll start killing the hostages <span style='aria-hidden='true''>😕</span> i think about him every day. because he's my favorite. whatever",
+                author: "eastgaysian",
+                url: "https://sylviegirly.tumblr.com/post/782557603776675840"
+        },
+        {
+                quote: "my new hobby is saying “sorry I’ve been in a weird place recently” like I’ve ever been in a normal place to begin with",
+                author: "prinxessinwonderlxnd",
+                url: "https://www.tumblr.com/prinxessinwonderlxnd/773842357217001472"
+        },
+        {
+                quote: "'cozy game' maybe for YOU. I have spreadsheets",
+                author: "pancakeke",
+                url: "https://pancakeke.tumblr.com/post/779132355587850240"
+        },
+        {
+                quote: "Sorry for being incapable of answering a question without like 900 'It dependssss' prefaces. Unfortunately too many things depend on too many things",
+                author: "bongjoonheaux",
+                url: "https://www.tumblr.com/bongjoonheaux/743601781950562304"
+        },
+        {
+                quote: "*likes your personal post that i don’t fully understand or have context for just so you know i’m listening and i care about you*",
+                author: "nicollekidman",
+                url: "https://nicollekidman.tumblr.com/post/110421882191"
+        },
+        {
+                quote: "i struggle between wanting to stay up late and wanting extra hours of sleep",
+                author: "vaniccio",
+                url: "https://www.tumblr.com/vaniccio/50789714025"
+        },
+        {
+                quote: "ahaha yeah my feelings for that character have totally calmed down [sees picture of them] ahaha never mind. aha. ha. i lied. <i>i fucking lied. i lied so much ahahaha i’m a fucking liar i have no control in my life ahaha help me</i>",
+                author: "greelin",
+                url: "https://www.tumblr.com/greelin/66636772627"
+        },
+        {
+                quote: "people who don't experience hyperfixation don't know what it feels like to hyperfixate so much on something that it becomes not only your subject of obsession but also your source of happiness and literally the main reason why you still keep going; literal source of strength and life.<br/><br/>shoutout to my favorite fictional characters, favorite people, favorite ships, favorite movies, favorite tv shows, fanfics and archive of our own",
+                author: "001x456",
+                url: "https://www.tumblr.com/001x456/778084143075557376"
+        },
+        {
+                quote: "50 shades of dark circles under my eyes",
+                author: "macklemack",
+                url: "https://sylviegirly.tumblr.com/post/95569538452"
+        },
+        {
+                quote: "ARE YOU READY TO SEE SOME CHARACTERS DRAWN FROM 3/4THS VIEW FACING LEEEFFFTTT [AUDIENCE ROARS]",
+                author: "[nsfw name sowwy]",
+                url: "https://sylviegirly.tumblr.com/post/95745379327"
+        },
+        {
+                quote: "dude god could come down from heaven with a million angels and tell me that gif is pronounced “jif” and i still wouldn’t fucking do it",
+                author: "johnkatier",
+                url: "https://sylviegirly.tumblr.com/post/102759006337"
+        },
+        {
+                quote: "here’s to the kids that use fictional characters as a way of coping. here’s to the kids that stay up late crying to their favourite characters. here’s to the kids that imagine their favourite character by their side when they’re experiencing bad anxiety in public. here’s to the kids that need works of fiction to keep on surviving.",
+                author: "arodaryldixon",
+                url: "https://sylviegirly.tumblr.com/post/104310655597"
+        },
+        {
+                quote: "I’ve mastered the art of pretending to be tired instead of admitting I’m sad",
+                author: "nerdysarcasm",
+                url: "https://nerdysarcasm.tumblr.com/post/103775237548"
+        },
+        {
+                quote: "one of my best skills is being able to tell which download button is the actual download button",
+                author: "fartgallery",
+                url: "https://sylviegirly.tumblr.com/post/106011329887"
+        },
+        {
+                quote: "“man i am so tired” stays up for 3 more hours doing absolutely nothing",
+                author: "thebagofholding",
+                url: "https://sylviegirly.tumblr.com/post/106024681557"
+        },
+        {
+                quote: "sorry i never replied. everyday is blending together and im losing sense of time",
+                author: "godofthelairrss",
+                url: "https://www.tumblr.com/godofthelairrss/780564313029197824"
+        },
+        {
+                quote: "blorbo art should take zero effort and time to make. It should just manifest straight out of your mind whenever you want it to",
+                author: "thetwilightroadtonightfall",
+                url: "https://thetwilightroadtonightfall.tumblr.com/post/781575863127900160"
+        },
+        {
+                quote: "if u are ever scared of yapping about your blorbo or your life or your creative projects on the dash bc u are worried that no one wants to see it. know that I am holding your hand and supporting you. I want to see it. make that shitpost I need to read it posthaste",
+                author: "yinyuedijun",
+                url: "https://yinyuedijun.tumblr.com/post/772054085890342912"
+        },
+        {
+                quote: "hate when I wanna talk to a person but I don’t really have anything to say. but I yearn for the connection. can’t just message someone like, hi I have nothing in particular to say but you’re fun and cool and I would like to have a conversation",
+                author: "bramble-berries",
+                url: "https://www.tumblr.com/bramble-berries/763913039327199232"
+        },
+        {
+                quote: "what a day!!!!!!!! nothing happened and i was tired",
+                author: "largecoin",
+                url: "https://sylviegirly.tumblr.com/post/107949319872"
+        },
+        {
+                quote: "might seem like a harmless quirk but once you start typing in exclusively lowercase you can never capitalize anything again outside the designated midsentence Gay Emphasis Zones or anyone following you for longer than a week will think you're about to commit murder",
+                author: "bisopod",
+                url: "https://www.tumblr.com/bisopod/181325591472"
+        },
+        {
+                quote: "being crazy over fictional characters is so funny cuz you'll be fine all day and then you start Thinking and then you can feel yourself transform in real time",
+                author: "lvmimis",
+                url: "https://www.tumblr.com/lvmimis/778773766824247296"
+        },
+        {
+                quote: "unfortunately I am a yapper and I am an oversharer i am just not a nonchalant mysterious person",
+                author: "bakwaaas",
+                url: "https://www.tumblr.com/bakwaaas/784653778859245568"
+        },
+        {
+                quote: "'being obsessed with your ocs is so embarrassing' no it isn't. we're returning to our noble roots of playing dolls. stop self depricating and tell me about your guy.",
+                author: "reliquarian",
+                url: "https://www.tumblr.com/reliquarian/768853194256351232"
+        },
+        {
+                quote: "Having one-sided beef with one specific character is so funny. Like I can see a million characters who do terrible things and be like “whatever.” But then there’s one specific motherfucker who pissed me off so bad that I’d run them over at a red light if given the chance.",
+                author: "phantomrose96",
+                url: "https://phantomrose96.tumblr.com/post/785706745505906688"
+        },
+        {
+                quote: "I am a grown ass adult and I still get nausea when I feel like I'm in trouble. They're gonna send me to the principals office and take away my toys for a week. Can you just fucking kill me instead of making me stew in my fucking anxiety",
+                author: "pokeballvictim",
+                url: "https://www.tumblr.com/pokeballvictim/781557497418956800"
+        },
         {
                 quote: "it's so wild to me that you absolutely cannot force a hyperfixation to happen. like you'll watch the most perfectly tailor-made-for-you content that everyone says you'll love and feel absolutely nothing, and then the thing you watch on a whim to fill time will reach through the screen and put its damn fingers in your brain and start rearranging the neurons right in front of you and every single time you're like THIS??? THIS??????? and this happens like every 6-12 months forever",
                 author: "skulandcrossbones",
