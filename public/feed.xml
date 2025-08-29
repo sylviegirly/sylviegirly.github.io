@@ -9,7 +9,21 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-08-26T12:51:03-04:00</updated>
+    <updated>2025-08-28T22:55:06-04:00</updated>
+
+    <entry>
+        <title>2 New Recipes!</title>
+        <link href="https://zhongvie.neocities.org/recipes" />
+        <updated>2025-08-28T22:55:06-04:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1756436106</id>
+        <content type="html">
+            &#x3C;p&#x3E;Finally did added the &#x3C;a
+            href=&#x22;https://zhongvie.neocities.org/recipes/matcha-cookies&#x22;&#x3E;matcha cookie&#x3C;/a&#x3E; and
+            &#x3C;a href=&#x22;https://zhongvie.neocities.org/recipes/basa-filet&#x22;&#x3E;basa filet&#x3C;/a&#x3E;
+            recipes to my site!! Knocking out more of my greyed out recipes, though the japanese curry one will be a
+            mouthful when I get around to it&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New Blog About Sims 3 + Minecraft Page Retiring (Temporarily)</title>
