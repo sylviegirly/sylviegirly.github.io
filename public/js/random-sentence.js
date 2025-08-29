@@ -1,5 +1,20 @@
 const quotes = [
         {
+                quote: "the human brain literally needs the color green (grass, leafs) to like self-calibrate and not go insane i sincerely believe this",
+                author: "holyunholy",
+                url: "https://sylviegirly.tumblr.com/post/793169846231810048"
+        },
+        {
+                quote: "i could be your girlfriend who never texts you back",
+                author: "probuccalfat",
+                url: "https://www.tumblr.com/probuccalfat/784303417759842304"
+        },
+        {
+                quote: "having ocs is so fucked …. i miss them so bad but im the guy who has to create new content. but im sleepy",
+                author: "molabuddy",
+                url: "https://molabuddy.tumblr.com/post/786691855634022400"
+        },
+        {
                 quote: "Nothing will force you to level up your art skills quite like the desire to see your OC bang a canon character",
                 author: "full---ofstarlight",
                 url: "https://full---ofstarlight.tumblr.com/post/791953808968253440"
@@ -7,7 +22,7 @@ const quotes = [
         {
                 quote: "Please don’t send me mixed signals i barely understand the direct ones",
                 author: "dont-give-a-fuck",
-                url: "https://dont-give-a-fuck-club.tumblr.com"
+                url: "https://dont-give-a-fuck-club.tumblr.com/post/790682565082284032"
         },
         {
                 quote: "coffee isn’t enough i need to get electrocuted",
