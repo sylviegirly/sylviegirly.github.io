@@ -1,15 +1,14 @@
-import accessibleMenu from "https://esm.sh/accessible-menu@4.2.0";
+import accessibleMenu from "https://esm.sh/accessible-menu@4.2.2";
+document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector("nav");
+    const menuElement = nav.querySelector("ul");
+    const controllerElement = nav.querySelector("button");
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const nav = document.querySelector("nav");
-            const menuElement = nav.querySelector("ul");
-            const controllerElement = nav.querySelector("button");
-
-            const menu = new accessibleMenu.Menubar({
-                menuElement,
-                submenuItemSelector: ".dropdown",
-                containerElement: nav,
-                controllerElement,
-                hoverType: "dynamic" // "on", "dynamic"
-            });
-        });
+    const menu = new accessibleMenu.Menubar({
+        menuElement,
+        submenuItemSelector: ".dropdown",
+        containerElement: nav,
+        controllerElement,
+        hoverType: "dynamic" // "on", "dynamic"
+    });
+});

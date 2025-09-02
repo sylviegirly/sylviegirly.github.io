@@ -7,10 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var fontForm = document.getElementById("fontFamily");
 
     if (!localStorage.getItem("fontFamily")) {
-        console.log("trying to populate fonts");
         populateStorage();
     } else {
-        console.log("trying to set existing styles");
         setStyles();
     }
 
@@ -21,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function setStyles() {
         var currentFont = localStorage.getItem("fontFamily");
-        console.log("help, what the fuck is the current font: " + currentFont);
         document.getElementById("fontFamily").value = currentFont;
 
         bodyElem.style.fontFamily = currentFont;
