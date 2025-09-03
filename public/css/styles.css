@@ -1204,9 +1204,6 @@ article .scrollable p:first-child {
 
 .images {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     width: calc(100% + 5px + 5px);
     margin-left: -5px;
     margin-right: -5px;
