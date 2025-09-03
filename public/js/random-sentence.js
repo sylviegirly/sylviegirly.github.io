@@ -1,5 +1,10 @@
 const quotes = [
         {
+                quote: "[said with increasing amount of distress] i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this ",
+                author: "bat-luun",
+                url: "https://bat-luun.tumblr.com/post/786585052036366336"
+        },
+        {
                 quote: "the human brain literally needs the color green (grass, leafs) to like self-calibrate and not go insane i sincerely believe this",
                 author: "holyunholy",
                 url: "https://sylviegirly.tumblr.com/post/793169846231810048"

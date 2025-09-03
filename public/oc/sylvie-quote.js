@@ -1,5 +1,75 @@
 const quotes = [
     {
+        quote: "died and came back wrong and no one could tell the difference",
+        author: "digitalbeachrave",
+        url: "https://www.tumblr.com/digitalbeachrave/748914822907887616"
+    },
+    {
+        quote: "tip: everything you pretend to becomes a part of what you are and even the facade you wear for the sake of deception reveals a crucial truth.",
+        author: "dateamonster",
+        url: "https://dateamonster.tumblr.com/post/713087425678917632"
+    },
+    {
+        quote: "ok whatever idc *bites you so hard and dont let go*",
+        author: "sailorbrazil",
+        url: "https://www.tumblr.com/sailorbrazil/762102592090357760"
+    },
+    {
+        quote: "I was bleeding out in the snow and it was all cool and stuff until like a bunch of teenager showed up and then It got really cringe so I put all the blood back and went to go bleed out somewhere else but all the good bleed out places were taken so I decided just to die like a natural peaceful death like look overlooking the Cliffside but lo and behold somebody’s already fucking dying there against a tree and it looks way sicker than what I had planned I guess I’ll just fucking live",
+        author: "bewbin",
+        url: "https://bewbin.tumblr.com/post/769324896296878080"
+    },
+    {
+        quote: "i think if i focused really really hard i could grow a leaf",
+        author: "m3djed",
+        url: "https://m3djed.tumblr.com/post/737378098356617216"
+    },
+    {
+        quote: "hey you forgot to profess your love for me btw. don't be embarrassed there's still time.",
+        author: "deadnow",
+        url: "https://sylviegirly.tumblr.com/post/774767126791815168"
+    },
+    {
+        quote: "the curse is lifted! you are no a beast no more! congratulations! but you'll never forget the way they looked at you, will you.",
+        author: "strawberry-crocodile",
+        url: "https://strawberry-crocodile.tumblr.com/post/770438982932824064"
+    },
+    {
+        quote: "disembowling a clowngirl and I'm trying to yank out her intestines but they just keep coming. its been 30 minutes and there's no end in sight. she's laughing at me",
+        author: "maidthings",
+        url: "https://www.tumblr.com/maidthings/772262943555534848"
+    },
+    {
+        quote: "sigh im lonely anyone wanna come kiss me silly",
+        author: "pansyfemme",
+        url: "https://www.tumblr.com/pansyfemme/771248011199332352"
+    },
+    {
+        quote: "girl you are killing it! girl i think it's dead! girl you can stop STABBING",
+        author: "mythology-void",
+        url: "https://www.tumblr.com/mythology-void/765908991748571136"
+    },
+    {
+        quote: "of course your heart is safe here, my palms have been cleaned from the flow of spring water and my arms have been stretches by the trunks of trees so wide and my soul has been sprinkled with the detritus of the ground - come be at peace in my body of moss and spirit of green ",
+        author: "oflambandmoss",
+        url: "https://www.tumblr.com/oflambandmoss/773945092351361024"
+    },
+    {
+        quote: "my autopsy results came back negative There was nothing in there",
+        author: "taxidermychrist",
+        url: "https://sylviegirly.tumblr.com/post/777056215517872128"
+    },
+    {
+        quote: "dude i love how chill and selfless you are 😄 by any chance is your wildest fantasy to be Useful?",
+        author: "goldensunset",
+        url: "https://goldensunset.tumblr.com/post/789615376421044225"
+    },
+    {
+        quote: "ugh. forget everything i’ve ever said. unless you thought it was smart or funny in which case remember it forever",
+        author: "justsomeguycore",
+        url: "https://justsomeguycore.tumblr.com/post/779498010694533120"
+    },
+    {
         quote: "sorry i was passionate & intense & insane. it will happen again",
         author: "drops-of-universe",
         url: "https://drops-of-universe.tumblr.com/post/756474012450848769"
