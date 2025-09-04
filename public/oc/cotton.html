@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    --->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Send to not found page is there's no javascript -->
+        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+
+        <!-- Site Title -->
+        <title>Cotton</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="A character page for an original character named Raiden." name="description" />
+
+        <!-- FavIcon Gif -->
+        <link rel="icon" type="image/gif" href="../img/oc/cotton/favicon.gif" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+            if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" type="text/css" href="../css/character.css" />
+        <link rel="stylesheet" href="../css/lightbox.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JS: -->
+        <script src="../js/lightbox-plus-jquery.js"></script>
+        <script src="character-nav.js" defer></script>
+        <script src="../js/marquee-setup.js"></script>
+        <script src="../js/marquee.js"></script>
+        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
+        <script src="../js/tab-title-suffix.js"></script>
+        <style>
+            :root {
+                --header-image: url("https://images.unsplash.com/photo-1696002289393-67e01f47ca51?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                --focal-image: url("../img/oc/cotton/focal_image.png");
+                --focal-trivia-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/10580891_Kvxib6svP0T3tBs.png?1612478248");
+                --design-image: url("../img/oc/cotton/design_image.png");
+
+                --moodboard-1-image: url("https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                --moodboard-2-image: url("https://images.unsplash.com/photo-1581700261299-b342aa7174cf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                --moodboard-3-image: url("https://plus.unsplash.com/premium_photo-1683141106292-efb635b8b24a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGluayUyMGFuZCUyMGJsdWV8ZW58MHx8MHx8fDA%3D");
+                --moodboard-4-image: url("https://images.unsplash.com/photo-1611041760334-c9e233af24db?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                --moodboard-5-image: url("https://plus.unsplash.com/premium_photo-1683134305260-508827be1348?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D");
+
+                /* Main colors */
+                --background: #e4d5db; /* Page background */
+                --background-accent: #e3e7e8;
+                --color: #1c0e0e;
+                --block: #f9eef0; /* Background color for the grid blocks in the content */
+                --body-deco: #f0e5e9;
+
+                --primary-accent: #c85786;
+                --secondary-accent: #3a8b70;
+                --font-on-accent: #ffffff;
+
+                --link: #b13167;
+                --linkhover: #74dbb0;
+
+                --letter-glow: rgba(68, 232, 170, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #f9eef0;
+                --sidebarcolor: #1c0e0e;
+                --subtle-line: rgba(190, 22, 92, 0.2);
+
+                @media (prefers-color-scheme: dark) {
+                    /* Main colors */
+                    --background: #1a1e2a; /* Page background */
+                    --background-accent: #1d272e;
+                    --color: #eff1f5;
+                    --block: #0d1015; /* Background color for the grid blocks in the content */
+                    --body-deco: #181a1e;
+
+                    --primary-accent: #8ea6cc;
+                    --secondary-accent: #798b99;
+                    --font-on-accent: #000000;
+
+                    --link: #7ed3ed;
+                    --linkhover: #ffffff;
+
+                    --letter-glow: rgba(56, 145, 159, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #0d1015;
+                    --sidebarcolor: #eff1f5;
+                    --subtle-line: rgba(135, 181, 255, 0.2);
+                }
+
+                .focal {
+                    background-position: center !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Please don't remove the next 2 lines! -->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+        <nav-header></nav-header>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div id="container">
+            <div id="sidebar">
+                <div id="sidebar-content">
+                    <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+                    <div class="icon">
+                        <img
+                            src="../img/oc/cotton/thumbnail.png"
+                            alt=""
+                            aria-hidden="true"
+                            style="background-color: pink" />
+                    </div>
+                    <div class="header">Cotton</div>
+                    <hr />
+                    <!-- Navigation menu  -->
+                    <div class="" id="main-menu">
+                        <ul>
+                            <li><a href="https://toyhou.se/3055645.cotton">Toyhouse</a></li>
+                        </ul>
+                    </div>
+                    <hr />
+                    <p>
+                        An old adoptable I had made on DeviantART back in 2011, and they were pretty much the original
+                        baby that began that species.
+                    </p>
+                    <hr />
+                    <button class="accordion">Credits</button>
+                    <div class="panel">
+                        <ul>
+                            <li>
+                                Stamps: <a href="https://www.deviantart.com/hematology">hematology</a>,
+                                <a href="https://www.deviantart.com/virus-xenon">virus-xenon</a>,
+                                <a href="https://www.deviantart.com/puniplush">puniplush</a>,
+                                <a href="https://www.deviantart.com/king-lulu-deer-pixel">king-lulu-deer-pixel</a>,
+                                <a href="https://www.deviantart.com/pinkjellies99">pinkjellies99</a>,
+                                <a href="https://www.deviantart.com/celestialbeauties">celestialbeauties</a>,
+                                <a href="https://www.deviantart.com/puffcats">puffcats</a>,
+                                <a href="https://www.deviantart.com/x-end-the-pain-x">x-end-the-pain-x</a>
+                            </li>
+                            <li>
+                                Flags: <a href="https://toyhou.se/21355465.my-tiny-pride-flags/gallery">l0stlights</a>
+                            </li>
+                            <li>
+                                Ribbons: <a href="https://toyhou.se/15560571.ribbon-repository-updating">repository</a>
+                            </li>
+                            <li>
+                                Header + Moodboards: <a href="https://www.pexels.com">pexels</a> +
+                                <a href="https://unsplash.com/">unsplash</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content area -->
+            <main id="content">
+                <!-- Section tags must be used for blocks -->
+
+                <!-- CHARACTER INFORMATION: DESKTOP ------------------------------>
+                <section class="twothird second-order">
+                    <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
+                    <h1>goofy dog-lizard</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div>cotton</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>unknown</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>unlabeled</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">role</div>
+                                    <div>ouppy</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>true neutral</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- BIRTHDAY -->
+                                    <div class="stat-name">birthday</div>
+                                    <div>none</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>n/a</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>furzilla</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>it / they</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">mbti</div>
+                                    <div>n/a</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">element</div>
+                                    <div>n/a</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-gem" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GEMSTONE -->
+                                    <div class="stat-name">gemstone</div>
+                                    <div>kunzite</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            A shaped friend; Cotton doesn't have many developed details outside of being a creature who
+                            likes sweets and acts very dog-like. They naturally talk in chirps and squeaks; albeit it
+                            can't speak, it can fully understand what is being said to them (think of it like the animal
+                            speak in Baldur's Gate 3, althought they can't talk, they basically think and function to
+                            that level of sentience/intelligence).
+                        </p>
+                    </div>
+                </section>
+
+                <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
+                <section class="third focal" style="background-color: pink" data-tippy-content="Art by pandalecko">
+                    <div class="flags">
+                        <img src="../img/flags/unlabeled.png" alt="unlabeled flag" data-tippy-content="Unlabeled" />
+                    </div>
+                </section>
+
+                <!-- CHARACTER INFORMATION: MOBILE ------------------------------>
+                <section class="twothird first-order">
+                    <!-- DESKTOP INFORMATION, PLEASE COPY AND PASTE TO MOBILE -->
+                    <h1>goofy dog-lizard</h1>
+                    <div class="row">
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NAME -->
+                                    <div class="stat-name">name</div>
+                                    <div>cotton</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-hourglass" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">age</div>
+                                    <div>unknown</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GENDER -->
+                                    <div class="stat-name">gender</div>
+                                    <div>unlabeled</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">role</div>
+                                    <div>ouppy</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- AGE -->
+                                    <div class="stat-name">alignment</div>
+                                    <div>true neutral</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- BIRTHDAY -->
+                                    <div class="stat-name">birthday</div>
+                                    <div>none</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- NICKNAMES / ALT NAMES -->
+                                    <div class="stat-name">called</div>
+                                    <div>n/a</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-dna" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- SPECIES -->
+                                    <div class="stat-name">species</div>
+                                    <div>furzilla</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-asterisk" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- PRONOUNS -->
+                                    <div class="stat-name">pronouns</div>
+                                    <div>it / they</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">mbti</div>
+                                    <div>n/a</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-name">element</div>
+                                    <div>n/a</div>
+                                </div>
+                            </div>
+                            <div class="stat-holder">
+                                <div class="statcon">
+                                    <i class="fa-regular fa-gem" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <!-- GEMSTONE -->
+                                    <div class="stat-name">gemstone</div>
+                                    <div>kunzite</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollable">
+                        <p>
+                            A shaped friend; Cotton doesn't have many developed details outside of being a creature who
+                            likes sweets and acts very dog-like. They naturally talk in yips, chirps, and squeaks;
+                            albeit it can't speak, it can fully understand what is being said to them (think of it like
+                            the animal speak in Baldur's Gate 3, althought they can't talk, they basically think and
+                            function to that level of sentience/intelligence).
+                        </p>
+                    </div>
+                </section>
+
+                <!-- AESTHETIC STAMPS --------------------------------->
+                <section class="full">
+                    <div class="badgeholder" style="justify-content: space-evenly">
+                        <img src="../img/oc/cotton/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/cotton/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/cotton/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/cotton/stamp_4.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/cotton/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/cotton/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/cotton/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="../img/oc/cotton/stamp_8.png" aria-hidden="true" alt="" loading="lazy" />
+                    </div>
+                </section>
+
+                <!-- PERSONALITY SLIDERS ------------------------------>
+                <section class="full">
+                    <h1>Character</h1>
+                    <div class="sliderow">
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>friendly</span>
+                                <span>reserved</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 3%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>polite</span>
+                                <span>blunt</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 20%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>clever</span>
+                                <span>foolish</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 50%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sensitive</span>
+                                <span>tough</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 40%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>confident</span>
+                                <span>diffident</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 25%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>careful</span>
+                                <span>reckless</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 75%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>sincere</span>
+                                <span>deceptive</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 15%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>diligent</span>
+                                <span>lazy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 40%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>calm</span>
+                                <span>irritable</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 20%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>hopeful</span>
+                                <span>pessimistic</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 10%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>organized</span>
+                                <span>messy</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 75%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER -->
+                        <div class="slidewrapper">
+                            <div class="slidetext">
+                                <span>humorous</span>
+                                <span>serious</span>
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="progressbar">
+                                    <div class="progresschunk" style="width: 25%">
+                                        <div class="progressbutton"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PERSONALITY ------------------------------>
+                <section class="full">
+                    <h2>About</h2>
+                    <p>
+                        When standing on all four limbs with its neck in a normal position, its height reaches to about
+                        7’1” and about 13’ in length from snout to tail. Soft and short fur covers their body, while it
+                        has a mane that begins at the top of their head and falls down to their shoulders. The fur at
+                        the tips of their paws seems to ‘harden’ into claws, and can easily be used for climbing or when
+                        fighting. Teeth line the inside of their mouth, though they are not visible, and ithas a long
+                        tongue that can be useful when cleaning himself or reaching objects. It is an omnivore, though
+                        leans towards meat and sweets. Their emotions are easily visible in their tail movements and
+                        body language. It has a harder time speaking in this form, having to struggle to make out
+                        works—their native language comes out in yips, chirps and purrs.
+                    </p>
+                </section>
+
+                <!-- MOODBOARD ------------------------------>
+                <section class="full">
+                    <h1>Moodboard</h1>
+                    <div class="moodboard-grid">
+                        <div class="moodboard1"></div>
+                        <div class="moodboard2"></div>
+                        <div class="moodboard3"></div>
+                        <div class="moodboard4"></div>
+                        <div class="moodboard5"></div>
+                    </div>
+                </section>
+
+                <!-- DESIGN ALTERNATIVE LAYOUT WITH IMAGE 2.0 ------------------------------>
+                <section class="half">
+                    <div class="design-info">
+                        <!-- DETAILS -->
+                        <h1>Design Notes</h1>
+                        <div class="stat-holder" style="margin-top: 10px">
+                            <div class="statcon">
+                                <i class="fa-solid fa-ruler" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">height</div>
+                                <div>7'1" / 216 cm</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">eyes</div>
+                                <div>red, no pupils</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">fur length + colour</div>
+                                <div>short aside from mane, a combo of white, teal, and pinks</div>
+                            </div>
+                        </div>
+                        <div class="stat-holder">
+                            <div class="statcon">
+                                <i class="fa-solid fa-question" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="stat-name">extras</div>
+                                <div>their tongue is a split of teal and pink</div>
+                            </div>
+                        </div>
+                        <h2><i class="fa-solid fa-palette" aria-hidden="true"></i> Design Notes</h2>
+                        <ul>
+                            <li style="margin-top: 5px">
+                                The spikes facing downwards was accidental, but it <u>is</u> now a part of the design
+                            </li>
+                            <li>The collar is a must</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="half design-image-alt" data-tippy-content="Art by me"></section>
+
+                <section class="full">
+                    <div class="marquee" data-speed="100">
+                        <img
+                            src="../img/oc/cotton/running.gif"
+                            loading="lazy"
+                            style="margin-left: auto; margin-right: auto; text-align: center"
+                            data-tippy-content="Base by cataclysmicTilde / garchompdra" />
+                    </div>
+                </section>
+
+                <!-- TRIVIA + FOCAL IMAGE -->
+                <section class="third triviafocal" data-tippy-content="Art by cataclysmicTilde / garchompdra"></section>
+
+                <section class="twothird">
+                    <h1>Trivia</h1>
+                    <div class="scrollable">
+                        <ul>
+                            <li>
+                                Based off the
+                                <a href="https://www.deviantart.com/furzilla-reptilifurs">old adoptables</a> I had made
+                                back on DeviantART years ago (they were an open species, so with permission people could
+                                just do recolours to sell for devART points)
+                            </li>
+                            <li>They really are just inspired off my (still current) favourite colours</li>
+                            <li>
+                                I dunno what was wrong with me cause I made a roleplay account where it could change
+                                into a human form ... nope, they can't do that
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- RIBBON COLLECTION ------------------------------>
+                <section class="full">
+                    <h2><i class="fa-solid fa-award" aria-hidden="true"></i> Ribbons and Badges</h2>
+
+                    <div class="badgeholder">
+                        <img
+                            src="../img/ribbons/they-them.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="They/Them: This character uses they/them pronouns." />
+                        <img
+                            src="../img/ribbons/it-its.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="It/Its: This character uses it/its pronouns." />
+                        <img
+                            src="../img/ribbons/unlabeled.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Unlabeled: This character is unlabeled." />
+                        <img
+                            src="../img/ribbons/pretty-mask.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Pretty Mask: This character existed for a long time as just a design with no notable personality or other development/details." />
+                        <img
+                            src="../img/ribbons/boneless.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Boneless: This character has existed as nothing but a cool design for multiple years." />
+                        <img
+                            src="../img/ribbons/cutie.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Cutie: This character has cute themes." />
+                        <img
+                            src="../img/ribbons/pastel.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Easy on the Eyes: This character has pastel themes." />
+                        <img
+                            src="../img/ribbons/sweet-treat.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Sweet Treat - This character is inspired by or related to a dessert/sweet." />
+                        <img
+                            src="../img/ribbons/extinct.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Extinct: This character is part of a dead/inactive species." />
+                        <img
+                            src="../img/ribbons/personal-species.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Lock and Key: This character is part of a personal species." />
+                        <img
+                            src="../img/ribbons/2011.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="2011: This character was made in 2011." />
+                        <img
+                            src="../img/ribbons/oldest-ocs.png"
+                            loading="lazy"
+                            aria-hidden="true"
+                            alt=""
+                            data-tippy-content="Time Ribbon: This is one of your oldest characters." />
+                    </div>
+                </section>
+
+                <!-- PHOTO GALLERY ------------------------------>
+                <section class="full">
+                    <!-- CHANGE THIS LINK TO TH GALLERY -->
+                    <a href="https://toyhou.se/3055645.cotton/gallery" class="viewmore">View More</a>
+                    <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Image Gallery</h2>
+
+                    <div class="image-gallery">
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by me">
+                            <a
+                                href="../img/oc/cotton/gallery_full_1.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../img/oc/cotton/gallery_thumb_1.png" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by cataclysmicTilde / garchompdra">
+                            <a
+                                href="../img/oc/cotton/gallery_full_2.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../img/oc/cotton/gallery_thumb_2.png" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by me">
+                            <a
+                                href="../img/oc/cotton/gallery_full_3.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../img/oc/cotton/thumbnail.png" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by antidarkheart">
+                            <a
+                                href="../img/oc/cotton/gallery_full_4.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../img/oc/cotton/gallery_thumb_4.png" alt=""
+                            /></a>
+                        </div>
+                        <!-- IMAGE -->
+                        <div data-tippy-content="Art by pandalecko">
+                            <a
+                                href="../img/oc/cotton/focal_image.png"
+                                loading="lazy"
+                                data-lightbox="gallery"
+                                aria-label="open image"
+                                ><img src="../img/oc/cotton/gallery_thumb_5.png" alt=""
+                            /></a>
+                        </div>
+                    </div>
+                </section>
+
+                <footer id="main-footer">
+                    <p>
+                        Coded by <a href="https://zhongvie.neocities.org/">Aid</a>, inspired from
+                        <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's layout</a>, using kalechip's
+                        <a href="https://kalechips.net/projects/layouts/">template</a>.
+                    </p>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        <!-- =============================================== -->
+        <!-- Initialize marquee grid. -->
+        <!-- =============================================== -->
+        <script>
+            marquee.setup();
+        </script>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+
+        <!-- Scroll to Top -->
+        <script src="../js/scroll-to-top.js"></script>
+
+        <!-- Accordion Dropdown -->
+        <script src="../js/accordion.js"></script>
+    </body>
+</html>
