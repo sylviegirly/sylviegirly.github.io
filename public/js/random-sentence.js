@@ -1,5 +1,25 @@
 const quotes = [
         {
+                quote: "forgetfulness is wild because sometimes its 'oops silly me i left the house without my wallet again' and sometimes its 'my friend is trying to reminisce on a thing we did together and the fact its jogging nothing in my brain is genuinely kind of distressing'",
+                author: "redstonedust",
+                url: "https://redstonedust.tumblr.com/post/791242224304308224"
+        },
+        {
+                quote: "the urge to yap about my ocs versus never knowing what to yap about",
+                author: "[nsfw username sowwy]",
+                url: "https://www.tumblr.com/monsterfucker69420/786478499576922112"
+        },
+        {
+                quote: "I wasn’t built to be employed. I need to stay up until 4 am like a normal person",
+                author: "calcazars",
+                url: "https://www.tumblr.com/calcazars/786822574561738752"
+        },
+        {
+                quote: "[on the verge of having a complete breakdown] i need to make some kind of list or perhaps sort things into categories",
+                author: "so-many-ocs",
+                url: "https://so-many-ocs.tumblr.com/post/736814110981963776"
+        },
+        {
                 quote: "[said with increasing amount of distress] i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this i got this ",
                 author: "bat-luun",
                 url: "https://bat-luun.tumblr.com/post/786585052036366336"
