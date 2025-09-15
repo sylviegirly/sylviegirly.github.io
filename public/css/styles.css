@@ -408,6 +408,24 @@ footer a {
     text-decoration-thickness: 1px;
 }
 
+.external:after {
+    display: inline-block;
+    content: " ";
+    margin-left: 4px;
+    background-size: 1rem 1rem;
+    background-color: var(--link-colour);
+    height: 0.7rem;
+    width: 0.7rem;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    mask-image: url("../img/misc/external.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-image: url("../img/misc/external.svg");
+}
+
 /* Focus Styling */
 
 a:focus {
