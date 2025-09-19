@@ -126,6 +126,24 @@ details > summary,
     padding: 0;
 }
 
+.external:after {
+    display: inline-block;
+    content: " ";
+    margin-left: 4px;
+    background-size: 1rem 1rem;
+    background-color: var(--accent-color);
+    height: 0.5rem;
+    width: 0.5rem;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    mask-image: url("../img/misc/external.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-image: url("../img/misc/external.svg");
+}
+
 /*some parts of the layout can be hidden/shown depending on if you're on desktop or mobile*/
 .mobile-only {
     display: none;
