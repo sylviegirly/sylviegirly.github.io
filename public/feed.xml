@@ -9,7 +9,19 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-09-04T17:28:05-05:00</updated>
+    <updated>2025-09-20T01:01:21-05:00</updated>
+
+    <entry>
+        <title>New Longer Blog Post</title>
+        <link href="https://zhongvie.neocities.org/blog" />
+        <updated>2025-09-20T01:01:21-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1758348081</id>
+        <content type="html">
+            &#x3C;p&#x3E;Wrote a longer blog post on the concept of having a sona (it&#x27;s not a very coherent blog
+            post, just me dumping out thoughts). Also uploaded a few artworks to the gallery (one of which is context
+            relevant to the blog post anyway LOL).&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New OC page</title>
