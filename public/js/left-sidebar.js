@@ -77,13 +77,13 @@ const sidebar = `
                 <a href="https://www.tumblr.com/lavendergalactic"
                 title="gifs by lavendergalactic as a commission for me. please don't use.">
                 <img
-                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/bites%20you%20shiny%20button.gif"
+                    src="./img/shiny/bites%20you%20shiny%20button.gif"
                     alt="shiny button that says bites you">
                 <img
-                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/silly%20shiny%20button.gif"
+                    src="./img/shiny/silly%20shiny%20button.gif"
                     alt="shiny button that says silly">
                 <img
-                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/zhongvie%20shiny%20button.gif"
+                    src="./img/shiny/zhongvie%20shiny%20button.gif"
                     alt="shiny button that says zhongvie">
                 </a>
             </div>
@@ -102,10 +102,10 @@ const sidebar = `
                 /></a>
             </div>
             <textarea id="site-button" name="site-button">
-&lt;a href="https://zhongvie.neocities.org/"&gt;&lt;img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/sylvieButton.gif" alt="zhongvie button" loading="lazy"&gt;&lt;/a&gt;</textarea
+&lt;a href="https://zhongvie.neocities.org/"&gt;&lt;img src="./img/sylvieButton.gif" alt="zhongvie button" loading="lazy"&gt;&lt;/a&gt;</textarea
             >
             <label for="site-button" class="subtle" style="text-align: center; margin-top: 3px;"
-                >Site button; hotlinking is fine; image is on filegarden. Alt buttons can be found <a href="./links.html">here</a></label
+                >Site button; please save to use. Alt buttons can be found <a href="./links.html">here</a></label
             >
         </div>
     </section>
