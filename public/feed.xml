@@ -9,7 +9,20 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-09-21T15:01:47-05:00</updated>
+    <updated>2025-09-22T13:38:31-05:00</updated>
+
+    <entry>
+        <title>New media log entries</title>
+        <link href="https://zhongvie.neocities.org/media-log" />
+        <updated>2025-09-22T13:38:31-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1758566311</id>
+        <content type="html">
+            &#x3C;p&#x3E;A small handful of reviews have been added to the media log:&#x3C;/p&#x3E; &#x3C;ul&#x3E;
+            &#x3C;li&#x3E;Neighbours from Hell &#x3C;em&#x3E;(game)&#x3C;/em&#x3E;&#x3C;/li&#x3E; &#x3C;li&#x3E;The
+            Summer Hikaru Died &#x3C;em&#x3E;(anime)&#x3C;/em&#x3E;&#x3C;/li&#x3E; &#x3C;li&#x3E;MADK
+            &#x3C;em&#x3E;(manga)&#x3C;/em&#x3E;&#x3C;/li&#x3E; &#x3C;/ul&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Now page updated</title>
@@ -24,7 +37,7 @@
     </entry>
 
     <entry>
-        <title>New Longer Blog Post</title>
+        <title>New longer blog post</title>
         <link href="https://zhongvie.neocities.org/blog" />
         <updated>2025-09-20T01:01:21-05:00</updated>
         <id>https://zhongvie.neocities.org/xml/item1758348081</id>
