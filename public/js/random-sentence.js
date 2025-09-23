@@ -1,5 +1,25 @@
 const quotes = [
         {
+                quote: "making it through the day but at what cost",
+                author: "slavisma",
+                url: "https://www.tumblr.com/slavisma/788446012398338048"
+        },
+        {
+                quote: "i like tagging posts with my ocs and then never actually posting about them. i wonder what my followers think their deals are",
+                author: "solitair-e",
+                url: "https://solitair-e.tumblr.com/post/782943341883146240"
+        },
+        {
+                quote: "really is embarrassing being known for being obsessed with a certain character bc if you start typing ‘arghhh i love Character so much Character is so peak’ it’s like yeah everyone knows. aw look grandma’s going on about her favorite old story again the fifth time this week",
+                author: "goldensunset",
+                url: "https://sylviegirly.tumblr.com/post/795321464144429057"
+        },
+        {
+                quote: "ok time to lock the fuck in *opens discord* ok time to lock the fuck in *opens tumblr* ok time to lock the fuck in *opens gmail* ok time to lock the fuck in *opens youtube* ok time to lock the fuck in *opens an unstable vortex in time and space* ok time to lock the fuck in *opens ao3* ok time to lock the fuck in *opens discord* ok time to lock the fuck in *opens tumblr*",
+                author: "rebornofstars",
+                url: "https://rebornofstars.tumblr.com/post/782332541699063808"
+        },
+        {
                 quote: "forgetfulness is wild because sometimes its 'oops silly me i left the house without my wallet again' and sometimes its 'my friend is trying to reminisce on a thing we did together and the fact its jogging nothing in my brain is genuinely kind of distressing'",
                 author: "redstonedust",
                 url: "https://redstonedust.tumblr.com/post/791242224304308224"
