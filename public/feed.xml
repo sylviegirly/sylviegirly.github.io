@@ -9,7 +9,20 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-09-23T01:43:23-05:00</updated>
+    <updated>2025-09-24T18:09:16-05:00</updated>
+
+    <entry>
+        <title>2017 art gallery complete!</title>
+        <link href="https://zhongvie.neocities.org/gallery#2017" />
+        <updated>2025-09-24T18:09:16-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1758755356</id>
+        <content type="html">
+            &#x3C;p&#x3E;Dang, been on a bit of a roll with these; after figuring out a nicer way to WEBP convert, the
+            only real issue is just making thumbnails of everything and writing up ALT text for each art piece ... to be
+            fair, 2017 only has 24 art pieces compared to 2016 which had 61. Decent amount of commission for this
+            year&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>2016 art gallery complete!</title>
