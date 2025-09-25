@@ -665,15 +665,13 @@ main a {
     transition: 0.5s ease;
 }
 
-main a:hover,
-main a:focus {
+main a:hover {
     color: var(--linkhover);
-    outline: 3px solid var(--linkhover);
-    border-radius: var(--border-radius);
     transition: 0.2s ease;
     text-decoration-thickness: 2px;
 }
 
+main a:focus,
 a img:focus {
     color: var(--linkhover);
     outline: 3px solid var(--linkhover);
