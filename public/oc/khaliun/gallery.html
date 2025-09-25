@@ -96,14 +96,6 @@
                 }
             }
 
-            .tabwrap section {
-                display: none;
-            }
-
-            .tabwrap section:target {
-                display: block;
-            }
-
             button .gallerylink {
                 display: block;
                 margin: 0;
@@ -147,6 +139,26 @@
             .image-gallery div {
                 margin-left: 0;
                 margin-right: 0;
+                position: relative;
+            }
+
+            .image-gallery div span {
+                position: absolute;
+                bottom: 29%;
+                left: 0;
+                width: 100%;
+                box-sizing: border-box;
+                background: rgba(0, 0, 0, 0.44);
+                color: #ffffff;
+                text-align: center;
+                padding: 5px 10px;
+                font-size: 20px;
+                font-family: "dosis";
+            }
+
+            .blur {
+                filter: blur(10px) grayscale(100%);
+                -webkit-filter: blur(10px) grayscale(100%);
             }
         </style>
     </head>
@@ -234,8 +246,8 @@
                                     data-lightbox="artwork"
                                     data-title="Art by me"
                                     aria-label="open image"
-                                    ><img src="img/gallery_thumb_5.jpg" alt=""
-                                /></a>
+                                    ><img src="img/gallery_thumb_5.jpg" alt="" class="blur" /><span>Test</span></a
+                                >
                             </div>
                             <!-- IMAGE -->
                             <div>
