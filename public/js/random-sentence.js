@@ -1,5 +1,15 @@
 const quotes = [
         {
+                quote: "being internet friends is balls bc i'm holding all this affection in my dumb arms and i can't wrap it around somebody so i just have to pack it down into my bones and send another 'lol so us' text until i explode. chewing on all the furniture in my house",
+                author: "sapphling",
+                url: "https://sylviegirly.tumblr.com/post/795689519075737600"
+        },
+        {
+                quote: "an “original character” is like a kind of brain parasite",
+                author: "kageromansion",
+                url: "https://kageromansion.tumblr.com/post/795453484970426368"
+        },
+        {
                 quote: "making it through the day but at what cost",
                 author: "slavisma",
                 url: "https://www.tumblr.com/slavisma/788446012398338048"
