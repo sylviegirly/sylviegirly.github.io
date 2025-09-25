@@ -1298,6 +1298,16 @@ button {
     filter: drop-shadow(3px 3px 0 var(--primary-accent));
 }
 
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* The following CSS ONLY applies to desktop/big screens */
 
 @media screen and (min-width: 800px) {
