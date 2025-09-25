@@ -668,10 +668,21 @@ main a {
 main a:hover,
 main a:focus {
     color: var(--linkhover);
-    outline: 3px solid var(--link-hover);
+    outline: 3px solid var(--linkhover);
     border-radius: var(--border-radius);
     transition: 0.2s ease;
     text-decoration-thickness: 2px;
+}
+
+a img:focus {
+    color: var(--linkhover);
+    outline: 3px solid var(--linkhover);
+    border-radius: var(--border-radius);
+    transition: 0.2s ease;
+}
+
+a:active {
+    text-decoration: none;
 }
 
 main ul {

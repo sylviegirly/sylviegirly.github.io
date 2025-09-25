@@ -117,7 +117,7 @@ body.lb-disable-scrolling {
 
 .lb-nav a.lb-prev:focus {
   opacity: 1;
-  outline: 3px solid orange;
+  outline: 3px solid limegreen;
 }
 
 .lb-nav a.lb-next {
@@ -138,7 +138,7 @@ body.lb-disable-scrolling {
 
 .lb-nav a.lb-next:focus {
   opacity: 1;
-  outline: 3px solid orange;
+  outline: 3px solid limegreen;
 }
 
 .lb-dataContainer {
@@ -201,7 +201,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-close:focus {
-  outline: 3px solid orange;
+  outline: 3px solid limegreen;
 }
 
 .lb-data .lb-close:hover {
