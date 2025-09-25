@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    --->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Send to not found page is there's no javascript -->
+        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+
+        <!-- Site Title -->
+        <title>Khaliun</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="A character page for a Final Fantasy 14 character named Khaliun." name="description" />
+
+        <!-- FavIcon Gif -->
+        <link rel="icon" type="image/gif" href="/public/img/oc/khaliun/favicon.gif" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+            if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" type="text/css" href="/public/css/character.css" />
+        <link rel="stylesheet" href="/public/css/lightbox.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JS: -->
+        <script src="/public/js/lightbox-plus-jquery.js"></script>
+        <script src="../character-nav.js" defer></script>
+        <!-- Disclosure Menu -->
+
+        <script src="/public/js/accessibility/accessible-menu.js" type="module"></script>
+        <script src="/public/js/tab-title-suffix.js"></script>
+        <style>
+            :root {
+                --header-image: url("https://images.pexels.com/photos/6144105/pexels-photo-6144105.jpeg");
+
+                /* Main colors */
+                --background: #d0d9db; /* Page background */
+                --background-accent: #e3ebec;
+                --color: #171616;
+                --block: #ededed; /* Background color for the grid blocks in the content */
+                --body-deco: #f4f4f4;
+
+                --primary-accent: #4c787e;
+                --secondary-accent: #275965;
+                --font-on-accent: #ffffff;
+
+                --link: #3da099;
+                --linkhover: #0a4a5a;
+
+                --letter-glow: rgba(177, 177, 177, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #ededed;
+                --sidebarcolor: #171616;
+                --subtle-line: rgba(0, 0, 0, 0.2);
+
+                @media (prefers-color-scheme: dark) {
+                    /* Main colors */
+                    --background: #161919; /* Page background */
+                    --background-accent: #232a2e;
+                    --color: #f0f0f0;
+                    --block: #1c2021; /* Background color for the grid blocks in the content */
+                    --body-deco: #232929;
+
+                    --primary-accent: #85b7ae;
+                    --secondary-accent: #62b0b1;
+                    --font-on-accent: #000000;
+
+                    --link: #47b7c6;
+                    --linkhover: #c4faff;
+
+                    --letter-glow: rgba(103, 222, 227, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #1c2021;
+                    --sidebarcolor: #f0f0f0;
+                    --subtle-line: rgba(90, 176, 203, 0.2);
+                }
+            }
+
+            .tabwrap section {
+                display: none;
+            }
+
+            .tabwrap section:target {
+                display: block;
+            }
+
+            button .gallerylink {
+                display: block;
+                margin: 0;
+            }
+
+            .gallerylinks {
+                padding: 7px 19px;
+                font-family: "dosis";
+                font-size: 1.1rem;
+                border-radius: var(--border-radius);
+                background: var(--primary-accent);
+                color: var(--font-on-accent);
+                text-decoration: none;
+                transition: 0.5s ease;
+                margin-bottom: 5px;
+                width: 100%;
+                cursor: pointer;
+            }
+
+            .gallerylinks:hover,
+            .gallerylinks:focus {
+                background: var(--linkhover);
+                color: var(--font-on-accent);
+                transition: 0.5s ease;
+            }
+
+            .active {
+                background: var(--secondary-accent);
+            }
+
+            .active:before {
+                content: "";
+            }
+
+            .image-gallery {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .image-gallery div {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Please don't remove the next 2 lines! -->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+        <nav-header></nav-header>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div id="container">
+            <div id="sidebar">
+                <div id="sidebar-content">
+                    <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+                    <div class="icon">
+                        <img
+                            src="/public/img/oc/khaliun/sidebar_icon.jpg"
+                            alt=""
+                            aria-hidden="true"
+                            data-tippy-content="Art by lutes" />
+                    </div>
+                    <div class="header">Khaliun</div>
+                    <hr />
+
+                    <!-- Navigation menu  -->
+                    <div class="" id="main-menu">
+                        <ul>
+                            <li><a href="index.html">Back to Page</a></li>
+                        </ul>
+                        <button class="gallerylinks" onclick="openGalleryTab(event, 'drawings')" id="defaultGallery">
+                            Artwork
+                        </button>
+                        <button class="gallerylinks" onclick="openGalleryTab(event, 'pictures')">Screenshots</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content area -->
+            <main id="content">
+                <!-- Section tags must be used for blocks -->
+
+                <!-- PHOTO GALLERY ------------------------------>
+                <section class="full">
+                    <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Image Gallery</h2>
+                    <div class="gallery" id="drawings">
+                        <div class="image-gallery">
+                            <!-- IMAGE -->
+                            <div>
+                                <a
+                                    href="https://f2.toyhou.se/file/f2-toyhou-se/images/93172446_AhEXkdlGC6uM01Z.jpg"
+                                    loading="lazy"
+                                    data-lightbox="artwork"
+                                    data-title="Art by <a href='https://toyhou.se/PhoenixBlessed'>PhoenixBlessed</a>"
+                                    aria-label="open image"
+                                    ><img
+                                        src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/93172446_AhE.jpg"
+                                        alt=""
+                                        loading="lazy"
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a
+                                    href="/public/img/oc/khaliun/gallery_full_2.jpg"
+                                    loading="lazy"
+                                    data-lightbox="artwork"
+                                    data-title="Art by <a href='https://toyhou.se/PhoenixBlessed'>PhoenixBlessed</a>"
+                                    aria-label="open image"
+                                    ><img src="/public/img/oc/khaliun/gallery_thumb_2.jpg" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a
+                                    href="/public/img/oc/khaliun/gallery_full_4.jpg"
+                                    loading="lazy"
+                                    data-lightbox="artwork"
+                                    data-title="Art by <a href='https://toyhou.se/PhoenixBlessed'>PhoenixBlessed</a>"
+                                    aria-label="open image"
+                                    ><img src="/public/img/oc/khaliun/gallery_thumb_4.jpg" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a
+                                    href="/public/img/oc/khaliun/gallery_full_5.png"
+                                    loading="lazy"
+                                    data-lightbox="artwork"
+                                    data-title="Art by me"
+                                    aria-label="open image"
+                                    ><img src="/public/img/oc/khaliun/gallery_thumb_5.jpg" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a
+                                    href="https://f2.toyhou.se/file/f2-toyhou-se/images/81174594_FaEGKn8JFgIBkiR.jpg"
+                                    loading="lazy"
+                                    data-lightbox="artwork"
+                                    data-title="Art by <a href='https://toyhou.se/PhoenixBlessed'>PhoenixBlessed</a>"
+                                    aria-label="open image"
+                                    ><img
+                                        src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/81174594_FaE.jpg"
+                                        alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a
+                                    href="https://f2.toyhou.se/file/f2-toyhou-se/images/81157589_AlboiyhCm0DKGeU.png"
+                                    loading="lazy"
+                                    data-lightbox="artwork"
+                                    data-title="Art by <a href='https://www1.flightrising.com/clan-profile/57786'>lutes</a>"
+                                    aria-label="open image"
+                                    ><img src="/public/img/oc/khaliun/sidebar_icon.jpg" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a
+                                    href="https://f2.toyhou.se/file/f2-toyhou-se/images/84845946_q3KelvNcfWWRiF0.jpg"
+                                    loading="lazy"
+                                    data-lightbox="artwork"
+                                    data-title="Art by <a href='https://www.instagram.com/medeuxsa/'>medeuxsa</a> for ArtFight 2024"
+                                    aria-label="open image"
+                                    ><img
+                                        src="https://f2.toyhou.se/file/f2-toyhou-se/thumbnails/84845946_q3K.jpg"
+                                        alt=""
+                                /></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery" id="pictures">
+                        <div class="image-gallery">
+                            <!-- IMAGE -->
+                            <div>
+                                <a
+                                    href="/public/img/oc/khaliun/gallery_full_1.jpg"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="/public/img/oc/khaliun/gallery_thumb_1.jpg" alt=""
+                                /></a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a
+                                    href="/public/img/oc/khaliun/gallery_full_3.jpg"
+                                    loading="lazy"
+                                    data-lightbox="gallery"
+                                    aria-label="open image"
+                                    ><img src="/public/img/oc/khaliun/gallery_thumb_3.jpg" alt=""
+                                /></a>
+                            </div>
+                        </div>
+                        <p>... I'll eventually upload more when I don't feel lazy.</p>
+                    </div>
+                </section>
+
+                <footer id="main-footer">
+                    <p>
+                        Coded by <a href="https://zhongvie.neocities.org/">Aid</a>, inspired from
+                        <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's layout</a>, using kalechip's
+                        <a href="https://kalechips.net/projects/layouts/">template</a>.
+                    </p>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+
+        <!-- Scroll to Top -->
+        <script src="/public/js/scroll-to-top.js"></script>
+
+        <!-- Accordion Dropdown -->
+        <script src="/public/js/accordion.js"></script>
+
+        <!-- Page Specific -->
+        <script src="../gallery-tabs.js"></script>
+    </body>
+</html>
