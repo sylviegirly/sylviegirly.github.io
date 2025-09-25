@@ -77,8 +77,8 @@ const content = `
 <nav>
     <button id="toggle-0" aria-label="Toggle main menu">☰</button>
     <ul id="menu-0">
-        <li id="item-1-0-0"><a id="link-1-0-0" href="../index.html">Home</a></li>
-        <li id="item-2-0-0"><a id="link-2-0-0" href="../about.html">About Me</a></li>
+        <li id="item-1-0-0"><a id="link-1-0-0" href="/index.html">Home</a></li>
+        <li id="item-2-0-0"><a id="link-2-0-0" href="/about.html">About Me</a></li>
         <li id="item-3-0-0" class="dropdown">
             <a id="link-3-0-0" href="#">Personal</a>
             <ul id="menu-3">
