@@ -1,5 +1,15 @@
 const quotes = [
     {
+        quote: "i love you green. i love you forests. i love you smell of damp earth. i love you feeling before the storm breaks. i love you moss. i love you rivers. i love you streams. i love you thunderstorms. i love you sunlight shining through leaves.",
+        author: "winedark-maverick",
+        url: "https://winedark-maverick.tumblr.com/post/688182803825917952"
+    },
+    {
+        quote: "*smirking* you couldn't waterboard that out of me, but even if torture was an effective method of information extraction and not a futile display of state-sanctioned sadism, the high percentage of false confessions it produces would mean that even if you could waterboard it out of me, could you even trust the veracity of my statement?",
+        author: "abyssaldyke",
+        url: "https://abyssaldyke.tumblr.com/post/789995119516467200"
+    },
+    {
         quote: "died and came back wrong and no one could tell the difference",
         author: "digitalbeachrave",
         url: "https://www.tumblr.com/digitalbeachrave/748914822907887616"
