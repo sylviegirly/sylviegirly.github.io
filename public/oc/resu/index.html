@@ -31,27 +31,27 @@
         <meta content="A character page for an original character named Resu." name="description" />
 
         <!-- FavIcon Gif -->
-        <link rel="icon" type="image/gif" href="../img/oc/resu/favicon.gif" />
+        <link rel="icon" type="image/gif" href="img/favicon.gif" />
 
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" type="text/css" href="character.css" />
-        <link rel="stylesheet" href="../css/lightbox.css" />
+        <link rel="stylesheet" type="text/css" href="../character.css" />
+        <link rel="stylesheet" href="/css/lightbox.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JS: -->
-        <script src="../js/lightbox-plus-jquery.js"></script>
-        <script src="character-nav.js" defer></script>
+        <script src="/js/lightbox-plus-jquery.js"></script>
+        <script src="../character-nav.js" defer></script>
 
-        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
-        <script src="../js/tab-title-suffix.js"></script>
+        <script src="/js/accessibility/accessible-menu.js" type="module"></script>
+        <script src="/js/tab-title-suffix.js"></script>
         <style>
             :root {
                 --header-image: url("https://images.pexels.com/photos/3737719/pexels-photo-3737719.jpeg");
-                --focal-image: url("../img/oc/resu/focal_image.jpg");
-                --design-image: url("../img/oc/resu/design_image.png");
-                --focal-trivia-image: url("../img/oc/resu/hitsuresu_trivia.jpg");
+                --focal-image: url("img/focal_image.jpg");
+                --design-image: url("img/design_image.png");
+                --focal-trivia-image: url("img/hitsuresu_trivia.jpg");
 
                 --moodboard-1-image: url("https://images.pexels.com/photos/6214570/pexels-photo-6214570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
                 --moodboard-2-image: url("https://images.pexels.com/photos/3737713/pexels-photo-3737713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -102,6 +102,18 @@
                     --sidebarcolor: #f0f0f0;
                     --subtle-line: rgba(255, 255, 255, 0.2);
                 }
+
+                .focal {
+                    background-image: var(--focal-image); /* ...?? why do you not work w/o this */
+                }
+
+                .triviafocal {
+                    background-image: var(--focal-trivia-image); /* ...?? why do you not work w/o this */
+                }
+
+                .design-image-alt {
+                    background-image: var(--design-image); /* ...?? why do you not work w/o this */
+                }
             }
         </style>
     </head>
@@ -118,11 +130,7 @@
                 <div id="sidebar-content">
                     <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
                     <div class="icon">
-                        <img
-                            src="../img/oc/resu/thumbnail.jpg"
-                            alt=""
-                            aria-hidden="true"
-                            data-tippy-content="Art by me" />
+                        <img src="img/thumbnail.jpg" alt="" aria-hidden="true" data-tippy-content="Art by me" />
                     </div>
                     <div class="header">Resu Sosora</div>
 
@@ -316,8 +324,8 @@
                 <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
                 <section class="third focal" data-tippy-content="Art by lillybraconnot">
                     <div class="flags">
-                        <img src="flags/cis.png" alt="cis flag" data-tippy-content="Cis Female" />
-                        <img src="flags/bisexual.png" alt="cis flag" data-tippy-content="Bisexual" />
+                        <img src="../flags/cis.png" alt="cis flag" data-tippy-content="Cis Female" />
+                        <img src="../flags/bisexual.png" alt="cis flag" data-tippy-content="Bisexual" />
                     </div>
                 </section>
 
@@ -460,14 +468,14 @@
                 <!-- AESTHETIC STAMPS --------------------------------->
                 <section class="full">
                     <div class="badgeholder" style="justify-content: space-evenly">
-                        <img src="../img/oc/resu/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/resu/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/resu/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/resu/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/resu/stamp_5.gif" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/resu/stamp_6.gif" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/resu/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/resu/stamp_8.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_5.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_6.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_8.gif" aria-hidden="true" alt="" loading="lazy" />
                     </div>
                 </section>
 
@@ -712,7 +720,7 @@
                 <section class="full">
                     <h1>Story</h1>
                     <img
-                        src="../img/oc/resu/resu_chibi.png"
+                        src="img/resu_chibi.png"
                         style="max-width: 40%; float: right; margin: 5px 30px"
                         data-tippy-content="Art by me"
                         class="image-shadow" />
@@ -865,103 +873,103 @@
 
                     <div class="badgeholder">
                         <img
-                            src="ribbons/cisgender.png"
+                            src="../ribbons/cisgender.png"
                             data-tippy-content="Cisgender: This character is cisgender."
                             aria-hidden="true"
                             alt=""
                             loading="lazy" />
                         <img
-                            src="ribbons/female.png"
+                            src="../ribbons/female.png"
                             data-tippy-content="Female: This character is female."
                             aria-hidden="true"
                             alt=""
                             loading="lazy" />
                         <img
-                            src="ribbons/she-her.png"
+                            src="../ribbons/she-her.png"
                             data-tippy-content="She/Her: This character uses she/her pronouns."
                             aria-hidden="true"
                             alt=""
                             loading="lazy" />
                         <img
-                            src="ribbons/bisexual.png"
+                            src="../ribbons/bisexual.png"
                             data-tippy-content="Bisexual: This character is bisexual."
                             aria-hidden="true"
                             alt=""
                             loading="lazy" />
                         <img
-                            src="ribbons/bleach.png"
+                            src="../ribbons/bleach.png"
                             data-tippy-content="Number One: This character is a Bleach fancharacter."
                             aria-hidden="true"
                             alt=""
                             loading="lazy" />
                         <img
-                            src="ribbons/oc-x-canon.png"
+                            src="../ribbons/oc-x-canon.png"
                             data-tippy-content="OC x Canon: This character is shipped with a canon character."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/water-magic.png"
+                            src="../ribbons/water-magic.png"
                             data-tippy-content="Refreshing: This character uses water-related magic or abilities."
                             aria-hidden="true"
                             alt=""
                             loading="lazy" />
                         <img
-                            src="ribbons/chaotic-good.png"
+                            src="../ribbons/chaotic-good.png"
                             data-tippy-content="Chaotic Good: This character is of the chaotic good alignment."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/writer.png"
+                            src="../ribbons/writer.png"
                             data-tippy-content="The Write One: This character is a writer."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/october.png"
+                            src="../ribbons/october.png"
                             data-tippy-content="October Child: This character was born in October."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/retired.png"
+                            src="../ribbons/retired.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Retired: This character has been retired." />
                         <img
-                            src="ribbons/angel-wings.png"
+                            src="../ribbons/angel-wings.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Earned their Angel Wings: This character has a strong bond with you due to them being based off of / helping you with real problems in your life." />
                         <img
-                            src="ribbons/ex-comfort.png"
+                            src="../ribbons/ex-comfort.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Thank You: This character was once a comfort character but isn't anymore." />
                         <img
-                            src="ribbons/roleplay.png"
+                            src="../ribbons/roleplay.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Actor: This character was/is used in roleplay." />
                         <img
-                            src="ribbons/tumblr-rp-blog.png"
+                            src="../ribbons/tumblr-rp-blog.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="AMA: This character has an Askblog." />
                         <img
-                            src="ribbons/2011.png"
+                            src="../ribbons/2011.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="2011: This character was made in 2011." />
                         <img
-                            src="ribbons/oldest-ocs.png"
+                            src="../ribbons/oldest-ocs.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
@@ -979,52 +987,52 @@
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by me">
                             <a
-                                href="../img/oc/resu/gallery_full_1.jpg"
+                                href="img/gallery_full_1.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/resu/gallery_thumb_1.jpg" alt=""
+                                ><img src="img/gallery_thumb_1.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by hahalyssa">
                             <a
-                                href="../img/oc/resu/gallery_full_2.jpg"
+                                href="img/gallery_full_2.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/resu/gallery_thumb_2.jpg" alt=""
+                                ><img src="img/gallery_thumb_2.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by kyrukei">
                             <a
-                                href="../img/oc/resu/gallery_full_3.jpg"
+                                href="img/gallery_full_3.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/resu/gallery_thumb_3.jpg" alt=""
+                                ><img src="img/gallery_thumb_3.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by me">
                             <a
-                                href="../img/oc/resu/gallery_full_4.jpg"
+                                href="img/gallery_full_4.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/resu/gallery_thumb_4.jpg" alt=""
+                                ><img src="img/gallery_thumb_4.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by ChoiRiRa">
                             <a
-                                href="../img/oc/resu/gallery_full_5.jpg"
+                                href="img/gallery_full_5.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
                                 data-title="The artist's devART is deactivated, but this was a big group commission of other Bleach OCs"
-                                ><img src="../img/oc/resu/gallery_thumb_5.jpg" alt=""
+                                ><img src="img/gallery_thumb_5.jpg" alt=""
                             /></a>
                         </div>
                     </div>
@@ -1055,9 +1063,9 @@
         </script>
 
         <!-- Scroll to Top -->
-        <script src="../js/scroll-to-top.js"></script>
+        <script src="/js/scroll-to-top.js"></script>
 
         <!-- Accordion Dropdown -->
-        <script src="../js/accordion.js"></script>
+        <script src="/js/accordion.js"></script>
     </body>
 </html>
