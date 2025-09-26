@@ -376,7 +376,7 @@ nav li.dropdown ul li.dropdown ul a {
 
 .blur {
     filter: blur(10px);
-    -webkit-filter: blur(10px);
+    -webkit-filter: blur(10px) grayscale(100%);
 }
 
 /* Images on Hover */
