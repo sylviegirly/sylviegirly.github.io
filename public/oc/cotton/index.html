@@ -31,28 +31,28 @@
         <meta content="A character page for an original character named Raiden." name="description" />
 
         <!-- FavIcon Gif -->
-        <link rel="icon" type="image/gif" href="../img/oc/cotton/favicon.gif" />
+        <link rel="icon" type="image/gif" href="img/favicon.gif" />
 
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
             if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" type="text/css" href="character.css" />
-        <link rel="stylesheet" href="../css/lightbox.css" />
+        <link rel="stylesheet" type="text/css" href="../character.css" />
+        <link rel="stylesheet" href="/css/lightbox.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JS: -->
-        <script src="../js/lightbox-plus-jquery.js"></script>
-        <script src="character-nav.js" defer></script>
-        <script src="../js/marquee-setup.js"></script>
-        <script src="../js/marquee.js"></script>
-        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
-        <script src="../js/tab-title-suffix.js"></script>
+        <script src="/js/lightbox-plus-jquery.js"></script>
+        <script src="../character-nav.js" defer></script>
+        <script src="/js/marquee-setup.js"></script>
+        <script src="/js/marquee.js"></script>
+        <script src="/js/accessibility/accessible-menu.js" type="module"></script>
+        <script src="/js/tab-title-suffix.js"></script>
         <style>
             :root {
                 --header-image: url("https://images.unsplash.com/photo-1696002289393-67e01f47ca51?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-                --focal-image: url("../img/oc/cotton/focal_image.png");
+                --focal-image: url("img/focal_image.png");
                 --focal-trivia-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/10580891_Kvxib6svP0T3tBs.png?1612478248");
-                --design-image: url("../img/oc/cotton/design_image.png");
+                --design-image: url("img/design_image.png");
 
                 --moodboard-1-image: url("https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
                 --moodboard-2-image: url("https://images.unsplash.com/photo-1581700261299-b342aa7174cf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -107,6 +107,18 @@
                 .focal {
                     background-position: center !important;
                 }
+
+                .focal {
+                    background-image: var(--focal-image); /* ...?? why do you not work w/o this */
+                }
+
+                .triviafocal {
+                    background-image: var(--focal-trivia-image); /* ...?? why do you not work w/o this */
+                }
+
+                .design-image-alt {
+                    background-image: var(--design-image); /* ...?? why do you not work w/o this */
+                }
             }
         </style>
     </head>
@@ -123,11 +135,7 @@
                 <div id="sidebar-content">
                     <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
                     <div class="icon">
-                        <img
-                            src="../img/oc/cotton/thumbnail.png"
-                            alt=""
-                            aria-hidden="true"
-                            style="background-color: pink" />
+                        <img src="img/thumbnail.png" alt="" aria-hidden="true" style="background-color: pink" />
                     </div>
                     <div class="header">Cotton</div>
                     <hr />
@@ -322,7 +330,7 @@
                 <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
                 <section class="third focal" style="background-color: pink" data-tippy-content="Art by pandalecko">
                     <div class="flags">
-                        <img src="flags/unlabeled.png" alt="unlabeled flag" data-tippy-content="Unlabeled" />
+                        <img src="../flags/unlabeled.png" alt="unlabeled flag" data-tippy-content="Unlabeled" />
                     </div>
                 </section>
 
@@ -473,14 +481,14 @@
                 <!-- AESTHETIC STAMPS --------------------------------->
                 <section class="full">
                     <div class="badgeholder" style="justify-content: space-evenly">
-                        <img src="../img/oc/cotton/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/cotton/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/cotton/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/cotton/stamp_4.gif" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/cotton/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/cotton/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/cotton/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/cotton/stamp_8.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_4.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_8.png" aria-hidden="true" alt="" loading="lazy" />
                     </div>
                 </section>
 
@@ -742,7 +750,7 @@
                 <section class="full">
                     <div class="marquee" data-speed="100">
                         <img
-                            src="../img/oc/cotton/running.gif"
+                            src="img/running.gif"
                             loading="lazy"
                             style="margin-left: auto; margin-right: auto; text-align: center"
                             data-tippy-content="Base by cataclysmicTilde / garchompdra" />
@@ -777,73 +785,73 @@
 
                     <div class="badgeholder">
                         <img
-                            src="ribbons/they-them.png"
+                            src="../ribbons/they-them.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="They/Them: This character uses they/them pronouns." />
                         <img
-                            src="ribbons/it-its.png"
+                            src="../ribbons/it-its.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="It/Its: This character uses it/its pronouns." />
                         <img
-                            src="ribbons/unlabeled.png"
+                            src="../ribbons/unlabeled.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Unlabeled: This character is unlabeled." />
                         <img
-                            src="ribbons/pretty-mask.png"
+                            src="../ribbons/pretty-mask.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Pretty Mask: This character existed for a long time as just a design with no notable personality or other development/details." />
                         <img
-                            src="ribbons/boneless.png"
+                            src="../ribbons/boneless.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Boneless: This character has existed as nothing but a cool design for multiple years." />
                         <img
-                            src="ribbons/cutie.png"
+                            src="../ribbons/cutie.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Cutie: This character has cute themes." />
                         <img
-                            src="ribbons/pastel.png"
+                            src="../ribbons/pastel.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Easy on the Eyes: This character has pastel themes." />
                         <img
-                            src="ribbons/sweet-treat.png"
+                            src="../ribbons/sweet-treat.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Sweet Treat - This character is inspired by or related to a dessert/sweet." />
                         <img
-                            src="ribbons/extinct.png"
+                            src="../ribbons/extinct.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Extinct: This character is part of a dead/inactive species." />
                         <img
-                            src="ribbons/personal-species.png"
+                            src="../ribbons/personal-species.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Lock and Key: This character is part of a personal species." />
                         <img
-                            src="ribbons/2011.png"
+                            src="../ribbons/2011.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="2011: This character was made in 2011." />
                         <img
-                            src="ribbons/oldest-ocs.png"
+                            src="../ribbons/oldest-ocs.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
@@ -861,51 +869,47 @@
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by me">
                             <a
-                                href="../img/oc/cotton/gallery_full_1.png"
+                                href="img/gallery_full_1.png"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/cotton/gallery_thumb_1.png" alt=""
+                                ><img src="img/gallery_thumb_1.png" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by cataclysmicTilde / garchompdra">
                             <a
-                                href="../img/oc/cotton/gallery_full_2.png"
+                                href="img/gallery_full_2.png"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/cotton/gallery_thumb_2.png" alt=""
+                                ><img src="img/gallery_thumb_2.png" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by me">
                             <a
-                                href="../img/oc/cotton/gallery_full_3.png"
+                                href="img/gallery_full_3.png"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/cotton/thumbnail.png" alt=""
+                                ><img src="img/thumbnail.png" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by antidarkheart">
                             <a
-                                href="../img/oc/cotton/gallery_full_4.png"
+                                href="img/gallery_full_4.png"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/cotton/gallery_thumb_4.png" alt=""
+                                ><img src="img/gallery_thumb_4.png" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by pandalecko">
-                            <a
-                                href="../img/oc/cotton/focal_image.png"
-                                loading="lazy"
-                                data-lightbox="gallery"
-                                aria-label="open image"
-                                ><img src="../img/oc/cotton/gallery_thumb_5.png" alt=""
+                            <a href="img/focal_image.png" loading="lazy" data-lightbox="gallery" aria-label="open image"
+                                ><img src="img/gallery_thumb_5.png" alt=""
                             /></a>
                         </div>
                     </div>
@@ -943,9 +947,9 @@
         </script>
 
         <!-- Scroll to Top -->
-        <script src="../js/scroll-to-top.js"></script>
+        <script src="/js/scroll-to-top.js"></script>
 
         <!-- Accordion Dropdown -->
-        <script src="../js/accordion.js"></script>
+        <script src="/js/accordion.js"></script>
     </body>
 </html>
