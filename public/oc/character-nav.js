@@ -94,8 +94,8 @@ const content = `
             <a id="link-4-0-0" href="#">OCs / Shrines</a>
             <ul id="menu-4">
                 <li id="item-4-1-0"><a id="link-4-1-0" href="/oc/sylvie/index.html">Sylvie</a></li>
-                <li id="item-4-2-0"><a id="link-4-2-0" href="yadyra.html">Yadyra</a></li>
-                <li id="item-4-3-0"><a id="link-4-3-0" href="nameless.html">Nameless</a></li>
+                <li id="item-4-2-0"><a id="link-4-2-0" href="/oc/yadyra.html">Yadyra</a></li>
+                <li id="item-4-3-0"><a id="link-4-3-0" href="/oc/nameless.html">Nameless</a></li>
                 <li id="item-4-4-0"><a id="link-4-4-0" href="/oc.html">Other OCs</a></li>
                 <li id="item-4-5-0" class="dropdown">
                     <a id="link-4-5-0" href="#">Shrines</a>
