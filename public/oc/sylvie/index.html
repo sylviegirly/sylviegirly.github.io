@@ -31,27 +31,27 @@
         <meta content="A character page for an original character named Sylvie." name="description" />
 
         <!-- FavIcon Gif -->
-        <link rel="icon" type="image/gif" href="../img/oc/sylvie/favicon.gif" />
+        <link rel="icon" type="image/gif" href="img/favicon.gif" />
 
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" type="text/css" href="character.css" />
-        <link rel="stylesheet" type="text/css" href="../css/music-player.css" />
-        <link rel="stylesheet" href="../css/lightbox.css" />
+        <link rel="stylesheet" type="text/css" href="../character.css" />
+        <link rel="stylesheet" type="text/css" href="/css/music-player.css" />
+        <link rel="stylesheet" href="/css/lightbox.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JS: -->
-        <script src="../js/lightbox-plus-jquery.js"></script>
+        <script src="/js/lightbox-plus-jquery.js"></script>
         <script src="character-nav.js" defer></script>
-        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
-        <script src="../js/tab-title-suffix.js"></script>
+        <script src="/js/accessibility/accessible-menu.js" type="module"></script>
+        <script src="/js/tab-title-suffix.js"></script>
         <style>
             :root {
-                --header-image: url("../img/oc/sylvie/header.jpg");
-                --focal-image: url("../img/oc/sylvie/focal_image.jpg");
+                --header-image: url("img/header.jpg");
+                --focal-image: url("img/focal_image.jpg");
                 --design-image: url("https://i.imgur.com/1pSE61i.png");
-                --focal-trivia-image: url("../img/oc/sylvie/trivia_focal.jpg");
+                --focal-trivia-image: url("img/trivia_focal.jpg");
 
                 --moodboard-1-image: url("https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
                 --moodboard-2-image: url("https://images.pexels.com/photos/3329812/pexels-photo-3329812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -102,6 +102,14 @@
                     --sidebarcolor: #f4f4f4;
                     --subtle-line: rgba(193, 227, 175, 0.2);
                 }
+            }
+
+            .focal {
+                background-image: var(--focal-image); /* ...?? why do you not work w/o this */
+            }
+
+            .triviafocal {
+                background-image: var(--focal-trivia-image); /* ...?? why do you not work w/o this */
             }
 
             .skill-kit details {
@@ -301,7 +309,7 @@
                 <div id="sidebar-content">
                     <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
                     <div class="icon">
-                        <img src="../img/oc/sylvie/sidebar_image.jpg" data-tippy-content="Art by scarameownya" alt="" />
+                        <img src="img/sidebar_image.jpg" data-tippy-content="Art by scarameownya" alt="" />
                     </div>
                     <div class="header">Sylvie</div>
 
@@ -313,7 +321,7 @@
                     <!-- Navigation menu  -->
                     <div class="" id="main-menu">
                         <ul>
-                            <li><a href="../shrines/zhongvie.html">Zhongvie 💖</a></li>
+                            <li><a href="/shrines/zhongvie.html">Zhongvie 💖</a></li>
                             <li>
                                 <a
                                     href="https://hub.vroid.com/en/characters/5809760915305152720/models/2631703733469597074"
@@ -325,7 +333,7 @@
                             <li>
                                 <a href="https://genshin-impact-fanon.fandom.com/wiki/Sylvie">Genshin Fanon Wiki</a>
                             </li>
-                            <li><a href=" https://open.spotify.com/playlist/3d0jzwTJRgDXTwMhPwFxRF">Spotify</a></li>
+                            <li><a href="https://open.spotify.com/playlist/3d0jzwTJRgDXTwMhPwFxRF">Spotify</a></li>
                         </ul>
                     </div>
                     <hr />
@@ -531,15 +539,15 @@
                 <section class="third focal" data-tippy-content="Art by me">
                     <div class="flags">
                         <img
-                            src="flags/demirose.png"
+                            src="../flags/demirose.png"
                             alt="demiromantic and demisexual flag"
                             data-tippy-content="Demirose" />
-                        <img src="flags/agender.png" alt="agender flag" data-tippy-content="Agender" />
+                        <img src="../flags/agender.png" alt="agender flag" data-tippy-content="Agender" />
                         <img
-                            src="flags/librafeminine.png"
+                            src="../flags/librafeminine.png"
                             alt="librafeminine flag"
                             data-tippy-content="Librafeminine" />
-                        <img src="flags/adhd.png" alt="ADHD flag" data-tippy-content="ADHD" />
+                        <img src="../flags/adhd.png" alt="ADHD flag" data-tippy-content="ADHD" />
                     </div>
                 </section>
 
@@ -702,14 +710,14 @@
                 <!-- AESTHETIC STAMPS --------------------------------->
                 <section class="full">
                     <div class="badgeholder" style="justify-content: space-evenly">
-                        <img src="../img/oc/sylvie/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/sylvie/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/sylvie/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/sylvie/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/sylvie/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/sylvie/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/sylvie/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/sylvie/stamp_8.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_3.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_8.png" aria-hidden="true" alt="" loading="lazy" />
                     </div>
                 </section>
 
@@ -1075,7 +1083,7 @@
                     <h1>Story</h1>
                     <img
                         data-tippy-content="Art by XXVeil"
-                        src="../img/oc/sylvie/content_deco_1.png"
+                        src="img/content_deco_1.png"
                         style="max-width: 40%; float: left; margin: 5px 30px"
                         class="image-shadow"
                         alt="A drawing of Sylvie's green deer-cat form" />
@@ -1208,7 +1216,7 @@
                     </details>
                     <img
                         data-tippy-content="Art by rainily03"
-                        src="../img/oc/sylvie/content_deco_3.png"
+                        src="img/content_deco_3.png"
                         style="max-width: 40%; float: right; margin: 5px 30px"
                         class="image-shadow"
                         alt="Sylvie sitting on the ground, looking happy" />
@@ -1291,22 +1299,22 @@
                             <div class="mySlides fade">
                                 <div class="numbertext">1 / 2</div>
                                 <a
-                                    href="../img/oc/sylvie/humanRefSFW.webp"
+                                    href="img/humanRefSFW.webp"
                                     loading="lazy"
                                     data-lightbox="reference"
                                     data-alt="reference sheet">
-                                    <img src="../img/oc/sylvie/humanRefSFW.webp" alt="reference sheet" loading="lazy"
+                                    <img src="img/humanRefSFW.webp" alt="reference sheet" loading="lazy"
                                 /></a>
                             </div>
 
                             <div class="mySlides fade">
                                 <div class="numbertext">2 / 2</div>
                                 <a
-                                    href="../img/oc/sylvie/chonkerDeerV3.webp"
+                                    href="img/chonkerDeerV3.webp"
                                     loading="lazy"
                                     data-lightbox="reference"
                                     data-alt="reference sheet">
-                                    <img src="../img/oc/sylvie/chonkerDeerV3.webp" alt="reference sheet" loading="lazy"
+                                    <img src="img/chonkerDeerV3.webp" alt="reference sheet" loading="lazy"
                                 /></a>
                             </div>
 
@@ -1450,7 +1458,7 @@
                     <div class="dual-column">
                         <div class="dual-left" style="flex: 0 0 25%">
                             <img
-                                src="../img/oc/sylvie/characterCard.png"
+                                src="img/characterCard.png"
                                 style="margin: 5px 0px; margin-right: 10px"
                                 class="image-shadow"
                                 loading="lazy"
@@ -1477,11 +1485,7 @@
                             <!-- NORMAL -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img
-                                        src="../img/oc/sylvie/skill-normal.png"
-                                        alt=""
-                                        aria-hidden="true"
-                                        loading="lazy" />
+                                    <img src="img/skill-normal.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Brutal_Strike"
                                             >Brutal Strike</a
@@ -1528,7 +1532,7 @@
                             <!-- ELEMENTAL SKILL -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img src="../img/oc/sylvie/skill.png" alt="" aria-hidden="true" loading="lazy" />
+                                    <img src="img/skill.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Cicutoxin">Cicutoxin</a
                                         ><br /><i>Elemental Skill</i>
@@ -1595,11 +1599,7 @@
                             <!-- ULTIMATE -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img
-                                        src="../img/oc/sylvie/skill-ult.png"
-                                        alt=""
-                                        aria-hidden="true"
-                                        loading="lazy" />
+                                    <img src="img/skill-ult.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Overgrowth">Overgrowth</a
                                         ><br /><i>Elemental Burst</i>
@@ -1660,11 +1660,7 @@
                             <!-- PASSIVE 1 -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img
-                                        src="../img/oc/sylvie/skill-passive-1.png"
-                                        alt=""
-                                        aria-hidden="true"
-                                        loading="lazy" />
+                                    <img src="img/skill-passive-1.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Stubborn_and_Bullheaded"
                                             >Stubborn and Bullheaded</a
@@ -1697,11 +1693,7 @@
                             <!-- PASSIVE 2 -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img
-                                        src="../img/oc/sylvie/skill-passive-2.png"
-                                        alt=""
-                                        aria-hidden="true"
-                                        loading="lazy" />
+                                    <img src="img/skill-passive-2.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Infusion">Infusion</a
                                         ><br /><i>2nd Ascension Passive</i>
@@ -1741,11 +1733,7 @@
                             <!-- UTILITY -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img
-                                        src="../img/oc/sylvie/skill-utility.png"
-                                        alt=""
-                                        aria-hidden="true"
-                                        loading="lazy" />
+                                    <img src="img/skill-utility.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/A_Friend_of_the_Forest"
                                             >A Friend of the Forest</a
@@ -1801,7 +1789,7 @@
                             <!-- CONSTELLATION 1 -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img src="../img/oc/sylvie/con-1.png" alt="" aria-hidden="true" loading="lazy" />
+                                    <img src="img/con-1.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Sticky_Burrs"
                                             >Sticky Burrs</a
@@ -1821,7 +1809,7 @@
                             <!-- CONSTELLATION 2 -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img src="../img/oc/sylvie/con-2.png" alt="" aria-hidden="true" loading="lazy" />
+                                    <img src="img/con-2.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Dendritic_Overdrive"
                                             >Dendritic Overdrive</a
@@ -1860,7 +1848,7 @@
                             <!-- CONSTELLATION 3 -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img src="../img/oc/sylvie/con-3.png" alt="" aria-hidden="true" loading="lazy" />
+                                    <img src="img/con-3.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Branching_Roots"
                                             >Branching Roots</a
@@ -1881,7 +1869,7 @@
                             <!-- CONSTELLATION 4 -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img src="../img/oc/sylvie/con-4.png" alt="" aria-hidden="true" loading="lazy" />
+                                    <img src="img/con-4.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Honeypot">Honeypot</a
                                         ><br /><i>C4</i>
@@ -1910,7 +1898,7 @@
                             <!-- CONSTELLATION 5 -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img src="../img/oc/sylvie/con-5.png" alt="" aria-hidden="true" loading="lazy" />
+                                    <img src="img/con-5.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Verdent_Flourish"
                                             >Verdent Flourish</a
@@ -1931,7 +1919,7 @@
                             <!-- CONSTELLATION 6 -->
                             <div class="dual-column">
                                 <div class="dual-left">
-                                    <img src="../img/oc/sylvie/con-6.png" alt="" aria-hidden="true" loading="lazy" />
+                                    <img src="img/con-6.png" alt="" aria-hidden="true" loading="lazy" />
                                     <p>
                                         <a href="https://genshin-impact-fanon.fandom.com/wiki/Primal_Verdure"
                                             >Primal Verdure</a
@@ -1966,7 +1954,7 @@
                             <div class="item-flex">
                                 <div>
                                     <img
-                                        src="../img/oc/sylvie/artifact_gilded_dreams.png"
+                                        src="img/artifact_gilded_dreams.png"
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy"
@@ -1975,7 +1963,7 @@
                                 </div>
                                 <div>
                                     <img
-                                        src="../img/oc/sylvie/artifact_deepwood_memories.png"
+                                        src="img/artifact_deepwood_memories.png"
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy"
@@ -1984,7 +1972,7 @@
                                 </div>
                                 <div>
                                     <img
-                                        src="../img/oc/sylvie/artifact_flower_of_paradise_lost.png"
+                                        src="img/artifact_flower_of_paradise_lost.png"
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy"
@@ -1993,7 +1981,7 @@
                                 </div>
                                 <div>
                                     <img
-                                        src="../img/oc/sylvie/artifact_marechaussee_hunter.png"
+                                        src="img/artifact_marechaussee_hunter.png"
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy"
@@ -2007,7 +1995,7 @@
                             <div class="item-flex">
                                 <div>
                                     <img
-                                        src="../img/oc/sylvie/weapon_mailed_flower.png"
+                                        src="img/weapon_mailed_flower.png"
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy"
@@ -2016,7 +2004,7 @@
                                 </div>
                                 <div>
                                     <img
-                                        src="../img/oc/sylvie/weapon_makhaira_aquamarine.png"
+                                        src="img/weapon_makhaira_aquamarine.png"
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy"
@@ -2025,7 +2013,7 @@
                                 </div>
                                 <div>
                                     <img
-                                        src="../img/oc/sylvie/weapon_rainslasher.png"
+                                        src="img/weapon_rainslasher.png"
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy"
@@ -2034,7 +2022,7 @@
                                 </div>
                                 <div>
                                     <img
-                                        src="../img/oc/sylvie/weapon_wolf's_gravestone.png"
+                                        src="img/weapon_wolf's_gravestone.png"
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy"
@@ -2043,7 +2031,7 @@
                                 </div>
                                 <div>
                                     <img
-                                        src="../img/oc/sylvie/weapon_beacon_of_the_reed_sea.png"
+                                        src="img/weapon_beacon_of_the_reed_sea.png"
                                         alt=""
                                         aria-hidden="true"
                                         loading="lazy"
@@ -2058,31 +2046,28 @@
                                 Their team comps are relatively flexible as long as they're centric on Dendro reactions.
                             </p>
                             <div class="item-flex" style="justify-content: space-around">
-                                <div><img src="../img/oc/sylvie/team_sylvie.png" alt="Sylvie" loading="lazy" /></div>
-                                <div><img src="../img/oc/sylvie/team_nahida.png" alt="Nahida" loading="lazy" /></div>
+                                <div><img src="img/team_sylvie.png" alt="Sylvie" loading="lazy" /></div>
+                                <div><img src="img/team_nahida.png" alt="Nahida" loading="lazy" /></div>
                                 <div>
-                                    <img src="../img/oc/sylvie/team_kuki_shinobu.png" alt="Yae Miko" loading="lazy" />
+                                    <img src="img/team_kuki_shinobu.png" alt="Yae Miko" loading="lazy" />
                                 </div>
-                                <div><img src="../img/oc/sylvie/team_zhongli.png" alt="Zhongli" loading="lazy" /></div>
+                                <div><img src="img/team_zhongli.png" alt="Zhongli" loading="lazy" /></div>
                             </div>
                             <br />
                             <div class="item-flex" style="justify-content: space-around">
-                                <div><img src="../img/oc/sylvie/team_sylvie.png" alt="Sylvie" loading="lazy" /></div>
-                                <div><img src="../img/oc/sylvie/team_furina.png" alt="Furina" loading="lazy" /></div>
-                                <div><img src="../img/oc/sylvie/team_yelan.png" alt="Yelan" loading="lazy" /></div>
+                                <div><img src="img/team_sylvie.png" alt="Sylvie" loading="lazy" /></div>
+                                <div><img src="img/team_furina.png" alt="Furina" loading="lazy" /></div>
+                                <div><img src="img/team_yelan.png" alt="Yelan" loading="lazy" /></div>
                                 <div>
-                                    <img
-                                        src="../img/oc/sylvie/team_kuki_shinobu.png"
-                                        alt="Kuki Shinobu"
-                                        loading="lazy" />
+                                    <img src="img/team_kuki_shinobu.png" alt="Kuki Shinobu" loading="lazy" />
                                 </div>
                             </div>
                             <br />
                             <div class="item-flex" style="justify-content: space-around">
-                                <div><img src="../img/oc/sylvie/team_sylvie.png" alt="Sylvie" loading="lazy" /></div>
-                                <div><img src="../img/oc/sylvie/team_furina.png" alt="Furina" loading="lazy" /></div>
-                                <div><img src="../img/oc/sylvie/team_raiden.png" alt="Raiden Ei" loading="lazy" /></div>
-                                <div><img src="../img/oc/sylvie/team_kazuha.png" alt="Kazuha" loading="lazy" /></div>
+                                <div><img src="img/team_sylvie.png" alt="Sylvie" loading="lazy" /></div>
+                                <div><img src="img/team_furina.png" alt="Furina" loading="lazy" /></div>
+                                <div><img src="img/team_raiden.png" alt="Raiden Ei" loading="lazy" /></div>
+                                <div><img src="img/team_kazuha.png" alt="Kazuha" loading="lazy" /></div>
                             </div>
                         </details>
                     </div>
@@ -2130,7 +2115,7 @@
                         <!-- RELATIONSHIP BOX -->
                         <div class="relationshipbox">
                             <div class="relationshipicon">
-                                <img src="../img/oc/others/zhongli.jpg" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="/img/oc/others/zhongli.jpg" alt="" aria-hidden="true" loading="lazy" />
                             </div>
                             <span class="relationshipname">Zhongli</span> &bull;
                             <span class="relationshiptype">husband</span>
@@ -2151,7 +2136,7 @@
                         <!-- RELATIONSHIP BOX -->
                         <div class="relationshipbox">
                             <div class="relationshipicon">
-                                <img src="../img/oc/others/ibe.jpg" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="/img/oc/others/ibe.jpg" alt="" aria-hidden="true" loading="lazy" />
                             </div>
                             <span class="relationshipname">Iberis</span> &bull;
                             <span class="relationshiptype">son</span>
@@ -2172,7 +2157,7 @@
                         <!-- RELATIONSHIP BOX -->
                         <div class="relationshipbox">
                             <div class="relationshipicon">
-                                <img src="../img/oc/others/cerni.png" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="/img/oc/others/cerni.png" alt="" aria-hidden="true" loading="lazy" />
                             </div>
                             <span class="relationshipname">Cerni</span> &bull;
                             <span class="relationshiptype">sibling</span>
@@ -2193,7 +2178,7 @@
                         <!-- RELATIONSHIP BOX -->
                         <div class="relationshipbox">
                             <div class="relationshipicon">
-                                <img src="../img/oc/others/aliyah.png" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="/img/oc/others/aliyah.png" alt="" aria-hidden="true" loading="lazy" />
                             </div>
                             <span class="relationshipname">Aliyah</span> &bull;
                             <span class="relationshiptype">sister</span>
@@ -2214,7 +2199,7 @@
                         <!-- RELATIONSHIP BOX -->
                         <div class="relationshipbox">
                             <div class="relationshipicon">
-                                <img src="../img/oc/others/ahaur.jpg" alt="" aria-hidden="true" loading="lazy" />
+                                <img src="/img/oc/others/ahaur.jpg" alt="" aria-hidden="true" loading="lazy" />
                             </div>
                             <span class="relationshipname">Ahaur</span> &bull;
                             <span class="relationshiptype">friend</span>
@@ -2237,7 +2222,7 @@
                             <div class="relationshipicon">
                                 <a href="nameless.html">
                                     <img
-                                        src="../img/oc/nameless/gallery_thumb_1.jpg"
+                                        src="/img/oc/nameless/gallery_thumb_1.jpg"
                                         loading="lazy"
                                         alt="Bust drawing of Nameless, a demon"
                                 /></a>
@@ -2273,7 +2258,7 @@
                             <!-- CHARACTER -->
                             <div style="flex: 0 0 20%">
                                 <img
-                                    src="../img/oc/others/hutao_chibi.png"
+                                    src="/img/oc/others/hutao_chibi.png"
                                     style="width: 100%"
                                     aria-hidden="true"
                                     alt="" />
@@ -2286,7 +2271,7 @@
                             <!-- CHARACTER -->
                             <div style="flex: 0 0 20%">
                                 <img
-                                    src="../img/oc/others/venti_chibi.png"
+                                    src="/img/oc/others/venti_chibi.png"
                                     style="width: 100%"
                                     aria-hidden="true"
                                     alt="" />
@@ -2299,7 +2284,7 @@
                             <!-- CHARACTER -->
                             <div style="flex: 0 0 20%">
                                 <img
-                                    src="../img/oc/Others/xiao_chibi.png"
+                                    src="/img/oc/others/xiao_chibi.png"
                                     style="width: 100%"
                                     aria-hidden="true"
                                     alt="" />
@@ -2312,7 +2297,7 @@
                             <!-- CHARACTER -->
                             <div style="flex: 0 0 20%">
                                 <img
-                                    src="../img/oc/others/nahida_chibi.png"
+                                    src="/img/oc/others/nahida_chibi.png"
                                     style="width: 100%"
                                     aria-hidden="true"
                                     alt="" />
@@ -2325,7 +2310,7 @@
                             <!-- CHARACTER -->
                             <div style="flex: 0 0 20%">
                                 <img
-                                    src="../img/oc/others/furina_chibi.png"
+                                    src="/img/oc/others/furina_chibi.png"
                                     style="width: 100%"
                                     aria-hidden="true"
                                     alt="" />
@@ -2338,7 +2323,7 @@
                             <!-- CHARACTER -->
                             <div style="flex: 0 0 20%">
                                 <img
-                                    src="../img/oc/others/itto_chibi.png"
+                                    src="/img/oc/others/itto_chibi.png"
                                     style="width: 100%"
                                     aria-hidden="true"
                                     alt="" />
@@ -2351,7 +2336,7 @@
                             <!-- CHARACTER -->
                             <div style="flex: 0 0 20%">
                                 <img
-                                    src="../img/oc/others/xianyun_chibi.png"
+                                    src="/img/oc/others/xianyun_chibi.png"
                                     style="width: 100%"
                                     aria-hidden="true"
                                     alt="" />
@@ -2364,11 +2349,7 @@
                             </div>
                             <!-- CHARACTER -->
                             <div style="flex: 0 0 20%">
-                                <img
-                                    src="../img/oc/others/yae_chibi.png"
-                                    style="width: 100%"
-                                    aria-hidden="true"
-                                    alt="" />
+                                <img src="/img/oc/others/yae_chibi.png" style="width: 100%" aria-hidden="true" alt="" />
                             </div>
                             <div style="flex: 0 0 75%">
                                 <b>YAE MIKO:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -2385,301 +2366,301 @@
 
                     <div class="badgeholder">
                         <img
-                            src="ribbons/sumeru.png"
+                            src="../ribbons/sumeru.png"
                             data-tippy-content="Sumeru: This character is from the Sumeru Nation."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/dendro.png"
+                            src="../ribbons/dendro.png"
                             data-tippy-content="Dendro: This character aligns with the Dendro Element."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/agender.png"
+                            src="../ribbons/agender.png"
                             data-tippy-content="Agender: This character has no gender."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/librafeminine.png"
+                            src="../ribbons/librafeminine.png"
                             data-tippy-content="Librafeminine: This character is librafeminine."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/they-she.png"
+                            src="../ribbons/they-she.png"
                             data-tippy-content="They/She: This character uses they/she pronouns."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/demiaroace.png"
+                            src="../ribbons/demiaroace.png"
                             data-tippy-content="Demiaroace: This character only experiences sexual and romantic attraction after an emotional connection has been established."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/second-chance.png"
+                            src="../ribbons/second-chance.png"
                             data-tippy-content="Second Chance: This character was killed, but came back to life."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/oc-x-canon.png"
+                            src="../ribbons/oc-x-canon.png"
                             data-tippy-content="OC x Canon: This character is shipped with a canon character."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/parental.png"
+                            src="../ribbons/parental.png"
                             data-tippy-content="Parental Figure: This character is a parent or guardian."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/loved-by-all.png"
+                            src="../ribbons/loved-by-all.png"
                             data-tippy-content="Loved by All: This character has an extremely good reputation/public image."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/god.png"
+                            src="../ribbons/god.png"
                             data-tippy-content="God: This character is (a) God."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/fangs.png"
+                            src="../ribbons/fangs.png"
                             data-tippy-content="Sharp: This character has fangs."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/ENFP.png"
+                            src="../ribbons/ENFP.png"
                             data-tippy-content="The Campaigner: This character has the ENFP personality type."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/chaotic-good.png"
+                            src="../ribbons/chaotic-good.png"
                             data-tippy-content="Chaotic Good: This character is of the chaotic good alignment."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/pride.png"
+                            src="../ribbons/pride.png"
                             data-tippy-content="Pride: This character's predominant sin is Pride."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/pure-of-heart.png"
+                            src="../ribbons/pure-of-heart.png"
                             data-tippy-content="Pure of Heart, Dumb of Ass: This character has a heart of gold, but is also a grade A buffoon."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/cinnamon_killer.png"
+                            src="../ribbons/cinnamon_killer.png"
                             data-tippy-content="Looks like a cinnamon roll: This character looks like a cinnamon roll, but could actually kill you."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/physical-touch.png"
+                            src="../ribbons/physical-touch.png"
                             data-tippy-content="Touch: This character's love language is physical touch."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/pebbling-love.png"
+                            src="../ribbons/pebbling-love.png"
                             data-tippy-content="Pebbling: This character's love language is penguin pebbling."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/adhd.png"
+                            src="../ribbons/adhd.png"
                             data-tippy-content="ADHD: This character has Attention Deficit Hyperactivity Disorder."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/march.png"
+                            src="../ribbons/march.png"
                             data-tippy-content="March Child: This character was born in March."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/spring.png"
+                            src="../ribbons/spring.png"
                             data-tippy-content="Blooming Spring: This character is in some way connected to spring."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/inspired-by-nature.png"
+                            src="../ribbons/inspired-by-nature.png"
                             data-tippy-content="Life is All Around: This character was inspired by nature."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/wilderness_lover.png"
+                            src="../ribbons/wilderness_lover.png"
                             data-tippy-content="Wilderness Lover: This character lives and breathes the forests and mountains."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/shapeshifter.png"
+                            src="../ribbons/shapeshifter.png"
                             data-tippy-content="Shapeshifter: This character has multiple forms."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/slime.png"
+                            src="../ribbons/slime.png"
                             data-tippy-content="Melty: This character is a slime."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/nature-magic.png"
+                            src="../ribbons/nature-magic.png"
                             data-tippy-content="One with Nature: This character uses plant or nature-related magic or abilities."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/best-everything.png"
+                            src="../ribbons/best-everything.png"
                             data-tippy-content="Best Everything: This character has their owners favorite design and story."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/encyclopedia.png"
+                            src="../ribbons/encyclopedia.png"
                             data-tippy-content="Encyclopedia: This character's story is very detailed and thought-out."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/main-character.png"
+                            src="../ribbons/main-character.png"
                             data-tippy-content="Main Character: This character is high priority, very important character."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/comfort-character.png"
+                            src="../ribbons/comfort-character.png"
                             data-tippy-content="Comfort Character: A character that helps/was made to help one cope with trauma, or otherwise bring comfort."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/beloved.png"
+                            src="../ribbons/beloved.png"
                             data-tippy-content="Beloved: A character that is dearly beloved by the owner."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/comfort-character-2.png"
+                            src="../ribbons/comfort-character-2.png"
                             data-tippy-content="Comfy Comfort: This character is the current owner's main comfort character."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/angel-wings.png"
+                            src="../ribbons/angel-wings.png"
                             data-tippy-content="Earned their Angel Wings: This character has a strong bond with you due to them being based off of / helping you with real problems in your life."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/sunshine.png"
+                            src="../ribbons/sunshine.png"
                             data-tippy-content="Ball of Sunshine Ribbon: This character can make you laugh or smile at any time. Drawing/thinking about this character cheers you up."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/revamped.png"
+                            src="../ribbons/revamped.png"
                             data-tippy-content="New Face: This character was revamped at some point."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/irl-objects.png"
+                            src="../ribbons/irl-objects.png"
                             data-tippy-content="Close Company: This character has a physical real-life item, like a plush, statue, keychain, etc."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/irl-plush.png"
+                            src="../ribbons/irl-plush.png"
                             data-tippy-content="Plush Friend: This character has an IRL plushie or doll made of them."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/3d-model.png"
+                            src="../ribbons/3d-model.png"
                             data-tippy-content="Now in 3D: This character has a 3D model of them."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/music.png"
+                            src="../ribbons/music.png"
                             data-tippy-content="Beautiful Sound: This character has an original song made specifically for them."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/most-expensive.png"
+                            src="../ribbons/most-expensive.png"
                             data-tippy-content="Most Expensive: You have spent $100+ on this character yourself."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/250-pieces-of-art.png"
+                            src="../ribbons/250-pieces-of-art.png"
                             data-tippy-content="Piles of Notebooks: This character has 250+ pieces of art."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/50-own-arts.png"
+                            src="../ribbons/50-own-arts.png"
                             data-tippy-content="An Artist's Shadow: You've drawn and/or written this character 50+ times yourself."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/voiceclaim.png"
+                            src="../ribbons/voiceclaim.png"
                             data-tippy-content="Microphone: This character has a voice claim."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/roleplay.png"
+                            src="../ribbons/roleplay.png"
                             data-tippy-content="Actor: This character was/is used in roleplay."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/tumblr-rp-blog.png"
+                            src="../ribbons/tumblr-rp-blog.png"
                             data-tippy-content="AMA: This character has an Askblog."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/2021.png"
+                            src="../ribbons/2021.png"
                             data-tippy-content="2021: This character was made in 2021."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/artfight-5.png"
+                            src="../ribbons/artfight-5.png"
                             data-tippy-content="Five Attacks: This character has received 5+ attacks on Artfight."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/hyperfixation.png"
+                            src="../ribbons/hyperfixation.png"
                             data-tippy-content="Hyperfixation Ribbon: This character is based off or linked to the owner's current or previous hyperfixation(s)."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/most-ribbons.png"
+                            src="../ribbons/most-ribbons.png"
                             data-tippy-content="Ribbon Ribbon: This character has the most ribbons out of all the user's characters."
                             aria-hidden="true"
                             loading="lazy"
@@ -2696,9 +2677,9 @@
                     <div class="image-gallery">
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by KatheUvu">
-                            <a href="../img/oc/sylvie/gallery_1_full.jpg" loading="lazy" data-lightbox="gallery"
+                            <a href="img/gallery_1_full.jpg" loading="lazy" data-lightbox="gallery"
                                 ><img
-                                    src="../img/oc/sylvie/gallery_1_thumb.jpg"
+                                    src="img/gallery_1_thumb.jpg"
                                     loading="lazy"
                                     data-lightbox="gallery"
                                     aria-label="open image"
@@ -2706,9 +2687,9 @@
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by Kanozey">
-                            <a href="../img/oc/sylvie/gallery_2_full.jpg" loading="lazy" data-lightbox="gallery"
+                            <a href="img/gallery_2_full.jpg" loading="lazy" data-lightbox="gallery"
                                 ><img
-                                    src="../img/oc/sylvie/gallery_2_thumb.jpg"
+                                    src="img/gallery_2_thumb.jpg"
                                     loading="lazy"
                                     data-lightbox="gallery"
                                     aria-label="open image"
@@ -2716,9 +2697,9 @@
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by furinuwi">
-                            <a href="../img/oc/sylvie/gallery_3_full.jpg" loading="lazy" data-lightbox="gallery"
+                            <a href="img/gallery_3_full.jpg" loading="lazy" data-lightbox="gallery"
                                 ><img
-                                    src="../img/oc/sylvie/gallery_3_thumb.jpg"
+                                    src="img/gallery_3_thumb.jpg"
                                     loading="lazy"
                                     data-lightbox="gallery"
                                     aria-label="open image"
@@ -2726,9 +2707,9 @@
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by me">
-                            <a href="../img/oc/sylvie/gallery_4_full.jpg" loading="lazy" data-lightbox="gallery"
+                            <a href="img/gallery_4_full.jpg" loading="lazy" data-lightbox="gallery"
                                 ><img
-                                    src="../img/oc/sylvie/gallery_4_thumb.jpg"
+                                    src="img/gallery_4_thumb.jpg"
                                     loading="lazy"
                                     data-lightbox="gallery"
                                     aria-label="open image"
@@ -2736,9 +2717,9 @@
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by me">
-                            <a href="../img/oc/sylvie/gallery_5_full.jpg" loading="lazy" data-lightbox="gallery"
+                            <a href="img/gallery_5_full.jpg" loading="lazy" data-lightbox="gallery"
                                 ><img
-                                    src="../img/oc/sylvie/gallery_5_thumb.jpg"
+                                    src="img/gallery_5_thumb.jpg"
                                     loading="lazy"
                                     data-lightbox="gallery"
                                     aria-label="open image"
@@ -2821,13 +2802,13 @@
                 dots[slideIndex - 1].className += " active";
             }
         </script>
-        <script src="../js/music-player.js"></script>
+        <script src="/js/music-player.js"></script>
 
         <!-- Scroll to Top -->
-        <script src="../js/scroll-to-top.js"></script>
+        <script src="/js/scroll-to-top.js"></script>
 
         <!-- Accordion Dropdown -->
-        <script src="../js/accordion.js"></script>
+        <script src="/js/accordion.js"></script>
 
         <!-- Random Quote -->
         <script src="sylvie-quote.js"></script>
