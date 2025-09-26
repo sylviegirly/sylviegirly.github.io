@@ -1,5 +1,55 @@
 const quotes = [
     {
+        quote: "I crave warmth everywhere. In the morning sun or in sunsets or in music, art, places, just warm energy. When people recommend you songs or movies or tell you how much you mean to them, when people say I love you out of the blue, or a smile from random strangers, people going on walks with you or a picnic date with friends, when somebody talks about the person they love or the times when you are laughing uncontrollably with a group of people you love, I crave that warmth. ",
+        author: "lookatthestarswithmee",
+        url: "https://www.tumblr.com/lookatthestarswithmee/673663991862706176"
+    },
+    {
+        quote: "gonna swallow some unfired pottery right before i die as a treat for the folks that cremate me",
+        author: "amazoogle",
+        url: "https://www.tumblr.com/amazoogle/667417869747978240"
+    },
+    {
+        quote: "God gives his silliest clowns the fattest tits",
+        author: "shartgod420",
+        url: "https://shartgod420.tumblr.com/post/680763358329323520"
+    },
+    {
+        quote: "my head hurts I think I need to have gay sex or kill someone. it might help. I saw that on tv",
+        author: "prisonhannibal",
+        url: "https://prisonhannibal.tumblr.com/post/675110811199537152"
+    },
+    {
+        quote: "might fuck around and walk into a thick fog and never return idk",
+        author: "cryptidsandchaos",
+        url: "https://cryptidsandchaos.tumblr.com/post/632517666024947712"
+    },
+    {
+        quote: "GIRL you are KILLING IT! GIRL i don’t think it’s MOVING ANYMORE. GIRL you can STOP BITING",
+        author: "quimerical",
+        url: "https://sylviegirly.tumblr.com/post/679642705932009472"
+    },
+    {
+        quote: "*writhing around on the ground in pain* i really don’t think the amulet is that cursed…. you guys are overreacting. it looks great on me anyways. you guys are just jealous",
+        author: "wizardpostsdotorg",
+        url: "https://www.tumblr.com/wizardpostsdotorg/670579831606575104"
+    },
+    {
+        quote: "entering my decomposition era",
+        author: "gothorita",
+        url: "https://gothorita.tumblr.com/post/666063556385570816"
+    },
+    {
+        quote: "I AM forgiving. I AM releasing. I AM opening. I AM unlearning the wrongs. I AM learning the rights. I AM unleashing my potential.",
+        author: "lafemmefatalee",
+        url: "https://lafemmefatalee.tumblr.com/post/674923191984160768"
+    },
+    {
+        quote: "RIP to everyone killed by the gods for their hubris but im different. and better. maybe even better than the gods",
+        author: "classically-lit-memes4u",
+        url: "https://www.tumblr.com/classically-lit-memes4u/669871057231020032"
+    },
+    {
         quote: "i love you green. i love you forests. i love you smell of damp earth. i love you feeling before the storm breaks. i love you moss. i love you rivers. i love you streams. i love you thunderstorms. i love you sunlight shining through leaves.",
         author: "winedark-maverick",
         url: "https://winedark-maverick.tumblr.com/post/688182803825917952"
