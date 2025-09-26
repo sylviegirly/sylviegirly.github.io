@@ -31,27 +31,27 @@
         <meta content="A character page for an original character named Raiden." name="description" />
 
         <!-- FavIcon Gif -->
-        <link rel="icon" type="image/gif" href="../img/oc/raiden/favicon.gif" />
+        <link rel="icon" type="image/gif" href="img/favicon.gif" />
 
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
             if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" type="text/css" href="character.css" />
-        <link rel="stylesheet" href="../css/lightbox.css" />
+        <link rel="stylesheet" type="text/css" href="../character.css" />
+        <link rel="stylesheet" href="/css/lightbox.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JS: -->
-        <script src="../js/lightbox-plus-jquery.js"></script>
-        <script src="character-nav.js" defer></script>
+        <script src="/js/lightbox-plus-jquery.js"></script>
+        <script src="../character-nav.js" defer></script>
         <!-- Disclosure Menu -->
 
-        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
-        <script src="../js/tab-title-suffix.js"></script>
+        <script src="/js/accessibility/accessible-menu.js" type="module"></script>
+        <script src="/js/tab-title-suffix.js"></script>
         <style>
             :root {
                 --header-image: url("https://images.pexels.com/photos/2887497/pexels-photo-2887497.jpeg");
-                --focal-image: url("../img/oc/raiden/focal_image.png");
-                --focal-trivia-image: url("../img/oc/raiden/trivia_focal.jpg");
+                --focal-image: url("img/focal_image.png");
+                --focal-trivia-image: url("img/trivia_focal.jpg");
 
                 --moodboard-1-image: url("https://plus.unsplash.com/premium_photo-1674684223407-13e383e1f0e6?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
                 --moodboard-2-image: url("https://images.unsplash.com/photo-1548620848-d375c7919ea2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -106,6 +106,18 @@
                 .focal {
                     background-position: center !important;
                 }
+
+                .focal {
+                    background-image: var(--focal-image); /* ...?? why do you not work w/o this */
+                }
+
+                .triviafocal {
+                    background-image: var(--focal-trivia-image); /* ...?? why do you not work w/o this */
+                }
+
+                .design-image-alt {
+                    background-image: var(--design-image); /* ...?? why do you not work w/o this */
+                }
             }
         </style>
     </head>
@@ -122,7 +134,7 @@
                 <div id="sidebar-content">
                     <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
                     <div class="icon">
-                        <img src="../img/oc/raiden/sidebar_image.jpg" alt="" aria-hidden="true" />
+                        <img src="img/sidebar_image.jpg" alt="" aria-hidden="true" />
                     </div>
                     <div class="header">Raiden</div>
 
@@ -315,15 +327,12 @@
                 <!-- FOCAL SIDE IMAGE + FLAGS ------------------------------>
                 <section class="third focal">
                     <div class="flags">
-                        <img src="flags/cis.png" alt="cis flag" data-tippy-content="Cis Male" />
+                        <img src="../flags/cis.png" alt="cis flag" data-tippy-content="Cis Male" />
                         <img
-                            src="flags/demirose.png"
+                            src="../flags/demirose.png"
                             alt="Demisexual and demiromantic flag"
                             data-tippy-content="Demirose" />
-                        <img
-                            src="flags/bipolar.png"
-                            alt="Bipolar Disorder"
-                            data-tippy-content="Bipolar Disorder" />
+                        <img src="../flags/bipolar.png" alt="Bipolar Disorder" data-tippy-content="Bipolar Disorder" />
                     </div>
                 </section>
 
@@ -474,14 +483,14 @@
                 <!-- AESTHETIC STAMPS --------------------------------->
                 <section class="full">
                     <div class="badgeholder" style="justify-content: space-evenly">
-                        <img src="../img/oc/raiden/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/raiden/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/raiden/stamp_3.gif" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/raiden/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/raiden/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/raiden/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/raiden/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
-                        <img src="../img/oc/raiden/stamp_8.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_1.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_2.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_3.gif" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_4.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_5.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_6.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_7.png" aria-hidden="true" alt="" loading="lazy" />
+                        <img src="img/stamp_8.gif" aria-hidden="true" alt="" loading="lazy" />
                     </div>
                 </section>
 
@@ -746,7 +755,7 @@
                         him.
                     </section>
                     <img
-                        src="../img/oc/raiden/content_deco.png"
+                        src="img/content_deco.png"
                         style="max-width: 35%; float: right; margin: 5px 30px"
                         class="image-shadow"
                         data-tippy-content="Art by SacredNanners" />
@@ -899,8 +908,8 @@
                         <!-- RELATIONSHIP BOX -->
                         <div class="relationshipbox">
                             <div class="relationshipicon">
-                                <a href="hideki.html"
-                                    ><img src="../img/oc/hideki/thumbnail.jpg" alt="" aria-hidden="true" loading="lazy"
+                                <a href="../hideki/index.html"
+                                    ><img src="../hideki/img/thumbnail.jpg" alt="" aria-hidden="true" loading="lazy"
                                 /></a>
                             </div>
                             <span class="relationshipname">Hideki</span> &bull;
@@ -970,134 +979,134 @@
 
                     <div class="badgeholder">
                         <img
-                            src="ribbons/male.png"
+                            src="../ribbons/male.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Male: This character is male." />
                         <img
-                            src="ribbons/he-him.png"
+                            src="../ribbons/he-him.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="He/Him: This character uses he/him/himself pronouns." />
                         <img
-                            src="ribbons/demiaroace.png"
+                            src="../ribbons/demiaroace.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Demiaroace: This character only experiences sexual and romantic attraction after an emotional connection has been established." />
                         <img
-                            src="ribbons/bipolar.png"
+                            src="../ribbons/bipolar.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Bipolar: This character has Bipolar Disorder." />
                         <img
-                            src="ribbons/narcolepsy.png"
+                            src="../ribbons/narcolepsy.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Narcolepsy: This character has Narcolepsy." />
                         <img
-                            src="ribbons/kleptomania.png"
+                            src="../ribbons/kleptomania.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Kleptomania: This character has kleptomania." />
                         <img
-                            src="ribbons/married.png"
+                            src="../ribbons/married.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Never Shall Us Part: This character is married." />
                         <img
-                            src="ribbons/parental.png"
+                            src="../ribbons/parental.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Parental Figure: This character is a parent or guardian." />
                         <img
-                            src="ribbons/criminal.png"
+                            src="../ribbons/criminal.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Wanted: This character is a criminal." />
                         <img
-                            src="ribbons/near_death.png"
+                            src="../ribbons/near_death.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Near-Death: This character had a near-death experience." />
                         <img
-                            src="ribbons/bloody.png"
+                            src="../ribbons/bloody.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Bloody Knife: This character has killed." />
                         <img
-                            src="ribbons/darkness.png"
+                            src="../ribbons/darkness.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Darkness: This character uses magic or has abilities relating to darkness." />
                         <img
-                            src="ribbons/ISTP.png"
+                            src="../ribbons/ISTP.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="The Virtuoso: This character has the ISTP personality type." />
                         <img
-                            src="ribbons/chaotic-neutral.png"
+                            src="../ribbons/chaotic-neutral.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Neutral Good: This character is of the chaotic neutral alignment." />
                         <img
-                            src="ribbons/september.png"
+                            src="../ribbons/september.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="September Child: This character was born in September. " />
                         <img
-                            src="ribbons/retired.png"
+                            src="../ribbons/retired.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Retired: This character has been retired." />
                         <img
-                            src="ribbons/beloved.png"
+                            src="../ribbons/beloved.png"
                             data-tippy-content="Beloved: A character that is dearly beloved by the owner."
                             aria-hidden="true"
                             loading="lazy"
                             alt="" />
                         <img
-                            src="ribbons/ex-fandom.png"
+                            src="../ribbons/ex-fandom.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             style="width: 60px"
                             data-tippy-content="Broken Links: This character used to be a fandom OC, but is no longer." />
                         <img
-                            src="ribbons/irl-objects.png"
+                            src="../ribbons/irl-objects.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Close Company: This character has a physical real-life item, like a plush, statue, keychain, etc." />
                         <img
-                            src="ribbons/roleplay.png"
+                            src="../ribbons/roleplay.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="Actor: This character was/is used in roleplay." />
                         <img
-                            src="ribbons/tumblr-rp-blog.png"
+                            src="../ribbons/tumblr-rp-blog.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
                             data-tippy-content="AMA: This character has an Askblog." />
                         <img
-                            src="ribbons/2013.png"
+                            src="../ribbons/2013.png"
                             loading="lazy"
                             aria-hidden="true"
                             alt=""
@@ -1113,51 +1122,51 @@
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by skunkyfly">
                             <a
-                                href="../img/oc/raiden/gallery_full_1.jpg"
+                                href="img/gallery_full_1.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/raiden/gallery_thumb_1.jpg" alt=""
+                                ><img src="img/gallery_thumb_1.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by me">
                             <a
-                                href="../img/oc/raiden/gallery_full_2.jpg"
+                                href="img/gallery_full_2.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/raiden/gallery_thumb_2.jpg" alt=""
+                                ><img src="img/gallery_thumb_2.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by me">
                             <a
-                                href="../img/oc/raiden/gallery_full_3.jpg"
+                                href="img/gallery_full_3.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/raiden/gallery_thumb_3.jpg" alt=""
+                                ><img src="img/gallery_thumb_3.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by lxnahl">
                             <a
-                                href="../img/oc/raiden/gallery_full_4.jpg"
+                                href="img/gallery_full_4.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/raiden/gallery_thumb_4.jpg" alt=""
+                                ><img src="img/gallery_thumb_4.jpg" alt=""
                             /></a>
                         </div>
                         <!-- IMAGE -->
                         <div data-tippy-content="Art by reveriesky">
                             <a
-                                href="../img/oc/raiden/gallery_full_5.jpg"
+                                href="img/gallery_full_5.jpg"
                                 loading="lazy"
                                 data-lightbox="gallery"
                                 aria-label="open image"
-                                ><img src="../img/oc/raiden/gallery_thumb_5.jpg" alt=""
+                                ><img src="img/gallery_thumb_5.jpg" alt=""
                             /></a>
                         </div>
                     </div>
@@ -1188,12 +1197,9 @@
         </script>
 
         <!-- Scroll to Top -->
-        <script src="../js/scroll-to-top.js"></script>
-
-
-
+        <script src="/js/scroll-to-top.js"></script>
 
         <!-- Accordion Dropdown -->
-        <script src="../js/accordion.js"></script>
+        <script src="/js/accordion.js"></script>
     </body>
 </html>
