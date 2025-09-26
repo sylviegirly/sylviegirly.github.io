@@ -96,11 +96,6 @@
                 }
             }
 
-            button .gallerylink {
-                display: block;
-                margin: 0;
-            }
-
             .gallerylinks {
                 padding: 7px 19px;
                 font-family: "dosis";
@@ -156,6 +151,12 @@
                 font-size: 20px;
                 font-family: "dosis";
             }
+
+            @media screen and (max-width: 800px) {
+                .gallerylinks {
+                    width: auto;
+                }
+            }
         </style>
     </head>
     <body>
@@ -178,9 +179,7 @@
 
                     <!-- Navigation menu  -->
                     <div class="" id="main-menu">
-                        <ul>
-                            <li><a href="index.html">Back to Page</a></li>
-                        </ul>
+                        <button class="gallerylinks" onclick="location.href='/oc/khaliun/index.html'">Go Back</button>
                         <button class="gallerylinks" onclick="openGalleryTab(event, 'drawings')" id="defaultGallery">
                             Artwork
                         </button>
