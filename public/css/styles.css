@@ -709,6 +709,7 @@ nav {
     top: 0;
     z-index: 2;
     margin-bottom: 20px;
+    padding-left: 50px;
 }
 nav > button {
     min-width: 44px;
