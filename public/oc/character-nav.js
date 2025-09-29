@@ -85,7 +85,7 @@ const content = `
             <a id="link-4-0-0" href="#">Personal</a>
             <ul id="menu-3">
                 <li id="item-4-1-0"><a id="link-3-2-0" href="/blog.html">Blog</a></li>
-                <li id="item-4-2-0"><a id="link-3-2-0" href="/diary.html">Diary</a></li>
+                <li id="item-4-2-0"><a id="link-3-2-0" href="/diary/index.html">Diary</a></li>
                 <li id="item-4-3-0"><a id="link-3-4-0" href="/manifesto.html">Manifesto</a></li>
                 <li id="item-4-4-0"><a id="link-3-5-0" href="/now.html">Now</a></li>
             </ul>
