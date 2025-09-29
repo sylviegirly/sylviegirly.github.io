@@ -74,6 +74,12 @@
     src: url(../fonts/IntelOneMono-Regular.ttf);
 }
 
+@font-face {
+    font-family: "Nunito";
+    font-display: swap;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -724,7 +730,7 @@ main img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-     width: 75%;
+    width: 75%;
 }
 
 main input,

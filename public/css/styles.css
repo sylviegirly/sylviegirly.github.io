@@ -97,6 +97,12 @@
     src: url(../fonts/MS-Gothic.ttf);
 }
 
+@font-face {
+    font-family: "Nunito";
+    font-display: swap;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
 /* -------------------------------------------------------- */
 /* BASICS */
 /* -------------------------------------------------------- */

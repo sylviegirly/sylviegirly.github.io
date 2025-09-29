@@ -68,6 +68,7 @@ const content = `
             <option value="atkinson">Atkinson Hyperlegible</option>
             <option value="intel one">Intel One Mono</option>
             <option value="open dyslexic">Open Dyslexic</option>
+            <option value="Nunito">Nunito</option>
             <option value="Tahoma">Tahoma</option>
             <option value="Verdana">Verdana</option>
             <option value="Arial">Arial</option>
