@@ -9,7 +9,21 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-09-26T18:22:19-05:00</updated>
+    <updated>2025-09-29T01:02:10-05:00</updated>
+
+    <entry>
+        <title>New diary page</title>
+        <link href="https://zhongvie.neocities.org/diary" />
+        <updated>2025-09-29T01:02:10-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1759125730</id>
+        <content type="html">
+            &#x3C;p&#x3E;Inspired from &#x3C;a href=&#x22;https://nanacore.neocities.org/diary&#x22;&#x3E;Nana&#x27;s
+            page&#x3C;/a&#x3E;, I wanted to make my own little diary page (since I&#x27;ve been in the habit of
+            documenting one highlight of the day in my own actual journal) ... simple, but it&#x27;s a
+            start!!&#x3C;/p&#x3E; &#x3C;p&#x3E;I&#x27;ve retired the nav link to my listography page, but it&#x27;s
+            still present on the site itself since I know there&#x27;s a few outlinks to it&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New Blog Post: Exploring gender through OCs</title>

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    --->
+    <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Send to not found page is there's no javascript -->
+        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+
+        <!-- Site Title -->
+        <title>diary</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="A list of credits from things that were used in making this website." name="description" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+        if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JavaScript: -->
+        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
+        if this HTML file is in 2 subfolders, etc. -->
+        <script src="js/header.js" defer></script>
+        <script src="js/left-sidebar.js" defer></script>
+        <script src="js/footer.js" defer></script>
+        <script src="js/tab-title-suffix.js"></script>
+
+        <script src="js/accessibility/disclosure-menu.iife.js"></script>
+        <!-- Disclosure Menu -->
+        <script src="js/accessibility/accessible-menu.js" type="module"></script>
+
+        <style>
+            .calendar {
+                width: 100%;
+            }
+
+            .calendar-head {
+                display: flex;
+                min-height: 30px;
+                color: var(--font-on-accent);
+                font-family: "dosis";
+            }
+
+            .inactive {
+                opacity: 0.1;
+                background-size: 10px 10px;
+                background-image: repeating-linear-gradient(
+                    45deg,
+                    var(--primary-accent) 0,
+                    var(--primary-accent) 1px,
+                    transparent 0,
+                    transparent 50%
+                );
+            }
+
+            .dayname {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                text-transform: uppercase;
+                color: var(--font-on-accent)
+                overflow: hidden;
+                background-color: var(--primary-accent);
+                font-weight: bold;
+                text-align: center;
+                line-height: 1;
+            }
+
+            .row {
+                display: flex;
+                min-height: 150px;
+            }
+
+            .day {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                color: var(--font);
+                padding: 5px;
+                box-shadow:
+                    -1px -1px var(--article-liner),
+                    inset -1px -1px 0 0 var(--article-liner);
+            }
+
+            .day.next {
+                color: #d5d7db;
+            }
+        </style>
+    </head>
+    <body id="body">
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+        <div class="container-grid">
+            <!-- =============================================== -->
+            <!-- LEFT SIDEBAR CONTENT -->
+            <!-- =============================================== -->
+            <div class="intro">
+                <section>
+                    <div class="img-floatinganim">
+                        <img class="dendro" src="../img/dendro_symbol.png" aria-hidden="true" alt="" />
+                    </div>
+                    <img
+                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/61813959_Xr5LiIyVeH43aDy.png"
+                        class="full-width-image" />
+                    <div class="subtitle">
+                        <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
+                        Diary
+                        <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
+                    </div>
+                    <div>
+                        <p>
+                            A page to document one highlight of the day; I've been doing this in my
+                            <u>physical</u> journal, but I thought I'd do a simple version here for funsies.
+                        </p>
+                        <hr />
+                        <p>I'll ... eventually add an archive link here ...</p>
+                    </div>
+                </section>
+            </div>
+
+            <main id="content">
+                <article>
+                    <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> October 2025</h1>
+                    <div class="calendar">
+                        <div class="calendar-head">
+                            <div class="dayname">Monday</div>
+                            <div class="dayname">Tuesday</div>
+                            <div class="dayname">Wednesday</div>
+                            <div class="dayname">Thursday</div>
+                            <div class="dayname">Friday</div>
+                            <div class="dayname">Saturday</div>
+                            <div class="dayname">Sunday</div>
+                        </div>
+                        <div class="row">
+                            <div class="day inactive"></div>
+                            <div class="day inactive"></div>
+                            <div class="day">
+                                <div class="day-number">1</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">2</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">3</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">4</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">5</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="day">
+                                <div class="day-number">6</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">7</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">8</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">9</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">10</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">11</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">12</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="day">
+                                <div class="day-number">13</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">14</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">15</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">16</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">17</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">18</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">19</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="day">
+                                <div class="day-number">20</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">21</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">22</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">23</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">24</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">25</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">26</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="day">
+                                <div class="day-number">27</div>
+                            </div>
+                            <div class="day event">
+                                <div class="day-number">28</div>
+                            </div>
+                            <div class="day">
+                                <div class="day-number">29</div>
+                            </div>
+                            <div class="day next">
+                                <div class="day-number">30</div>
+                            </div>
+                            <div class="day next">
+                                <div class="day-number">31</div>
+                            </div>
+                            <div class="day inactive"></div>
+                            <div class="day inactive"></div>
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+
+        <!-- =============================================== -->
+        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
+        <!-- =============================================== -->
+        <general-footer></general-footer>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+
+        <!-- Scroll to Top -->
+        <script src="js/scroll-to-top.js"></script>
+    </body>
+</html>

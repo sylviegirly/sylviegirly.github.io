@@ -78,56 +78,52 @@ const content = `
     <button id="toggle-0" aria-label="Toggle main menu">☰</button>
     <ul id="menu-0">
         <li id="item-1-0-0"><a id="link-1-0-0" href="/index.html">Home</a></li>
-        <li id="item-2-0-0"><a id="link-2-0-0" href="/about.html">About Me</a></li>
-        <li id="item-3-0-0" class="dropdown">
-            <a id="link-3-0-0" href="#">Personal</a>
+        <li id="item-2-0-0"><a id="link-2-0-0" href="/about.html">About</a></li>
+        <li id="item-3-0-0"><a id="link-2-0-0" href="/gallery.html">Art</a></li>
+        <li id="item-4-0-0" class="dropdown">
+            <a id="link-4-0-0" href="#">Personal</a>
             <ul id="menu-3">
-                <li id="item-3-1-0"><a id="link-3-1-0" href="/gallery.html">Artwork</a></li>
-                <li id="item-3-2-0"><a id="link-3-2-0" href="/blog.html">Blog</a></li>
-                <li id="item-3-3-0"><a id="link-3-3-0" href="/listfauxgraphy">Listography</a></li>
-                <li id="item-3-4-0"><a id="link-3-4-0" href="/manifesto.html">Manifesto</a></li>
-                <li id="item-3-5-0"><a id="link-3-5-0" href="/now.html">Now</a></li>
-                <li id="item-3-6-0"><a id="link-3-6-0" href="/to-do.html">To-Do List</a></li>
+                <li id="item-4-1-0"><a id="link-3-2-0" href="/blog.html">Blog</a></li>
+                <li id="item-4-2-0"><a id="link-3-2-0" href="/diary.html">Diary</a></li>
+                <li id="item-4-3-0"><a id="link-3-4-0" href="/manifesto.html">Manifesto</a></li>
+                <li id="item-4-4-0"><a id="link-3-5-0" href="/now.html">Now</a></li>
             </ul>
         </li>
-        <li id="item-4-0-0" class="dropdown">
-            <a id="link-4-0-0" href="#">OCs / Shrines</a>
+        <li id="item-5-0-0" class="dropdown">
+            <a id="link-5-0-0" href="#">OCs / Shrines</a>
             <ul id="menu-4">
-                <li id="item-4-1-0"><a id="link-4-1-0" href="/oc/sylvie/index.html">Sylvie</a></li>
-                <li id="item-4-2-0"><a id="link-4-2-0" href="/oc/yadyra/index.html">Yadyra</a></li>
-                <li id="item-4-3-0"><a id="link-4-3-0" href="/oc/nameless/index.html">Nameless</a></li>
-                <li id="item-4-4-0"><a id="link-4-4-0" href="/oc.html">Other OCs</a></li>
-                <li id="item-4-5-0" class="dropdown">
-                    <a id="link-4-5-0" href="#">Shrines</a>
-                    <ul id="menu-4-5">
-                        <li id="item-4-5-1"><a id="link-4-5-1" href="/shrines/zhongli.html">Zhongli</a></li>
-                        <li id="item-4-5-2">
-                            <a id="link-4-5-2" href="/shrines/zhongvie.html">Zhongvie (🌿🔶)</a>
-                        </li>
-                        <li id="item-4-5-3"><a id="link-4-5-3" href="/shrines/ukitake.html">Jushiro Ukitake</a></li>
+                <li id="item-5-1-0"><a id="link-4-1-0" href="/oc/sylvie/index.html">Sylvie</a></li>
+                <li id="item-5-2-0"><a id="link-4-2-0" href="/oc/yadyra/index.html">Yadyra</a></li>
+                <li id="item-5-3-0"><a id="link-4-3-0" href="/oc/nameless/index.html">Nameless</a></li>
+                <li id="item-5-4-0"><a id="link-4-4-0" href="/oc.html">Other OCs</a></li>
+                <li id="item-5-5-0" class="dropdown">
+                    <a id="link-5-5-0" href="#">Shrines</a>
+                    <ul id="menu-5-5">
+                        <li id="item-5-5-1"><a id="link-4-5-1" href="/shrines/zhongli.html">Zhongli</a></li>
+                        <li id="item-5-5-2"><a id="link-4-5-2" href="/shrines/zhongvie.html">Zhongvie (🌿🔶)</a></li>
+                        <li id="item-5-5-3"><a id="link-4-5-3" href="/shrines/ukitake.html">Jushiro Ukitake</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <li id="item-5-0-0" class="dropdown">
-            <a id="link-5-0-0" href="#">Fun Things</a>
-            <ul id="menu-5">
-                <li id="item-5-1-0"><a id="link-5-1-0" href="/media-log.html">Media Log</a></li>
-                <li id="item-5-2-0"><a id="link-5-2-0" href="/recipes.html">Recipes</a></li>
-                <li id="item-5-3-0"><a id="link-5-3-0" href="/sims-3-legacy.html">Sims 3 Legacy</a></li>
-                <li id="item-5-4-0"><a id="link-5-4-0" href="/toybox.html">Toybox</a></li>
+        <li id="item-6-0-0" class="dropdown">
+            <a id="link-6-0-0" href="#">Fun Things</a>
+            <ul id="menu-6">
+                <li id="item-6-1-0"><a id="link-5-1-0" href="/bookmarks.html">Bookmarks</a></li>
+                <li id="item-6-2-0"><a id="link-5-1-0" href="/media-log.html">Media Log</a></li>
+                <li id="item-6-3-0"><a id="link-5-2-0" href="/recipes.html">Recipes</a></li>
+                <li id="item-6-4-0"><a id="link-5-3-0" href="/sims-3-legacy.html">Sims 3 Legacy</a></li>
+                <li id="item-6-5-0"><a id="link-5-4-0" href="/toybox.html">Toybox</a></li>
             </ul>
         </li>
-        <li id="item-6-0-0" class="dropdown">
-            <a id="link-6-0-0" href="#">Others</a>
-            <ul id="menu-6">
-                <li id="item-6-1-0"><a id="link-6-1-0" href="https://asuraid.atabook.org/">Guestbook</a></li>
-                <li id="item-6-2-0">
-                    <a id="link-6-2-0" href="/bookmarks.html">Bookmarks</a>
-                </li>
-                <li id="item-6-3-0"><a id="link-6-3-0" href="/links.html">Neighbours / Webrings</a></li>
-                <li id="item-6-4-0"><a id="link-6-4-0" href="/sitemap.html">Sitemap</a></li>
-                <li id="item-6-5-0"><a id="link-6-5-0" href="/credits.html">Credits</a></li>
+        <li id="item-7-0-0" class="dropdown">
+            <a id="link-7-0-0" href="#">Others</a>
+            <ul id="menu-7">
+                <li id="item-7-1-0"><a id="link-6-5-0" href="/credits.html">Credits</a></li>
+                <li id="item-7-2-0"><a id="link-6-1-0" href="https://asuraid.atabook.org/">Guestbook</a></li>
+                <li id="item-7-3-0"><a id="link-6-3-0" href="/links.html">Neighbours</a></li>
+                <li id="item-7-4-0"><a id="link-6-4-0" href="/sitemap.html">Sitemap</a></li>
+                <li id="item-7-5-0"><a id="link-3-6-0" href="/to-do.html">To-Do List</a></li>
             </ul>
         </li>
     </ul>
