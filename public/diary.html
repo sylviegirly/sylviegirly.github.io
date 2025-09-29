@@ -87,11 +87,11 @@
                 font-weight: bold;
                 text-align: center;
                 line-height: 1;
-                font-weight: 600;
             }
 
             .day-number {
                 font-family: "dosis";
+                font-weight: bold;
                 color: var(--secondary-accent);
             }
 
@@ -109,6 +109,16 @@
                 box-shadow:
                     -1px -1px var(--article-liner),
                     inset -1px -1px 0 0 var(--article-liner);
+            }
+
+            @media screen and (max-width: 800px) {
+                .row {
+                flex-direction: column;
+                }
+
+                .inactive, .calendar-head {
+                    display: none;
+                }
             }
         </style>
     </head>
