@@ -56,13 +56,13 @@ const sidebar = `
                 <b>aid</b>
                 <img
                     style="padding-left: 5px; padding-right: 5px"
-                    src="img/deco/teabag.gif"
+                    src="img/decos/teabag.gif"
                     aria-hidden="true"
                     alt="" />
                 <b>25+</b>
                 <img
                     style="padding-left: 5px; padding-right: 5px"
-                    src="img/deco/teabag.gif"
+                    src="img/decos/teabag.gif"
                     aria-hidden="true"
                     alt="" />
                 <b>she/her</b>
