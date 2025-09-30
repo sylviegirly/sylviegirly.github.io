@@ -1260,7 +1260,7 @@ footer {
     background-color: var(--article-bg);
     font-size: 0.75em;
     border-top: 5px solid var(--primary-accent);
-    font-family: "dosis";
+    font-family: "nunito";
 }
 
 footer a:hover {
