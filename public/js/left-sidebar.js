@@ -68,11 +68,6 @@ const sidebar = `
                 <b>she/her</b>
             </p>
             <hr />
-            <p>
-                A little personal corner, where I <mark>OC blab</mark> and store all the things
-                <u>I like</u> and <u>enjoy</u>.
-            </p>
-            <hr />
             <div class="cool-buttons">
                 <a href="https://www.tumblr.com/lavendergalactic"
                 title="gifs by lavendergalactic as a commission for me. please don't use.">
@@ -105,7 +100,7 @@ const sidebar = `
 &lt;a href="https://zhongvie.neocities.org/"&gt;&lt;img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/sylvieButton.gif" alt="zhongvie button" loading="lazy"&gt;&lt;/a&gt;</textarea
             >
             <label for="site-button" class="subtle" style="text-align: center; margin-top: 3px;"
-                >Site button; hotlinking is ok since the URL is on filegarden, but it's recommended to save. Alt buttons can be found <a href="./links.html">here</a></label
+                >Site button; URL is on filegarden, but it's recommended to save. Alt buttons can be found <a href="./links.html">here</a></label
             >
         </div>
     </section>
