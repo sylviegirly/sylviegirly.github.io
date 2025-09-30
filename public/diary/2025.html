@@ -81,7 +81,7 @@
                 flex-shrink: 1;
                 flex-basis: 0;
                 text-transform: uppercase;
-                color: var(--font-on-accent)
+                color: var(--font-on-accent);
                 overflow: hidden;
                 background-color: var(--primary-accent);
                 font-weight: bold;
@@ -122,11 +122,16 @@
 
             @media screen and (max-width: 800px) {
                 .row {
-                flex-direction: column;
+                    flex-direction: column;
                 }
 
-                .inactive, .calendar-head {
+                .inactive,
+                .calendar-head {
                     display: none;
+                }
+
+                .day p {
+                    font-size: 1em;
                 }
             }
         </style>

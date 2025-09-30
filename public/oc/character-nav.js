@@ -84,25 +84,25 @@ const content = `
         <li id="item-4-0-0" class="dropdown">
             <a id="link-4-0-0" href="#">Personal</a>
             <ul id="menu-3">
-                <li id="item-4-1-0"><a id="link-3-2-0" href="/blog.html">Blog</a></li>
-                <li id="item-4-2-0"><a id="link-3-2-0" href="/diary/index.html">Diary</a></li>
-                <li id="item-4-3-0"><a id="link-3-4-0" href="/manifesto.html">Manifesto</a></li>
-                <li id="item-4-4-0"><a id="link-3-5-0" href="/now.html">Now</a></li>
+                <li id="item-4-1-0"><a id="link-4-1-0" href="/blog.html">Blog</a></li>
+                <li id="item-4-2-0"><a id="link-4-2-0" href="/diary/index.html">Diary</a></li>
+                <li id="item-4-3-0"><a id="link-4-3-0" href="/manifesto.html">Manifesto</a></li>
+                <li id="item-4-4-0"><a id="link-4-4-0" href="/now.html">Now</a></li>
             </ul>
         </li>
         <li id="item-5-0-0" class="dropdown">
             <a id="link-5-0-0" href="#">OCs / Shrines</a>
             <ul id="menu-4">
-                <li id="item-5-1-0"><a id="link-4-1-0" href="/oc/sylvie/index.html">Sylvie</a></li>
-                <li id="item-5-2-0"><a id="link-4-2-0" href="/oc/yadyra/index.html">Yadyra</a></li>
-                <li id="item-5-3-0"><a id="link-4-3-0" href="/oc/nameless/index.html">Nameless</a></li>
-                <li id="item-5-4-0"><a id="link-4-4-0" href="/oc.html">Other OCs</a></li>
+                <li id="item-5-1-0"><a id="link-5-1-0" href="/oc/sylvie/index.html">Sylvie</a></li>
+                <li id="item-5-2-0"><a id="link-5-2-0" href="/oc/yadyra/index.html">Yadyra</a></li>
+                <li id="item-5-3-0"><a id="link-5-3-0" href="/oc/nameless/index.html">Nameless</a></li>
+                <li id="item-5-4-0"><a id="link-5-4-0" href="/oc.html">Other OCs</a></li>
                 <li id="item-5-5-0" class="dropdown">
                     <a id="link-5-5-0" href="#">Shrines</a>
                     <ul id="menu-5-5">
-                        <li id="item-5-5-1"><a id="link-4-5-1" href="/shrines/zhongli.html">Zhongli</a></li>
-                        <li id="item-5-5-2"><a id="link-4-5-2" href="/shrines/zhongvie.html">Zhongvie (🌿🔶)</a></li>
-                        <li id="item-5-5-3"><a id="link-4-5-3" href="/shrines/ukitake.html">Jushiro Ukitake</a></li>
+                        <li id="item-5-5-1"><a id="link-5-5-1" href="/shrines/zhongli.html">Zhongli</a></li>
+                        <li id="item-5-5-2"><a id="link-5-5-2" href="/shrines/zhongvie.html">Zhongvie (🌿🔶)</a></li>
+                        <li id="item-5-5-3"><a id="link-5-5-3" href="/shrines/ukitake.html">Jushiro Ukitake</a></li>
                     </ul>
                 </li>
             </ul>
@@ -110,21 +110,22 @@ const content = `
         <li id="item-6-0-0" class="dropdown">
             <a id="link-6-0-0" href="#">Fun Things</a>
             <ul id="menu-6">
-                <li id="item-6-1-0"><a id="link-5-1-0" href="/bookmarks.html">Bookmarks</a></li>
-                <li id="item-6-2-0"><a id="link-5-1-0" href="/media-log.html">Media Log</a></li>
-                <li id="item-6-3-0"><a id="link-5-2-0" href="/recipes.html">Recipes</a></li>
-                <li id="item-6-4-0"><a id="link-5-3-0" href="/sims-3-legacy.html">Sims 3 Legacy</a></li>
-                <li id="item-6-5-0"><a id="link-5-4-0" href="/toybox.html">Toybox</a></li>
+                <li id="item-6-1-0"><a id="link-6-1-0" href="/bookmarks.html">Bookmarks</a></li>
+                <li id="item-6-2-0"><a id="link-6-2-0" href="/media-log.html">Media Log</a></li>
+                <li id="item-6-3-0"><a id="link-6-3-0" href="/recipes.html">Recipes</a></li>
+                <li id="item-6-4-0"><a id="link-6-4-0" href="/sims-3-legacy.html">Sims 3 Legacy</a></li>
+                <li id="item-6-5-0"><a id="link-6-5-0" href="/toybox.html">Toybox</a></li>
             </ul>
         </li>
         <li id="item-7-0-0" class="dropdown">
             <a id="link-7-0-0" href="#">Others</a>
             <ul id="menu-7">
-                <li id="item-7-1-0"><a id="link-6-5-0" href="/credits.html">Credits</a></li>
-                <li id="item-7-2-0"><a id="link-6-1-0" href="https://asuraid.atabook.org/">Guestbook</a></li>
-                <li id="item-7-3-0"><a id="link-6-3-0" href="/links.html">Neighbours</a></li>
-                <li id="item-7-4-0"><a id="link-6-4-0" href="/sitemap.html">Sitemap</a></li>
-                <li id="item-7-5-0"><a id="link-3-6-0" href="/to-do.html">To-Do List</a></li>
+                <li id="item-7-1-0"><a id="link-7-1-0" href="/changelog.html">Changelog</a></li>
+                <li id="item-7-2-0"><a id="link-7-2-0" href="/credits.html">Credits</a></li>
+                <li id="item-7-3-0"><a id="link-7-3-0" href="https://asuraid.atabook.org/">Guestbook</a></li>
+                <li id="item-7-4-0"><a id="link-7-4-0" href="/links.html">Neighbours</a></li>
+                <li id="item-7-5-0"><a id="link-7-5-0" href="/sitemap.html">Sitemap</a></li>
+                <li id="item-7-6-0"><a id="link-7-6-0" href="/to-do.html">To-Do List</a></li>
             </ul>
         </li>
     </ul>
