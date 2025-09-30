@@ -68,6 +68,8 @@ const sidebar = `
                 <b>she/her</b>
             </p>
             <hr />
+            <p>Welcome to my silly lil corner, hope you enjoy your stay!!
+            <hr />
             <div class="cool-buttons">
                 <a href="https://www.tumblr.com/lavendergalactic"
                 title="gifs by lavendergalactic as a commission for me. please don't use.">
