@@ -9,7 +9,19 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-09-29T01:02:10-05:00</updated>
+    <updated>2025-10-01T15:33:06-05:00</updated>
+
+    <entry>
+        <title>Updated home page layout</title>
+        <link href="https://zhongvie.neocities.org" />
+        <updated>2025-10-01T15:33:06-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1759350786</id>
+        <content type="html">
+            &#60;p&#62;Cleaned up my index to reorganize since it's a way to combat the horrible itchy 'aughh I wanna
+            rehaul my site' need. Mostly just added a section for new artwork I do so it's upfront + shuffled things
+            around. New poll as well!&#60;/p&#62;
+        </content>
+    </entry>
 
     <entry>
         <title>New diary page</title>
