@@ -177,6 +177,12 @@
                 animation: fadeEffect 1s; /* Fading effect takes 1 second */
             }
 
+            .twocolumn {
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: 5px;
+            }
+
             @media screen and (max-width: 800px) {
                 .flexbox div {
                     width: calc(33% - 10px);
@@ -1515,7 +1521,7 @@
 
                         <div id="quizzes" class="tabcontent">
                             <h1><img src="img/decos/hanging_flowers.gif" aria-hidden="true" alt="" /> Quiz Results</h1>
-                            <div class="tabcontentinside hover-grow">
+                            <div class="tabcontentinside hover-grow twocolumn">
                                 <div>
                                     <table
                                         style="
@@ -1806,7 +1812,7 @@
                         </div>
 
                         <div id="Webrings" class="tabcontent">
-                            <div class="tabcontentinside">
+                            <div class="tabcontentinside twocolumn">
                                 <p>... i'll organize these eventually, sorry it is not pretty</p>
                                 <div style="margin-top: 5px; text-align: center; max-width: 100%">
                                     <script
