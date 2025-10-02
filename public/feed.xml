@@ -9,7 +9,19 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-10-01T15:33:06-05:00</updated>
+    <updated>2025-10-02T19:20:13-05:00</updated>
+
+    <entry>
+        <title>New Blog Post: Divide of the personal self and art</title>
+        <link href="https://zhongvie.bearblog.dev/2025-10-02/" />
+        <updated>2025-10-02T19:20:13-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1759450813</id>
+        <content type="html">
+            &#x3C;p&#x3E;Another rambly think piece; I guess my blogs end up being more of a dissection of my own self
+            more than anything, or a study piece of something ... but I didn&#x27;t always used to have such a divide of
+            the personal self, and the &#x27;art&#x27; self.&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Updated home page layout</title>
