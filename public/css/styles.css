@@ -1337,6 +1337,11 @@ footer a:hover {
         visibility: hidden !important;
     }
 
+    .mobile-only {
+        display: block !important;
+        visibility: visible !important;
+    }
+
     .columns {
         flex-direction: column;
     }
@@ -1940,4 +1945,9 @@ lite-youtube:hover > .lty-playbtn {
 #oc-webring-controls {
     display: flex;
     gap: 1em;
+}
+
+.mobile-only {
+    display: none;
+    visibility: hidden;
 }
