@@ -193,6 +193,22 @@
                 margin-right: auto;
             }
 
+            .threecolumn {
+                display: grid;
+                grid-template-columns: 33% 33% 34%;
+                column-gap: 5px;
+                align-content: center;
+                justify-content: center;
+                text-align: center;
+                min-height: 150px;
+            }
+
+            .threecolumn img {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
             @media screen and (max-width: 800px) {
                 .flexbox div {
                     width: calc(33% - 10px);
@@ -1822,8 +1838,9 @@
                         </div>
 
                         <div id="Webrings" class="tabcontent">
-                            <div class="tabcontentinside twocolumn">
-                                <p>... i'll organize these eventually, sorry it is not pretty</p>
+                            <p>... i'll organize these eventually, sorry it is not pretty</p>
+
+                            <div class="tabcontentinside threecolumn">
                                 <div style="margin-top: 5px; text-align: center; max-width: 100%">
                                     <script
                                         src="https://homebrew.cresentri.com/webring.js"
