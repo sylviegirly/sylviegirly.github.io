@@ -180,8 +180,17 @@
 
             .twocolumn {
                 display: grid;
-                grid-template-columns: auto auto;
+                grid-template-columns: 50% 50%;
                 column-gap: 5px;
+                align-content: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .twocolumn img {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             @media screen and (max-width: 800px) {
