@@ -1,5 +1,10 @@
 const quotes = [
         {
+                quote: "person whose birthday is coming up: yeah i'm like a bodhisattva now. i don't really 'want' things. yeah i've renounced all earthly desires. so no i don't know what i want for my birthday",
+                author: "dandelionmoss",
+                url: "https://dandelionmoss.tumblr.com/post/792914486303571968"
+        },
+        {
                 quote: "being internet friends is balls bc i'm holding all this affection in my dumb arms and i can't wrap it around somebody so i just have to pack it down into my bones and send another 'lol so us' text until i explode. chewing on all the furniture in my house",
                 author: "sapphling",
                 url: "https://sylviegirly.tumblr.com/post/795689519075737600"
