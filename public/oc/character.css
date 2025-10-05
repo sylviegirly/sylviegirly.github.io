@@ -447,8 +447,9 @@ main section,
 /* Styling for the menu */
 
 #main-menu {
-    font: 1.1em var(--headerfont);
+    font: 1em var(--headerfont);
     width: 100%;
+    padding-top: 5px;
 }
 
 #main-menu ul {
@@ -456,13 +457,18 @@ main section,
 }
 
 #main-menu li a {
-    padding: 7px 19px;
+    padding: 8px 12px;
     border-radius: var(--border-radius);
-    background: var(--primary-accent);
+    background-color: var(--primary-accent);
     color: var(--font-on-accent);
     text-decoration: none;
     transition: 0.5s ease;
     margin-bottom: 5px;
+    text-align: left;
+}
+
+#main-menu li i {
+    display: none;
 }
 
 #main-menu li a:hover,
@@ -1526,13 +1532,6 @@ button {
         top: 75px;
     }
 
-    /* Make menu links into a column */
-
-    #main-menu li {
-        display: block;
-        margin: 0;
-    }
-
     #main-menu li a {
         display: block;
     }
@@ -1569,6 +1568,41 @@ button {
         max-width: 40%;
         float: left;
         margin: 5px 30px;
+    }
+
+    /* Main Menu */
+    #main-menu li a {
+        padding: 2px 6px;
+        border-radius: var(--border-radius);
+        background-color: transparent;
+        color: var(--font);
+        text-decoration: none;
+        transition: 0.5s ease;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    #main-menu li i {
+        display: block;
+        float: right;
+        font-size: 0.9rem;
+        color: var(--font);
+        margin-top: 3px;
+    }
+
+    #main-menu li a:hover,
+    #main-menu li a:focus {
+        background: var(--linkhover);
+        color: var(--font-on-accent);
+        transition: 0.5s ease;
+        letter-spacing: 1px;
+    }
+
+    /* Make menu links into a column */
+
+    #main-menu li {
+        display: block;
+        margin: 0;
     }
 
     /* Defining grid blocks */
