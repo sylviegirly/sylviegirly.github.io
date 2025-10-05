@@ -171,17 +171,7 @@
                 display: grid;
                 grid-template-columns: 30% 70%;
                 gap: 10px;
-                align-items: center;
-            }
-
-            .bubbles {
-                padding-bottom: 10px;
-            }
-
-            .bubbles span {
-                background-color: var(--secondary-accent);
-                border-radius: var(--border-radius);
-                padding: 5px 10px;
+                align-items: baseline;
             }
 
             .col-item {
@@ -190,7 +180,8 @@
             }
 
             .col-item:last-child {
-                border-left: 1px solid var(--primary-accent);
+                border-left: 1px solid var(--subtle-line);
+                padding-left: 20px;
             }
 
             @media screen and (max-width: 800px) {
