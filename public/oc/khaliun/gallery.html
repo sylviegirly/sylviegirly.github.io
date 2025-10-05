@@ -152,6 +152,47 @@
                 font-family: "dosis";
             }
 
+            .fic-container {
+                background-color: var(--body-deco);
+                padding: 10px;
+                border-radius: var(--border-radius);
+                margin: 10px 0;
+            }
+
+            .fic-container a {
+                text-decoration: none;
+                font-size: 1.4rem;
+                font-family: "dosis";
+                font-weight: bold;
+                color: var(--primary-accent);
+            }
+
+            .col {
+                display: grid;
+                grid-template-columns: 30% 70%;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .bubbles {
+                padding-bottom: 10px;
+            }
+
+            .bubbles span {
+                background-color: var(--secondary-accent);
+                border-radius: var(--border-radius);
+                padding: 5px 10px;
+            }
+
+            .col-item {
+                padding: 10px;
+                height: max-content;
+            }
+
+            .col-item:last-child {
+                border-left: 1px solid var(--primary-accent);
+            }
+
             @media screen and (max-width: 800px) {
                 .gallerylinks {
                     width: auto;
@@ -188,6 +229,7 @@
                             Artwork
                         </button>
                         <button class="gallerylinks" onclick="openGalleryTab(event, 'pictures')">Screenshots</button>
+                        <button class="gallerylinks" onclick="openGalleryTab(event, 'fics')">Writing</button>
                     </div>
                 </div>
             </div>
@@ -198,8 +240,8 @@
 
                 <!-- PHOTO GALLERY ------------------------------>
                 <section class="full">
-                    <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Image Gallery</h2>
                     <div class="gallery" id="drawings">
+                        <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Image Gallery</h2>
                         <div class="image-gallery">
                             <!-- IMAGE -->
                             <div>
@@ -289,6 +331,7 @@
                     </div>
 
                     <div class="gallery" id="pictures">
+                        <h2><i class="fa-solid fa-image" aria-hidden="true"></i> Screenshots</h2>
                         <div class="image-gallery">
                             <!-- IMAGE -->
                             <div>
@@ -313,6 +356,60 @@
                         </div>
                         <p>... I'll eventually upload more when I don't feel lazy.</p>
                     </div>
+
+                    <div class="gallery" id="fics">
+                        <h2><i class="fa-solid fa-book" aria-hidden="true"></i> Writings</h2>
+                        <div class="fic-container">
+                            <a href=""><i class="fa-solid fa-book" aria-hidden="true"></i> Fanfic Title</a>
+                            <hr />
+                            <div class="col">
+                                <div class="col-item">
+                                    <div>
+                                        <p>Written by:<br />Asuraid</p>
+                                    </div>
+                                    <div>
+                                        Published:<br />
+                                        <span
+                                            class="published tippy"
+                                            fic-published="2025-09-01T12:00:00"
+                                            data-tippy-content="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-item">
+                                    ahahhh ahahhh ahahhh ahahhh ahahhh ahahhhah ahhhahah hhaha hhh ahahhh ahahhh ahahhh
+                                    ahahhh ahahhh ahahhhah ahhhahah hhaha hhh ahahhh ahahhh ahahhh ahahhh ahahhh
+                                    ahahhhah ahhhahah hhaha hhh ahahhh ahahhh ahahhh ahahhh ahahhh ahahhhah ahhhahah
+                                    hhaha hhh
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fic-container">
+                            <a href=""><i class="fa-solid fa-book" aria-hidden="true"></i> Fanfic Title</a>
+                            <hr />
+                            <div class="col">
+                                <div class="col-item">
+                                    <div>
+                                        <p>Written by:<br />Asuraid</p>
+                                    </div>
+                                    <div>
+                                        Published:<br />
+                                        <span
+                                            class="published tippy"
+                                            fic-published="2023-09-01T12:00:00"
+                                            data-tippy-content="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-item">
+                                    ahahhh ahahhh ahahhh ahahhh ahahhh ahahhhah ahhhahah hhaha hhh ahahhh ahahhh ahahhh
+                                    ahahhh ahahhh ahahhhah ahhhahah hhaha hhh ahahhh ahahhh ahahhh ahahhh ahahhh
+                                    ahahhhah ahhhahah hhaha hhh ahahhh ahahhh ahahhh ahahhh ahahhh ahahhhah ahhhahah
+                                    hhaha hhh
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <footer id="main-footer">
@@ -328,6 +425,9 @@
                 </footer>
             </main>
         </div>
+
+        <!-- Time Passed -->
+        <script src="../time-passed.js"></script>
 
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>

@@ -1583,7 +1583,7 @@ button {
         flex: 1 1 calc(33% - 40px);
     }
     .twothird {
-        flex: 1 1 calc(66% - 40px);
+        flex: 1 1 calc(66% - 46px);
     }
     .quarter {
         flex: 1 1 calc(25% - 40px);
