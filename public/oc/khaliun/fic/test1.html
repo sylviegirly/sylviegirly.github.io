@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    --->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Send to not found page is there's no javascript -->
+        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+
+        <!-- Site Title -->
+        <title>fanfic name</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="A written piece." name="description" />
+
+        <!-- FavIcon Gif -->
+        <link rel="icon" type="image/gif" href="../img/favicon.gif" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+            if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" type="text/css" href="../../character.css" />
+        <link rel="stylesheet" href="https://zhongvie.neocities.org/css/lightbox.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JS: -->
+        <script src="https://zhongvie.neocities.org/js/lightbox-plus-jquery.js"></script>
+        <script src="../../character-nav.js" defer></script>
+        <!-- Disclosure Menu -->
+
+        <script src="https://zhongvie.neocities.org/js/accessibility/accessible-menu.js" type="module"></script>
+        <script src="https://zhongvie.neocities.org/js/tab-title-suffix.js"></script>
+        <style>
+            :root {
+                --header-image: url("https://images.pexels.com/photos/6144105/pexels-photo-6144105.jpeg");
+
+                /* Main colors */
+                --background: #d0d9db; /* Page background */
+                --background-accent: #e3ebec;
+                --color: #171616;
+                --block: #ededed; /* Background color for the grid blocks in the content */
+                --body-deco: #f4f4f4;
+
+                --primary-accent: #4c787e;
+                --secondary-accent: #275965;
+                --font-on-accent: #ffffff;
+
+                --link: #3da099;
+                --linkhover: #0a4a5a;
+
+                --letter-glow: rgba(177, 177, 177, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #ededed;
+                --sidebarcolor: #171616;
+                --subtle-line: rgba(0, 0, 0, 0.2);
+
+                @media (prefers-color-scheme: dark) {
+                    /* Main colors */
+                    --background: #161919; /* Page background */
+                    --background-accent: #232a2e;
+                    --color: #f0f0f0;
+                    --block: #1c2021; /* Background color for the grid blocks in the content */
+                    --body-deco: #232929;
+
+                    --primary-accent: #85b7ae;
+                    --secondary-accent: #62b0b1;
+                    --font-on-accent: #000000;
+
+                    --link: #47b7c6;
+                    --linkhover: #c4faff;
+
+                    --letter-glow: rgba(103, 222, 227, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #1c2021;
+                    --sidebarcolor: #f0f0f0;
+                    --subtle-line: rgba(90, 176, 203, 0.2);
+                }
+            }
+
+            .gallerylinks {
+                padding: 7px 19px;
+                font-family: "dosis";
+                font-size: 1.1rem;
+                border-radius: var(--border-radius);
+                background: var(--primary-accent);
+                color: var(--font-on-accent);
+                text-decoration: none;
+                transition: 0.5s ease;
+                margin-bottom: 5px;
+                width: 100%;
+                cursor: pointer;
+            }
+
+            .gallerylinks:hover,
+            .gallerylinks:focus {
+                background: var(--linkhover);
+                color: var(--font-on-accent);
+                transition: 0.5s ease;
+            }
+
+            .fic-container {
+                background-color: var(--body-deco);
+                padding: 10px;
+                border-radius: var(--border-radius);
+                margin: 10px 0;
+            }
+
+            .fic-container a {
+                text-decoration: none;
+                font-size: 1.4rem;
+                font-family: "dosis";
+                font-weight: bold;
+                color: var(--primary-accent);
+            }
+
+            .col {
+                display: grid;
+                grid-template-columns: 30% 70%;
+                gap: 10px;
+                align-items: baseline;
+            }
+
+            .col-item {
+                padding: 10px;
+                height: 90%;
+            }
+
+            .col-item div {
+                padding-bottom: 10px;
+            }
+
+            .col-item:first-child {
+                border-right: 1px solid var(--subtle-line);
+            }
+
+            @media screen and (max-width: 800px) {
+                .gallerylinks {
+                    width: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Please don't remove the next 2 lines! -->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+        <nav-header></nav-header>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div id="container">
+            <div id="sidebar">
+                <div id="sidebar-content">
+                    <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+                    <div class="icon">
+                        <img
+                            src="../img/sidebar_icon.jpg"
+                            alt=""
+                            aria-hidden="true"
+                            data-tippy-content="Art by lutes" />
+                    </div>
+                    <div class="header">Khaliun</div>
+                    <hr />
+
+                    <!-- Navigation menu  -->
+                    <div class="" id="main-menu">
+                        <button class="gallerylinks" onclick="location.href='../oc/khaliun/index.html'">
+                            Go Back to Main Page
+                        </button>
+                        <button class="gallerylinks" onclick="location.href='../oc/khaliun/gallery.html'">
+                            Go Back to Gallery
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content area -->
+            <main id="content">
+                <!-- Section tags must be used for blocks -->
+
+                <!-- PHOTO GALLERY ------------------------------>
+                <section class="full">
+                    <h1>Fanfic Name</h1>
+                    <div class="fic-container">
+                        <div class="col">
+                            <div class="col-item">
+                                <p>Written by:<br />Asuraid</p>
+                                <p>
+                                    Published:<br />
+                                    <span
+                                        class="published tippy"
+                                        fic-published="2025-09-01T12:00:00"
+                                        data-tippy-content="">
+                                    </span>
+                                </p>
+                                <p>Word Count:<br />1120</p>
+                            </div>
+                            <div class="col-item">
+                                Cat ipsum dolor sit amet, jumps off balcony gives owner dead mouse at present then poops
+                                in litter box snatches yarn and fights with dog cat chases laser then plays in grass
+                                finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner
+                                fills food dish the cat knocks over the food dish cat slides down the water slide and
+                                into pool and swims even though it does not like water. Dismember a mouse and then
+                                regurgitate parts of it on the family room floor claw at curtains stretch and yawn
+                                nibble on tuna ignore human bite human hand plan your
+                            </div>
+                        </div>
+                    </div>
+                    <p>You haven't sat to think for long what it means to live, and to die.</p>
+                    <p>
+                        Berries are passed into your clean hands, heads bowed in gentle worship, fruits and dried meats
+                        carefully piled into gifts for you. The one who handed you the woven basket this time around,
+                        you've learned, is named Laleh, a name meaning 'goddess', 'divine', and 'powerful'.
+                    </p>
+                    <p>
+                        Your tongue still wraps around the words they speak (even though it is what you would call your
+                        own mother tongue). Laleh, Mehr, Kamyar, and many others that you write down on the pages of
+                        your memories. One likes plucking flowers to gather into a leather book, another enjoys
+                        whistling through the blades of grass.
+                    </p>
+                    <p>Each of them with a unique star that burns in their chest.</p>
+                    <p>They argue, they laugh, they talk.</p>
+                    <p>
+                        You still feel distant from them, seeing the different expressions in their face as they regard
+                        you as their god: fear, awe, interest, curiosity. It takes time to break down the walls, to have
+                        children that feel comfortable climbing onto your broad cervine back, with care to not pull on
+                        the vines that hang from mighty antlers. To have people sharing their day-to-day stories, the
+                        aftermath of a harvest, a hunt, a trade.
+                    </p>
+                    <p>
+                        Time passes. Many of those kids are growing a little taller, and new ones come into the world
+                        &hellip; but you focus on a young girl, Yasmin. Unlike other children, she had no parents left
+                        after they had fallen victim to an attack on a trade route, no tall figure to guide her.
+                    </p>
+                    <p>
+                        &hellip; at least, until you came along. She was scared at first, most usually are, but you
+                        share your offerings with her, offer warmth in the bosom of your form to give her warmth. She
+                        tends to the tangles of your vines and hair, to cleaning up the aftermath of offerings, and even
+                        took on the role as the 'head priestess' of the children who visit. You read stories to her, and
+                        in the process you both learn too (even if you have to lie a little about that).
+                    </p>
+                    <p>
+                        You softly nudge her to interact with those kids more, but always have an open hand for her when
+                        she returns. Some of the parents wonder about her, some offered her a place, but by now all she
+                        could say is she couldn't see herself anywhere else.
+                    </p>
+                    <p>
+                        Time passes, and even though she wished to stay by your side, you softly push for her to explore
+                        what she likes to do. Life is for learning and exploring, and like a flower, she too will need
+                        to bloom one day.
+                    </p>
+                    <p>
+                        You can't quite recall when Yasmin's visits began thinning out; too many people to talk to, to
+                        visit, to meet, to tend to. Her limbs have gotten lanky and long, and her clothes don't seem to
+                        quite fit anymore. She talks more about tending to the plants, in how they've found out a new
+                        soil quality to improve plants, how there's conversation exchanged with various places outside
+                        here for better crops, new tools.
+                    </p>
+                    <p>
+                        You fondly listen with rapture and interest; as a god of nature, it would be foolish to not hold
+                        interest in it &hellip; and, of course, in the wellbeing of those who look up to you. It's
+                        knowledge you gently tuck away in your flower-pressed book of memories to be shared around.
+                    </p>
+                    <p>
+                        One day, she tells you that she's to be married to one of the young boys. You know him, he liked
+                        to dig his fingers in a bit too hard when he rode, almost pulling at your fur in the process. He
+                        got into working with metal&mdash;and you choke back a laugh that he sure had the strength for
+                        it&mdash;and the two wish for a blessing of their union. You would always be happy to share it,
+                        and even oversee the wedding. Not your first, but something about this one feels a little more
+                        intimate to you.
+                    </p>
+                    <p>
+                        Her visits were welcomed, and truthfully, you weren't all that aware of the time between each.
+                    </p>
+                    <p>
+                        A blessing was equally shared in return when she came to bear a child. Although they call you
+                        the god of fertility, the most you can do is just make sure everyone is as healthy as they can
+                        be.
+                    </p>
+                    <p>You hope she is too.</p>
+                    <p>
+                        Soon, her child is joining the others in riding on your back to view their sun dappled forests
+                        in a different light. Soon her child has the same lanky limbs, her dark curls of hair, and her
+                        dad's bright eyes.
+                    </p>
+                    <p>
+                        &hellip; except now Yasmin's hair was streaked with grey. She still tended to the fields of her
+                        home that was now shared by a family of five, with an energy and zeal that hasn't changed.
+                    </p>
+                    <p>You don't recall her last visit, though. It's been a while.</p>
+                    <p>
+                        The next time she visits, all the dark of her hair has faded to white. Her warmth still shines
+                        brightly, but her movements are slow. She tends to your coat of fur again, like she did before.
+                        A gentle detangle of two vines that formed a knot. You offer her some leaves to brew into a
+                        warming tea.
+                    </p>
+                    <p>It was only moments later when you were told that she had passed away in her sleep.</p>
+                    <p>
+                        &hellip; death is not new to you; in the time she's lived, many have arrived, just as many have
+                        passed. But something aches in the dawning realization of how short it felt. How to you, it all
+                        just felt like a season's change, where to her, it was a full cycle of beginning to end. From
+                        spring (birth), to summer (growth), to fall (adulthood), to winter (hibernation and death).
+                    </p>
+                    <p>
+                        You still see that child running about, plucking various Padisarah flowers peeking out from a
+                        tuft of grass, bringing it over to you and winding it between your vines.
+                    </p>
+                    <p>In return, you gently place the flowers over the shape of her grave.</p>
+                </section>
+
+                <footer id="main-footer">
+                    <p>
+                        Coded by <a href="https://zhongvie.neocities.org/">Aid</a>, inspired from
+                        <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's layout</a>, using kalechip's
+                        <a href="https://kalechips.net/projects/layouts/">template</a>.
+                    </p>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        <!-- Time Passed -->
+        <script src="../../time-passed.js"></script>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+
+        <!-- Scroll to Top -->
+        <script src="https://zhongvie.neocities.org/js/scroll-to-top.js"></script>
+
+        <!-- Accordion Dropdown -->
+        <script src="https://zhongvie.neocities.org/js/accordion.js"></script>
+    </body>
+</html>
