@@ -9,7 +9,21 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-10-02T19:20:13-05:00</updated>
+    <updated>2025-10-06T03:07:09-05:00</updated>
+
+    <entry>
+        <title>First OC Gallery</title>
+        <link href="https://zhongvie.neocities.org/oc/yadyra/gallery" />
+        <updated>2025-10-06T03:07:09-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1759738029</id>
+        <content type="html">
+            &#x3C;p&#x3E;In an attempt to try to offload some of my stuff from Toyhouse, I&#x27;ve made my first art
+            gallery&#x26;nbsp;and fic section for Yadyra, since I thought he didn&#x27;t have too much art to explode my
+            skull, but enough to work out a layout ... even so, it still was a lot of work to set up around
+            40&#x26;ndash;50 images and to WEBP everything. I&#x27;ll&#x26;nbsp;&#x3C;em&#x3E;really&#x3C;/em&#x3E; need
+            to think about image optimization if I continue with the galleries ...&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New Blog Post: Divide of the personal self and art</title>
