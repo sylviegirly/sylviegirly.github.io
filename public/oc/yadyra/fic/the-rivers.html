@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    --->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Send to not found page is there's no javascript -->
+        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+
+        <!-- Site Title -->
+        <title>the rivers of life and death</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="A written piece." name="description" />
+
+        <!-- FavIcon Gif -->
+        <link rel="icon" type="image/gif" href="../img/favicon.gif" />
+
+        <!-- CSS: -->
+        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
+            if this HTML file is in 2 subfolders, etc. -->
+        <link rel="stylesheet" type="text/css" href="../../character.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+        <!-- JS: -->
+        <script src="../../character-nav.js" defer></script>
+        <!-- Disclosure Menu -->
+
+        <script src="https://zhongvie.neocities.org/js/accessibility/accessible-menu.js" type="module"></script>
+        <script src="https://zhongvie.neocities.org/js/tab-title-suffix.js"></script>
+        <style>
+            :root {
+                --header-image: url("https://images.pexels.com/photos/2719301/pexels-photo-2719301.jpeg");
+
+                /* Main colors */
+                --background: #bca0aa; /* Page background */
+                --background-accent: #ceb3bc;
+                --color: #1e0b0b;
+                --block: #f9f0f0; /* Background color for the grid blocks in the content */
+                --body-deco: #f0d9d9;
+
+                --primary-accent: #ad5f74;
+                --secondary-accent: #4d1122;
+                --font-on-accent: #ffffff;
+
+                --link: #b4254d;
+                --linkhover: #291616;
+
+                --letter-glow: rgba(177, 97, 119, 0.25);
+
+                /* Sidebar colors */
+                --sidebar: #f9f0f0;
+                --sidebarcolor: #1e0b0b;
+                --subtle-line: rgba(70, 13, 13, 0.2);
+
+                @media (prefers-color-scheme: dark) {
+                    /* Main colors */
+                    --background: #1e1919; /* Page background */
+                    --background-accent: #2e2222;
+                    --color: #f2e6e6;
+                    --block: #191717; /* Background color for the grid blocks in the content */
+                    --body-deco: #141212;
+
+                    --primary-accent: #ad5f74;
+                    --secondary-accent: #edb4c4;
+                    --font-on-accent: #ffffff;
+
+                    --link: #c38798;
+                    --linkhover: #672135;
+
+                    --letter-glow: rgba(177, 97, 119, 0.25);
+
+                    /* Sidebar colors */
+                    --sidebar: #191717;
+                    --sidebarcolor: #f2e6e6;
+                    --subtle-line: rgba(249, 140, 140, 0.2);
+                }
+            }
+
+            .gallerylinks {
+                padding: 7px 19px;
+                font-family: "dosis";
+                font-size: 1.1rem;
+                border-radius: var(--border-radius);
+                background: var(--primary-accent);
+                color: var(--font-on-accent);
+                text-decoration: none;
+                transition: 0.5s ease;
+                margin-bottom: 5px;
+                width: 100%;
+                cursor: pointer;
+                border: none;
+            }
+
+            .gallerylinks:hover,
+            .gallerylinks:focus {
+                background: var(--linkhover);
+                color: var(--font-on-accent);
+                transition: 0.5s ease;
+            }
+
+            .fic-container {
+                background-color: var(--body-deco);
+                padding: 10px;
+                border-radius: var(--border-radius);
+                margin: 10px 0;
+            }
+
+            .col {
+                display: grid;
+                grid-template-columns: 30% 70%;
+                gap: 10px;
+                align-items: baseline;
+            }
+
+            .col-item {
+                padding: 10px;
+                height: 90%;
+            }
+
+            .col-item div {
+                padding-bottom: 10px;
+            }
+
+            .col-item:first-child {
+                border-right: 1px solid var(--subtle-line);
+            }
+
+            @media screen and (max-width: 800px) {
+                .gallerylinks {
+                    width: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Please don't remove the next 2 lines! -->
+        <div id="top"></div>
+        <div id="skip"><a href="#content">Skip to content</a></div>
+        <nav-header></nav-header>
+
+        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
+
+        <div id="container">
+            <div id="sidebar">
+                <div id="sidebar-content">
+                    <!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+                    <div class="icon">
+                        <img
+                            src="../img/sidebar_image.jpg"
+                            alt=""
+                            aria-hidden="true"
+                            data-tippy-content="Art by lutes" />
+                    </div>
+                    <div class="header">Yadyra</div>
+                    <hr />
+
+                    <!-- Navigation menu  -->
+                    <div class="" id="main-menu">
+                        <button class="gallerylinks" onclick="location.href='../index.html'">
+                            Go Back to Main Page
+                        </button>
+                        <button class="gallerylinks" onclick="location.href='../gallery.html'">
+                            Go Back to Gallery
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content area -->
+            <main id="content">
+                <!-- Section tags must be used for blocks -->
+
+                <!-- PHOTO GALLERY ------------------------------>
+                <section class="full">
+                    <h1>The Rivers of Life and Death</h1>
+                    <div class="fic-container">
+                        <div class="col">
+                            <div class="col-item">
+                                <p>Written by:<br /><a href="https://toyhou.se/RuinedCrown">RuinedCrown</a></p>
+                                <p>
+                                    Published:<br />
+                                    <span
+                                        class="published tippy"
+                                        fic-published="2023-01-27T12:00:00"
+                                        data-tippy-content="">
+                                    </span>
+                                </p>
+                                <p>Word Count:<br />1484</p>
+                            </div>
+                            <div class="col-item">
+                                Two sides of the same coin, now able to meet face to face. Written by RuinedCrown as a
+                                commission.
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        The logic of the water flow of life and death where one is the flow to the depths is understood
+                        by many and yet still a mystery. But some could say that is the beauty in it, or some could say,
+                        there's no beauty in the mystery of death. The white field of flowers death laid below the pink
+                        river flowing river of life, Ahaur, the ancient god of primal death, looked above, they held no
+                        envy for the flow of life, nor jealously.
+                    </p>
+                    <p>
+                        Just pure understanding and awe of the beauty above. But there was no denying, they adored life
+                        to a high degree. It seemed like fun, they had experienced it a few times before, though, but
+                        getting back to present thoughts, the god of death sensed someone looking down at them from
+                        above the waters. They looked up.
+                    </p>
+                    <p>"Greetings, Ahaur." Said a very familiar voice, one that they found soothing more in time.</p>
+                    <p>
+                        "Hello, Yadyra, have you been busy up there?" They asked, in their heavy southern accent, which
+                        one Yadyra was still getting used to.
+                    </p>
+                    <p>
+                        "Yes, I have been. Yourself?" He replied, though they couldn't really see each other well, he
+                        knew they were there. And same to them. "I see, it's been pretty quiet down here. I had a bit of
+                        a flood of new souls, but that was normal, older ages come in like a flood at times when they
+                        all depart at once."
+                    </p>
+                    <p>
+                        "Hmm, interesting, you really do need to tell me about the often happenings of your flow,
+                        Ahaur." Yadyra remarked, rubbing his chin for a moment.
+                    </p>
+                    <p>
+                        "Back to work we go." Ahaur replied, though, and they both went their separate ways for now. And
+                        like that, the guardian of life was gone, must've been important Ahaur knew he'd come by later,
+                        since he seemed to be ever curious, since there were things about death even he didn't know, and
+                        knowledge is Yadyra's favorite subject, matter not really what he was learning, as long as he
+                        was learning, he was more than often interested in the material. Especially the ones he knew
+                        very little about.
+                    </p>
+                    <p>
+                        When the duties of the cycle of life and death was stable for the day, the pink man made his way
+                        to Ahaur, their little garden below the pink river of life, he hadn't much the chance to visit
+                        this place, he'd call it two things; tranquility, and restful. He carefully put his hand to a
+                        flower to see if he could "see" more of the soul resting here, and indeed he did, a quiet
+                        peaceful older women she had been, resting well here.
+                    </p>
+                    <p>
+                        Yadyra had wondered for a while, what kind of flowers these were, and had this place been of
+                        their design. He'd find out soon enough, as Ahaur made their way down to him, holding some tea,
+                        and bagels.
+                    </p>
+                    <p>Yadyra thanked them, Ahaur gave a gentle smile.</p>
+                    <p>
+                        "So, I hope you like it here." They started, making a motion he was allowed further in the field
+                        of white flowers, and it went on for a long time, the flowers also had a light sweet scent, he'd
+                        call it like lavender with something else that was probably a long-lost smell from times before
+                        him, since he didn't recognize it at all.
+                    </p>
+                    <p>
+                        "It's pleasant. A very well-made resting place, if I say so." He gave a nod, then turned his
+                        attention to what was being handed to him, taking some of the tea and the bagels.
+                    </p>
+                    <p>
+                        "These bagels finally have some flavor. But I'm still not over the frozen water incident,
+                        though." Yadyra joked, and the tea was a pleasant flavor, but it was hard to identify the flavor
+                        of this one too. He didn't mind much though, it was how Ahaur did things, and this was someone
+                        who got him more than even his family, he was willing to put up a lot with them. And Ahaur
+                        laughed. "I do understand water now, at least."
+                    </p>
+                    <p>
+                        Yadyra sighed. "At least! Now you do, don't try that again. Anyway, moving from that, tell me
+                        about these flowers. I've seen such an interesting design, or smelt such a fragrance." The
+                        flower itself curved in odd ways, and he had not really a way to put outside, like those circle
+                        stairs.
+                    </p>
+                    <p>
+                        Ahaur nodded," I made them myself, not really based off any real design, I thought it was a nice
+                        trend at the time, and now I struggle to change it."
+                    </p>
+                    <p>"Why is that?"</p>
+                    <p>
+                        "I merely don't have the right way to change the soul once it rests now. If that makes sense,
+                        back then I really was creative, now I have more creative struggles on that end."
+                    </p>
+                    <p>
+                        Yadyra thought for a moment, in a way that makes sense, since the older ones gets in this place,
+                        sometimes creativeness stops since you've hit a comfortable placement, that was something he's
+                        been through time and time again. If that was a conclusion to follow, he'd just take it. It's
+                        why he used such patterns that felt familiar and suited him, too. Since those patterns didn't
+                        bore him, and the familiarity of the items were enough.
+                    </p>
+                    <p>
+                        He didn't comment further, as he didn't care to think what would happen further in his infinite
+                        lifespan. "I do like it, however. You've made this place as beautiful as it's been for a long
+                        time, and a change isn't really necessary."
+                    </p>
+                    <p>
+                        Ahaur gently smiled at the compliment, "I'm glad you see it like that, come further in, there's
+                        more you can't always see with the river."
+                    </p>
+                    <p>
+                        Yadyra gave an interested 'hoohoo?' and followed them down the flowers, that started to flower
+                        into a different river. Which he didn't seem to notice at first, but there were rivers streaming
+                        down around the flowerbeds. They walked into the water, that didn't really get them wet at all,
+                        since it wasn't really water, more of just the illusion it was, and so going down further, he
+                        could see a large white tree, and flowers around it. "And what's this?" He questioned calmly,
+                        but interested in it.
+                    </p>
+                    <p>
+                        The tree was large, white and golden. The leaves had white and gold parts as well, it spiraled
+                        and twisted just like the flowers, but he could tell by the wooden look, it was a tree, at least
+                        he hoped it was. Otherwise, what would they call this?
+                    </p>
+                    <p>
+                        "I call it the "Dreaming tree." It's a simple name, but it helps the soul in the resting, the
+                        "water," we saw, actually spreads all through this whole place." Ahaur explained, with pride on
+                        their face. "Come touch it, and you see some of the dreams." Yadyra now curious as what dreams
+                        people might see. And interesting some had interesting dreams, as many had large dreams they
+                        didn't get to experience in life, others just sought for happiness and fulfillment, but life was
+                        cut too short for them. And now they dreamt of what could've been.
+                    </p>
+                    <p>
+                        Then he had another question, as he turned to them after pulling from the dream he was seeing.
+                    </p>
+                    <p>"How long does a soul stay here for?"</p>
+                    <p>
+                        "Probably a few hundred years as we're processing the souls into the recycle stages, and then if
+                        I still find them "healthy" to move along. The long-lived ones stay here and dream forever.
+                        Since, well ... otherwise, I will devour it myself."
+                    </p>
+                    <p>
+                        Yadyra knew what they meant, the soul gets worse the older it is, due to what it's been through.
+                        Ahaur, the controller of the dead cycle, would only heal the living soul so much, for that much,
+                        Yadyra knew and could respect. Keeping the cycle balanced and not corrupt laid in Ahaur's hands,
+                        and they seemed to do such good job on this end.
+                    </p>
+                    <p>
+                        "Mind if I see the river of life later as well?" Ahaur asked. Yadyra's mouth grew a smile, one
+                        that was rare outside his family to see. A rather gentle one, one that isn't filled with his
+                        fangs heavy mouth with a shit eating grin.
+                    </p>
+                    <p>
+                        "Of course, it would be an honor to show you sometime, Ahaur." He replied, more than happy to,
+                        but both knew again, work came first, and the two would have to meet again later.
+                    </p>
+                    <p>
+                        "Anyway, I must be off, more universes to watch over for the day, I wish you well." Ahaur waved
+                        him off as he walked away, and Yadyra had an interesting and a fun time for once, it was good to
+                        be around someone who understood him more than other beings he's been around, even his own
+                        family struggled to understand him at times. Glosyia who had been around for a long time, still
+                        had human thoughts, Redi, his granddaughter was born broken, and her mind held no understanding
+                        of emotions, and then his servant, Betelguise, was just a being with a programming.
+                    </p>
+                    <p>It felt nice, for once, that someone understood him.</p>
+                </section>
+
+                <footer id="main-footer">
+                    <p>
+                        Coded by <a href="https://zhongvie.neocities.org/">Aid</a>, inspired from
+                        <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's layout</a>, using kalechip's
+                        <a href="https://kalechips.net/projects/layouts/">template</a>.
+                    </p>
+                    <p>
+                        <a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span>
+                        <a href="#main-menu">Back to menu</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+        <!-- Time Passed -->
+        <script src="../../time-passed.js"></script>
+
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script>
+            tippy("[data-tippy-content]", {
+                duration: 500,
+                placement: "top",
+                theme: "character"
+            });
+        </script>
+
+        <!-- Scroll to Top -->
+        <script src="https://zhongvie.neocities.org/js/scroll-to-top.js"></script>
+
+        <!-- Accordion Dropdown -->
+        <script src="https://zhongvie.neocities.org/js/accordion.js"></script>
+    </body>
+</html>
