@@ -132,7 +132,8 @@ details > summary,
     padding: 0;
 }
 
-.external:after {
+.post a[href^="http"]:after,
+#profile a[href^="http"]:after {
     display: inline-block;
     content: " ";
     margin-left: 4px;

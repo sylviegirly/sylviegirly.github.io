@@ -243,7 +243,9 @@ h2 {
     text-align: left;
 }
 
-h3 {
+h3,
+h5,
+h6 {
     font-family: var(--header-font), sans-serif;
     font-size: 1.3em;
     font-weight: 700;
@@ -409,17 +411,14 @@ details {
 
 /* Link styling */
 
-.intro a,
-article a,
-aside a,
-footer a {
+a {
     color: var(--link-colour);
     text-decoration-color: var(--link-colour);
     transition: 0.2s;
     text-decoration-thickness: 1px;
 }
 
-.external:after {
+a[href^="http"]:after {
     display: inline-block;
     content: " ";
     margin-left: 4px;
