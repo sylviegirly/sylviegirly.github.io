@@ -418,7 +418,10 @@ a {
     text-decoration-thickness: 1px;
 }
 
-a[href^="http"]:after {
+/* only add external links to paragraphs, blockquotes, and lists */
+article p a[href^="http"]:after,
+article blockquote a[href^="http"]:after,
+article li a[href^="http"]:after {
     display: inline-block;
     content: " ";
     margin-left: 4px;
