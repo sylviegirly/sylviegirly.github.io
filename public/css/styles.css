@@ -6,7 +6,10 @@
     --right-sidebar-size: 220px;
     --border-radius: 5px;
 
-    /* Colors and fonts */
+    /* FONTS */
+    --header-font: "dosis";
+
+    /* Colors */
     /* HEADERS */
     --header-bg: #211f1f;
     --background-image: url(../img/light_mode_bg.png);
@@ -205,44 +208,45 @@ aside {
 
 h1 {
     background-color: var(--primary-accent);
-    /*background-image: url(https://sadhost.neocities.org/images/tiles/bg_bluewhiteflowers.gif);*/
     color: var(--font-on-accent);
-    font-family: "dosis", sans-serif;
+    font-family: var(--header-font), sans-serif;
     border-radius: var(--border-radius);
     letter-spacing: 2px;
-    padding: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     font-size: 1.3rem;
+    padding: 7px 10px;
+    margin: 10px 0;
+    font-weight: 700;
     text-align: left;
-    padding-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: bold;
+}
+
+/* H1 pixel decoration */
+h1::before {
+    content: "";
+    background: url("../img/decos/hanging_flowers.gif");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    padding-right: 6px;
 }
 
 h2 {
     background-color: var(--primary-accent);
-    /*background-image: url(https://sadhost.neocities.org/images/tiles/bg_bluewhiteflowers.gif);*/
     color: var(--font-on-accent);
-    font-family: "dosis", sans-serif;
+    font-family: var(--header-font), sans-serif;
     border-radius: var(--border-radius);
     letter-spacing: 2px;
-    padding: 5px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px 10px;
+    margin: 10px 0;
     font-size: 1.3rem;
+    font-weight: 700;
     text-align: left;
-    padding-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: bold;
 }
 
 h3 {
-    font-family: "dosis", sans-serif;
+    font-family: var(--header-font), sans-serif;
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
     border-bottom: 1px dotted var(--secondary-accent);
     text-decoration-color: var(--secondary-accent);
