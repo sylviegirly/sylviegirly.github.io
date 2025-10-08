@@ -307,17 +307,6 @@ mark {
     font-size: 0.8em;
 }
 
-/* new pixel decoration */
-.new::after {
-    content: "";
-    background: url("../img/misc/new13.gif");
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 13px;
-    display: inline-block;
-    margin-left: 6px;
-}
-
 h4 {
     background-color: var(--primary-accent);
     /*background-image: url(https://sadhost.neocities.org/images/tiles/bg_bluewhiteflowers.gif);*/
