@@ -139,18 +139,6 @@
     <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">60px</span>;
 }
 
-<span class="hljs-selector-tag">aside</span> {
-    <span class="hljs-attribute">max-width</span>: <span class="hljs-built_in">var</span>(--right-sidebar-size);
-    <span class="hljs-attribute">min-width</span>: <span class="hljs-built_in">var</span>(--right-sidebar-size);
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">20px</span>;
-    <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">3</span>;
-}
-
-<span class="hljs-selector-tag">main</span> {
-    <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">2</span>;
-}
-
 <span class="hljs-selector-class">.intro</span> {
     <span class="hljs-attribute">max-width</span>: <span class="hljs-built_in">var</span>(--left-sidebar-size);
     <span class="hljs-attribute">min-width</span>: <span class="hljs-built_in">var</span>(--left-sidebar-size);
@@ -161,6 +149,18 @@
     <span class="hljs-attribute">position</span>: sticky;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">75px</span>;
     <span class="hljs-attribute">align-content</span>: center;
+}
+
+<span class="hljs-selector-tag">main</span> {
+    <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">2</span>;
+}
+
+<span class="hljs-selector-tag">aside</span> {
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-built_in">var</span>(--right-sidebar-size);
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-built_in">var</span>(--right-sidebar-size);
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">3</span>;
 }
 </code></pre>
                     <p>
@@ -201,7 +201,8 @@
                     </p>
                     <p>
                         For mobile, it&#39;s swapped from a grid to a flex layout, since I don&#39;t need to maintain
-                        the shape. Both sidebars are hidden since they don&#39;t contain vital information (navigation).
+                        the shape. Both sidebars are hidden with <code>display: none;</code> since they don&#39;t
+                        contain vital information (navigation).
                     </p>
                     <pre><code class="lang-css"><span class="hljs-selector-class">.container-grid</span> {
     <span class="hljs-attribute">display</span>: flex;
