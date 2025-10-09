@@ -134,22 +134,7 @@ body {
     font-size: 1rem;
     background-color: var(--background-colour);
     color: var(--text-colour);
-    font-family:
-        "freepixel",
-        -apple-system,
-        BlinkMacSystemFont,
-        avenir next,
-        avenir,
-        segoe ui,
-        helvetica neue,
-        Adwaita Sans,
-        Cantarell,
-        Ubuntu,
-        roboto,
-        noto,
-        helvetica,
-        arial,
-        sans-serif;
+    font-family: "freepixel", sans-serif;
     line-height: 1.3em;
     letter-spacing: 0;
     background-image: var(--background-image);
@@ -178,15 +163,31 @@ article {
         fit-content(var(--left-sidebar-size))
         1fr
         fit-content(var(--right-sidebar-size));
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 aside {
     max-width: var(--right-sidebar-size);
+    min-width: var(--right-sidebar-size);
+    width: 100%;
+    margin-top: 20px;
+    grid-column: 3;
+}
+
+main {
+    grid-column: 2;
 }
 
 .intro {
     max-width: var(--left-sidebar-size);
+    min-width: var(--left-sidebar-size);
+    width: 100%;
+    margin-top: 20px;
+    grid-column: 1;
+    height: fit-content;
+    position: sticky;
+    top: 75px;
+    align-content: center;
 }
 
 /* --------------------------------------------------------- */
@@ -336,6 +337,23 @@ blockquote {
     border-right-width: 3px;
     border-right-style: solid;
     background-color: var(--body-deco);
+}
+
+pre {
+    background: var(--body-deco);
+    border: 1px solid var(--primary-accent);
+    border-left: 3px solid var(--primary-accent);
+    border-radius: var(--border-radius);
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 1em;
+    line-height: 1.6;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em;
+    display: block;
+    word-wrap: break-word;
+    max-height: 350px;
 }
 
 abbr,
@@ -810,15 +828,6 @@ nav li.dropdown ul li.dropdown ul a {
 /* LEFT SIDEBAR (COLUMN ONE) */
 /* -------------------------------------------------------- */
 
-.intro {
-    margin-top: 20px;
-    grid-column: 1;
-    height: fit-content;
-    position: sticky;
-    top: 75px;
-    align-content: center;
-}
-
 /* Site Button: */
 
 .site-button {
@@ -832,19 +841,6 @@ nav li.dropdown ul li.dropdown ul a {
     font-family: monospace;
     font-size: 0.75em;
     width: 100%;
-}
-
-/* -------------------------------------------------------- */
-/* RIGHT SIDEBAR (COLUMN ONE) */
-/* -------------------------------------------------------- */
-
-aside {
-    margin-top: 20px;
-    grid-column: 3;
-}
-
-.feeder {
-    height: 540px !important;
 }
 
 /* -------------------------------------------------------- */
@@ -883,25 +879,15 @@ section .full-width-image {
 }
 
 /* -------------------------------------------------------- */
-/* MAIN CONTENT */
-/* -------------------------------------------------------- */
-
-main {
-    grid-column: 2;
-}
-
-/* -------------------------------------------------------- */
 /* ARTICLES WITHIN MAIN BODY */
 /* -------------------------------------------------------- */
 
 article {
+    /* Has to equal ... 824px is the main body*/
     margin-bottom: 20px;
     width: auto;
-    /*min-width: calc(
-        var(--blog-size) - (var(--left-sidebar-size) + var(--right-sidebar-size)) - (calc(var(--grid-gap) * 2))
-    );*/ /* literally the px number is just grip-gap x2 */
     max-width: calc(
-        var(--blog-size) - (var(--left-sidebar-size) - (calc(var(--grid-gap) * 1)))
+        var(--blog-size) - (var(--left-sidebar-size) + (calc(var(--grid-gap) * 2)))
     ); /* literally the px number is just grip-gap x2 */
 }
 
@@ -1062,6 +1048,7 @@ article .scrollable p:first-child {
     height: auto;
 }
 
+/* singular image centering */
 .center-img {
     display: flex;
     justify-content: center; /* align horizontal */
@@ -1233,7 +1220,7 @@ footer a:hover {
 @media screen and (max-width: 800px) {
     .container-grid {
         display: flex;
-        flex: 100%;
+        flex: 1fr;
         flex-direction: column;
         width: auto;
         margin-left: 5px;
@@ -1284,22 +1271,7 @@ footer a:hover {
     }
 
     .intro {
-        position: inherit; /* disable the sticky */
-        width: auto;
-        max-width: 100%;
-    }
-
-    aside {
-        position: inherit !important; /* disable the sticky */
-        width: auto !important;
-        max-width: 100%;
-    }
-
-    .intro,
-    aside,
-    main {
-        grid-column: auto;
-        grid-row: auto;
+        display: none;
     }
 
     .feeder {
@@ -1329,9 +1301,11 @@ footer a:hover {
         margin-right: auto;
     }
 
-    aside {
+    article aside {
         width: auto;
         max-width: 100%;
+        margin-left: 0;
+        float: none;
     }
 
     header,
@@ -1375,11 +1349,6 @@ footer a:hover {
     /* Items */
     .image-gallery div {
         width: calc(50% - 10px);
-    }
-
-    article aside {
-        width: 100%;
-        float: none;
     }
 
     .talkingbox::after {

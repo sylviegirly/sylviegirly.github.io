@@ -9,7 +9,20 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-10-06T18:18:33-05:00</updated>
+    <updated>2025-10-09T14:49:22-05:00</updated>
+
+    <entry>
+        <title>Breaking down the website layout</title>
+        <link href="https://zhongvie.neocities.org/articles/website" />
+        <updated>2025-10-09T14:49:22-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1760039362</id>
+        <content type="html">
+            &#x3C;p&#x3E;Big ugly code riddled page in trying to break down how I set up my website layout ... at least
+            it was an excuse to actually optimize some stuff in the HTML since there were classes in two separate places
+            ... and some of my layout calculations were wrong. I&#x27;ll probably expand on it in the future, depending
+            on what questions might come up or if people show interest in the way I did some stuff.&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Now Page Updated</title>
