@@ -240,7 +240,54 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/accessibility/accessible-menu.js"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"module"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
                     <p>And the HTML related to it in the reusable component.</p>
-                    <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+                    <pre><code class="lang-js">document.addEventListener("DOMContentLoaded", function () {
+    // Page has finished loading. Now, do things.
+    new NavHeader();
+
+    // Add any custom JavaScript code here...
+    var bodyElem = document.querySelector("body");
+    var fontForm = document.getElementById("fontFamily");
+
+    if (!localStorage.getItem("fontFamily")) {
+        populateStorage();
+    } else {
+        setStyles();
+    }
+
+    function populateStorage() {
+        localStorage.setItem("fontFamily", document.getElementById("fontFamily").value);
+        setStyles();
+    }
+
+    function setStyles() {
+        var currentFont = localStorage.getItem("fontFamily");
+        document.getElementById("fontFamily").value = currentFont;
+
+        bodyElem.style.fontFamily = currentFont;
+    }
+
+    fontForm.onchange = populateStorage;
+});
+
+const content = `
+<span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>aid's small corner<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subtext"</span>&gt;</span>a little personal site<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button-wrapper"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"fontFamily"</span>&gt;</span>Font:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"fontFamily"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fontFamily"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"freepixel"</span>&gt;</span>Free Pixel<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"atkinson"</span>&gt;</span>Atkinson Hyperlegible<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"intel one"</span>&gt;</span>Intel One Mono<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"open dyslexic"</span>&gt;</span>Open Dyslexic<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Nunito"</span>&gt;</span>Nunito<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Tahoma"</span>&gt;</span>Tahoma<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Verdana"</span>&gt;</span>Verdana<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Arial"</span>&gt;</span>Arial<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"toggle-0"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Toggle main menu"</span>&gt;</span>☰<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"menu-0"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-1-0-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-1-0-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/index.html"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -295,6 +342,26 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+`;
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+/* FOR MOBILE DO NOT TOUCH OTHERWISE */
+function openDropdown() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+class NavHeader extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = content;
+    }
+}
+customElements.define("nav-header", NavHeader);
 </code></pre>
                     <p>... and the CSS related to the nav:</p>
                     <pre><code class="lang-css"><span class="hljs-selector-tag">nav</span> {
