@@ -112,10 +112,10 @@ const content = `
         <li id="item-6-0-0" class="dropdown">
             <a id="link-6-0-0" href="#">Fun Things</a>
             <ul id="menu-6">
-                <li id="item-6-1-0"><a id="link-6-1-0" href="/bookmarks.html">Bookmarks</a></li>
-                <li id="item-6-2-0"><a id="link-6-2-0" href="/media-log.html">Media Log</a></li>
-                <li id="item-6-3-0"><a id="link-6-3-0" href="/recipes.html">Recipes</a></li>
-                <li id="item-6-4-0"><a id="link-6-4-0" href="/sims-3-legacy.html">Sims 3 Legacy</a></li>
+                <li id="item-6-1-0"><a id="link-6-1-0" href="/articles.html">Articles</a></li>
+                <li id="item-6-2-0"><a id="link-6-2-0" href="/bookmarks.html">Bookmarks</a></li>
+                <li id="item-6-3-0"><a id="link-6-3-0" href="/media-log.html">Media Log</a></li>
+                <li id="item-6-4-0"><a id="link-6-4-0" href="/recipes.html">Recipes</a></li>
                 <li id="item-6-5-0"><a id="link-6-5-0" href="/toybox.html">Toybox</a></li>
             </ul>
         </li>

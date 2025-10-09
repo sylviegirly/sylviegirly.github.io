@@ -33,23 +33,23 @@
         <!-- CSS: -->
         <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
         if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/normalize.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
         <!-- JavaScript: -->
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
 
-        <script src="js/header.js" defer></script>
-        <script src="js/left-sidebar.js" defer></script>
-        <script src="js/footer.js" defer></script>
-        <script src="js/tab-title-suffix.js"></script>
+        <script src="../js/header.js" defer></script>
+        <script src="../js/left-sidebar.js" defer></script>
+        <script src="../js/footer.js" defer></script>
+        <script src="../js/tab-title-suffix.js"></script>
 
         <!--✻✻✻✻✻✻  griddery by @glenthemes + lightbox2  ✻✻✻✻✻✻-->
         <script src="https://griddery.github.io/grid.js"></script>
-        <link href="css/griddery.css" rel="stylesheet" />
-        <script src="js/accessibility/accessible-menu.js" type="module"></script>
+        <link href="../css/griddery.css" rel="stylesheet" />
+        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 gridderyV3({
@@ -58,8 +58,8 @@
                 });
             });
         </script>
-        <script src="js/lightbox-plus-jquery.js"></script>
-        <link href="css/lightbox.css" rel="stylesheet" />
+        <script src="../js/lightbox-plus-jquery.js"></script>
+        <link href="../css/lightbox.css" rel="stylesheet" />
 
         <style>
             /* Style the tab */
@@ -117,9 +117,23 @@
 
         <div class="container-grid">
             <!-- =============================================== -->
-            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- LEFT SIDEBAR CONTENT -->
             <!-- =============================================== -->
-            <left-sidebar></left-sidebar>
+            <div class="intro">
+                <section>
+                    <div class="img-floatinganim">
+                        <img class="dendro" src="../img/dendro_symbol.png" aria-hidden="true" alt="" />
+                    </div>
+                    <img
+                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/61813959_Xr5LiIyVeH43aDy.png"
+                        class="full-width-image hide-mobile" />
+                    <div class="subtitle">Sims 3 Legacy</div>
+                    <div>
+                        <p>Sims 3 Legacy challenge! ... whenever I get around to it, anyway.</p>
+                    </div>
+                </section>
+            </div>
+
             <main id="content">
                 <article>
                     <h1>Sims 3 Legacy Challenge</h1>
@@ -127,7 +141,7 @@
                         <div style="width: 100px; margin-right: 20px" class="hide-mobile">
                             <a href="https://www.deviantart.com/adorelee/art/F2U-cute-sprouts-673081279"
                                 ><img
-                                    src="img/decos/sprouts.png"
+                                    src="../img/decos/sprouts.png"
                                     style="
                                         margin-left: 20px;
                                         margin-right: 20px;
@@ -173,8 +187,8 @@
                     <div class="tabcontent" id="G1">
                         <h2>Generation One</h2>
                         <div class="images">
-                            <img src="img/sims3/g1-dianna.png" />
-                            <img src="img/sims3/g1-clark.png" />
+                            <img src="../img/sims3/g1-dianna.png" />
+                            <img src="../img/sims3/g1-clark.png" />
                         </div>
                         <hr />
                         <aside>
@@ -206,7 +220,7 @@
                             </li>
                             <li style="list-style: none">
                                 <div class="center-img">
-                                    <img src="img/sims3/g1-1.png" />
+                                    <img src="../img/sims3/g1-1.png" />
                                 </div>
                             </li>
                             <li>
@@ -234,7 +248,7 @@
                             </li>
                             <li style="list-style: none">
                                 <div class="center-img">
-                                    <img src="img/sims3/g1-2.png" />
+                                    <img src="../img/sims3/g1-2.png" />
                                 </div>
                             </li>
                             <li>
@@ -248,8 +262,8 @@
                             </li>
                             <li style="list-style: none">
                                 <div class="images">
-                                    <img src="img/sims3/g1-3.png" />
-                                    <img src="img/sims3/g1-4.png" />
+                                    <img src="../img/sims3/g1-3.png" />
+                                    <img src="../img/sims3/g1-4.png" />
                                 </div>
                             </li>
                             <li>
@@ -266,7 +280,7 @@
                             </li>
                             <li style="list-style: none">
                                 <div class="center-img">
-                                    <img src="img/sims3/g1-5.png" />
+                                    <img src="../img/sims3/g1-5.png" />
                                 </div>
                             </li>
                             <li>
@@ -282,7 +296,7 @@
                             </li>
                             <li style="list-style: none">
                                 <div class="center-img">
-                                    <img src="img/sims3/g1-6.png" />
+                                    <img src="../img/sims3/g1-6.png" />
                                 </div>
                             </li>
                             <li>
@@ -296,7 +310,7 @@
                             </li>
                         </ul>
                         <div class="center-img">
-                            <img src="img/sims3/g1-7.png" />
+                            <img src="../img/sims3/g1-7.png" />
                         </div>
                     </div>
 
@@ -305,8 +319,8 @@
                         <h2>Generation Two</h2>
 
                         <div class="images">
-                            <img src="img/sims3/g2-vanessa.png" />
-                            <img src="img/sims3/g2-bruce.png" />
+                            <img src="../img/sims3/g2-vanessa.png" />
+                            <img src="../img/sims3/g2-bruce.png" />
                         </div>
                         <hr />
                         <ul>
@@ -344,7 +358,7 @@
                             </li>
                             <li style="list-style: none">
                                 <div class="center-img">
-                                    <img src="img/sims3/g2-3.png" />
+                                    <img src="../img/sims3/g2-3.png" />
                                 </div>
                             </li>
                             <li>
@@ -361,7 +375,7 @@
                             </li>
                             <li style="list-style: none">
                                 <div class="center-img">
-                                    <img src="img/sims3/g2-1.png" />
+                                    <img src="../img/sims3/g2-1.png" />
                                 </div>
                             </li>
                             <li>
@@ -370,7 +384,7 @@
                             </li>
                             <li style="list-style: none">
                                 <div class="center-img">
-                                    <img src="img/sims3/g2-2.png" />
+                                    <img src="../img/sims3/g2-2.png" />
                                 </div>
                             </li>
                             <li>
@@ -401,7 +415,7 @@
         </script>
 
         <!-- Scroll to Top -->
-        <script src="js/scroll-to-top.js"></script>
+        <script src="../js/scroll-to-top.js"></script>
 
         <script>
             function openTab(evt, tabName) {
