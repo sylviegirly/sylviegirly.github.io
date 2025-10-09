@@ -341,7 +341,7 @@ blockquote {
 
 pre {
     background: var(--body-deco);
-    border: 1px solid var(--primary-accent);
+    border: 1px solid var(--article-liner);
     border-left: 3px solid var(--primary-accent);
     border-radius: var(--border-radius);
     page-break-inside: avoid;
