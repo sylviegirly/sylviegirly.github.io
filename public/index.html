@@ -158,6 +158,44 @@
                 box-sizing: border-box;
             }
 
+            /* -------------------------------------------------------- */
+            /* SIDEBAR LINKS */
+            /* -------------------------------------------------------- */
+
+            .links {
+                list-style-type: none;
+                padding-left: 0;
+            }
+
+            .links li {
+                text-align: center;
+                margin-bottom: 2px;
+                transition: 0.5s ease-in-out;
+                display: block;
+                font-family: var(--header-font);
+            }
+
+            .links li a {
+                background-color: var(--primary-accent);
+                border-radius: var(--border-radius);
+                padding-top: 3px;
+                padding-bottom: 3px;
+                text-decoration: none;
+                color: var(--font-on-accent);
+                font-size: 0.9rem !important;
+                display: block;
+                transition: 0.5s ease-in-out;
+            }
+
+            .links li a:hover {
+                color: var(--font-on-accent);
+                background-color: var(--link-hover);
+            }
+
+            .links li:last-child > a {
+                margin-bottom: 0;
+            }
+
             @media screen and (max-width: 800px) {
                 .talkingbox::after {
                     display: none;
@@ -310,7 +348,7 @@
                                         alt="a chibi picrew of the webmaster with brown hair and glasses" />
                                 </a>
                             </div>
-                            <ul class="links" style="margin-top: 0">
+                            <ul class="links no-after" style="margin-top: 0">
                                 <li><a href="https://neocities.org/site/zhongvie">profile</a></li>
                                 <li><a href="https://sylviegirly.tumblr.com/">tumblr</a></li>
                             </ul>
