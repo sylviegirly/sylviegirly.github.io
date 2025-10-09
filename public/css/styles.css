@@ -867,6 +867,7 @@ section .scrollable {
     overflow-y: scroll;
     padding: 7px;
     margin-top: 10px;
+    padding-bottom: 0;
 }
 
 section .scrollable p {
