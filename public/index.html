@@ -118,6 +118,51 @@
             #rightside {
                 flex: 0 70%;
             }
+
+            #zhongvie-stamps {
+                margin-top: -7px;
+                overflow: hidden;
+                max-width: 572px;
+                min-width: 100%;
+            }
+
+            #zhongvie-stamps img {
+                height: 100%;
+                width: auto;
+            }
+
+            .talkingbox {
+                background-color: var(--body-deco);
+                border-radius: var(--border-radius);
+                padding: 7px;
+                margin-top: 10px;
+                height: 125px;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+            }
+
+            .talkingbox::after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: 237px;
+                top: 87px;
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-left: 15px solid var(--body-deco);
+                box-sizing: border-box;
+            }
+
+            @media screen and (max-width: 800px) {
+                .talkingbox::after {
+                    display: none;
+                }
+            }
         </style>
     </head>
     <body id="body">
@@ -1544,24 +1589,47 @@
                 <section>
                     <h4>
                         <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
-                        NavAds
+                        Fanlistings
                         <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
                     </h4>
-                    <div
-                        style="
-                            align-self: center;
-                            text-align: center;
-                            margin-left: auto;
-                            margin-right: auto;
-                            margin-top: 5px;
-                        ">
-                        <iframe
-                            title="NavLink Ads for other sites"
-                            width="180"
-                            height="180"
-                            style="border: none"
-                            src="https://dimden.neocities.org/navlink/"
-                            name="neolink"></iframe>
+                    <div class="hover-grow scrollable" style="justify-content: center; height: 200px">
+                        <a href="https://glitterskies.org/bg3/index.php"
+                            ><img src="img/fanlistings/bg3.png" loading="lazy" alt="Baldur's Gate 3"
+                        /></a>
+                        <a href="https://fan.shinshoku.net/fenris/"
+                            ><img src="img/fanlistings/fenris.png" loading="lazy" alt="Fenris Dragon Age"
+                        /></a>
+                        <a href="https://garrus.palaven.org/"
+                            ><img src="img/fanlistings/garrus.png" loading="lazy" alt="Garrus Vakarian"
+                        /></a>
+                        <a href="https://genshin.celestia.nu"
+                            ><img
+                                src="img/fanlistings/genshin_50x50_01.gif"
+                                loading="lazy"
+                                alt="Genshin Impact"
+                                style="height: 50px; width: 50px"
+                        /></a>
+                        <a href="https://hades.redcrown.net/fan/"
+                            ><img src="img/fanlistings/hades.png" loading="lazy" alt="Hades Game"
+                        /></a>
+                        <a href="https://www.marheavenj.net/madoka/index.php"
+                            ><img src="img/fanlistings/madoka.jpg" loading="lazy" alt="Madoka Kaname"
+                        /></a>
+                        <a href="https://sky-petals.org/wright/"
+                            ><img src="img/fanlistings/phoenix.gif" loading="lazy" alt="Phoenix Wright"
+                        /></a>
+                        <a href="https://shadow-lord.com/atlantis/about.php"
+                            ><img src="img/fanlistings/stargate_atlantis.png" loading="lazy" alt="Stargate Atlantis"
+                        /></a>
+                        <a href="https://psyche.nu/wwx/index.php"
+                            ><img src="img/fanlistings/weiwuxian.jpg" loading="lazy" alt="Wei Wuxian"
+                        /></a>
+                        <a href="https://fan.kirai.org/miko/"
+                            ><img src="img/fanlistings/yae.png" loading="lazy" alt="Yae Miko"
+                        /></a>
+                        <a href="https://zhongli.celestia.nu/index.php"
+                            ><img src="img/fanlistings/zhongli.png" loading="lazy" alt="Zhongli"
+                        /></a>
                     </div>
                 </section>
             </aside>
