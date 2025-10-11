@@ -9,7 +9,21 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-10-09T14:49:22-05:00</updated>
+    <updated>2025-10-11T18:33:26-05:00</updated>
+
+    <entry>
+        <title>New media log entries</title>
+        <link href="https://zhongvie.neocities.org/media-log" />
+        <updated>2025-10-11T18:33:26-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1760225606</id>
+        <content type="html">
+            &#x3C;p&#x3E;A couple new media entries have been written up; I wasn&#x27;t going to initially write a
+            separate one up for Hades II, but the ending kinda dipped my rating down from what the original
+            was.&#x3C;/p&#x3E; &#x3C;ul&#x3E; &#x3C;li&#x3E;Hades II (games)&#x3C;/li&#x3E; &#x3C;li&#x3E;The Amazing
+            Digital Circus (shows)&#x3C;/li&#x3E; &#x3C;li&#x3E;Captive Prince (books)&#x3C;/li&#x3E; &#x3C;li&#x3E;TGCF
+            / Heaven Official&#x27;s Blessing + Other MXTX works (books)&#x3C;/li&#x3E; &#x3C;/ul&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Breaking down the website layout</title>
