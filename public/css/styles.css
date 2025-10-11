@@ -438,11 +438,12 @@ article a img {
 
 article aside {
     width: 30%;
+    font-style: italic;
     border-top: 3px solid var(--primary-accent);
     border-bottom: 3px solid var(--primary-accent);
     background-color: var(--body-deco);
-    padding: 20px 10px;
-    margin: 10px;
+    padding: 10px;
+    margin: 5px;
     float: right;
 }
 
