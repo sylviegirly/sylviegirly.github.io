@@ -89,9 +89,6 @@ html {
     position: relative;
     min-height: 100%;
     font-size: 1rem;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
     font-weight: 400;
 }
 
@@ -107,16 +104,6 @@ body {
         1rem "freepixel",
         sans-serif;
     color: var(--color);
-}
-
-/**
- * Firefox specific rule
- */
-
-@-moz-document url-prefix() {
-    body {
-        font-weight: lighter !important;
-    }
 }
 
 /* -------------------------------------------------------- */
