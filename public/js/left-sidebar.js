@@ -93,16 +93,21 @@ const sidebar = `
             <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
         </h4>
         <div class="site-button">
-            <div class="images-row">
-                <a href="https://zhongvie.neocities.org/" target="_blank"
-                    ><img src="./img/sylvieButton.gif" alt="zhongvie button"
-                /></a>
-            </div>
-            <textarea id="site-button" name="site-button">
+            <div class="two-columns">
+                <div>
+                    <a href="https://zhongvie.neocities.org/" target="_blank"
+                        ><img src="../img/sylvieButton.gif" alt="zhongvie button"
+                    /></a>
+                </div>
+                <div>
+                    <textarea id="site-button" name="site-button">
 &lt;a href="https://zhongvie.neocities.org/"&gt;&lt;img src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/sylvieButton.gif" alt="zhongvie button" loading="lazy"&gt;&lt;/a&gt;</textarea
-            >
-            <label for="site-button" class="subtle" style="text-align: center; margin-top: 3px;"
-                >Site button; URL is on filegarden, but it's recommended to save. Alt buttons can be found <a href="./links.html">here</a></label
+                    >
+                </div>
+            </div>
+            <label for="site-button" class="subtle" style="text-align: center; margin-top: 3px"
+                >Site button; URL is on filegarden, but it's recommended to save. Alt buttons can be found
+                <a href="./links.html">here</a></label
             >
         </div>
     </section>
