@@ -126,7 +126,6 @@
                 box-sizing: border-box;
                 margin: 0;
                 padding: 0;
-                scrollbar-color: var(--primary-accent) var(--background);
             }
 
             html {
@@ -138,6 +137,36 @@
             body {
                 padding: 0;
                 margin: 0;
+            }
+
+            /* -------------------------------------------------------- */
+            /* SCROLLBAR STYLING */
+            /* -------------------------------------------------s------- */
+
+            /* Firefox */
+            * {
+                scrollbar-width: thin;
+                scrollbar-color: var(--primary-accent) var(--background);
+            }
+
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            *::-webkit-scrollbar-track {
+                background: var(--background);
+            }
+
+            *::-webkit-scrollbar-thumb {
+                background-color: var(--background);
+                border-radius: 10px;
+                border: 3px double var(--primary-accent);
+            }
+
+            ::selection {
+                color: var(--font-on-accent);
+                background: var(--primary-accent);
             }
 
             /* -------------------------------------------------------- */
@@ -472,6 +501,54 @@
                 --tape: url("../img/decos/algae-cyanotype.png");
             }
 
+            .masonry-item.gildedface::before {
+                --tape: url("../img/decos/art-gildedface.png");
+            }
+
+            .masonry-item.tapestry::before {
+                --tape: url("../img/decos/art-tapestry.png");
+            }
+
+            .masonry-item.tapestryalt::before {
+                --tape: url("../img/decos/art-tapestry1.png");
+            }
+
+            .masonry-item.honeycomb::before {
+                --tape: url("../img/decos/pattern-honeycomb.png");
+            }
+
+            .masonry-item.honeycombalt::before {
+                --tape: url("../img/decos/pattern-honeycomb2.png");
+            }
+
+            .masonry-item.scallop::before {
+                --tape: url("../img/decos/pattern-scallop.png");
+            }
+
+            .masonry-item.typewriter::before {
+                --tape: url("../img/decos/pattern-typewriter.png");
+            }
+
+            .masonry-item.wavy::before {
+                --tape: url("../img/decos/pattern-wavy.png");
+            }
+
+            .masonry-item.aquarius::before {
+                --tape: url("../img/decos/stars-con-aquarius.png");
+            }
+
+            .masonry-item.pisces::before {
+                --tape: url("../img/decos/stars-con-pisces.png");
+            }
+
+            .masonry-item.milkyway::before {
+                --tape: url("../img/decos/stars-milkyway.png");
+            }
+
+            .masonry-item.moon::before {
+                --tape: url("../img/decos/stars-moon.png");
+            }
+
             /* -------------------------------------------------------- */
             /* FILTERING */
             /* -------------------------------------------------------- */
@@ -583,7 +660,8 @@
                 <h1>Food Log 🍉</h1>
                 <p>
                     I love cooking, and I love eating!! Food is one of my love languages, and I like documenting the
-                    little meals I cook, or if I go out to places to eat.
+                    little meals I cook, or if I go out to places to eat. I'm not much of a photographer, so they're
+                    very basic photos, like memories.
                 </p>
                 <p>
                     Tag filters might be a <i>little</i> weird and there may be some empty columns as I'm adding more
@@ -629,6 +707,7 @@
             </div>
             <main id="content" class="tagged">
                 <div class="masonry-layout">
+                    <!-- COLUMN ONE -->
                     <div class="masonry-column">
                         <div class="masonry-item cherryblossom pinkbg byme" data-sort-index="1">
                             <img
@@ -644,7 +723,14 @@
                             <p>First attempt in <i>actually</i> making rice in the rice cooker ... at like, 11pm</p>
                             <span>10.11.2025</span>
                         </div>
+                        <div class="masonry-item pisces bluebg notme" data-sort-index="9">
+                            <img src="https://i.ibb.co/v66h4yB8/IMG-3248.jpg" alt="Pasta with red sauce and mussels" />
+                            <p>Out for dad's bday at an italian pasta place, the dish was Seafood Manicotti Al Forno</p>
+                            <span>09.22.2025</span>
+                        </div>
                     </div>
+
+                    <!-- COLUMN TWO -->
                     <div class="masonry-column">
                         <div class="masonry-item dasies yellowbg notme" data-sort-index="2">
                             <img src="https://i.ibb.co/xqkFPhqJ/IMG-3403.jpg" alt="Chocolate cake with fruits" />
@@ -658,7 +744,14 @@
                             <p>Canadian thanksgiving turkey 🍗</p>
                             <span>10.11.2025</span>
                         </div>
+                        <div class="masonry-item moon notme" data-sort-index="10">
+                            <img src="https://i.ibb.co/MxP6jCPq/IMG-3247.jpg" alt="Scallops in a white sauce" />
+                            <p>Out for dad's bday at an italian pasta place, this was scallops with saffron sauce</p>
+                            <span>09.22.2025</span>
+                        </div>
                     </div>
+
+                    <!-- COLUMN THREE -->
                     <div class="masonry-column">
                         <div class="masonry-item byme" data-sort-index="3">
                             <img src="https://i.ibb.co/mC5q2wSP/IMG-3382.jpg" alt="Sushi with crab stick" />
@@ -668,7 +761,21 @@
                             </p>
                             <span>10.13.2025</span>
                         </div>
+                        <div class="masonry-item byme pinkbg redflower" data-sort-index="7">
+                            <img
+                                src="https://i.ibb.co/M5SVDJTs/IMG-3356.jpg"
+                                alt="Rice topped with tuna and furikake" />
+                            <p>First time having rice + tuna in a <i>very</i> long while</p>
+                            <span>10.09.2025</span>
+                        </div>
+                        <div class="masonry-item greenbg scallop byme" data-sort-index="11">
+                            <img src="https://i.ibb.co/CpTTRcPd/IMG-3246.jpg" alt="Salmon in an air fryer" />
+                            <p>Giving salmon in air fryer another go</p>
+                            <span>09.19.2025</span>
+                        </div>
                     </div>
+
+                    <!-- COLUMN FOUR -->
                     <div class="masonry-column">
                         <div class="masonry-item pinkfloweralt bluebg byme" data-sort-index="4">
                             <img
@@ -676,6 +783,21 @@
                                 alt="Rice topped with tuna, edamame, and sliced cucumbers" />
                             <p>Mmm bowl of rice ... night snack ...</p>
                             <span>10.12.2025</span>
+                        </div>
+                        <div class="masonry-item purpleflower yellowbg byme" data-sort-index="8">
+                            <img src="https://i.ibb.co/nMF3Bx5D/IMG-3296.jpg" alt="Fried fish with cornmeal" />
+                            <p>
+                                Dad caught a carp, and we tried airfrying it instead of deep frying it with a cornmeal
+                                breading
+                            </p>
+                            <span>10.04.2025</span>
+                        </div>
+                        <div class="masonry-item purplebg tapestry notme" data-sort-index="12">
+                            <img
+                                src="https://i.ibb.co/GQV7xp9P/IMG-3127.jpg"
+                                alt="Puffy pastries with powdered sugar dusted on top" />
+                            <p><i>Gogoshi</i> made by grandma 🤤</p>
+                            <span>08.21.2025</span>
                         </div>
                     </div>
                 </div>
