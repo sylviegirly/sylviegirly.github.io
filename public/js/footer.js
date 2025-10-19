@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const footer = `
 <footer>
     <p>
-        2025 &copy; lovingly coded by <a href="https://justinjackson.ca/webmaster/">aid</a> &bull; <a href="/changelog.html">changelog</a> &bull; <a href="/credits.html">credits</a> &bull; <a href="/feed.xml">rss</a> &bull; <a href="https://asuraid.atabook.org/">guestbook</a> &bull; <a href="mailto:sylviegirly@pm.me">contact me</a>
+        2025 &copy; lovingly coded by <a href="https://justinjackson.ca/webmaster/">aid</a> &bull; <a href="/changelog.html">changelog</a> &bull; <a href="/credits.html">credits</a> &bull; <a href="/feed.xml">rss</a> &bull; <a href="https://asuraid.atabook.org/">guestbook</a> &bull; <a href="https://revospring.net/@asuraid">askbox</a> &bull; <a href="mailto:sylviegirly@pm.me">contact me</a>
     </p>
 </footer>
 `;
