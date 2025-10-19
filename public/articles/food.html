@@ -42,7 +42,7 @@
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 gridderyV3({
-                    items: ".posts",
+                    items: ".masonry-item",
                     columns: 4
                 });
             });
@@ -348,23 +348,68 @@
             }
 
             /* -------------------------------------------------------- */
+            /* GRIDDERY */
+            /* -------------------------------------------------------- */
+            /*----- griddery v2.0 (NEW) -----*/
+            [griddery-cont] {
+                display: table;
+                width: 100%;
+            }
+
+            [griddery-tr] {
+                display: table-row;
+            }
+
+            [griddery-col] {
+                display: table-cell;
+                vertical-align: top;
+            }
+
+            [griddery-item] {
+                display: flex;
+                justify-content: center;
+            }
+
+            [griddery-item] > * {
+                flex: 1;
+            }
+
+            [griddery-item] img,
+            [griddery-item] iframe,
+            [griddery-item] figure {
+                max-width: 100%;
+            }
+
+            [griddery-item] img {
+                border-radius: var(--border-radius);
+                width: 100%;
+                transition: 0.5s;
+            }
+
+            [griddery-item] img:hover {
+                outline: 1px solid var(--secondary-accent);
+                outline-offset: -5px;
+            }
+
+            /*----- 🐶 DOGS GRID 🐶 -----*/
+            /* dogs grid column spacing */
+            [griddery-id=".masonry-item"] [griddery-col] + [griddery-col] {
+                padding-left: 10px;
+            }
+
+            /* dogs grid "row" spacing */
+            [griddery-id=".masonry-item"] [griddery-item] + [griddery-item] {
+                margin-top: 22px;
+            }
+
+            [griddery-item] img:hover {
+                outline: none;
+                outline-offset: 0;
+            }
+
+            /* -------------------------------------------------------- */
             /* MASONRY LAYOUT */
             /* -------------------------------------------------------- */
-            .masonry-layout {
-                display: flex;
-                flex-wrap: wrap; /* Allows items to wrap into new rows */
-                gap: 10px; /* Space between columns */
-                width: 100%; /* Full width of the container */
-                max-width: 100%; /* Optional: limit the width of the layout */
-                margin: 0 auto; /* Center the layout */
-            }
-            .masonry-column {
-                flex: 1; /* Allows columns to grow and shrink */
-                min-width: 200px; /* Minimum width before columns might wrap or stack */
-                display: flex; /* For items within the column */
-                flex-direction: column; /* Stack items vertically in a column */
-                gap: 25px; /* Space between items within a column */
-            }
             .masonry-item {
                 background-color: var(--card-bg);
                 padding: 15px;
@@ -646,6 +691,12 @@
                 #main-menu li a {
                     width: fit-content;
                 }
+
+                [griddery-col] {
+                    display: block;
+                    margin-top: 20px;
+                    vertical-align: top;
+                }
             }
         </style>
     </head>
@@ -664,8 +715,8 @@
                     very basic photos, like memories.
                 </p>
                 <p>
-                    Tag filters might be a <i>little</i> weird and there may be some empty columns as I'm adding more
-                    items. 🥲 I may come up with future tags to organize it better.
+                    Tag filters might be a <i>little</i> weird and the column sizes may change (sorry, not sure how to
+                    fix this 🥲).
                 </p>
                 <p><a href="../index.html">Wanna return back to the site?</a></p>
                 <hr />
@@ -706,222 +757,83 @@
                 </div>
             </div>
             <main id="content" class="tagged">
-                <div class="masonry-layout">
-                    <!-- COLUMN ONE -->
-                    <div class="masonry-column">
-                        <div class="masonry-item cherryblossom pinkbg byme" data-sort-index="1">
-                            <img
-                                src="https://64.media.tumblr.com/29f5307d6ce81a152b9e8047731c1e8c/539eebdc48075d01-c2/s1280x1920/0bb51f8e6c0432b2765deec94a253b67d41a5659.jpg"
-                                alt="Rice cooker fried rice" />
-                            <p>First attempt in making fried rice in the rice cooker!!</p>
-                            <span>10.17.2025</span>
-                        </div>
-                        <div class="masonry-item algaepink purplebg byme" data-sort-index="5">
-                            <img
-                                src="https://64.media.tumblr.com/40e77de218bd27950dbd0a7e5b2e993a/5568eed2dfe2cd6b-5b/s1280x1920/84abd3252fd3d1adb1ba0b9a48979663004d1ae4.jpg"
-                                alt="Plain rice with furikake" />
-                            <p>First attempt in <i>actually</i> making rice in the rice cooker ... at like, 11pm</p>
-                            <span>10.11.2025</span>
-                        </div>
-                        <div class="masonry-item pisces bluebg notme" data-sort-index="9">
-                            <img src="https://i.ibb.co/v66h4yB8/IMG-3248.jpg" alt="Pasta with red sauce and mussels" />
-                            <p>Out for dad's bday at an italian pasta place, the dish was Seafood Manicotti Al Forno</p>
-                            <span>09.22.2025</span>
-                        </div>
-                    </div>
-
-                    <!-- COLUMN TWO -->
-                    <div class="masonry-column">
-                        <div class="masonry-item dasies yellowbg notme" data-sort-index="2">
-                            <img src="https://i.ibb.co/xqkFPhqJ/IMG-3403.jpg" alt="Chocolate cake with fruits" />
-                            <p>Cake my grandma made!!</p>
-                            <span>10.16.2025</span>
-                        </div>
-                        <div class="masonry-item leaves greenbg notme" data-sort-index="6">
-                            <img
-                                src="https://i.ibb.co/mV81mwND/IMG-3364.jpg"
-                                alt="Cooked turkey being shared, alongside a plate of mashed potatoes" />
-                            <p>Canadian thanksgiving turkey 🍗</p>
-                            <span>10.11.2025</span>
-                        </div>
-                        <div class="masonry-item moon notme" data-sort-index="10">
-                            <img src="https://i.ibb.co/MxP6jCPq/IMG-3247.jpg" alt="Scallops in a white sauce" />
-                            <p>Out for dad's bday at an italian pasta place, this was scallops with saffron sauce</p>
-                            <span>09.22.2025</span>
-                        </div>
-                    </div>
-
-                    <!-- COLUMN THREE -->
-                    <div class="masonry-column">
-                        <div class="masonry-item byme" data-sort-index="3">
-                            <img src="https://i.ibb.co/mC5q2wSP/IMG-3382.jpg" alt="Sushi with crab stick" />
-                            <p>
-                                Super basic crab stick sushi, first time doing one so small though and doing sushi rice
-                                in the rice cooker
-                            </p>
-                            <span>10.13.2025</span>
-                        </div>
-                        <div class="masonry-item byme pinkbg redflower" data-sort-index="7">
-                            <img
-                                src="https://i.ibb.co/M5SVDJTs/IMG-3356.jpg"
-                                alt="Rice topped with tuna and furikake" />
-                            <p>First time having rice + tuna in a <i>very</i> long while</p>
-                            <span>10.09.2025</span>
-                        </div>
-                        <div class="masonry-item greenbg scallop byme" data-sort-index="11">
-                            <img src="https://i.ibb.co/CpTTRcPd/IMG-3246.jpg" alt="Salmon in an air fryer" />
-                            <p>Giving salmon in air fryer another go</p>
-                            <span>09.19.2025</span>
-                        </div>
-                    </div>
-
-                    <!-- COLUMN FOUR -->
-                    <div class="masonry-column">
-                        <div class="masonry-item pinkfloweralt bluebg byme" data-sort-index="4">
-                            <img
-                                src="https://i.ibb.co/cK4LkCvm/IMG-3377.jpg"
-                                alt="Rice topped with tuna, edamame, and sliced cucumbers" />
-                            <p>Mmm bowl of rice ... night snack ...</p>
-                            <span>10.12.2025</span>
-                        </div>
-                        <div class="masonry-item purpleflower yellowbg byme" data-sort-index="8">
-                            <img src="https://i.ibb.co/nMF3Bx5D/IMG-3296.jpg" alt="Fried fish with cornmeal" />
-                            <p>
-                                Dad caught a carp, and we tried airfrying it instead of deep frying it with a cornmeal
-                                breading
-                            </p>
-                            <span>10.04.2025</span>
-                        </div>
-                        <div class="masonry-item purplebg tapestry notme" data-sort-index="12">
-                            <img
-                                src="https://i.ibb.co/GQV7xp9P/IMG-3127.jpg"
-                                alt="Puffy pastries with powdered sugar dusted on top" />
-                            <p><i>Gogoshi</i> made by grandma 🤤</p>
-                            <span>08.21.2025</span>
-                        </div>
-                    </div>
+                <div class="masonry-item cherryblossom pinkbg byme" data-sort-index="1">
+                    <img
+                        src="https://64.media.tumblr.com/29f5307d6ce81a152b9e8047731c1e8c/539eebdc48075d01-c2/s1280x1920/0bb51f8e6c0432b2765deec94a253b67d41a5659.jpg"
+                        alt="Rice cooker fried rice" />
+                    <p>First attempt in making fried rice in the rice cooker!!</p>
+                    <span>10.17.2025</span>
+                </div>
+                <div class="masonry-item dasies yellowbg notme" data-sort-index="2">
+                    <img src="https://i.ibb.co/xqkFPhqJ/IMG-3403.jpg" alt="Chocolate cake with fruits" />
+                    <p>Cake my grandma made!!</p>
+                    <span>10.16.2025</span>
+                </div>
+                <div class="masonry-item byme" data-sort-index="3">
+                    <img src="https://i.ibb.co/mC5q2wSP/IMG-3382.jpg" alt="Sushi with crab stick" />
+                    <p>
+                        Super basic crab stick sushi, first time doing one so small though and doing sushi rice in the
+                        rice cooker
+                    </p>
+                    <span>10.13.2025</span>
+                </div>
+                <div class="masonry-item pinkfloweralt bluebg byme" data-sort-index="4">
+                    <img
+                        src="https://i.ibb.co/cK4LkCvm/IMG-3377.jpg"
+                        alt="Rice topped with tuna, edamame, and sliced cucumbers" />
+                    <p>Mmm bowl of rice ... night snack ...</p>
+                    <span>10.12.2025</span>
+                </div>
+                <div class="masonry-item algaepink purplebg byme" data-sort-index="5">
+                    <img
+                        src="https://64.media.tumblr.com/40e77de218bd27950dbd0a7e5b2e993a/5568eed2dfe2cd6b-5b/s1280x1920/84abd3252fd3d1adb1ba0b9a48979663004d1ae4.jpg"
+                        alt="Plain rice with furikake" />
+                    <p>First attempt in <i>actually</i> making rice in the rice cooker ... at like, 11pm</p>
+                    <span>10.11.2025</span>
+                </div>
+                <div class="masonry-item leaves greenbg notme" data-sort-index="6">
+                    <img
+                        src="https://i.ibb.co/mV81mwND/IMG-3364.jpg"
+                        alt="Cooked turkey being shared, alongside a plate of mashed potatoes" />
+                    <p>Canadian thanksgiving turkey 🍗</p>
+                    <span>10.11.2025</span>
+                </div>
+                <div class="masonry-item byme pinkbg redflower" data-sort-index="7">
+                    <img src="https://i.ibb.co/M5SVDJTs/IMG-3356.jpg" alt="Rice topped with tuna and furikake" />
+                    <p>First time having rice + tuna in a <i>very</i> long while</p>
+                    <span>10.09.2025</span>
+                </div>
+                <div class="masonry-item purpleflower yellowbg byme" data-sort-index="8">
+                    <img src="https://i.ibb.co/nMF3Bx5D/IMG-3296.jpg" alt="Fried fish with cornmeal" />
+                    <p>
+                        Dad caught a carp, and we tried airfrying it instead of deep frying it with a cornmeal breading
+                    </p>
+                    <span>10.04.2025</span>
+                </div>
+                <div class="masonry-item pisces bluebg notme" data-sort-index="9">
+                    <img src="https://i.ibb.co/v66h4yB8/IMG-3248.jpg" alt="Pasta with red sauce and mussels" />
+                    <p>Out for dad's bday at an italian pasta place, the dish was Seafood Manicotti Al Forno</p>
+                    <span>09.22.2025</span>
+                </div>
+                <div class="masonry-item moon notme" data-sort-index="10">
+                    <img src="https://i.ibb.co/MxP6jCPq/IMG-3247.jpg" alt="Scallops in a white sauce" />
+                    <p>Out for dad's bday at an italian pasta place, this was scallops with saffron sauce</p>
+                    <span>09.22.2025</span>
+                </div>
+                <div class="masonry-item greenbg scallop byme" data-sort-index="11">
+                    <img src="https://i.ibb.co/CpTTRcPd/IMG-3246.jpg" alt="Salmon in an air fryer" />
+                    <p>Giving salmon in air fryer another go</p>
+                    <span>09.19.2025</span>
+                </div>
+                <div class="masonry-item purplebg tapestry notme" data-sort-index="12">
+                    <img
+                        src="https://i.ibb.co/GQV7xp9P/IMG-3127.jpg"
+                        alt="Puffy pastries with powdered sugar dusted on top" />
+                    <p><i>Gogoshi</i> made by grandma 🤤</p>
+                    <span>08.21.2025</span>
                 </div>
             </main>
         </div>
-
-        <!-- =============================================== -->
-        <!-- Disgusting masonry script; original link: -->
-        <!-- https://codeshack.io/create-responsive-masonry-layout-html-css-javascript/ -->
-        <!-- =============================================== -->
-        <script>
-            const sortMasonry = () => {
-                const breakpoint = 800; // Set your breakpoint for mobile/desktop switch (800px in this case)
-                const container = document.querySelector(".masonry-layout");
-                if (!container) return;
-                const columnElements = Array.from(container.querySelectorAll(".masonry-column"));
-                const numColumns = columnElements.length;
-                if (window.innerWidth < breakpoint) {
-                    // --- MOBILE VIEW ---
-                    // Check if we need to switch to mobile (e.g., first column is visible and not already processed)
-                    let needsFlattening = false;
-                    if (numColumns > 0 && columnElements[0].style.display !== "none") {
-                        // Check if items are actually in columns
-                        for (const col of columnElements) {
-                            if (col.querySelector(".masonry-item")) {
-                                needsFlattening = true;
-                                break;
-                            }
-                        }
-                    }
-                    if (needsFlattening) {
-                        const allItems = [];
-                        // Collect all items from wherever they might be to ensure we get them all
-                        document.querySelectorAll(".masonry-layout .masonry-item").forEach((item) => {
-                            allItems.push(item);
-                        });
-                        // Sort items using the data-sort-index attribute
-                        allItems.sort((a, b) => {
-                            const indexA = parseInt(a.dataset.sortIndex, 10);
-                            const indexB = parseInt(b.dataset.sortIndex, 10);
-                            if (isNaN(indexA) && isNaN(indexB)) return 0;
-                            if (isNaN(indexA)) return 1;
-                            if (isNaN(indexB)) return -1;
-                            return indexA - indexB;
-                        });
-                        // Detach all items from their current parents
-                        allItems.forEach((item) => item.remove());
-                        // Hide and clear original columns
-                        columnElements.forEach((column) => {
-                            column.innerHTML = "";
-                            column.style.display = "none";
-                        });
-                        // Append sorted items directly to the main container
-                        allItems.forEach((item) => {
-                            container.appendChild(item);
-                        });
-                    }
-                } else {
-                    // --- DESKTOP VIEW ---
-                    // Check if we need to switch to desktop (e.g., columns are hidden or items are direct children)
-                    const itemsAreFlatInContainer = container.querySelector(":scope > .masonry-item");
-                    if (numColumns > 0 && (columnElements[0].style.display === "none" || itemsAreFlatInContainer)) {
-                        // Prepare columns: make visible and clear.
-                        // columnMap will use 0-based array index as the key.
-                        const columnMap = {};
-                        columnElements.forEach((column, index) => {
-                            column.style.display = "flex"; // Or your original display ('block', etc.)
-                            column.innerHTML = "";
-                            columnMap[index] = column; // Store column by its 0-based index
-                        });
-                        // Collect all .masonry-item elements that have a data-sort-index
-                        const allItemsToRedistribute = Array.from(
-                            document.querySelectorAll(".masonry-layout .masonry-item[data-sort-index]")
-                        );
-                        // Detach all items from their current parents
-                        allItemsToRedistribute.forEach((item) => item.remove());
-                        // Sort all items globally by their sort-index. This ensures correct distribution order.
-                        allItemsToRedistribute.sort((a, b) => {
-                            const indexA = parseInt(a.dataset.sortIndex, 10);
-                            const indexB = parseInt(b.dataset.sortIndex, 10);
-                            if (isNaN(indexA) && isNaN(indexB)) return 0;
-                            if (isNaN(indexA)) return 1;
-                            if (isNaN(indexB)) return -1;
-                            return indexA - indexB;
-                        });
-                        // Distribute items to columns in a round-robin fashion
-                        if (numColumns > 0) {
-                            allItemsToRedistribute.forEach((item) => {
-                                const sortIndex = parseInt(item.dataset.sortIndex, 10);
-                                if (isNaN(sortIndex)) {
-                                    // Fallback for items without a valid sort-index, append to the first column or container
-                                    if (columnMap[0]) {
-                                        columnMap[0].appendChild(item);
-                                    } else {
-                                        container.appendChild(item);
-                                    }
-                                    return;
-                                }
-                                // Calculate target column index (0-based)
-                                // Assumes data-sort-index is 1-based (1, 2, 3...)
-                                const targetColumnIndex = (sortIndex - 1) % numColumns;
-                                const targetColumn = columnMap[targetColumnIndex];
-                                if (targetColumn) {
-                                    targetColumn.appendChild(item);
-                                } else {
-                                    // This case should ideally not happen if numColumns > 0 and calculation is correct
-                                    container.appendChild(item);
-                                }
-                            });
-                        } else {
-                            // If there are no columns, append all items to the container
-                            allItemsToRedistribute.forEach((item) => container.appendChild(item));
-                        }
-                    }
-                }
-            };
-            // Debounced resize listener and initial call
-            let resizeTimer;
-            window.addEventListener("resize", () => {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(sortMasonry, 250);
-            });
-            sortMasonry(); // Call on page load
-        </script>
 
         <!-- disgusting filtering link -->
         <script>
