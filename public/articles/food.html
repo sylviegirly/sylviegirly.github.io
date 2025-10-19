@@ -407,6 +407,14 @@
                 outline-offset: 0;
             }
 
+            [griddery-item] {
+                /* display: none; */
+            }
+
+            .masonry-item {
+                display: none;
+            }
+
             /* -------------------------------------------------------- */
             /* MASONRY LAYOUT */
             /* -------------------------------------------------------- */
@@ -418,7 +426,6 @@
                 outline: 1px solid rgba(0, 0, 0, 0.05);
                 position: relative;
                 transition: 0.5s;
-                display: none; /* Hidden by default */
             }
             .masonry-item img {
                 max-width: 100%;
@@ -868,6 +875,7 @@
             function filterSelection(c) {
                 var x, i;
                 x = document.getElementsByClassName("masonry-item");
+                // x = document.querySelectorAll("[griddery-item]");
                 if (c == "all") c = "";
                 // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
                 for (i = 0; i < x.length; i++) {
