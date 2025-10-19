@@ -9,7 +9,20 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-10-11T18:33:26-05:00</updated>
+    <updated>2025-10-18T21:31:16-05:00</updated>
+
+    <entry>
+        <title>Created a food log</title>
+        <link href="https://zhongvie.neocities.org/articles/food" />
+        <updated>2025-10-18T21:31:16-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1760841076</id>
+        <content type="html">
+            &#x3C;p&#x3E;I ended up caving to make a fun page to just document all the stuff I&#x27;ve cooked and eaten
+            over a period of time; I do not take selfies, I just take food photos LOL. It&#x27;ll be one of those
+            long-term projects since I need to dig through my phone and just be wary that the id for each
+            &#x27;item&#x27; in the masonry grid is different...&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New media log entries</title>
