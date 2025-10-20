@@ -9,7 +9,22 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-10-18T21:31:16-05:00</updated>
+    <updated>2025-10-20T15:20:29-05:00</updated>
+
+    <entry>
+        <title>Now Page Updated</title>
+        <link href="https://zhongvie.neocities.org/now" />
+        <updated>2025-10-20T15:20:29-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1760991629</id>
+        <content type="html">
+            &#x3C;p&#x3E;Not a very exciting update, mostly just small life stuff, and it&#x27;s been a bit of a blur.
+            As a more minor thing, I&#x27;ve been doing article reading and wrote a &#x3C;a
+            href=&#x22;https://zhongvie.bearblog.dev/2025-10-20/&#x22;&#x3E;small blog post&#x3C;/a&#x3E; on the concept
+            of bookmarks. I also fixed my &#x3C;a
+            href=&#x22;https://zhongvie.neocities.org/articles/food&#x22;&#x3E;food log&#x3C;/a&#x3E; page to be a bit
+            cleaner with griddery, and updated some recent foods&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Created a food log</title>
