@@ -53,6 +53,9 @@
     --link-hover: #4b0754;
     --body-deco: #f7f6e3;
 
+    --h1-pixel-deco: url("../img/decos/hanging_flowers.gif");
+    --h4-pixel-deco: url("../img/decos/plant_bopping.gif");
+
     @media (prefers-color-scheme: dark) {
         /* HEADERS */
         /*--header-bg: #211f1f;
@@ -246,7 +249,7 @@ h1 {
 /* H1 pixel decoration */
 h1::before {
     content: "";
-    /*background: url("../img/decos/hanging_flowers.gif");*/
+    /*background: var(--h1-pixel-deco);*/
     background: url("https://files.catbox.moe/rrgzbg.gif");
     background-repeat: no-repeat;
     width: 20px;
@@ -277,6 +280,27 @@ h6 {
     letter-spacing: 1px;
     border-bottom: 1px dotted var(--secondary-accent);
     text-decoration-color: var(--secondary-accent);
+}
+
+h4::before,
+h4::after {
+    content: "";
+    /*background: var(--h4-pixel-deco);*/
+    background: url("https://files.catbox.moe/k6vybl.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+}
+
+h4::before {
+    margin-right: 6px;
+}
+
+h4::after {
+    margin-left: 6px;
 }
 
 hr {

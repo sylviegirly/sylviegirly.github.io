@@ -47,9 +47,7 @@ const sidebar = `
         </div>
         <div id="img-load"></div>
         <h4>
-            <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
             Welcome!!
-            <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
         </h4>
         <div>
             <p style="text-align: center">
@@ -88,9 +86,7 @@ const sidebar = `
     </section>
     <section>
         <h4>
-            <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
             Site Button
-            <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
         </h4>
         <div class="site-button">
             <div class="two-columns">
