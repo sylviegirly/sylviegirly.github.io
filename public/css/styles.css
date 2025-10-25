@@ -44,11 +44,13 @@
 
     /* TEXT */
     /*--text-colour: #16190f;
+    --text-underline: rgba(120, 139, 104, 0.71);
     --link-colour: #9a5b1a;
     --link-hover: #475407;
     --body-deco: #f7f6e3;*/
 
     --text-colour: #16190f;
+    --text-underline: rgba(139, 116, 104, 0.71);
     --link-colour: #9a5b1a;
     --link-hover: #4b0754;
     --body-deco: #f7f6e3;
@@ -89,11 +91,13 @@
 
         /* TEXT */
         /*--text-colour: #f4f4f4;
+        --text-underline: rgba(120, 139, 104, 0.71);
         --link-colour: #a8d38d;
         --link-hover: #e2ae50;
         --body-deco: #211f1f;*/
 
         --text-colour: #f4f4f4;
+        --text-underline: rgba(139, 104, 133, 0.71);
         --link-colour: #d38dcd;
         --link-hover: #e2ae50;
         --body-deco: #211f1f;
@@ -325,7 +329,7 @@ em {
 underline,
 u {
     text-decoration-thickness: 2px;
-    text-decoration-color: rgba(120, 139, 104, 0.71);
+    text-decoration-color: var(--text-underline);
 }
 
 s,
