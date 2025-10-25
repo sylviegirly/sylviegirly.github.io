@@ -246,7 +246,8 @@ h1 {
 /* H1 pixel decoration */
 h1::before {
     content: "";
-    background: url("../img/decos/hanging_flowers.gif");
+    /*background: url("../img/decos/hanging_flowers.gif");*/
+    background: url("https://files.catbox.moe/rrgzbg.gif");
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
