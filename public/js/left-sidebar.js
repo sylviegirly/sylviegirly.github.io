@@ -43,7 +43,7 @@ const sidebar = `
     <section>
         <div class="img-floatinganim">
             <img class="dendro"
-                src="./img/dendro_symbol.png" aria-hidden='true' alt='' />
+                src="./img/halloweenie/Pumpkin (9).gif" aria-hidden='true' alt='' />
         </div>
         <div id="img-load"></div>
         <h4>
