@@ -9,7 +9,22 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-10-20T15:20:29-05:00</updated>
+    <updated>2025-10-25T01:38:37+00:00</updated>
+
+    <entry>
+        <title>Minor front page update</title>
+        <link href="https://zhongvie.neocities.org" />
+        <updated>2025-10-25T01:38:37+00:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1761356317</id>
+        <content type="html">
+            &#x3C;p&#x3E;Minor changes, but I added &#x3C;a
+            href=&#x22;https://bechnokid.neocities.org/resources/code-snippets/&#x22;&#x3E;Bechno
+            Kid&#x27;s&#x3C;/a&#x3E; cool calendar to the front page (only visible on desktop) and added a little
+            section to link to my &#x3C;a href=&#x22;https://zhongvie.bearblog.dev/&#x22;&#x3E;bearblog&#x3C;/a&#x3E;
+            for longer posts, since I&#x27;ll probably stop adding them to my blog page on here ... which I guess now is
+            more of a microblog!! Bearblog just feels nicer to get full thoughts out on there&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Now Page Updated</title>
