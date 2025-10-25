@@ -55,6 +55,7 @@
         <!-- JavaScript: -->
         <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
         if this HTML file is in 2 subfolders, etc. -->
+        <script src="js/calendar.js"></script>
 
         <!-- Menu Items -->
         <script src="js/left-sidebar.js" defer></script>
@@ -158,6 +159,50 @@
                 box-sizing: border-box;
             }
 
+            #bearblog {
+                height: max-content;
+                background-color: var(--body-deco);
+                text-shadow: none;
+                border-radius: var(--border-radius);
+                padding: 10px;
+                margin-top: 10px;
+            }
+
+            #bearblog .title {
+                color: var(--primary-accent);
+                font-family: "dosis";
+                font-weight: bold;
+                font-size: 1.9rem;
+                padding-top: 5px;
+            }
+
+            #bearblog .title + p {
+                font-style: italic;
+                padding-bottom: 5px;
+            }
+
+            #bearblog .content {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            #bearblog .readmore {
+                line-height: 2rem;
+            }
+
+            #bearblog .readmore::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                background-image: url(img/decos/clover_by_korajora.gif);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-right: 5px;
+            }
+
             /* -------------------------------------------------------- */
             /* SIDEBAR LINKS */
             /* -------------------------------------------------------- */
@@ -193,6 +238,44 @@
 
             .links li:last-child > a {
                 margin-bottom: 0;
+            }
+
+            /* -------------------------------------------------------- */
+            /* CALENDAR */
+            /* -------------------------------------------------------- */
+
+            #widget-calendar table {
+                margin-left: auto;
+                margin-right: auto;
+                border: 1px solid var(--primary-accent);
+                border-collapse: collapse;
+                color: var(--text);
+                font-family: "Nunito";
+                font-size: 0.85rem;
+            }
+
+            #widget-calendar td {
+                padding: 0 0.25rem;
+                border: 1px solid var(--primary-accent);
+            }
+
+            #widget-calendar .month {
+                font-weight: bold;
+                text-align: center;
+            }
+
+            #widget-calendar .days {
+                font-weight: bold;
+            }
+
+            #widget-calendar .today {
+                font-weight: bold;
+                color: var(--secondary-accent);
+                text-decoration: underline;
+            }
+
+            #widget-calendar .blank {
+                background-color: var(--article-liner);
             }
 
             @media screen and (max-width: 800px) {
@@ -472,6 +555,29 @@
                         <p class="subtle">
                             <i>Check out my <a href="gallery.html">gallery</a> for more artwork!</i>
                         </p>
+                    </div>
+                </article>
+                <!-- =============================================== -->
+                <!-- BEAR BLOG. -->
+                <!-- =============================================== -->
+                <article>
+                    <h1>Recent Blog Post</h1>
+                    <div id="bearblog">
+                        <div class="title">On bookmarking and saving things</div>
+                        <p>October 20, 2025</p>
+                        <div class="content">
+                            <p>
+                                I just finished reading
+                                <a href="https://haleynahman.substack.com/p/241-the-fantasy-of-the-saved-folder"
+                                    >an article</a
+                                >
+                                by Haley Nahman talking about the way we save things (and the
+                                <a href="https://www.joanwestenberg.com/p/i-deleted-my-second-brain">linked article</a>
+                                by Joan Westernberg where she deleted 7 years worth of notes on Obsidian), and how we
+                                gather knowledge in stuff.
+                            </p>
+                        </div>
+                        <a href="" class="readmore">Read More</a>
                     </div>
                 </article>
                 <!-- =============================================== -->
@@ -1563,6 +1669,12 @@
                     </p>
                 </section>
                 <!-- =============================================== -->
+                <!-- CALENDAR. -->
+                <!-- =============================================== -->
+                <section>
+                    <div id="widget-calendar"></div>
+                </section>
+                <!-- =============================================== -->
                 <!-- WATCHING / PLAYING. -->
                 <!-- =============================================== -->
                 <section>
@@ -1574,11 +1686,12 @@
                     </h4>
                     <p>
                         <span class="highlight">Watching:</span>
-                        Castlevania Nocturne
+                        Nothing right now
                     </p>
                     <p>
                         <span class="highlight">Playing:</span>
-                        <span class="tippy" data-tippy-content="Honkai Star Rail">HSR</span>, Genshin, Warframe
+                        <span class="tippy" data-tippy-content="Honkai Star Rail">HSR</span>, Genshin,
+                        <span class="tippy" data-tippy-content="Cookie Run Kingdom">CRK</span>, Warframe
                     </p>
                     <p>
                         <span class="highlight">Reading:</span>
