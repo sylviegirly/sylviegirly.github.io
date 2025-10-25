@@ -12,11 +12,13 @@
     /* Colors */
     /* HEADERS */
     /*--header-bg: #211f1f;
+    --header-img: url("../img/websiteBanner.png");
     --background-image: url(../img/light_mode_bg.png);
     --header-title: #e8f4dd;
     --header-subtitle: #c8d7a8;*/
 
     --header-bg: #211f1f;
+    --header-img: url("../img/halloweenie/hall-orange5.png");
     --header-title: #000000;
     --header-subtitle: #52180a;
 
@@ -65,9 +67,10 @@
         --header-subtitle: #bdd7a8;*/
 
         --header-bg: #211f1f;
+        --header-img: url("../img/halloweenie/hall-purple2.png");
         --background-image: url(../img/halloweenie/hall-ghosts-purple-transparent.png);
-        --header-title: #000000;
-        --header-subtitle: #52180a;
+        --header-title: #ffffff;
+        --header-subtitle: #fbe2ff;
 
         /* BACKGROUNDS */
         /*--background-colour: #211f1f;
@@ -721,8 +724,7 @@ header {
     text-align: center;
     height: 200px;
     background-color: var(--header-bg);
-    /*background-image: url("../img/websiteBanner.png");*/
-    background-image: url("../img/halloweenie/hall-orange5.png");
+    background-image: var(--header-img);
     /*background-repeat: repeat-y;
     background-size: cover;
     background-position: fixed;*/
