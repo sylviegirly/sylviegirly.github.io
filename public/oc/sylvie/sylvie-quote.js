@@ -1,5 +1,15 @@
 const quotes = [
     {
+        quote: "fuck you 🖕 if you don’t like the ancient forest",
+        author: "larval-tear",
+        url: "https://larval-tear.tumblr.com/post/796963773924753408"
+    },
+    {
+        quote: "cooking really is an act of worship… to slice fruit until the knife knows your hand and to season with intuition as opposed to reason. to stand before the stove and let your devotion simmer, to taste the broth and hope, let it be warm enough to reach their bones ♡ to say i love you without words and to turn hunger into tenderness and feeding what aches;; ♡  ",
+        author: "tabisou",
+        url: "https://tabisou.tumblr.com/post/796695993810911232"
+    },
+    {
         quote: "I crave warmth everywhere. In the morning sun or in sunsets or in music, art, places, just warm energy. When people recommend you songs or movies or tell you how much you mean to them, when people say I love you out of the blue, or a smile from random strangers, people going on walks with you or a picnic date with friends, when somebody talks about the person they love or the times when you are laughing uncontrollably with a group of people you love, I crave that warmth. ",
         author: "lookatthestarswithmee",
         url: "https://www.tumblr.com/lookatthestarswithmee/673663991862706176"
