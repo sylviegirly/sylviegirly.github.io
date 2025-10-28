@@ -46,6 +46,18 @@
         <script src="js/footer.js" defer></script>
         <script src="js/tab-title-suffix.js"></script>
 
+        <!--✻✻✻✻✻✻  griddery by @glenthemes  ✻✻✻✻✻✻-->
+        <script src="js/griddery.js"></script>
+        <link rel="stylesheet" href="css/griddery.css" />
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                gridderyV3({
+                    items: "img[memes]",
+                    columns: 2
+                });
+            });
+        </script>
+
         <!-- Disclosure Menu -->
         <script src="js/accessibility/disclosure-menu.iife.js"></script>
         <script src="js/accessibility/accessible-menu.js" type="module"></script>
@@ -208,6 +220,33 @@
                 max-width: 100%;
                 margin-left: auto;
                 margin-right: auto;
+            }
+
+            /*----- 🐱 CATS GRID 🐱 -----*/
+            /* cats grid column spacing */
+            [griddery-id="img[memes]"]
+            [griddery-col] + [griddery-col]{
+                padding-left:15px;
+            }
+
+            /* cats grid "row" spacing */
+            [griddery-id="img[memes]"]
+            [griddery-item] + [griddery-item]{
+                margin-top:15px;
+            }
+
+            [griddery-item] img {
+                vertical-align:middle;
+                max-width:100%;
+                width:100%;
+            }
+
+            [griddery-item]{
+                position:relative;
+                border-radius:4px;
+                box-shadow:4px 4px 14px rgba(0,0,0,15%);
+                overflow:hidden;
+                z-index:0;
             }
 
             @media screen and (max-width: 800px) {
@@ -1584,9 +1623,56 @@
                         </div>
 
                         <div id="Fanlistings" class="tabcontent" style="gap: 0">
-                            <h1>Fanlists</h1>
-                            <div class="tabcontentinside hover-grow twocolumn">
-                                ughhhhh gotta look at griddery again
+                            <h1>#Me Memes</h1>
+                            <div class="tabcontentinside">
+                                <img
+                                    src="https://64.media.tumblr.com/64f1b9fac0590ba89050a87273d0a1c7/f9112ef07dce9674-c7/s640x960/b98a16e89a4c59c738bace98c7e2b78ac6ad7076.jpg"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/89d70b4b240fb1ce7554c17122e64dee/b1c8320565ec2413-24/s1280x1920/b49e95e03b319a51ada80b1295f67e3328b4a258.jpg"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/358fb48753c94b2cb8746b41a1c3cc89/119a8a290f324a5f-cc/s1280x1920/ad699206e17f311e9cc38bfb6ba496914aea52f5.jpg"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/8b34e73dc1d4234977ed5d23dadeae3f/5a8d38c3dbe01071-69/s1280x1920/6809f995966954186bad0b8cfd623aab008d6695.jpg"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/d62ec1e2843ab23a8279b2df96639150/b1c30ac5b4b89475-05/s1280x1920/49769a2b99e45fabb9997831f4fa307926d43463.jpg"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/e4092089a7015361f9501dfefc47d19a/2a225c8674934273-72/s1280x1920/ceb33961da719dec5914b202d2d2c8958a4ee848.jpg"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/3fbc94133a1393d534a6f5878166bc2c/f15d19b2d11eed20-7d/s500x750/73c0803f66d18fd358c90fe0bde69a44df4df24d.png"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/e79a691b2bfa9b7c9903f1295eea4019/36b285045f938ab3-b5/s1280x1920/f3af634a5b7eb25db02f55af516bd706b9ca1d1a.jpg"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/88103e7925feecedc7e6a3425c87b965/bb7f89daa339a852-20/s1280x1920/118b30d0f291112edb27ab54314008fe9f34433c.jpg"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/d7991cf6363f6be0060beb3e2f60dad3/tumblr_ppxq71iuoV1wv4h8co1_500.png"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/ccc52265b2777824fb31b034a678a24a/24165188f50ecce7-62/s1280x1920/9fef91d95957098e2261ddee2ea0365f70c576cd.png"
+                                    loading="lazy"
+                                    memes />
+                                <img
+                                    src="https://64.media.tumblr.com/b2a8022c96e998e17a6a64863fce2759/09c01427d4e4fc18-23/s1280x1920/c01587f4a61eca260ba535e1a8f817fe9cf69168.jpg"
+                                    loading="lazy"
+                                    memes />
                             </div>
                         </div>
 
@@ -1848,6 +1934,37 @@
                                         >What Kind of Dungeons and Dragons Character Would You Be?</a
                                     >, courtesy of Easydamus <a href="mailto:zybstrski@excite.com">(e-mail)</a
                                     ><br /><br />
+                                </div>
+                                <div>
+                                    <a href="https://swiftyshq.neocities.org/fun/quiz/creature"
+                                        ><img
+                                            src="https://swiftyshq.neocities.org/img/quiz/creature/res4.png"
+                                            alt="greg"
+                                            title="literally the most normal person in the friend group"
+                                    /></a>
+                                </div>
+                                <div>
+                                    <center>
+                                        <a href="http://www.springhole.net" target="SH.net"
+                                            ><img src="img/misc/element-fire.webp" loading="lazy" alt="Fire Element"
+                                        /></a>
+                                    </center>
+                                </div>
+                                <div class="scrollable" style="height: 294px">
+                                    <img
+                                        src="img/misc/ramiel.gif"
+                                        alt="Ramiel fom Neon Genesis Evangelion"
+                                        loading="lazy" />
+                                    <p>
+                                        <a href="https://mkremins.github.io/genderquiz/"
+                                            >Your gender is: THE ANGEL RAMIEL FROM NEON GENESIS EVANGELION</a
+                                        >
+                                    </p>
+                                    <p>
+                                        Your gender is the Fifth Angel, one of the largest and second most powerful. It
+                                        becomes the first Angel to physically penetrate the Geofront when its drill bit
+                                        breaks through the armor. It is defeated during Operation Yashima (ヤシマ作戦).
+                                    </p>
                                 </div>
                             </div>
                         </div>

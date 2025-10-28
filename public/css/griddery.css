@@ -37,7 +37,7 @@
     transition: 0.5s;
 }
 
-[griddery-item] img:hover {
+[griddery-item] a img:hover {
     outline: 1px solid var(--secondary-accent);
     outline-offset: -5px;
 }

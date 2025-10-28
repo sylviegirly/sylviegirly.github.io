@@ -9,12 +9,24 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-10-25T01:38:37+00:00</updated>
+    <updated>2025-10-28T15:55:01-5:00</updated>
+
+    <entry>
+        <title>Added memes (finally) to about me</title>
+        <link href="https://zhongvie.neocities.org/about" />
+        <updated>2025-10-28T15:55:01-5:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1761666901</id>
+        <content type="html">
+            &#x3C;p&#x3E;Sorely overdue but I added stuff to the #me memes section of my about page, with memes
+            I&#x27;ll probably yoink off my personal tumblr tag. I also added a few new quiz results, and getting an
+            angel from evangelion as my assigned gender is a sickass result&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Minor front page update</title>
         <link href="https://zhongvie.neocities.org" />
-        <updated>2025-10-25T01:38:37+00:00</updated>
+        <updated>2025-10-25T01:38:37-5:00</updated>
         <id>https://zhongvie.neocities.org/xml/item1761356317</id>
         <content type="html">
             &#x3C;p&#x3E;Minor changes, but I added &#x3C;a
