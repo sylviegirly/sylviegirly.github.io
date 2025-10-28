@@ -117,6 +117,9 @@ const sidebar = `
     <a href="https://tamanotchi.world/22258c">
     <img src="https://tamanotchi.world/i/22258" class="tilt-hover" alt="purple tamanotchi pixel">
     </a>
+    <a href="https://tamanotchi.world/13609c">
+    <img src="https://tamanotchi.world/i/13609" class="tilt-hover" alt="yellow star tamanotchi pixel">
+    </a>
     </div>
 </div>
 `;
