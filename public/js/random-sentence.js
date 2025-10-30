@@ -1,5 +1,10 @@
 const quotes = [
         {
+                quote: "*voice of someone craving even the tiniest sliver of control* i could make a spreadsheet,",
+                author: "so-many-ocs",
+                url: "https://so-many-ocs.tumblr.com/post/796929567379128320"
+        },
+        {
                 quote: "It is your sacred duty to post about your OCs as if they are canon characters who have always been a part of the story and everyone knows about them",
                 author: "sebdoesthings",
                 url: "https://sebdoesthings.tumblr.com/post/793599886303035392"
