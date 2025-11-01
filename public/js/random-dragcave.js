@@ -1,21 +1,16 @@
 const dragon = [
-    "qotnj",
-    "Xi5A8",
-    "MWhjg",
-    "xfW0W",
-    "VhnUo",
-    "2ZFhl",
-    "3OLWA",
-    "JUYNs",
-    "SR1Q5",
-    "cMsrK",
-    "CQlAo",
-    "7tb58",
-    "f1phg",
-    "uUIso",
-    "ji8rt",
+    "dE01N",
+    "6xTop",
+    "6utak",
+    "7r4Rn",
     "xfsxg",
-    "Z8NsX"
+    "Z8NsX",
+    "7p4Ng",
+    "M5Jed",
+    "7ORdy",
+    "7tb58",
+    "XjpXj",
+    "CQlAo"
 ];
 
 // this chooses a random number from all available text indices
