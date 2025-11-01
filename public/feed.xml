@@ -9,7 +9,22 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-10-28T15:55:01-5:00</updated>
+    <updated>2025-10-30T22:44:29-05:00</updated>
+
+    <entry>
+        <title>First template made!</title>
+        <link href="https://zhongvie.neocities.org/templates" />
+        <updated>2025-10-31T22:44:29-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1761666901</id>
+        <content type="html">
+            &#x3C;p&#x3E;I made my very &#x3C;a
+            href=&#x22;https://zhongvie.neocities.org/templates/boxy&#x22;&#x3E;first website template&#x3C;/a&#x3E;!! I
+            hope to make future ones, but I&#x27;m a&#x26;nbsp;&#x3C;em&#x3E;very&#x3C;/em&#x3E; slow cooker when it
+            comes to layouts and not overthinking it too much&#x3C;/p&#x3E; &#x3C;p&#x3E;On a smaller note, I updated my
+            &#x3C;a href=&#x22;https://zhongvie.neocities.org/diary/&#x22;&#x3E;diary calendar&#x3C;/a&#x3E; to have
+            November settled in&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Added memes (finally) to about me</title>
