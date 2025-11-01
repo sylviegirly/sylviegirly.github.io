@@ -216,8 +216,7 @@ h1 {
 /* H1 pixel decoration */
 h1::before {
     content: "";
-    /*background: var(--h1-pixel-deco);*/
-    background: url("https://files.catbox.moe/rrgzbg.gif");
+    background: var(--h1-pixel-deco);
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
@@ -252,12 +251,11 @@ h6 {
 h4::before,
 h4::after {
     content: "";
-    /*background: var(--h4-pixel-deco);*/
-    background: url("https://files.catbox.moe/k6vybl.gif");
+    background: var(--h4-pixel-deco);
     background-repeat: no-repeat;
     background-position: center;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 15px;
     display: inline-block;
     background-size: contain;
 }
