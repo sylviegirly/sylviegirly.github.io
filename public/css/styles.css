@@ -11,50 +11,29 @@
 
     /* Colors */
     /* HEADERS */
-    /*--header-bg: #211f1f;
+    --header-bg: #211f1f;
     --header-img: url("../img/websiteBanner.png");
     --background-image: url(../img/light_mode_bg.png);
     --header-title: #e8f4dd;
-    --header-subtitle: #c8d7a8;*/
-
-    --header-bg: #211f1f;
-    --header-img: url("../img/halloweenie/hall-orange5.png");
-    --header-title: #000000;
-    --header-subtitle: #52180a;
+    --header-subtitle: #c8d7a8;
 
     /* BACKGROUNDS */
-    /*--background-colour: #879d6d;
+    --background-colour: #879d6d;
     --article-bg: #e9ecdb;
-    --article-liner: rgba(74, 118, 58, 0.46);*/
-
-    --background-colour: #bb7f59;
-    --article-bg: #f7efd8;
-    --article-liner: rgba(118, 82, 58, 0.46);
+    --article-liner: rgba(74, 118, 58, 0.46);
 
     /* PRIMARY ACCENTS */
-    /*--primary-accent: #4e6137;
+    --primary-accent: #4e6137;
     --secondary-accent: #73582f;
     --font-on-accent: #f3f4e0;
-    --crossed-out: #858585;
-    --letter-glow: rgba(156, 100, 25, 0.51);*/
-
-    --primary-accent: #6c3a14;
-    --secondary-accent: #330e3d;
-    --font-on-accent: #f4e7e0;
     --crossed-out: #858585;
     --letter-glow: rgba(156, 100, 25, 0.51);
 
     /* TEXT */
-    /*--text-colour: #16190f;
+    --text-colour: #16190f;
     --text-underline: rgba(120, 139, 104, 0.71);
     --link-colour: #9a5b1a;
     --link-hover: #475407;
-    --body-deco: #f7f6e3;*/
-
-    --text-colour: #16190f;
-    --text-underline: rgba(139, 116, 104, 0.71);
-    --link-colour: #9a5b1a;
-    --link-hover: #4b0754;
     --body-deco: #f7f6e3;
 
     --h1-pixel-deco: url("../img/decos/hanging_flowers.gif");
@@ -62,46 +41,26 @@
 
     @media (prefers-color-scheme: dark) {
         /* HEADERS */
-        /*--header-bg: #211f1f;
-        --header-title: #edf4dd;
-        --header-subtitle: #bdd7a8;*/
-
         --header-bg: #211f1f;
-        --header-img: url("../img/halloweenie/hall-purple2.png");
-        --background-image: url(../img/halloweenie/hall-ghosts-purple-transparent.png);
-        --header-title: #ffffff;
-        --header-subtitle: #fbe2ff;
+        --header-title: #edf4dd;
+        --header-subtitle: #bdd7a8;
 
         /* BACKGROUNDS */
-        /*--background-colour: #211f1f;
-        --article-bg: #191717;
-        --article-liner: rgba(74, 118, 58, 0.15);*/
-
         --background-colour: #211f1f;
+        --background-image: url(../img/dark_mode_bg.png);
         --article-bg: #191717;
-        --article-liner: rgba(118, 58, 104, 0.15);
+        --article-liner: rgba(74, 118, 58, 0.15);
 
         /* PRIMARY ACCENTS */
-        /*--primary-accent: #778d60;
+        --primary-accent: #778d60;
         --secondary-accent: #cee8ba;
         --font-on-accent: #000000;
-        --letter-glow: rgba(89, 118, 58, 0.46);*/
-
-        --primary-accent: #88608d;
-        --secondary-accent: #e5b863;
-        --font-on-accent: #000000;
-        --letter-glow: rgba(118, 58, 115, 0.46);
+        --letter-glow: rgba(89, 118, 58, 0.46);
 
         /* TEXT */
-        /*--text-colour: #f4f4f4;
+        --text-colour: #f4f4f4;
         --text-underline: rgba(120, 139, 104, 0.71);
         --link-colour: #a8d38d;
-        --link-hover: #e2ae50;
-        --body-deco: #211f1f;*/
-
-        --text-colour: #f4f4f4;
-        --text-underline: rgba(139, 104, 133, 0.71);
-        --link-colour: #d38dcd;
         --link-hover: #e2ae50;
         --body-deco: #211f1f;
     }
