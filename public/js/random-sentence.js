@@ -1,5 +1,15 @@
 const quotes = [
         {
+                quote: "agnostic is lowkey the funniest belief system it's just like yeah idk it's none of my business",
+                author: "pjharvey",
+                url: "https://www.tumblr.com/pjharvey/790177965905510400"
+        },
+        {
+                quote: "i can handle one (1) Event™ per day. whether it be a phone call, an appointment, trip to the grocery store, play date with a friend, etc. only one, that's it. any more than that and i am Stressed",
+                author: "angel-fruitcake",
+                url: "https://angel-fruitcake.tumblr.com/post/780452458256384000"
+        },
+        {
                 quote: "*voice of someone craving even the tiniest sliver of control* i could make a spreadsheet,",
                 author: "so-many-ocs",
                 url: "https://so-many-ocs.tumblr.com/post/796929567379128320"
