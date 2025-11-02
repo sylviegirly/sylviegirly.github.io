@@ -190,11 +190,13 @@
             }
 
             #bearblog .readmore {
-                line-height: 2rem;
-                padding-left: 10px;
+                text-align: center;
+                padding: 0 5px;
+                margin-top: 10px;
             }
 
-            #bearblog .readmore::before {
+            #bearblog .readmore::before,
+            #bearblog .readmore::after {
                 content: "";
                 width: 16px;
                 height: 16px;
@@ -202,7 +204,7 @@
                 background-image: url(img/decos/clover_by_korajora.gif);
                 background-repeat: no-repeat;
                 background-position: center;
-                margin-right: 5px;
+                margin: 0 5px;
             }
 
             /* -------------------------------------------------------- */
@@ -565,8 +567,8 @@
                 <article>
                     <h1>Latest Blog Post</h1>
                     <div id="bearblog">
-                        <div class="title">On bookmarking and saving things</div>
-                        <p>October 20, 2025</p>
+                        <div class="title">October wrap-up</div>
+                        <p>November 1, 2025</p>
                         <div class="content">
                             <p>
                                 I thought I'd give a shot at doing a monthly wrap-up like I've seen from some other
@@ -575,7 +577,9 @@
                                 website changelog, now pages, and anything else I might've not noted anywhere.
                             </p>
                         </div>
-                        <a href="https://zhongvie.bearblog.dev/2025-10-20/" class="readmore">Read More</a>
+                        <div class="readmore">
+                            <a href="https://zhongvie.bearblog.dev/2025-11-01/">Read More</a>
+                        </div>
                     </div>
                 </article>
                 <!-- =============================================== -->
