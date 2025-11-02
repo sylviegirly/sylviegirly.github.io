@@ -56,16 +56,17 @@ const content = `
         <li id="item-3-0-0"><a id="link-2-0-0" href="/gallery.html">Art</a></li>
         <li id="item-4-0-0" class="dropdown">
             <a id="link-4-0-0" href="#">Personal</a>
-            <ul id="menu-3">
-                <li id="item-4-1-0"><a id="link-4-1-0" href="/blog.html">Blog</a></li>
+            <ul id="menu-4">
+                <li id="item-4-1-0"><a id="link-4-1-0" href="https://zhongvie.bearblog.dev/">Blog</a></li>
                 <li id="item-4-2-0"><a id="link-4-2-0" href="/diary/index.html">Diary</a></li>
                 <li id="item-4-3-0"><a id="link-4-3-0" href="/manifesto.html">Manifesto</a></li>
-                <li id="item-4-4-0"><a id="link-4-4-0" href="/now.html">Now</a></li>
+                <li id="item-4-4-0"><a id="link-4-4-0" href="/blog.html">Microblog</a></li>
+                <li id="item-4-5-0"><a id="link-4-5-0" href="/now.html">Now</a></li>
             </ul>
         </li>
         <li id="item-5-0-0" class="dropdown">
             <a id="link-5-0-0" href="#">OCs / Shrines</a>
-            <ul id="menu-4">
+            <ul id="menu-5">
                 <li id="item-5-1-0"><a id="link-5-1-0" href="/oc/sylvie/index.html">Sylvie</a></li>
                 <li id="item-5-2-0"><a id="link-5-2-0" href="/oc/yadyra/index.html">Yadyra</a></li>
                 <li id="item-5-3-0"><a id="link-5-3-0" href="/oc/nameless/index.html">Nameless</a></li>
