@@ -9,7 +9,21 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-10-30T22:44:29-05:00</updated>
+    <updated>2025-11-03T15:43:48-05:00</updated>
+
+    <entry>
+        <title>Second template made!</title>
+        <link href="https://zhongvie.neocities.org/templates" />
+        <updated>2025-11-03T15:43:48-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1762202628</id>
+        <content type="html">
+            &#x3C;p&#x3E;And made &#x3C;a href=&#x22;https://zhongvie.neocities.org/templates/bloggy&#x22;&#x3E;my
+            second template&#x3C;/a&#x3E;!! It&#x27;s in the vein of a tumblr theme (ish), and still pretty simple ...
+            the day I make complex templates I will turn into dust (I don&#x27;t even think I have any explicitly
+            complex pages on my site). Otherwise, nothing new on the site, I&#x27;ve been bogged down trying to figure
+            out adding carrds to sell on VGen, and it&#x27;s ... Something(tm)&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>First template made!</title>
