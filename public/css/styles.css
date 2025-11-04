@@ -271,6 +271,7 @@ h4::after {
 hr {
     border: 0;
     border-bottom: 1px dotted var(--secondary-accent);
+    overflow: hidden;
 }
 
 bold,
@@ -894,8 +895,14 @@ section .scrollable {
     padding-bottom: 0;
 }
 
-section .scrollable p {
+section p:first-child,
+section .scrollable p:first-child {
     margin-top: 0;
+}
+
+section p:last-child,
+section .scrollable p:last-child {
+    margin-bottom: 0;
 }
 
 section .full-width-image {
