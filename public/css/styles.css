@@ -208,20 +208,24 @@ h1 {
     border-radius: var(--border-radius);
     letter-spacing: 2px;
     font-size: 1.3rem;
-    padding: 10px 10px;
+    padding: 10px;
     font-weight: 700;
     text-align: left;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 /* H1 pixel decoration */
 h1::before {
-    content: "";
+    content: " ";
     background: var(--h1-pixel-deco);
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
     display: inline-block;
-    padding-right: 6px;
+    padding-right: 25px;
 }
 
 h2 {
@@ -895,12 +899,12 @@ section .scrollable {
     padding-bottom: 0;
 }
 
-section p:first-child,
+section > p:first-child,
 section .scrollable p:first-child {
     margin-top: 0;
 }
 
-section p:last-child,
+section > p:last-child,
 section .scrollable p:last-child {
     margin-bottom: 0;
 }
