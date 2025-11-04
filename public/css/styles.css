@@ -900,12 +900,12 @@ section .scrollable {
 }
 
 section > p:first-child,
-section .scrollable p:first-child {
+section .scrollable > p:first-child {
     margin-top: 0;
 }
 
 section > p:last-child,
-section .scrollable p:last-child {
+section .scrollable > p:last-child {
     margin-bottom: 0;
 }
 
