@@ -36,7 +36,7 @@
     --link-hover: #475407;
     --body-deco: #f7f6e3;
 
-    --h1-pixel-deco: url("../img/decos/hanging_flowers.gif");
+    --h1-pixel-deco: url("../img/decos/LEaf.gif");
     --h4-pixel-deco: url("../img/decos/plant_bopping.gif");
 
     @media (prefers-color-scheme: dark) {
@@ -225,7 +225,7 @@ h1::before {
     width: 20px;
     height: 20px;
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 h2 {
