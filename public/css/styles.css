@@ -225,7 +225,7 @@ h1::before {
     width: 20px;
     height: 20px;
     display: inline-block;
-    padding-right: 25px;
+    margin-right: 5px;
 }
 
 h2 {
