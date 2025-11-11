@@ -9,7 +9,22 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-11-05T16:22:54-05:00</updated>
+    <updated>2025-11-11T16:41:20-05:00</updated>
+
+    <entry>
+        <title>I made a forum!</title>
+        <link href="https://treefort.boards.net/" />
+        <updated>2025-11-11T16:41:20-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1762897280</id>
+        <content type="html">
+            &#x3C;p&#x3E;Not fully site related, but I joined joro in making &#x3C;a
+            href=&#x22;https://treefort.boards.net/&#x22;&#x3E;a forum&#x3C;/a&#x3E; that&#x27;s a chill hangout spot
+            for neoneighbours/indie web peeps; obvs it&#x27;s not locked to just neocities, but anyone can join!! I
+            wasn&#x27;t sure where to put it on my site, so it&#x27;s just in the RSS feed for now and the neocities
+            feed :D&#x3C;/p&#x3E; &#x3C;p&#x3E;Just so you know I&#x27;m totally hunting down deviantART emotes to add
+            as custom emotes there&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Now page updated</title>
