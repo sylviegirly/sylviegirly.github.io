@@ -9,7 +9,20 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-11-11T16:41:20-05:00</updated>
+    <updated>2025-11-17T23:27:05-05:00</updated>
+
+    <entry>
+        <title>New template!</title>
+        <link href="https://zhongvie.neocities.org/templates" />
+        <updated>2025-11-17T23:27:05-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1763440025</id>
+        <content type="html">
+            &#x3C;p&#x3E;New template has been made! Went for a big chunky sidebar + a giant focal image, plus I wanted
+            an excuse to use some of the lace borders from scripted. I&#x27;ve had it done for a little while, but kinda
+            dragged my feet on pushing it, oopsies&#x3C;/p&#x3E; &#x3C;img
+            src=&#x22;https://i.ibb.co/SXg5kGdM/lace-gif.gif&#x22; alt=&#x22;lace-gif&#x22; border=&#x22;0&#x22;&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>I made a forum!</title>
