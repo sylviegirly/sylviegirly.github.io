@@ -115,6 +115,19 @@
                 box-sizing: border-box;
             }
 
+            .pollbox {
+                background-color: var(--body-deco);
+                border-radius: var(--border-radius);
+                padding: 7px;
+                margin-top: 10px;
+                height: 125px;
+                width: 100%;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                position: relative;
+            }
+
             #bearblog {
                 height: max-content;
                 background-color: var(--body-deco);
@@ -602,7 +615,29 @@
                                 alt="" />
                         </div>
                     </section>
-
+                    <!-- =============================================== -->
+                    <!-- ABOUT ME. -->
+                    <!-- =============================================== -->
+                    <section>
+                        <div class="two-columns">
+                            <div class="subtl">
+                                <p>
+                                    Also psst, you should check out the
+                                    <a href="https://treefort.boards.net/">Treefort Forums</a>, me and
+                                    <a href="https://joroki.neocities.org/">Joro</a> are running it as a very chill
+                                    indie place to hang out with peeps. 💚
+                                </p>
+                            </div>
+                            <div>
+                                <a href="https://treefort.boards.net/"
+                                    ><img
+                                        src="img/misc/header.png"
+                                        alt="A header for an indie web forum titled 'Treefort'"
+                                        loading="lazy"
+                                /></a>
+                            </div>
+                        </div>
+                    </section>
                     <!-- =============================================== -->
                     <!-- ABOUT ME. -->
                     <!-- =============================================== -->
@@ -784,7 +819,7 @@
                     <section aria-hidden="true">
                         <!-- HEADER -->
                         <h1>Monthly Poll</h1>
-                        <div class="talkingbox" style="height: 110px">
+                        <div class="pollbox" style="height: 120px">
                             <iframe
                                 src="https://sylviegirly.github.io/public/frames/polls.html"
                                 title="poll"
