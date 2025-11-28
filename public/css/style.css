@@ -44,7 +44,7 @@
     --h1-pixel-deco: url("../img/decos/Leaf.gif");
     --h4-pixel-deco: url("../img/decos/plant_bopping.gif");
 
-    --focus: red;
+    --focus: #007cb4;
 
     @media (prefers-color-scheme: dark) {
         /* HEADERS */
@@ -577,8 +577,7 @@ section li::marker {
 
 .inline-list li {
     display: inline;
-    line-height: 1.5em;
-    padding-left: 5px;
+    line-height: 1.2em;
 }
 
 .inline-list li:after {
