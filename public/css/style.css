@@ -583,6 +583,7 @@ section li::marker {
 .inline-list li:after {
     content: " •";
     margin-left: 5px;
+    margin-right: 5px;
     color: var(--secondary-accent);
 }
 
