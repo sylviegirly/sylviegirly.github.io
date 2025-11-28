@@ -13,175 +13,186 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
-        <title>to-do list</title>
+        <title>to-do</title>
 
         <!-- Author -->
         <meta name="author" content="Asuraid" />
 
         <!-- Site Description -->
-        <meta content="Personal to-do list for this website." name="description" />
+        <meta content="Site projects." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
 
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
 
-        <script src="js/header.js" defer></script>
-        <script src="js/left-sidebar.js" defer></script>
-        <script src="js/footer.js" defer></script>
-        <script src="js/tab-title-suffix.js"></script>
+        <!-- Page Only Javascript: -->
 
-        <script src="js/accessibility/disclosure-menu.iife.js"></script>
-        <!-- Disclosure Menu -->
-        <script src="js/accessibility/accessible-menu.js" type="module"></script>
+        <!-- Page Only Styling: -->
+        <style></style>
     </head>
-    <body id="body">
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
         <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
             <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
             <!-- =============================================== -->
             <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>To-Do List</h1>
-                    <blockquote>
-                        So I don't go insane from trying to remember what to do then getting overwhelmed, I'm just
-                        keeping a general to do list here.
-                    </blockquote>
-                    <h2>High/Immediate Priority Items</h2>
-                    <ul>
-                        <li>
-                            Finish media section on about page so it doesn't have crap just gathered at the bottom
-                            <ul>
-                                <li>
-                                    Find one more dang character to add to fave list so it's even (blanking out on every
-                                    character I liked ever)
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            UGHHHH uploading all of my art to the <a href="gallery.html">gallery</a>, definitely a
-                            long-term goal
-                            <ul>
-                                <li>which also means converting all of it to WEBP cause filegarden keeps going down</li>
-                            </ul>
-                        </li>
-                        <li>FINISH UPDATING UR NEONEIGHBOURS AUGHH (aka finish the spreadsheet i was working on)</li>
-                    </ul>
-
-                    <h2>Middling Priority Items / Sooner if Possible</h2>
-                    <ul>
-                        <li>Continue work on recipes that are greyed out</li>
-                        <li>
-                            Reorganize nav ...? Might move recipes under articles, maybe add microblog to list instead
-                        </li>
-                        <li>Add a 'back to top' for gallery page</li>
-                        <li>Add maybe a 'jump to media' section for each tab in media log</li>
-                        <li>Do the same for OCs to jump to sections?</li>
-                        <li>Organize <s>webrings</s> / cliques on about page</li>
-                        <li>
-                            Change more of Yadyra's images to WEBP
-                            <ul>
-                                <li>
-                                    Might need to move some to my art gallery and use the file path to there instead
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h2>Low Priority Items / Ideas</h2>
-                    <ul>
-                        <li>Finish adding font-awesome icons to other OC pages for nav</li>
-                        <li>Add float classes to images in OC abouts so they're mobile responsive</li>
-                        <li>Add more quotes to Sylvie's quote list</li>
-                        <li>
-                            Layout options for other shrines:
-                            <ul>
-                                <li><a href="https://kalechips.net/projects/layouts/">Panorama</a> for Dragon Age 2</li>
-                                <li>
-                                    <a href="https://eggramen.neocities.org/code/css_testpages#jade-2">Jade 2</a>
-                                    for Elsword
-                                </li>
-                                <li>
-                                    I actually might just remake the flight rising homepage for my flight rising shrine
-                                    ... shouldn't be too hard
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Try to fix the weirdness of the nav bar colours on OC pages (inconsistent)</li>
-                        <li>Continue updating picrews on about page</li>
-                        <li>
-                            Write out Sylvie's relationships with other Genshin canons
-                            <ul>
-                                <li>Nahida</li>
-                                <li>Xiao</li>
-                                <li>Hu Tao</li>
-                                <li>Venti</li>
-                                <li>Yae Miko</li>
-                                <li>Arataki Itto</li>
-                                <li>Cloud Retainer</li>
-                            </ul>
-                        </li>
-                        <li>Inspiration list for Sylvie so I don't forget (trust me I'm stupid)</li>
-                    </ul>
-                    <details>
-                        <summary>Short list for my own sake</summary>
+                    <section aria-labelledby="to-do">
+                        <h1 id="to-do">To-Do List</h1>
+                        <blockquote>
+                            So I don't go insane from trying to remember what to do then getting overwhelmed, I'm just
+                            keeping a general to do list here.
+                        </blockquote>
+                        <h2>Temporary to do for revamp</h2>
                         <ul>
-                            <li>Dorian Pavus (DAI)</li>
-                            <li>Alistair (DAO)</li>
-                            <li>Chrom (FE:A)</li>
-                            <li>SCP-682 (regen abilities)</li>
-                            <li>Varric (DA2)</li>
-                            <li>Xie Lian (TGCF)</li>
-                            <li>Bayonetta</li>
-                            <li>Galo Thymos (Promare)</li>
-                            <li>Phoenix Wright (Ace Attorney)</li>
-                            <li>What We Do in the Shadows (show)</li>
-                            <li>Parasyte (show)</li>
-                            <li>Kisuke Urahara (Bleach)</li>
-                            <li>... list will continue expanding, my memory sucks LOL</li>
+                            <li>Get back to adding sidebar images</li>
                         </ul>
-                    </details>
+                        <h2>High/Immediate Priority Items</h2>
+                        <ul>
+                            <li>
+                                Finish media section on about page so it doesn't have crap just gathered at the bottom
+                                <ul>
+                                    <li>
+                                        Find one more dang character to add to fave list so it's even (blanking out on
+                                        every character I liked ever)
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                UGHHHH uploading all of my art to the <a href="gallery.html">gallery</a>, definitely a
+                                long-term goal
+                                <ul>
+                                    <li>
+                                        which also means converting all of it to WEBP cause filegarden keeps going down
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                FINISH UPDATING UR NEONEIGHBOURS AUGHH (aka finish the spreadsheet i was working on)
+                            </li>
+                        </ul>
+
+                        <h2>Middling Priority Items / Sooner if Possible</h2>
+                        <ul>
+                            <li>Continue work on recipes that are greyed out</li>
+                            <li>Add a 'back to top' for gallery page</li>
+                            <li>Do the same for OCs to jump to sections?</li>
+                            <li>Organize <s>webrings</s> / cliques on about page</li>
+                            <li>
+                                Change more of Yadyra's images to WEBP
+                                <ul>
+                                    <li>
+                                        Might need to move some to my art gallery and use the file path to there instead
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Orb pondering to update my OC page coding ... later issues ...</li>
+                        </ul>
+                        <h2>Low Priority Items / Ideas</h2>
+                        <ul>
+                            <li>Finish adding font-awesome icons to other OC pages for nav</li>
+                            <li>Add float classes to images in OC abouts so they're mobile responsive</li>
+                            <li>Add more quotes to Sylvie's quote list</li>
+                            <li>
+                                Layout options for other shrines:
+                                <ul>
+                                    <li>
+                                        <a href="https://kalechips.net/projects/layouts/">Panorama</a> for Dragon Age 2
+                                    </li>
+                                    <li>
+                                        <a href="https://eggramen.neocities.org/code/css_testpages#jade-2">Jade 2</a>
+                                        for Elsword
+                                    </li>
+                                    <li>
+                                        I actually might just remake the flight rising homepage for my flight rising
+                                        shrine ... shouldn't be too hard
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Try to fix the weirdness of the nav bar colours on OC pages (inconsistent)</li>
+                            <li>Continue updating picrews on about page</li>
+                            <li>
+                                Write out Sylvie's relationships with other Genshin canons
+                                <ul>
+                                    <li>Nahida</li>
+                                    <li>Xiao</li>
+                                    <li>Hu Tao</li>
+                                    <li>Venti</li>
+                                    <li>Yae Miko</li>
+                                    <li>Arataki Itto</li>
+                                    <li>Cloud Retainer</li>
+                                </ul>
+                            </li>
+                            <li>Inspiration list for Sylvie so I don't forget (trust me I'm stupid)</li>
+                        </ul>
+                        <details>
+                            <summary>Short list for my own sake</summary>
+                            <ul>
+                                <li>Dorian Pavus (DAI)</li>
+                                <li>Alistair (DAO)</li>
+                                <li>Chrom (FE:A)</li>
+                                <li>SCP-682 (regen abilities)</li>
+                                <li>Varric (DA2)</li>
+                                <li>Xie Lian (TGCF)</li>
+                                <li>Bayonetta</li>
+                                <li>Galo Thymos (Promare)</li>
+                                <li>Phoenix Wright (Ace Attorney)</li>
+                                <li>What We Do in the Shadows (show)</li>
+                                <li>Parasyte (show)</li>
+                                <li>Kisuke Urahara (Bleach)</li>
+                                <li>... list will continue expanding, my memory sucks LOL</li>
+                            </ul>
+                        </details>
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
+
+        <!-- PAGE ONLY SCRIPTS -->
     </body>
 </html>

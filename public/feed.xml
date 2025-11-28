@@ -12,6 +12,26 @@
     <updated>2025-11-17T23:27:05-05:00</updated>
 
     <entry>
+        <title>Site Re-gutting ... complete?</title>
+        <link href="https://zhongvie.neocities.org" />
+        <updated>2025-11-17T23:27:05-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1763440025</id>
+        <content type="html">
+            &#x3C;p&#x3E;Oh god, there&#x27;s a lot to even keep track of ... I&#x27;ve been gutting my old code for my site for a while now, and I&#x26;nbsp;&#x3C;em&#x3E;think&#x3C;/em&#x3E; I&#x27;m done with it ... I&#x27;m sure there&#x27;ll be a lot of broken links or fucked up images I need to fix, but I&#x27;ll hammer at those over time slowly.&#x3C;/p&#x3E;
+&#x3C;p&#x3E;To vaguely summarize:&#x3C;/p&#x3E;
+&#x3C;ul&#x3E;
+&#x3C;li&#x3E;Implemented a site-wide GIF toggle, it doesn&#x27;t quite work on everything, but I&#x27;ll hammer those parts out slowly&#x3C;/li&#x3E;
+&#x3C;li&#x3E;Rearranged the location of some stuff on the index&#x3C;/li&#x3E;
+&#x3C;li&#x3E;Added as much screen reader support as I could on various pages (about me, etc), but it&#x27;s not perfect&#x3C;/li&#x3E;
+&#x3C;li&#x3E;Moved toybox into articles&#x3C;/li&#x3E;
+&#x3C;li&#x3E;Updated my website unpacking in articles to fit this new site&#x3C;/li&#x3E;
+&#x3C;li&#x3E;Cleaned up some mobile code, but not too much&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+&#x3C;p&#x3E;... I&#x27;m sure I did other stuff I&#x27;m forgetting, but this was like a 2-3 week haze, I dunno when I started this.&#x3C;/p&#x3E;
+        </content>
+    </entry>
+
+    <entry>
         <title>New template!</title>
         <link href="https://zhongvie.neocities.org/templates" />
         <updated>2025-11-17T23:27:05-05:00</updated>

@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    -->
+    <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
+
+        <!-- Site Title -->
+        <title>Title</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="Description." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
+
+        <!-- CSS: -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
+
+        <!-- JavaScript: -->
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
+
+        <!-- Page Only Javascript: -->
+
+        <!-- Page Only Styling: -->
+        <style>
+            .oc-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                align-items: flex-start;
+            }
+
+            /* Items */
+            .oc-gallery div {
+                margin: 5px;
+                box-sizing: border-box;
+                width: calc(25% - 10px);
+                position: relative;
+            }
+
+            /* Images */
+            .oc-gallery img {
+                width: 100%;
+                max-height: 180px;
+                border: 5px solid var(--primary-accent);
+                border-radius: var(--border-radius);
+                object-fit: cover;
+                transition: 0.5s;
+                aspect-ratio: 1/1 !important;
+            }
+
+            .oc-gallery p {
+                text-align: center;
+            }
+
+            .oc-gallery .name {
+                width: 100%;
+                border-radius: var(--border-radius);
+                margin: auto;
+                background-color: var(--primary-accent);
+                color: var(--font-on-accent);
+                z-index: 5;
+                padding: 5px 10px;
+                margin-top: 10px;
+            }
+
+            .oc-gallery a .name {
+                text-decoration: none;
+                transition: 0.5s;
+            }
+
+            .oc-gallery a .name:hover {
+                background-color: var(--secondary-accent);
+            }
+
+            .oc-gallery .pronoun {
+                font-size: 0.9em;
+            }
+
+            /* Images on Hover */
+            .oc-gallery img:hover {
+                border: 5px solid var(--secondary-accent);
+                filter: none;
+                -webkit-filter: grayscale(50%);
+                -moz-filter: grayscale(50%);
+                -ms-filter: grayscale(50%);
+                -o-filter: grayscale(50%);
+            }
+
+            @media screen and (max-width: 800px) {
+                .oc-gallery div {
+                    width: calc(33% - 10px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
+            <main id="content">
+                <article>
+                    <section>
+                        <h1>Character Lists</h1>
+                        <div style="text-align: center; margin-bottom: 10px; margin-top: 15px">
+                            <p>
+                                My main beloved blorbos who will have the most details written out for their characters.
+                                Khaliun isn't there yet in terms of <u>details</u>, but he's my beloved
+                                <span class="tippy" data-tippy-content="Warrior of Light">WoL</span> for
+                                <span class="tippy" data-tippy-content="Final Fantasy 14">FFXIV</span> so he gets a
+                                special spot here.
+                            </p>
+                        </div>
+                        <div class="oc-gallery">
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="sylvie/index.html">
+                                    <img
+                                        src="sylvie/img/gallery_5_thumb.jpg"
+                                        alt="Sylvie, an original character for Genshin Impact"
+                                        loading="lazy"
+                                /></a>
+                                <div class="name">
+                                    <p>Sylvie<br /><span class="pronoun">(they/she)</span></p>
+                                </div>
+                                <p>A nature god from the Genshin World. Silly n goofy to cope with it all.</p>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="yadyra/index.html">
+                                    <img
+                                        src="yadyra/img/gallery_3_thumb.jpg"
+                                        alt="Yadyra, an eldritch original character"
+                                        loading="lazy"
+                                /></a>
+                                <div class="name">
+                                    <p>Yadyra<br /><span class="pronoun">(he/him)</span></p>
+                                </div>
+                                <p>Old guy who breaks the 4th wall and is very tired. Backrooms enjoyer.</p>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="nameless/index.html">
+                                    <img
+                                        src="nameless/img/gallery_thumb_3.jpg"
+                                        alt="Nameless, a demon original character"
+                                        loading="lazy"
+                                /></a>
+                                <div class="name">
+                                    <p>Nameless<br /><span class="pronoun">(he/him)</span></p>
+                                </div>
+                                <p>
+                                    Demon king with a sharp tongue and honestly ... who is kinda too lazy for his own
+                                    good.
+                                </p>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="khaliun/index.html">
+                                    <img
+                                        src="khaliun/img/thumbnail.jpg"
+                                        alt="Khaliun Khatayin, a final fantasy 14 warrior of light"
+                                        loading="lazy"
+                                /></a>
+                                <div class="name">
+                                    <p>Khaliun K.<br /><span class="pronoun">(he/him)</span></p>
+                                </div>
+                                <p>FFXIV WoL, though he's just a lizard guy from the Azim Steppe.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div style="text-align: center; margin-bottom: 10px">
+                            <h2>Other OCs</h2>
+                            <p>
+                                Other OCs who more than likely are <u>retired</u> at this point, so I'm not actively
+                                making or commissioning stuff for them, but I still adore. <u>Hideki</u> was my longest
+                                standing OC until Sylvie knocked in, so his profile is quite detailed, and
+                                <u>Resu</u> was my oldest OC before that and still my beloved Bleach baby. 💖
+                            </p>
+                        </div>
+                        <div class="oc-gallery">
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="hideki/index.html">
+                                    <img
+                                        src="hideki/img/thumbnail.jpg"
+                                        alt="Hideki, a human with white hair, red eyes, and freckles"
+                                        loading="lazy"
+                                /></a>
+                                <div class="name">
+                                    <p>Hideki A. Hamasaki<br /><span class="pronoun">(he/him)</span></p>
+                                </div>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="raiden/index.html">
+                                    <img
+                                        src="raiden/img/thumbnail.jpg"
+                                        alt="Raiden, a human with black hair and grey eyes"
+                                        loading="lazy"
+                                /></a>
+                                <div class="name">
+                                    <p>Raiden Hamasaki<br /><span class="pronoun">(he/him)</span></p>
+                                </div>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="resu/index.html">
+                                    <img
+                                        src="resu/img/thumbnail.jpg"
+                                        alt="Resu, a Bleach original character with green eyes and brown hair"
+                                        loading="lazy"
+                                /></a>
+                                <div class="name">
+                                    <p>Resu Sosora<br /><span class="pronoun">(she/her)</span></p>
+                                </div>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="aries.html" style="cursor: not-allowed">
+                                    <img
+                                        src="../img/oc/aries/thumbnail.png"
+                                        alt="Aries, a non-human bird-shaped being"
+                                        loading="lazy"
+                                /></a>
+                                <div class="name">
+                                    <p>Aries Mythos<br /><span class="pronoun">(he/him)</span></p>
+                                </div>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="cotton/index.html">
+                                    <img
+                                        src="cotton/img/thumbnail.png"
+                                        alt="Cotton, a creature thing with a white, blue, and pink colour combo"
+                                        loading="lazy"
+                                /></a>
+                                <div class="name">
+                                    <p>Cotton<br /><span class="pronoun">(it/they)</span></p>
+                                </div>
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="james.html" style="cursor: not-allowed">
+                                    <img
+                                        src="../img/oc/james/thumbnail.jpg"
+                                        alt="James, a human with dirty blonde and brown hair, and freckles"
+                                        loading="lazy"
+                                /></a>
+                                <div class="name">
+                                    <p>James King<br /><span class="pronoun">(he/him)</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </main>
+        </div>
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
+        <general-footer></general-footer>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script src="/js/tippy-deco.js"></script>
+
+        <!-- PAGE ONLY SCRIPTS -->
+    </body>
+</html>

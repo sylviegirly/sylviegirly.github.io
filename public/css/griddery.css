@@ -37,22 +37,6 @@
     transition: 0.5s;
 }
 
-[griddery-item] a img:hover {
-    outline: 1px solid var(--secondary-accent);
-    outline-offset: -5px;
-}
-
-/*----- 🐶 DOGS GRID 🐶 -----*/
-/* dogs grid column spacing */
-[griddery-id=".minecraft"] [griddery-col] + [griddery-col] {
-    padding-left: 10px;
-}
-
-/* dogs grid "row" spacing */
-[griddery-id=".minecraft"] [griddery-item] + [griddery-item] {
-    margin-top: 3px;
-}
-
 /* everything below here is not necessary, it's just for the purpose of the demo. however,
  * you may consider following the rules I wrote for imgs so that they don't appear super huge. */
 

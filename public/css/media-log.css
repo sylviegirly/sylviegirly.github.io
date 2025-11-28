@@ -1,0 +1,302 @@
+@import "./style.css";
+
+/* page specific styling */
+.rating,
+.status,
+.nav-buttons-container {
+    flex: 1;
+}
+
+.status {
+    vertical-align: center;
+    align-content: center;
+}
+
+/* new pixel decoration */
+.new::after {
+    content: "";
+    background: url("../img/decos/new13.gif");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 13px;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+/* Style the tab */
+.nav-container {
+    display: flex;
+    align-content: center;
+    gap: 20px;
+}
+
+.nav-buttons-container {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    align-content: center;
+}
+
+/* Style the buttons that are used to open the tab content */
+.nav-buttons-container button {
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.nav-container button:hover {
+    border: none;
+    letter-spacing: 1px;
+}
+
+.nav-container button:focus {
+    box-shadow: inset 0 0 0 5px var(--link-colour);
+}
+
+/* Create an active/current tablink class */
+.nav-container button.active {
+    background-color: var(--secondary-accent);
+}
+
+.no-top-border {
+    border-top: none !important;
+    padding-top: 0 !important;
+}
+
+.media-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px dotted var(--secondary-accent);
+    border-top: 10px solid var(--primary-accent);
+}
+
+.media-container h3 {
+    background-color: var(--primary-accent);
+    color: var(--font-on-accent);
+    font-family: var(--header-font), sans-serif;
+    border-radius: var(--border-radius);
+    letter-spacing: 2px;
+    padding: 7px 10px;
+    margin: 13px 0;
+    margin-top: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: left;
+    border: none;
+}
+
+.media-image {
+    width: 200px;
+    flex-grow: 1;
+    flex: 1 0;
+}
+
+.media-image img {
+    width: 200px;
+    height: 283px;
+    object-fit: fit;
+    border-radius: var(--border-radius);
+    border: 4px solid var(--primary-accent);
+    text-align: center;
+    padding: 5px;
+}
+
+.media-image .padding {
+    display: block;
+    height: calc(100% - 288px);
+    width: 100%;
+    border: 1px solid var(--primary-accent);
+    border-radius: var(--border-radius);
+    opacity: 0.8;
+    background-size: 10px 10px;
+    background-image: repeating-linear-gradient(
+        45deg,
+        var(--primary-accent) 0,
+        var(--primary-accent) 1px,
+        transparent 0,
+        transparent 50%
+    );
+}
+
+.media-info {
+    flex: 3 0;
+}
+
+.media-info p {
+    padding-left: 10px;
+}
+
+.media-info b {
+    text-transform: uppercase;
+}
+
+.media-info p b {
+    padding-right: 5px;
+}
+
+.media-summary {
+    padding-bottom: 10px;
+}
+
+.media-summary summary {
+    color: var(--secondary-accent);
+    text-decoration: none;
+    font-style: italic;
+    padding: 5px;
+    margin-bottom: -5px;
+    cursor: pointer;
+}
+
+.media-summary details {
+    background-color: var(--article);
+    padding: 0;
+    margin: 0;
+    border-left: 0;
+}
+
+.mediaTab {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+blockquote:before {
+    position: relative;
+    font-family: Arial;
+    margin-top: 17px;
+    margin-left: 2px;
+    margin-right: 5px;
+    float: left;
+
+    content: "\201C";
+    font-size: 117px;
+    color: rgba(from var(--secondary-accent) r g b / 50%);
+}
+
+table.unstyledTable {
+    text-align: center;
+    width: 100%;
+    color: var(--text-colour);
+    font-family: "atkinson";
+}
+table.unstyledTable td,
+table.unstyledTable th {
+    background-blend-mode: lighten;
+}
+table.unstyledTable thead {
+    background: var(--article);
+}
+table.unstyledTable thead th {
+    font-weight: normal;
+}
+table.unstyledTable thead th:first-child {
+    border-left: none;
+}
+
+table.unstyledTable td {
+    width: 25%;
+    padding: 5px;
+}
+
+table.unstyledTable tfoot {
+    font-weight: bold;
+}
+
+table .grey {
+    background-color: rgba(211, 211, 211, 0.75);
+}
+
+table .purple {
+    background-color: rgba(222, 165, 239, 0.75);
+}
+
+table .blue {
+    background-color: rgba(173, 216, 230, 0.75);
+}
+
+table .green {
+    background-color: rgba(144, 238, 144, 0.75);
+}
+
+table .yellow {
+    background-color: rgba(244, 225, 117, 0.75);
+}
+
+table .orange {
+    background-color: rgba(242, 191, 96, 0.75);
+}
+
+table .red {
+    background-color: rgba(255, 109, 109, 0.75);
+}
+
+/* Dark Mode for table */
+@media (prefers-color-scheme: dark) {
+    table .grey {
+        background-color: rgba(89, 89, 89, 0.75);
+    }
+
+    table .purple {
+        background-color: rgba(115, 88, 123, 0.75);
+    }
+
+    table .blue {
+        background-color: #557580;
+    }
+
+    table .green {
+        background-color: #467c4a;
+    }
+
+    table .yellow {
+        background-color: #91691d;
+    }
+
+    table .orange {
+        background-color: #9a650f;
+    }
+
+    table .red {
+        background-color: rgba(231, 49, 49, 0.75);
+    }
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .media-container {
+        flex-direction: column;
+    }
+
+    .media-info {
+        flex: 2 1;
+        width: 100%;
+    }
+
+    .media-image {
+        height: 100%;
+        align-self: center;
+        margin-bottom: -20px;
+    }
+
+    .media-image .padding {
+        display: none;
+    }
+}

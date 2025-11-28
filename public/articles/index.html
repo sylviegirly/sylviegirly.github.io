@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    -->
+    <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
+
+        <!-- Site Title -->
+        <title>articles</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="Various miscellaneous pages." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
+
+        <!-- CSS: -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
+
+        <!-- JavaScript: -->
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
+
+        <!-- Page Only Javascript: -->
+
+        <!-- Page Only Styling: -->
+        <style></style>
+    </head>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
+            <main id="content">
+                <article>
+                    <section aria-labelledby="articles">
+                        <h1 id="articles">Articles</h1>
+                        <p>
+                            Various random pages that won't go underneath a specific nav header so it doesn't explode
+                            with too many things I'm doing ... some may be long term goals, other pages may hibernate
+                            for a long time until I return to them. Inspired from
+                            <a href="https://nanacore.neocities.org/articles/">nana's</a> article page layout.
+                        </p>
+                        <p>I'll ... I'll write nicer descriptions eventually ...</p>
+                        <hr />
+                        <p>
+                            <a href="food.html">Food Log</a><br />A collection of photos I took of what I've eaten over
+                            time; I like taking photos of food I made, or eat from restaurants, or from visiting other
+                            people.
+                        </p>
+                        <hr />
+                        <p>
+                            <a href="../listfauxgraphy/index.html">Listography</a><br />A listography page that's just a
+                            collection of various thoughts, links, and other small things. Will be updated infrequently.
+                        </p>
+                        <hr />
+                        <p>
+                            <a href="minecraft.html">Minecraft Forever World</a><br />As title says, a documentation of
+                            my forever world and how it's slowly shaping up over time. May have hibernation periods.
+                        </p>
+                        <hr />
+                        <p>
+                            <a href="toybox.html">Toybox</a><br />A collection of pixel adoptables/art I just wanted to
+                            show off!! All of them are linked to their original creators (minus the fc2web sozai, I
+                            dunno what they changed with the URLs ... they are linked to the original creators at
+                            least).
+                        </p>
+                        <hr />
+                        <p>
+                            <a href="sims-3-legacy.html">Sims 3 Legacy Challenge</a><br />Sims 3 legacy challenge in
+                            going through 10 different generations and trying to get as many points as possible for
+                            hitting certain thresholds/goals. May have hibernation periods.
+                        </p>
+                        <hr />
+                        <p>
+                            <a href="website.html">Site Breakdown</a><br />An unpacking of my site in an attempt to
+                            remember how it was made ... and perhaps, it may help others to understand it.
+                        </p>
+                    </section>
+                </article>
+            </main>
+        </div>
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
+        <general-footer></general-footer>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script src="/js/tippy-deco.js"></script>
+
+        <!-- PAGE ONLY SCRIPTS -->
+    </body>
+</html>

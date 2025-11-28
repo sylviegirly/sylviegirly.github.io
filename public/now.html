@@ -13,13 +13,16 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
         <title>now</title>
@@ -30,822 +33,889 @@
         <!-- Site Description -->
         <meta content="What am I currently up to?" name="description" />
 
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
+
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
 
-        <script src="js/header.js" defer></script>
-        <script src="js/left-sidebar.js" defer></script>
-        <script src="js/footer.js" defer></script>
-        <script src="js/tab-title-suffix.js"></script>
+        <!-- Page Only Javascript: -->
 
-        <script src="js/accessibility/disclosure-menu.iife.js"></script>
-        <!-- Disclosure Menu -->
-        <script src="js/accessibility/accessible-menu.js" type="module"></script>
+        <!-- Page Only Styling: -->
+        <style></style>
     </head>
-    <body id="body">
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
         <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
             <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
             <!-- =============================================== -->
             <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>Now / What Am I Up To?</h1>
-                    <p>
-                        I'm not very good at remembering what I've done across a span of time, so I will try my best to
-                        offer little updates of what's been going on in my life (maybe I'll even aim for a weekly or
-                        biweekly updates). Maybe I'll have a little archive later on of what's happened for my own sake.
-                        Inspired off
-                        <a href="https://bechnokid.neocities.org/now/">Bechno Kid's layout</a>! Curious to learn more
-                        about now pages? <a href="https://nownownow.com/about">Check this out!</a>
-                    </p>
-                    <blockquote><b>Last Updated:</b> November 5, 2025</blockquote>
-                    <h2>What's Been Going On?</h2>
-                    <ul>
-                        <li>
-                            Got to hang out with one of my classmates and we're gonna go to a pancake place tomorrow
-                            which is cool!!!
-                        </li>
-                        <li>
-                            My college wants to do a news segment on our project we did in December which is also pretty
-                            dang awesome
-                        </li>
-                        <li>Getting payment for contracts sucks ass (pulling teeth)</li>
-                        <li>
-                            Made my first HTML/CSS templates to share, and I've been trying to put my carrds for sale on
-                            VGen but it's a convoluted ass system (manually sharing access to people)
-                        </li>
-                    </ul>
-                    <h2>Games</h2>
-                    <ul>
-                        <li>
-                            <a href="https://store.steampowered.com/app/2592160/Dispatch/">Dispatch</a> episodes 5 and 6
-                            came out today and <u>I NEED MOR I NEED MORE I NEEDDHHRHRHGHG</u> IT'S SO GOOD IM ON MY
-                            HANDS AND KNEES TO KNOW HOW IT ENDS GOTY FOR ME 10/10 HUMOUR IS FUNNY AS FUCK LOVE
-                            EVERYONE!!!! (I don't like all the romantic implications of stuff cause I ain't here to date
-                            I got a JOB to do)
-                        </li>
-                        <li>Silent Salt and White Lily legendary skins in CRK are MINE MAUAHAUAHAUA</li>
-                        <li>
-                            Finished HSR's 3.7 story last night and I won't lie, it got some ugly tears out of me at the
-                            end. To the wildass shippers, no this is a platonic story about love (half joking but I'm
-                            also half dreading the male trailblazer self-insert het freaks rising out of the woodworks
-                            over Cyrene)
-                        </li>
-                    </ul>
-                    <h2>Watching / Reading</h2>
-                    <ul>
-                        <li>Finished Digital Circus rewatch and I'm excited for the next episode in December</li>
-                        <li>I've ... not been reading much to be fair 😰</li>
-                    </ul>
-                </article>
-                <article>
-                    <details>
-                        <summary>Older Logs</summary>
+                    <section aria-label="currently happening">
+                        <h1>Now / What Am I Up To?</h1>
+                        <p>
+                            I'm not very good at remembering what I've done across a span of time, so I will try my best
+                            to offer little updates of what's been going on in my life (maybe I'll even aim for a weekly
+                            or biweekly updates). Maybe I'll have a little archive later on of what's happened for my
+                            own sake. Inspired off
+                            <a href="https://bechnokid.neocities.org/now/">Bechno Kid's layout</a>! Curious to learn
+                            more about now pages? <a href="https://nownownow.com/about">Check this out!</a>
+                        </p>
+                        <blockquote><b>Last Updated:</b> November 27, 2025</blockquote>
+                        <h2>What's Been Going On?</h2>
+                        <ul>
+                            <li>
+                                Finally began work on my contract, I definitely over-estimated it taking me a month ...
+                                ish ... my focus is really kicking my ass right now when I'm also violently bouncing
+                                between wanting to work on my site, or do Minecraft
+                            </li>
+                            <li>
+                                Doing that lil news segment for our school project soon ... classmate is also coming to
+                                lunch w/family this weekend, so that's cool
+                            </li>
+                            <li>
+                                My mini walking treadmill came in and its <b>so</b> nice to be able to walk inside while
+                                just having a video playing
+                            </li>
+                            <li>
+                                Ended up making two more <a href="templates/index.html">templates</a> since I released
+                                my very first one
+                            </li>
+                            <li>
+                                Site rehaul!! By the time this comes out though, it'll probably already be past this
+                                date LOL ... I'm waiting to push everything right now. I would like to do a code
+                                refactor for my OC pages soon enough, plus I have some changes I want to finish putting
+                                in
+                                <ul>
+                                    <li>
+                                        I subsequently updated my
+                                        <a href="articles/website.html">website breakdown</a> due to it
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2>Games</h2>
+                        <ul>
+                            <li>
+                                Back in the <a href="articles/minecraft.html">Minecraft</a> trenches, I caved to get
+                                shader packs because they make it look nicer
+                            </li>
+                            <li>Not much else, been mostly focused on Minecraft, coding, or Warframe with my friend</li>
+                            <li>She did buy Vampire Survivors so looking forwards to more co-op runs with that</li>
+                        </ul>
+                        <h2>Watching / Reading</h2>
+                        <ul>
+                            <li>Following the Twisted Wonderland anime, didn't expect it'd be a fun and light romp</li>
+                            <li>Finished Arcane S1, but still partially only through S2</li>
+                        </ul>
+                    </section>
+                    <section aria-hidden="true">
                         <details>
-                            <summary>October 20, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    Finally got my contract work set up, now I'm gritting my teeth for my bank to
-                                    finally open my business account so I can get to work!!!! 😡
-                                </li>
-                                <li>
-                                    Kinda been a blur ... mostly focused on editing my friend's book and doing the cover
-                                    work for it
-                                </li>
-                                <li>
-                                    Learned about the concept of a
-                                    <a href="https://winreyplace.neocities.org/library/what-is-munbonding-03-04-2025"
-                                        >munbond</a
-                                    >, and although I am still a bit hesitant to use it, it is what describes what I
-                                    have with Sylvie perfectly (they are like a brain companion to me that's very alive
-                                    on their own/reactive without my input)
-                                </li>
-                                <li>
-                                    I made a
-                                    <a href="https://www.pillowfort.social/sylviegirly">personal pillowfort</a> account
-                                    as well, and I'm just trying to yap there more ... but I gotta learn to balance out
-                                    with interacting on my art account too
-                                </li>
-                                <li>
-                                    I gotta get back to journaling ... last week was a bad blur, so I don't think I've
-                                    written anything down
-                                </li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>
-                                    Sighs Cookie Run Kingdom got me in its clutches again ... to be fair, finding out
-                                    you can 'bank' and hide your production buildings has been a literal godsend and got
-                                    me back into it
-                                    <ul>
-                                        <li>Ended up getting all the current Beast cookies too LOL</li>
-                                        <li>
-                                            I mostly came back for Millennial Tree in December because Millennial Tree
-                                            is the literal
-                                            <a href="shrines/zhongvie.html">Zhongvie</a> lovechild
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <h2>Watching / Reading</h2>
-                            <ul>
-                                <li>
-                                    Finished Castlevania: Nocturne and Apothecary Diaries rewatch, which has been
-                                    awesome
-                                </li>
-                                <li>Hoping to start Digital Circus soon</li>
-                                <li>
-                                    Got back into reading The Hollow Places by T. Kingfisher and I'm accumulating more
-                                    books I wanna read
-                                    <ul>
-                                        <li>
-                                            I found a 2002 edition of the first LOTR book from my mini library, and I
-                                            wanna read it before I return it back
-                                        </li>
-                                        <li>
-                                            Maybe for next year I can up my <i>5 books a year</i> to
-                                            <b>8 books a year</b> as a little goal
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <summary>Older Logs</summary>
+                            <details>
+                                <summary>November 5, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        Got to hang out with one of my classmates and we're gonna go to a pancake place
+                                        tomorrow which is cool!!!
+                                    </li>
+                                    <li>
+                                        My college wants to do a news segment on our project we did in December which is
+                                        also pretty dang awesome
+                                    </li>
+                                    <li>Getting payment for contracts sucks ass (pulling teeth)</li>
+                                    <li>
+                                        Made my first HTML/CSS templates to share, and I've been trying to put my carrds
+                                        for sale on VGen but it's a convoluted ass system (manually sharing access to
+                                        people)
+                                    </li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>
+                                        <a href="https://store.steampowered.com/app/2592160/Dispatch/">Dispatch</a>
+                                        episodes 5 and 6 came out today and
+                                        <u>I NEED MOR I NEED MORE I NEEDDHHRHRHGHG</u> IT'S SO GOOD IM ON MY HANDS AND
+                                        KNEES TO KNOW HOW IT ENDS GOTY FOR ME 10/10 HUMOUR IS FUNNY AS FUCK LOVE
+                                        EVERYONE!!!! (I don't like all the romantic implications of stuff cause I ain't
+                                        here to date I got a JOB to do)
+                                    </li>
+                                    <li>Silent Salt and White Lily legendary skins in CRK are MINE MAUAHAUAHAUA</li>
+                                    <li>
+                                        Finished HSR's 3.7 story last night and I won't lie, it got some ugly tears out
+                                        of me at the end. To the wildass shippers, no this is a platonic story about
+                                        love (half joking but I'm also half dreading the male trailblazer self-insert
+                                        het freaks rising out of the woodworks over Cyrene)
+                                    </li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>
+                                        Finished Digital Circus rewatch and I'm excited for the next episode in December
+                                    </li>
+                                    <li>I've ... not been reading much to be fair 😰</li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>October 20, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        Finally got my contract work set up, now I'm gritting my teeth for my bank to
+                                        finally open my business account so I can get to work!!!! 😡
+                                    </li>
+                                    <li>
+                                        Kinda been a blur ... mostly focused on editing my friend's book and doing the
+                                        cover work for it
+                                    </li>
+                                    <li>
+                                        Learned about the concept of a
+                                        <a
+                                            href="https://winreyplace.neocities.org/library/what-is-munbonding-03-04-2025"
+                                            >munbond</a
+                                        >, and although I am still a bit hesitant to use it, it is what describes what I
+                                        have with Sylvie perfectly (they are like a brain companion to me that's very
+                                        alive on their own/reactive without my input)
+                                    </li>
+                                    <li>
+                                        I made a
+                                        <a href="https://www.pillowfort.social/sylviegirly">personal pillowfort</a>
+                                        account as well, and I'm just trying to yap there more ... but I gotta learn to
+                                        balance out with interacting on my art account too
+                                    </li>
+                                    <li>
+                                        I gotta get back to journaling ... last week was a bad blur, so I don't think
+                                        I've written anything down
+                                    </li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>
+                                        Sighs Cookie Run Kingdom got me in its clutches again ... to be fair, finding
+                                        out you can 'bank' and hide your production buildings has been a literal godsend
+                                        and got me back into it
+                                        <ul>
+                                            <li>Ended up getting all the current Beast cookies too LOL</li>
+                                            <li>
+                                                I mostly came back for Millennial Tree in December because Millennial
+                                                Tree is the literal
+                                                <a href="shrines/zhongvie.html">Zhongvie</a> lovechild
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>
+                                        Finished Castlevania: Nocturne and Apothecary Diaries rewatch, which has been
+                                        awesome
+                                    </li>
+                                    <li>Hoping to start Digital Circus soon</li>
+                                    <li>
+                                        Got back into reading The Hollow Places by T. Kingfisher and I'm accumulating
+                                        more books I wanna read
+                                        <ul>
+                                            <li>
+                                                I found a 2002 edition of the first LOTR book from my mini library, and
+                                                I wanna read it before I return it back
+                                            </li>
+                                            <li>
+                                                Maybe for next year I can up my <i>5 books a year</i> to
+                                                <b>8 books a year</b> as a little goal
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>October 6, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        Most of my commissions are done; I wanna open them back up again but I'm still
+                                        in the void if my contract is going through or not for development
+                                    </li>
+                                    <li>
+                                        Been mostly doing small things on the website and maybe considering moving OC
+                                        galleries over ... though space will be an issue
+                                    </li>
+                                    <li>
+                                        I've been settling into
+                                        <a href="https://www.pillowfort.social/asuraid">Pillowfort</a> more, it's comfy
+                                        as a social media site and slow in a way that makes it nice to keep up with
+                                        everything
+                                        <ul>
+                                            <li>
+                                                Officially flying the demigirl flag on there ... I'm still kinda
+                                                conflicted on using it when I still also ID as cis, but it might just
+                                                need some time. Demigirl to me is 'I am a girl, <i>I guess</i>' cause
+                                                I'm not very connected to it
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>
+                                        Got into Hades II again since the 1.0 release is live (I did play during early
+                                        access, but I wanted to have the full story)
+                                    </li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>
+                                        Finished the Captive Prince trilogy in full, hopefully I can write up a small
+                                        review on it when I get a chance (for my media page)
+                                    </li>
+                                    <li>
+                                        Back to Castlevania: Nocturne and I'm rewatching the Apothecary Diaries
+                                        alongside my friend who hasn't seen it yet (hoping for Digital Circus rewatching
+                                        eventually too)
+                                    </li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>September 21, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        I'm working on a custom carrd website commission and I'm super excited about
+                                        it!!
+                                    </li>
+                                    <li>
+                                        Next week is a meeting talking about some contract work I'm doing as a Unity
+                                        developer and it's a little scary to consider; although I know C# and Unity
+                                        cause I've been working with both for 7+ years, I'd never consider myself a
+                                        professional coder or developer ... so to have a contract job centric around it
+                                        does make me anxious
+                                    </li>
+                                    <li>
+                                        I got back into using
+                                        <a href="https://store.steampowered.com/app/2113850/Spirit_City_Lofi_Sessions/"
+                                            >Spirit City</a
+                                        >
+                                        again for focusing on things, or just having some background movement while I'm
+                                        watching a video; highly recommend it for people who want a feeling of a body
+                                        double/ambiance noise and built in tools like a pomodoro timer, to-do list, etc
+                                        <ul>
+                                            <li>
+                                                I still like using
+                                                <a href="https://pony.town/">PonyTown</a> for focusing, but when you're
+                                                alone on it and people are huddled in their friend groups, it does get a
+                                                little lonely
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>Still deep in Warframe hell ...</li>
+                                    <li>
+                                        Been focused on exploring the new Nod Krai region in Genshin, but I think
+                                        burnout from massively farming primos to pull Lauma is catching up to me
+                                    </li>
+                                    <li>
+                                        Playing Cookie Run Ovenbreak on and off as my night unwinding (what the hell are
+                                        people on for random breakouts, I can't even keep up with their scores...)
+                                    </li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>
+                                        Finished the 2nd Captive Prince book, gonna start the last one soon ... going to
+                                        try giving The Hollow Places another read again on my own
+                                        <ul>
+                                            <li>
+                                                I tend to buddy read with my bestie, cause it helps me keep up with
+                                                reading, but I want a book series to read on my own at my own pace again
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Found a cool article talking about the practice of
+                                        <a
+                                            href="https://www.megan-rhiannon.com/gloomy-archive/2024/3/26/on-commonplacing"
+                                            >commonplacing</a
+                                        >
+                                        since I was pondering what my Obsidian vault is ... and it's a weird collection
+                                        of what I learn more than anything
+                                    </li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>September 3, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        I finally opened up commissions again after so long ... it's weird, I have art
+                                        burnout for my own artwork, but for commissions I can push through it (obviously
+                                        it's money as a factor, but still)
+                                    </li>
+                                    <li>
+                                        With school being done, I've kinda just been recovering and trying to sort out
+                                        the contract work I'm aiming for at the moment
+                                    </li>
+                                    <li>Walking again properly and being able to have time to myself is nice ...</li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>
+                                        Warfame has gripped me violently back into its grasp alongside my bestie, and
+                                        its drowned out whatever other games I was doing right now (Oberon rework please
+                                        please please come sooner please)
+                                    </li>
+                                    <li>
+                                        I began a sims 3 legacy challenge which I'm documenting
+                                        <a href="sims-3-legacy.html">here</a> on a page
+                                    </li>
+                                    <li>
+                                        Also began replaying the Age of Mythology campaign again cause that game lives
+                                        stupidly rent free in my brain
+                                    </li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>
+                                        Same as last time:
+                                        <a
+                                            href="https://myanimelist.net/anime/59421/Zutaboro_Reijou_wa_Ane_no_Moto_Konyakusha_ni_Dekiai_sareru"
+                                            >Betrothed to My Sister's Ex</a
+                                        >, the new
+                                        <a
+                                            href="https://myanimelist.net/anime/52293/New_Panty___Stocking_with_Garterbelt"
+                                            >Panty and Stocking with Garterbelt</a
+                                        >, and
+                                        <a href="https://myanimelist.net/anime.php?id=58913">The Summer Hikaru Died</a>
+                                    </li>
+                                    <li>
+                                        Currently reading the second Captive Prince book, and I've been moving my
+                                        reading list over to Storygraph instead of Good Reads
+                                    </li>
+                                    <li>
+                                        Found the Romanian versions of The Witcher book series so I'm gonna give that a
+                                        shot to try to keep up with reading my own mother tongue
+                                    </li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>August 15, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        Finished my post-grad last class today!! We still have a showcase to show our
+                                        final group VR project, so I'm not fully done, but in terms of projects and
+                                        assignments it's all over
+                                    </li>
+                                    <li>
+                                        My ... computer got stuck in a blue screen loop and it forced me to reinstall
+                                        windows ... and I overwrote the wrong partition, so I lost a lot of my personal
+                                        projects and original art files (CSP files anyway). Thankfully a lot isn't lost
+                                        because it's scattered in other places, but things like my RPG Maker game to
+                                        promote my friend's book and other Unity game projects are gone
+                                    </li>
+                                    <li>
+                                        I bought myself a celebratory dinosaur plushie to celebrate graduating (again)
+                                        :) Maybe I'll drop him off in my blog
+                                    </li>
+                                    <li>
+                                        Beginning to work again on my Brick Breaker game that got nuked with my laptop,
+                                        and I'm trying to keep a project log on Obsidian rather than Notion
+                                    </li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>
+                                        Gonna play OFF tonight!! It was gifted to me by my friend who's been wanting me
+                                        to play it, and the remaster/remake would be perfect to get into it
+                                    </li>
+                                    <li>
+                                        Still into Palia after visiting my IRL friend since she and her fiance play it,
+                                        so I get to see them online and wave to them too. Been making good progress to
+                                        get a profitable farm and become a fishing master
+                                    </li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>May be beginning to read the Captive Prince series soon alongside my friend</li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>July 27, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        I didn't even realize how quickly the time passed, it's almost August now ...
+                                        last 3 weeks of school to chug through, and it's over
+                                    </li>
+                                    <li>
+                                        I visited my IRL friend just yesterday and slept over at her place!! It was
+                                        really nice to see her again, considering it's been <i>years</i>, but we get
+                                        along really well. Her fiance cooked us all dinner :]
+                                    </li>
+                                    <li>
+                                        I began working on a Genshin wiki in Obsidian and it's been fun to create built
+                                        lists for all my characters so I know who I'm working on/what artifacts they
+                                        need. It does mean my focus is a little drawn away from here though
+                                    </li>
+                                    <li>
+                                        Got up to 2016 in my art gallery, though I kinda burned out a bit; 2016 is going
+                                        to have the most art to list for now, so I'm not mentally prepared yet to sit
+                                        through it
+                                    </li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>
+                                        Finished Deltarune CH 3 and 4 completely, and I need to update my media log for
+                                        that
+                                    </li>
+                                    <li>
+                                        Picked up playing Palia again while I was at my friend's, since she and her
+                                        fiance have been
+                                        <i>super</i> into it
+                                    </li>
+                                    <li>
+                                        Picked up playing Touhou 8: Imperishable Night and Need for Speed Most Wanted
+                                        again since those are childhood games to me
+                                    </li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>Nothing new from last time</li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>July 12, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        Blargh, back to school. Nothing of major note has been happening outside of
+                                        project work and annoyance with my career class that I do <i>not</i> need as
+                                        someone who's done resume and job applications before
+                                    </li>
+                                    <li>
+                                        I ... think I'm basically in on the one VR development opportunity I got
+                                        offered, though he did mention if work was to come, it'd be more in the fall
+                                    </li>
+                                    <li>
+                                        I've kinda gotten a hang of using Obsidian now to take down learning notes +
+                                        daily offloading of 'in the moment' thoughts
+                                    </li>
+                                    <li>
+                                        Progressing further with doing the little mini RPG Maker game for my friend's
+                                        book promo
+                                    </li>
+                                    <li>Mostly site work, made Sylvie's genshin game kit + made an art gallery</li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>Deltarune chapter 2 is being worked through slowly</li>
+                                    <li>
+                                        Pulled Phainon for HSR a few days ago (in like 30 whole pulls??? and without
+                                        guarantee???) so I've been building him slowly
+                                        <ul>
+                                            <li>
+                                                In terms of Genshin Impact, mostly been working on Skirk and getting her
+                                                to 90, as well as trying to get better artifacts for her
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Finally got a chance to make a new Spore account, though it was like pulling
+                                        teeth since I had to re-buy Galactic Adventures ... <b>again</b> ... I own these
+                                        games 3 times over now ... fucking hate EA Games
+                                    </li>
+                                    <li>
+                                        Started playing Imperishable Night (Touhou) again since it's what I grew up on
+                                        during high school, though I'm so out of practice ... annoying when easy is
+                                        <i>too</i> easy but the normal is too hard
+                                    </li>
+                                    <li>
+                                        Started a Rags to Riches challenge in Sims 4 using my Sylvie and Zhongli sims,
+                                        though I think I hit my burnout now that I'm at the point of a stable house +
+                                        needing to wait to save money
+                                    </li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>On a reading pause for now</li>
+                                    <li>
+                                        Watching a bunch of stuff though,
+                                        <a
+                                            href="https://myanimelist.net/anime/59421/Zutaboro_Reijou_wa_Ane_no_Moto_Konyakusha_ni_Dekiai_sareru"
+                                            >Betrothed to My Sister's Ex</a
+                                        >, the new
+                                        <a
+                                            href="https://myanimelist.net/anime/52293/New_Panty___Stocking_with_Garterbelt"
+                                            >Panty and Stocking with Garterbelt</a
+                                        >
+                                        + the original, and
+                                        <a href="https://myanimelist.net/anime.php?id=58913">The Summer Hikaru Died</a>
+                                    </li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>June 28, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        On the cusp of ending my school break ... the day before I went to a mixer for
+                                        my school, although I was invited as a guest (since it's a program for people
+                                        wanting to
+                                        <i>start</i> freelancing or start-up companies), I got to meet some really cool
+                                        people there including a fellow Genshin-er
+                                    </li>
+                                    <li>
+                                        Almost been doing journaling for a month straight!! Surprisingly the 'note a
+                                        single highlight of the day' has been working really well for me; I can just
+                                        leave it at that, or expand on it if I want to with no pressure. Sometimes I
+                                        miss weekends because there's no comfortable time to write alone, but that's ok
+                                    </li>
+                                    <li>
+                                        Began trying to learn <a href="https://godotengine.org/">Godot</a> following
+                                        <a href="https://www.youtube.com/watch?v=LOhfqjmasi0">Brackey's</a>
+                                        tutorial, though I'm only like 20 minutes in because I'm trying to note things
+                                        down
+                                    </li>
+                                    <li>
+                                        I may ... ? Have found some job opportunity ... ? Or well, my teacher
+                                        recommended me to someone, although it's for programming, it's in Unity which
+                                        I'm very familiar with. I'm not too sure of the details, but I already signed an
+                                        NDA and got sent the software to work with so ... ? It's only
+                                        freelancing/contract work for now and gathering a pool of talent, but who is to
+                                        know about the future ...
+                                        <ul>
+                                            <li>
+                                                It's a little scary because I've never considered offering myself for
+                                                any developer/programming jobs; I know how to code in C#, but I'd never
+                                                consider myself confident enough to say I <u>know</u> it enough for a
+                                                job ... even though y'know, I <i>have</i> coded games in it
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        I think I'm getting a hang of using Obsidian, though mine is very boringly for
+                                        just noting down my learning in programs like Godot for stuff
+                                    </li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>
+                                        Finally finished with Undertale, and slowly going through Deltarune (I'm
+                                        streaming it for my friend, so it's when we have a chance to play)
+                                    </li>
+                                    <li>
+                                        Got gifted the entire Bioshock series (I already had 2, but the bundle included
+                                        the DLC), so I'm beginning to play the first Bioshock
+                                    </li>
+                                    <li>Got back into Bleach Brave Souls, though very casually (I miss my Ukitake)</li>
+                                    <li>
+                                        Downloaded Reverse 1999 and the new Persona 5 spinoff mobile game, though I
+                                        haven't dabbled much in either beyond half an hour (a bit more for Reverse 1999)
+                                    </li>
+                                    <li>Unlocked the room expansion in Neko Atsume 2 💖</li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>
+                                        Sadge, last episode of Apothecary Diaries season 2 next week ... at least I am
+                                        planning to dive into the novels eventually
+                                    </li>
+                                    <li>
+                                        Picked up <i>slowly</i> reading
+                                        <a href="https://myanimelist.net/manga/178639/The_Hounds_of_Sisyphus"
+                                            >The Hounds of Sisyphus</a
+                                        >
+                                        and god Pyo Guwon is so hot. Even if he ends up (maybe) being a black flag MC,
+                                        I'm all for manipulative murdery guys that don't resort to non-con (which is so
+                                        prevalent in manhwa/manga in general 💀) so um ... hopefully it won't go there
+                                    </li>
+                                    <li>
+                                        Still trying to get through
+                                        <a href="https://www.goodreads.com/book/show/50892288-the-hollow-places"
+                                            >The Hollow Places</a
+                                        >, but I think I'm on a bit of a burnout
+                                    </li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>June 11, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        Ughhh ughh ugh school assignment stuff UGH (I just have gotten rusty with doing
+                                        assignments so it's always like something looming over my skull); we have been
+                                        learning cool coding things though
+                                    </li>
+                                    <li>
+                                        Picked up journaling again, or I'm trying to anyway by keeping it simple and
+                                        doing a single highlight a day at the bare basic, and writing more only if I
+                                        need to. Honestly it's been nice, especially since I have a lot of stickers and
+                                        enjoy decorating the pages, though I'm trying my best to not get overwhelmed
+                                        <ul>
+                                            <li>
+                                                I found out all along I had a double sided tape roll from college that I
+                                                completely forgot about ... I've been trying to use glue sticks 🗿
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Picked up using <a href="https://obsidian.md/">Obsidian</a> to <i>try</i> to
+                                        keep notes of stuff I'm learning, especially for things like Unreal or Blender,
+                                        or when I decide to learn Blockbench modelling. It's hard because I tend to
+                                        watch/do rather than take notes of the process, which can bite me in the ass.
+                                        Heavily inspired from
+                                        <a href="https://www.youtube.com/watch?v=DRBXGOr6faU">JayTheDevGuy's video</a>
+                                        on it
+                                    </li>
+                                    <li>
+                                        Mostly just been focused on helping my friend with her author livelihood and
+                                        book editing for her
+                                    </li>
+                                    <li>
+                                        Site wise, it's mostly just been back-end stuff cause right now that's more
+                                        appealing to me than making new content. Creating my media log though has been
+                                        really cool
+                                    </li>
+                                    <li>
+                                        I'm trying to carry my 3DS around more with me to have as something to do that's
+                                        <u>not</u> on my phone
+                                    </li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>
+                                        Finished my coop Baldur's Gate 3 run and ... promptly uninstalled to free up
+                                        space; I'll return at some point to do Gale's run and finish my final few
+                                        achievements for 100%
+                                    </li>
+                                    <li>
+                                        Replaying Undertale (especially for my friend who never saw it played in full
+                                        before) in prep for Deltarune
+                                    </li>
+                                    <li>
+                                        Got back into Bleach: The 3rd Phantom on my 3DS which has been eating into my
+                                        life (good way)
+                                    </li>
+                                    <li>
+                                        Replayed Imperishable Night (Touhou) cause I grew up on playing this during high
+                                        school lunches
+                                    </li>
+                                    <li>
+                                        Been slowly going through the FFXIV ARR story with my friend since we have set
+                                        times for her to sit and play through while I'm there for moral support/body
+                                        doubling
+                                    </li>
+                                    <li>Found Elite Beat Agents again for my 3DS ... issue is it keeps crashing 🥲</li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>Waiting for Apothecary Diaries S2 releases</li>
+                                    <li>
+                                        Paused on
+                                        <a href="https://www.goodreads.com/book/show/54304124-laziness-does-not-exist"
+                                            >Laziness Does Not Exist</a
+                                        >
+                                        for now, though I'd still like to get back to it
+                                    </li>
+                                    <li>
+                                        Picked up reading
+                                        <a href="https://www.goodreads.com/book/show/50892288-the-hollow-places"
+                                            >The Hollow Places</a
+                                        >
+                                        and I see why T. Kingfisher's writing is really appealing to me now (simplicity,
+                                        humanness, it reads like how I think)
+                                    </li>
+                                    <li>
+                                        Finished
+                                        <a href="https://myanimelist.net/manga/149622/Qian_Qiu"
+                                            >Thousand Autumns / Quan Qiu</a
+                                        >
+                                        fully (minus the short stories, no real plans to read them anytime soon)
+                                    </li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>May 25, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        Approaching the fourth week of the semester, and we finally settled on a group
+                                        game we're doing for a charity that's teaching kids about African history and
+                                        culture, and we're going to make a cooking simulator teaching 1-2 cultural
+                                        relevant dishes; I'm really excited for it!! I do worry about some of the
+                                        classmates that aren't consistent with showing up, but because we're a full
+                                        group of 8, there's at least 5 of us who <b>are</b> consistent with work
+                                    </li>
+                                    <li>
+                                        I finally took the plunge to upload my old project
+                                        <a href="https://asuraid.itch.io/electrobit">Electrobit</a> fully on itch.io;
+                                        the version that was up was an <u>old</u> alpha version, but since the game has
+                                        been off the App Store for at least a few years now, I decided to add
+                                        <b>my</b> finalized version (which was different than what was uploaded)
+                                    </li>
+                                    <li>
+                                        The tomato plants in the nursery downstairs are <i>finally</i> going to be moved
+                                        out tomorrow or the next day, poor things grew so much that they're pushing
+                                        against the ultraviolet light but it's been far too cold to plant them
+                                    </li>
+                                    <li>
+                                        I've been making progress on my RPG Maker MZ game to help promo my friend's
+                                        book, and getting close to finishing the first edit of the book itself
+                                    </li>
+                                    <li>Ate homemade hamburgers for the first time in a few months :)</li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>
+                                        Still in FFXIV hell, I've been using my backloggd to keep a running track of
+                                        what progress I've done, considering I have a lot of mini projects to do
+                                        <ul>
+                                            <li>Finishing leveling RDM + associated quests</li>
+                                            <li>Bullying my friend lovingly to play more</li>
+                                            <li>
+                                                Making BiS gear for my gatherers and crafters
+                                                <ul>
+                                                    <li>
+                                                        Which means working on the Namazu society quests because
+                                                        Stormsap fucking sucks to desynth
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>Finishing all crafter storylines</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Approaching the end of my co-op OC run in BG3, we're in act 3 now and just
+                                        kicked Raphael's shit in
+                                    </li>
+                                    <li>
+                                        Replayed a bit of Animal Crossing Happy Home Designer on my jailbroken 3DS 🤣
+                                    </li>
+                                </ul>
+                                <h2>Watching / Reading</h2>
+                                <ul>
+                                    <li>
+                                        Still doing The Apothecary Diaries, did pick up one episode of
+                                        <a href="https://myanimelist.net/anime/59597/Witch_Watch">Witch Watch</a> which
+                                        is pretty funny so far
+                                    </li>
+                                    <li>
+                                        Halfway through reading
+                                        <a href="https://www.goodreads.com/book/show/54304124-laziness-does-not-exist"
+                                            >Laziness Does Not Exist</a
+                                        >
+                                        and it's really drilled in how society really pushes for people to be overworked
+                                        and punishing them for listening to their own mental health and bodily health. A
+                                        good read for some tips to try to break out of society's toxicity of punishing
+                                        'laziness'
+                                    </li>
+                                    <li>
+                                        Finished volume 4 of
+                                        <a href="https://myanimelist.net/manga/149622/Qian_Qiu"
+                                            >Thousand Autumns / Quan Qiu</a
+                                        >
+                                        and I'm <i>so</i> excited to get to the last volume
+                                    </li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>May 12, 2025</summary>
+                                <h2>What's Been Going On?</h2>
+                                <ul>
+                                    <li>
+                                        Starting my new semester ... last semester too, which makes me mildly worried
+                                        about all my courses and all the assignments that we need to do; I'm gonna try
+                                        to stay on top of them this time
+                                        <ul>
+                                            <li>
+                                                It doesn't help that halfway through the course we're swapping three
+                                                (three!) classes from online to in person ... we're probably gonna try
+                                                to complain about it since many of the students here travel by transport
+                                                and don't live in the city
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        With summer being here ... ish ... I've been going out on more walks and playing
+                                        more Pok&eacute;mon Go, which is nice
+                                    </li>
+                                    <li>
+                                        The seeds my grandma put in the nursery we borrowed have been growing super
+                                        well, though I had to rip one root that was reaching out to the other seeds
+                                    </li>
+                                    <li>
+                                        I got the books
+                                        <a href="https://jamesclear.com/atomic-habits">Atomic Habits</a> and&nbsp;<a
+                                            href="https://www.goodreads.com/book/show/54304124-laziness-does-not-exist"
+                                            >Laziness Does Not Exist</a
+                                        >
+                                        which I'm looking forwards to reading
+                                    </li>
+                                </ul>
+                                <h2>Games</h2>
+                                <ul>
+                                    <li>
+                                        I've gotten back into FFXIV which SIGHS ... now it's taken my attention away
+                                        from Minecraft, but it's ok. Got it to boot up on SteamDeck
+                                    </li>
+                                    <li>Still going through my co-op run and gale story run in Baldur's Gate 3</li>
+                                    <li>
+                                        I've been mostly working on updating my
+                                        <a href="https://backloggd.com/u/Asuraid/">Backloggd</a>
+                                    </li>
+                                </ul>
+                                <h2>Watching</h2>
+                                <ul>
+                                    <li>
+                                        Mostly been on a Minecraft YouTuber binge,
+                                        <a href="https://www.youtube.com/@AustMC">Aust</a> has been my comfort watch
+                                        when I go to bed
+                                    </li>
+                                    <li>
+                                        Finished with FMAB, still waiting for Apothecary Dairies to keep airing and
+                                        releasing
+                                    </li>
+                                </ul>
+                            </details>
                         </details>
-                        <details>
-                            <summary>October 6, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    Most of my commissions are done; I wanna open them back up again but I'm still in
-                                    the void if my contract is going through or not for development
-                                </li>
-                                <li>
-                                    Been mostly doing small things on the website and maybe considering moving OC
-                                    galleries over ... though space will be an issue
-                                </li>
-                                <li>
-                                    I've been settling into
-                                    <a href="https://www.pillowfort.social/asuraid">Pillowfort</a> more, it's comfy as a
-                                    social media site and slow in a way that makes it nice to keep up with everything
-                                    <ul>
-                                        <li>
-                                            Officially flying the demigirl flag on there ... I'm still kinda conflicted
-                                            on using it when I still also ID as cis, but it might just need some time.
-                                            Demigirl to me is 'I am a girl, <i>I guess</i>' cause I'm not very connected
-                                            to it
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>
-                                    Got into Hades II again since the 1.0 release is live (I did play during early
-                                    access, but I wanted to have the full story)
-                                </li>
-                            </ul>
-                            <h2>Watching / Reading</h2>
-                            <ul>
-                                <li>
-                                    Finished the Captive Prince trilogy in full, hopefully I can write up a small review
-                                    on it when I get a chance (for my media page)
-                                </li>
-                                <li>
-                                    Back to Castlevania: Nocturne and I'm rewatching the Apothecary Diaries alongside my
-                                    friend who hasn't seen it yet (hoping for Digital Circus rewatching eventually too)
-                                </li>
-                            </ul>
-                        </details>
-                        <details>
-                            <summary>September 21, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    I'm working on a custom carrd website commission and I'm super excited about it!!
-                                </li>
-                                <li>
-                                    Next week is a meeting talking about some contract work I'm doing as a Unity
-                                    developer and it's a little scary to consider; although I know C# and Unity cause
-                                    I've been working with both for 7+ years, I'd never consider myself a professional
-                                    coder or developer ... so to have a contract job centric around it does make me
-                                    anxious
-                                </li>
-                                <li>
-                                    I got back into using
-                                    <a href="https://store.steampowered.com/app/2113850/Spirit_City_Lofi_Sessions/"
-                                        >Spirit City</a
-                                    >
-                                    again for focusing on things, or just having some background movement while I'm
-                                    watching a video; highly recommend it for people who want a feeling of a body
-                                    double/ambiance noise and built in tools like a pomodoro timer, to-do list, etc
-                                    <ul>
-                                        <li>
-                                            I still like using
-                                            <a href="https://pony.town/">PonyTown</a> for focusing, but when you're
-                                            alone on it and people are huddled in their friend groups, it does get a
-                                            little lonely
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>Still deep in Warframe hell ...</li>
-                                <li>
-                                    Been focused on exploring the new Nod Krai region in Genshin, but I think burnout
-                                    from massively farming primos to pull Lauma is catching up to me
-                                </li>
-                                <li>
-                                    Playing Cookie Run Ovenbreak on and off as my night unwinding (what the hell are
-                                    people on for random breakouts, I can't even keep up with their scores...)
-                                </li>
-                            </ul>
-                            <h2>Watching / Reading</h2>
-                            <ul>
-                                <li>
-                                    Finished the 2nd Captive Prince book, gonna start the last one soon ... going to try
-                                    giving The Hollow Places another read again on my own
-                                    <ul>
-                                        <li>
-                                            I tend to buddy read with my bestie, cause it helps me keep up with reading,
-                                            but I want a book series to read on my own at my own pace again
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Found a cool article talking about the practice of
-                                    <a href="https://www.megan-rhiannon.com/gloomy-archive/2024/3/26/on-commonplacing"
-                                        >commonplacing</a
-                                    >
-                                    since I was pondering what my Obsidian vault is ... and it's a weird collection of
-                                    what I learn more than anything
-                                </li>
-                            </ul>
-                        </details>
-                        <details>
-                            <summary>September 3, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    I finally opened up commissions again after so long ... it's weird, I have art
-                                    burnout for my own artwork, but for commissions I can push through it (obviously
-                                    it's money as a factor, but still)
-                                </li>
-                                <li>
-                                    With school being done, I've kinda just been recovering and trying to sort out the
-                                    contract work I'm aiming for at the moment
-                                </li>
-                                <li>Walking again properly and being able to have time to myself is nice ...</li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>
-                                    Warfame has gripped me violently back into its grasp alongside my bestie, and its
-                                    drowned out whatever other games I was doing right now (Oberon rework please please
-                                    please come sooner please)
-                                </li>
-                                <li>
-                                    I began a sims 3 legacy challenge which I'm documenting
-                                    <a href="sims-3-legacy.html">here</a> on a page
-                                </li>
-                                <li>
-                                    Also began replaying the Age of Mythology campaign again cause that game lives
-                                    stupidly rent free in my brain
-                                </li>
-                            </ul>
-                            <h2>Watching / Reading</h2>
-                            <ul>
-                                <li>
-                                    Same as last time:
-                                    <a
-                                        href="https://myanimelist.net/anime/59421/Zutaboro_Reijou_wa_Ane_no_Moto_Konyakusha_ni_Dekiai_sareru"
-                                        >Betrothed to My Sister's Ex</a
-                                    >, the new
-                                    <a href="https://myanimelist.net/anime/52293/New_Panty___Stocking_with_Garterbelt"
-                                        >Panty and Stocking with Garterbelt</a
-                                    >, and
-                                    <a href="https://myanimelist.net/anime.php?id=58913">The Summer Hikaru Died</a>
-                                </li>
-                                <li>
-                                    Currently reading the second Captive Prince book, and I've been moving my reading
-                                    list over to Storygraph instead of Good Reads
-                                </li>
-                                <li>
-                                    Found the Romanian versions of The Witcher book series so I'm gonna give that a shot
-                                    to try to keep up with reading my own mother tongue
-                                </li>
-                            </ul>
-                        </details>
-                        <details>
-                            <summary>August 15, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    Finished my post-grad last class today!! We still have a showcase to show our final
-                                    group VR project, so I'm not fully done, but in terms of projects and assignments
-                                    it's all over
-                                </li>
-                                <li>
-                                    My ... computer got stuck in a blue screen loop and it forced me to reinstall
-                                    windows ... and I overwrote the wrong partition, so I lost a lot of my personal
-                                    projects and original art files (CSP files anyway). Thankfully a lot isn't lost
-                                    because it's scattered in other places, but things like my RPG Maker game to promote
-                                    my friend's book and other Unity game projects are gone
-                                </li>
-                                <li>
-                                    I bought myself a celebratory dinosaur plushie to celebrate graduating (again) :)
-                                    Maybe I'll drop him off in my blog
-                                </li>
-                                <li>
-                                    Beginning to work again on my Brick Breaker game that got nuked with my laptop, and
-                                    I'm trying to keep a project log on Obsidian rather than Notion
-                                </li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>
-                                    Gonna play OFF tonight!! It was gifted to me by my friend who's been wanting me to
-                                    play it, and the remaster/remake would be perfect to get into it
-                                </li>
-                                <li>
-                                    Still into Palia after visiting my IRL friend since she and her fiance play it, so I
-                                    get to see them online and wave to them too. Been making good progress to get a
-                                    profitable farm and become a fishing master
-                                </li>
-                            </ul>
-                            <h2>Watching / Reading</h2>
-                            <ul>
-                                <li>May be beginning to read the Captive Prince series soon alongside my friend</li>
-                            </ul>
-                        </details>
-                        <details>
-                            <summary>July 27, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    I didn't even realize how quickly the time passed, it's almost August now ... last 3
-                                    weeks of school to chug through, and it's over
-                                </li>
-                                <li>
-                                    I visited my IRL friend just yesterday and slept over at her place!! It was really
-                                    nice to see her again, considering it's been <i>years</i>, but we get along really
-                                    well. Her fiance cooked us all dinner :]
-                                </li>
-                                <li>
-                                    I began working on a Genshin wiki in Obsidian and it's been fun to create built
-                                    lists for all my characters so I know who I'm working on/what artifacts they need.
-                                    It does mean my focus is a little drawn away from here though
-                                </li>
-                                <li>
-                                    Got up to 2016 in my art gallery, though I kinda burned out a bit; 2016 is going to
-                                    have the most art to list for now, so I'm not mentally prepared yet to sit through
-                                    it
-                                </li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>
-                                    Finished Deltarune CH 3 and 4 completely, and I need to update my media log for that
-                                </li>
-                                <li>
-                                    Picked up playing Palia again while I was at my friend's, since she and her fiance
-                                    have been
-                                    <i>super</i> into it
-                                </li>
-                                <li>
-                                    Picked up playing Touhou 8: Imperishable Night and Need for Speed Most Wanted again
-                                    since those are childhood games to me
-                                </li>
-                            </ul>
-                            <h2>Watching / Reading</h2>
-                            <ul>
-                                <li>Nothing new from last time</li>
-                            </ul>
-                        </details>
-                        <details>
-                            <summary>July 12, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    Blargh, back to school. Nothing of major note has been happening outside of project
-                                    work and annoyance with my career class that I do <i>not</i> need as someone who's
-                                    done resume and job applications before
-                                </li>
-                                <li>
-                                    I ... think I'm basically in on the one VR development opportunity I got offered,
-                                    though he did mention if work was to come, it'd be more in the fall
-                                </li>
-                                <li>
-                                    I've kinda gotten a hang of using Obsidian now to take down learning notes + daily
-                                    offloading of 'in the moment' thoughts
-                                </li>
-                                <li>
-                                    Progressing further with doing the little mini RPG Maker game for my friend's book
-                                    promo
-                                </li>
-                                <li>Mostly site work, made Sylvie's genshin game kit + made an art gallery</li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>Deltarune chapter 2 is being worked through slowly</li>
-                                <li>
-                                    Pulled Phainon for HSR a few days ago (in like 30 whole pulls??? and without
-                                    guarantee???) so I've been building him slowly
-                                    <ul>
-                                        <li>
-                                            In terms of Genshin Impact, mostly been working on Skirk and getting her to
-                                            90, as well as trying to get better artifacts for her
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Finally got a chance to make a new Spore account, though it was like pulling teeth
-                                    since I had to re-buy Galactic Adventures ... <b>again</b> ... I own these games 3
-                                    times over now ... fucking hate EA Games
-                                </li>
-                                <li>
-                                    Started playing Imperishable Night (Touhou) again since it's what I grew up on
-                                    during high school, though I'm so out of practice ... annoying when easy is
-                                    <i>too</i> easy but the normal is too hard
-                                </li>
-                                <li>
-                                    Started a Rags to Riches challenge in Sims 4 using my Sylvie and Zhongli sims,
-                                    though I think I hit my burnout now that I'm at the point of a stable house +
-                                    needing to wait to save money
-                                </li>
-                            </ul>
-                            <h2>Watching / Reading</h2>
-                            <ul>
-                                <li>On a reading pause for now</li>
-                                <li>
-                                    Watching a bunch of stuff though,
-                                    <a
-                                        href="https://myanimelist.net/anime/59421/Zutaboro_Reijou_wa_Ane_no_Moto_Konyakusha_ni_Dekiai_sareru"
-                                        >Betrothed to My Sister's Ex</a
-                                    >, the new
-                                    <a href="https://myanimelist.net/anime/52293/New_Panty___Stocking_with_Garterbelt"
-                                        >Panty and Stocking with Garterbelt</a
-                                    >
-                                    + the original, and
-                                    <a href="https://myanimelist.net/anime.php?id=58913">The Summer Hikaru Died</a>
-                                </li>
-                            </ul>
-                        </details>
-                        <details>
-                            <summary>June 28, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    On the cusp of ending my school break ... the day before I went to a mixer for my
-                                    school, although I was invited as a guest (since it's a program for people wanting
-                                    to
-                                    <i>start</i> freelancing or start-up companies), I got to meet some really cool
-                                    people there including a fellow Genshin-er
-                                </li>
-                                <li>
-                                    Almost been doing journaling for a month straight!! Surprisingly the 'note a single
-                                    highlight of the day' has been working really well for me; I can just leave it at
-                                    that, or expand on it if I want to with no pressure. Sometimes I miss weekends
-                                    because there's no comfortable time to write alone, but that's ok
-                                </li>
-                                <li>
-                                    Began trying to learn <a href="https://godotengine.org/">Godot</a> following
-                                    <a href="https://www.youtube.com/watch?v=LOhfqjmasi0">Brackey's</a>
-                                    tutorial, though I'm only like 20 minutes in because I'm trying to note things down
-                                </li>
-                                <li>
-                                    I may ... ? Have found some job opportunity ... ? Or well, my teacher recommended me
-                                    to someone, although it's for programming, it's in Unity which I'm very familiar
-                                    with. I'm not too sure of the details, but I already signed an NDA and got sent the
-                                    software to work with so ... ? It's only freelancing/contract work for now and
-                                    gathering a pool of talent, but who is to know about the future ...
-                                    <ul>
-                                        <li>
-                                            It's a little scary because I've never considered offering myself for any
-                                            developer/programming jobs; I know how to code in C#, but I'd never consider
-                                            myself confident enough to say I <u>know</u> it enough for a job ... even
-                                            though y'know, I <i>have</i> coded games in it
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    I think I'm getting a hang of using Obsidian, though mine is very boringly for just
-                                    noting down my learning in programs like Godot for stuff
-                                </li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>
-                                    Finally finished with Undertale, and slowly going through Deltarune (I'm streaming
-                                    it for my friend, so it's when we have a chance to play)
-                                </li>
-                                <li>
-                                    Got gifted the entire Bioshock series (I already had 2, but the bundle included the
-                                    DLC), so I'm beginning to play the first Bioshock
-                                </li>
-                                <li>Got back into Bleach Brave Souls, though very casually (I miss my Ukitake)</li>
-                                <li>
-                                    Downloaded Reverse 1999 and the new Persona 5 spinoff mobile game, though I haven't
-                                    dabbled much in either beyond half an hour (a bit more for Reverse 1999)
-                                </li>
-                                <li>Unlocked the room expansion in Neko Atsume 2 💖</li>
-                            </ul>
-                            <h2>Watching / Reading</h2>
-                            <ul>
-                                <li>
-                                    Sadge, last episode of Apothecary Diaries season 2 next week ... at least I am
-                                    planning to dive into the novels eventually
-                                </li>
-                                <li>
-                                    Picked up <i>slowly</i> reading
-                                    <a href="https://myanimelist.net/manga/178639/The_Hounds_of_Sisyphus"
-                                        >The Hounds of Sisyphus</a
-                                    >
-                                    and god Pyo Guwon is so hot. Even if he ends up (maybe) being a black flag MC, I'm
-                                    all for manipulative murdery guys that don't resort to non-con (which is so
-                                    prevalent in manhwa/manga in general 💀) so um ... hopefully it won't go there
-                                </li>
-                                <li>
-                                    Still trying to get through
-                                    <a href="https://www.goodreads.com/book/show/50892288-the-hollow-places"
-                                        >The Hollow Places</a
-                                    >, but I think I'm on a bit of a burnout
-                                </li>
-                            </ul>
-                        </details>
-                        <details>
-                            <summary>June 11, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    Ughhh ughh ugh school assignment stuff UGH (I just have gotten rusty with doing
-                                    assignments so it's always like something looming over my skull); we have been
-                                    learning cool coding things though
-                                </li>
-                                <li>
-                                    Picked up journaling again, or I'm trying to anyway by keeping it simple and doing a
-                                    single highlight a day at the bare basic, and writing more only if I need to.
-                                    Honestly it's been nice, especially since I have a lot of stickers and enjoy
-                                    decorating the pages, though I'm trying my best to not get overwhelmed
-                                    <ul>
-                                        <li>
-                                            I found out all along I had a double sided tape roll from college that I
-                                            completely forgot about ... I've been trying to use glue sticks 🗿
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Picked up using <a href="https://obsidian.md/">Obsidian</a> to <i>try</i> to keep
-                                    notes of stuff I'm learning, especially for things like Unreal or Blender, or when I
-                                    decide to learn Blockbench modelling. It's hard because I tend to watch/do rather
-                                    than take notes of the process, which can bite me in the ass. Heavily inspired from
-                                    <a href="https://www.youtube.com/watch?v=DRBXGOr6faU">JayTheDevGuy's video</a> on it
-                                </li>
-                                <li>
-                                    Mostly just been focused on helping my friend with her author livelihood and book
-                                    editing for her
-                                </li>
-                                <li>
-                                    Site wise, it's mostly just been back-end stuff cause right now that's more
-                                    appealing to me than making new content. Creating my media log though has been
-                                    really cool
-                                </li>
-                                <li>
-                                    I'm trying to carry my 3DS around more with me to have as something to do that's
-                                    <u>not</u> on my phone
-                                </li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>
-                                    Finished my coop Baldur's Gate 3 run and ... promptly uninstalled to free up space;
-                                    I'll return at some point to do Gale's run and finish my final few achievements for
-                                    100%
-                                </li>
-                                <li>
-                                    Replaying Undertale (especially for my friend who never saw it played in full
-                                    before) in prep for Deltarune
-                                </li>
-                                <li>
-                                    Got back into Bleach: The 3rd Phantom on my 3DS which has been eating into my life
-                                    (good way)
-                                </li>
-                                <li>
-                                    Replayed Imperishable Night (Touhou) cause I grew up on playing this during high
-                                    school lunches
-                                </li>
-                                <li>
-                                    Been slowly going through the FFXIV ARR story with my friend since we have set times
-                                    for her to sit and play through while I'm there for moral support/body doubling
-                                </li>
-                                <li>Found Elite Beat Agents again for my 3DS ... issue is it keeps crashing 🥲</li>
-                            </ul>
-                            <h2>Watching / Reading</h2>
-                            <ul>
-                                <li>Waiting for Apothecary Diaries S2 releases</li>
-                                <li>
-                                    Paused on
-                                    <a href="https://www.goodreads.com/book/show/54304124-laziness-does-not-exist"
-                                        >Laziness Does Not Exist</a
-                                    >
-                                    for now, though I'd still like to get back to it
-                                </li>
-                                <li>
-                                    Picked up reading
-                                    <a href="https://www.goodreads.com/book/show/50892288-the-hollow-places"
-                                        >The Hollow Places</a
-                                    >
-                                    and I see why T. Kingfisher's writing is really appealing to me now (simplicity,
-                                    humanness, it reads like how I think)
-                                </li>
-                                <li>
-                                    Finished
-                                    <a href="https://myanimelist.net/manga/149622/Qian_Qiu"
-                                        >Thousand Autumns / Quan Qiu</a
-                                    >
-                                    fully (minus the short stories, no real plans to read them anytime soon)
-                                </li>
-                            </ul>
-                        </details>
-                        <details>
-                            <summary>May 25, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    Approaching the fourth week of the semester, and we finally settled on a group game
-                                    we're doing for a charity that's teaching kids about African history and culture,
-                                    and we're going to make a cooking simulator teaching 1-2 cultural relevant dishes;
-                                    I'm really excited for it!! I do worry about some of the classmates that aren't
-                                    consistent with showing up, but because we're a full group of 8, there's at least 5
-                                    of us who <b>are</b> consistent with work
-                                </li>
-                                <li>
-                                    I finally took the plunge to upload my old project
-                                    <a href="https://asuraid.itch.io/electrobit">Electrobit</a> fully on itch.io; the
-                                    version that was up was an <u>old</u> alpha version, but since the game has been off
-                                    the App Store for at least a few years now, I decided to add <b>my</b> finalized
-                                    version (which was different than what was uploaded)
-                                </li>
-                                <li>
-                                    The tomato plants in the nursery downstairs are <i>finally</i> going to be moved out
-                                    tomorrow or the next day, poor things grew so much that they're pushing against the
-                                    ultraviolet light but it's been far too cold to plant them
-                                </li>
-                                <li>
-                                    I've been making progress on my RPG Maker MZ game to help promo my friend's book,
-                                    and getting close to finishing the first edit of the book itself
-                                </li>
-                                <li>Ate homemade hamburgers for the first time in a few months :)</li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>
-                                    Still in FFXIV hell, I've been using my backloggd to keep a running track of what
-                                    progress I've done, considering I have a lot of mini projects to do
-                                    <ul>
-                                        <li>Finishing leveling RDM + associated quests</li>
-                                        <li>Bullying my friend lovingly to play more</li>
-                                        <li>
-                                            Making BiS gear for my gatherers and crafters
-                                            <ul>
-                                                <li>
-                                                    Which means working on the Namazu society quests because Stormsap
-                                                    fucking sucks to desynth
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>Finishing all crafter storylines</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Approaching the end of my co-op OC run in BG3, we're in act 3 now and just kicked
-                                    Raphael's shit in
-                                </li>
-                                <li>Replayed a bit of Animal Crossing Happy Home Designer on my jailbroken 3DS 🤣</li>
-                            </ul>
-                            <h2>Watching / Reading</h2>
-                            <ul>
-                                <li>
-                                    Still doing The Apothecary Diaries, did pick up one episode of
-                                    <a href="https://myanimelist.net/anime/59597/Witch_Watch">Witch Watch</a> which is
-                                    pretty funny so far
-                                </li>
-                                <li>
-                                    Halfway through reading
-                                    <a href="https://www.goodreads.com/book/show/54304124-laziness-does-not-exist"
-                                        >Laziness Does Not Exist</a
-                                    >
-                                    and it's really drilled in how society really pushes for people to be overworked and
-                                    punishing them for listening to their own mental health and bodily health. A good
-                                    read for some tips to try to break out of society's toxicity of punishing 'laziness'
-                                </li>
-                                <li>
-                                    Finished volume 4 of
-                                    <a href="https://myanimelist.net/manga/149622/Qian_Qiu"
-                                        >Thousand Autumns / Quan Qiu</a
-                                    >
-                                    and I'm <i>so</i> excited to get to the last volume
-                                </li>
-                            </ul>
-                        </details>
-                        <details>
-                            <summary>May 12, 2025</summary>
-                            <h2>What's Been Going On?</h2>
-                            <ul>
-                                <li>
-                                    Starting my new semester ... last semester too, which makes me mildly worried about
-                                    all my courses and all the assignments that we need to do; I'm gonna try to stay on
-                                    top of them this time
-                                    <ul>
-                                        <li>
-                                            It doesn't help that halfway through the course we're swapping three
-                                            (three!) classes from online to in person ... we're probably gonna try to
-                                            complain about it since many of the students here travel by transport and
-                                            don't live in the city
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    With summer being here ... ish ... I've been going out on more walks and playing
-                                    more Pok&eacute;mon Go, which is nice
-                                </li>
-                                <li>
-                                    The seeds my grandma put in the nursery we borrowed have been growing super well,
-                                    though I had to rip one root that was reaching out to the other seeds
-                                </li>
-                                <li>
-                                    I got the books
-                                    <a href="https://jamesclear.com/atomic-habits">Atomic Habits</a> and&nbsp;<a
-                                        href="https://www.goodreads.com/book/show/54304124-laziness-does-not-exist"
-                                        >Laziness Does Not Exist</a
-                                    >
-                                    which I'm looking forwards to reading
-                                </li>
-                            </ul>
-                            <h2>Games</h2>
-                            <ul>
-                                <li>
-                                    I've gotten back into FFXIV which SIGHS ... now it's taken my attention away from
-                                    Minecraft, but it's ok. Got it to boot up on SteamDeck
-                                </li>
-                                <li>Still going through my co-op run and gale story run in Baldur's Gate 3</li>
-                                <li>
-                                    I've been mostly working on updating my
-                                    <a href="https://backloggd.com/u/Asuraid/">Backloggd</a>
-                                </li>
-                            </ul>
-                            <h2>Watching</h2>
-                            <ul>
-                                <li>
-                                    Mostly been on a Minecraft YouTuber binge,
-                                    <a href="https://www.youtube.com/@AustMC">Aust</a> has been my comfort watch when I
-                                    go to bed
-                                </li>
-                                <li>
-                                    Finished with FMAB, still waiting for Apothecary Dairies to keep airing and
-                                    releasing
-                                </li>
-                            </ul>
-                        </details>
-                    </details>
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
 
-        <!-- Scroll to Top -->
-        <script src="js/scroll-to-top.js"></script>
+        <!-- PAGE ONLY SCRIPTS -->
     </body>
 </html>

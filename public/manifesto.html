@@ -13,13 +13,16 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
         <title>manifesto</title>
@@ -28,249 +31,270 @@
         <meta name="author" content="Asuraid" />
 
         <!-- Site Description -->
-        <meta content="A personal manifesto on the nature of this website." name="description" />
+        <meta
+            content="A page dedicated to my history online, my reason for making a site, and accessibility."
+            name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
 
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
+        <script src="js/layout.js" defer></script>
+        <script src="js/navigation.js" type="module"></script>
 
-        <script src="js/header.js" defer></script>
-        <script src="js/left-sidebar.js" defer></script>
-        <script src="js/footer.js" defer></script>
+        <!-- Page Only Javascript: -->
 
-        <script src="js/accessibility/disclosure-menu.iife.js"></script>
-        <!-- Disclosure Menu -->
-        <script src="js/accessibility/accessible-menu.js" type="module"></script>
+        <!-- Page Only Styling: -->
+        <style></style>
     </head>
-    <body id="body">
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
-        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
-            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
             <!-- =============================================== -->
             <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>Manifesto</h1>
-                    <span class="subtle"
-                        >Navigation: <a href="#history-online">History Online</a> /
-                        <a href="#social-media">Social Media</a> / <a href="#indie-web">Indie Web</a> /
-                        <a href="#accessibility">Accessibility</a> | Last Updated: October 10, 2025</span
-                    >
-                    <p>
-                        This page serves more as a summary of how and why this website came to be, and just my general
-                        feelings as of right now with the state of the online world.
-                        <a href="https://bechnokid.neocities.org/manifesto/">Bechno Kid</a>&#39;s and
-                        <a href="https://petrapixel.neocities.org/about/manifesto">Petra</a>&#39;s manifestos were
-                        inspirations to write my own, and it&#39;ll probably grow and shape itself over time as I refine
-                        my thoughts.
-                    </p>
-                    <h2 id="history-online">History Online</h2>
-                    <img
-                        class="image hide-mobile"
-                        src="img/decos/clubpenguin.gif"
-                        style="float: left; margin: 0 10px 0 0; border-radius: var(--border-radius)"
-                        alt=""
-                        aria-hidden="true" />
-                    <p>
-                        My history with online has always been ... very entrenched in community? I lived in places like
-                        Club Penguin and DeviantART and made some wonderful connections over the years (a few people
-                        which I managed to reconnect with from my old 2012 days on DA; I was deep into the OC/Canon
-                        Bleach community back then).
-                    </p>
-                    <p>
-                        I was never much of a web surfer ... <em>ish</em>, most of my socialization was on DevART, Club
-                        Penguin, online games like Perfect World Online and Elsword, the early days of MSN and Skype
-                        (mostly with gaming friends), and kid site games (Webkinz, Jetix TV games, Barbie sites) cause I
-                        had a lot of fun on those and didn&#39;t feel the urge to dive around deeper.
-                    </p>
-                    <p>
-                        Definitely came across stuff that I sure as hell shouldn&#39;t have at my age, like Encyclopedia
-                        Dramatica. Not the kinda thing you should read during high school lunch breaks, and I'm very
-                        glad it's a dead site now (if you knew the shocker images of 2010, you'll Know).
-                    </p>
-                    <p>
-                        As such, nostalgia doesn&#39;t drive me due to my history, and I&#39;m not seeking it since I
-                        never grew up on stuff like Geocities when my time was spent in Webkinz and Club Penguin. I just
-                        miss customization that most places have stripped away (DeviantART and its stupid overhaul due
-                        to Wordpress buying it, Tumblr now redirecting to mobile views instead of themes, the
-                        enshittification of UI to all look the damn same everywhere unless you install extensions to
-                        change it).
-                    </p>
-                    <p>
-                        (I still sometimes log into my old Webkinz account and have tried out Club Penguin private
-                        servers, but it doesn&#39;t hit like it used to.)
-                    </p>
-                    <h2 id="social-media">Social Media</h2>
-                    <aside>
-                        Kinda glad most of my mutuals on my social medias like Tumblr are sane people, so I rarely ever
-                        come across stupid shit, and usually if I do, it&#39;s dogshit takes from other people that
-                        everyone is looking at like &#39;why would you type that&#39;. Mmm I love filters and blocklists
-                        so much.
-                    </aside>
-                    <p>
-                        These days, I&#39;m not active much on socmed, mostly because I&#39;m tired 95% of the time and
-                        have very little energy to spare. Tumblr was my first real social media I joined back in 2012,
-                        and I&#39;m still on my original blog since then; my blog has always felt like a little website
-                        in itself, considering themes really allowed me to explore my creativity across my personal blog
-                        and my roleplay blogs, and it&#39;s why I&#39;ve stuck around so long. I guess I&#39;ve also
-                        used it as a journaling/thought dumping ground for so long that it&#39;s just a part of me now.
-                    </p>
+                    <section aria-labelledby="manifesto">
+                        <h1 id="manifesto">Manifesto</h1>
+                        <span class="subtle"
+                            >Navigation: <a href="#history-online">History Online</a> /
+                            <a href="#social-media">Social Media</a> / <a href="#indie-web">Indie Web</a> /
+                            <a href="#accessibility">Accessibility</a> | Last Updated: November 27, 2025</span
+                        >
+                        <p>
+                            This page serves more as a summary of how and why this website came to be, and just my
+                            general feelings as of right now with the state of the online world.
+                            <a href="https://bechnokid.neocities.org/manifesto/">Bechno Kid</a>&#39;s and
+                            <a href="https://petrapixel.neocities.org/about/manifesto">Petra</a>&#39;s manifestos were
+                            inspirations to write my own, and it&#39;ll probably grow and shape itself over time as I
+                            refine my thoughts.
+                        </p>
+                        <h2 id="history-online">History Online</h2>
+                        <img
+                            class="freeze image float-img-left hide-mobile"
+                            src="img/decos/clubpenguin.gif"
+                            style="border-radius: var(--border-radius)"
+                            alt=""
+                            aria-hidden="true" />
+                        <p>
+                            My history with online has always been ... very entrenched in community? I lived in places
+                            like Club Penguin and DeviantART and made some wonderful connections over the years (a few
+                            people which I managed to reconnect with from my old 2012 days on DA; I was deep into the
+                            OC/Canon Bleach community back then).
+                        </p>
+                        <p>
+                            I was never much of a web surfer ... <em>ish</em>, most of my socialization was on DevART,
+                            Club Penguin, online games like Perfect World Online and Elsword, the early days of MSN and
+                            Skype (mostly with gaming friends), and kid site games (Webkinz, Jetix TV games, Barbie
+                            sites) cause I had a lot of fun on those and didn&#39;t feel the urge to dive around deeper.
+                        </p>
+                        <p>
+                            Definitely came across stuff that I sure as hell shouldn&#39;t have at my age, like
+                            Encyclopedia Dramatica. Not the kinda thing you should read during high school lunch breaks,
+                            and I'm very glad it's a dead site now (if you knew the shocker images of 2010, you'll
+                            Know).
+                        </p>
+                        <p>
+                            As such, nostalgia doesn&#39;t drive me due to my history, and I&#39;m not seeking it since
+                            I never grew up on stuff like Geocities when my time was spent in Webkinz and Club Penguin.
+                            I just miss customization that most places have stripped away (DeviantART and its stupid
+                            overhaul due to Wordpress buying it, Tumblr now redirecting to mobile views instead of
+                            themes, the enshittification of UI to all look the damn same everywhere unless you install
+                            extensions to change it).
+                        </p>
+                        <p>
+                            (I still sometimes log into my old Webkinz account and have tried out Club Penguin private
+                            servers, but it doesn&#39;t hit like it used to.)
+                        </p>
+                        <h2 id="social-media">Social Media</h2>
+                        <aside>
+                            Kinda glad most of my mutuals on my social medias like Tumblr are sane people, so I rarely
+                            ever come across stupid shit, and usually if I do, it&#39;s dogshit takes from other people
+                            that everyone is looking at like &#39;why would you type that&#39;. Mmm I love filters and
+                            blocklists so much.
+                        </aside>
+                        <p>
+                            These days, I&#39;m not active much on socmed, mostly because I&#39;m tired 95% of the time
+                            and have very little energy to spare. Tumblr was my first real social media I joined back in
+                            2012, and I&#39;m still on my original blog since then; my blog has always felt like a
+                            little website in itself, considering themes really allowed me to explore my creativity
+                            across my personal blog and my roleplay blogs, and it&#39;s why I&#39;ve stuck around so
+                            long. I guess I&#39;ve also used it as a journaling/thought dumping ground for so long that
+                            it&#39;s just a part of me now.
+                        </p>
 
-                    <p>
-                        I doubt I will ever drop social media altogether, since I find joy in being able to see what my
-                        mutuals and friends are interacting with and reblogging and talking about, even the most mundane
-                        of things. I also have art accounts to upkeep on occasion, as much as it&#39;s hard for me to
-                        do.
-                    </p>
+                        <p>
+                            I doubt I will ever drop social media altogether, since I find joy in being able to see what
+                            my mutuals and friends are interacting with and reblogging and talking about, even the most
+                            mundane of things. I also have art accounts to upkeep on occasion, as much as it&#39;s hard
+                            for me to do.
+                        </p>
 
-                    <p>
-                        I met my best friends on here, one whom I met IRL, and many others I hope to meet in person one
-                        day because they&#39;ve been by my side for years now. I can&#39;t discard that it&#39;s helped
-                        me keep friendships and human connection and not feeling all that alone (I wish I could teleport
-                        to visit people).
-                    </p>
-                    <p>
-                        Even so, it&#39;d be hard to say there hasn&#39;t been some shift in how volatile people can be,
-                        and it&#39;s why I dropped Twitter completely; having to see absolutely dogshit takes 24/7 is
-                        exhausting. I&#39;m not saying Tumblr is free from it either, but as a veteran of the site, it
-                        feels more like watching the occasional clown car explosion before you just move on with your
-                        life.
-                    </p>
+                        <p>
+                            I met my best friends on here, one whom I met IRL, and many others I hope to meet in person
+                            one day because they&#39;ve been by my side for years now. I can&#39;t discard that it&#39;s
+                            helped me keep friendships and human connection and not feeling all that alone (I wish I
+                            could teleport to visit people).
+                        </p>
+                        <p>
+                            Even so, it&#39;d be hard to say there hasn&#39;t been some shift in how volatile people can
+                            be, and it&#39;s why I dropped Twitter completely; having to see absolutely dogshit takes
+                            24/7 is exhausting. I&#39;m not saying Tumblr is free from it either, but as a veteran of
+                            the site, it feels more like watching the occasional clown car explosion before you just
+                            move on with your life.
+                        </p>
 
-                    <h2 id="indie-web">Indie Web</h2>
-                    <p>
-                        I&#39;ve heard of Neocities from a tumblr roleplay mutual
-                        <a href="https://calamari.isnotanoctopus.art/">who made his own</a> a year or two ago, which I
-                        thought was really cool as well, but never pursued it further—the idea of making a website was
-                        cool ... but the coding wasn&#39;t.
-                    </p>
-                    <p>
-                        At that time I also got into making carrds, and still do have my own
-                        <a href="https://aid.uwu.ai/">personal one</a> (and the many templates I&#39;ve made for the
-                        Tumblr <span class="tippy" data-tippy-content="roleplaying community">RPC</span>); I love Carrd
-                        for its flexibility and ease of access to all people alike without any coding required, but ...
-                        it doesn&#39;t hit like a Tumblr theme does. You have no idea how annoyed I was seeing that
-                        in-line images aren&#39;t a thing!
-                    </p>
-                    <p>
-                        My tumblr theme is as close to a website as I had then, but even so a lot of my links went out
-                        to other sites (Bluesky, Carrd, Toyhouse), and there&#39;s no true, centralized info hub ...
-                        that&#39;s me. I think the push that finally made me consider it was people talking about
-                        another wave of staff layoffs at Tumblr (god knows it&#39;s a cyclical thing at this rate for
-                        Tumblr to go through its annual &#39;it might die&#39; phase), and having exported out my blog
-                        ... some part of me finally caved to looking back into Neocities, and making this site on the
-                        same day too.
-                    </p>
-                    <p>
-                        Community will always keep me engaged, but I wanted to find more personalized corners that are
-                        me as well, and a creative outlet amidst the art burnout I have been in since 2024.
-                    </p>
-                    <p>
-                        So, here I am now. I doubt this site will fully replace some places (there&#39;s no way in hell
-                        I&#39;m transferring my entire Toyhouse over considering that&#39;s a culmination of years of my
-                        own artwork and commissions in images, and there&#39;s only so much JPEG and WEBP crunching that
-                        can make up for a 1GB space limit), but it&#39;ll be the most complete place that showcases my
-                        interests and random tidbits of my life.
-                    </p>
-                    <p>
-                        And honestly I like the slowness of everything, even though I still find myself eagerly
-                        scrolling through and peeping around what my neighbours are doing when there are new updates to
-                        their sites ... there&#39;s something cozier about it. I like looking through what other people
-                        did with their websites! I love seeing people expressing themselves!
-                    </p>
-                    <p>And it&#39;s a nice break from social media to focus my efforts somewhere else.</p>
-                    <h2 id="wrapping-up">Wrapping Up</h2>
-                    <p>
-                        It&#39;s been a happy journey so far, and I&#39;m a person that thrives in finding problems to
-                        solve in code—even if frustrating, it itches some part of my brain in having something to chew
-                        on and hammer at and look forward to working on.
-                    </p>
-                    <p>
-                        Pages like my diary, blog, media log, are made for me to trim and grow over time, so I will
-                        always have something to revisit, even when my OC pages or art gallery is done; this will be a
-                        living site that always can have a new bud growing in.
-                    </p>
-                    <p>
-                        This is a bunch of disjointed thoughts to summarize that this site is a little collection of
-                        what makes me who I am, and a collection of what I enjoy. I&#39;m glad to have a little corner
-                        of respite away from everything else, and I hope that if you got to the end of this, that you
-                        enjoy your time here (even if it is just me babbling about random stuff or recipes I like or my
-                        OCs).
-                    </p>
-                </article>
-                <article>
-                    <h1 id="accessibility">Site Manifesto / Accessibility</h1>
-                    <p>This is more for accessibility and what the site will strive for:</p>
-                    <ul>
-                        <li>
-                            This site will do its best to be mobile responsive; elements that do not translate well onto
-                            mobile will be hidden
-                        </li>
-                        <li>Keyboard navigatiable nav bar + jump to content link</li>
-                        <li>Semantic HTML</li>
-                        <li>
-                            GIFs will be kept minimal or near the bottom of pages / out of main content; if prominent,
-                            either a freeze frame will be implemented, or a warning
-                        </li>
-                        <li>
-                            Contrasting colours that pass the 4.5 limit
-                            <ul>
-                                <li>
-                                    Some may slip by, if they are immensely minor things (like the last date I updated
-                                    the front video) I may just leave them be and update them later. If not 100%, 99% at
-                                    the very least
-                                </li>
-                            </ul>
-                        </li>
-                        <li>EM scaling text sizes instead of PX</li>
-                        <li>Font toggle with various options</li>
-                        <li>Alt text for all non-decorative images, and aria-hidden for all decorative ones</li>
-                        <li>Dark and light mode centric on the user's system choice</li>
-                        <li>No autoplay</li>
-                    </ul>
-                </article>
-                <article>
-                    <img src="img/misc/oldSIte.jpg" class="full-width-image" />
-                    <p>
-                        <i>First site iteration be like ...</i> I uh, don't know where else to put it outside of the
-                        manifesto and that cool sites can come out of templates.
-                    </p>
+                        <h2 id="indie-web">Indie Web</h2>
+                        <p>
+                            I&#39;ve heard of Neocities from a tumblr roleplay mutual
+                            <a href="https://calamari.isnotanoctopus.art/">who made his own</a> a year or two ago, which
+                            I thought was really cool as well, but never pursued it further—the idea of making a website
+                            was cool ... but the coding wasn&#39;t.
+                        </p>
+                        <p>
+                            At that time I also got into making carrds, and still do have my own
+                            <a href="https://aid.uwu.ai/">personal one</a> (and the many templates I&#39;ve made for the
+                            Tumblr <span class="tippy" data-tippy-content="roleplaying community">RPC</span>); I love
+                            Carrd for its flexibility and ease of access to all people alike without any coding
+                            required, but ... it doesn&#39;t hit like a Tumblr theme does. You have no idea how annoyed
+                            I was seeing that in-line images aren&#39;t a thing!
+                        </p>
+                        <p>
+                            My tumblr theme is as close to a website as I had then, but even so a lot of my links went
+                            out to other sites (Bluesky, Carrd, Toyhouse), and there&#39;s no true, centralized info hub
+                            ... that&#39;s me. I think the push that finally made me consider it was people talking
+                            about another wave of staff layoffs at Tumblr (god knows it&#39;s a cyclical thing at this
+                            rate for Tumblr to go through its annual &#39;it might die&#39; phase), and having exported
+                            out my blog ... some part of me finally caved to looking back into Neocities, and making
+                            this site on the same day too.
+                        </p>
+                        <p>
+                            Community will always keep me engaged, but I wanted to find more personalized corners that
+                            are me as well, and a creative outlet amidst the art burnout I have been in since 2024.
+                        </p>
+                        <p>
+                            So, here I am now. I doubt this site will fully replace some places (there&#39;s no way in
+                            hell I&#39;m transferring my entire Toyhouse over considering that&#39;s a culmination of
+                            years of my own artwork and commissions in images, and there&#39;s only so much JPEG and
+                            WEBP crunching that can make up for a 1GB space limit), but it&#39;ll be the most complete
+                            place that showcases my interests and random tidbits of my life.
+                        </p>
+                        <p>
+                            And honestly I like the slowness of everything, even though I still find myself eagerly
+                            scrolling through and peeping around what my neighbours are doing when there are new updates
+                            to their sites ... there&#39;s something cozier about it. I like looking through what other
+                            people did with their websites! I love seeing people expressing themselves!
+                        </p>
+                        <p>And it&#39;s a nice break from social media to focus my efforts somewhere else.</p>
+                        <h2 id="wrapping-up">Wrapping Up</h2>
+                        <p>
+                            It&#39;s been a happy journey so far, and I&#39;m a person that thrives in finding problems
+                            to solve in code—even if frustrating, it itches some part of my brain in having something to
+                            chew on and hammer at and look forward to working on.
+                        </p>
+                        <p>
+                            Pages like my diary, blog, media log, are made for me to trim and grow over time, so I will
+                            always have something to revisit, even when my OC pages or art gallery is done; this will be
+                            a living site that always can have a new bud growing in.
+                        </p>
+                        <p>
+                            This is a bunch of disjointed thoughts to summarize that this site is a little collection of
+                            what makes me who I am, and a collection of what I enjoy. I&#39;m glad to have a little
+                            corner of respite away from everything else, and I hope that if you got to the end of this,
+                            that you enjoy your time here (even if it is just me babbling about random stuff or recipes
+                            I like or my OCs).
+                        </p>
+                    </section>
+                    <section aria-labelledby="accessibility">
+                        <h1 id="accessibility">Site Manifesto / Accessibility</h1>
+                        <p>This is more for accessibility and what the site will strive for:</p>
+                        <ul>
+                            <li>
+                                This site will do its best to be mobile responsive; elements that do not translate well
+                                onto mobile will be hidden
+                            </li>
+                            <li>Keyboard navigatiable nav bar + jump to content link</li>
+                            <li>
+                                As screen reader friendly as I can make it; there's content that's exposed only to
+                                screen readers and/or reader modes, but it's still a new thing for me, so it's not
+                                perfect
+                            </li>
+                            <li>Semantic HTML</li>
+                            <li>
+                                <i>Most</i> GIFs can be toggled on and off using the disable/enable animation button
+                                above, the only ones unaffected are background-image ones since I've not figured out how
+                                to target those
+                                <ul>
+                                    <li>
+                                        If reduced motion is turned on, gifs should disable autiomatically unless
+                                        they're background images. Sadly haven't figured out how to do that yet.
+                                    </li>
+                                    <li>
+                                        Anything I can't explicitly disable with the toggle (marquees, the dendro symbol
+                                        floaty, the gifypet on the front), will either just be out of direct sight or at
+                                        slower speeds
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Contrasting colours that pass the 4.5 limit
+                                <ul>
+                                    <li>
+                                        Some may slip by, if they are immensely minor things (like the last date I
+                                        updated the front video) I may just leave them be and update them later. If not
+                                        100%, 99% at the very least
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>EM scaling text sizes instead of PX</li>
+                            <li>Font toggle with various options</li>
+                            <li>Alt text for all non-decorative images, and aria-hidden for all decorative ones</li>
+                            <li>Dark and light mode centric on the user's system choice</li>
+                            <li>No autoplay</li>
+                        </ul>
+                    </section>
+                    <section aria-hidden="true">
+                        <img src="https://i.ibb.co/LdFMb1PD/oldSIte.jpg" class="full-width-image" />
+                        <p>
+                            <i>First site iteration be like ...</i> I uh, don't know where else to put it outside of the
+                            manifesto and that cool sites can come out of templates.
+                        </p>
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
 
-        <!-- Scroll to Top -->
-        <script src="js/scroll-to-top.js"></script>
+        <!-- PAGE ONLY SCRIPTS -->
     </body>
 </html>

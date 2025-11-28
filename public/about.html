@@ -13,13 +13,16 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
-        <meta charset="utf-8" />
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
         <title>about me!</title>
@@ -28,27 +31,22 @@
         <meta name="author" content="Asuraid" />
 
         <!-- Site Description -->
-        <meta content="Personal about me for this website." name="description" />
+        <meta content="Description." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
 
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="https://pfwebring.neocities.org/onionring.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
-        <script src="js/header.js" defer></script>
-        <script src="js/left-sidebar.js" defer></script>
-        <script src="js/footer.js" defer></script>
-        <script src="js/tab-title-suffix.js"></script>
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
 
-        <!--✻✻✻✻✻✻  griddery by @glenthemes  ✻✻✻✻✻✻-->
-        <script src="js/griddery.js"></script>
-        <link rel="stylesheet" href="css/griddery.css" />
+        <!-- Page Only Javascript: -->
+        <script src="/js/griddery.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 gridderyV3({
@@ -58,11 +56,9 @@
             });
         </script>
 
-        <!-- Disclosure Menu -->
-        <script src="js/accessibility/disclosure-menu.iife.js"></script>
-        <script src="js/accessibility/accessible-menu.js" type="module"></script>
-
-        <!-- Page Only Styling -->
+        <!-- Page Only Styling: -->
+        <link rel="stylesheet" href="/css/griddery.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
         <style>
             /* Style the tab */
             .tab {
@@ -75,21 +71,14 @@
 
             /* Style the buttons that are used to open the tab content */
             .tab button {
-                color: var(--font-on-accent);
-                background-color: var(--primary-accent);
-                font-family: "dosis";
-                font-size: inherit;
-                border: none;
-                outline: none;
                 cursor: pointer;
-                border-radius: var(--border-radius);
-                transition: 0.3s;
                 width: calc(20% - 5px) !important;
+                height: 50px;
             }
 
             /* Change background color of buttons on hover */
             .tab button:hover {
-                background-color: var(--secondary-accent);
+                letter-spacing: 1px;
             }
 
             .tab button:focus {
@@ -101,15 +90,13 @@
                 background-color: var(--secondary-accent);
             }
 
-            /* Style the tab content */
+            /* tab content styling */
             .tabcontentinside {
                 height: fit-content;
                 background-color: var(--body-deco);
                 border-radius: var(--border-radius);
                 margin-top: 10px;
                 padding: 12px;
-                border-top: none;
-                animation: fadeEffect 1s; /* Fading effect takes 1 second */
             }
 
             .tabcontentinside .flexbox {
@@ -117,39 +104,41 @@
                 justify-content: center;
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 13px;
+                gap: 10px;
                 width: 100%;
             }
 
-            .flexbox div {
-                width: calc(20% - 13px);
-                text-align: center;
-            }
-
-            .flexbox div img {
+            .flexbox img {
                 outline: 2px solid var(--primary-accent);
                 border-radius: var(--border-radius);
                 max-width: 100%;
                 max-height: 180px;
-                object-fit: contain;
+                object-fit: fill;
             }
 
-            .flexbox div p {
+            .flexbox div {
+                width: calc(20% - 10px);
+                text-align: center;
+            }
+
+            .flexbox p {
                 margin-top: 0;
-                font-family: "dosis";
                 font-weight: bold;
+                line-height: 1em;
             }
 
-            .flexbox div p i {
+            .flexbox i {
                 font-size: 0.8em;
                 font-weight: normal;
             }
 
-            .flexbox div class .tabcontent .interest-content ul {
-                margin: 0;
+            /* fix error with hover grow w/link turning into a block */
+            .hover-grow a:has(> img) {
+                display: unset;
             }
 
-            .tabcontentinside .flexstamps {
+            /* stamp formatting */
+            .flexstamps {
                 display: flex;
                 justify-content: center;
                 flex-direction: row;
@@ -158,7 +147,12 @@
                 width: 100%;
             }
 
-            .tabcontentinside .picrews {
+            .flexstamps a {
+                line-height: 0;
+            }
+
+            /* picrew formatting */
+            .picrews {
                 display: flex;
                 justify-content: center;
                 flex-direction: row;
@@ -168,12 +162,12 @@
                 text-align: center;
             }
 
-            .tabcontentinside .picrews div {
+            .picrews div {
                 width: calc(33% - 10px) !important;
                 object-fit: contain;
             }
 
-            .tabcontentinside .picrews div img {
+            .picrews div img {
                 width: 100%;
                 aspect-ratio: 1/1;
                 object-fit: cover;
@@ -181,15 +175,61 @@
                 outline: 2px solid var(--primary-accent);
             }
 
-            .flexstamps a {
-                line-height: 0 !important;
+            /* user style limit */
+            .userboxes img {
+                width: 239px;
+                max-height: 48px;
             }
 
-            .tabcontent h1,
-            .tabcontent p {
-                animation: fadeEffect 1s; /* Fading effect takes 1 second */
+            /* about me styling */
+            .aboutme {
+                display: flex;
+                gap: 10px;
+                align-items: center;
             }
 
+            .aboutme .icon {
+                flex: 0 1 30%;
+                justify-content: center;
+                align-content: center;
+            }
+
+            .aboutme .description {
+                flex: 0 1 45%;
+            }
+
+            .aboutme .idbuttons {
+                flex: 0 1 25%;
+                justify-content: center;
+                text-align: center;
+            }
+
+            /*----- MEME GRIDDERY -----*/
+            /* grid column spacing */
+            [griddery-id="img[memes]"] [griddery-col] + [griddery-col] {
+                padding-left: 15px;
+            }
+
+            /* grid "row" spacing */
+            [griddery-id="img[memes]"] [griddery-item] + [griddery-item] {
+                margin-top: 15px;
+            }
+
+            [griddery-item] img {
+                vertical-align: middle;
+                max-width: 100%;
+                width: 103%;
+            }
+
+            [griddery-item] {
+                position: relative;
+                border-radius: 4px;
+                box-shadow: 4px 4px 14px rgba(0, 0, 0, 15%);
+                overflow: hidden;
+                z-index: 0;
+            }
+
+            /* lazy columns for quizzes + picrew + webrings */
             .twocolumn {
                 display: grid;
                 grid-template-columns: 50% 50%;
@@ -197,6 +237,7 @@
                 align-content: center;
                 justify-content: center;
                 text-align: center;
+                align-items: center;
             }
 
             .twocolumn img {
@@ -222,96 +263,132 @@
                 margin-right: auto;
             }
 
-            /*----- 🐱 CATS GRID 🐱 -----*/
-            /* cats grid column spacing */
-            [griddery-id="img[memes]"]
-            [griddery-col] + [griddery-col]{
-                padding-left:15px;
-            }
-
-            /* cats grid "row" spacing */
-            [griddery-id="img[memes]"]
-            [griddery-item] + [griddery-item]{
-                margin-top:15px;
-            }
-
-            [griddery-item] img {
-                vertical-align:middle;
-                max-width:100%;
-                width:100%;
-            }
-
-            [griddery-item]{
-                position:relative;
-                border-radius:4px;
-                box-shadow:4px 4px 14px rgba(0,0,0,15%);
-                overflow:hidden;
-                z-index:0;
-            }
-
             @media screen and (max-width: 800px) {
-                .flexbox div {
-                    width: calc(33% - 10px);
-                    text-align: center;
+                .aboutme {
+                    flex-wrap: wrap;
+                }
+
+                .aboutme .icon,
+                .aboutme .description {
+                    flex: 0 1 49%;
+                    justify-self: center;
+                }
+
+                .aboutme .idbuttons {
+                    flex: 0 0 100%;
+                    width: 100%;
+                    min-width: 1px;
                 }
 
                 /* Style the buttons that are used to open the tab content */
                 .tab button {
                     width: calc(50% - 5px) !important;
+                    height: auto;
                 }
 
-                .threecolumn, .twocolumn {
-                  grid-template-columns: auto;
+                .flexbox div {
+                    width: calc(33% - 10px);
+                    text-align: center;
                 }
+
+                .threecolumn,
+                .twocolumn {
+                    grid-template-columns: auto;
                 }
             }
         </style>
     </head>
-    <body id="body">
+    <body>
         <!-- =============================================== -->
         <!-- Accessibility links. -->
         <!-- =============================================== -->
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
-        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
-            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
             <!-- =============================================== -->
             <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
             <main id="content">
-                <!-- =============================================== -->
-                <!-- ABOUT ME. -->
-                <!-- =============================================== -->
                 <article>
-                    <h1>About the Webmaster</h1>
-                    <div class="columns" style="padding-top: 4px">
-                        <div>
-                            <div class="image-deco">
-                                <a href="https://picrew.me/image_maker/597356">
-                                    <img
-                                        src="img/decos/about_me_2.png"
-                                        style="width: 250px; float: left; margin-bottom: 0"
-                                        alt="a chibi picrew of the webmaster" />
-                                </a>
+                    <section aria-labelledby="aboutme">
+                        <h1 id="aboutme">About the Webmaster</h1>
+                        <div class="aboutme">
+                            <div class="icon center-item">
+                                <div class="image-deco">
+                                    <a href="https://picrew.me/image_maker/597356">
+                                        <img src="img/decos/about_me_2.png" alt="a chibi picrew of the webmaster" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <ul>
+                                    <li><b>Name:</b> Aid / Asuraid</li>
+                                    <li>
+                                        <b>Pronouns:</b>
+                                        <a
+                                            href="https://en.pronouns.page/@asuraid"
+                                            data-tippy-content="Pronoun page. TL;DR I ID as cis, but I'm also very minimally attached to the concept of being a 'girl' (cassgirl/demigirl)."
+                                            >she / her</a
+                                        >
+                                    </li>
+                                    <li><b>Age:</b> 25+</li>
+                                    <li><b>MBTI:</b> INFP-T</li>
+                                    <li><b>Enneagram:</b> 9w1</li>
+                                    <li><b>Time Zone:</b> EST / GMT-5</li>
+                                    <li><b>Location:</b> Canada (born in Romania)</li>
+                                    <li><b>Languages:</b> English / Romanian</li>
+                                </ul>
+                            </div>
+                            <div class="idbuttons">
+                                <img src="img/identity/asexual.png" alt="Asexual (Asexual flag)" />
+                                <img src="img/identity/aegosexual.png" alt="Aegosexual (Aegosexual flag)" />
+                                <img src="img/identity/straight_ally.png" alt="Straight Ally (Straight Ally flag)" />
+                                <img src="img/identity/cis_girl.png" alt="Cis Girl (Blue/pink)" />
+                                <img src="img/identity/cassgirl.png" alt="Cassgirl (Cassgirl flag)" />
+                                <img src="img/identity/demigirl.png" alt="Demigirl (Demigirl flag)" />
+                                <img src="img/identity/she_her.png" alt="She/Her (Nature green star)" />
+                                <img src="img/identity/bg3.png" alt="Baldur's Gate 3 (Baldur's Gate 3 logo)" />
+                                <img src="img/identity/game_dev.png" alt="Game Dev (Game controller)" />
+                                <img src="img/identity/coffee.png" alt="Coffee" />
+                                <img src="img/identity/tea.png" alt="Tea" />
+                                <img src="img/identity/ffxiv.png" alt="FFXIV" />
+                                <img src="img/identity/genshin.png" alt="Genshin Impact" />
+                                <img src="img/identity/yumeshipper.png" alt="Yumeshipper" />
+                                <img src="img/identity/pokemon.png" alt="Pokemon" />
+                                <img src="img/identity/mass_effect.png" alt="Mass Effect" />
+                                <img src="img/identity/dragon_age.png" alt="Dragon Age" />
+                                <img src="img/identity/transformers.png" alt="Transformers" />
+                                <img src="img/identity/adhd.png" alt="ADHD flag" />
+                                <img src="img/identity/infp.png" alt="INFP" />
+                                <img src="img/identity/romanian.png" alt="Romanian" />
+                                <img src="img/identity/canada.png" alt="Canada" />
+                                <img src="img/identity/bird_owner.png" alt="Bird Owner" />
+                                <img src="img/identity/ambivert.png" alt="Ambivert" />
                             </div>
                         </div>
-                        <div>
+                        <hr />
+                        <div class="reader">
+                            <a href="https://picrew.me/image_maker/597356" tabindex="-1">
+                                <img src="img/decos/about_me_2.png" alt="a chibi picrew of the webmaster" />
+                            </a>
                             <ul>
                                 <li><b>Name:</b> Aid / Asuraid</li>
                                 <li>
                                     <b>Pronouns:</b>
-                                    <a
-                                        href="https://en.pronouns.page/@asuraid"
-                                        data-tippy-content="Pronoun page. TL;DR I ID as cis, but I'm also very minimally attached to the concept of being a 'girl' (cassgirl/demigirl)."
-                                        >she / her</a
-                                    >
+                                    <a href="https://en.pronouns.page/@asuraid" tabindex="-1">she / her</a>
                                 </li>
                                 <li><b>Age:</b> 25+</li>
                                 <li><b>MBTI:</b> INFP-T</li>
@@ -321,191 +398,354 @@
                                 <li><b>Languages:</b> English / Romanian</li>
                             </ul>
                         </div>
-                        <div style="flex: 30%; align-content: center; text-align: center">
-                            <img src="img/identity/asexual.png" alt="Asexual (Asexual flag)" />
-                            <img src="img/identity/aegosexual.png" alt="Aegosexual (Aegosexual flag)" />
-                            <img src="img/identity/straight_ally.png" alt="Straight Ally (Straight Ally flag)" />
-                            <img src="img/identity/cis_girl.png" alt="Cis Girl (Blue/pink)" />
-                            <img src="img/identity/cassgirl.png" alt="Cassgirl (Cassgirl flag)" />
-                            <img src="img/identity/demigirl.png" alt="Demigirl (Demigirl flag)" />
-                            <img src="img/identity/she_her.png" alt="She/Her (Nature green star)" />
-                            <img src="img/identity/bg3.png" alt="Baldur's Gate 3 (Baldur's Gate 3 logo)" />
-                            <img src="img/identity/game_dev.png" alt="Game Dev (Game controller)" />
-                            <img src="img/identity/coffee.png" alt="Coffee" />
-                            <img src="img/identity/tea.png" alt="Tea" />
-                            <img src="img/identity/ffxiv.png" alt="FFXIV" />
-                            <img src="img/identity/genshin.png" alt="Genshin Impact" />
-                            <img src="img/identity/yumeshipper.png" alt="Yumeshipper" />
-                            <img src="img/identity/pokemon.png" alt="Pokemon" />
-                            <img src="img/identity/mass_effect.png" alt="Mass Effect" />
-                            <img src="img/identity/dragon_age.png" alt="Dragon Age" />
-                            <img src="img/identity/transformers.png" alt="Transformers" />
-                            <img src="img/identity/adhd.png" alt="ADHD flag" />
-                            <img src="img/identity/infp.png" alt="INFP" />
-                            <img src="img/identity/romanian.png" alt="Romanian" />
-                            <img src="img/identity/canada.png" alt="Canada" />
-                            <img src="img/identity/bird_owner.png" alt="Bird Owner" />
-                            <img src="img/identity/ambivert.png" alt="Ambivert" />
+                        <p>
+                            As the info on the front says, hi! Name's <b>Aid</b>, mostly based off <i>Asuraid</i> which
+                            is my usual online handle in
+                            <span
+                                class="tippy"
+                                data-tippy-content="Asuraid is mostly used for my art accounts or general accounts, so sometimes with personal accounts i use different names ... like this site!"
+                                >most places</span
+                            >. Just a gal floating by in life and wishing for her own place one day.
+                        </p>
+                        <p>
+                            I'm on the cusp between a millennial and Gen Z (though honestly I'd rather just call myself
+                            a
+                            <u>millennial</u>, I <b>do not</b> relate to zoomers). I
+                            <span
+                                class="tippy"
+                                data-tippy-content="I have no way to get diagnosed right now/not in a comfortable place to do it, but considering I've been looking into it for well over half a year, to a year now, I'm like 99% sure of it ... and been clocked by uh ... multiple people thinking I have traits of it ..."
+                                >think</span
+                            >
+                            I have inattentive ADHD and I'm a chronic 'jumps between fixations like a mad person'
+                            sufferer, which also means I like trying out new things a lot and fixating on them for a set
+                            time before something else hits me like a truck (which also means chronic collection of
+                            projects I never finish fully). Forever stuck with the 'hyperfixation for two weeks' bug
+                            even with games sometimes. But hey, it means I know a lot of random stuff I've tried out and
+                            piles of resources for said things.
+                        </p>
+                        <p>
+                            I've also been an artist since I was a wee bab and a digital artist for most of my lifetime;
+                            I enjoy learning new things and finding ways to put my blorbo into them (like ... making
+                            them into a 3D model using VRoid). I used to be a big
+                            <a href="https://web.archive.org/web/20120120140004/http://cockatiellover.deviantart.com/"
+                                >deviantART kid</a
+                            >
+                            before it went into the shitter. I've also been a chronic tumblr user since 2012 and I still
+                            have my original blog, plus I've roleplayed there a large portion of my lifetime.
+                            <span aria-hidden="true">🫡</span>
+                        </p>
+                        <p>
+                            Otherwise I actually have a
+                            <span class="tippy" data-tippy-content="Bachelor's degree">BA</span> in Game Design!! As of
+                            writing this, it's kinda been hell getting a job though with this shit market (just as the
+                            internet has been shittified, so has AAA gaming). I don't have many <i>(completed)</i> solo
+                            projects since it's hard for me to do them on my own without a team, but I love consuming
+                            games and analyzing them.
+                        </p>
+                    </section>
+                    <!-- =============================================== -->
+                    <!-- SOCIALS. -->
+                    <!-- =============================================== -->
+                    <section aria-hidden="true">
+                        <h2 id="links">Socials</h2>
+                        <p>
+                            I tend to be most active on my personal tumblr. Otherwise these are the other places I'm in
+                            + some online games I play, anything starred <span aria-hidden="true">(⭐)</span> is what
+                            I'm active on, otherwise presume I'm very on and off with the others. I'm usually under
+                            <u>Asuraid</u> on most places! My VGen is for commissions.
+                        </p>
+                        <p>
+                            My <b>tumblr</b> does have more <u>adult content</u> as a warning.
+                            <a href="#tabtastic">Skip over to next section?</a>
+                        </p>
+                        <div class="two-columns no-after">
+                            <div>
+                                <b>General Places to Find Me</b>
+                                <div class="inline-list">
+                                    <ul>
+                                        <li>
+                                            <a href="https://discourse.32bit.cafe/u/sylviegirly/summary">32-bit Cafe</a>
+                                            ⭐
+                                        </li>
+                                        <li>
+                                            <a href="https://bsky.app/profile/sylviegirly.bsky.social">Bluesky</a>
+                                        </li>
+                                        <li><a href="https://aid.uwu.ai">Carrd</a></li>
+                                        <li><a href="https://www.last.fm/user/Asuraid">Last.fm</a></li>
+                                        <li><a href="https://spacehey.com/profile?id=3749430">SpaceHey</a></li>
+                                        <li><a href="https://toyhou.se/Hideki">Toyhouse</a> ⭐</li>
+                                        <li><a href="https://sylviegirly.tumblr.com">Tumblr</a> ⭐</li>
+                                    </ul>
+                                </div>
+                                <b>Petsite / Website Games</b>
+                                <div class="inline-list">
+                                    <ul>
+                                        <li><a href="https://dappervolk.com/profile/506">Dappervolk</a></li>
+                                        <li>
+                                            <a href="https://formula9.ddns.net/u/Aid/587">DragonAdopters</a>
+                                        </li>
+                                        <li><a href="https://dragcave.net/user/Asuraid">Dragcave</a> ⭐</li>
+                                        <li>
+                                            <a href="https://www1.flightrising.com/clan-profile/68095">Flight Rising</a>
+                                            ⭐
+                                        </li>
+                                        <li><a href="https://gpx.plus/user/Asuraid">GPX Plus</a></li>
+                                        <li>
+                                            <a href="https://www.goatlings.com/profile/u/49999">Goatlings</a>
+                                        </li>
+                                        <li><a href="https://pixpet.net/u/Hideki">Pixpet</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <b>Art Related Places</b>
+                                <div class="inline-list">
+                                    <ul>
+                                        <li><a href="https://artfight.net/~Asuraid">Art Fight</a></li>
+                                        <li><a href="https://bsky.app/profile/asuraid.art">Bluesky</a></li>
+                                        <li><a href="https://asuraid.art">Carrd</a></li>
+                                        <li><a href="https://asuraid.itch.io/">Itch.io</a></li>
+                                        <li><a href="https://ko-fi.com/asuraid">Ko-fi</a></li>
+                                        <li><a href="https://www.pillowfort.social/asuraid">Pillowfort</a></li>
+                                        <li><a href="https://sheezy.art/asuraid">Sheezy.art</a></li>
+                                        <li><a href="https://asuraid.tumblr.com">Tumblr</a></li>
+                                        <li><a href="https://vgen.co/asuraid">VGen</a></li>
+                                    </ul>
+                                </div>
+                                <b>Tracking Sites</b>
+                                <div class="inline-list">
+                                    <ul>
+                                        <li><a href="https://www.backloggd.com/u/Asuraid/">Backloggd</a> ⭐</li>
+                                        <li>
+                                            <a href="https://myanimelist.net/profile/Asuraid">MyAnimeList</a>
+                                            ⭐
+                                        </li>
+                                        <li>
+                                            <a href="https://app.thestorygraph.com/profile/asuraid">Storygraph</a> ⭐
+                                        </li>
+                                        <li>
+                                            <a href="https://myfigurecollection.net/profile/Asuraid"
+                                                >MyFigureCollection</a
+                                            >
+                                        </li>
+                                        <li><a href="https://www.serializd.com/user/Asuraid/profile">Serializd</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <hr />
-                    <p>
-                        As the info on the front says, hi! Name's <b>Aid</b>, mostly based off <i>Asuraid</i> which is
-                        my usual online handle in
-                        <span
-                            class="tippy"
-                            data-tippy-content="Asuraid is mostly used for my art accounts or general accounts, so sometimes with personal accounts i use different names ... like this site!"
-                            >most places</span
-                        >. Just a gal floating by in life and wishing for her own place one day.
-                    </p>
-                    <p>
-                        I'm on the cusp between a millennial and Gen Z (though honestly I'd rather just call myself a
-                        <u>millennial</u>, I <b>do not</b> relate to zoomers). I
-                        <span
-                            class="tippy"
-                            data-tippy-content="I have no way to get diagnosed right now/not in a comfortable place to do it, but considering I've been looking into it for well over half a year, to a year now, I'm like 99% sure of it ... and been clocked by uh ... multiple people thinking I have traits of it ..."
-                            >think</span
-                        >
-                        I have inattentive ADHD and I'm a chronic 'jumps between fixations like a mad person' sufferer,
-                        which also means I like trying out new things a lot and fixating on them for a set time before
-                        something else hits me like a truck (which also means chronic collection of projects I never
-                        finish fully). Forever stuck with the 'hyperfixation for two weeks' bug even with games
-                        sometimes. But hey, it means I know a lot of random stuff I've tried out and piles of resources
-                        for said things.
-                    </p>
-                    <p>
-                        I've also been an artist since I was a wee bab and a digital artist for most of my lifetime; I
-                        enjoy learning new things and finding ways to put my blorbo into them (like ... making them into
-                        a 3D model using VRoid). I used to be a big
-                        <a href="https://web.archive.org/web/20120120140004/http://cockatiellover.deviantart.com/"
-                            >deviantART kid</a
-                        >
-                        before it went into the shitter. I've also been a chronic tumblr user since 2012 and I still
-                        have my original blog, plus I've roleplayed there a large portion of my lifetime. 🫡
-                    </p>
-                    <p>
-                        Otherwise I actually have a
-                        <span class="tippy" data-tippy-content="Bachelor's degree">BA</span> in Game Design!! As of
-                        writing this, it's kinda been hell getting a job though with this shit market (just as the
-                        internet has been shittified, so has AAA gaming). I don't have many <i>(completed)</i> solo
-                        projects since it's hard for me to do them on my own without a team, but I love consuming games
-                        and analyzing them.
-                    </p>
-                </article>
-                <!-- =============================================== -->
-                <!-- SOCIALS. -->
-                <!-- =============================================== -->
-                <article>
-                    <h1>Socials</h1>
-                    <p>
-                        I tend to be most active on my personal tumblr. Otherwise these are the other places I'm in +
-                        some online games I play, anything starred <span aria-hidden="true">(⭐)</span> is what I'm
-                        active on, otherwise presume I'm very on and off with the others. I'm usually under
-                        <u>Asuraid</u> on most places! My VGen is for commissions.
-                    </p>
-                    <p>My <b>tumblr</b> does have more <u>adult content</u> as a warning.</p>
-                    <div class="twocolumn no-after" style="text-align: left">
+                    </section>
+                    <!-- brah why the fuck do i need to make a whole section that'll just be reader compatible with -->
+                    <!-- firefox. firefox ur reader mode fucking sucks -->
+                    <section class="reader">
+                        <h2>Socials</h2>
+                        <p>
+                            I tend to be most active on my personal tumblr. Otherwise these are the other places I'm in
+                            + some online games I play, anything with an asterisk is what I'm active on, otherwise
+                            presume I'm very on and off with the others. I'm usually under
+                            <u>Asuraid</u> on most places! My VGen is for commissions.
+                        </p>
+                        <p>My <b>tumblr</b> does have more <u>adult content</u> as a warning.</p>
+                        <h3>General</h3>
+                        <ul>
+                            <li>
+                                <a href="https://discourse.32bit.cafe/u/sylviegirly/summary" tabindex="-1"
+                                    >32-bit Cafe</a
+                                >*
+                            </li>
+                            <li>
+                                <a href="https://bsky.app/profile/sylviegirly.bsky.social" tabindex="-1">Bluesky</a>
+                            </li>
+                            <li><a href="https://aid.uwu.ai" tabindex="-1">Carrd</a></li>
+                            <li><a href="https://www.last.fm/user/Asuraid" tabindex="-1">Last.fm</a></li>
+                            <li><a href="https://spacehey.com/profile?id=3749430" tabindex="-1">SpaceHey</a></li>
+                            <li><a href="https://toyhou.se/Hideki" tabindex="-1">Toyhouse</a>*</li>
+                            <li><a href="https://sylviegirly.tumblr.com" tabindex="-1">Tumblr</a>*</li>
+                        </ul>
+                        <hr />
+                        <h3>Art Related Sites</h3>
+                        <ul>
+                            <li><a href="https://artfight.net/~Asuraid" tabindex="-1">Art Fight</a></li>
+                            <li><a href="https://bsky.app/profile/asuraid.art" tabindex="-1">Bluesky</a></li>
+                            <li><a href="https://asuraid.art" tabindex="-1">Carrd</a></li>
+                            <li><a href="https://asuraid.itch.io/" tabindex="-1">Itch.io</a></li>
+                            <li><a href="https://ko-fi.com/asuraid" tabindex="-1">Ko-fi</a></li>
+                            <li><a href="https://www.pillowfort.social/asuraid" tabindex="-1">Pillowfort</a></li>
+                            <li><a href="https://sheezy.art/asuraid" tabindex="-1">Sheezy.art</a></li>
+                            <li><a href="https://asuraid.tumblr.com" tabindex="-1">Tumblr</a></li>
+                            <li><a href="https://vgen.co/asuraid" tabindex="-1">VGen</a></li>
+                        </ul>
+                        <hr />
+                        <h3>Pet Sim Sites</h3>
+                        <ul>
+                            <li><a href="https://dappervolk.com/profile/506" tabindex="-1">Dappervolk</a></li>
+                            <li>
+                                <a href="https://formula9.ddns.net/u/Aid/587" tabindex="-1">DragonAdopters</a>
+                            </li>
+                            <li><a href="https://dragcave.net/user/Asuraid" tabindex="-1">Dragcave</a>*</li>
+                            <li>
+                                <a href="https://www1.flightrising.com/clan-profile/68095" tabindex="-1"
+                                    >Flight Rising</a
+                                >*
+                            </li>
+                            <li><a href="https://gpx.plus/user/Asuraid" tabindex="-1">GPX Plus</a></li>
+                            <li>
+                                <a href="https://www.goatlings.com/profile/u/49999" tabindex="-1">Goatlings</a>
+                            </li>
+                            <li><a href="https://pixpet.net/u/Hideki" tabindex="-1">Pixpet</a></li>
+                        </ul>
+                        <hr />
+                        <h3>Tracking Sites</h3>
+                        <ul>
+                            <li><a href="https://www.backloggd.com/u/Asuraid/" tabindex="-1">Backloggd</a>*</li>
+                            <li><a href="https://myanimelist.net/profile/Asuraid" tabindex="-1">MyAnimeList</a>*</li>
+                            <li>
+                                <a href="https://app.thestorygraph.com/profile/asuraid" tabindex="-1">Storygraph</a>*
+                            </li>
+                            <li>
+                                <a href="https://myfigurecollection.net/profile/Asuraid" tabindex="-1"
+                                    >MyFigureCollection</a
+                                >
+                            </li>
+                            <li>
+                                <a href="https://www.serializd.com/user/Asuraid/profile" tabindex="-1">Serializd</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- =============================================== -->
+                    <!-- WARNING. -->
+                    <!-- =============================================== -->
+                    <section class="warning" aria-hidden="true">
+                        <i class="fas fa-warning" aria-hidden="true"></i> GIFs are present within the stamps + blinkees;
+                        I'm unable to get freezeframe to work with them, and I haven't had the time/brainpower yet to
+                        convert everything to PNG (aside from the very flashy 'entire Twilight movie in a stamp' GIF),
+                        so please just be aware. I will do it eventually, though.
+                    </section>
+                    <!-- =============================================== -->
+                    <!-- READER ONLY INTERESTS. -->
+                    <!-- =============================================== -->
+                    <section class="reader">
                         <div>
-                            <b>General Places to Find Me</b>
-                            <div class="interest-content" style="margin-top: -15px">
-                                <ul>
-                                    <li>
-                                        <a href="https://discourse.32bit.cafe/u/sylviegirly/summary">32-bit Cafe</a> ⭐
-                                    </li>
-                                    <li>
-                                        <a href="https://bsky.app/profile/sylviegirly.bsky.social">Bluesky</a>
-                                    </li>
-                                    <li><a href="https://aid.uwu.ai">Carrd</a></li>
-                                    <li><a href="https://www.last.fm/user/Asuraid">Last.fm</a></li>
-                                    <li><a href="https://spacehey.com/profile?id=3749430">SpaceHey</a></li>
-                                    <li><a href="https://toyhou.se/Hideki">Toyhouse</a> ⭐</li>
-                                    <li><a href="https://sylviegirly.tumblr.com">Tumblr</a> ⭐</li>
-                                </ul>
-                            </div>
-                            <b>Petsite / Website Games</b>
-                            <div class="interest-content" style="margin-top: -15px">
-                                <ul>
-                                    <li><a href="https://dappervolk.com/profile/506">Dappervolk</a></li>
-                                    <li>
-                                        <a href="https://formula9.ddns.net/u/Aid/587">DragonAdopters</a>
-                                    </li>
-                                    <li><a href="https://dragcave.net/user/Asuraid">Dragcave</a> ⭐</li>
-                                    <li>
-                                        <a href="https://www1.flightrising.com/clan-profile/68095">Flight Rising</a>
-                                        ⭐
-                                    </li>
-                                    <li><a href="https://gpx.plus/user/Asuraid">GPX Plus</a></li>
-                                    <li>
-                                        <a href="https://www.goatlings.com/profile/u/49999">Goatlings</a>
-                                    </li>
-                                    <li><a href="https://pixpet.net/u/Hideki">Pixpet</a></li>
-                                </ul>
-                            </div>
+                            <h2>Favourite Games</h2>
+                            <ul>
+                                <li>Ace Attorney</li>
+                                <li>Age of Empires III</li>
+                                <li>Age of Mythology</li>
+                                <li>Baldur's Gate 3</li>
+                                <li>Bayonetta Series</li>
+                                <li>Bioshock 2</li>
+                                <li>Blinx 2: Masters of Time &amp; Space</li>
+                                <li>Code Vein</li>
+                                <li>Deltarune</li>
+                                <li>Dispatch</li>
+                                <li>Dragon Age Series</li>
+                                <li>Faith: The Unholy Trinity</li>
+                                <li>Final Fantasy 14</li>
+                                <li>Genshin Impact</li>
+                                <li>Hades</li>
+                                <li>Imperishable Night (Touhou)</li>
+                                <li>Insaniquarium! Deluxe</li>
+                                <li>Jazz Jackrabbit 2</li>
+                                <li>Jet Set Radio Future</li>
+                                <li>The Legend of Spyro: Dawn of the Dragon</li>
+                                <li>Luxor 3</li>
+                                <li>Mass Effect Series</li>
+                                <li>Minecraft</li>
+                                <li>Need for Speed Most Wanted</li>
+                                <li>Pokemon Platinum</li>
+                                <li>Pokemon Soul Silver</li>
+                                <li>Spore</li>
+                                <li>SSX 3</li>
+                                <li>Stardew Valley</li>
+                                <li>The World Ends With You</li>
+                                <li>Undertale</li>
+                                <li>Vampire Survivors</li>
+                                <li>Warframe</li>
+                                <li>The Witcher Series</li>
+                                <li>Zoo Tycoon 2</li>
+                            </ul>
+                            <hr />
+                            <h2>Favourite Characters</h2>
+                            <ul>
+                                <li>Acheron (Honkai Star Rail)</li>
+                                <li>Blue Whale Cookie (Cookie Run Ovenbreak)</li>
+                                <li>Castorice (Honkai Star Rail)</li>
+                                <li>Fenris (Dragon Age II)</li>
+                                <li>Furina (Genshin Impact)</li>
+                                <li>Gale of Waterdeep (Baldur's Gate 3)</li>
+                                <li>Galo (Promare)</li>
+                                <li>Garchomp (Pokemon)</li>
+                                <li>Garrus (Mass Effect)</li>
+                                <li>Hot Rod / Rodimus (Transformers)</li>
+                                <li>Jushiro Ukitake (Bleach)</li>
+                                <li>Karna (Fate Grand Order)</li>
+                                <li>Kaveh (Genshin Impact)</li>
+                                <li>Kim Dokja (Omniscient Reader's Viewpoint)</li>
+                                <li>Knock Out (Transformers)</li>
+                                <li>Lauma (Genshin Impact)</li>
+                                <li>Luciel (Elsword)</li>
+                                <li>Madoka Kaname (Puella Magi Madoka Magica)</li>
+                                <li>Maomao (Apothecary Diaries)</li>
+                                <li>Maya Fey (Ace Attorney)</li>
+                                <li>Millennium Tree Cookie (Cookie Run Ovenbreak)</li>
+                                <li>Ororon (Genshin Impact)</li>
+                                <li>Phainon (Honkai Star Rail)</li>
+                                <li>Phoenix Wright (Ace Attorney)</li>
+                                <li>Queen (Deltarune)</li>
+                                <li>
+                                    Sampo (Honkai Star Rail) ... and know I like him in the way that I wish I could beam
+                                    my period cramps onto him
+                                </li>
+                                <li>Wei Wuxian (Mo Dao Zu Shi, or alternatively Grandmaster of Demonic Cultivation)</li>
+                                <li>Xie Lian (Tian Guan Ci Fu, or alternatively Heaven Official's Blessing)</li>
+                                <li>Zhongli (Genshin Impact), the love of my life</li>
+                            </ul>
+                            <hr />
+                            <h2>Favourite Media</h2>
+                            <ul>
+                                <li>A Sign of Affection (show)</li>
+                                <li>Bleach (manga + show)</li>
+                                <li>Castlevania (show)</li>
+                                <li>Fate/Apocrypha (show)</li>
+                                <li>Fullmetal Alchemist Brotherhood (show)</li>
+                                <li>Kaiju No. 8 (show)</li>
+                                <li>Kill la Kill (show)</li>
+                                <li>Mashle (show)</li>
+                                <li>Nausicaä of the Valley of the Wind (movie)</li>
+                                <li>Omniscient Reader's Viewpoint (novel)</li>
+                                <li>Parasyte (show + manga)</li>
+                                <li>Percy Jackson (books)</li>
+                                <li>Promare (movie)</li>
+                                <li>Puella Magi Madoka Magica (show) and the Rebellion movie</li>
+                                <li>Tian Guan Ci Fu, or alternatively Heaven Official's Blessing (novel + show)</li>
+                                <li>Transformers: Earthspark and Prime (shows)</li>
+                                <li>The Apothecary Diaries (show)</li>
+                                <li>The Witcher (games + novels)</li>
+                            </ul>
                         </div>
-                        <div>
-                            <b>Art Related Places</b>
-                            <div class="interest-content" style="margin-top: -15px">
-                                <ul>
-                                    <li><a href="https://artfight.net/~Asuraid">Art Fight</a></li>
-                                    <li><a href="https://bsky.app/profile/asuraid.art">Bluesky</a></li>
-                                    <li><a href="https://asuraid.art">Carrd</a></li>
-                                    <li><a href="https://asuraid.itch.io/">Itch.io</a></li>
-                                    <li><a href="https://ko-fi.com/asuraid">Ko-fi</a></li>
-                                    <li><a href="https://www.pillowfort.social/asuraid">Pillowfort</a></li>
-                                    <li><a href="https://sheezy.art/asuraid">Sheezy.art</a></li>
-                                    <li><a href="https://asuraid.tumblr.com">Tumblr</a></li>
-                                    <li><a href="https://vgen.co/asuraid">VGen</a></li>
-                                </ul>
-                            </div>
-                            <b>Tracking Sites</b>
-                            <div class="interest-content" style="margin-top: -15px">
-                                <ul>
-                                    <li><a href="https://www.backloggd.com/u/Asuraid/">Backloggd</a> ⭐</li>
-                                    <li>
-                                        <a href="https://myanimelist.net/profile/Asuraid">MyAnimeList</a>
-                                        ⭐
-                                    </li>
-                                    <li><a href="https://app.thestorygraph.com/profile/asuraid">Storygraph</a> ⭐</li>
-                                    <li>
-                                        <a href="https://myfigurecollection.net/profile/Asuraid">MyFigureCollection</a>
-                                    </li>
-                                    <li><a href="https://www.serializd.com/user/Asuraid/profile">Serializd</a></li>
-                                </ul>
-                            </div>
+                    </section>
+                    <!-- =============================================== -->
+                    <!-- INTERESTS. -->
+                    <!-- =============================================== -->
+                    <section id="tabtastic" aria-hidden="true">
+                        <div class="tab">
+                            <!-- Tab links -->
+                            <button class="tablinks" onclick="openTab(event, 'Games')" id="defaultOpen">Games</button>
+                            <button class="tablinks" onclick="openTab(event, 'Characters')">Characters</button>
+                            <button class="tablinks" onclick="openTab(event, 'Media')">Media</button>
+                            <button class="tablinks" onclick="openTab(event, 'Stamps')">Stamps</button>
+                            <button class="tablinks" onclick="openTab(event, 'Blinkies')">Blinkees + More</button>
+                            <button class="tablinks" onclick="openTab(event, 'Memes')">#Me Memes</button>
+                            <button class="tablinks" onclick="openTab(event, 'quizzes')">Quizzes</button>
+                            <button class="tablinks" onclick="openTab(event, 'Picrews')">Picrew</button>
+                            <button class="tablinks" onclick="openTab(event, 'Webrings')">Webrings</button>
+                            <button class="tablinks" onclick="openTab(event, 'Cliques')">Cliques</button>
                         </div>
-                    </div>
-                </article>
-                <!-- =============================================== -->
-                <!-- INTERESTS. -->
-                <!-- =============================================== -->
-                <!-- =============================================== -->
-                <!-- WARNING. -->
-                <!-- =============================================== -->
-                <article class="info">
-                    <i class="fas fa-hammer" aria-hidden="true"></i> Work in progress below, some of the tabs are
-                    unstyled right now since I'm updating this section.
-                </article>
-                <article>
-                    <div class="tab">
-                        <!-- Tab links -->
-                        <button class="tablinks" onclick="openTab(event, 'Games')" id="defaultOpen">Games</button>
-                        <button class="tablinks" onclick="openTab(event, 'Characters')">Characters</button>
-                        <button class="tablinks" onclick="openTab(event, 'Media')">Media</button>
-                        <button class="tablinks" onclick="openTab(event, 'Stamps')">Stamps</button>
-                        <button class="tablinks" onclick="openTab(event, 'Blinkies')">Fanlistings + More</button>
-                        <button class="tablinks" onclick="openTab(event, 'Fanlistings')">#Me Memes</button>
-                        <button class="tablinks" onclick="openTab(event, 'quizzes')">Quizzes</button>
-                        <button class="tablinks" onclick="openTab(event, 'Picrews')">Picrew</button>
-                        <button class="tablinks" onclick="openTab(event, 'Webrings')">Webrings</button>
-                        <button class="tablinks" onclick="openTab(event, 'Cliques')">Cliques</button>
-                    </div>
-                </article>
-                <article>
-                    <div>
+                    </section>
+                    <section aria-hidden="true">
                         <!-- Tab Content: Games -->
                         <div id="Games" class="tabcontent">
-                            <h1>Favourite Games</h1>
-                            <div class="tabcontentinside interest-content">
+                            <h2>Favourite Games</h2>
+                            <div class="tabcontentinside">
                                 <div class="flexbox">
                                     <div>
                                         <img src="img/media/aceattorney.png" alt="" loading="lazy" />
@@ -542,6 +782,10 @@
                                     <div>
                                         <img src="img/media/deltarune.png" alt="" loading="lazy" />
                                         <p>Deltarune</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/dispatch.png" alt="" loading="lazy" />
+                                        <p>Dispatch</p>
                                     </div>
                                     <div>
                                         <img src="img/media/da_2.png" alt="" loading="lazy" />
@@ -584,6 +828,18 @@
                                         <p>The Legend of Spyro: Dawn of the Dragon</p>
                                     </div>
                                     <div>
+                                        <img src="img/media/luxor3.png" alt="" loading="lazy" />
+                                        <p>Luxor 3</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/mass_effect.png" alt="" loading="lazy" />
+                                        <p>Mass Effect Series</p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/minecraft.png" alt="" loading="lazy" />
+                                        <p>Minecraft</p>
+                                    </div>
+                                    <div>
                                         <img src="img/media/nfsmw.png" alt="" loading="lazy" />
                                         <p>Need for Speed Most Wanted</p>
                                     </div>
@@ -620,6 +876,10 @@
                                         <p>Vampire Survivors</p>
                                     </div>
                                     <div>
+                                        <img src="img/media/warframe.png" alt="" loading="lazy" />
+                                        <p>Warframe</p>
+                                    </div>
+                                    <div>
                                         <img src="img/media/witcher.png" alt="" loading="lazy" />
                                         <p>The Witcher Series</p>
                                     </div>
@@ -630,9 +890,11 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- end games -->
 
+                        <!-- Tab Content: Characters -->
                         <div id="Characters" class="tabcontent">
-                            <h1>Favourite Characters</h1>
+                            <h2>Favourite Characters</h2>
 
                             <p>
                                 Anything with a <span role="img" aria-label="moon">&#x1F319;</span> is a character I
@@ -809,9 +1071,11 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- end characters -->
 
-                        <div id="Media" class="tabcontent interest-content">
-                            <h1>Favourite Movies + Shows + Books</h1>
+                        <!-- Tab Content: Media -->
+                        <div id="Media" class="tabcontent">
+                            <h2>Favourite Movies + Shows + Books</h2>
                             <p>
                                 The order of what media type it is <u>does</u> matter: the first is the one I got
                                 exposed to first, the rest are other media types I've consumed.
@@ -857,12 +1121,24 @@
                                         <p>Mashle<br /><i>Show</i></p>
                                     </div>
                                     <div>
+                                        <img src="img/media/nausicaa.png" alt="" loading="lazy" />
+                                        <p>Nausicaa<br /><i>Movie</i></p>
+                                    </div>
+                                    <div>
                                         <img src="img/media/orv.png" alt="" loading="lazy" />
                                         <p>
                                             <span class="tippy" data-tippy-content="Omniscient Reader's Viewpoint"
                                                 >ORV</span
                                             ><br /><i>Novel</i>
                                         </p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/parasyte.png" alt="" loading="lazy" />
+                                        <p>Parasyte<br /><i>Show</i></p>
+                                    </div>
+                                    <div>
+                                        <img src="img/media/percy_jackson.png" alt="" loading="lazy" />
+                                        <p>Percy Jackson<br /><i>Books</i></p>
                                     </div>
                                     <div>
                                         <img src="img/media/promare.png" alt="" loading="lazy" />
@@ -911,21 +1187,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <ul>
-                                <li>Mob Psycho 100</li>
-                                <li>Nausicaä of the Valley of the Wind</li>
-                                <li>Parasyte</li>
-                                <li><u>Percy Jackson</u></li>
-                                <li>The Master of Diabolism / MDZS</li>
-                                <li>The Scum Villain's Self-Saving System / SVSSS</li>
-                                <li>Welcome to Demon School! Iruma-kun</li>
-                                <li>... <a href="https://myanimelist.net/animelist/Asuraid">+ more</a></li>
-                            </ul>
                         </div>
+                        <!-- end media -->
 
-                        <div id="Stamps" class="tabcontent">
-                            <h1>Stamp Hoard</h1>
-                            <div class="tabcontentinside hover-grow" style="gap: 0">
+                        <!-- Tab Content: Stamps -->
+                        <div id="Stamps" class="tabcontent" aria-hidden="true">
+                            <h2>Stamp Hoard</h2>
+                            <div class="tabcontentinside hover-grow flexstamps" style="gap: 0">
                                 <div class="flexstamps">
                                     <a
                                         href="https://www.tumblr.com/lovisu/770256337094475776/day-04-spending-christmas-your-favorite?source=share"
@@ -939,7 +1207,11 @@
                                     /></a>
                                     <a
                                         href="https://www.deviantart.com/monochromegastar/art/Clip-Studio-Paint-Stamp-497055716"
-                                        ><img src="img/stamps/csp.gif" loading="lazy" alt='"clip studio" stamp'
+                                        ><img
+                                            src="img/stamps/csp.gif"
+                                            loading="lazy"
+                                            alt='"clip studio" stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/violetsteel/art/I-love-pink-stamp-70013332"
                                         ><img
@@ -978,7 +1250,11 @@
                                             alt='"i draw what i want" stamp'
                                     /></a>
                                     <a href="https://www.deviantart.com/xsatoshi/art/Madoka-Homura-Stamp-332679211"
-                                        ><img src="img/stamps/madohomu.gif" loading="lazy" alt="madohomu ship stamp"
+                                        ><img
+                                            src="img/stamps/madohomu.gif"
+                                            loading="lazy"
+                                            alt="madohomu ship stamp"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/clubpenguln/art/penis-713590254"
                                         ><img src="img/stamps/penis.jpeg" loading="lazy" alt='"penis..." stamp'
@@ -991,13 +1267,18 @@
                                             loading="lazy"
                                     /></a>
                                     <a href="https://www.deviantart.com/teethys/art/goatlings-stamp-639379116"
-                                        ><img src="img/stamps/goatlings.gif" loading="lazy" alt='"goatlings" stamp'
+                                        ><img
+                                            src="img/stamps/goatlings.gif"
+                                            loading="lazy"
+                                            alt='"goatlings" stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/aviseya/art/Flight-Rising-Stamp-509130769"
                                         ><img
                                             src="img/stamps/flightrising.gif"
                                             loading="lazy"
                                             alt='"flight rising addict" stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/coffiedog/art/Webkinz-Plush-Stamp-762926518"
                                         ><img src="img/stamps/webkinz.png" loading="lazy" alt='"webkinz" stamp'
@@ -1007,26 +1288,44 @@
                                             src="img/stamps/pokemon_starter.gif"
                                             loading="lazy"
                                             alt='"still one of life&#39;s hardest decisions" pokemon starter stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a
                                         href="https://www.deviantart.com/boo-stamps/art/Pokemon-Stamp-Giratina-Origin-435366738"
-                                        ><img src="img/stamps/giratina.gif" loading="lazy" alt="giratina pokemon stamp"
+                                        ><img
+                                            src="img/stamps/giratina.gif"
+                                            loading="lazy"
+                                            alt="giratina pokemon stamp"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/zmei-kira/art/Lugia-stamp-641429848"
-                                        ><img src="img/stamps/lugia.gif" loading="lazy" alt="lugia pokemon stamp"
+                                        ><img
+                                            src="img/stamps/lugia.gif"
+                                            loading="lazy"
+                                            alt="lugia pokemon stamp"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/stamp221/art/Rain-Stamp-215306917"
                                         ><img
                                             src="img/stamps/i_love_rain.gif"
                                             loading="lazy"
                                             alt='"i heart rain" stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/ladieoffical/art/Oh-Deer-Stamp-93298179"
-                                        ><img src="img/stamps/oh_deer.gif" loading="lazy" alt='"oh deer" stamp'
+                                        ><img
+                                            src="img/stamps/oh_deer.gif"
+                                            loading="lazy"
+                                            alt='"oh deer" stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a
                                         href="https://www.deviantart.com/zmei-kira/art/Eeveelutions-stamp-Sylveon-641409731"
-                                        ><img src="img/stamps/sylveon.gif" loading="lazy" alt="sylveon pokemon stamp"
+                                        ><img
+                                            src="img/stamps/sylveon.gif"
+                                            loading="lazy"
+                                            alt="sylveon pokemon stamp"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/bleached-inc/art/Ukitake-Stamp-52713005"
                                         ><img src="img/stamps/ukitake.gif" loading="lazy" alt="jushiro ukitake stamp"
@@ -1041,7 +1340,11 @@
                                             loading="lazy"
                                     /></a>
                                     <a href="https://www.deviantart.com/wangqr/art/Sushi-Love-Stamp-326456537"
-                                        ><img src="img/stamps/sushi_love.gif" loading="lazy" alt='"sushi love" stamp'
+                                        ><img
+                                            src="img/stamps/sushi_love.gif"
+                                            loading="lazy"
+                                            alt='"sushi love" stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a
                                         href="https://www.deviantart.com/paolachief117/art/I-love-Spaghetti-Stamp-520412215"
@@ -1049,6 +1352,7 @@
                                             src="img/stamps/i_love_spaghetti.gif"
                                             loading="lazy"
                                             alt='"i heart spaghetti" stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a
                                         href="https://www.deviantart.com/paolachief117/art/I-love-Coffe-and-Milk-Stamp-520412074"
@@ -1056,6 +1360,7 @@
                                             src="img/stamps/i_love_coffee_and_milk.gif"
                                             loading="lazy"
                                             alt='"i heart coffee and milk" stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a
                                         href="https://www.deviantart.com/raspberryred/art/cant-live-without-tea-stamp-134216337"
@@ -1063,12 +1368,14 @@
                                             src="img/stamps/tea.gif"
                                             loading="lazy"
                                             alt='"i can&#39;t live without tea" stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/gunsweat/art/i-m-620799045"
                                         ><img
                                             src="img/stamps/im_gay.gif"
                                             loading="lazy"
                                             alt='"i&#39;m gay" audio stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a
                                         href="https://99fish.tumblr.com/post/756994773310636032/hi-heres-the-entire-twilight-movie-as-a-stamp"
@@ -1076,12 +1383,14 @@
                                             src="img/stamps/twilight_movie.gif"
                                             alt="the entire twilight movie in a stamp"
                                             loading="lazy"
+                                            class="freeze"
                                     /></a>
                                     <a href="https://www.deviantart.com/jazzaaro/art/Slow-Artist-Stamp-167726310"
                                         ><img
                                             src="img/stamps/slow_artist.gif"
                                             loading="lazy"
                                             alt='"I&#39;m a slow artist" stamp'
+                                            class="freezeframe"
                                     /></a>
                                     <a
                                         href="https://www.deviantart.com/lizardliker/art/don-t-fuck-dragons-kids-597711503"
@@ -1104,6 +1413,7 @@
                                             loading="lazy"
                                             alt="stamp of classic spyro flying"
                                             style="width: 99px"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/poserfan/art/Tumblr-Stamp-320198962"
                                         ><img
@@ -1135,48 +1445,56 @@
                                             src="img/stamps/mtmte_tailgate.gif"
                                             loading="lazy"
                                             alt="tailgate more than meets the eye stamp"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/imber-noctis/art/MTMTE-Rodimus-stamp-339496813"
                                         ><img
                                             src="img/stamps/mtmte_roddy.gif"
                                             loading="lazy"
                                             alt="rodimus more than meets the eye stamp"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/imber-noctis/art/MTMTE-Drift-stamp-339504899"
                                         ><img
                                             src="img/stamps/mtmte_drift.gif"
                                             loading="lazy"
                                             alt="drift more than meets the eye stamp"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/imber-noctis/art/TFP-Ratchet-stamp-363831418"
                                         ><img
                                             src="img/stamps/tfp_ratchet.gif"
                                             loading="lazy"
                                             alt="ratchet transformers prime stamp"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/imber-noctis/art/TFP-Wheeljack-stamp-243617856"
                                         ><img
                                             src="img/stamps/tfp_wheeljack.gif"
                                             loading="lazy"
                                             alt="wheeljack transformers prime stamp"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/imber-noctis/art/TFP-Soundwave-stamp-243616076"
                                         ><img
                                             src="img/stamps/tfp_soundwave.gif"
                                             loading="lazy"
                                             alt="soundwave transformers prime stamp"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/imber-noctis/art/TFP-Breakdown-stamp-243614107"
                                         ><img
                                             src="img/stamps/tfp_breakdown.gif"
                                             loading="lazy"
                                             alt="breakdown transformers prime"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.deviantart.com/imber-noctis/art/TFP-Knockout-stamp-243614838"
                                         ><img
                                             src="img/stamps/tfp_knockout.gif"
                                             loading="lazy"
                                             alt="knockout transformers prime"
+                                            class="freezeframe"
                                     /></a>
                                     <img src="img/stamps/gamegrumps.png" loading="lazy" alt="game grumps" />
                                     <a href="https://www.tumblr.com/espressopng/780179133004120064"
@@ -1203,7 +1521,11 @@
                                     /></a>
                                     <a
                                         href="https://www.tumblr.com/engravedlives/748854392379342848/misc-pink-stamps-graphics"
-                                        ><img src="img/stamps/69_buried.gif" loading="lazy" alt="69 buried, 0 found"
+                                        ><img
+                                            src="img/stamps/69_buried.gif"
+                                            loading="lazy"
+                                            alt="69 buried, 0 found"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://lazer-bunny.neocities.org/Graphics/MyGraphics"
                                         ><img
@@ -1251,13 +1573,20 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- end stamps -->
 
-                        <div id="Blinkies" class="tabcontent hover-grow">
-                            <h1>Blinkies + Shiny Buttons + User Boxes + Fanlistings</h1>
+                        <!-- Tab Content: Blinkees -->
+                        <div id="Blinkies" class="tabcontent hover-grow" aria-hidden="true">
+                            <h2>Blinkies + Shiny Buttons + User Boxes</h2>
                             <p>
                                 A lot of my blinkies come from the
                                 <a href="https://blinkees.blog/">blinkee tumblr blog</a> or the
                                 <a href="https://blinkies.cafe/">blinkies cafe</a>, if they don't have a link on hover.
+                            </p>
+                            <p>
+                                Shiny buttons are by
+                                <a href="https://rentry.org/lavender-buttons">lavender-galactic</a> and
+                                <a href="https://lockheart.love/graphics/shinybuttons">lockheart</a>
                             </p>
                             <p>
                                 ... yeah I know it's a lot of things in one tab but I didn't know where to put them w/o
@@ -1476,8 +1805,8 @@
                                     /></a>
                                 </div>
                                 <hr />
-                                <div class="hover-grow" style="text-align: center">
-                                    <a href="https://rentry.org/lavender-buttons">
+                                <div style="text-align: center">
+                                    <div class="flexstamps">
                                         <img src="img/shiny/Archon.gif" loading="lazy" alt="" aria-hidden="true" /><img
                                             src="img/shiny/Dendro.gif"
                                             loading="lazy"
@@ -1526,174 +1855,140 @@
                                             src="img/shiny/yumejoshi.gif"
                                             loading="lazy"
                                             alt=""
-                                            aria-hidden="true" /></a
-                                    ><a href="https://lockheart.love/graphics/shinybuttons"
-                                        ><img src="img/shiny/furina.gif" loading="lazy" alt="" aria-hidden="true" /><img
+                                            aria-hidden="true" /><img
+                                            src="img/shiny/furina.gif"
+                                            loading="lazy"
+                                            alt=""
+                                            aria-hidden="true" /><img
                                             src="img/shiny/mizisua.gif"
                                             loading="lazy"
                                             alt=""
                                             aria-hidden="true" />
-                                    </a>
+                                    </div>
                                 </div>
                                 <hr />
-                                <div class="hover-grow" style="justify-content: center; text-align: center">
-                                    <a href="https://glitterskies.org/bg3/index.php"
-                                        ><img src="img/fanlistings/bg3.png" loading="lazy" alt="Baldur's Gate 3"
-                                    /></a>
-                                    <a href="https://fan.shinshoku.net/fenris/"
-                                        ><img src="img/fanlistings/fenris.png" loading="lazy" alt="Fenris Dragon Age"
-                                    /></a>
-                                    <a href="https://garrus.palaven.org/"
-                                        ><img src="img/fanlistings/garrus.png" loading="lazy" alt="Garrus Vakarian"
-                                    /></a>
-                                    <a href="https://genshin.celestia.nu"
-                                        ><img
-                                            src="img/fanlistings/genshin_50x50_01.gif"
-                                            loading="lazy"
-                                            alt="Genshin Impact"
-                                    /></a>
-                                    <a href="https://hades.redcrown.net/fan/"
-                                        ><img src="img/fanlistings/hades.png" loading="lazy" alt="Hades Game"
-                                    /></a>
-                                    <a href="https://www.marheavenj.net/madoka/index.php"
-                                        ><img src="img/fanlistings/madoka.jpg" loading="lazy" alt="Madoka Kaname"
-                                    /></a>
-                                    <a href="https://sky-petals.org/wright/"
-                                        ><img src="img/fanlistings/phoenix.gif" loading="lazy" alt="Phoenix Wright"
-                                    /></a>
-                                    <a href="https://shadow-lord.com/atlantis/about.php"
-                                        ><img
-                                            src="img/fanlistings/stargate_atlantis.png"
-                                            loading="lazy"
-                                            alt="Stargate Atlantis"
-                                    /></a>
-                                    <a href="https://psyche.nu/wwx/index.php"
-                                        ><img src="img/fanlistings/weiwuxian.jpg" loading="lazy" alt="Wei Wuxian"
-                                    /></a>
-                                    <a href="https://fan.kirai.org/miko/"
-                                        ><img src="img/fanlistings/yae.png" loading="lazy" alt="Yae Miko"
-                                    /></a>
-                                    <a href="https://zhongli.celestia.nu/index.php"
-                                        ><img src="img/fanlistings/zhongli.png" loading="lazy" alt="Zhongli"
-                                    /></a>
-                                </div>
-                                <hr />
-                                <div class="hover-grow" style="justify-content: center; text-align: center">
+                                <div class="hover-grow userboxes" style="justify-content: center; text-align: center">
                                     <img
-                                        style="max-width: 239px"
                                         src="https://i.imgur.com/YZPw46p.jpeg"
                                         alt="this user is a plant lover"
                                         loading="lazy"
                                         title="made by lavendergalactic only for my use" />
                                     <img
-                                        style="max-width: 239px"
                                         src="https://i.imgur.com/tvERBuH.jpeg"
                                         alt="this user is a deer lover"
                                         loading="lazy"
                                         title="made by lavendergalactic only for my use" />
                                     <img
-                                        style="max-width: 239px"
                                         src="https://i.imgur.com/v0UeEUr.jpeg"
                                         alt="this user loves sylvie"
                                         loading="lazy"
                                         title="made by lavendergalactic only for my use" />
                                     <a href="https://pixelsafari.neocities.org/misc/"
                                         ><img
-                                            style="max-width: 239px"
                                             src="https://i.imgur.com/AGDd1Su.jpeg"
                                             alt="this user is man door hand hook car door"
                                             loading="lazy"
                                     /></a>
                                     <img
-                                        style="max-width: 239px"
                                         src="img/userboxes/cringe-culture-is-dead.jpg"
                                         alt="this user thinks cringe culture is dumb, just enjoy yourself!"
                                         loading="lazy" />
                                     <img
-                                        style="max-width: 239px"
                                         src="img/userboxes/dinosaurs.jpg"
                                         alt="this user loves dinosaurs"
                                         loading="lazy" />
                                     <img
-                                        style="max-width: 239px"
                                         src="img/userboxes/does-bruno-mars-is-gay.jpg"
                                         alt="the rumor come out: does this user is gay?"
                                         loading="lazy" />
                                     <img
-                                        style="max-width: 239px"
                                         src="img/userboxes/drew-gooden.png"
                                         alt="drew gooden's road work ahead meme"
                                         loading="lazy" />
                                     <img
-                                        style="max-width: 239px"
                                         src="img/userboxes/fictional-characters.jpg"
                                         alt="this user is emotionally attached to fictional characters"
                                         loading="lazy" />
                                     <img
-                                        style="max-width: 239px"
                                         src="img/userboxes/stuffed-animals.jpg"
                                         alt="this user sleeps with a stuffed animal"
                                         loading="lazy" />
                                 </div>
                             </div>
                         </div>
+                        <!-- end blinkees -->
 
-                        <div id="Fanlistings" class="tabcontent" style="gap: 0">
-                            <h1>#Me Memes</h1>
+                        <!-- Tab Content: Memes -->
+                        <div id="Memes" class="tabcontent" aria-hidden="true">
+                            <h2>#Me Memes</h2>
                             <div class="tabcontentinside">
                                 <img
                                     src="https://64.media.tumblr.com/64f1b9fac0590ba89050a87273d0a1c7/f9112ef07dce9674-c7/s640x960/b98a16e89a4c59c738bace98c7e2b78ac6ad7076.jpg"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/89d70b4b240fb1ce7554c17122e64dee/b1c8320565ec2413-24/s1280x1920/b49e95e03b319a51ada80b1295f67e3328b4a258.jpg"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/358fb48753c94b2cb8746b41a1c3cc89/119a8a290f324a5f-cc/s1280x1920/ad699206e17f311e9cc38bfb6ba496914aea52f5.jpg"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/8b34e73dc1d4234977ed5d23dadeae3f/5a8d38c3dbe01071-69/s1280x1920/6809f995966954186bad0b8cfd623aab008d6695.jpg"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/d62ec1e2843ab23a8279b2df96639150/b1c30ac5b4b89475-05/s1280x1920/49769a2b99e45fabb9997831f4fa307926d43463.jpg"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/e4092089a7015361f9501dfefc47d19a/2a225c8674934273-72/s1280x1920/ceb33961da719dec5914b202d2d2c8958a4ee848.jpg"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/3fbc94133a1393d534a6f5878166bc2c/f15d19b2d11eed20-7d/s500x750/73c0803f66d18fd358c90fe0bde69a44df4df24d.png"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/e79a691b2bfa9b7c9903f1295eea4019/36b285045f938ab3-b5/s1280x1920/f3af634a5b7eb25db02f55af516bd706b9ca1d1a.jpg"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/88103e7925feecedc7e6a3425c87b965/bb7f89daa339a852-20/s1280x1920/118b30d0f291112edb27ab54314008fe9f34433c.jpg"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/d7991cf6363f6be0060beb3e2f60dad3/tumblr_ppxq71iuoV1wv4h8co1_500.png"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/ccc52265b2777824fb31b034a678a24a/24165188f50ecce7-62/s1280x1920/9fef91d95957098e2261ddee2ea0365f70c576cd.png"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                                 <img
                                     src="https://64.media.tumblr.com/b2a8022c96e998e17a6a64863fce2759/09c01427d4e4fc18-23/s1280x1920/c01587f4a61eca260ba535e1a8f817fe9cf69168.jpg"
                                     loading="lazy"
+                                    alt=""
                                     memes />
                             </div>
                         </div>
+                        <!-- end memes -->
 
-                        <div id="quizzes" class="tabcontent">
-                            <h1>Quiz Results</h1>
+                        <!-- Tab Content: Quizzes -->
+                        <div id="quizzes" class="tabcontent" aria-hidden="true">
+                            <h2>Quiz Results</h2>
                             <div class="tabcontentinside hover-grow twocolumn">
                                 <div>
                                     <table
@@ -1982,9 +2277,11 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- end quizzes -->
 
-                        <div id="Picrews" class="tabcontent hover-grow">
-                            <h1>Picrews</h1>
+                        <!-- Tab Content: Quizzes -->
+                        <div id="Picrews" class="tabcontent hover-grow" aria-hidden="true">
+                            <h2>Picrews</h2>
                             <p>
                                 I don't usually make picrews of myself, but I <u>love</u> making picrews of my OCs (if
                                 ... they have the proper things for it; some are edited by me).
@@ -2012,8 +2309,11 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- end picrew -->
 
-                        <div id="Webrings" class="tabcontent">
+                        <!-- Tab Content: Webrings -->
+                        <div id="Webrings" class="tabcontent" aria-hidden="true">
+                            <h2>Webrings</h2>
                             <p>... i'll organize these eventually, sorry it is not pretty</p>
 
                             <div class="tabcontentinside threecolumn">
@@ -2066,34 +2366,26 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- end webrings -->
 
-                        <div id="Cliques" class="tabcontent">
+                        <!-- Tab Content: Cliques -->
+                        <div id="Cliques" class="tabcontent" aria-hidden="true">
+                            <h2>Cliques</h2>
                             <p>eventually i'll haul my cliques here</p>
                         </div>
-                    </div>
+                        <!-- end cliques -->
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
-        <!-- Additional JS -->
+        <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
 
-        <!-- Scroll to Top -->
-        <script src="js/scroll-to-top.js"></script>
-
-        <!-- Page Specific -->
         <script src="js/tabs.js"></script>
     </body>
 </html>

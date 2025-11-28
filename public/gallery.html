@@ -16,538 +16,11 @@
         <!-- Site Description -->
         <meta content="A collection of media I have consumed + my thoughts on it." name="description" />
 
-        <link rel="stylesheet" href="./css/normalize.css" />
-        <script src="./js/tab-title-suffix.js"></script>
-
-        <script src="./js/lightbox-plus-jquery.js"></script>
-        <link href="./css/lightbox.css" rel="stylesheet" />
-
-        <style>
-            :root {
-                --bodyfont: "freepixel";
-                --headerfont: "dosis";
-                --titlefont: "dosis";
-
-                --pagebg: url(./img/light_mode_bg.png) #879d6d;
-
-                --border-radius: 10px;
-
-                --boxbg: #e9ecdb;
-                --boxshadow: rgba(74, 118, 58, 0.46);
-                --color: #16190f;
-                --headers: #4e6137;
-
-                --link: #4e6137;
-                --linkhover: #73582f;
-
-                --titlecolor: #f0fce0;
-
-                --sidebarbg: rgba(0, 0, 0, 0.3);
-                --menutext: #ffffff;
-                --menubg: #4e6137;
-                --menucolor: #e4e9d5;
-                --menubghover: #615037;
-                --menucolorhover: #eee3d4;
-                --menuborder: #c6d2b7;
-
-                --formbg: #e8f1c4;
-                --formcolor: #344c16;
-
-                --detailsbg: #f5f8f0;
-                --hr: #4e6137;
-
-                @media (prefers-color-scheme: dark) {
-                    --pagebg: url(./img/dark_mode_bg.png) #211f1f;
-
-                    --boxbg: #191717;
-                    --boxshadow: rgba(74, 118, 58, 0.15);
-                    --color: #f4f4f4;
-                    --headers: #778d60;
-
-                    --link: #a8d38d;
-                    --linkhover: #e2ae50;
-
-                    --titlecolor: #f0fce0;
-
-                    --sidebarbg: rgba(156, 179, 139, 0.3);
-
-                    --formbg: #252720;
-                    --formcolor: #d3e2c0;
-
-                    --detailsbg: #211f1f;
-                    --hr: #9ab37c;
-                }
-            }
-
-            @font-face {
-                font-family: "venice";
-                src: url(./fonts/VeniceClassic.ttf);
-            }
-            @font-face {
-                font-family: "freepixel";
-                src: url(./fonts/FreePixel.ttf);
-            }
-            @font-face {
-                font-family: "dosis";
-                src: url(./fonts/Dosis-VariableFont_wght.ttf);
-            }
-            @font-face {
-                font-family: "atkinson";
-                src: url(./fonts/AtkinsonHyperlegible-Regular.ttf);
-            }
-
-            @font-face {
-                font-family: "open dyslexic";
-                src: url(./fonts/OpenDyslexic-Regular.otf);
-            }
-
-            @font-face {
-                font-family: "intel one";
-                src: url(./fonts/IntelOneMono-Regular.ttf);
-            }
-
-            @font-face {
-                font-family: "Nunito";
-                font-display: swap;
-                src: url(../fonts/Nunito-VariableFont_wght.ttf);
-            }
-
-            * {
-                margin: 0;
-                padding: 0;
-                transition:
-                    background 0.5s ease,
-                    color 0.5s ease;
-            }
-
-            html {
-                position: relative;
-                min-height: 100%;
-                font-size: 1rem;
-                -moz-osx-font-smoothing: grayscale;
-                -webkit-font-smoothing: antialiased;
-                font-smoothing: antialiased;
-                font-weight: 400;
-            }
-
-            img {
-                margin: 2px;
-                max-width: 100%;
-                height: auto;
-            }
-
-            body {
-                background: var(--pagebg);
-                color: var(--color);
-                font: 1rem "freepixel";
-                background-attachment: fixed;
-                cursor: url(http://www.rw-designer.com/cursor-extern.php?id=186458), auto;
-            }
-
-            #skip a {
-                position: absolute;
-                display: inline-block;
-                left: 0px;
-                top: -1000px;
-                overflow: hidden;
-                transition: top 0.5s ease;
-                background: var(--boxbg);
-                color: var(--link);
-                z-index: 1000;
-                padding: 5px;
-            }
-
-            #skip a:focus {
-                top: 0;
-                transition: top 0.5s ease;
-            }
-
-            #container {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            /* MENU */
-
-            #sidebar-container {
-                flex: 1 1 calc(10% - 20px);
-                min-width: 150px;
-                box-shadow: 1px 1px 3px rgb(0, 0, 0, 0.5);
-                background: var(--sidebarbg);
-                border-radius: 0;
-            }
-
-            #sidebar {
-                position: sticky;
-                width: calc(100% - 20px);
-                padding: 10px;
-                text-align: center;
-                font: 1.2rem var(--headerfont);
-                top: 10px;
-                padding-top: 50px;
-            }
-
-            #sidebar img {
-                max-width: 100%;
-            }
-
-            #sidebar p {
-                color: var(--menutext);
-                line-height: 1.5em;
-                font-size: 1rem;
-                margin: auto;
-                padding: 10px 0;
-            }
-
-            #sidebar label {
-                color: var(--menutext);
-                font-size: 1rem;
-            }
-
-            #sidebar select {
-                max-width: 100%;
-            }
-
-            #main-navigation ul {
-                list-style-type: none;
-            }
-            #main-navigation li {
-                margin-bottom: 5px;
-                font-size: 1rem;
-            }
-
-            #main-navigation li a {
-                text-decoration: none;
-                display: inline-block;
-                width: 90%;
-                background: var(--menubg);
-                border-radius: var(--border-radius);
-                padding: 5px;
-                text-align: center;
-                color: var(--menucolor);
-                border: 0.5px solid var(--menuborder);
-            }
-
-            #main-navigation li a:hover,
-            nav li a:focus {
-                background: var(--menubghover);
-                color: var(--menucolorhover);
-            }
-
-            /* HEADER */
-
-            #main-header {
-                font: 1.5em var(--titlefont);
-                color: var(--titlecolor);
-                font-style: italic;
-            }
-
-            /* CONTENT */
-
-            main {
-                padding: 10px;
-                display: flex;
-                flex-wrap: wrap;
-                flex: 1 1 calc(85% - 20px);
-            }
-
-            main section,
-            #footer {
-                padding: 15px;
-                margin: 12px;
-                background: var(--boxbg);
-                box-shadow: 6px 6px 0 var(--boxshadow);
-                border-radius: var(--border-radius);
-            }
-
-            #footer {
-                text-align: center;
-                margin-top: 20px;
-                flex: 1 1 100%;
-                padding: 15px;
-                background: var(--boxbg);
-                box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.5);
-            }
-
-            main a {
-                color: var(--link);
-            }
-
-            main a:hover,
-            main a:focus {
-                color: var(--linkhover);
-                text-decoration-thickness: 2px;
-            }
-
-            main a img:hover,
-            main a:focus img {
-                opacity: 0.7;
-            }
-
-            main p {
-                margin: 10px 0;
-                line-height: 1.5em;
-                text-align: center;
-            }
-
-            main underline,
-            main u {
-                text-decoration-line: underline;
-                text-decoration-style: dashed;
-                text-decoration-color: var(--hr);
-            }
-
-            main .tippy,
-            main abbr {
-                text-decoration-line: underline;
-                text-decoration-style: dotted;
-                text-decoration-color: var(--hr);
-            }
-
-            main h1 {
-                font: 2em var(--headerfont);
-                margin: 5px 0 5px 0;
-                color: var(--headers);
-                font-weight: bold;
-            }
-
-            main h2 {
-                margin: 10px 0 10px 0;
-                font: 1.7em var(--headerfont);
-                color: var(--headers);
-                text-align: center;
-                font-weight: bold;
-            }
-
-            main h3 {
-                margin: 5px 0 5px 0;
-                font: 1.4em var(--headerfont);
-                color: var(--headers);
-            }
-
-            main h4 {
-                font: 1.2em var(--headerfont);
-                margin: 5px 0 5px 0;
-                color: var(--headers);
-            }
-
-            main input,
-            textarea,
-            select,
-            button {
-                background: var(--formbg);
-                color: var(--formcolor);
-                font: 1rem var(--bodyfont);
-                border: 1px solid var(--hr);
-                padding: 5px;
-                margin: 5px;
-            }
-
-            main ul,
-            ol {
-                list-style-position: outside;
-            }
-
-            main li {
-                margin: 5px 0 5px 0;
-                line-height: 1.4;
-                margin-left: 30px;
-            }
-
-            main summary {
-                cursor: pointer;
-                margin: 5px 0px 5px 0px;
-            }
-
-            main details {
-                padding: 8px;
-                background: var(--detailsbg);
-                margin: 5px 0 5px 0;
-                border-radius: 5px;
-            }
-
-            main hr {
-                border: 0.5px solid var(--hr);
-                margin: 20px;
-            }
-
-            #organization {
-                text-align: center;
-            }
-
-            main #organization ul {
-                padding: 0;
-                list-style: none;
-                display: inline-block;
-            }
-
-            main #organization li {
-                display: inline;
-                line-height: 1.5em;
-                margin: 0;
-            }
-
-            main #organization li:after {
-                content: " -";
-                color: var(--hr);
-            }
-
-            main #organization ul li:first-child {
-                padding-left: 0;
-            }
-
-            main #organization ul li:last-child {
-                padding-right: 0;
-            }
-
-            main #organization ul li:last-child:after {
-                content: "";
-            }
-
-            .external:after {
-                display: inline-block;
-                content: " ";
-                margin-left: 4px;
-                background-size: 1rem 1rem;
-                background-color: var(--link);
-                height: 0.5rem;
-                width: 0.5rem;
-                mask-repeat: no-repeat;
-                mask-position: center;
-                mask-size: contain;
-                mask-image: url("img/misc/external.svg");
-                -webkit-mask-repeat: no-repeat;
-                -webkit-mask-position: center;
-                -webkit-mask-size: contain;
-                -webkit-mask-image: url("img/misc/external.svg");
-            }
-
-            /* FLEX AND GRID */
-
-            .flexcontainer {
-                display: flex;
-                flex-wrap: wrap;
-                margin: auto;
-            }
-
-            .full {
-                flex: 1 1 calc(100% - 30px);
-            }
-            .half {
-                flex: 1 1 calc(50% - 55px);
-            }
-            .third {
-                flex: 1 1 calc(33% - 55px);
-            }
-            .twothird {
-                flex: 1 1 calc(66% - 55px);
-            }
-            .quarter {
-                flex: 1 1 calc(25% - 60px);
-            }
-            .threequarter {
-                flex: 1 1 calc(75% - 55px);
-            }
-
-            .gridcontainer {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                grid-gap: 10px;
-                margin: auto;
-            }
-
-            /* Gallery Alt */
-            /* Wrapper */
-            .image-gallery {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-            }
-
-            /* Items */
-            .image-gallery a {
-                box-sizing: border-box;
-                width: calc(11% - 10px);
-                border: 5px solid var(--hr);
-                border-radius: 10px;
-                overflow: hidden;
-                transition: transform 0.5s ease;
-                aspect-ratio: 1/1;
-                background-color: var(--formbg);
-            }
-
-            /* Images */
-            .image-gallery a img {
-                width: 100%;
-                height: 100%;
-                max-width: 200px;
-                object-fit: cover;
-                margin: 0;
-                transition: 0.5s;
-                aspect-ratio: 1/1;
-            }
-
-            /* Images on Hover */
-            .image-gallery a:hover img {
-                filter: none;
-                -webkit-filter: grayscale(50%);
-                -moz-filter: grayscale(50%);
-                -ms-filter: grayscale(50%);
-                -o-filter: grayscale(50%);
-            }
-
-            #left-text p {
-                text-align: left;
-            }
-
-            @media screen and (max-width: 1024px) {
-                main {
-                    padding: 0;
-                    flex: 0 0 100%;
-                    display: block;
-                }
-
-                .flexcontainer {
-                    display: block;
-                }
-
-                #footer {
-                    margin-top: 20px;
-                }
-
-                #sidebar-container {
-                    flex: 0 0 100%;
-                }
-
-                #sidebar {
-                    position: relative;
-                    height: auto;
-                    text-align: center;
-                    margin-bottom: 1em;
-                    padding-top: 0;
-                }
-
-                #sidebar img {
-                    display: none;
-                }
-
-                #main-navigation li {
-                    display: inline-block;
-                    margin-bottom: 0.75em;
-                }
-
-                #main-navigation li a {
-                    display: inline;
-                    padding: 5px 20px;
-                }
-
-                .image-gallery a {
-                    width: calc(33% - 10px);
-                    max-width: 200px;
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/gallery.css" />
+        <script src="js/tab-title.js"></script>
+        <script src="js/lightbox-plus-jquery.js"></script>
+        <link href="css/lightbox.css" rel="stylesheet" />
     </head>
     <body>
         <div id="top"></div>
@@ -556,7 +29,7 @@
             <div id="sidebar-container">
                 <div id="sidebar">
                     <img
-                        src="./img/sidebar/sylvie_chibi_2.png"
+                        src="img/sidebar/sylvie_chibi_2.png"
                         style="max-width: 100%; margin-bottom: 5px"
                         alt=""
                         aria-hidden="true" />
@@ -577,11 +50,10 @@
                     <br />
                     <label for="fontFamily">Font:</label>
                     <select name="fontFamily" id="fontFamily">
-                        <option value="freepixel">Free Pixel</option>
-                        <option value="atkinson">Atkinson Hyperlegible</option>
-                        <option value="intel one">Intel One Mono</option>
-                        <option value="open dyslexic">Open Dyslexic</option>
                         <option value="Nunito">Nunito</option>
+                        <option value="Open Dyslexic">Open Dyslexic</option>
+                        <option value="Intel One">Intel One</option>
+                        <option value="Atkinson">Atkinson Hyperlegible</option>
                         <option value="Tahoma">Tahoma</option>
                         <option value="Verdana">Verdana</option>
                         <option value="Arial">Arial</option>
@@ -619,7 +91,7 @@
                 <!-- Section tags must be used for blocks -->
                 <section class="full">
                     <img
-                        src="./img/sidebar/sylvie_chibi_3.png"
+                        src="img/sidebar/sylvie_chibi_3.png"
                         style="float: right; max-width: 200px; margin: 5px"
                         alt=""
                         aria-hidden="true" />
@@ -699,165 +171,151 @@
                                 alt="A chibi black and white sketch of Zhongli, he has a gentle smile towards the viewer. A green bow decorates where his ponytail would start."
                         /></a>
                         <a
-                            href="./img/art/2025/sylvie_thighs.webp"
-                            loading="lazy"
+                            href="img/art/2025/sylvie_thighs.webp"
                             data-lightbox="2025"
                             data-title="Draw-over of an image because self indulgence real"
                             data-alt="A character with green hair and closed eyes; they look to be asleep while sitting and holding a phone, while wearing shorts and a tank top that is accentuating their thighs and biceps."
                             ><img
-                                src="./img/art/2025/sylvie_thighs.png"
+                                src="img/art/2025/sylvie_thighs.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A character with green hair and closed eyes."
                         /></a>
                         <a
-                            href="./img/art/2025/bee_com.webp"
-                            loading="lazy"
+                            href="img/art/2025/bee_com.webp"
                             data-lightbox="2025"
                             data-title="YCH Commission"
                             data-alt="A chibi sitting on top of a yellow cupcake with white-blue sprinkles. A honeycomb decorates the cupcake. The character has blonde hair, blue eyes, and a formal white-blue outfit, with a black shoulder cape. Various honey motifs are on the outfit."
                             ><img
-                                src="./img/art/2025/bee_com.jpg"
+                                src="img/art/2025/bee_com.jpg"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A character with blue eyes and blonde hair, wearing a honeycomb earring."
                         /></a>
                         <a
-                            href="./img/art/2025/fluffy.webp"
-                            loading="lazy"
+                            href="img/art/2025/fluffy.webp"
                             data-lightbox="2025"
                             data-title="'Sona', kinda but not really"
                             data-alt="A furry character with a simple, featureless mask with yellow eyes, a fluffy long neck, and a cute cream sweater. Her colours consist of browns and soft pinks, and a long fluffy tail."
                             ><img
-                                src="./img/art/2025/fluffy.png"
+                                src="img/art/2025/fluffy.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A fluffy character with an animal-like skull mask, pointy ears, and neck fluff, with brown-pink colours."
                         /></a>
                         <a
-                            href="./img/art/2025/fumi.webp"
-                            loading="lazy"
+                            href="img/art/2025/fumi.webp"
                             data-lightbox="2025"
                             data-title="YCH Commission"
                             data-alt="A chibi of a character with voluminous red hair, grey-blue eyes, semi-pointed ears, and thick brows."
                             ><img
-                                src="./img/art/2025/fumi.png"
+                                src="img/art/2025/fumi.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A chibi character with red hair, and birthmarks on her face"
                         /></a>
                         <a
-                            href="./img/art/2025/cupcake1.webp"
-                            loading="lazy"
+                            href="img/art/2025/cupcake1.webp"
                             data-lightbox="2025"
                             data-title="YCH Commission"
                             data-alt="A chibi character with brown hair pulled into a ponytail with purple, pink, and yellow tips, and cute heart sunglasses, sitting on top of a yellow-purple frosted cupcake. A yellow plumeria flower decorates the cupcake, alongside cute round sprinkles."
                             ><img
-                                src="./img/art/2025/cupcake1.png"
+                                src="img/art/2025/cupcake1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A chibi character with brown hair and pink-yellow eyes, and a pair of heart sunglasses"
                         /></a>
                         <a
-                            href="./img/art/2025/speenSylvie.gif"
-                            loading="lazy"
+                            href="img/art/2025/speenSylvie.gif"
                             data-lightbox="2025"
                             data-title="Made in Magicavoxel to test it out"
                             data-alt="A 3D model that's rotating around and is made up of tiny cubes. The model is a character with green hair and a ponytail"
                             ><img
-                                src="./img/art/2025/speenSylvie.png"
+                                src="img/art/2025/speenSylvie.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A gif of a 3d model made of tiny pixels"
                         /></a>
                         <a
-                            href="./img/art/2025/sylvie_girly.webp"
-                            loading="lazy"
+                            href="img/art/2025/sylvie_girly.webp"
                             data-lightbox="2025"
                             data-alt="A Genshin Impact original character with green hair, elf-like ears, and an anthro body with black fur and pawed feet. They are sitting in a cute pose with their legs drawn to their chest, and their tail is curled up behind them, and wooden horns decorate the top of their head."
                             ><img
-                                src="./img/art/2025/sylvie_girly.jpg"
+                                src="img/art/2025/sylvie_girly.jpg"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A green haired character with elf-like ears smiling towards the camera"
                         /></a>
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/cerni_sylvie_maid"
-                            loading="lazy"
                             data-lightbox="2025"
                             data-alt="Sylvie, a green haired character, and Cerni, a blue haired character, making a heart together with their hands as they're dressed in maid dresses"
                             ><img
-                                src="./img/art/2025/cerni_sylvie_maid.png"
+                                src="img/art/2025/cerni_sylvie_maid.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A green haired character, and a blue haired character, smiling at the viewer"
                         /></a>
                         <a
-                            href="./img/art/2025/sylvie_pinup.webp"
-                            loading="lazy"
+                            href="img/art/2025/sylvie_pinup.webp"
                             data-lightbox="2025"
                             data-alt="Sylvie, an original genshin character with green hair and pointy ears, lying on an ornate chair in a pin-up pose with their legs crossed and in the air, while wearing heels, dark maroon lipstick, and a dark green frilly dress. They are reading a book and grabbing a chocolate wafer from a box while looking at the viewer with a wink. A chibi Zhongli from Genshin is seen in the corner with wide eyes and a flushed expression. A signature with the name Asuraid is present."
                             ><img
-                                src="./img/art/2025/sylvie_pinup.png"
+                                src="img/art/2025/sylvie_pinup.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A green haired character smirking at the viewer"
                         /></a>
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/zhongvie_remake.png"
-                            loading="lazy"
                             data-lightbox="2025"
                             data-title="This is actually a remake of an art piece I did back in 2021."
                             data-alt="Sylvie, an original genshin character, and Zhongli. Zhongli is lying on his back, partially sitting up, with Sylvie sitting on his lap. They are holding his hand with a gentle squeeze as they are smiling down towards him, a flush on both their cheeks."
                             ><img
-                                src="./img/art/2025/zhongvie.png"
+                                src="img/art/2025/zhongvie.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A character with elf-life ears grinning down towards Zhongli from Genshin Impact"
                         /></a>
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/smiling.png"
-                            loading="lazy"
                             data-lightbox="2025"
                             data-title="First time using my Wacom tablet in like ... two years or something"
                             data-alt="An original character with green hair and pointy elf-like ears, they are looking towards the viewer and are laughing happily with a flush across their face. A signature is in the right corner that writes out Asuraid."
                             ><img
-                                src="./img/art/2025/smiling.png"
+                                src="img/art/2025/smiling.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A character with green hair and elf-like ears laughing with their sharp teeth showing"
                         /></a>
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/bath.png"
-                            loading="lazy"
                             data-lightbox="2025"
                             data-alt="A black and white sketch of an original character with pointy ears sitting in water up to their waist. A long scar decorates their back, alongside birthmarks. Their long hair falls over their shoulders as they're washing it and are looking over their shoulder towards the viewer. A question mark bubble is next to their head. A signature is in the corner, with the name Asuraid."
                             ><img
-                                src="./img/art/2025/bath.jpg"
+                                src="img/art/2025/bath.jpg"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A character with green hair and elf-like looking over their bare shoulder at the viewer"
                         /></a>
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/bana.jpg"
-                            loading="lazy"
                             data-lightbox="2025"
                             data-title="Made for a secret santa exchange"
                             data-alt="Al Haitham from Genshin Impact and an original character with white hair and droopy animal ears. Both are wearing thick winter sweaters. Text to the right of the original character says 'it's so silly to see you so casual like this'. A small sketchy doodle above it has Al Haitham responding 'I could opt for nothing as well' whereas the original character looks flustered in response."
                             ><img
-                                src="./img/art/2025/bana.png"
+                                src="img/art/2025/bana.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Al Haitham from Genshin and an original character with white hair and droopy animal ears"
                         /></a>
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2025/christmas.png"
-                            loading="lazy"
                             data-lightbox="2025"
                             data-title="Made for a secret santa exchange"
                             data-alt="A pokemon original character, and glitchy red from pokemon creepy pastas; the image is in a photo frame decorated by a lapras and snorlax sticker, and small green and red hearts. The two characters are standing shoulder to shoulder, making a cute heart with both their hands."
                             ><img
-                                src="./img/art/2025/christmas.png"
+                                src="img/art/2025/christmas.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A glitchy Red from Pokemon and an original character making a heart together"
@@ -871,11 +329,10 @@
                     <div class="image-gallery">
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2024/2024bdaysylvie_social-protected-intensity-LOW-V2.jpg"
-                            loading="lazy"
                             data-lightbox="2024"
                             data-alt="A genshin OC with green hair and elf-like ears, they are holding a henna berry from the game and are smiling at the camera. Behind them is the Sumeru desert, with the cactus in view having another henna berry on it."
                             ><img
-                                src="./img/art/2024/sylvie_bday.jpg"
+                                src="img/art/2024/sylvie_bday.jpg"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A green haired character with elf-like ears smiling towards the viewer"
@@ -893,11 +350,10 @@
                     <div class="image-gallery">
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2023/fruity-protected-intensity-LOW-V2.png"
-                            loading="lazy"
                             data-lightbox="2023"
                             data-alt="A character with green hair, variou leaves frame the outside of the artwork and overlap their face."
                             ><img
-                                src="./img/art/2023/flowers.png"
+                                src="img/art/2023/flowers.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A green haired character framed by leaves"
@@ -911,12 +367,11 @@
                     <div class="image-gallery">
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2022/treeGodUpdate_social-protected-intensity-LOW-V2.jpg"
-                            loading="lazy"
                             data-lightbox="2022"
                             data-title="Revamp of Sylvie's original god form made back in 2021"
                             data-alt="A Genshin Impact original character with green hair, and elf-like ears. They have a flowing robe that goes from green to black, black tights with flower motifs, a golden sash, and ferns decorating their shoulder. They are holding a dendrocli in their right hand and looking at it."
                             ><img
-                                src="./img/art/2022/godForm.png"
+                                src="img/art/2022/godForm.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A green haired character with ferns decorating their hair and shoulders"
@@ -934,12 +389,11 @@
                     <div class="image-gallery">
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2021/babbayFixt.png"
-                            loading="lazy"
                             data-lightbox="2021"
                             data-title="Celebration for Hideki's birthday :)"
                             data-alt="An original character with white hair, and a comfortable light blue shirt. He is holding a cake that has the numbers 27, and a present in the other hand, while various other original characters are floating around him"
                             ><img
-                                src="./img/art/2021/hidekiBby.png"
+                                src="img/art/2021/hidekiBby.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with red eyes, looking surprised"
@@ -953,11 +407,10 @@
                     <div class="image-gallery">
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2020/sno.png"
-                            loading="lazy"
                             data-lightbox="2020"
                             data-alt="Two original characters, one with black hair is sticking his tongue out and making claws with his hands, the other is with white hair and is winking towards the camera, implying to be holding it. Decorative cat ears and whiskers are on the black haired character, and a dog tail and ears on the white haired character. Happy Valentines is written at the bottom"
                             ><img
-                                src="./img/art/2020/hiderai.png"
+                                src="img/art/2020/hiderai.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Two characters, one is sticking his tongue out, the other is smiling"
@@ -971,11 +424,10 @@
                     <div class="image-gallery">
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2019/ASCENSION.png"
-                            loading="lazy"
                             data-lightbox="2019"
                             data-alt="A killer whale in a blue ocean, sunlight is shining down on it"
                             ><img
-                                src="./img/art/2019/whale.png"
+                                src="img/art/2019/whale.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A killer whale"
@@ -991,12 +443,11 @@
                     </p>
                     <div class="image-gallery">
                         <a
-                            href="./img/art/2018/yadyra.webp"
-                            loading="lazy"
+                            href="img/art/2018/yadyra.webp"
                             data-lightbox="2018"
                             data-alt="A pink haired character, a sash that's on his face is sliced, showing a cluster of various eyes underneath. His body is feathered across his limbs and neck, scars cover parts of his body, and he has two sets of arms. Wings are burning in the background, and an eclipse is behind him"
                             ><img
-                                src="./img/art/2018/yadyra.png"
+                                src="img/art/2018/yadyra.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A pink haired character, a sash that's on his face is sliced, showing a cluster of various eyes underneath"
@@ -1015,273 +466,249 @@
                     <p><u>Art Count:</u> 24</p>
                     <div class="image-gallery">
                         <a
-                            href="./img/art/2017/adaeghor.webp"
-                            loading="lazy"
+                            href="img/art/2017/adaeghor.webp"
                             data-lightbox="2017"
                             data-alt="A spiral dragon from Flight Rising, with a black body, red accents, and various eyeballs across his body"
                             ><img
-                                src="./img/art/2017/adaeghor.png"
+                                src="img/art/2017/adaeghor.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black dragon with three red eyes and red horns"
                         /></a>
                         <a
-                            href="./img/art/2017/hiderai.webp"
-                            loading="lazy"
+                            href="img/art/2017/hiderai.webp"
                             data-lightbox="2017"
                             data-alt="A white haired character giving a kiss to the cheek of a black haired character who is grinning"
                             ><img
-                                src="./img/art/2017/hiderai.png"
+                                src="img/art/2017/hiderai.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character giving a kiss to the cheek of a black haired character who is grinning"
                         /></a>
                         <a
-                            href="./img/art/2017/FEER.webp"
-                            loading="lazy"
+                            href="img/art/2017/FEER.webp"
                             data-lightbox="2017"
                             data-alt="A dark Imperial dragon from Flight Rising wearing a blindfold, various white halos surround his throat, and floating symbolic and stylized eyeballs are around him"
                             ><img
-                                src="./img/art/2017/FEER.png"
+                                src="img/art/2017/FEER.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A dark Imperial dragon from Flight Rising wearing a blindfold, various white halos surround his throat, and floating symbolic and stylized eyeballs are around him"
                         /></a>
                         <a
-                            href="./img/art/2017/hideki_3.webp"
-                            loading="lazy"
+                            href="img/art/2017/hideki_3.webp"
                             data-lightbox="2017"
                             data-alt="A white Imperial dragon from Flight Rising with grey curled horns, red eyes, and a red scarf"
                             ><img
-                                src="./img/art/2017/hideki_3.png"
+                                src="img/art/2017/hideki_3.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white Imperial dragon from Flight Rising with grey curled horns, red eyes, and a red scarf"
                         /></a>
                         <a
-                            href="./img/art/2017/birthdayboop.webp"
-                            loading="lazy"
+                            href="img/art/2017/birthdayboop.webp"
                             data-lightbox="2017"
                             data-title="They were technically original characters, but because they're based off GANGSTA ... yeah"
                             data-alt="Nicolas and Worick from GANGSTA, Worick is holding a small cake and the other is making a peace sign; the words happy birthday are on top"
                             ><img
-                                src="./img/art/2017/birthdayboop.png"
+                                src="img/art/2017/birthdayboop.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Nicolas and Worick from GANGSTA"
                         /></a>
                         <a
-                            href="./img/art/2017/fr_2.webp"
-                            loading="lazy"
+                            href="img/art/2017/fr_2.webp"
                             data-lightbox="2017"
                             data-title="Commission"
                             data-alt="A bust up of a character with fish-like fins for ears, shaggy hair, and many hanging pendants around the neck"
                             ><img
-                                src="./img/art/2017/fr_2.png"
+                                src="img/art/2017/fr_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A bust up of a character with fish-like fins for ears, shaggy hair, and many hanging pendants around the neck"
                         /></a>
                         <a
-                            href="./img/art/2017/drools.webp"
-                            loading="lazy"
+                            href="img/art/2017/drools.webp"
                             data-lightbox="2017"
                             data-alt="A red Ridgeback from Flight Rising with an open, neon green mouth that's drooling a neon green liquid"
                             ><img
-                                src="./img/art/2017/drools.png"
+                                src="img/art/2017/drools.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A red Ridgeback from Flight Rising with an open, neon green mouth that's drooling a neon green liquid"
                         /></a>
                         <a
-                            href="./img/art/2017/hideki_2.webp"
-                            loading="lazy"
+                            href="img/art/2017/hideki_2.webp"
                             data-lightbox="2017"
                             data-alt="A white haired character that's grinning towards the viewer"
                             ><img
-                                src="./img/art/2017/hideki_2.png"
+                                src="img/art/2017/hideki_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character that's grinning towards the viewer"
                         /></a>
                         <a
-                            href="./img/art/2017/fr_1.webp"
-                            loading="lazy"
+                            href="img/art/2017/fr_1.webp"
                             data-lightbox="2017"
                             data-title="Commission"
                             data-alt="A ridgeback from Flight Rising, with scars across the face and a crown of bones alongside antlers"
                             ><img
-                                src="./img/art/2017/fr_1.png"
+                                src="img/art/2017/fr_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A ridgeback from Flight Rising, with scars across the face and a crown of bones alongside antlers"
                         /></a>
                         <a
-                            href="./img/art/2017/hideki_4.webp"
-                            loading="lazy"
+                            href="img/art/2017/hideki_4.webp"
                             data-lightbox="2017"
                             data-alt="A white haired character that's looking down at a phone screen as he sits, various emojis and social media icons are coming out of it. His shirt says 'pretty boy'."
                             ><img
-                                src="./img/art/2017/hideki_4.png"
+                                src="img/art/2017/hideki_4.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character that's looking down"
                         /></a>
                         <a
-                            href="./img/art/2017/fr_5.webp"
-                            loading="lazy"
+                            href="img/art/2017/fr_5.webp"
                             data-lightbox="2017"
                             data-title="Commission"
                             data-alt="A grey Skydancer from Flight Rising, with golden accents, a face veil, and a golden flower crown. Grey candles hover around her, alongside golden petals"
                             ><img
-                                src="./img/art/2017/fr_5.png"
+                                src="img/art/2017/fr_5.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A grey Skydancer from Flight Rising, with golden accents, a face veil, and a golden flower crown"
                         /></a>
                         <a
-                            href="./img/art/2017/itsRaiden.webp"
-                            loading="lazy"
+                            href="img/art/2017/itsRaiden.webp"
                             data-lightbox="2017"
                             data-alt="A black haired character that's smiling at the viewer"
                             ><img
-                                src="./img/art/2017/itsRaiden.png"
+                                src="img/art/2017/itsRaiden.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character that's smiling at the viewer"
                         /></a>
                         <a
-                            href="./img/art/2017/faeries.webp"
-                            loading="lazy"
+                            href="img/art/2017/faeries.webp"
                             data-lightbox="2017"
                             data-title="Commission"
                             data-alt="A purple Imperial from Flight Rising, with orange-blue opal across their body. A pink crown decorates them, and pixies and purple petals hover around them."
                             ><img
-                                src="./img/art/2017/faeries.png"
+                                src="img/art/2017/faeries.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A purple Imperial from Flight Rising, with orange-blue opal across their body. A pink crown decorates them, and pixies and purple petals hover around them."
                         /></a>
                         <a
-                            href="./img/art/2017/murderpip.webp"
-                            loading="lazy"
+                            href="img/art/2017/murderpip.webp"
                             data-lightbox="2017"
                             data-alt="A mirror from Flight Rising with an open maw full of blood and a scar running down her face"
                             ><img
-                                src="./img/art/2017/murderpip.png"
+                                src="img/art/2017/murderpip.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A mirror from Flight Rising with an open maw full of blood and a scar running down her face"
                         /></a>
                         <a
-                            href="./img/art/2017/fr_3.webp"
-                            loading="lazy"
+                            href="img/art/2017/fr_3.webp"
                             data-lightbox="2017"
                             data-title="Commission"
                             data-alt="A Skydancer from Flight Rising, with a fancy hat with a feather and a wolf pelt decorating their mane and head"
                             ><img
-                                src="./img/art/2017/fr_3.png"
+                                src="img/art/2017/fr_3.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A Skydancer from Flight Rising, with a fancy hat with a feather and a wolf pelt decorating their mane and head"
                         /></a>
                         <a
-                            href="./img/art/2017/fr_4.webp"
-                            loading="lazy"
+                            href="img/art/2017/fr_4.webp"
                             data-lightbox="2017"
                             data-title="Commission"
                             data-alt="A yellow-orange Pearlcatcher from Flight Rising, wearing a veil on their face and with lace and flower decorations. Candles hover around them"
                             ><img
-                                src="./img/art/2017/fr_4.png"
+                                src="img/art/2017/fr_4.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A yellow-orange Pearlcatcher from Flight Rising, wearing a veil on their face and with lace and flower decorations. Candles hover around them"
                         /></a>
                         <a
-                            href="./img/art/2017/SPOKKYSCREM.webp"
-                            loading="lazy"
+                            href="img/art/2017/SPOKKYSCREM.webp"
                             data-lightbox="2017"
                             data-alt="A mirror from Flight Rising with her teeth showing, and a scar running down through one eye. A Plague flight symbol is above her head"
                             ><img
-                                src="./img/art/2017/SPOKKYSCREM.png"
+                                src="img/art/2017/SPOKKYSCREM.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A mirror from Flight Rising with her teeth showing, and a scar running down through one eye. A Plague flight symbol is above her head"
                         /></a>
                         <a
-                            href="./img/art/2017/hideki_6.webp"
-                            loading="lazy"
+                            href="img/art/2017/hideki_6.webp"
                             data-lightbox="2017"
                             data-alt="A long haired character with many freckles, looking partially towards the viewer"
                             ><img
-                                src="./img/art/2017/hideki_6.png"
+                                src="img/art/2017/hideki_6.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A long haired character with many freckles, looking partially towards the viewer"
                         /></a>
                         <a
-                            href="./img/art/2017/hideki_5.webp"
-                            loading="lazy"
+                            href="img/art/2017/hideki_5.webp"
                             data-lightbox="2017"
                             data-alt="A white haired character in a bunny suit costume with heels, his knees are pulled up to his chest and he's looking at the viewer"
                             ><img
-                                src="./img/art/2017/hideki_5.png"
+                                src="img/art/2017/hideki_5.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character in a bunny suit costume with heels, his knees are pulled up to his chest and he's looking at the viewer"
                         /></a>
                         <a
-                            href="./img/art/2017/hideki_7.webp"
-                            loading="lazy"
+                            href="img/art/2017/hideki_7.webp"
                             data-lightbox="2017"
                             data-alt="A white haired character grinning; a red halo is around his head and white stars decorate the background. The edges of his hair look like they're melting into liquid"
                             ><img
-                                src="./img/art/2017/hideki_7.png"
+                                src="img/art/2017/hideki_7.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character grinning; a red halo is around his head and white stars decorate the background. The edges of his hair look like they're melting into liquid"
                         /></a>
                         <a
-                            href="./img/art/2017/LOKIS.webp"
-                            loading="lazy"
+                            href="img/art/2017/LOKIS.webp"
                             data-lightbox="2017"
                             data-title="... I genuinely don't remember why I made this ... commission... for Loki to look like the guys from Game of Thrones?"
                             data-alt="Loki from Mythology, with blue skin. A horned helmet rests on his head, and his shoulders are armoured. A scepter is in his right hand."
                             ><img
-                                src="./img/art/2017/LOKIS.png"
+                                src="img/art/2017/LOKIS.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Loki from Mythology, with blue skin. A horned helmet rests on his head, and his shoulders are armoured. A scepter is in his right hand."
                         /></a>
                         <a
-                            href="./img/art/2017/eros.webp"
-                            loading="lazy"
+                            href="img/art/2017/eros.webp"
                             data-lightbox="2017"
                             data-alt="A blonde haired character holding his hands up close to his cheek, and smiling towards the viewer. Pink petals decorate his skin and cheeks, and he has golden horns. Mascara is running down underneath his eyes, but he's not crying, instead smiling at the viewer."
                             ><img
-                                src="./img/art/2017/eros.png"
+                                src="img/art/2017/eros.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A blonde haired character holding his hands up close to his cheek, and smiling towards the viewer. Pink petals decorate his skin and cheeks, and he has golden horns. Mascara is running down underneath his eyes, but he's not crying, instead smiling at the viewer."
                         /></a>
                         <a
-                            href="./img/art/2017/WIP.webp"
-                            loading="lazy"
+                            href="img/art/2017/WIP.webp"
                             data-lightbox="2017"
                             data-alt="A pearlcatcher from Flight Rising, looking right at the viewer. One eye is red, the other is green, and a mask sits on their face. Candles are hoving around them."
                             ><img
-                                src="./img/art/2017/WIP.png"
+                                src="img/art/2017/WIP.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A pearlcatcher from Flight Rising, looking right at the viewer. One eye is red, the other is green, and a mask sits on their face. Candles are hoving around them."
                         /></a>
                         <a
-                            href="./img/art/2017/hideki_1.webp"
-                            loading="lazy"
+                            href="img/art/2017/hideki_1.webp"
                             data-lightbox="2017"
                             data-alt="A white haired character with vibrant red lipstick and eye makeup, the lipstick is smeared by one of his fingers as he's photogenically posing"
                             ><img
-                                src="./img/art/2017/hideki_1.png"
+                                src="img/art/2017/hideki_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with vibrant red lipstick and eye makeup, the lipstick is smeared by one of his fingers as he's photogenically posing"
@@ -1300,675 +727,611 @@
                     <p><u>Art Count:</u> 61</p>
                     <div class="image-gallery">
                         <a
-                            href="./img/art/2016/smokes.webp"
-                            loading="lazy"
+                            href="img/art/2016/smokes.webp"
                             data-lightbox="2016"
                             data-alt="A black haired character with a blue galaxy smoke coming out of his mouth"
                             ><img
-                                src="./img/art/2016/smokes.png"
+                                src="img/art/2016/smokes.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character with a blue galaxy smoke coming out of his mouth"
                         /></a>
                         <a
-                            href="./img/art/2016/stardew.webp"
-                            loading="lazy"
+                            href="img/art/2016/stardew.webp"
                             data-lightbox="2016"
                             data-alt="A four panel comic of Sebastian from stardew valley and a custom farmer with black hair, the farmer finds Sebastian working on his bike and gets flustered about how hot he looks dirtied with oil"
                             ><img
-                                src="./img/art/2016/stardew.png"
+                                src="img/art/2016/stardew.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A simple four comic panel with two characters"
                         /></a>
                         <a
-                            href="./img/art/2016/skull.webp"
-                            loading="lazy"
+                            href="img/art/2016/skull.webp"
                             data-lightbox="2016"
                             data-alt="A bird-like skull sitting in grass, a flower is resting in one eye socket"
                             ><img
-                                src="./img/art/2016/skull.png"
+                                src="img/art/2016/skull.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A bird-like skull sitting in grass, a flower is resting in one eye socket"
                         /></a>
                         <a
-                            href="./img/art/2016/demonio_1.webp"
-                            loading="lazy"
+                            href="img/art/2016/demonio_1.webp"
                             data-lightbox="2016"
                             data-alt="A chibi of Demonio from ELsword, who is blushing"
                             ><img
-                                src="./img/art/2016/demonio_1.png"
+                                src="img/art/2016/demonio_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A chibi of Demonio from ELsword, who is blushing"
                         /></a>
                         <a
-                            href="./img/art/2016/raiden.webp"
-                            loading="lazy"
+                            href="img/art/2016/raiden.webp"
                             data-lightbox="2016"
                             data-alt="A black haired character with a disgruntled expression as he holds up a middle finger towards the viewer"
                             ><img
-                                src="./img/art/2016/raiden.png"
+                                src="img/art/2016/raiden.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character with a disgruntled expression"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_3.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_3.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character that looks masc, wearing lipstick and a purple dress and high heels"
                             ><img
-                                src="./img/art/2016/hideki_3.png"
+                                src="img/art/2016/hideki_3.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with lipstick"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_3.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_3.webp"
                             data-lightbox="2016"
                             data-alt="A black haired character squishing the cheeks of a white haired character who is looking at him lovingly"
                             ><img
-                                src="./img/art/2016/hiderai_3.png"
+                                src="img/art/2016/hiderai_3.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character squishing the cheeks of a white haired character who is looking at him lovingly"
                         /></a>
                         <a
-                            href="./img/art/2016/dragon_raiden.webp"
-                            loading="lazy"
+                            href="img/art/2016/dragon_raiden.webp"
                             data-lightbox="2016"
                             data-alt="A black haired character with goggles and animal-like ears. Dragon wings are coming out of his back, and antler-like horns are on his head"
                             ><img
-                                src="./img/art/2016/dragon_raiden.png"
+                                src="img/art/2016/dragon_raiden.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character with goggles and animal-like ears"
                         /></a>
                         <a
-                            href="./img/art/2016/dragon_hideki.webp"
-                            loading="lazy"
+                            href="img/art/2016/dragon_hideki.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character with facial marks, a set of rounded and antler horns, draconic wings, and a symbol hovering above his head"
                             ><img
-                                src="./img/art/2016/dragon_hideki.png"
+                                src="img/art/2016/dragon_hideki.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with facial marks"
                         /></a>
                         <a
-                            href="./img/art/2016/demonio.webp"
-                            loading="lazy"
+                            href="img/art/2016/demonio.webp"
                             data-lightbox="2016"
                             data-alt="Demonio from Elsword, with blood coming out of his mouth"
                             ><img
-                                src="./img/art/2016/demonio.png"
+                                src="img/art/2016/demonio.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Demonio from Elsword, with blood coming out of his mouth"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_2.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_2.webp"
                             data-lightbox="2016"
                             data-alt="A black haired character kissing the throat of a white haired character who is giggling, hickies cover both their necks"
                             ><img
-                                src="./img/art/2016/hiderai_2.png"
+                                src="img/art/2016/hiderai_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character kissing the throat of a white haired character who is giggling, hickies cover both their necks"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_1.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_1.webp"
                             data-lightbox="2016"
                             data-alt="A black haired character being cuddled from beind by a white haired one who is pouting as they are sitting on the ground"
                             ><img
-                                src="./img/art/2016/hiderai_1.png"
+                                src="img/art/2016/hiderai_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character being cuddled by a white haired one who is pouting"
                         /></a>
                         <a
-                            href="./img/art/2016/ciel_2.webp"
-                            loading="lazy"
+                            href="img/art/2016/ciel_2.webp"
                             data-lightbox="2016"
                             data-alt="DA pixel doll of Dreadlord from Elsword, though his outfit includes black hair and the millennium fox back accessory, and the bunny suit outfit"
                             ><img
-                                src="./img/art/2016/ciel_2.png"
+                                src="img/art/2016/ciel_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A pixel doll of Dreadlord from Elsword, though his outfit includes black hair and the millennium fox back accessory, and the bunny suit outfit"
                         /></a>
                         <a
-                            href="./img/art/2016/ciel.webp"
-                            loading="lazy"
+                            href="img/art/2016/ciel.webp"
                             data-lightbox="2016"
                             data-alt="Dreadlord from Elsword, though he is wearing a fluffy coat instead of his standard outfit"
                             ><img
-                                src="./img/art/2016/ciel.png"
+                                src="img/art/2016/ciel.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Dreadlord from Elsword, though he is wearing a fluffy coat instead of his standard outfit"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_2.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_2.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character viewed from a back angle, you can see tears falling down as his hands are pressed against the back of his own neck"
                             ><img
-                                src="./img/art/2016/hideki_2.png"
+                                src="img/art/2016/hideki_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character viewed from a back angle, you can see tears falling down"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_1.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_1.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character looking surprised and blushing, the words 'happy birthday Hideki' are off to the side"
                             ><img
-                                src="./img/art/2016/hideki_1.png"
+                                src="img/art/2016/hideki_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character looking surprised and blushing"
                         /></a>
                         <a
-                            href="./img/art/2016/pokemon.webp"
-                            loading="lazy"
+                            href="img/art/2016/pokemon.webp"
                             data-lightbox="2016"
                             data-title="I think this was fanart of ... some YouTuber's pokemon run, but I genuinely do not remember what it was for"
                             data-alt="A funky version of Kirila from Pokemon"
                             ><img
-                                src="./img/art/2016/pokemon.png"
+                                src="img/art/2016/pokemon.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A funky version of Kirila from Pokemon"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character kissing the cheek of a black haired character with a messy hair-do, the black haired character's hands are pinned above his head with a simple red rope"
                             ><img
-                                src="./img/art/2016/hiderai.png"
+                                src="img/art/2016/hiderai.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character kissing the cheek of a black haired character with a messy hair-do"
                         /></a>
                         <a
-                            href="./img/art/2016/bloody_1.webp"
-                            loading="lazy"
+                            href="img/art/2016/bloody_1.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character covered in scratches and with a bloody nose and knuckles, he is crying and looking upset"
                             ><img
-                                src="./img/art/2016/bloody_1.png"
+                                src="img/art/2016/bloody_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character covered in scratches and with a bloody nose and knuckles, he is crying and looking upset"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character who is looking sheepish and smiling at the viewer, while in a relaxed pose. He is wearing a comfortable beige sweater, and ripped jeans"
                             ><img
-                                src="./img/art/2016/hideki.png"
+                                src="img/art/2016/hideki.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character looking sheepish and smiling"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_4.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_4.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character, a red moon is in the background like a halo"
                             ><img
-                                src="./img/art/2016/hideki_4.png"
+                                src="img/art/2016/hideki_4.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with a red moon in the background"
                         /></a>
-                        <a
-                            href="./img/art/2016/ukitake.webp"
-                            loading="lazy"
-                            data-lightbox="2016"
-                            data-alt="Ukitake from Bleach"
+                        <a href="img/art/2016/ukitake.webp" data-lightbox="2016" data-alt="Ukitake from Bleach"
                             ><img
-                                src="./img/art/2016/ukitake.png"
+                                src="img/art/2016/ukitake.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Ukitake from Bleach"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_5.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_5.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character looking sheepish and smiling"
                             ><img
-                                src="./img/art/2016/hideki_5.png"
+                                src="img/art/2016/hideki_5.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character looking sheepish and smiling"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_4.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_4.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character and a black haired character sitting and eating hamburgers"
                             ><img
-                                src="./img/art/2016/hiderai_4.png"
+                                src="img/art/2016/hiderai_4.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and a black haired character sitting and eating hamburgers"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_5.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_5.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character taking a selfie and smiling, while the black haired character looks happily surprised"
                             ><img
-                                src="./img/art/2016/hiderai_5.png"
+                                src="img/art/2016/hiderai_5.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character taking a selfie and smiling, while the black haired character looks happily surprised"
                         /></a>
                         <a
-                            href="./img/art/2016/creature.webp"
-                            loading="lazy"
+                            href="img/art/2016/creature.webp"
                             data-lightbox="2016"
                             data-alt="A creature with a skull for a head, standing in a little cheeky position"
                             ><img
-                                src="./img/art/2016/creature.png"
+                                src="img/art/2016/creature.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A creature with a skull for a head"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_6.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_6.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character sitting, with dog ears and a dog tail that's wagging excitedly as he's eating a sandwich"
                             ><img
-                                src="./img/art/2016/hideki_6.png"
+                                src="img/art/2016/hideki_6.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character sitting, with dog ears and a dog tail that's wagging excitedly as he's eating a sandwich"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_7.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_7.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character holding up a phone to take a selfie, wearing a space hoodie"
                             ><img
-                                src="./img/art/2016/hideki_7.png"
+                                src="img/art/2016/hideki_7.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character holding up a phone to take a selfie, wearing a space hoodie"
                         /></a>
                         <a
-                            href="./img/art/2016/niles.webp"
-                            loading="lazy"
+                            href="img/art/2016/niles.webp"
                             data-lightbox="2016"
                             data-alt="Niles from Fire Emblem, shirtless and with water dripping down"
                             ><img
-                                src="./img/art/2016/niles.png"
+                                src="img/art/2016/niles.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Niles from Fire Emblem, shirtless and with water dripping down"
                         /></a>
                         <a
-                            href="./img/art/2016/klance.webp"
-                            loading="lazy"
+                            href="img/art/2016/klance.webp"
                             data-lightbox="2016"
                             data-title="Inspired from the fanfic 'Call Me Beep Me' by gajeelredfox"
                             data-alt="Voltron ship art of Keith and Lance, talking to each other on a phone"
                             ><img
-                                src="./img/art/2016/klance.png"
+                                src="img/art/2016/klance.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Voltron ship art of Keith and Lance, talking on a phone"
                         /></a>
                         <a
-                            href="./img/art/2016/klance_1.webp"
-                            loading="lazy"
+                            href="img/art/2016/klance_1.webp"
                             data-lightbox="2016"
                             data-alt="Voltron ship art of Keith and Lance, cuddled in bed and laughing"
                             ><img
-                                src="./img/art/2016/klance_1.png"
+                                src="img/art/2016/klance_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Voltron ship art of Keith and Lance, cuddled in bed and laughing"
                         /></a>
                         <a
-                            href="./img/art/2016/raiden_2.webp"
-                            loading="lazy"
+                            href="img/art/2016/raiden_2.webp"
                             data-lightbox="2016"
                             data-alt="A black haired character with a red and black suit"
                             ><img
-                                src="./img/art/2016/raiden_2.png"
+                                src="img/art/2016/raiden_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character with a red and black suit"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_8.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_8.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character lying on grass, the tips of his hair are coloured various rainbow colours"
                             ><img
-                                src="./img/art/2016/hideki_8.png"
+                                src="img/art/2016/hideki_8.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character lying on grass, the tips of his hair are coloured various rainbow colours"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_9.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_9.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character and black haired character kissing, the white haired character looks surprised"
                             ><img
-                                src="./img/art/2016/hiderai_9.png"
+                                src="img/art/2016/hiderai_9.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and black haired character kissing, the white haired character looks surprised"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_8.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_8.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character and black haired character kissing"
                             ><img
-                                src="./img/art/2016/hiderai_8.png"
+                                src="img/art/2016/hiderai_8.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and black haired character kissing"
                         /></a>
                         <a
-                            href="./img/art/2016/raiden_3.webp"
-                            loading="lazy"
+                            href="img/art/2016/raiden_3.webp"
                             data-lightbox="2016"
                             data-alt="A black and white drawing of a character smoking, the smoke creating swirls around his entire body"
                             ><img
-                                src="./img/art/2016/raiden_3.png"
+                                src="img/art/2016/raiden_3.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black and white drawing of a character smoking"
                         /></a>
                         <a
-                            href="./img/art/2016/raiden_4.webp"
-                            loading="lazy"
+                            href="img/art/2016/raiden_4.webp"
                             data-lightbox="2016"
                             data-alt="A black haired character taking a photo in the mirror as he tosses his phone and dabs"
                             ><img
-                                src="./img/art/2016/raiden_4.png"
+                                src="img/art/2016/raiden_4.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character taking a photo in the mirror as he tosses his phone and dabs"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_17.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_17.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character taking a photo in the mirror as he tosses his phone and dabs"
                             ><img
-                                src="./img/art/2016/hideki_17.png"
+                                src="img/art/2016/hideki_17.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character taking a photo in the mirror as he tosses his phone and dabs"
                         /></a>
                         <a
-                            href="./img/art/2016/ciel_1.webp"
-                            loading="lazy"
+                            href="img/art/2016/ciel_1.webp"
                             data-lightbox="2016"
                             data-alt="Dreadlord from the game Elsword"
                             ><img
-                                src="./img/art/2016/ciel_1.png"
+                                src="img/art/2016/ciel_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Dreadlord from the game Elsword"
                         /></a>
                         <a
-                            href="./img/art/2016/fe_niles.webp"
-                            loading="lazy"
+                            href="img/art/2016/fe_niles.webp"
                             data-lightbox="2016"
                             data-alt="Fire Emblem Fates Niles hugging the protagonist and telling them it'll be alright"
                             ><img
-                                src="./img/art/2016/fe_niles.png"
+                                src="img/art/2016/fe_niles.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Fire Emblem Fates Niles hugging the protagonist and telling them it'll be alright"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_11.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_11.webp"
                             data-lightbox="2016"
                             data-alt="Two characters, one with short white hair who's back is facing the camera. The other with dark hair is kissing his bare shoulder and neck while loosely holding a hand around him"
                             ><img
-                                src="./img/art/2016/hiderai_11.png"
+                                src="img/art/2016/hiderai_11.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Two characters, one with short white hair who's back is facing the camera. The other with dark hair is kissing his bare shoulder and neck while loosely holding a hand around him"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_14.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_14.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character happily smiling"
                             ><img
-                                src="./img/art/2016/hideki_14.png"
+                                src="img/art/2016/hideki_14.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character happily smiling"
                         /></a>
                         <a
-                            href="./img/art/2016/oberons.webp"
-                            loading="lazy"
+                            href="img/art/2016/oberons.webp"
                             data-lightbox="2016"
                             data-alt="Oberon from the game Elsword, looking disgruntled"
                             ><img
-                                src="./img/art/2016/oberons.png"
+                                src="img/art/2016/oberons.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Oberon from the game Elsword, looking disgruntled"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_10.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_10.webp"
                             data-lightbox="2016"
                             data-title="I think this was inspired off some ice skater x hockey player fic I read back then"
                             data-alt="A white haired character in a hockey outfit ice skating with a black haired character in an ice skater outfit"
                             ><img
-                                src="./img/art/2016/hiderai_10.png"
+                                src="img/art/2016/hiderai_10.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character in a hockey suit"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_12.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_12.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character making a cute kissy face towards the viewer, wearing glasses and a flower crown filter"
                             ><img
-                                src="./img/art/2016/hideki_12.png"
+                                src="img/art/2016/hideki_12.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character making a cute kissy face towards the viewer, wearing glasses"
                         /></a>
                         <a
-                            href="./img/art/2016/resu_1.webp"
-                            loading="lazy"
+                            href="img/art/2016/resu_1.webp"
                             data-lightbox="2016"
                             data-alt="A brown haired character with green eyes, wearing the shinigami outfit from bleach"
                             ><img
-                                src="./img/art/2016/resu_1.png"
+                                src="img/art/2016/resu_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A brown haired character with green eyes, wearing the shinigami outfit from bleach"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_15.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_15.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character standing, wearing a t-shirt that says gamers don't die, they respawn"
                             ><img
-                                src="./img/art/2016/hideki_15.png"
+                                src="img/art/2016/hideki_15.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character standing"
                         /></a>
                         <a
-                            href="./img/art/2016/resu.webp"
-                            loading="lazy"
+                            href="img/art/2016/resu.webp"
                             data-lightbox="2016"
                             data-alt="A brown haired character with green eyes and earrings, she is wearing a cropped top, showing off a more toned and scarred midriff"
                             ><img
-                                src="./img/art/2016/resu.png"
+                                src="img/art/2016/resu.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A brown haired character with green eyes and earrings"
                         /></a>
                         <a
-                            href="./img/art/2016/demonio_2.webp"
-                            loading="lazy"
+                            href="img/art/2016/demonio_2.webp"
                             data-lightbox="2016"
                             data-alt="Demonio from Elsword in a vampire costume, he is making peace signs"
                             ><img
-                                src="./img/art/2016/demonio_2.png"
+                                src="img/art/2016/demonio_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Demonio from Elsword in a vampire costume, he is making peace signs"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_18.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_18.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character with a disgruntled, barely awake look, and question marks around his head"
                             ><img
-                                src="./img/art/2016/hideki_18.png"
+                                src="img/art/2016/hideki_18.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with a disgruntled, barely awake look"
                         /></a>
                         <a
-                            href="./img/art/2016/moon.webp"
-                            loading="lazy"
+                            href="img/art/2016/moon.webp"
                             data-lightbox="2016"
                             data-alt="A dark haired character with a moon behind him, and stars decorating the background"
                             ><img
-                                src="./img/art/2016/moon.png"
+                                src="img/art/2016/moon.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A dark haired character with a moon behind him, and stars decorating the background"
                         /></a>
                         <a
-                            href="./img/art/2016/lus.webp"
-                            loading="lazy"
+                            href="img/art/2016/lus.webp"
                             data-lightbox="2016"
                             data-alt="A pixel doll of Lu from Elsword, although decorated with pink hair and a bunny costume suit (not the exposed type)"
                             ><img
-                                src="./img/art/2016/lus.png"
+                                src="img/art/2016/lus.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A pixel doll of Lu from Elsword, although decorated with pink hair and a bunny costume suit (not the exposed type)"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_11.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_11.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character taking a selfie with the dog ears filter, he is wearing a pokemon persian cat t-shirt"
                             ><img
-                                src="./img/art/2016/hideki_11.png"
+                                src="img/art/2016/hideki_11.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character taking a selfie with the dog ears filter, he is wearing a pokemon persian cat t-shirt"
                         /></a>
                         <a
-                            href="./img/art/2016/raiden_1.webp"
-                            loading="lazy"
+                            href="img/art/2016/raiden_1.webp"
                             data-lightbox="2016"
                             data-alt="A black haired character with a red and grey suit, and black gloves"
                             ><img
-                                src="./img/art/2016/raiden_1.png"
+                                src="img/art/2016/raiden_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character with a red and grey suit, and black gloves"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_7.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_7.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character hovers above a black haired one, kissing his lips while the black haired one is giggling"
                             ><img
-                                src="./img/art/2016/hiderai_7.png"
+                                src="img/art/2016/hiderai_7.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Two characters kissing"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_13.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_13.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character holding red strings of fate, tangled between his fingers"
                             ><img
-                                src="./img/art/2016/hideki_13.png"
+                                src="img/art/2016/hideki_13.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character holding red strings of fate, tangled between his fingers"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_10.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_10.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character sitting hunched over in a relaxed position, grinning"
                             ><img
-                                src="./img/art/2016/hideki_10.png"
+                                src="img/art/2016/hideki_10.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character sitting hunched over in a relaxed position, grinning"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_16.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_16.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character and a brown haired young girl, who is painting on his nose while she's also splattered with paint"
                             ><img
-                                src="./img/art/2016/hideki_16.png"
+                                src="img/art/2016/hideki_16.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and a brown haired young girl, who is painting on his nose while she's also splattered with paint"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_12.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_12.webp"
                             data-lightbox="2016"
                             data-alt="Two characters standing close together, with matching couple t-shirts; the white haired character's shirt says 'you are the cheese', while the black haired character's shirt finishes it with 'to my macaroni'"
                             ><img
-                                src="./img/art/2016/hiderai_12.png"
+                                src="img/art/2016/hiderai_12.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Two characters standing close together, with matching couple t-shirts"
                         /></a>
                         <a
-                            href="./img/art/2016/hiderai_6.webp"
-                            loading="lazy"
+                            href="img/art/2016/hiderai_6.webp"
                             data-lightbox="2016"
                             data-alt="Two characters dressed in as a skeleton and as a vampire, standing intimately close together"
                             ><img
-                                src="./img/art/2016/hiderai_6.png"
+                                src="img/art/2016/hiderai_6.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Two characters dressed in as a skeleton and as a vampire, standing intimately close together. The bright background indicates a club setting"
                         /></a>
                         <a
-                            href="./img/art/2016/hideki_9.webp"
-                            loading="lazy"
+                            href="img/art/2016/hideki_9.webp"
                             data-lightbox="2016"
                             data-alt="A white haired character dressed in a grey, thick jacket, and jeans, as he's in a sitting position"
                             ><img
-                                src="./img/art/2016/hideki_9.png"
+                                src="img/art/2016/hideki_9.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character dressed in a grey, thick jacket, and jeans, as he's in a sitting position"
@@ -1987,366 +1350,333 @@
                     <p><u>Art Count:</u> 33</p>
                     <div class="image-gallery">
                         <a
-                            href="./img/art/2015/undergay.webp"
-                            loading="lazy"
+                            href="img/art/2015/undergay.webp"
                             data-lightbox="2015"
                             data-title="I dunno why I decided for them to cosplay Sans and Papyrus when these two are together LOL"
                             data-alt="A white haired character and black haired character cosplaying as Sans and Papyrus from Undertale"
                             ><img
-                                src="./img/art/2015/undergay.png"
+                                src="img/art/2015/undergay.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and black haired character cosplaying as Sans and Papyrus from Undertale"
                         /></a>
                         <a
-                            href="./img/art/2015/james.webp"
-                            loading="lazy"
+                            href="img/art/2015/james.webp"
                             data-lightbox="2015"
                             data-alt="A character with brown-blonde hair, freckles, and brown eyes"
                             ><img
-                                src="./img/art/2015/james.png"
+                                src="img/art/2015/james.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A character with brown-blonde hair, freckles, and brown eyes"
                         /></a>
                         <a
-                            href="./img/art/2015/hiderai_5.webp"
-                            loading="lazy"
+                            href="img/art/2015/hiderai_5.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character and black haired character sitting down together in front of a grave, a bouquet of flowers are in front of it"
                             ><img
-                                src="./img/art/2015/hiderai_5.png"
+                                src="img/art/2015/hiderai_5.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and black haired character sitting down together"
                         /></a>
                         <a
-                            href="./img/art/2015/hideki_7.webp"
-                            loading="lazy"
+                            href="img/art/2015/hideki_7.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character wearing a black flower crown, black liquid is falling down over his face. A red thread is wrapped around his pinkie and he is holding black flowers"
                             ><img
-                                src="./img/art/2015/hideki_7.png"
+                                src="img/art/2015/hideki_7.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character wearing a black flower crown, black liquid is falling down over his face"
                         /></a>
                         <a
-                            href="./img/art/2015/gekihinata.webp"
-                            loading="lazy"
+                            href="img/art/2015/gekihinata.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character with short hair being hugged by one with brown hair and a scar across his lips, the white haired character looks flustered"
                             ><img
-                                src="./img/art/2015/gekihinata.png"
+                                src="img/art/2015/gekihinata.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with short hair being hugged by one with brown hair and a scar across his lips"
                         /></a>
                         <a
-                            href="./img/art/2015/bloody_2.webp"
-                            loading="lazy"
+                            href="img/art/2015/bloody_2.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character covered in blood, a dark stare is towards the viewer as he is carrying a bloodied crowbar"
                             ><img
-                                src="./img/art/2015/bloody_2.png"
+                                src="img/art/2015/bloody_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character covered in blood, a dark stare is towards the viewer"
                         /></a>
                         <a
-                            href="./img/art/2015/design.webp"
-                            loading="lazy"
+                            href="img/art/2015/design.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character with tan skin, freckles, elf-like ears, and dark eyes. Horns decorate the top of his head, a thick tail with a fluffy end, and fluffy draconic legs"
                             ><img
-                                src="./img/art/2015/design.png"
+                                src="img/art/2015/design.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with tan skin, freckles, elf-like ears, and dark eyes"
                         /></a>
                         <a
-                            href="./img/art/2015/pixel_hover.webp"
-                            loading="lazy"
+                            href="img/art/2015/pixel_hover.webp"
                             data-lightbox="2015"
                             data-alt="A pixel drawing of a white haired character floating as he's wearing headphones, a digital city can be seen in the background"
                             ><img
-                                src="./img/art/2015/pixel_hover.png"
+                                src="img/art/2015/pixel_hover.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A pixel drawing of a white haired character floating as he's wearing headphones, a digital city can be seen in the background"
                         /></a>
                         <a
-                            href="./img/art/2015/hideki_6.webp"
-                            loading="lazy"
+                            href="img/art/2015/hideki_6.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character in a thoughtful pose as he's looking off in the distance"
                             ><img
-                                src="./img/art/2015/hideki_6.png"
+                                src="img/art/2015/hideki_6.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character in a thoughtful pose as he's looking off in the distance"
                         /></a>
                         <a
-                            href="./img/art/2015/hideki_5.webp"
-                            loading="lazy"
+                            href="img/art/2015/hideki_5.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character saluting towards the viewer, he is wearing a comfortable space themed sweater"
                             ><img
-                                src="./img/art/2015/hideki_5.png"
+                                src="img/art/2015/hideki_5.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character saluting towards the viewer"
                         /></a>
                         <a
-                            href="./img/art/2015/hideki_4.webp"
-                            loading="lazy"
+                            href="img/art/2015/hideki_4.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character with a dark look towards the viewer, blood is coming from his nose"
                             ><img
-                                src="./img/art/2015/hideki_4.png"
+                                src="img/art/2015/hideki_4.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with a dark look towards the viewer, blood is coming from his nose"
                         /></a>
                         <a
-                            href="./img/art/2015/hiderai_4.webp"
-                            loading="lazy"
+                            href="img/art/2015/hiderai_4.webp"
                             data-lightbox="2015"
                             data-alt="A black haired character sleeping, as a white haired one is curled up against his stomach"
                             ><img
-                                src="./img/art/2015/hiderai_4.png"
+                                src="img/art/2015/hiderai_4.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character sleeping"
                         /></a>
                         <a
-                            href="./img/art/2015/bros.webp"
-                            loading="lazy"
+                            href="img/art/2015/bros.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character looking embarrassed as a black haired one is grinning, they are two brothers"
                             ><img
-                                src="./img/art/2015/bros.png"
+                                src="img/art/2015/bros.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character looking embarrassed as a black haired one is grinning"
                         /></a>
                         <a
-                            href="./img/art/2015/hideki_3.webp"
-                            loading="lazy"
+                            href="img/art/2015/hideki_3.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character with white lashes and freckles"
                             ><img
-                                src="./img/art/2015/hideki_3.png"
+                                src="img/art/2015/hideki_3.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with white lashes and freckles"
                         /></a>
                         <a
-                            href="./img/art/2015/raiko.webp"
-                            loading="lazy"
+                            href="img/art/2015/raiko.webp"
                             data-lightbox="2015"
                             data-alt="A black haired character with freckles and a birthmark at the eye, he is grinning towards the viewer"
                             ><img
-                                src="./img/art/2015/raiko.png"
+                                src="img/art/2015/raiko.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character with freckles and a birthmark at the eye, he is grinning towards the viewer"
                         /></a>
                         <a
-                            href="./img/art/2015/hideki_2.webp"
-                            loading="lazy"
+                            href="img/art/2015/hideki_2.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character with a dark expression and a smile, he is dressed in a suit and is sitting in a chair as a white tiger is prowling around"
                             ><img
-                                src="./img/art/2015/hideki_2.png"
+                                src="img/art/2015/hideki_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with a dark expression and a smile"
                         /></a>
                         <a
-                            href="./img/art/2015/nelliel.webp"
-                            loading="lazy"
+                            href="img/art/2015/nelliel.webp"
                             data-lightbox="2015"
                             data-alt="Nelliel from Bleach dressed in more modern clothing"
                             ><img
-                                src="./img/art/2015/nelliel.png"
+                                src="img/art/2015/nelliel.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Nelliel from Bleach dressed in more modern clothing"
                         /></a>
                         <a
-                            href="./img/art/2015/hiderai_3.webp"
-                            loading="lazy"
+                            href="img/art/2015/hiderai_3.webp"
                             data-lightbox="2015"
                             data-alt="A black haired character and white haired character talking as they are resting in bed, the black haired character is talking about cats"
                             ><img
-                                src="./img/art/2015/hiderai_3.png"
+                                src="img/art/2015/hiderai_3.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character and white haired character talking"
                         /></a>
                         <a
-                            href="./img/art/2015/hideki_1.webp"
-                            loading="lazy"
+                            href="img/art/2015/hideki_1.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character with a serious expression as he is staring at the viewer. A black glove covers the entirety of his arm, and lighting is coming off it"
                             ><img
-                                src="./img/art/2015/hideki_1.png"
+                                src="img/art/2015/hideki_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character with a serious expression as he is staring at the viewer"
                         /></a>
                         <a
-                            href="./img/art/2015/hideki.webp"
-                            loading="lazy"
+                            href="img/art/2015/hideki.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character who is smiling and looking off to the side"
                             ><img
-                                src="./img/art/2015/hideki.png"
+                                src="img/art/2015/hideki.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character who is smiling and looking off to the side"
                         /></a>
                         <a
-                            href="./img/art/2015/hideki_crying.webp"
-                            loading="lazy"
+                            href="img/art/2015/hideki_crying.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character who is crying and looking down at his hands, various red strings are wrapped around his fingers, all but one of them is cut"
                             ><img
-                                src="./img/art/2015/hideki_crying.png"
+                                src="img/art/2015/hideki_crying.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character who is crying"
                         /></a>
                         <a
-                            href="./img/art/2015/sans.webp"
-                            loading="lazy"
+                            href="img/art/2015/sans.webp"
                             data-lightbox="2015"
                             data-alt="Sans from Undertale, he is saying 'ayy lmao'"
                             ><img
-                                src="./img/art/2015/sans.png"
+                                src="img/art/2015/sans.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Sans from Undertale"
                         /></a>
                         <a
-                            href="./img/art/2015/gengar.webp"
-                            loading="lazy"
+                            href="img/art/2015/gengar.webp"
                             data-lightbox="2015"
                             data-alt="A gengar from Pokemon with a flower on its head"
                             ><img
-                                src="./img/art/2015/gengar.png"
+                                src="img/art/2015/gengar.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A gengar from Pokemon with a flower on its head"
                         /></a>
                         <a
-                            href="./img/art/2015/geki.webp"
-                            loading="lazy"
+                            href="img/art/2015/geki.webp"
                             data-lightbox="2015"
                             data-alt="A brown haired character with green eyes and a vertical scar across his lips, his hair is pulled back into a ponytail. He is making a heart shape with his hands"
                             ><img
-                                src="./img/art/2015/geki.png"
+                                src="img/art/2015/geki.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A brown haired character with green eyes and a vertical scar across his lips"
                         /></a>
                         <a
-                            href="./img/art/2015/bloody_1.webp"
-                            loading="lazy"
+                            href="img/art/2015/bloody_1.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character is looking visibly bloodied as he's tied up, and he is smirking. Lighting is coming off from where his arms are"
                             ><img
-                                src="./img/art/2015/bloody_1.png"
+                                src="img/art/2015/bloody_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character smirking as he's visibly bloodied"
                         /></a>
                         <a
-                            href="./img/art/2015/hiderai_2.webp"
-                            loading="lazy"
+                            href="img/art/2015/hiderai_2.webp"
                             data-lightbox="2015"
                             data-alt="Two characters, one with black hair and one with white hair, are walking together in an autumn environment. Both are wearing kimonos as they are holding hands together"
                             ><img
-                                src="./img/art/2015/hiderai_2.png"
+                                src="img/art/2015/hiderai_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Two characters wearing kimonos"
                         /></a>
                         <a
-                            href="./img/art/2015/hiderai.webp"
-                            loading="lazy"
+                            href="img/art/2015/hiderai.webp"
                             data-lightbox="2015"
                             data-alt="Two characters, one with black hair and one with white hair, are smiling at the viewer. Both are wearing christmas sweaters and santa hats. The white haired character is holding a mistletoe over the other's head, and the black haired character has a bottle of whiskey. The words 'merry christmas' are written at the bottom."
                             ><img
-                                src="./img/art/2015/hiderai.png"
+                                src="img/art/2015/hiderai.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Two characters, one with white hair and one with black, the black haired character is wearing a santa hat"
                         /></a>
                         <a
-                            href="./img/art/2015/smoking.webp"
-                            loading="lazy"
+                            href="img/art/2015/smoking.webp"
                             data-lightbox="2015"
                             data-alt="A black haired character leaning back against an abstract circle as he is smoking"
                             ><img
-                                src="./img/art/2015/smoking.png"
+                                src="img/art/2015/smoking.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character leaning back as he is smoking"
                         /></a>
                         <a
-                            href="./img/art/2015/summer.webp"
-                            loading="lazy"
+                            href="img/art/2015/summer.webp"
                             data-lightbox="2015"
                             data-alt="A black haired character pushing his wet hair back as he's dressed in swimwear. In the background there's a white haired character in the shade, with swimwear on, drooling as he looks at the other who is his boyfriend"
                             ><img
-                                src="./img/art/2015/summer.png"
+                                src="img/art/2015/summer.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character pushing his wet hair back"
                         /></a>
                         <a
-                            href="./img/art/2015/bloody.webp"
-                            loading="lazy"
+                            href="img/art/2015/bloody.webp"
                             data-lightbox="2015"
                             data-alt="A white haired character who is looking exhausted, but smiling as he licks the blood dripping from his nose"
                             ><img
-                                src="./img/art/2015/bloody.png"
+                                src="img/art/2015/bloody.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character who is looking exhausted, but smiling as he licks the blood dripping from his nose"
                         /></a>
                         <a
-                            href="./img/art/2015/raiden.webp"
-                            loading="lazy"
+                            href="img/art/2015/raiden.webp"
                             data-lightbox="2015"
                             data-alt="A black haired character smiling towards the viewer as he's holding a firehose looped over his shoulder"
                             ><img
-                                src="./img/art/2015/raiden.png"
+                                src="img/art/2015/raiden.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character smiling towards the viewer"
                         /></a>
                         <a
-                            href="./img/art/2015/hiderai_1.webp"
-                            loading="lazy"
+                            href="img/art/2015/hiderai_1.webp"
                             data-lightbox="2015"
                             data-alt="A black haired character and white haired character dancing together in a more tender way"
                             ><img
-                                src="./img/art/2015/hiderai_1.png"
+                                src="img/art/2015/hiderai_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black haired character and white haired character staring tenderly at each other"
                         /></a>
                         <a
-                            href="./img/art/2015/drowning.webp"
-                            loading="lazy"
+                            href="img/art/2015/drowning.webp"
                             data-lightbox="2015"
                             data-title="Why did I title this 'ehe' ... was I ok"
                             data-alt="A white haired character who is looking exhausted as he is drifting down through black water"
                             ><img
-                                src="./img/art/2015/drowning.png"
+                                src="img/art/2015/drowning.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character who is looking exhausted"
@@ -2365,200 +1695,179 @@
                     <p><u>Art Count:</u> 18</p>
                     <div class="image-gallery">
                         <a
-                            href="./img/art/2014/hidekichomp.webp"
-                            loading="lazy"
+                            href="img/art/2014/hidekichomp.webp"
                             data-lightbox="2014"
                             data-alt="A white haired character standing next to a garchomp and holding a pokeball"
                             ><img
-                                src="./img/art/2014/hidekichomp.png"
+                                src="img/art/2014/hidekichomp.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character standing next to a garchomp and holding a pokeball"
                         /></a>
                         <a
-                            href="./img/art/2014/blofodof.webp"
-                            loading="lazy"
+                            href="img/art/2014/blofodof.webp"
                             data-lightbox="2014"
                             data-alt="A white haired character covered in blood across his face"
                             ><img
-                                src="./img/art/2014/blofodof.png"
+                                src="img/art/2014/blofodof.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character covered in blood across his face"
                         /></a>
                         <a
-                            href="./img/art/2014/edgeworth.webp"
-                            loading="lazy"
+                            href="img/art/2014/edgeworth.webp"
                             data-lightbox="2014"
                             data-alt="Miles Edgeworth from Ace Attorney"
                             ><img
-                                src="./img/art/2014/edgeworth.png"
+                                src="img/art/2014/edgeworth.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Miles Edgeworth from Ace Attorney"
                         /></a>
                         <a
-                            href="./img/art/2014/water.webp"
-                            loading="lazy"
+                            href="img/art/2014/water.webp"
                             data-lightbox="2014"
                             data-alt="A white haired character swimming in water, he is making a shushing motion with a finger on his lips"
                             ><img
-                                src="./img/art/2014/water.png"
+                                src="img/art/2014/water.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character swimming in water, he is making a shushing motion with a finger on his lips"
                         /></a>
                         <a
-                            href="./img/art/2014/bloody.webp"
-                            loading="lazy"
+                            href="img/art/2014/bloody.webp"
                             data-lightbox="2014"
                             data-alt="A white haired character sitting on the ground in a hunched over position, blood is pouring from his nose"
                             ><img
-                                src="./img/art/2014/bloody.png"
+                                src="img/art/2014/bloody.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character sitting on the ground in a hunched over position, blood is pouring from his nose"
                         /></a>
                         <a
-                            href="./img/art/2014/hiderai.webp"
-                            loading="lazy"
+                            href="img/art/2014/hiderai.webp"
                             data-lightbox="2014"
                             data-alt="A white haired character and a black haired one standing facing each other, shirtless. The white haired character is kissing the other's knuckles, while the other looks embarrassed"
                             ><img
-                                src="./img/art/2014/hiderai.png"
+                                src="img/art/2014/hiderai.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and a black haired one standing facing each other, shirtless. The white haired character is kissing the other's knuckles, while the other looks embarrassed"
                         /></a>
                         <a
-                            href="./img/art/2014/hideki_shy.webp"
-                            loading="lazy"
+                            href="img/art/2014/hideki_shy.webp"
                             data-lightbox="2014"
                             data-alt="A white haired character is looking shy, and holding his hands clasped together. Snow is falling around him"
                             ><img
-                                src="./img/art/2014/hideki_shy.png"
+                                src="img/art/2014/hideki_shy.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character is looking shy, and holding his hands clasped together"
                         /></a>
-                        <a
-                            href="./img/art/2014/lugia.webp"
-                            loading="lazy"
-                            data-lightbox="2014"
-                            data-alt="Lugia from Pokemon"
+                        <a href="img/art/2014/lugia.webp" data-lightbox="2014" data-alt="Lugia from Pokemon"
                             ><img
-                                src="./img/art/2014/lugia.png"
+                                src="img/art/2014/lugia.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Lugia from Pokemon"
                         /></a>
                         <a
-                            href="./img/art/2014/hiderai_1.webp"
-                            loading="lazy"
+                            href="img/art/2014/hiderai_1.webp"
                             data-lightbox="2014"
                             data-alt="A white haired character and black haired character laughing together. Both are making peace signs towards the viewer"
                             ><img
-                                src="./img/art/2014/hiderai_1.png"
+                                src="img/art/2014/hiderai_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and black haired character laughing together"
                         /></a>
                         <a
-                            href="./img/art/2014/hiderai_2.webp"
-                            loading="lazy"
+                            href="img/art/2014/hiderai_2.webp"
                             data-lightbox="2014"
                             data-alt="A white haired character and black haired character tightly hugging each other"
                             ><img
-                                src="./img/art/2014/hiderai_2.png"
+                                src="img/art/2014/hiderai_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and black haired character tightly hugging each other"
                         /></a>
                         <a
-                            href="./img/art/2014/hiderai_3.webp"
-                            loading="lazy"
+                            href="img/art/2014/hiderai_3.webp"
                             data-lightbox="2014"
                             data-alt="A white haired character and black haired character jumping while their hands are linked together. The white haired character looks happy, the black haired character is flushed. The word 'Jump' is in the background"
                             ><img
-                                src="./img/art/2014/hiderai_3.png"
+                                src="img/art/2014/hiderai_3.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and black haired character jumping while their hands are linked together. The white haired character looks happy, the black haired character is flushed. The word 'Jump' is in the background"
                         /></a>
                         <a
-                            href="./img/art/2014/hiderai_4.webp"
-                            loading="lazy"
+                            href="img/art/2014/hiderai_4.webp"
                             data-lightbox="2014"
                             data-alt="A white haired character and black haired character pressing their foreheads together as they smile"
                             ><img
-                                src="./img/art/2014/hiderai_4.png"
+                                src="img/art/2014/hiderai_4.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and black haired character pressing their foreheads together as they smile"
                         /></a>
                         <a
-                            href="./img/art/2014/spiral_chi.webp"
-                            loading="lazy"
+                            href="img/art/2014/spiral_chi.webp"
                             data-lightbox="2014"
                             data-alt="A spiral dragon from Flight Rising with green eyes, and a brown and orange colouration pattern. She is dressed in a red robe"
                             ><img
-                                src="./img/art/2014/spiral_chi.png"
+                                src="img/art/2014/spiral_chi.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A spiral dragon from Flight Rising with green eyes, and a brown and orange colouration pattern"
                         /></a>
                         <a
-                            href="./img/art/2014/hiderai_5.webp"
-                            loading="lazy"
+                            href="img/art/2014/hiderai_5.webp"
                             data-lightbox="2014"
                             data-title="I'm sad I lost the original file for it, so I only ever had a screenshot of the WIP"
                             data-alt="A white haired character and black haired character, both are holding swords, one lit with electricity, and the other with a blue smoke. In the background there is a dead creature with two differently coloured slashes in it"
                             ><img
-                                src="./img/art/2014/hiderai_5.png"
+                                src="img/art/2014/hiderai_5.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A white haired character and black haired character, both are holding swords, one lit with electricity, and the other with a blue smoke"
                         /></a>
                         <a
-                            href="./img/art/2014/wub.webp"
-                            loading="lazy"
+                            href="img/art/2014/wub.webp"
                             data-lightbox="2014"
                             data-alt="A light brown haired character with hazel eyes that is pouting"
                             ><img
-                                src="./img/art/2014/wub.png"
+                                src="img/art/2014/wub.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A light brown haired character with hazel eyes that is pouting"
                         /></a>
                         <a
-                            href="./img/art/2014/stargaze.webp"
-                            loading="lazy"
+                            href="img/art/2014/stargaze.webp"
                             data-lightbox="2014"
                             data-alt="Two character sitting in a blanket and stargazing"
                             ><img
-                                src="./img/art/2014/stargaze.png"
+                                src="img/art/2014/stargaze.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Two character sitting in a blanket and stargazing"
                         /></a>
                         <a
-                            href="./img/art/2014/fire_emblem.webp"
-                            loading="lazy"
+                            href="img/art/2014/fire_emblem.webp"
                             data-alt="A Fire Emblem Robin with brown hair, standing against Chrom's back as they are in the middle of a magic circle in preparation for a fight"
                             data-lightbox="2014"
                             ><img
-                                src="./img/art/2014/fire_emblem.png"
+                                src="img/art/2014/fire_emblem.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Fire Emblem Robin with brown hair, standing against Chrom's back"
                         /></a>
                         <a
-                            href="./img/art/2014/makoto.webp"
-                            loading="lazy"
+                            href="img/art/2014/makoto.webp"
                             data-alt="Makoto Tachibana from Free! A chibi of Haruka Nanase can be seen in the corner."
                             data-lightbox="2014"
                             ><img
-                                src="./img/art/2014/makoto.png"
+                                src="img/art/2014/makoto.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Makoto Tachibana from Free!"
@@ -2577,629 +1886,557 @@
                     <p><u>Art Count:</u> 56</p>
                     <div class="image-gallery">
                         <a
-                            href="./img/art/2013/mizu.webp"
-                            loading="lazy"
+                            href="img/art/2013/mizu.webp"
                             data-alt="A brown haired character with a glowing blue aura, standing in a fighting pose. Behind her is a tall man with blue hair and red eyes, ice covers his limbs to form clawed hands"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/mizu.png"
+                                src="img/art/2013/mizu.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A brown haired character with a subtle glow around her"
                         /></a>
                         <a
-                            href="./img/art/2013/swirls.webp"
-                            loading="lazy"
+                            href="img/art/2013/swirls.webp"
                             data-alt="Various blue and teal swirls that look akin to water, making a flower shape in the background. Bubbles decorate the foreground"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/swirls.png"
+                                src="img/art/2013/swirls.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Various blue and teal swirls that look akin to water, making a flower shape in the background. Bubbles decorate the foreground"
                         /></a>
                         <a
-                            href="./img/art/2013/sleeping_1.webp"
-                            loading="lazy"
+                            href="img/art/2013/sleeping_1.webp"
                             data-alt="An original bleach character with brown hair and green eyes asleep alongside Toshiro on a couch. There is a soft light and the sky is dark with night"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/sleeping_1.png"
+                                src="img/art/2013/sleeping_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes asleep alongside Toshiro"
                         /></a>
                         <a
-                            href="./img/art/2013/standing.webp"
-                            loading="lazy"
+                            href="img/art/2013/standing.webp"
                             data-alt="An original bleach character with brown hair and green eyes standing behind Toshiro, who is brandishing a katana"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/standing.png"
+                                src="img/art/2013/standing.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes"
                         /></a>
                         <a
-                            href="./img/art/2013/skywatching.webp"
-                            loading="lazy"
+                            href="img/art/2013/skywatching.webp"
                             data-alt="An original bleach character with brown hair and green eyes standing next to Toshiro, they are looking up at the night sky while on the roof"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/skywatching.png"
+                                src="img/art/2013/skywatching.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes standing next to Toshiro, they are looking up"
                         /></a>
                         <a
-                            href="./img/art/2013/flower_walk.webp"
-                            loading="lazy"
+                            href="img/art/2013/flower_walk.webp"
                             data-alt="An original bleach character with brown hair and green eyes standing next to Toshiro, they are looking at each other as they are sharing a meal walking through cherry blossoms"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/flower_walk.png"
+                                src="img/art/2013/flower_walk.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes standing next to Toshiro, they are looking at each other"
                         /></a>
                         <a
-                            href="./img/art/2013/pokebattle.webp"
-                            loading="lazy"
+                            href="img/art/2013/pokebattle.webp"
                             data-alt="An original bleach character with brown hair and green eyes with a lugia behind her, she is standing off against Yukio who has an Arceus"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/pokebattle.png"
+                                src="img/art/2013/pokebattle.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes"
                         /></a>
                         <a
-                            href="./img/art/2013/tea_time.webp"
-                            loading="lazy"
+                            href="img/art/2013/tea_time.webp"
                             data-alt="An original bleach character with brown hair and green eyes sharing tea with Toshiro"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/tea_time.png"
+                                src="img/art/2013/tea_time.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes sharing tea with Toshiro"
                         /></a>
                         <a
-                            href="./img/art/2013/laughter.webp"
-                            loading="lazy"
+                            href="img/art/2013/laughter.webp"
                             data-alt="An original bleach character with brown hair and green eyes laughing happily alongside Toshiro"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/laughter.png"
+                                src="img/art/2013/laughter.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes laughing happily alongside Toshiro"
                         /></a>
                         <a
-                            href="./img/art/2013/tug.webp"
-                            loading="lazy"
+                            href="img/art/2013/tug.webp"
                             data-alt="An original bleach character with brown hair and green eyes pulling on Toshiro's cheek, and he is doing the same in return to her"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/tug.png"
+                                src="img/art/2013/tug.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes having her cheek tugged"
                         /></a>
                         <a
-                            href="./img/art/2013/sleeping.webp"
-                            loading="lazy"
+                            href="img/art/2013/sleeping.webp"
                             data-alt="An original bleach character with brown hair and green eyes sleeping with Toshiro; the atmosphere is calm and quiet and a book is on the bed"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/sleeping.png"
+                                src="img/art/2013/sleeping.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes asleep alongside Toshiro"
                         /></a>
                         <a
-                            href="./img/art/2013/hitsuresu_1.webp"
-                            loading="lazy"
+                            href="img/art/2013/hitsuresu_1.webp"
                             data-alt="An original bleach character with brown hair and green eyes sitting next to Toshiro. The background is full of snow and trees that are draped with said snow"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/hitsuresu_1.png"
+                                src="img/art/2013/hitsuresu_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes"
                         /></a>
                         <a
-                            href="./img/art/2013/resu.webp"
-                            loading="lazy"
+                            href="img/art/2013/resu.webp"
                             data-alt="An original bleach character with brown hair and green eyes"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/resu.png"
+                                src="img/art/2013/resu.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes"
                         /></a>
                         <a
-                            href="./img/art/2013/resu_attack.webp"
-                            loading="lazy"
+                            href="img/art/2013/resu_attack.webp"
                             data-alt="An original bleach character with brown hair, floating in a battle position while holding a dual-ended trident"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/resu_attack.png"
+                                src="img/art/2013/resu_attack.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair, you can see part of the trident she is holding"
                         /></a>
                         <a
-                            href="./img/art/2013/kawaii.webp"
-                            loading="lazy"
+                            href="img/art/2013/kawaii.webp"
                             data-alt="An original bleach character with brown hair, holding a katana in a battle pose while wearing Gintama's coat from the same named anime"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/kawaii.png"
+                                src="img/art/2013/kawaii.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair, you can see part of the katana she is holding"
                         /></a>
                         <a
-                            href="./img/art/2013/hurted.webp"
-                            loading="lazy"
+                            href="img/art/2013/hurted.webp"
                             data-alt="An original bleach character with brown hair having her wound on her hand being taken care of Toshiro, and he is calling her an idiot"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/hurted.png"
+                                src="img/art/2013/hurted.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair having her wound on her hand being taken care of Toshiro"
                         /></a>
                         <a
-                            href="./img/art/2013/hitsuresu.webp"
-                            loading="lazy"
+                            href="img/art/2013/hitsuresu.webp"
                             data-alt="An original bleach character with brown hair, hugging Toshiro as they are both smiling towards the camera"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/hitsuresu.png"
+                                src="img/art/2013/hitsuresu.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair, standing next to Toshiro"
                         /></a>
                         <a
-                            href="./img/art/2013/rainfall.webp"
-                            loading="lazy"
+                            href="img/art/2013/rainfall.webp"
                             data-alt="An original bleach character with brown hair, sitting next to Toshiro. They are holding a leaf umbrella above their head as it is raining"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/rainfall.png"
+                                src="img/art/2013/rainfall.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair, sitting next to Toshiro"
                         /></a>
                         <a
-                            href="./img/art/2013/hayate.webp"
-                            loading="lazy"
+                            href="img/art/2013/hayate.webp"
                             data-alt="An original bleach character with white hair and grey eyes. A scar is on his right cheek"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/hayate.png"
+                                src="img/art/2013/hayate.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with white hair and grey eyes. A scar is on his right cheek"
                         /></a>
                         <a
-                            href="./img/art/2013/fightu.webp"
-                            loading="lazy"
+                            href="img/art/2013/fightu.webp"
                             data-alt="Two original bleach characters are fighting, one which uses lightning and the other being solidified water. It is not ice"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/fightu.png"
+                                src="img/art/2013/fightu.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and red eyes, there is blood on her face"
                         /></a>
                         <a
-                            href="./img/art/2013/falling.webp"
-                            loading="lazy"
+                            href="img/art/2013/falling.webp"
                             data-alt="An original bleach character with brown hair looks to be falling, smiling towards the camera and saluting"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/falling.png"
+                                src="img/art/2013/falling.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair and green eyes that is upside down"
                         /></a>
                         <a
-                            href="./img/art/2013/boob.webp"
-                            loading="lazy"
+                            href="img/art/2013/boob.webp"
                             data-alt="An original bleach character with brown hair is holding Toshiro Hitsugaya, who is implied to have been pushed by Rangiku Matsumoto who is looking embarrassed. The other two are looking towards her with a blush and stare"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/boob.png"
+                                src="img/art/2013/boob.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An original bleach character with brown hair, and Toshiro. Both are blushing"
                         /></a>
 
                         <a
-                            href="./img/art/2013/cuddles.webp"
-                            loading="lazy"
+                            href="img/art/2013/cuddles.webp"
                             data-alt="A cuddle between an original character and Toshiro from Bleach, he is nestled in her chest"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/cuddles.png"
+                                src="img/art/2013/cuddles.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A cuddle between an original character and Toshiro from Bleach"
                         /></a>
                         <a
-                            href="./img/art/2013/amaya.webp"
-                            loading="lazy"
+                            href="img/art/2013/amaya.webp"
                             data-alt="A character with black hair and purple eyes, and a shinigami outfit from bleach"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/amaya.png"
+                                src="img/art/2013/amaya.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A character with black hair and purple eyes"
                         /></a>
                         <a
-                            href="./img/art/2013/cockatiel.webp"
-                            loading="lazy"
+                            href="img/art/2013/cockatiel.webp"
                             data-alt="A drawing of a cockatiel bird"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/cockatiel.png"
+                                src="img/art/2013/cockatiel.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A drawing of a cockatiel bird"
                         /></a>
                         <a
-                            href="./img/art/2013/paper_5.webp"
-                            loading="lazy"
+                            href="img/art/2013/paper_5.webp"
                             data-alt="Various doodles including pokemon"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/paper_5.png"
+                                src="img/art/2013/paper_5.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Various doodles including pokemon"
                         /></a>
                         <a
-                            href="./img/art/2013/paper_6.webp"
-                            loading="lazy"
+                            href="img/art/2013/paper_6.webp"
                             data-alt="Various doodles including bleach characters, a weapon, and dragons"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/paper_6.png"
+                                src="img/art/2013/paper_6.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Various doodles including bleach characters, a weapon, and dragons"
                         /></a>
-                        <a
-                            href="./img/art/2013/paper_7.webp"
-                            loading="lazy"
-                            data-alt="A blue dragon"
-                            data-lightbox="2013"
+                        <a href="img/art/2013/paper_7.webp" loading="lazy" data-alt="A blue dragon" data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/paper_7.png"
+                                src="img/art/2013/paper_7.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A blue dragon"
                         /></a>
-                        <a
-                            href="./img/art/2013/paper_8.webp"
-                            loading="lazy"
-                            data-alt="A purple weird Latias dragon"
-                            data-lightbox="2013"
+                        <a href="img/art/2013/paper_8.webp" data-alt="A purple weird Latias dragon" data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/paper_8.png"
+                                src="img/art/2013/paper_8.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A purple weird Latias dragon"
                         /></a>
                         <a
-                            href="./img/art/2013/snow_angel.webp"
-                            loading="lazy"
+                            href="img/art/2013/snow_angel.webp"
                             data-title="Self insert x Toshiro, before I ended up making an OC for him"
                             data-alt="A drawing of a self insert with black hair and front red streaks, with Toshiro Hitsugaya from Bleach"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/snow_angel.png"
+                                src="img/art/2013/snow_angel.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A drawing of a self insert with black hair and front red streaks, with Toshiro Hitsugaya from Bleach"
                         /></a>
                         <a
-                            href="./img/art/2013/kuuni.webp"
-                            loading="lazy"
+                            href="img/art/2013/kuuni.webp"
                             data-alt="A character standing behind a big cross, with black hair with red streaks, one green eye and one blue eye, and a red scarf"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/kuuni.png"
+                                src="img/art/2013/kuuni.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A character with one green eye and one blue eye, with black hair decorated with red streaks"
                         /></a>
                         <a
-                            href="./img/art/2013/morning.webp"
-                            loading="lazy"
+                            href="img/art/2013/morning.webp"
                             data-lightbox="2013"
                             data-alt="A drawing of a self insert with brown hair, with Roxas from Kingdom Hearts, sharing a kiss"
                             data-title="Self insert x Roxas"
                             ><img
-                                src="./img/art/2013/morning.png"
+                                src="img/art/2013/morning.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A drawing of a self insert with brown hair, with Roxas from Kingdom Hearts"
                         /></a>
                         <a
-                            href="./img/art/2013/a_sweet_embrace.webp"
-                            loading="lazy"
+                            href="img/art/2013/a_sweet_embrace.webp"
                             data-lightbox="2013"
                             data-alt="A drawing of a self insert with brown hair, with Roxas from Kingdom Hearts"
                             data-title="Self insert x Roxas"
                             ><img
-                                src="./img/art/2013/a_sweet_embrace.png"
+                                src="img/art/2013/a_sweet_embrace.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A drawing of a self insert with brown hair, with Roxas from Kingdom Hearts"
                         /></a>
                         <a
-                            href="./img/art/2013/midnight_stroll.webp"
-                            loading="lazy"
+                            href="img/art/2013/midnight_stroll.webp"
                             data-lightbox="2013"
                             data-alt="A drawing of a brown haired self insert with Roxas lovingly looking at each other under the moon"
                             data-title="Self insert x Roxas"
                             ><img
-                                src="./img/art/2013/midnight_stroll.png"
+                                src="img/art/2013/midnight_stroll.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A drawing of a brown haired self insert with Roxas lovingly looking at each other under the moon"
                         /></a>
                         <a
-                            href="./img/art/2013/older_xen_roxas.webp"
-                            loading="lazy"
+                            href="img/art/2013/older_xen_roxas.webp"
                             data-lightbox="2013"
                             data-alt="A drawing of a self insert with brown hair, with Roxas from Kingdom Hearts"
                             data-title="Xen x Roxas"
                             ><img
-                                src="./img/art/2013/older_xen_roxas.png"
+                                src="img/art/2013/older_xen_roxas.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A drawing of a self insert with brown hair, with Roxas from Kingdom Hearts"
                         /></a>
                         <a
-                            href="./img/art/2013/xen.webp"
-                            loading="lazy"
+                            href="img/art/2013/xen.webp"
                             data-lightbox="2013"
                             data-alt="A drawing of a self insert with brown hair, making a heart emote with her fingers"
                             data-title="Self insert for Kingdom Hearts"
                             ><img
-                                src="./img/art/2013/xen.png"
+                                src="img/art/2013/xen.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A drawing of a self insert with brown hair, making a heart emote with her fingers"
                         /></a>
                         <a
-                            href="./img/art/2013/baby_lugia.webp"
-                            loading="lazy"
+                            href="img/art/2013/baby_lugia.webp"
                             data-lightbox="2013"
                             data-alt="A small, baby lugia alongside a purple, shadow lugia overseeing it"
                             data-title="A baby lugia with a shadow lugia"
                             ><img
-                                src="./img/art/2013/baby_lugia.png"
+                                src="img/art/2013/baby_lugia.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A small, baby lugia alongside a purple, shadow lugia overseeing it"
                         /></a>
                         <a
-                            href="./img/art/2013/black_beauty.webp"
-                            loading="lazy"
+                            href="img/art/2013/black_beauty.webp"
                             data-alt="A black coloured dragon with red eyes"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/black_beauty.png"
+                                src="img/art/2013/black_beauty.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A black coloured dragon with red eyes"
                         /></a>
                         <a
-                            href="./img/art/2013/evil_comps.webp"
-                            loading="lazy"
+                            href="img/art/2013/evil_comps.webp"
                             data-alt="A brown haired girl looking exhausted as she sits at a computer"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/evil_comps.png"
+                                src="img/art/2013/evil_comps.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A brown haired girl looking exhausted as she sits at a computer"
                         /></a>
                         <a
-                            href="./img/art/2013/cockatiel_trainer.webp"
-                            loading="lazy"
+                            href="img/art/2013/cockatiel_trainer.webp"
                             data-alt="A brown haired girl with a cockatiel bird sitting on her shoulder"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/cockatiel_trainer.png"
+                                src="img/art/2013/cockatiel_trainer.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A brown haired girl with a cockatiel bird sitting on her shoulder"
                         /></a>
                         <a
-                            href="./img/art/2013/elf_dragon.webp"
-                            loading="lazy"
+                            href="img/art/2013/elf_dragon.webp"
                             data-alt="A green coloured wyvern with yellow eyes"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/elf_dragon.png"
+                                src="img/art/2013/elf_dragon.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A green coloured wyvern with yellow eyes"
                         /></a>
                         <a
-                            href="./img/art/2013/garchomp.webp"
-                            loading="lazy"
+                            href="img/art/2013/garchomp.webp"
                             data-lightbox="2013"
                             data-alt="A garchomp from pokemon with a red scar on the shoulder. The garchomp is crying while a thunderstorm occurs in the background"
                             ><img
-                                src="./img/art/2013/garchomp.png"
+                                src="img/art/2013/garchomp.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A garchomp from pokemon"
                         /></a>
                         <a
-                            href="./img/art/2013/happy_birthday.webp"
-                            loading="lazy"
+                            href="img/art/2013/happy_birthday.webp"
                             data-title="Not sure who's birthday it was"
                             data-alt="A browned haired person celebrating a birthday, with various gift boxes on a table"
                             data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/happy_birthday.png"
+                                src="img/art/2013/happy_birthday.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A browned haired person celebrating a birthday, with various gift boxes on a table"
                         /></a>
                         <a
-                            href="./img/art/2013/jun_x_me.webp"
-                            loading="lazy"
+                            href="img/art/2013/jun_x_me.webp"
                             data-lightbox="2013"
                             data-alt="A pixel base of Barry from Pokemon, and a brown haired girl nuzzling under an umbrella"
                             data-title="... yeah I had a self ship with Barry from Pokemon as well."
                             ><img
-                                src="./img/art/2013/jun_x_me.png"
+                                src="img/art/2013/jun_x_me.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A pixel base of Barry from Pokemon, and a brown haired girl nuzzling under an umbrella"
                         /></a>
-                        <a
-                            href="./img/art/2013/lugia.webp"
-                            loading="lazy"
-                            data-alt="A lugia that is flying midair"
-                            data-lightbox="2013"
+                        <a href="img/art/2013/lugia.webp" data-alt="A lugia that is flying midair" data-lightbox="2013"
                             ><img
-                                src="./img/art/2013/lugia.png"
+                                src="img/art/2013/lugia.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A lugia that is flying midair"
                         /></a>
                         <a
-                            href="./img/art/2013/self_pokemon.webp"
-                            loading="lazy"
+                            href="img/art/2013/self_pokemon.webp"
                             data-lightbox="2013"
                             data-alt="A brown haired girl with a white hat, and an orange and white t-shirt"
                             ><img
-                                src="./img/art/2013/self_pokemon.png"
+                                src="img/art/2013/self_pokemon.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A brown haired girl with a white hat, and an orange and white t-shirt"
                         /></a>
                         <a
-                            href="./img/art/2013/flygon.webp"
-                            loading="lazy"
+                            href="img/art/2013/flygon.webp"
                             data-lightbox="2013"
                             data-alt="A flygon with a light blue scarf, looking happy"
                             ><img
-                                src="./img/art/2013/flygon.png"
+                                src="img/art/2013/flygon.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A flygon with a light blue scarf, looking happy"
                         /></a>
                         <a
-                            href="./img/art/2013/orange_lugia.webp"
-                            loading="lazy"
+                            href="img/art/2013/orange_lugia.webp"
                             data-lightbox="2013"
                             data-alt="A lugia with orange highlights instead of blue"
                             ><img
-                                src="./img/art/2013/orange_lugia.png"
+                                src="img/art/2013/orange_lugia.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A lugia with orange highlights instead of blue"
                         /></a>
-                        <a
-                            href="./img/art/2013/renamon.webp"
-                            loading="lazy"
-                            data-lightbox="2013"
-                            data-alt="Renamon from Digimon"
+                        <a href="img/art/2013/renamon.webp" data-lightbox="2013" data-alt="Renamon from Digimon"
                             ><img
-                                src="./img/art/2013/renamon.png"
+                                src="img/art/2013/renamon.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Renamon from Digimon"
                         /></a>
                         <a
-                            href="./img/art/2013/water_dragon.webp"
-                            loading="lazy"
+                            href="img/art/2013/water_dragon.webp"
                             data-lightbox="2013"
                             data-alt="A blue water dragon with flippers and yellow highlights"
                             ><img
-                                src="./img/art/2013/water_dragon.png"
+                                src="img/art/2013/water_dragon.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A blue water dragon with flippers and yellow highlights"
                         /></a>
                         <a
-                            href="./img/art/2013/eevee.webp"
-                            loading="lazy"
+                            href="img/art/2013/eevee.webp"
                             data-lightbox="2013"
                             data-alt="An Eevee from pokemon sitting in a field of grass and looking up thoughtfully at birds flying"
                             ><img
-                                src="./img/art/2013/eevee.png"
+                                src="img/art/2013/eevee.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="An Eevee from pokemon sitting in a field of grass and looking up thoughtfully at birds flying"
                         /></a>
                         <a
-                            href="./img/art/2013/paper_1.webp"
-                            loading="lazy"
+                            href="img/art/2013/paper_1.webp"
                             data-lightbox="2013"
                             data-alt="Roxas and a self insert kissing as they both look surprised"
                             ><img
-                                src="./img/art/2013/paper_1.png"
+                                src="img/art/2013/paper_1.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Two characters kissing and looking surprised"
                         /></a>
                         <a
-                            href="./img/art/2013/paper_2.webp"
-                            loading="lazy"
+                            href="img/art/2013/paper_2.webp"
                             data-lightbox="2013"
                             data-alt="Roxas and a self insert sleeping, he is looking down at her with a blush while she's resting"
                             data-title="Why she got a cone for a head ... /silly"
                             ><img
-                                src="./img/art/2013/paper_2.png"
+                                src="img/art/2013/paper_2.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A character sleeping"
                         /></a>
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/tumblr_neqkisuO5N1rac176o8_1280.jpg"
-                            loading="lazy"
                             data-lightbox="2013"
                             data-alt="A dragon"
-                            ><img
-                                src="./img/art/2013/paper_3.webp"
-                                loading="lazy"
-                                aria-label="open image"
-                                alt="A dragon"
+                            ><img src="img/art/2013/paper_3.webp" loading="lazy" aria-label="open image" alt="A dragon"
                         /></a>
                         <a
                             href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Art/2012%20n%20Older/tumblr_neqkisuO5N1rac176o9_1280.jpg"
-                            loading="lazy"
                             data-lightbox="2013"
                             data-alt="Roxas and a self insert blushing as they're sitting very close together, face to faceUpd"
                             ><img
-                                src="./img/art/2013/paper_4.webp"
+                                src="img/art/2013/paper_4.webp"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="Two characters blushing as their faces are close together"
                         /></a>
                         <a
-                            href="./img/art/2013/napkins.webp"
-                            loading="lazy"
+                            href="img/art/2013/napkins.webp"
                             data-lightbox="2013"
                             data-title="Bruh I wish I was kidding but I made these when I was like 6 or 7"
                             data-alt="A collection of comics including dragons drawn on napkins"
                             ><img
-                                src="./img/art/2013/napkins.png"
+                                src="img/art/2013/napkins.png"
                                 loading="lazy"
                                 aria-label="open image"
                                 alt="A collection of comics including dragons drawn on napkins"
@@ -3222,12 +2459,6 @@
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
     </body>
 </html>

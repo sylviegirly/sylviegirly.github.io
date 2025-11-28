@@ -13,255 +13,250 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
-        <title>website breakdown</title>
+        <title>website unpacking</title>
 
         <!-- Author -->
         <meta name="author" content="Asuraid" />
 
         <!-- Site Description -->
-        <meta content="A page talking about how I did the HTML and CSS for the site." name="description" />
+        <meta content="A page dedicated to talking about my website documentation." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
 
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="../css/styles.css" />
-        <link rel="stylesheet" href="../css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
 
-        <script src="../js/header.js" defer></script>
-        <script src="../js/footer.js" defer></script>
-        <script src="../js/tab-title-suffix.js"></script>
+        <!-- Page Only Javascript: -->
 
-        <!--✻✻✻✻✻✻  griddery by @glenthemes + lightbox2  ✻✻✻✻✻✻-->
-        <script src="../js/griddery.js"></script>
-        <link href="../css/griddery.css" rel="stylesheet" />
-
-        <script src="../js/accessibility/disclosure-menu.iife.js"></script>
-        <!-- Disclosure Menu -->
-        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                gridderyV3({
-                    items: ".minecraft",
-                    columns: 3
-                });
-            });
-        </script>
-        <script src="../js/lightbox-plus-jquery.js"></script>
-        <link href="../css/lightbox.css" rel="stylesheet" />
+        <!-- Page Only Styling: -->
+        <link href="/css/prism.css" rel="stylesheet" />
+        <style></style>
     </head>
-    <body id="body">
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
-        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
-            <!-- LEFT SIDEBAR CONTENT -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
             <!-- =============================================== -->
-            <div class="intro">
-                <section>
-                    <div class="img-floatinganim">
-                        <img class="dendro" src="../img/dendro_symbol.png" aria-hidden="true" alt="" />
-                    </div>
-                    <img
-                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/61813959_Xr5LiIyVeH43aDy.png"
-                        class="full-width-image hide-mobile" />
-                    <div class="subtitle">Website Breakdown</div>
-                    <div>
-                        <p>
-                            Because my own dumbass forgets what I've done to the website to actually make it function, I
-                            decided to try to document it all here for posterity's sake.
-                        </p>
-                    </div>
-                </section>
-            </div>
+            <left-sidebar></left-sidebar>
 
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>Website Breakdown</h1>
-                    <p>
-                        A simple article that'll break down how I ended up doing various parts of my website, from the
-                        layout to err ... maybe other things in the future; the layout was the thing that I hated the
-                        most in trying to figure out and optimize, so it'll be the first and primary one.
-                    </p>
-                    <p>
-                        This is probably un-optimized as fuck LOL.
-                        <img src="../img/nuko/nukoCrySitting.gif" alt="" aria-hidden="true" />
-                    </p>
-                </article>
-                <article>
-                    <h2 id="layout">Layout</h2>
-                    <p>
-                        My original layout was based off the
-                        <a href="https://codepen.io/sadness97/pen/jOaqGdZ?editors=0100">skyline theme</a> that sadgrl
-                        had remade, and you can see the remnants of it lingering about. My current site uses a grid
-                        system, with the left sidebar and right sidebar having defined widths, and the middle being set
-                        to auto-fill. Aside is the right side column on my main page, .intro is the left side, and main
-                        is ... well, main.
-                    </p>
-                    <pre><code class="lang-css"><span class="hljs-selector-pseudo">:root</span> {
-    <span class="hljs-comment">/* SIZES + SPACING */</span>
-    <span class="hljs-attribute">--blog-size</span>: <span class="hljs-number">1100px</span>;
-    <span class="hljs-attribute">--grid-gap</span>: <span class="hljs-number">13px</span>;
-    <span class="hljs-attribute">--left-sidebar-size</span>: <span class="hljs-number">250px</span>;
-    <span class="hljs-attribute">--right-sidebar-size</span>: <span class="hljs-number">220px</span>;
-    <span class="hljs-attribute">--border-radius</span>: <span class="hljs-number">5px</span>;
+                    <section aria-labelledby="breakdown">
+                        <h1 id="breakdown">Website Breakdown</h1>
+                        <p>
+                            A simple article that'll break down how I ended up doing various parts of my website, from
+                            the layout to err ... maybe other things in the future; the layout was the thing that I
+                            hated the most in trying to figure out and optimize, so it'll be the first and primary one.
+                        </p>
+                        <p class="subtle">
+                            (<a href="https://prismjs.com/">PrismJS</a> was used to colour code the coding for this
+                            page.)
+                        </p>
+                        <p>
+                            <b>Jump to:</b> <a href="#layout">layout</a> / <a href="#helper">helper classes</a> /
+                            <a href="#decos">::before and ::after decos</a> / <a href="#aria">reader mode only</a>
+                        </p>
+                    </section>
+                    <section aria-labelledby="layout">
+                        <h2 id="layout">Layout</h2>
+                        <p>
+                            My original layout was based off the
+                            <a href="https://codepen.io/sadness97/pen/jOaqGdZ?editors=0100">skyline theme</a> that
+                            sadgrl had remade, and you can see the remnants of it lingering about. My old system used to
+                            be grid based, but after gutting my entire site all over again, I've changed it up
+                            <i>again</i> in how I have it organized. It's a simple flexbox system this time around, with
+                            the left sidebar and right sidebar having defined widths, and the middle being set to
+                            auto-fill.
+                        </p>
+                        <h3>CSS File</h3>
+                        <pre><code class="language-css">:root {
+    /* SIZES + SPACING */
+    --blog-size: 1100px;
+    --grid-gap: 13px;
+    --body-gap: 13px;
+    --left-sidebar-size: 250px;
+    --right-sidebar-size: 220px;
 }
 
-<span class="hljs-selector-class">.container-grid</span> {
-    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">50px</span>;
-    <span class="hljs-attribute">display</span>: grid;
-    <span class="hljs-attribute">grid-gap</span>: <span class="hljs-built_in">var</span>(--grid-gap);
-    <span class="hljs-attribute">width</span>: <span class="hljs-built_in">var</span>(--blog-size);
-    <span class="hljs-attribute">grid-template-columns</span>:
-        <span class="hljs-built_in">fit-content</span>(var(--left-sidebar-size))
-        <span class="hljs-number">1</span>fr
-        <span class="hljs-built_in">fit-content</span>(var(--right-sidebar-size));
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">60px</span>;
+/* -------------------------------------------------------- */
+/* GRID LAYOUT */
+/* -------------------------------------------------------- */
+#container-grid {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--grid-gap);
+    width: var(--blog-size);
 }
 
-<span class="hljs-selector-class">.intro</span> {
-    <span class="hljs-attribute">max-width</span>: <span class="hljs-built_in">var</span>(--left-sidebar-size);
-    <span class="hljs-attribute">min-width</span>: <span class="hljs-built_in">var</span>(--left-sidebar-size);
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">20px</span>;
-    <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">1</span>;
-    <span class="hljs-attribute">height</span>: fit-content;
-    <span class="hljs-attribute">position</span>: sticky;
-    <span class="hljs-attribute">top</span>: <span class="hljs-number">75px</span>;
-    <span class="hljs-attribute">align-content</span>: center;
+#left-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--body-gap);
+    /* force sidebar to one size only */
+    max-width: var(--left-sidebar-size);
+    min-width: var(--left-sidebar-size);
+    margin-top: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 75px;
+    text-align: center;
 }
 
-<span class="hljs-selector-tag">main</span> {
-    <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">2</span>;
+main,
+main &#x3E; article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--body-gap);
+    min-width: 0; /* ...? why the fuck does this fix the flexbox being too big ... */
+    max-width: calc(
+        var(--blog-size) - (var(--left-sidebar-size) + (calc(var(--grid-gap) * 2)))
+    ); /* literally the px number is just grip-gap x2 */
 }
 
-<span class="hljs-selector-tag">aside</span> {
-    <span class="hljs-attribute">max-width</span>: <span class="hljs-built_in">var</span>(--right-sidebar-size);
-    <span class="hljs-attribute">min-width</span>: <span class="hljs-built_in">var</span>(--right-sidebar-size);
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">20px</span>;
-    <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">3</span>;
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--body-gap);
+    /* force sidebar to one size only */
+    max-width: var(--right-sidebar-size);
+    min-width: var(--right-sidebar-size);
+    width: 100%;
+    margin-top: 20px;
 }
-</code></pre>
-                    <p>
-                        The margin-left is to not have it stick to the left side of the screen, and margin-bottom is
-                        just to have spacing between the footer and body content. 1fr fills up the rest of the space for
-                        the middle content. Making sure it&#39;s &#39;fit-content&#39; for the side widths, it forces
-                        the content to it&#39;s full width, while the max-widths and min-widths for aside and intro make
-                        sure the items within don&#39;t force its size outside of what it&#39;s supposed to be.
-                    </p>
-                    <p>
-                        ... sometimes some of the interior content of the articles also forces it to be
-                        <strong>huge</strong>, so I have this calc code to force the max width to not be any bigger. I
-                        wish I could give a more thorough explanation for the math behind it, but basically it just
-                        takes away the left sidebar width from the full size, and adds the two &quot;grid gaps&quot;
-                        that would&#39;ve existed.
-                    </p>
-                    <p>
-                        (Ex. The max blog size is 1100px, take away 250px for the sidebar and you have 850px. My grid
-                        gaps are set to 13px, so 2 of those would equal to 824px for the max size the main content
-                        should be ... or well, that&#39;s what it should be automatically on pages that don&#39;t have
-                        giant content that&#39;d force the shape to change. Man, don't ask me, I had to actually force
-                        <u>this</u> page cause the coding chunks were blowing the size of the article page to 1100px
-                        which it shouldn't be).
-                    </p>
-                    <pre><code class="lang-css"><span class="hljs-selector-tag">article</span> {
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">20px</span>;
-    <span class="hljs-attribute">width</span>: auto;
-    <span class="hljs-attribute">max-width</span>: <span class="hljs-built_in">calc</span>(
-        var(--blog-size) - (<span class="hljs-built_in">var</span>(--left-sidebar-size) + (<span class="hljs-built_in">calc</span>(var(--grid-gap) * <span class="hljs-number">2</span>)))
-    ); <span class="hljs-comment">/* literally the px number is just grip-gap x2 */</span>
-}
-</code></pre>
-                    <p>
-                        ... to be honest, I may have to reconsider revisiting the <code>&lt;article&gt;</code> and
-                        <code>&lt;section&gt;</code> chunks because it makes it kind of useless to the firefox reader
-                        mode (I use article to denote each 'chunk' of the main content, like the website breakdown vs
-                        layout ... but I think it can only read ONE article chunk, not everything).
-                    </p>
-                    <hr />
-                    <p>
-                        For pages that don&#39;t have a sidebar, I simply don&#39;t include the
-                        <code>&lt;aside&gt;</code> in the code, and the middle portion will stretch out to accommodate
-                        since it doesn&#39;t have a set size.
-                    </p>
-                    <p>
-                        For mobile, it&#39;s swapped from a grid to a flex layout, since I don&#39;t need to maintain
-                        the shape. Both sidebars are hidden with <code>display: none;</code> since they don&#39;t
-                        contain vital information (navigation).
-                    </p>
-                    <pre><code class="lang-css"><span class="hljs-selector-class">.container-grid</span> {
-    <span class="hljs-attribute">display</span>: flex;
-    <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>fr;
-    <span class="hljs-attribute">flex-direction</span>: column;
-    <span class="hljs-attribute">width</span>: auto;
-    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">5px</span>;
-    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">5px</span>;
-}
-</code></pre>
-                    <hr />
-                    <p>
-                        I use JavaScript to make sure my header, footer, and sidebar
-                        <a
-                            href="https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/"
-                            >are the same across</a
-                        >
-                        all my pages, outside of the ones that are in folders (I may have to revisit it because the way
-                        it&#39;s set up, it won&#39;t locate image links that aren&#39;t on the same folder level; I
-                        don&#39;t like using absolute file paths but I may need to).
-                    </p>
-                    <p>
-                        My navigation header is using the
-                        <a href="https://github.com/NickDJM/accessible-menu">WCAG navbar</a> by Nick DJM, I wish I had a
-                        better breakdown for it, but I genuinely don&#39;t remember how I got it to work. These are the
-                        JavaScript items I have in all my pages tied to it:
-                    </p>
-                    <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/accessibility/disclosure-menu.iife.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/accessibility/accessible-menu.js"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"module"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</code></pre>
-                    <p>And the HTML related to it in the reusable component.</p>
-                    <pre><code class="lang-js">document.addEventListener("DOMContentLoaded", function () {
+
+#left-sidebar &#x3E; section,
+main &#x3E; section,
+aside &#x3E; .section {
+    background-color: var(--body-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 6px 6px 0 var(--body-outline);
+    position: relative;
+    padding: 1em;
+    width: auto;
+}</code></pre>
+                        <h3>HTML File</h3>
+                        <pre><code class="language-html">&#x3C;body&#x3E;
+&#x3C;!-- =============================================== --&#x3E;
+&#x3C;!-- Accessibility links. --&#x3E;
+&#x3C;!-- =============================================== --&#x3E;
+&#x3C;div id=&#x22;skip&#x22;&#x3E;&#x3C;a href=&#x22;#content&#x22;&#x3E;Skip to content&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;nav-header&#x3E;&#x3C;/nav-header&#x3E;
+
+&#x3C;!-- =============================================== --&#x3E;
+&#x3C;!-- BODY BEGINS. --&#x3E;
+&#x3C;!-- =============================================== --&#x3E;
+&#x3C;div id=&#x22;container-grid&#x22;&#x3E;
+    &#x3C;left-sidebar&#x3E;&#x3C;/left-sidebar&#x3E;
+
+    &#x3C;!-- =============================================== --&#x3E;
+    &#x3C;!-- MAIN CONTENT BEGINS. --&#x3E;
+    &#x3C;!-- =============================================== --&#x3E;
+    &#x3C;main id=&#x22;content&#x22;&#x3E;
+        &#x3C;section&#x3E;
+            &#x3C;h1&#x3E;Title&#x3C;/h1&#x3E;
+            &#x3C;p&#x3E;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan quis urna et sodales. Donec
+                ac leo eu mauris vehicula varius. Vivamus justo odio, efficitur et finibus et, ultrices in leo.
+                Nam sed vestibulum felis. Quisque cursus blandit semper. Interdum et malesuada fames ac ante
+                ipsum primis in faucibus. Fusce luctus justo vel purus scelerisque, eget scelerisque libero
+                tempor. Quisque eget luctus dolor. Nam sit amet tellus mauris. Integer at ullamcorper nulla.
+                Curabitur a faucibus tortor. In vehicula congue turpis a viverra. Sed felis felis, finibus vel
+                diam a, tincidunt egestas nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                efficitur cursus scelerisque. Vestibulum condimentum odio dui, a feugiat dolor faucibus non.
+            &#x3C;/p&#x3E;
+        &#x3C;/section&#x3E;
+    &#x3C;/main&#x3E;
+    &#x3C;aside&#x3E;
+        &#x3C;section&#x3E;
+            &#x3C;div class=&#x22;title&#x22;&#x3E;Wow a cool aside chunk goes here&#x3C;/div&#x3E;
+        &#x3C;/section&#x3E;
+    &#x3C;/aside&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;a href=&#x22;#skip&#x22; id=&#x22;backscroll&#x22; class=&#x22;backscroll&#x22; title=&#x22;Go to top&#x22;&#x3E;Top&#x3C;/a&#x3E;
+&#x3C;general-footer&#x3E;&#x3C;/general-footer&#x3E;
+
+&#x3C;!-- Tippy.js --&#x3E;
+&#x3C;script src=&#x22;https://unpkg.com/popper.js@1&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://unpkg.com/tippy.js@5&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;/js/tippy-deco.js&#x22;&#x3E;&#x3C;/script&#x3E;
+
+&#x3C;!-- PAGE ONLY SCRIPTS --&#x3E;
+&#x3C;/body&#x3E;</code></pre>
+                        <p>
+                            ... and if I remove the aside, then the main body (like here) stretches to fit out the rest
+                            of the 'blog size'. I did have to do some bullshit calculation for the main body size; I
+                            wish I could give a more thorough explanation for the math behind it, but basically it just
+                            takes away the left sidebar width from the full size, and adds the two &quot;grid gaps&quot;
+                            that would&#39;ve existed.
+                        </p>
+                        <p>
+                            As you can also tell, I reuse my header, left sidebar, and footer using javascript so I
+                            don't need to rewrite it for each page. This isn't the full code (I trimmed out my nav
+                            headers + some left sidebar chunks), but it is the bones of my layout + my image randomizer.
+                        </p>
+                        <h3>Layout.js</h3>
+                        <pre><code class="language-javascript">document.addEventListener(&#x22;DOMContentLoaded&#x22;, function () {
     // Page has finished loading. Now, do things.
     new NavHeader();
+    new LeftSidebar();
+    new GeneralFooter();
 
     // Add any custom JavaScript code here...
-    var bodyElem = document.querySelector("body");
-    var fontForm = document.getElementById("fontFamily");
+    var bodyElem = document.querySelector(&#x22;body&#x22;);
+    var fontForm = document.getElementById(&#x22;fontFamily&#x22;);
 
-    if (!localStorage.getItem("fontFamily")) {
+    if (!localStorage.getItem(&#x22;fontFamily&#x22;)) {
         populateStorage();
     } else {
         setStyles();
     }
 
     function populateStorage() {
-        localStorage.setItem("fontFamily", document.getElementById("fontFamily").value);
+        localStorage.setItem(&#x22;fontFamily&#x22;, document.getElementById(&#x22;fontFamily&#x22;).value);
         setStyles();
     }
 
     function setStyles() {
-        var currentFont = localStorage.getItem("fontFamily");
-        document.getElementById("fontFamily").value = currentFont;
+        var currentFont = localStorage.getItem(&#x22;fontFamily&#x22;);
+        document.getElementById(&#x22;fontFamily&#x22;).value = currentFont;
 
         bodyElem.style.fontFamily = currentFont;
     }
@@ -269,91 +264,49 @@
     fontForm.onchange = populateStorage;
 });
 
-const content = `
-<span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>aid's small corner<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subtext"</span>&gt;</span>a little personal site<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button-wrapper"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"fontFamily"</span>&gt;</span>Font:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"fontFamily"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fontFamily"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"freepixel"</span>&gt;</span>Free Pixel<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"atkinson"</span>&gt;</span>Atkinson Hyperlegible<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"intel one"</span>&gt;</span>Intel One Mono<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"open dyslexic"</span>&gt;</span>Open Dyslexic<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Nunito"</span>&gt;</span>Nunito<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Tahoma"</span>&gt;</span>Tahoma<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Verdana"</span>&gt;</span>Verdana<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Arial"</span>&gt;</span>Arial<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"toggle-0"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Toggle main menu"</span>&gt;</span>☰<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"menu-0"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-1-0-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-1-0-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/index.html"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-2-0-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-2-0-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/about.html"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-3-0-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-2-0-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/gallery.html"</span>&gt;</span>Art<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-4-0-0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-4-0-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Personal<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"menu-3"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-4-1-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-4-1-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/blog.html"</span>&gt;</span>Blog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-4-2-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-4-2-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/diary/index.html"</span>&gt;</span>Diary<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-4-3-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-4-3-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/manifesto.html"</span>&gt;</span>Manifesto<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-4-4-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-4-4-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/now.html"</span>&gt;</span>Now<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-5-0-0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-5-0-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>OCs / Shrines<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"menu-4"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-5-1-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-5-1-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/oc/sylvie/index.html"</span>&gt;</span>Sylvie<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-5-2-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-5-2-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/oc/yadyra/index.html"</span>&gt;</span>Yadyra<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-5-3-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-5-3-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/oc/nameless/index.html"</span>&gt;</span>Nameless<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-5-4-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-5-4-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/oc.html"</span>&gt;</span>Other OCs<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-5-5-0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-5-5-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Shrines<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"menu-5-5"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-5-5-1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-5-5-1"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/shrines/zhongli.html"</span>&gt;</span>Zhongli<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-5-5-2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-5-5-2"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/shrines/zhongvie.html"</span>&gt;</span>Zhongvie (🌿🔶)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-5-5-3"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-5-5-3"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/shrines/ukitake.html"</span>&gt;</span>Jushiro Ukitake<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-6-0-0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-6-0-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Fun Things<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"menu-6"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-6-1-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-6-1-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/articles.html"</span>&gt;</span>Articles<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-6-2-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-6-2-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/bookmarks.html"</span>&gt;</span>Bookmarks<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-6-3-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-6-3-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/media-log.html"</span>&gt;</span>Media Log<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-6-4-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-6-4-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/recipes.html"</span>&gt;</span>Recipes<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-6-5-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-6-5-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/toybox.html"</span>&gt;</span>Toybox<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-7-0-0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-7-0-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Others<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"menu-7"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-7-1-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-7-1-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/changelog.html"</span>&gt;</span>Changelog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-7-2-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-7-2-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/credits.html"</span>&gt;</span>Credits<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-7-3-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-7-3-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://asuraid.atabook.org/"</span>&gt;</span>Guestbook<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-7-4-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-7-4-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/links.html"</span>&gt;</span>Neighbours<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-7-5-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-7-5-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/sitemap.html"</span>&gt;</span>Sitemap<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"item-7-6-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"link-7-6-0"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/to-do.html"</span>&gt;</span>To-Do List<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
-`;
-
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-/* FOR MOBILE DO NOT TOUCH OTHERWISE */
-function openDropdown() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
+/* TAB TITLE INTEGRATION */
+const tabTitle = document.title;
+if (tabTitle !== &#x22;aid&#x27;s little corner&#x22;) {
+    document.title = tabTitle + &#x22; &#x2022; aid&#x27;s little corner&#x22;;
 }
+
+/* BEGIN HEADER */
+const content = &#x60;
+&#x3C;!-- HEADER --&#x3E;
+&#x3C;header&#x3E;
+    &#x3C;div class=&#x22;title&#x22;&#x3E;aid&#x27;s small corner&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;subtext&#x22;&#x3E;a little personal site&#x3C;/div&#x3E;
+&#x3C;/header&#x3E;
+&#x3C;!-- FONT TOGGLE --&#x3E;
+&#x3C;div class=&#x22;font-wrapper&#x22;&#x3E;
+    &#x3C;label for=&#x22;fontFamily&#x22; class=&#x22;title&#x22;&#x3E;Font&#x3C;/label&#x3E;
+    &#x3C;select name=&#x22;fontFamily&#x22; id=&#x22;fontFamily&#x22;&#x3E;
+        &#x3C;option value=&#x22;Nunito&#x22;&#x3E;Nunito&#x3C;/option&#x3E;
+        &#x3C;option value=&#x22;Open Dyslexic&#x22;&#x3E;Open Dyslexic&#x3C;/option&#x3E;
+        &#x3C;option value=&#x22;Intel One&#x22;&#x3E;Intel One&#x3C;/option&#x3E;
+        &#x3C;option value=&#x22;Atkinson&#x22;&#x3E;Atkinson Hyperlegible&#x3C;/option&#x3E;
+    &#x3C;/select&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!-- NAVIGATION --&#x3E;
+&#x3C;nav&#x3E;
+    &#x3C;button id=&#x22;toggle-0&#x22; aria-label=&#x22;Toggle main menu&#x22;&#x3E;&#x2630;&#x3C;/button&#x3E;
+    &#x3C;ul id=&#x22;menu-0&#x22;&#x3E;
+        &#x3C;li id=&#x22;item-1-0-0&#x22;&#x3E;&#x3C;a id=&#x22;link-1-0-0&#x22; href=&#x22;/index.html&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li id=&#x22;item-2-0-0&#x22;&#x3E;&#x3C;a id=&#x22;link-2-0-0&#x22; href=&#x22;/about.html&#x22;&#x3E;About&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li id=&#x22;item-3-0-0&#x22;&#x3E;&#x3C;a id=&#x22;link-3-0-0&#x22; href=&#x22;/gallery.html&#x22;&#x3E;Art&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li id=&#x22;item-4-0-0&#x22; class=&#x22;dropdown&#x22;&#x3E;
+            &#x3C;a id=&#x22;link-4-0-0&#x22; href=&#x22;#&#x22;&#x3E;Personal&#x3C;/a&#x3E;
+            &#x3C;ul id=&#x22;menu-4&#x22;&#x3E;
+                &#x3C;li id=&#x22;item-4-1-0&#x22;&#x3E;&#x3C;a id=&#x22;link-4-1-0&#x22; href=&#x22;https://zhongvie.bearblog.dev/&#x22;&#x3E;Blog&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li id=&#x22;item-4-2-0&#x22;&#x3E;&#x3C;a id=&#x22;link-4-2-0&#x22; href=&#x22;/diary/index.html&#x22;&#x3E;Diary&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li id=&#x22;item-4-3-0&#x22;&#x3E;&#x3C;a id=&#x22;link-4-3-0&#x22; href=&#x22;/manifesto.html&#x22;&#x3E;Manifesto&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li id=&#x22;item-4-4-0&#x22;&#x3E;&#x3C;a id=&#x22;link-4-4-0&#x22; href=&#x22;/blog.html&#x22;&#x3E;Microblog&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li id=&#x22;item-4-5-0&#x22;&#x3E;&#x3C;a id=&#x22;link-4-5-0&#x22; href=&#x22;/now.html&#x22;&#x3E;Now&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;/ul&#x3E;
+        &#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;
+&#x60;;
 
 class NavHeader extends HTMLElement {
     constructor() {
@@ -361,128 +314,271 @@ class NavHeader extends HTMLElement {
         this.innerHTML = content;
     }
 }
-customElements.define("nav-header", NavHeader);
-</code></pre>
-                    <p>... and the CSS related to the nav:</p>
-                    <pre><code class="lang-css"><span class="hljs-selector-tag">nav</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--primary-accent);
-    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--font-on-accent);
-    <span class="hljs-attribute">position</span>: sticky;
-    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">20px</span>;
-    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">50px</span>;
+customElements.define(&#x22;nav-header&#x22;, NavHeader);
+
+/* BEGIN LEFT SIDEBAR */
+class LeftSidebar extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.innerHTML = &#x60;
+&#x3C;div id=&#x22;left-sidebar&#x22;&#x3E;
+    &#x3C;section id=&#x22;intro&#x22;&#x3E;
+        &#x3C;div class=&#x22;img-floatinganim&#x22;&#x3E;
+            &#x3C;img class=&#x22;dendro&#x22; src=&#x22;/img/decos/dendro_symbol.png&#x22; aria-hidden=&#x22;true&#x22; alt=&#x22;&#x22; /&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div id=&#x22;sidedeco&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;section&#x3E;
+        &#x3C;div class=&#x22;description&#x22;&#x3E;
+        &#x3C;div class=&#x22;title&#x22;&#x3E;Welcome!&#x3C;/div&#x3E;
+            &#x3C;p style=&#x22;text-align: center&#x22;&#x3E;
+                &#x3C;b&#x3E;aid&#x3C;/b&#x3E;
+                &#x3C;img
+                    style=&#x22;padding-left: 5px; padding-right: 5px&#x22;
+                    src=&#x22;/img/decos/flower_bullet.png&#x22;
+                    aria-hidden=&#x22;true&#x22;
+                    alt=&#x22;&#x22; /&#x3E;
+                &#x3C;b&#x3E;25+&#x3C;/b&#x3E;
+                &#x3C;img
+                    style=&#x22;padding-left: 5px; padding-right: 5px&#x22;
+                    src=&#x22;/img/decos/flower_bullet.png&#x22;
+                    aria-hidden=&#x22;true&#x22;
+                    alt=&#x22;&#x22; /&#x3E;
+                &#x3C;b&#x3E;she/her&#x3C;/b&#x3E;
+            &#x3C;/p&#x3E;
+            &#x3C;hr /&#x3E;
+            &#x3C;p&#x3E;Welcome to my silly lil corner, hope you enjoy your stay!!&#x3C;/p&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;section&#x3E;
+        &#x3C;div class=&#x22;title&#x22;&#x3E;
+            Site Button
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;site-button&#x22;&#x3E;
+            &#x3C;div class=&#x22;flexbox-lazy&#x22;&#x3E;
+                &#x3C;div&#x3E;
+                    &#x3C;a href=&#x22;https://zhongvie.neocities.org/&#x22; target=&#x22;_blank&#x22; class=&#x22;block&#x22;
+                        &#x3E;&#x3C;img src=&#x22;/img/zhongvie_button_1.gif&#x22; alt=&#x22;zhongvie button&#x22; style=&#x22;min-width: 88px;&#x22;
+                    /&#x3E;&#x3C;/a&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div&#x3E;
+                    &#x3C;textarea id=&#x22;site-button&#x22; name=&#x22;site-button&#x22; style=&#x22;width: 100px&#x22;&#x3E;
+&#x26;lt;a href=&#x22;https://zhongvie.neocities.org/&#x22;&#x26;gt;&#x26;lt;img src=&#x22;https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/sylvieButton.gif&#x22; alt=&#x22;zhongvie button&#x22; loading=&#x22;lazy&#x22;&#x26;gt;&#x26;lt;/a&#x26;gt;&#x3C;/textarea
+                    &#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;label for=&#x22;site-button&#x22; class=&#x22;subtle&#x22; style=&#x22;text-align: center; line-height: 0.5em;&#x22;
+                &#x3E;Please do not hotlink. &#x3C;a href=&#x22;./links.html&#x22;&#x3E;Alt buttons&#x3C;/a&#x3E;.&#x3C;/label
+            &#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;section&#x3E;
+        &#x3C;div class=&#x22;flexbox-lazy&#x22; style=&#x22;padding: 0&#x22;&#x3E;
+            &#x3C;a
+                href=&#x22;https://www.tumblr.com/lavendergalactic&#x22; style=&#x22;text-decoration: none&#x22;
+                title=&#x22;gifs by lavendergalactic as a commission for me. please don&#x27;t use.&#x22;&#x3E;
+            &#x3C;img src=&#x22;/img/shiny/bites%20you%20shiny%20button.gif&#x22; alt=&#x22;shiny button that says bites you&#x22; /&#x3E;
+            &#x3C;img src=&#x22;/img/shiny/silly%20shiny%20button.gif&#x22; alt=&#x22;shiny button that says silly&#x22; /&#x3E;
+            &#x3C;img src=&#x22;/img/shiny/zhongvie%20shiny%20button.gif&#x22; alt=&#x22;shiny button that says zhongvie&#x22; /&#x3E;&#x3C;/a&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/section&#x3E;
+&#x3C;/div&#x3E;
+    &#x60;;
+    }
 }
-<span class="hljs-selector-tag">nav</span> &gt; <span class="hljs-selector-tag">button</span> {
-    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">44px</span>;
-    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">24px</span>;
-    <span class="hljs-attribute">display</span>: flex;
-    <span class="hljs-attribute">text-align</span>: center;
-    <span class="hljs-attribute">align-items</span>: center;
-    <span class="hljs-attribute">justify-content</span>: center;
-    <span class="hljs-attribute">margin-left</span>: auto;
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--primary-accent);
-    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--font-on-accent);
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2.5rem</span>;
+
+customElements.define(&#x22;left-sidebar&#x22;, LeftSidebar);
+
+// DO IMAGE REROLL THINGS
+const images = [
+    {
+        imagesrc: &#x22;/img/sidebar/yippe.gif&#x22;,
+        alt: &#x22;A small dancing yippee creature of Sylvie.&#x22;,
+        url: &#x22;https://vgen.co/cakepawzz&#x22;
+    },
+    {
+        imagesrc: &#x22;/img/sidebar/sylvie_chibi_1.jpg&#x22;,
+        alt: &#x22;A small chibi of Sylvie sitting and looking at a flower in their hand.&#x22;,
+        url: &#x22;https://twitter.com/magaridilatte&#x22;
+    },
+    {
+        imagesrc: &#x22;/img/sidebar/sylvie_chibi_4.jpg&#x22;,
+        alt: &#x22;A small chibi of Sylvie waving at the viewer.&#x22;,
+        url: &#x22;https://twitter.com/magaridilatte&#x22;
+    }
+];
+
+var randomIndex = Math.floor(Math.random() * images.length);
+const finalImage =
+    &#x22;&#x3C;a href=&#x27;&#x22; +
+    images[randomIndex].url +
+    &#x22;&#x27; class=&#x27;block&#x27;&#x3E;&#x3C;img src=&#x27;&#x22; +
+    images[randomIndex].imagesrc +
+    &#x22;&#x27; alt=&#x27;&#x22; +
+    images[randomIndex].alt +
+    &#x22;&#x27; loading=&#x27;lazy&#x27;/&#x3E;&#x3C;/a&#x3E;&#x22;;
+document.getElementById(&#x22;sidedeco&#x22;).innerHTML = finalImage;
+
+/* BEGIN FOOTER */
+const footer = &#x60;
+&#x3C;footer&#x3E;
+    &#x3C;p&#x3E;
+        2025 &#x26;copy; lovingly coded by &#x3C;a href=&#x22;https://justinjackson.ca/webmaster/&#x22;&#x3E;aid&#x3C;/a&#x3E; &#x26;bull; &#x3C;a href=&#x22;/changelog.html&#x22;&#x3E;changelog&#x3C;/a&#x3E; &#x26;bull; &#x3C;a href=&#x22;/credits.html&#x22;&#x3E;credits&#x3C;/a&#x3E; &#x26;bull; &#x3C;a href=&#x22;/feed.xml&#x22;&#x3E;rss&#x3C;/a&#x3E; &#x26;bull; &#x3C;a href=&#x22;https://asuraid.atabook.org/&#x22;&#x3E;guestbook&#x3C;/a&#x3E; &#x26;bull; &#x3C;a href=&#x22;https://revospring.net/@asuraid&#x22;&#x3E;askbox&#x3C;/a&#x3E; &#x26;bull; &#x3C;a href=&#x22;mailto:sylviegirly@pm.me&#x22;&#x3E;contact me&#x3C;/a&#x3E;
+    &#x3C;/p&#x3E;
+&#x3C;/footer&#x3E;
+&#x60;;
+
+class GeneralFooter extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = footer;
+    }
 }
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">ul</span> {
-    <span class="hljs-attribute">display</span>: none;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--primary-accent);
-    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--font-on-accent);
-    <span class="hljs-attribute">list-style</span>: none;
-    <span class="hljs-attribute">text-transform</span>: uppercase;
+
+customElements.define(&#x22;general-footer&#x22;, GeneralFooter);</code></pre>
+                        <h3>HTML Portion</h3>
+                        <pre><code class="language-html">        &#x3C;!-- Preloading --&#x3E;
+        &#x3C;link rel=&#x22;preload&#x22; href=&#x22;/css/style.css&#x22; as=&#x22;style&#x22; /&#x3E;
+        &#x3C;link rel=&#x22;preload&#x22; href=&#x22;/js/layout.js&#x22; as=&#x22;script&#x22; /&#x3E;
+
+        &#x3C;!-- CSS: --&#x3E;
+        &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;/css/style.css&#x22; /&#x3E;
+        &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;/css/normalize.css&#x22; /&#x3E;
+
+        &#x3C;!-- JavaScript: --&#x3E;
+        &#x3C;script src=&#x22;/js/layout.js&#x22; defer&#x3E;&#x3C;/script&#x3E;
+        &#x3C;script src=&#x22;/js/navigation.js&#x22; type=&#x22;module&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
+                        <p>
+                            (Thanks to reyn for bringing this up in
+                            <a href="https://cervidaze.me/blog/posts/2025-11-22-sitebreakdown"
+                                >their website breakdown</a
+                            >
+                            for the preloading...)
+                        </p>
+                        <p>
+                            This also handles the logic of my font changer to maintain/remember what font you chose
+                            (thanks to <a href="https://pastebin.com/u/punkwasp">punkwasp</a> for the code), this is the
+                            only thing stored from my site. This also includes a snippet from petrapixel to have my tab
+                            title included (like you see 'aid's little corner' above).
+                        </p>
+                        <p>
+                            My navigation header is using the
+                            <a href="https://github.com/NickDJM/accessible-menu">WCAG navbar</a> by Nick DJM, I wish I
+                            had a better breakdown for it, but I genuinely don&#39;t remember how I got it to work.
+                            You're free to dig through my style sheet and check out my nav section, and the
+                            navigation.js item.
+                        </p>
+                        <p>
+                            <b>Mobile responsiveness</b> is mostly just changing the layout to be columns, nuking the
+                            left sidebar and aside, and profit (hiding anything using a helper code that just hides it
+                            on mobile only). You can check out some of my
+                            <a href="/templates/index.html">templates</a> to see it in action in the code, since it's
+                            the same logic I use here.
+                        </p>
+                    </section>
+                    <section>
+                        <h2 id="helper">Helper Classes</h2>
+                        <p>
+                            I tend to like using helper classes a <i>lot</i> now that I've gotten more used to it ...
+                            aka very lazy and quick coding snippets I can slap on top of something. Lazy flexbox? Got
+                            you:
+                        </p>
+                        <pre><code class="language-css">/* lazy flexbox for items */
+.flexbox-lazy {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
 }
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">ul</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--article-bg);
-    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.5) <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">15px</span>;
-    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--text-colour);
-    <span class="hljs-attribute">text-transform</span>: lowercase;
-    <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-built_in">var</span>(--border-radius);
-    <span class="hljs-attribute">border-bottom-right-radius</span>: <span class="hljs-built_in">var</span>(--border-radius);
+
+.flexbox-lazy a {
+    text-decoration: none;
+    line-height: 0;
+}</code></pre>
+                        <p>
+                            Quick class you can add to images to make them float, plus go to a block display on mobile?
+                            Yep, got that too:
+                        </p>
+                        <pre><code class="language-css">.float-img-right {
+    max-width: 40%;
+    float: right;
+    margin: 5px 0 5px 10px;
 }
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">a</span> {
-    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--text-colour);
+
+.float-img-left {
+    max-width: 40%;
+    float: left;
+    margin: 5px 10px 5px 0;
 }
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">ul</span><span class="hljs-selector-class">.show</span> {
-    <span class="hljs-attribute">display</span>: grid;
-    <span class="hljs-attribute">grid-auto-flow</span>: row;
-    <span class="hljs-attribute">grid-auto-rows</span>: max-content;
-}
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">a</span> {
-    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">44px</span>;
-    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">24px</span>;
-    <span class="hljs-attribute">display</span>: flex;
-    <span class="hljs-attribute">align-items</span>: center;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.75rem</span> <span class="hljs-number">1.5rem</span>;
-    <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">150ms</span> ease-in-out;
-    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--font-on-accent);
-    <span class="hljs-attribute">text-decoration</span>: none;
-}
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--secondary-accent);
-    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--font-on-accent);
-}
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">li</span> {
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.2rem</span>;
-}
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.dropdown</span> {
-    <span class="hljs-attribute">position</span>: relative;
-}
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.dropdown</span> &gt; <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">::after</span> {
-    <span class="hljs-attribute">content</span>: <span class="hljs-string">"▼"</span>;
-    <span class="hljs-attribute">display</span>: block;
-    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0.5rem</span>;
-    <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">250ms</span> linear;
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.5em</span>;
-}
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.dropdown</span> &gt; <span class="hljs-selector-tag">a</span><span class="hljs-selector-attr">[aria-expanded="true"]</span><span class="hljs-selector-pseudo">::after</span> {
-    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-180deg);
-}
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.dropdown</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">a</span> {
-    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1.25rem</span>;
-}
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.dropdown</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.dropdown</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">a</span> {
-    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">2rem</span>;
-}
-</code></pre>
-                    <p>
-                        ... kinda gross, I know. But it works, and I&#39;m honestly not going to fuck around with it any
-                        further.
-                    </p>
-                    <p>
-                        I&#39;ll try to think of other ways I did my website in due time, but this is a start for the
-                        layout.
-                    </p>
-                </article>
-                <article>
-                    <h2>Font Toggle?</h2>
-                    <p>
-                        To be fair I'm mostly just using <a href="https://pastebin.com/u/punkwasp">punkwasp</a>'s code.
-                        Might expand on it later cause I did it in a weirder way.
-                    </p>
+
+@media screen and (max-width: 800px) {
+    /* float image fixes */
+    .float-img-right {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+    }
+
+    .float-img-left {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+    }
+}</code></pre>
+                        <p>
+                            I even have a simple CSS class I can plop on a link, button, or image to just 'disable' it
+                            temporarily and pop a warning cursor when
+                            <span class="tippy disabled">hovering over it</span>. Really good for the pages I've not
+                            finished LMAO.
+                        </p>
+                        <pre><code class="language-css">.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}</code></pre>
+                        <p>
+                            I'm not going to list all of my helper codes, but they're really nice to have, especially
+                            since I use the same CSS styling across my whole page ... but you could always made a CSS
+                            file you call on every page that has easily accessible helper codes, especially if you make
+                            more unique layouts.
+                        </p>
+                    </section>
+                    <section aria-labelledby="decos">
+                        <h2 id="decos">Decorative ::before and ::after</h2>
+                        <p>I'll write this up eventually ... case in point is my H1 and my sidebar titles.</p>
+                    </section>
+                    <section>
+                        <h2 id="aria">Reader Mode Only</h2>
+                        I'll expand on this sooner, but I used
+                        <a
+                            href="https://www.sitelint.com/blog/hiding-a-text-but-making-it-accessible-to-a-screen-reader"
+                            >this tutorial</a
+                        >
+                        for visually hiding stuff and <code>tabindex="-1"</code> for avoiding things being focused on
+                        when using tab.
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
 
-        <!-- Scroll to Top -->
-        <script src="../js/scroll-to-top.js"></script>
+        <!-- PAGE ONLY SCRIPTS -->
+        <script src="/js/prism.js"></script>
     </body>
 </html>

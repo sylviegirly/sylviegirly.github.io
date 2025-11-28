@@ -13,13 +13,16 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
         <title>airfryer pork tenderloin</title>
@@ -30,210 +33,139 @@
         <!-- Site Description -->
         <meta content="Airfried pork tenderloin recipe." name="description" />
 
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
+
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="../css/styles.css" />
-        <link rel="stylesheet" href="../css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
-        <script src="../js/sparkle_trail.js"></script>
-        <script src="../js/header.js" defer></script>
-        <script src="../js/footer.js" defer></script>
-        <script src="../js/tab-title-suffix.js"></script>
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
 
-        <!-- Disclosure Menu -->
-        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
+        <!-- Page Only Javascript: -->
+
+        <!-- Page Only Styling: -->
+        <link rel="stylesheet" href="/css/recipe.css" />
+        <style></style>
     </head>
-    <body id="body">
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
-        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
-            <!-- LEFT SIDEBAR CONTENT -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
             <!-- =============================================== -->
-            <div class="intro">
-                <section>
-                    <div class="img-floatinganim">
-                        <img class="dendro" src="../img/dendro_symbol.png" aria-hidden="true" alt="" />
-                    </div>
-                    <img
-                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/92262681_WBR555I9TFO2wdE.png"
-                        class="full-width-image" />
-                    <div class="subtitle">
-                        <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
-                        Welcome!!
-                        <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
-                    </div>
-                    <div>
-                        <p style="text-align: center">
-                            <b>aid</b>
-                            <img
-                                style="padding-left: 5px; padding-right: 5px"
-                                src="../img/decos/teabag.gif"
-                                aria-hidden="true"
-                                alt="" />
-                            <b>25+</b>
-                            <img
-                                style="padding-left: 5px; padding-right: 5px"
-                                src="../img/decos/teabag.gif"
-                                aria-hidden="true"
-                                alt="" />
-                            <b>she/her</b>
-                        </p>
-                        <hr />
-                        <p>
-                            I hope you enjoy this recipe! My random image scroll doesn't work here so have a little
-                            custom side bar for just my recipes. 🫡
-                        </p>
-                        <hr />
-                        <div class="cool-buttons">
-                            <a
-                                href="https://www.tumblr.com/lavendergalactic"
-                                title="gifs by lavendergalactic as a commission for me. please don't use.">
-                                <img
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/bites%20you%20shiny%20button.gif"
-                                    aria-hidden="true"
-                                    alt="" />
-                                <img
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/silly%20shiny%20button.gif"
-                                    aria-hidden="true"
-                                    alt="" />
-                                <img
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/zhongvie%20shiny%20button.gif"
-                                    aria-hidden="true"
-                                    alt="" />
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            <left-sidebar></left-sidebar>
 
             <!-- =============================================== -->
-            <!-- RECIPE CONTENT HERE -->
+            <!-- MAIN CONTENT BEGINS. -->
             <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>
-                        <img src="../img/decos/hanging_flowers.gif" aria-hidden="true" alt="" />
-                        Airfried Pork Tenderloin
-                    </h1>
-                    <a href="../recipes.html" style="margin-top: -5px; font-style: italic">← return to recipe list</a>
-                    <div
-                        style="
-                            margin-top: 5px;
-                            display: flex;
-                            border-radius: 10px;
-                            width: 100%;
-                            max-height: 300px;
-                            overflow: hidden;
-                            justify-content: center; /* align horizontal */
-                            align-items: center; /* align vertical */
-                        ">
-                        <img
-                            style="
-                                align-self: flex-start;
-                                object-fit: cover;
-                                max-width: 100%;
-                                height: auto;
-                                margin-top: -25%;
-                            "
-                            src="https://recipeteacher.com/wp-content/uploads/2019/12/best-damn-air-fryer-pork-tenderloin-3.jpg"
-                            alt=""
-                            aria-hidden="true" />
-                    </div>
-                    <div style="display: flex; gap: 20px; margin-top: 10px">
-                        <div
-                            style="
-                                flex: 30%;
-                                background-color: var(--body-deco);
-                                padding: 0 10px;
-                                border-radius: var(--border-radius);
-                            ">
-                            <h2>Ingredients</h2>
-                            <p>
-                                pork tenderloin, brown sugar, onion powder, garlic powder, mustard, pepper, salt,
-                                paprika, olive oil
-                            </p>
-                            <p>
-                                <b>Source</b><br /><a
-                                    href="https://recipeteacher.com/best-damn-air-fryer-pork-tenderloin/"
-                                    >recipeteacher.com</a
-                                >
-                            </p>
+                    <section>
+                        <h1>Airfried Pork Tenderloin</h1>
+                        <a
+                            href="index.html"
+                            class="subtle"
+                            style="margin-top: -5px; font-style: italic"
+                            aria-hidden="true"
+                            >← return to recipe list</a
+                        >
+                        <div class="intro-image">
+                            <img
+                                src="https://recipeteacher.com/wp-content/uploads/2019/12/best-damn-air-fryer-pork-tenderloin-3.jpg"
+                                alt="" />
                         </div>
-                        <div style="flex: 70%">
-                            <h2>Introduction</h2>
-                            <p>
-                                A new recipe addition, but one that's been really good for days when we aren't sure what
-                                to do. Kinda messy to put the rub on top, but it's ok. Please do check your tenderloin
-                                weight, don't be like me and do double the rub on the first one I ever made ...
-                            </p>
-                            <ul>
-                                <li><b>Prep Time:</b> 6 min prep + ~20 min cooking</li>
-                                <li><b>Servings:</b> 4 servings</li>
-                            </ul>
+                        <div class="full-intro">
+                            <div class="recipe-descrip">
+                                <h2>Ingredients</h2>
+                                <p>
+                                    pork tenderloin, brown sugar, onion powder, garlic powder, mustard, pepper, salt,
+                                    paprika, olive oil
+                                </p>
+                                <p>
+                                    <b>Source</b><br /><a
+                                        href="https://recipeteacher.com/best-damn-air-fryer-pork-tenderloin/"
+                                        >recipeteacher.com</a
+                                    >
+                                </p>
+                            </div>
+                            <div class="recipe-intro">
+                                <h2>Introduction</h2>
+                                <p>
+                                    A new recipe addition, but one that's been really good for days when we aren't sure
+                                    what to do. Kinda messy to put the rub on top, but it's ok. Please do check your
+                                    tenderloin weight, don't be like me and do double the rub on the first one I ever
+                                    made ...
+                                </p>
+                                <ul>
+                                    <li><b>Prep Time:</b> 6 min prep + ~20 min cooking</li>
+                                    <li><b>Servings:</b> 4 servings</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article>
-                    <h1>Ingredients</h1>
-                    <ul>
-                        <li>1.25lb — 1.75lbs / 570g — 800g pork tenderloin</li>
-                        <li>2 tablespoons brown sugar</li>
-                        <li>1 tablespoon smoked paprika</li>
-                        <li>1 1/2 teaspoons salt</li>
-                        <li>
-                            1 tablespoon mustard
-                            <ul>
-                                <li>Normally it's ground mustard, but I found using mustard itself works well</li>
-                            </ul>
-                        </li>
-                        <li>1/2 teaspoons onion powder</li>
-                        <li>1/2 teaspoons black pepper</li>
-                        <li>1/4 teaspoons garlic powder</li>
-                        <li>1/2 tablespoons olive oil</li>
-                    </ul>
-                </article>
-                <article>
-                    <h2>Cooking Instructions</h2>
-                    <ol>
-                        <li>
-                            Mix all dry ingredients in a bowl (sugar, paprika, salt, onion powder, pepper, garlic
-                            powder).
-                        </li>
-                        <li>
-                            Trim the pork tenderloin of any excess fat/silver skin. Coat with a ½ tablespoon olive oil,
-                            then rub the mustard all over. Rub spice mixture on entire pork tenderloin.
-                        </li>
-                        <li>
-                            Preheat air fryer to 400° F for 5 minutes. After 5 minutes, carefully place pork tenderloin
-                            into air fryer and air fry at 400° F for 20-22 minutes. Internal temp should be 145°F.
-                        </li>
-                        <li>
-                            When air fryer cycle is complete, carefully remove pork tenderloin to a cutting board and
-                            let rest for 5 minutes before slicing. Save any juices to serve over sliced meat.
-                        </li>
-                    </ol>
+                    </section>
+                    <section>
+                        <h2>Ingredients</h2>
+                        <ul>
+                            <li>1.25lb — 1.75lbs / 570g — 800g pork tenderloin</li>
+                            <li>2 tablespoons brown sugar</li>
+                            <li>1 tablespoon smoked paprika</li>
+                            <li>1 1/2 teaspoons salt</li>
+                            <li>
+                                1 tablespoon mustard
+                                <ul>
+                                    <li>Normally it's ground mustard, but I found using mustard itself works well</li>
+                                </ul>
+                            </li>
+                            <li>1/2 teaspoons onion powder</li>
+                            <li>1/2 teaspoons black pepper</li>
+                            <li>1/4 teaspoons garlic powder</li>
+                            <li>1/2 tablespoons olive oil</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Cooking Instructions</h2>
+                        <ol>
+                            <li>
+                                Mix all dry ingredients in a bowl (sugar, paprika, salt, onion powder, pepper, garlic
+                                powder).
+                            </li>
+                            <li>
+                                Trim the pork tenderloin of any excess fat/silver skin. Coat with a ½ tablespoon olive
+                                oil, then rub the mustard all over. Rub spice mixture on entire pork tenderloin.
+                            </li>
+                            <li>
+                                Preheat air fryer to 400° F for 5 minutes. After 5 minutes, carefully place pork
+                                tenderloin into air fryer and air fry at 400° F for 20-22 minutes. Internal temp should
+                                be 145°F.
+                            </li>
+                            <li>
+                                When air fryer cycle is complete, carefully remove pork tenderloin to a cutting board
+                                and let rest for 5 minutes before slicing. Save any juices to serve over sliced meat.
+                            </li>
+                        </ol>
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
-        <!-- Scroll to Top -->
-        <script src="../js/scroll-to-top.js"></script>
+        <!-- PAGE ONLY SCRIPTS -->
     </body>
 </html>

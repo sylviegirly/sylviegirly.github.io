@@ -13,13 +13,16 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
         <title>sitemap</title>
@@ -30,146 +33,144 @@
         <!-- Site Description -->
         <meta content="A sitemap linking to every page on this site." name="description" />
 
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
+
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
+        <script src="js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
 
-        <script src="js/header.js" defer></script>
-        <script src="js/left-sidebar.js" defer></script>
-        <script src="js/footer.js" defer></script>
-        <script src="js/tab-title-suffix.js"></script>
+        <!-- Page Only Javascript: -->
 
-        <script src="js/accessibility/disclosure-menu.iife.js"></script>
-        <!-- Disclosure Menu -->
-        <script src="js/accessibility/accessible-menu.js" type="module"></script>
+        <!-- Page Only Styling: -->
+        <style></style>
     </head>
-    <body id="body">
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
         <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
             <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
             <!-- =============================================== -->
             <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>Sitemap</h1>
-                    <p>
-                        To be fair even <b><i>I</i></b> don't know exactly what all my links will be nor the sections of
-                        my website, so I guess this is kinda a semi not-to-do-but-to-do list as well for places to put
-                        in eventually. How tf do I even categorize these ... anything crossed out
-                        <u>doesn't exist yet</u>.
-                    </p>
-                    <ul>
-                        <li>Personal Things</li>
-                        <li style="list-style-type: none">
-                            <ul>
-                                <li><a href="about.html">About Me</a></li>
-                                <li><a href="gallery.html">Artwork</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="diary/index.html">Diary</a></li>
-                                <li><a href="manifesto.html">Manifesto</a></li>
-                                <li><a href="now.html">Now</a></li>
-                                <li><a href="to-do.html">To-do List</a></li>
-                            </ul>
-                        </li>
-                        <li>OCs</li>
-                        <li style="list-style-type: none">
-                            <ul>
-                                <li><a href="oc.html">All OCs</a></li>
-                                <li><a href="oc/hideki/index.html">Hideki</a></li>
-                                <li><a href="oc/khaliun/index.html">Khaliun</a></li>
-                                <li><a href="oc/nameless/index.html">Nameless</a></li>
-                                <li><a href="oc/raiden/index.html">Raiden</a></li>
-                                <li><a href="oc/resu/index.html">Resu</a></li>
-                                <li><a href="oc/sylvie/index.html">Sylvie</a></li>
-                                <li><a href="oc/yadyra/index.html">Yadyra</a></li>
-                            </ul>
-                        </li>
-                        <li>Shrines</li>
-                        <li style="list-style-type: none">
-                            <ul>
-                                <li><s>Dragon Age 2</s></li>
-                                <li><s>Elsword</s></li>
-                                <li><s>Flight Rising</s></li>
-                                <li><a href="shrines/ukitake.html">Jushiro Ukitake</a></li>
-                                <li><a href="shrines/zhongli.html">Zhongli</a></li>
-                                <li><a href="shrines/zhongvie.html">Zhongvie</a></li>
-                            </ul>
-                        </li>
-                        <li>Fun Things</li>
-                        <li style="list-style-type: none">
-                            <ul>
-                                <li>
-                                    <a href="articles.html">Articles</a>
-                                    <ul>
-                                        <li><a href="articles/food.html">Food Log</a></li>
-                                        <li><a href="listfauxgraphy/index.html">Listfauxgraphy</a></li>
-                                        <li><a href="articles/minecraft.html">Minecraft Forever World</a></li>
-                                        <li><a href="articles/sims-3-legacy.html">Sims 3 Legacy</a></li>
-                                        <li><a href="articles/website.html">Site Breakdown/Unpacking</a></li>
-                                        <li><a href="toybox.html">Toybox</a> (eventually to be moved here)</li>
-                                    </ul>
-                                </li>
-                                <li><a href="media-log.html">Media Log</a></li>
-                                <li>
-                                    <a href="recipes.html">Recipes</a>
-                                    <ul>
-                                        <li>
-                                            <a href="recipes/airfry-pork-tenderloin.html">Airfry Pork Tenderloin</a>
-                                        </li>
-                                        <li><a href="recipes/basa-filet.html">Basa Filet</a></li>
-                                        <li><a href="recipes/brownie-mug.html">Brownie in a Mug</a></li>
-                                        <li><a href="recipes/fried-rice.html">Fried Rice</a></li>
-                                        <li><a href="recipes/hot-and-sour.html">Hot and Sour Soup</a></li>
-                                        <li><s>Japanese Curry</s></li>
-                                        <li><a href="recipes/matcha-cookies.html">Matcha Cookies</a></li>
-                                        <li><a href="recipes/pad-see-ew.html">Pad See Ew</a></li>
-                                        <li><s>Portugese Rice</s></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="links.html">Neighbours / Cool Sites</a></li>
-                        <li><a href="bookmarks.html">Resources / Bookmarks</a></li>
-                        <li><a href="changelog.html">Site Changelog</a></li>
-                        <li><a href="credits.html">Credits</a></li>
-                        <li><a href="not_found.html">Error page</a></li>
-                    </ul>
+                    <section aria-labelledby="sitemap">
+                        <h1 id="sitemap">Sitemap</h1>
+                        <p>
+                            To be fair even <b><i>I</i></b> don't know exactly what all my links will be nor the
+                            sections of my website, so I guess this is kinda a semi not-to-do-but-to-do list as well for
+                            places to put in eventually. How tf do I even categorize these ... anything crossed out
+                            <u>doesn't exist yet</u>.
+                        </p>
+                        <ul>
+                            <li>
+                                Personal Things
+                                <ul>
+                                    <li><a href="about.html">About Me</a> *</li>
+                                    <li><a href="gallery.html">Artwork</a></li>
+                                    <li><a href="blog.html">Microblog</a> *</li>
+                                    <li><a href="diary/index.html">Diary</a></li>
+                                    <li><a href="manifesto.html">Manifesto</a></li>
+                                    <li><a href="now.html">Now</a></li>
+                                    <li><a href="to-do.html">To-do List</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                OCs
+                                <ul>
+                                    <li><a href="oc.html">All OCs</a> * (and everything below)</li>
+                                    <li><a href="oc/hideki/index.html">Hideki</a></li>
+                                    <li><a href="oc/khaliun/index.html">Khaliun</a></li>
+                                    <li><a href="oc/nameless/index.html">Nameless</a></li>
+                                    <li><a href="oc/raiden/index.html">Raiden</a></li>
+                                    <li><a href="oc/resu/index.html">Resu</a></li>
+                                    <li><a href="oc/sylvie/index.html">Sylvie</a></li>
+                                    <li><a href="oc/yadyra/index.html">Yadyra</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                Shrines
+                                <ul>
+                                    <li><s>Dragon Age 2</s></li>
+                                    <li><s>Elsword</s></li>
+                                    <li><s>Flight Rising</s></li>
+                                    <li><a href="shrines/ukitake.html">Jushiro Ukitake</a> *</li>
+                                    <li><a href="shrines/zhongli.html">Zhongli</a> *</li>
+                                    <li><a href="shrines/zhongvie.html">Zhongvie</a> *</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Fun Things
+                                <ul>
+                                    <li>
+                                        <a href="articles.html">Articles</a>
+                                        <ul>
+                                            <li><a href="articles/food.html">Food Log</a></li>
+                                            <li><a href="listfauxgraphy/index.html">Listfauxgraphy</a> *</li>
+                                            <li><a href="articles/minecraft.html">Minecraft Forever World</a></li>
+                                            <li><a href="articles/sims-3-legacy.html">Sims 3 Legacy</a> *</li>
+                                            <li><a href="articles/website.html">Site Breakdown/Unpacking</a></li>
+                                            <li><a href="toybox.html">Toybox</a> (eventually to be moved here) *</li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="media-log.html">Media Log</a> *</li>
+                                    <li>
+                                        <a href="recipes.html">Recipes</a> *
+                                        <ul>
+                                            <li>
+                                                <a href="recipes/airfry-pork-tenderloin.html">Airfry Pork Tenderloin</a>
+                                            </li>
+                                            <li><a href="recipes/basa-filet.html">Basa Filet</a></li>
+                                            <li><a href="recipes/brownie-mug.html">Brownie in a Mug</a></li>
+                                            <li><a href="recipes/fried-rice.html">Fried Rice</a></li>
+                                            <li><a href="recipes/hot-and-sour.html">Hot and Sour Soup</a></li>
+                                            <li><s>Japanese Curry</s></li>
+                                            <li><a href="recipes/matcha-cookies.html">Matcha Cookies</a></li>
+                                            <li><a href="recipes/pad-see-ew.html">Pad See Ew</a></li>
+                                            <li><s>Portugese Rice</s></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="links.html">Neighbours / Cool Sites</a> *</li>
+                            <li><a href="bookmarks.html">Resources / Bookmarks</a> *</li>
+                            <li><a href="changelog.html">Site Changelog</a> *</li>
+                            <li><a href="credits.html">Credits</a></li>
+                            <li><a href="not_found.html">Error page</a></li>
+                        </ul>
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
 
-        <!-- Scroll to Top -->
-        <script src="js/scroll-to-top.js"></script>
+        <!-- PAGE ONLY SCRIPTS -->
     </body>
 </html>

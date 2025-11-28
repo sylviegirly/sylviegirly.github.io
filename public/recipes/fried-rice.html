@@ -13,13 +13,16 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
         <title>take-out rice</title>
@@ -30,271 +33,189 @@
         <!-- Site Description -->
         <meta content="Fried rice recipe." name="description" />
 
-        <!-- Dark Mode Toggler -->
-        <script>
-            if (theme === "dark") {
-                document.documentElement.setAttribute("data-theme", "dark");
-                sessionStorage.setItem("theme", "dark");
-                document.getElementById("theme-toggle").innerHTML = "☀️";
-            } else if (theme === "light") {
-                document.documentElement.setAttribute("data-theme", "light");
-                sessionStorage.setItem("theme", "light");
-                document.getElementById("theme-toggle").innerHTML = "🌙";
-            }
-        </script>
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
 
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="../css/styles.css" />
-        <link rel="stylesheet" href="../css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
-        <script src="../js/sparkle_trail.js"></script>
-        <script src="../js/header.js" defer></script>
-        <script src="../js/footer.js" defer></script>
-        <script src="../js/tab-title-suffix.js"></script>
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
 
+        <!-- Page Only Javascript: -->
 
-        <!-- Disclosure Menu -->
-        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
+        <!-- Page Only Styling: -->
+        <link rel="stylesheet" href="/css/recipe.css" />
+        <style></style>
     </head>
-    <body id="body">
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
-        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
-            <!-- LEFT SIDEBAR CONTENT -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
             <!-- =============================================== -->
-            <div class="intro">
-                <section>
-                    <div class="img-floatinganim">
-                        <img class="dendro" src="../img/dendro_symbol.png" aria-hidden="true" alt="" />
-                    </div>
-                    <img
-                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/92262681_WBR555I9TFO2wdE.png"
-                        class="full-width-image" />
-                    <div class="subtitle">
-                        <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
-                        Welcome!!
-                        <img src="img/decos/plant_bopping.gif" aria-hidden="true" alt="" />
-                    </div>
-                    <div>
-                        <p style="text-align: center">
-                            <b>aid</b>
-                            <img
-                                style="padding-left: 5px; padding-right: 5px"
-                                src="../img/decos/teabag.gif"
-                                aria-hidden="true"
-                                alt="" />
-                            <b>25+</b>
-                            <img
-                                style="padding-left: 5px; padding-right: 5px"
-                                src="../img/decos/teabag.gif"
-                                aria-hidden="true"
-                                alt="" />
-                            <b>she/her</b>
-                        </p>
-                        <hr />
-                        <p>
-                            I hope you enjoy this recipe! My random image scroll doesn't work here so have a little
-                            custom side bar for just my recipes. 🫡
-                        </p>
-                        <hr />
-                        <div class="cool-buttons">
-                            <a
-                                href="https://www.tumblr.com/lavendergalactic"
-                                title="gifs by lavendergalactic as a commission for me. please don't use.">
-                                <img
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/bites%20you%20shiny%20button.gif"
-                                    aria-hidden="true"
-                                    alt="" />
-                                <img
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/silly%20shiny%20button.gif"
-                                    aria-hidden="true"
-                                    alt="" />
-                                <img
-                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Shiny%20Buttons/zhongvie%20shiny%20button.gif"
-                                    aria-hidden="true"
-                                    alt="" />
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            <left-sidebar></left-sidebar>
 
             <!-- =============================================== -->
-            <!-- RECIPE CONTENT HERE -->
+            <!-- MAIN CONTENT BEGINS. -->
             <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>
-                        <img src="../img/decos/hanging_flowers.gif" aria-hidden="true" alt="" />
-                        Take-out Fried Rice
-                    </h1>
-                    <a href="../recipes.html" style="margin-top: -5px; font-style: italic">← return to recipe list</a>
-                    <div
-                        style="
-                            margin-top: 5px;
-                            display: flex;
-                            border-radius: 10px;
-                            width: 100%;
-                            max-height: 300px;
-                            overflow: hidden;
-                            justify-content: center; /* align horizontal */
-                            align-items: center; /* align vertical */
-                        ">
-                        <img
-                            style="
-                                align-self: flex-start;
-                                object-fit: cover;
-                                max-width: 100%;
-                                height: auto;
-                                margin-top: -25%;
-                            "
-                            src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt=""
-                            aria-hidden="true" />
-                    </div>
-                    <div style="display: flex; gap: 20px; margin-top: 10px">
-                        <div
-                            style="
-                                flex: 30%;
-                                background-color: var(--body-deco);
-                                padding: 0 10px;
-                                border-radius: var(--border-radius);
-                            ">
-                            <h2>Ingredients</h2>
-                            <p>rice, soy sauce, sugar, frozen veggies, sesame oil, eggs, choice of meat</p>
-                            <p><b>Source</b><br /><a href="https://www.youtube.com/watch?v=qURmdmgCCOI">YouTube</a></p>
+                    <section>
+                        <h1>Take-out Fried Rice</h1>
+                        <a
+                            href="index.html"
+                            class="subtle"
+                            style="margin-top: -5px; font-style: italic"
+                            aria-hidden="true"
+                            >← return to recipe list</a
+                        >
+                        <div class="intro-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="" />
                         </div>
-                        <div style="flex: 70%">
-                            <h2>Introduction</h2>
-                            <p>
-                                How to mimic restaurant/take-out rice using a couple of tricks and tips. I like doing
-                                this rice a lot for a quick meal; my marinade is not like the recipe one (and I kinda
-                                hand-make it so the quantity might be wrong).
-                            </p>
-                            <ul>
-                                <li><b>Prep Time:</b> 10 min prep + 15 min cooking</li>
-                                <li><b>Servings:</b> 3-4 servings</li>
-                            </ul>
+                        <div class="full-intro">
+                            <div class="recipe-descrip">
+                                <h2>Ingredients</h2>
+                                <p>rice, soy sauce, sugar, frozen veggies, sesame oil, eggs, choice of meat</p>
+                                <p>
+                                    <b>Source</b><br /><a href="https://www.youtube.com/watch?v=qURmdmgCCOI">YouTube</a>
+                                </p>
+                            </div>
+                            <div class="recipe-intro">
+                                <h2>Introduction</h2>
+                                <p>
+                                    How to mimic restaurant/take-out rice using a couple of tricks and tips. I like
+                                    doing this rice a lot for a quick meal; my marinade is not like the recipe one (and
+                                    I kinda hand-make it so the quantity might be wrong).
+                                </p>
+                                <ul>
+                                    <li><b>Prep Time:</b> 10 min prep + 15 min cooking</li>
+                                    <li><b>Servings:</b> 3-4 servings</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article>
-                    <h1>Ingredients</h1>
-                    <ul>
-                        <li>3 tbsp neutral oil (divided), preferably vegetable or peanut</li>
-                        <li>
-                            2 cups (350 gram) cooked long grain/jasmine rice blend (2 parts long grain, 1 part jasmine)
-                            <ul>
-                                <li>1 cup uncooked rice equals 3 cups cooked</li>
-                                <li>
-                                    I usually cook with one cup of uncooked rice but these measurements are for 2
-                                    <u>cooked</u> rice cups
-                                </li>
-                            </ul>
-                        </li>
-                        <li>2 egg, beaten (seasoned with pinch salt)</li>
-                        <li>2 oz (56 gram) marinated chicken slivers (see marinade instructions below)</li>
-                        <li>½ cup (75 gram) yellow onion, medium dice</li>
-                        <li>1 cup frozen veggies</li>
-                        <li>2 clove rough chopped garlic</li>
-                    </ul>
-                    <h2>Sauce Mixture</h2>
-                    <ul>
-                        <li>½ teaspoon (2 gram) sugar</li>
-                        <li>2 teaspoon (10 gram) light soy sauce</li>
-                        <li>½ teaspoon (2.5 gram) dark soy sauce</li>
-                    </ul>
-                    <h2>Seasoning Mixture</h2>
-                    <ul>
-                        <li>2 pinch white pepper</li>
-                        <li>2 teaspoon (9 gram) Shaoxing wine</li>
-                        <li>Additional seasoning (salt and pepper), to taste</li>
-                    </ul>
-                    <h2>Chicken Marinade</h2>
-                    <blockquote>
-                        I usually use two defrosted chicken breasts for the quantity of 1 cup uncooked rice; the recipe
-                        isn't exactly correct since I eyeball this portion
-                    </blockquote>
-                    <ul>
-                        <li>
-                            ½ teaspoon (2 gram) baking soda
-                            <ul>
-                                <li>
-                                    This is <i>amazing</i> for tenderizing the breast meat, add it first before
-                                    everything else and mix it in for 30 seconds
-                                </li>
-                            </ul>
-                        </li>
-                        <li>1 tablespoon of lemongrass chicken marinade</li>
-                        <li>½ teaspoon of dark soy sauce</li>
-                        <li>2 teaspoon light soy sauce</li>
-                        <li>2 teaspoon brown sugar</li>
-                        <li>1 teaspoon of mirin</li>
-                        <li>½ tablespoon of gochujang</li>
-                        <li>1 tablespoon of oil</li>
-                    </ul>
-                </article>
-                <article>
-                    <h1>Cooking Instructions</h1>
-                    <ol>
-                        <li>Heat wok or pan over medium high heat until lightly smoking</li>
-                        <li>Add 1 tbsp neutral oil</li>
-                        <li>swirl around and allow to heat for 15-30 seconds until shimmering</li>
-                        <li>Turn heat to low and add eggs</li>
-                        <li>Cook eggs for 20-30 seconds until puffed up around the edges</li>
-                        <li>Turn egg over with cooking utensil and lightly scramble, about 20-30 seconds</li>
-                        <li>Remove egg from pan to boil and wipe out wok or pan</li>
-                        <li>
-                            Return wok to medium-high heat and add 1 tbsp neutral oil, swirl and heat until shimmering
-                        </li>
-                        <li>Add chicken and cook until 90% done, about 2-3 minutes</li>
-                        <li>Remove chicken and add to bowl with egg</li>
-                        <li>Return wok to medium to medium-high heat and add final tbsp oil, heat until shimmering</li>
-                        <li>Add frozen veggies cook until it's mostly defrosted, about 1-2 minutes</li>
-                        <li>Add rice and toss with vegetables</li>
-                        <li>
-                            Push rice down flat and break up any clumps with spoon, cook rice until lightly toasted,
-                            about 2-4 minutes
-                        </li>
-                        <li>Add the chicken and egg to the rice and mix in well</li>
-                        <li>
-                            Push rice to center of wok and add sauce mixture around the rim, immediately stir into the
-                            rice until fully incorporated and no clumps of white rice remains
-                        </li>
-                        <li>Add seasoning mixture and stir into rice</li>
-                        <li>
-                            Push rice to center of the wok and add Shaoxing wine around the rim of wok, immediately stir
-                            into the rice
-                        </li>
-                        <li>Turn off the heat and mix in green onions and toasted sesame oil, stir until combined</li>
-                        <li>Taste, adjust seasoning with salt and white pepper and serve</li>
-                    </ol>
+                    </section>
+                    <section>
+                        <h2>Ingredients</h2>
+                        <ul>
+                            <li>3 tbsp neutral oil (divided), preferably vegetable or peanut</li>
+                            <li>
+                                2 cups (350 gram) cooked long grain/jasmine rice blend (2 parts long grain, 1 part
+                                jasmine)
+                                <ul>
+                                    <li>1 cup uncooked rice equals 3 cups cooked</li>
+                                    <li>
+                                        I usually cook with one cup of uncooked rice but these measurements are for 2
+                                        <u>cooked</u> rice cups
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>2 egg, beaten (seasoned with pinch salt)</li>
+                            <li>2 oz (56 gram) marinated chicken slivers (see marinade instructions below)</li>
+                            <li>½ cup (75 gram) yellow onion, medium dice</li>
+                            <li>1 cup frozen veggies</li>
+                            <li>2 clove rough chopped garlic</li>
+                        </ul>
+                        <h3>Sauce Mixture</h3>
+                        <ul>
+                            <li>½ teaspoon (2 gram) sugar</li>
+                            <li>2 teaspoon (10 gram) light soy sauce</li>
+                            <li>½ teaspoon (2.5 gram) dark soy sauce</li>
+                        </ul>
+                        <h3>Seasoning Mixture</h3>
+                        <ul>
+                            <li>2 pinch white pepper</li>
+                            <li>2 teaspoon (9 gram) Shaoxing wine</li>
+                            <li>Additional seasoning (salt and pepper), to taste</li>
+                        </ul>
+                        <h3>Chicken Marinade</h3>
+                        <blockquote>
+                            I usually use two defrosted chicken breasts for the quantity of 1 cup uncooked rice; the
+                            recipe isn't exactly correct since I eyeball this portion
+                        </blockquote>
+                        <ul>
+                            <li>
+                                ½ teaspoon (2 gram) baking soda
+                                <ul>
+                                    <li>
+                                        This is <i>amazing</i> for tenderizing the breast meat, add it first before
+                                        everything else and mix it in for 30 seconds
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>1 tablespoon of lemongrass chicken marinade</li>
+                            <li>½ teaspoon of dark soy sauce</li>
+                            <li>2 teaspoon light soy sauce</li>
+                            <li>2 teaspoon brown sugar</li>
+                            <li>1 teaspoon of mirin</li>
+                            <li>½ tablespoon of gochujang</li>
+                            <li>1 tablespoon of oil</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Cooking Instructions</h2>
+                        <ol>
+                            <li>Heat wok or pan over medium high heat until lightly smoking</li>
+                            <li>Add 1 tbsp neutral oil</li>
+                            <li>swirl around and allow to heat for 15-30 seconds until shimmering</li>
+                            <li>Turn heat to low and add eggs</li>
+                            <li>Cook eggs for 20-30 seconds until puffed up around the edges</li>
+                            <li>Turn egg over with cooking utensil and lightly scramble, about 20-30 seconds</li>
+                            <li>Remove egg from pan to boil and wipe out wok or pan</li>
+                            <li>
+                                Return wok to medium-high heat and add 1 tbsp neutral oil, swirl and heat until
+                                shimmering
+                            </li>
+                            <li>Add chicken and cook until 90% done, about 2-3 minutes</li>
+                            <li>Remove chicken and add to bowl with egg</li>
+                            <li>
+                                Return wok to medium to medium-high heat and add final tbsp oil, heat until shimmering
+                            </li>
+                            <li>Add frozen veggies cook until it's mostly defrosted, about 1-2 minutes</li>
+                            <li>Add rice and toss with vegetables</li>
+                            <li>
+                                Push rice down flat and break up any clumps with spoon, cook rice until lightly toasted,
+                                about 2-4 minutes
+                            </li>
+                            <li>Add the chicken and egg to the rice and mix in well</li>
+                            <li>
+                                Push rice to center of wok and add sauce mixture around the rim, immediately stir into
+                                the rice until fully incorporated and no clumps of white rice remains
+                            </li>
+                            <li>Add seasoning mixture and stir into rice</li>
+                            <li>
+                                Push rice to center of the wok and add Shaoxing wine around the rim of wok, immediately
+                                stir into the rice
+                            </li>
+                            <li>
+                                Turn off the heat and mix in green onions and toasted sesame oil, stir until combined
+                            </li>
+                            <li>Taste, adjust seasoning with salt and white pepper and serve</li>
+                        </ol>
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
-        <!-- Scroll to Top -->
-        <script src="../js/scroll-to-top.js"></script>
-
-
-
+        <!-- PAGE ONLY SCRIPTS -->
     </body>
 </html>

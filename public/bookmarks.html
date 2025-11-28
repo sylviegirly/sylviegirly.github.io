@@ -13,17 +13,19 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
         <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
-        <title>bookmarks / resources</title>
+        <title>bookmarks</title>
 
         <!-- Author -->
         <meta name="author" content="Asuraid" />
@@ -31,16 +33,23 @@
         <!-- Site Description -->
         <meta content="A list of various resources saved over the years." name="description" />
 
-        <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <!-- Preloading -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="js/layout.js" as="script" />
 
+        <!-- CSS: -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
+
+        <!-- JavaScript: -->
+        <script src="js/layout.js" defer></script>
+        <script src="js/navigation.js" type="module"></script>
+
+        <!-- Page Only Javascript: -->
+
+        <!-- Page Only Styling: -->
         <style>
             .table {
-                margin: 0 0 40px 0;
                 width: 100%;
                 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
                 display: table;
@@ -114,1087 +123,1439 @@
             }
 
             .tags {
-                font-family: "atkinson";
                 opacity: 0.7;
                 font-size: 0.8em;
             }
         </style>
-
-        <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
-        <script src="js/header.js" defer></script>
-        <script src="js/left-sidebar.js" defer></script>
-        <script src="js/footer.js" defer></script>
-        <script src="js/tab-title-suffix.js"></script>
-
-        <script src="js/accessibility/disclosure-menu.iife.js"></script>
-        <!-- Disclosure Menu -->
-        <script src="js/accessibility/accessible-menu.js" type="module"></script>
     </head>
-    <body id="body">
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
-        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
-            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
             <!-- =============================================== -->
             <left-sidebar></left-sidebar>
 
             <!-- =============================================== -->
-            <!-- INTRO CONTENT. -->
+            <!-- MAIN CONTENT BEGINS. -->
             <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <!-- HEADER -->
-                    <h1>Bookmarks</h1>
-                    <p>
-                        A collection of various links I've saved over the years that ranges across a
-                        <u>large variety</u> of things, from programs, coding resources, art resources, to fun sites,
-                        and so on. Anything with a star (⭐) is something I use often, or high recommend for people.
-                    </p>
-                    <p>
-                        I'll try not to include things I see pretty often like w3schools (though please please, if you
-                        do make your own website, it's so good for information). Each thing will have a <u>#tag</u> if
-                        you need to ctrl + F to find it.
-                    </p>
-                    <h2>Table of Contents</h2>
-                    <div class="interest-content">
-                        <ul>
-                            <li><a href="#websites">Website Resources</a> (<a href="#templates">templates</a>)</li>
-                            <li><a href="#firefox">Firefox Extensions</a></li>
-                            <li><a href="#programs">Programs and Tools</a></li>
-                            <li><a href="#" class="disabled">Art Resources</a></li>
-                            <li><a href="#" class="disabled">Game Resources</a></li>
-                            <li><a href="#" class="disabled">Fun Things</a></li>
-                        </ul>
-                    </div>
-                </article>
-                <!-- =============================================== -->
-                <!-- WEBSITE RESOURCES. -->
-                <!-- =============================================== -->
-                <article id="websites">
-                    <!-- HEADER -->
-                    <h2>Website Resources</h2>
-                    <p>
-                        Centric on resources for making your own website, either in the form of templates, sites to
-                        check things, webrings/cool things, or just other resource hubs. You can also look in my
-                        <a href="links.html">/links</a> for other sites that are full of resources, but I wanted to link
-                        to templates specifically as well
-                    </p>
-                    <div class="table">
-                        <div class="row header">
-                            <div class="cell">Website</div>
-                            <div class="cell">Description</div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://discourse.32bit.cafe/t/resources-list-for-the-personal-web/49"
-                                    >32-bit Cafe</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A <u>huge</u> list of resources for webmasters, most likely some of the stuff here may
-                                also be there as well<br /><span class="tags"
-                                    >#webrings #CSS #HTML #javascript #templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://brisray.com/web/webring-list.htm">A Webring List</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A list of various webrings to join if you're not sure where to start with them<br /><span
-                                    class="tags"
-                                    >#webrings</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://blinkies.cafe/">Blinkies Cafe</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A collection of various blinkies and a blinkie maker<br /><span class="tags"
-                                    >#decorations</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://meyerweb.com/eric/tools/color-blend/#::2:hex">Colour Blender</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Simple and sweet for finding hex codes between two colour points / gradients<br /><span
-                                    class="tags"
-                                    >#colors #CSS</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://www.magicpattern.design/tools/css-backgrounds">CSS Backgrounds</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Backgrounds made with pure CSS, which makes it easier to customize. I used it for quite
-                                a number of my pages<br /><span class="tags">#CSS</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://getcssscan.com/css-box-shadow-examples">CSS Box Shadows</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Various box shadows to use for your boxes, a few of which I've used here<br /><span
-                                    class="tags"
-                                    >#CSS</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://cssgridgenerator.io/">CSS Grid Generator</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Simple site to generate various CSS grids to use (I used it for my OC moodboards)<br /><span
-                                    class="tags"
-                                    >#CSS</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://prismic.io/blog/css-hover-effects">CSS Hover Effects</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Various cool hovering effects done in CSS<br /><span class="tags">#CSS</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://88x31.datakra.sh/">Datakra.sh's 88x31 Button Maker</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                An awesome button maker with a lot of cool backgrounds and font options!<br /><span
-                                    class="tags"
-                                    >#decorations</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://doodad.dev">doodad.dev</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Image dithering and a background pattern generator which I wish I knew of earlier!!!
-                                These are so cool what the hell!!!<br /><span class="tags"
-                                    >#decorations #images #dithering #backgrounds</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://www.freecodecamp.org/">Free Code Camp</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Free coding courses for various things, such as JavaScript, or even a full web developer
-                                course<br /><span class="tags">#coding #HTML #CSS #javascript</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://mooeena.neocities.org/honeycomb">Honeycomb Stamps</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Stamps but in the form of a honeycomb in how they slot together!<br /><span class="tags"
-                                    >#html #css #decorations</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://placedog.net/">Placeholder Dogs</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Placeholder images ... but it's dogs<br /><span class="tags">#coding</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://www.realtimecolors.com">Realtime Colors</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                This is more if your website has a few colours (like my own), real-time testing of
-                                primary, secondary, and complimentary colours on a site<br /><span class="tags"
-                                    >#tools #colors</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://solaria.neocities.org/guides/accessibility"
-                                    >Solaria's Accessibility Guide</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A really good guide that unpacks aria-labels, semantic HTML, and other aspects of
-                                accessibility into a more understandable, hobbyist understanding way.<br /><span
-                                    class="tags"
-                                    >#accessibility</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://www.transparenttextures.com/">Transparent Textures</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Cool transparent backgrounds which gives you the CSS to use for your website (though
-                                they recommend not hotlinking and just downloading the texture)<br /><span class="tags"
-                                    >#CSS</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://webneko.net/">Web Neko</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Cute cat that runs across your screen, that I know people have seen around on other
-                                sites. Meow!<br /><span class="tags">#javascript</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://khang-nd.github.io/7.css/">Windows 7 CSS</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Really cool CSS bundle to make things look like Windows 7 windows!!<br /><span
-                                    class="tags"
-                                    >#CSS</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://wordhtml.com/">Word HTML</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A word editor that'll spit out the HTML coding to easily copy and paste for your
-                                website<br /><span class="tags">#HTML</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3 id="templates">Site Templates</h3>
-                    <div class="table">
-                        <div class="row header">
-                            <div class="cell">Website</div>
-                            <div class="cell">Description</div>
-                        </div>
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://aithere.neocities.org/creativespages/coding">Aithere</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A collection of really cute and varied themes!! Some of which are mobile friendly as
-                                well!!<br /><span class="tags">#templates</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://fc.ashrose.net/luna/#tem">Ash Rose</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A set of really clean layouts which are super nice to look at, and have really nice
-                                decorations for styling elements<br /><span class="tags">#templates</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://www.beepbird.net/freebies/site-templates/website-templates.html"
-                                    >Beep Bird</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Really simple website templates that are readable! And I love them for that fact
-                                alone<br /><span class="tags">#templates</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://cepheus.neocities.org/stars/site/css">Cepheus</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Some really clean templates with a variety of layouts!<br /><span class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://crotovane.neocities.org/templates/gallery/"
-                                    >crotovane's gallery template</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Cool gallery template with tags for filtering as well!!<br /><span class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://eggramen.neocities.org/code/css_testpages">Eggramen</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Wonderful templates as well, simple and clean and great bases to start with that are
-                                also mobile friendly<br /><span class="tags">#templates</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://itinerae.blogspot.com/">Itinerae</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Cute templates! I really like the shape of them!!<br /><span class="tags"
-                                    >#templates #backgrounds #decorations</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://its-priestess.neocities.org/layouts">It's Priestess</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Another small set of templates, anime centric and cute<br /><span class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://kalechips.net/projects/layouts/">Kalechips</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Accessible, simple, mobile-friendly layouts, and the basis for my character templates
-                                and shrines; also includes a lot of very useful code snippets<br /><span class="tags"
-                                    >#templates #coding</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://leizy8499.neocities.org/projects/templates">leizy8499</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Really fun and clean layouts!! Reminiscent to the container box era for Tumblr
-                                themes.<br /><span class="tags">#templates</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://musictelevision.neocities.org/templates/Sprinkles-Theme"
-                                    >MusicTelevision's Index Template</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A really simple and cute index page to build off of with commentary for beginners!<br /><span
-                                    class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://nomnomnami.com/templates/">NomNomNami</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Really cute themed templates!! Has both personal and blog-themed layouts to use<br /><span
-                                    class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐ <a href="https://osteophage.neocities.org/projects/templates/">osteophage</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Really clean and awesome templates, absolutely love the bibliodex layout for making
-                                category pages!<br /><span class="tags">#templates</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://petrapixel.neocities.org/layout-generator/"
-                                    >petrapixel's layout builder</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                petrapixel's layout generator! One of the learning point for me as well<br /><span
-                                    class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://pastebin.com/eBEyhJ6a">Punkwasp's Pastel Theme</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                This is <i>really</i> cute, comes included with a font toggler and a GIF toggler as
-                                well, and is mobile responsive as well<br /><span class="tags">#templates</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://repth.neocities.org/theme">Repth</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A variety of really cool templates! Also mobile friendly as well for some.<br /><span
-                                    class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://ribo.zone/free/layouts/">ribo.zone</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Clean and mobile friendly layouts, I really like cyanobacteria for its boxy look<br /><span
-                                    class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://goblin-heart.net/sadgrl/projects/layout-builder/"
-                                    >sadgrl's layout builder</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                sadgrl's layout builder! Not much more to say :]<br /><span class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://teppyslayouts.neocities.org/">Teppy's Layouts</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Fun layouts!! Various shapes and layouts which are really fun<br /><span class="tags"
-                                    >#templates #backgrounds #decorations</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://themekings.net/retro-html-templates.html#free">ThemeKings</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Really cool retro websites, very tech-y templates with a clean look<br /><span
-                                    class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://www.write-on.org/html/builder.html">varve's layout builder</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Another site builder with a lot of nice CSS options!<br /><span class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://willdotjpg.gay/templates/newtemplates">will.jpg</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Really cute set of templates!! I am very tempted to grab the media log template myself;
-                                although I use tracker sites, I think I'd like to mirror them here<br /><span
-                                    class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://wishglows.neocities.org/layouts">WishGlows</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Fun, media inspired layouts, almost reminiscent to tumblr themes to me!<br /><span
-                                    class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://xixxii.neocities.org/gooftown/foryou/premades">Xixxii</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Really fun templates!! A lot of 90's/00's vibes which I really like a lot<br /><span
-                                    class="tags"
-                                    >#templates</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <!-- =============================================== -->
-                <!-- FIREFOX EXTENSION. -->
-                <!-- =============================================== -->
-                <article id="firefox">
-                    <!-- HEADER -->
-                    <h2>Firefox Extensions</h2>
-                    <p>My favourite extensions and a must!!! Don't murder your eyes with light mode at night!!!</p>
-                    <div class="table">
-                        <div class="row header">
-                            <div class="cell">Website</div>
-                            <div class="cell">Description</div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://addons.mozilla.org/en-CA/firefox/addon/automatic-dark/">
-                                    automaticDark</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                This allows you to swap the Firefox theme at certain hours, like going from a day theme
-                                you like, to a night one (or being like the one person I saw who turned their firefox
-                                theme a bright red at night to scare them into going to bed)<br /><span class="tags"
-                                    >#darkmode #customization</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/darkreader">
-                                    Dark Mode Reader</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                As it says on the tin, dark mode for sites that will auto adjust pending on your
-                                location or time of choice; life saviour at night time<br /><span class="tags"
-                                    >#darkmode #websites</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/">
-                                    Firefox's Multi Account Container</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A godsend for being able to be logged into multiple accounts on the same site (ex. art
-                                account vs personal account), also for just keeping everything separate<br /><span
-                                    class="tags"
-                                    >#websites</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/pinterest-ads-promo-remover">
-                                    Pinterest Ad / Promo Remover</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                If you browse Pinterest on your laptop, this will remove all the annoying ads and promos
-                                they sneak in when you're trying to find things<br /><span class="tags"
-                                    >#pinterest</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes"
-                                    >Return YouTube Dislikes</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                As it says on the tin, return YouTube dislikes<br /><span class="tags">#youtube</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://addons.mozilla.org/en-CA/firefox/addon/save-webp-as-png-or-jpeg/">
-                                    Save WebP as PNG or JPEG</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                As it says on the tin, save images easily as PNG or JPEG (also good for images that
-                                don't make it easy to be downloaded)<br /><span class="tags">#images #files</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/search_by_image">
-                                    Search by Image</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Since it's a pain in the ass to look up images like you would in Chrome, this extension
-                                helps with that (be aware, if you have Skip Redirect, it'll mess up; just need to
-                                disable it for google)<br /><span class="tags">#images #files</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/skip-redirect">
-                                    Skip Redirect</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                As it says on the tin, will try to get you to the final webpage rather than having you
-                                go through 'middle' sites (think like the ad sites you go through before getting to your
-                                download link)<br /><span class="tags">#websites</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/"> SponsorBlock</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Skip over sponsorships in videos (alongside things like intros, outros, subscription
-                                reminders, etc.), and allows user submissions from people<br /><span class="tags"
-                                    >#youtube</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/styl-us"> Stylus</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Allow websites to have custom redesigns, this has been a life saviour for sites like
-                                Tumblr to return it back to its old layout, or give dark mode to sites that don't have
-                                it. You can also theme your Neocities homepage with it<br /><span class="tags"
-                                    >#websites #customization</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin"
-                                    >uBlock Origins</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                C'mon ... c'mon. I know I said no 'duh' websites but like. uBlock Origins ... c'mon ...
-                                the literal lifesaver from YouTube bothering you about getting Premium<br /><span
-                                    class="tags"
-                                    >#adblocker #youtube</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/youtube-recommended-videos"
-                                    >Unhook</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Clean up your YouTube page to remove distracting elements like shorts, comments, or even
-                                limiting the number of videos on the homepage<br /><span class="tags">#youtube</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube"
-                                    >YouTube Enhancer</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Extra tidbits for enhancing your YouTube watching experience, I really like the audio
-                                boost option for quieter videos<br /><span class="tags">#extensions #youtube</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://addons.mozilla.org/en-CA/firefox/addon/xkit-rewritten/">
-                                    XKit Rewritten</a
-                                >
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A must for tumblr blogs, literally were it not for XKit and its predecessors the site
-                                would be even shittier to use<br /><span class="tags">#tumblr</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <!-- =============================================== -->
-                <!-- PROGRAM AND TOOL RESOURCES. -->
-                <!-- =============================================== -->
-                <article id="programs">
-                    <!-- HEADER -->
-                    <h2>Programs, Apps, and Tools</h2>
-                    <p>
-                        This is for useful online programs/links, apps I use, or actual programs to download. Most of
-                        these I tend to use on a frequent, if not daily, basis. Some of these may be centric around
-                        emails, privacy tools, or hubs to find things (thanks FMHY)
-                    </p>
-                    <div class="table">
-                        <div class="row header">
-                            <div class="cell">Website</div>
-                            <div class="cell">Description</div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://addy.io/">Addy.io</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Email aliases, up to 10 MB monthly for free and unlimited alises (though the yearly
-                                prices aren't too bad if you need more storage; 10MB usually covers all my current
-                                aliases per month)<br /><span class="tags">#email #privacy</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://github.com/AutoDarkMode/Windows-Auto-Night-Mode">Auto Night Mode</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                As it says on the tin, an auto dark mode that turns on dark mode for your Windows
-                                (usually I'd keep mine in permanent dark mode, but I realize now with having a
-                                dark/light mode, I prefer having a swap from light mode during the day to dark mode at
-                                night)<br /><span class="tags">#program #qol</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://cobalt.tools/">cobalt</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Free, non-ad-riddled video and audio downloader, just put in a link, and go<br /><span
-                                    class="tags"
-                                    >#downloads #video</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://deskpins.en.softonic.com/?ex=RAMP-3385.1&rex=true">DeskPins</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Useful for pinning on top! I use this a lot for making sure certain windows stay on top
-                                if they don't have it built in<br /><span class="tags">#downloads #QoL</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://justgetflux.com/">F.lux</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Saviour for your eyeballs, literally. Orange filter for nightime screen browsing<br /><span
-                                    class="tags"
-                                    >#program #qol</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://fmhy.net/">FMHY</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                What can I say? Free Media Heck Yeah. I mostly use it to find websites to watch shows<br /><span
-                                    class="tags"
-                                    >#downloads</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://keepass.info/">KeePass</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                <span class="tippy" data-tippy-content="Free Open Source Software">FOSS</span> password
-                                manager, has various extensions to allow to autofill on websites<br /><span class="tags"
-                                    >#program #passwords</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://proton.me/mail">Proton Mail</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Privacy centric email, also has extra tidbits like cloud storage, VPN, and more, but I
-                                use it just for its emailing service. Free, with tiers for more things like alias emails
-                                + ability to create automatic filters<br /><span class="tags">#email #privacy</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://www.screenzen.co/">ScreenZen</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Good if you wanna break your scrolling habits on mobile, allows you to customize how
-                                much you can use apps, or even visit websites. I'm still trying to feel out for web
-                                equivalents, but <a href="https://www.proginosko.com/leechblock/">LeechBlock</a> seems
-                                to be the closest<br /><span class="tags">#app #qol</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://hovancik.net/stretchly/">Stretchly</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Reminder breaks to get up or look away from the screen, can be customized<br /><span
-                                    class="tags"
-                                    >#program #qol</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://www.screenzen.co/">Structured</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                A scheduling app which I visually really like, it shows your schedule in chunks + how
-                                much free time you have; a lot of the nicer things are behind the subscription cost
-                                (like being able to repeat schedule chunks), but it is also indie made<br /><span
-                                    class="tags"
-                                    >#app #qol</span
-                                >
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                <a href="https://tuta.com/secure-email">Tree File Size</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                What I use to just check for what giant files are still on my hard drives, make sure you
-                                grab the free version<br /><span class="tags">#program #storage</span>
-                            </div>
-                        </div>
-
-                        <!-- WEBSITE -->
-                        <div class="row">
-                            <div class="cell site" data-title="Website">
-                                ⭐
-                                <a href="https://tuta.com/secure-email">Tuta Mail</a>
-                            </div>
-                            <div class="cell" data-title="Description">
-                                Privacy centric email, I also use this one for a different aspect of my life (banking
-                                stuff). Also free and just has tiers for more extra tidbits<br /><span class="tags"
-                                    >#email #privacy</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <div class="center-img">
-                        <img src="img/misc/wipatrick.png" alt="" aria-hidden="true" />
-                    </div>
-                    <p>
-                        <b>Work in progress</b>, I'll eventually work out what links I wanna add here ... too many
-                        things I've got saved over time.
-                    </p>
+                    <section aria-labelledby="intro">
+                        <!-- HEADER -->
+                        <h1 id="intro">Bookmarks</h1>
+                        <p>
+                            A collection of various links I've saved over the years that ranges across a
+                            <u>large variety</u> of things, from programs, coding resources, art resources, to fun
+                            sites, and so on. Anything with a star (⭐) is something I use often, or high recommend for
+                            people.
+                        </p>
+                        <p>
+                            I'll try not to include things I see pretty often like w3schools (though please please, if
+                            you do make your own website, it's so good for information). Each thing will have a
+                            <u>#tag</u> if you need to ctrl + F to find it.
+                        </p>
+                        <h2>Table of Contents</h2>
+                        <div class="interest-content">
+                            <ul>
+                                <li><a href="#websites">Website Resources</a> (<a href="#templates">templates</a>)</li>
+                                <li><a href="#firefox">Firefox Extensions</a></li>
+                                <li><a href="#programs">Programs and Tools</a></li>
+                                <li><a href="#" class="disabled">Art Resources</a></li>
+                                <li><a href="#" class="disabled">Game Resources</a></li>
+                                <li><a href="#" class="disabled">Fun Things</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- =============================================== -->
+                    <!-- WEBSITE RESOURCES. -->
+                    <!-- =============================================== -->
+                    <section aria-labelledby="websites">
+                        <!-- HEADER -->
+                        <h2 id="websites">Website Resources</h2>
+                        <p>
+                            Centric on resources for making your own website, either in the form of templates, sites to
+                            check things, webrings/cool things, or just other resource hubs. You can also look in my
+                            <a href="links.html">/links</a> for other sites that are full of resources, but I wanted to
+                            link to templates specifically as well
+                        </p>
+                        <div class="table" style="margin-bottom: 40px">
+                            <div class="row header">
+                                <div class="cell">Website</div>
+                                <div class="cell">Description</div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://discourse.32bit.cafe/t/resources-list-for-the-personal-web/49"
+                                        >32-bit Cafe</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://discourse.32bit.cafe/t/resources-list-for-the-personal-web/49"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >32-bit Cafe:</a
+                                    >
+                                    A huge list of resources for webmasters, most likely some of the stuff here may also
+                                    be there as well<br /><span class="tags" aria-hidden="true"
+                                        >#webrings #CSS #HTML #javascript #templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://brisray.com/web/webring-list.htm">A Webring List</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://brisray.com/web/webring-list.htm" class="reader" tabindex="-1"
+                                        >A Webring List:</a
+                                    >
+                                    A list of various webrings to join if you're not sure where to start with them<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#webrings</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://blinkies.cafe/">Blinkies Cafe</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://blinkies.cafe/" class="reader" tabindex="-1">Blinkies Cafe:</a>
+                                    A collection of various blinkies and a blinkie maker<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#decorations</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://meyerweb.com/eric/tools/color-blend/#::2:hex">Colour Blender</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://meyerweb.com/eric/tools/color-blend/#::2:hex"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Colour Blender:</a
+                                    >
+                                    Simple and sweet for finding hex codes between two colour points / gradients<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#colors #CSS</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://www.magicpattern.design/tools/css-backgrounds">CSS Backgrounds</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://www.magicpattern.design/tools/css-backgrounds"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >CSS Backgrounds:</a
+                                    >
+                                    Backgrounds made with pure CSS, which makes it easier to customize. I used it for
+                                    quite a number of my pages<br /><span class="tags" aria-hidden="true">#CSS</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://getcssscan.com/css-box-shadow-examples">CSS Box Shadows</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://getcssscan.com/css-box-shadow-examples"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >CSS Box Shadows:</a
+                                    >
+                                    Various box shadows to use for your boxes, a few of which I've used here<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#CSS</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://cssgridgenerator.io/">CSS Grid Generator</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://cssgridgenerator.io/" class="reader" tabindex="-1"
+                                        >CSS Grid Generator:</a
+                                    >
+                                    Simple site to generate various CSS grids to use (I used it for my OC moodboards)<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#CSS</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://prismic.io/blog/css-hover-effects">CSS Hover Effects</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://prismic.io/blog/css-hover-effects" class="reader" tabindex="-1"
+                                        >CSS Hover Effects:</a
+                                    >
+                                    Various cool hovering effects done in CSS<br /><span class="tags" aria-hidden="true"
+                                        >#CSS</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://88x31.datakra.sh/">Datakra.sh's 88x31 Button Maker</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://88x31.datakra.sh/" class="reader" tabindex="-1"
+                                        >Datakra.sh's 88x31 Button Maker:</a
+                                    >
+                                    An awesome button maker with a lot of cool backgrounds and font options!<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#decorations</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://doodad.dev">doodad.dev</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://doodad.dev" class="reader" tabindex="-1">doodad.dev:</a>
+                                    Image dithering and a background pattern generator which I wish I knew of earlier!!!
+                                    These are so cool what the hell!!!<br /><span class="tags" aria-hidden="true"
+                                        >#decorations #images #dithering #backgrounds</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://www.freecodecamp.org/">Free Code Camp</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://www.freecodecamp.org/" class="reader" tabindex="-1"
+                                        >Free Code Camp:</a
+                                    >
+                                    Free coding courses for various things, such as JavaScript, or even a full web
+                                    developer course<br /><span class="tags" aria-hidden="true"
+                                        >#coding #HTML #CSS #javascript</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://mooeena.neocities.org/honeycomb">Honeycomb Stamps</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://mooeena.neocities.org/honeycomb" class="reader" tabindex="-1"
+                                        >Honeycomb Stamps:</a
+                                    >
+                                    Stamps but in the form of a honeycomb in how they slot together!<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#html #css #decorations</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://placedog.net/">Placeholder Dogs</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://placedog.net/" class="reader" tabindex="-1">Placeholder Dogs:</a>
+                                    Placeholder images ... but it's dogs<br /><span class="tags" aria-hidden="true"
+                                        >#coding</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://www.realtimecolors.com">Realtime Colors</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://www.realtimecolors.com" class="reader" tabindex="-1"
+                                        >Realtime Colors:</a
+                                    >
+                                    This is more if your website has a few colours (like my own), real-time testing of
+                                    primary, secondary, and complimentary colours on a site<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#tools #colors</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://solaria.neocities.org/guides/accessibility"
+                                        >Solaria's Accessibility Guide</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://solaria.neocities.org/guides/accessibility"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Solaria's Accessibility Guide:</a
+                                    >
+                                    A really good guide that unpacks aria-labels, semantic HTML, and other aspects of
+                                    accessibility into a more understandable, hobbyist understanding way.<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#accessibility</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://www.transparenttextures.com/">Transparent Textures</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://www.transparenttextures.com/" class="reader" tabindex="-1"
+                                        >Transparent Textures:</a
+                                    >
+                                    Cool transparent backgrounds which gives you the CSS to use for your website (though
+                                    they recommend not hotlinking and just downloading the texture)<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#CSS</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://webneko.net/">Web Neko</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://webneko.net/" class="reader" tabindex="-1">Web Neko:</a>
+                                    Cute cat that runs across your screen, that I know people have seen around on other
+                                    sites. Meow!<br /><span class="tags" aria-hidden="true">#javascript</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://khang-nd.github.io/7.css/">Windows 7 CSS</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://khang-nd.github.io/7.css/" class="reader" tabindex="-1"
+                                        >Windows 7 CSS:</a
+                                    >
+                                    Really cool CSS bundle to make things look like Windows 7 windows!!<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#CSS</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://wordhtml.com/">Word HTML</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://wordhtml.com/" class="reader" tabindex="-1">Word HTML:</a>
+                                    A word editor that'll spit out the HTML coding to easily copy and paste for your
+                                    website<br /><span class="tags" aria-hidden="true">#HTML</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 id="templates">Site Templates</h3>
+                        <div class="table">
+                            <div class="row header">
+                                <div class="cell">Website</div>
+                                <div class="cell">Description</div>
+                            </div>
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://aithere.neocities.org/creativespages/coding">Aithere</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://aithere.neocities.org/creativespages/coding"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Aithere:</a
+                                    >
+                                    A collection of really cute and varied themes!! Some of which are mobile friendly as
+                                    well!!<br /><span class="tags" aria-hidden="true">#templates</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://fc.ashrose.net/luna/#tem">Ash Rose</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://fc.ashrose.net/luna/#tem" class="reader" tabindex="-1"
+                                        >Ash Rose:</a
+                                    >
+                                    A set of really clean layouts which are super nice to look at, and have really nice
+                                    decorations for styling elements<br /><span class="tags" aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://www.beepbird.net/freebies/site-templates/website-templates.html"
+                                        >Beep Bird</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://www.beepbird.net/freebies/site-templates/website-templates.html"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Beep Bird:</a
+                                    >
+                                    Really simple website templates that are readable! And I love them for that fact
+                                    alone<br /><span class="tags" aria-hidden="true">#templates</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://cepheus.neocities.org/stars/site/css">Cepheus</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://cepheus.neocities.org/stars/site/css" class="reader" tabindex="-1"
+                                        >Cepheus:</a
+                                    >
+                                    Some really clean templates with a variety of layouts!<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://crotovane.neocities.org/templates/gallery/"
+                                        >crotovane's gallery template</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://crotovane.neocities.org/templates/gallery/"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >crotovane's gallery template:</a
+                                    >
+                                    Cool gallery template with tags for filtering as well!!<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://eggramen.neocities.org/code/css_testpages">Eggramen</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://eggramen.neocities.org/code/css_testpages"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Eggramen:</a
+                                    >
+                                    Wonderful templates as well, simple and clean and great bases to start with that are
+                                    also mobile friendly<br /><span class="tags" aria-hidden="true">#templates</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://itinerae.blogspot.com/">Itinerae</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://itinerae.blogspot.com/" class="reader" tabindex="-1">Itinerae:</a>
+                                    Cute templates! I really like the shape of them!!<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates #backgrounds #decorations</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://its-priestess.neocities.org/layouts">It's Priestess</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://its-priestess.neocities.org/layouts" class="reader" tabindex="-1"
+                                        >It's Priestess:</a
+                                    >
+                                    Another small set of templates, anime centric and cute<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://kalechips.net/projects/layouts/">Kalechips</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://kalechips.net/projects/layouts/" class="reader" tabindex="-1"
+                                        >Kalechips:</a
+                                    >
+                                    Accessible, simple, mobile-friendly layouts, and the basis for my character
+                                    templates and shrines; also includes a lot of very useful code snippets<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates #coding</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://leizy8499.neocities.org/projects/templates">leizy8499</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://leizy8499.neocities.org/projects/templates"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >leizy8499:</a
+                                    >
+                                    Really fun and clean layouts!! Reminiscent to the container box era for Tumblr
+                                    themes.<br /><span class="tags" aria-hidden="true">#templates</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://musictelevision.neocities.org/templates/Sprinkles-Theme"
+                                        >MusicTelevision's Index Template</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://musictelevision.neocities.org/templates/Sprinkles-Theme"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >MusicTelevision's Index Template:</a
+                                    >
+                                    A really simple and cute index page to build off of with commentary for
+                                    beginners!<br /><span class="tags" aria-hidden="true">#templates</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://nomnomnami.com/templates/">NomNomNami</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://nomnomnami.com/templates/" class="reader" tabindex="-1"
+                                        >NomNomNami:</a
+                                    >
+                                    Really cute themed templates!! Has both personal and blog-themed layouts to use. My
+                                    micro-blog is using one of these!<br /><span class="tags" aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐ <a href="https://osteophage.neocities.org/projects/templates/">osteophage</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://osteophage.neocities.org/projects/templates/"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >osteophage:</a
+                                    >
+                                    Really clean and awesome templates, absolutely love the bibliodex layout for making
+                                    category pages!<br /><span class="tags" aria-hidden="true">#templates</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://petrapixel.neocities.org/layout-generator/"
+                                        >petrapixel's layout builder</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://petrapixel.neocities.org/layout-generator/"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >petrapixel's layout builder:</a
+                                    >
+                                    petrapixel's layout generator! One of the learning point for me as well<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://pastebin.com/eBEyhJ6a">Punkwasp's Pastel Theme</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://pastebin.com/eBEyhJ6a" class="reader" tabindex="-1"
+                                        >Punkwasp's Pastel Theme:</a
+                                    >
+                                    This is <i>really</i> cute, comes included with a font toggler and a GIF toggler as
+                                    well, and is mobile responsive as well<br /><span class="tags" aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://repth.neocities.org/theme">Repth</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://repth.neocities.org/theme" class="reader" tabindex="-1">Repth:</a>
+                                    A variety of really cool templates! Also mobile friendly as well for some.<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://ribo.zone/free/layouts/">ribo.zone</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://ribo.zone/free/layouts/" class="reader" tabindex="-1"
+                                        >ribo.zone:</a
+                                    >
+                                    Clean and mobile friendly layouts, I really like cyanobacteria for its boxy look<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://goblin-heart.net/sadgrl/projects/layout-builder/"
+                                        >sadgrl's layout builder</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://goblin-heart.net/sadgrl/projects/layout-builder/"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >sadgrl's layout builder:</a
+                                    >
+                                    sadgrl's layout builder! Not much more to say :]<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://teppyslayouts.neocities.org/">Teppy's Layouts</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://teppyslayouts.neocities.org/" class="reader" tabindex="-1"
+                                        >Teppy's Layouts:</a
+                                    >
+                                    Fun layouts!! Various shapes and layouts which are really fun<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates #backgrounds #decorations</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://themekings.net/retro-html-templates.html#free">ThemeKings</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://themekings.net/retro-html-templates.html#free"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >ThemeKings:</a
+                                    >
+                                    Really cool retro websites, very tech-y templates with a clean look<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://www.write-on.org/html/builder.html">varve's layout builder</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://www.write-on.org/html/builder.html" class="reader" tabindex="-1"
+                                        >varve's layout builder:</a
+                                    >
+                                    Another site builder with a lot of nice CSS options!<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://willdotjpg.gay/templates/newtemplates">will.jpg</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://willdotjpg.gay/templates/newtemplates" class="reader" tabindex="-1"
+                                        >will.jpg:</a
+                                    >
+                                    Really cute set of templates!! I semi-based my own media log off this template<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://wishglows.neocities.org/layouts">WishGlows</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://wishglows.neocities.org/layouts" class="reader" tabindex="-1"
+                                        >WishGlows:</a
+                                    >
+                                    Fun, media inspired layouts, almost reminiscent to tumblr themes to me!<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://xixxii.neocities.org/gooftown/foryou/premades">Xixxii</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://xixxii.neocities.org/gooftown/foryou/premades"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Xixxii:</a
+                                    >
+                                    Really fun templates!! A lot of 90's/00's vibes which I really like a lot<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#templates</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- =============================================== -->
+                    <!-- FIREFOX EXTENSION. -->
+                    <!-- =============================================== -->
+                    <section aria-labelledby="firefox">
+                        <!-- HEADER -->
+                        <h2 id="firefox">Firefox Extensions</h2>
+                        <p>My favourite extensions and a must!!! Don't murder your eyes with light mode at night!!!</p>
+                        <div class="table">
+                            <div class="row header">
+                                <div class="cell">Website</div>
+                                <div class="cell">Description</div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://addons.mozilla.org/en-CA/firefox/addon/automatic-dark/">
+                                        automaticDark</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-CA/firefox/addon/automatic-dark/"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >automaticDark:</a
+                                    >
+                                    This allows you to swap the Firefox theme at certain hours, like going from a day
+                                    theme you like, to a night one (or being like the one person I saw who turned their
+                                    firefox theme a bright red at night to scare them into going to bed)<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#darkmode #customization</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/darkreader">
+                                        Dark Mode Reader</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/darkreader"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Dark Mode Reader:</a
+                                    >
+                                    As it says on the tin, dark mode for sites that will auto adjust pending on your
+                                    location or time of choice; life saviour at night time<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#darkmode #websites</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/">
+                                        Firefox's Multi Account Container</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Firefox's Multi Account Container:</a
+                                    >
+                                    A godsend for being able to be logged into multiple accounts on the same site (ex.
+                                    art account vs personal account), also for just keeping everything separate<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#websites</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/pinterest-ads-promo-remover">
+                                        Pinterest Ad / Promo Remover</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/pinterest-ads-promo-remover"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Pinterest Ad / Promo Remover:</a
+                                    >
+                                    If you browse Pinterest on your laptop, this will remove all the annoying ads and
+                                    promos they sneak in when you're trying to find things<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#pinterest</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes"
+                                        >Return YouTube Dislikes</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Return YouTube Dislikes:</a
+                                    >
+                                    As it says on the tin, return YouTube dislikes<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#youtube</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://addons.mozilla.org/en-CA/firefox/addon/save-webp-as-png-or-jpeg/">
+                                        Save WebP as PNG or JPEG</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-CA/firefox/addon/save-webp-as-png-or-jpeg/"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Save WebP as PNG or JPEG:</a
+                                    >
+                                    As it says on the tin, save images easily as PNG or JPEG (also good for images that
+                                    don't make it easy to be downloaded)<br /><span class="tags" aria-hidden="true"
+                                        >#images #files</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/search_by_image">
+                                        Search by Image</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/search_by_image"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Search by Image:</a
+                                    >
+                                    Since it's a pain in the ass to look up images like you would in Chrome, this
+                                    extension helps with that (be aware, if you have Skip Redirect, it'll mess up; just
+                                    need to disable it for google)<br /><span class="tags" aria-hidden="true"
+                                        >#images #files</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/skip-redirect">
+                                        Skip Redirect</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/skip-redirect"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Skip Redirect:</a
+                                    >
+                                    As it says on the tin, will try to get you to the final webpage rather than having
+                                    you go through 'middle' sites (think like the ad sites you go through before getting
+                                    to your download link)<br /><span class="tags" aria-hidden="true">#websites</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/">
+                                        SponsorBlock</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >SponsorBlock:</a
+                                    >
+                                    Skip over sponsorships in videos (alongside things like intros, outros, subscription
+                                    reminders, etc.), and allows user submissions from people<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#youtube</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/styl-us"> Stylus</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/styl-us"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Stylus:</a
+                                    >
+                                    Allow websites to have custom redesigns, this has been a life saviour for sites like
+                                    Tumblr to return it back to its old layout, or give dark mode to sites that don't
+                                    have it. You can also theme your Neocities homepage with it<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#websites #customization</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin"
+                                        >uBlock Origins</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >uBlock Origins:</a
+                                    >
+                                    C'mon ... c'mon. I know I said no 'duh' websites but like. uBlock Origins ... c'mon
+                                    ... the literal lifesaver from YouTube bothering you about getting Premium<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#adblocker #youtube</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/youtube-recommended-videos"
+                                        >Unhook</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/youtube-recommended-videos"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Unhook:</a
+                                    >
+                                    Clean up your YouTube page to remove distracting elements like shorts, comments, or
+                                    even limiting the number of videos on the homepage<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#youtube</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube"
+                                        >YouTube Enhancer</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >YouTube Enhancer:</a
+                                    >
+                                    Extra tidbits for enhancing your YouTube watching experience, I really like the
+                                    audio boost option for quieter videos<br /><span class="tags" aria-hidden="true"
+                                        >#extensions #youtube</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://addons.mozilla.org/en-CA/firefox/addon/xkit-rewritten/">
+                                        XKit Rewritten</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://addons.mozilla.org/en-CA/firefox/addon/xkit-rewritten/"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >XKit Rewritten:</a
+                                    >
+                                    A must for tumblr blogs, literally were it not for XKit and its predecessors the
+                                    site would be even shittier to use<br /><span class="tags" aria-hidden="true"
+                                        >#tumblr</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- =============================================== -->
+                    <!-- PROGRAM AND TOOL RESOURCES. -->
+                    <!-- =============================================== -->
+                    <section aria-labelledby="programs">
+                        <!-- HEADER -->
+                        <h2 id="programs">Programs, Apps, and Tools</h2>
+                        <p>
+                            This is for useful online programs/links, apps I use, or actual programs to download. Most
+                            of these I tend to use on a frequent, if not daily, basis. Some of these may be centric
+                            around emails, privacy tools, or hubs to find things (thanks FMHY)
+                        </p>
+                        <div class="table">
+                            <div class="row header">
+                                <div class="cell">Website</div>
+                                <div class="cell">Description</div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://addy.io/">Addy.io</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://addy.io/" class="reader" tabindex="-1">Addy.io:</a>
+                                    Email aliases, up to 10 MB monthly for free and unlimited alises (though the yearly
+                                    prices aren't too bad if you need more storage; 10MB usually covers all my current
+                                    aliases per month)<br /><span class="tags" aria-hidden="true">#email #privacy</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://github.com/AutoDarkMode/Windows-Auto-Night-Mode"
+                                        >Auto Night Mode</a
+                                    >
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://github.com/AutoDarkMode/Windows-Auto-Night-Mode"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >Auto Night Mode:</a
+                                    >
+                                    As it says on the tin, an auto dark mode that turns on dark mode for your Windows
+                                    (usually I'd keep mine in permanent dark mode, but I realize now with having a
+                                    dark/light mode, I prefer having a swap from light mode during the day to dark mode
+                                    at night)<br /><span class="tags" aria-hidden="true">#program #qol</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://cobalt.tools/">cobalt</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://cobalt.tools/" class="reader" tabindex="-1">Cobalt:</a>
+                                    Free, non-ad-riddled video and audio downloader, just put in a link, and go<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#downloads #video</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://deskpins.en.softonic.com/?ex=RAMP-3385.1&rex=true">DeskPins</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a
+                                        href="https://deskpins.en.softonic.com/?ex=RAMP-3385.1&rex=true"
+                                        class="reader"
+                                        tabindex="-1"
+                                        >DeskPins:</a
+                                    >
+                                    Useful for pinning on top! I use this a lot for making sure certain windows stay on
+                                    top if they don't have it built in<br /><span class="tags" aria-hidden="true"
+                                        >#downloads #QoL</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://justgetflux.com/">F.lux</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://justgetflux.com/" class="reader" tabindex="-1">Flux:</a>
+                                    Saviour for your eyeballs, literally. Orange filter for nightime screen browsing<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#program #qol</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://fmhy.net/">FMHY</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://fmhy.net/" class="reader" tabindex="-1">Free Media Heck Yeah:</a>
+                                    What can I say? Free Media Heck Yeah. I mostly use it to find websites to watch
+                                    shows<br /><span class="tags" aria-hidden="true">#downloads</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://keepass.info/">KeePass</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://keepass.info/" class="reader" tabindex="-1">KeePass:</a>
+                                    <span class="tippy" data-tippy-content="Free Open Source Software">FOSS</span>
+                                    password manager, has various extensions to allow to autofill on websites<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#program #passwords</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://proton.me/mail">Proton Mail</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://proton.me/mail" class="reader" tabindex="-1">Proton Mail:</a>
+                                    Privacy centric email, also has extra tidbits like cloud storage, VPN, and more, but
+                                    I use it just for its emailing service. Free, with tiers for more things like alias
+                                    emails + ability to create automatic filters<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#email #privacy</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://www.screenzen.co/">ScreenZen</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://www.screenzen.co/" class="reader" tabindex="-1">ScreenZen:</a>
+                                    Good if you wanna break your scrolling habits on mobile, allows you to customize how
+                                    much you can use apps, or even visit websites. I'm still trying to feel out for web
+                                    equivalents, but
+                                    <a href="https://www.proginosko.com/leechblock/">LeechBlock</a> seems to be the
+                                    closest<br /><span class="tags" aria-hidden="true">#app #qol</span>
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://hovancik.net/stretchly/">Stretchly</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://hovancik.net/stretchly/" class="reader" tabindex="-1"
+                                        >Stretchly:</a
+                                    >
+                                    Reminder breaks to get up or look away from the screen, can be customized<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#program #qol</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://web.structured.app/">Structured</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://web.structured.app/" class="reader" tabindex="-1">Structured:</a>
+                                    A scheduling app which I visually really like, it shows your schedule in chunks +
+                                    how much free time you have; a lot of the nicer things are behind the subscription
+                                    cost (like being able to repeat schedule chunks), but it is also indie made<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#app #qol</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    <a href="https://www.jam-software.com/treesize">Tree File Size</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://www.jam-software.com/treesize" class="reader" tabindex="-1"
+                                        >Tree File Size:</a
+                                    >
+                                    What I use to just check for what giant files are still on my hard drives, make sure
+                                    you grab the free version<br /><span class="tags" aria-hidden="true"
+                                        >#program #storage</span
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- WEBSITE -->
+                            <div class="row">
+                                <div class="cell site" data-title="Website" aria-hidden="true">
+                                    ⭐
+                                    <a href="https://tuta.com/secure-email">Tuta Mail</a>
+                                </div>
+                                <div class="cell" data-title="Description">
+                                    <a href="https://tuta.com/secure-email" class="reader" tabindex="-1">Tuta Mail:</a>
+                                    Privacy centric email, I also use this one for a different aspect of my life
+                                    (banking stuff). Also free and just has tiers for more extra tidbits<br /><span
+                                        class="tags"
+                                        aria-hidden="true"
+                                        >#email #privacy</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section aria-hidden="true">
+                        <div class="center-item">
+                            <img src="img/misc/wipatrick.png" alt="" />
+                        </div>
+                        <p>
+                            <b>Work in progress</b>, I'll eventually work out what links I wanna add here ... too many
+                            things I've got saved over time.
+                        </p>
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
 
-        <!-- Scroll to Top -->
-        <script src="js/scroll-to-top.js"></script>
+        <!-- PAGE ONLY SCRIPTS -->
     </body>
 </html>

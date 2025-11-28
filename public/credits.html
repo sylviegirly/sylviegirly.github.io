@@ -13,17 +13,19 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
         <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
-        <title>credits / colophon</title>
+        <title>credits</title>
 
         <!-- Author -->
         <meta name="author" content="Asuraid" />
@@ -31,225 +33,277 @@
         <!-- Site Description -->
         <meta content="A list of credits from things that were used in making this website." name="description" />
 
+        <!-- Preloading -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="js/layout.js" as="script" />
+
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
-        <script src="js/header.js" defer></script>
-        <script src="js/left-sidebar.js" defer></script>
-        <script src="js/footer.js" defer></script>
-        <script src="js/tab-title-suffix.js"></script>
+        <script src="js/layout.js" defer></script>
+        <script src="js/navigation.js" type="module"></script>
 
-        <script src="js/accessibility/disclosure-menu.iife.js"></script>
-        <!-- Disclosure Menu -->
-        <script src="js/accessibility/accessible-menu.js" type="module"></script>
+        <!-- Page Only Javascript: -->
+
+        <!-- Page Only Styling: -->
+        <style></style>
     </head>
-    <body id="body">
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
         <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
             <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
             <!-- =============================================== -->
             <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>Credits / Colophon</h1>
-                    <p>
-                        As a note, people are free to use any tricks/things I used on my site
-                        <i
-                            >(aside from the art of Sylvie/things made for me, why would u take art of my OC...?
-                            weirdchamp thing to do)</i
-                        >, the internet is a free place, just make sure you credit the people linked!! Just don't like,
-                        <span
-                            class="tippy"
-                            data-tippy-content="Mad props if somehow you had the time and energy to go through all my .js files and .css files. Literally would've been easier to grab a theme template off my bookmarks page tho."
-                            >1:1 copy my entire site LOL</span
-                        >.
-                    </p>
-                    <h2>Website / Software Details</h2>
-                    <ul>
-                        <li>
-                            Coding was done in <a href="https://phcode.dev/">Phoenix Code</a> and is hosted on
-                            <a href="https://neocities.org">Neocities</a>
-                            <ul>
-                                <li>
-                                    On ocassion I code on the <a href="https://codeit.codes/full">codeit</a> website for
-                                    mobile coding + pushing
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Github is used as a repository (with
-                            <a href="https://scumsuck.com/resources/deployneocities/">this lovely tutorial</a> by
-                            scumsuck how to do it)
-                            <ul>
-                                <li>I also use github pages to host some iframes like my poll code and status.cafe</li>
-                            </ul>
-                        </li>
-                        <li>
-                            Tested on Firefox at a 1920x1080 resolution, and iPhone at a ... whatever fuckass
-                            resolutions they have
-                        </li>
-                        <li>
-                            Primary fonts used are
-                            <a href="https://www.dafont.com/free-pixel.font">Free Pixel</a> and
-                            <a href="https://www.dafont.com/venice-classic.font">Venice</a> from dafont,
-                            <a href="https://fonts.google.com/specimen/Dosis">Dosis</a>,
-                            <a href="https://fonts.google.com/specimen/Nunito">Nunito</a> and
-                            <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">Atkinson Hyperlegible</a>
-                            from Google Fonts, and
-                            <a href="https://github.com/intel/intel-one-mono">Intel One Mono</a> (which is also what I
-                            use to code)
-                        </li>
-                        <li>
-                            <a href="https://contrast-finder.tanaguru.com/">Contrast finder</a> is used for any on hand
-                            colour contrast checking + alt colours
-                        </li>
-                        <li><a href="https://wordhtml.com/">Word HTML</a> for a WYSIWYG text editor</li>
-                        <li>
-                            <a href="https://pnggauntlet.com/">PNGGauntlet</a> and
-                            <a href="https://squoosh.app">Squoosh</a> for image optimizing
-                        </li>
-                        <li>
-                            <a href="https://github.com/studiobloom/opti-webp">Opti-WEBP</a> for image optimizing for
-                            OC/art galleries
-                        </li>
-                    </ul>
-                    <h2>Widgets / Code Snippets</h2>
-                    <ul>
-                        <li>
-                            Gallery layout by
-                            <a href="https://petrapixel.neocities.org/">petrapixel</a> + various
-                            <a href="https://petrapixel.neocities.org/coding/snippets">misc. snippets</a>
-                        </li>
-                        <li>
-                            <a href="https://glenthemes.tumblr.com/post/673598526813536256/griddery">Griddery</a>
-                            by glenthemes
-                        </li>
-                        <li><a href="https://lokeshdhakar.com/projects/lightbox2/">Lightbox2</a> by Lokesh Dhakar</li>
-                        <li>
-                            <a href="https://codepen.io/sadness97/pen/VwmBjWo">Image refresh</a> by
-                            <a href="https://sadgrl.online">sadgrl</a> + minor changes
-                        </li>
-                        <li>
-                            <a href="https://faithgaiciumia.hashnode.dev/creating-a-javascript-random-quote-generator"
-                                >Random quote generator</a
-                            >
-                        </li>
-                        <li>Font toggle based off <a href="https://pastebin.com/u/punkwasp">punkwasp</a>'s code</li>
-                        <li>
-                            Preloader tutorial by
-                            <a href="https://nenrikido.neocities.org/blog/post/making-a-preloader/">nenrikido</a>
-                            with an
-                            <a href="https://www.geeksforgeeks.org/how-to-add-fade-in-effect-using-pure-javascript/"
-                                >extra tutorial</a
-                            >
-                            (temp disabled)
-                        </li>
-                        <li>
-                            <a href="https://metemo.neocities.org/marquee/">Marquee CSS/JS</a>
-                            by metemo
-                        </li>
-                        <li><a href="https://github.com/NickDJM/accessible-menu">WCAG navigation bar</a> by NickDJM</li>
-                        <li><a href="https://necolas.github.io/normalize.css/">Normalize.css</a> by necolas</li>
-                        <li><a href="https://codepen.io/lukepeters/pen/JjoVWd">Responsive tables</a> by Luke Peters</li>
-                        <li>
-                            <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Carousel JS</a> on
-                            W3Schools
-                        </li>
-                        <li>
-                            <a href="https://bechnokid.neocities.org/resources/code-snippets/">Calendar</a> by Bechno
-                            Kid
-                        </li>
-                    </ul>
-                    <h2>Decorative Items</h2>
-                    <ul>
-                        <li>
-                            A lot of my layout was inspired by
-                            <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's Sideblock CSS</a> since
-                            it's what I'm using on my Toyhouse + my original layout began from sadgrl's
-                            <a href="https://codepen.io/sadness97/pen/jOaqGdZ?editors=0100">skyline theme</a>
-                            (though I've regutted the code in due time to write it from scratch, this was the original
-                            inspo)
-                        </li>
-                        <li>
-                            Bopping sprout pixel by
-                            <a href="https://www.deviantart.com/koffeelam/art/Free-Status-Icon-Done-698395920"
-                                >koffeelam</a
-                            >
-                        </li>
-                        <li>
-                            Pixel header gif from
-                            <a href="https://www.goatlings.com/forums/view_topic/68476">Goatlings</a>
-                        </li>
-                        <li>
-                            Sidebar flower pixel from
-                            <a href="https://www.deviantart.com/profiledecor/art/F2U-Flower-Bullet-Light-761719155"
-                                >profiledecor</a
-                            >
-                        </li>
-                        <li>
-                            Clover pixel for blog read more by
-                            <a href="https://www.deviantart.com/korajora/art/Pixel-Clover-600473581">Korajora</a>
-                        </li>
-                        <li>
-                            Zhongvie + Sylvie themed buttons and stamps by
-                            <a href="https://www.tumblr.com/lavendergalactic">lavendergalactic</a> for my use
-                        </li>
-                        <li>
-                            Sidebar images are either by <u>me</u>, or by various artists I've commissioned (who will be
-                            linked in the image itself)
-                        </li>
-                        <li><a href="https://idbuttons.neocities.org/database/">Pixel labels</a> are by fluffmoth</li>
-                        <li>
-                            Index buttons without direct links are an amalgamation of
-                            <a href="https://pixelsafari.neocities.org/buttons/">pixelsafari</a>,
-                            <a href="https://capstasher.neocities.org/88x31collection-page1">capstasher</a>,
-                            <a href="https://neonaut.neocities.org/cyber/88x31">neonaut</a>,
-                            <a href="https://bytemoth.neocities.org/88s/">bytemoth</a>, and
-                            <a href="https://geocities.restorativland.org/NapaValley/2022/88x31.html"
-                                >eighty eight by thirty one</a
-                            >
-                            <ul>
-                                <li>88x31 button origins are hard to find ... hell</li>
-                            </ul>
-                        </li>
-                        <li>Cursor from <a href="https://www.rw-designer.com">rw-designer</a></li>
-                    </ul>
+                    <section aria-labelledby="credits">
+                        <h1 id="credits">Credits / Colophon</h1>
+                        <p>
+                            As a note, people are free to use any tricks/things I used on my site
+                            <i
+                                >(aside from the art of Sylvie/things made for me, why would u take art of my OC...?
+                                weirdchamp thing to do)</i
+                            >, the internet is a free place, just make sure you credit the people linked!! Just don't
+                            like,
+                            <span
+                                class="tippy"
+                                data-tippy-content="Mad props if somehow you had the time and energy to go through all my .js files and .css files. Literally would've been easier to grab a theme template off my bookmarks page tho."
+                                >1:1 copy my entire site LOL</span
+                            >.
+                        </p>
+                        <h2>Website / Software Details</h2>
+                        <ul>
+                            <li>
+                                Coding was done in <a href="https://phcode.dev/">Phoenix Code</a> and is hosted on
+                                <a href="https://neocities.org">Neocities</a>
+                                <ul>
+                                    <li>
+                                        On ocassion I code on the <a href="https://codeit.codes/full">codeit</a> website
+                                        for mobile coding + pushing
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Github is used as a repository (with
+                                <a href="https://scumsuck.com/resources/deployneocities/">this lovely tutorial</a> by
+                                scumsuck how to do it)
+                                <ul>
+                                    <li>
+                                        I also use github pages to host some iframes like my poll code and status.cafe
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Tested on Firefox at a 1920x1080 resolution, and iPhone at a ... whatever fuckass
+                                resolutions they have
+                            </li>
+                            <li>
+                                Title font is
+                                <a href="https://www.dafont.com/venice-classic.font">Venice</a> from dafont,
+                                <a href="https://fonts.google.com/specimen/Dosis">Dosis</a> is used for header fonts,
+                                while <a href="https://fonts.google.com/specimen/Nunito">Nunito</a>,
+                                <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible"
+                                    >Atkinson Hyperlegible</a
+                                >, <a href="https://github.com/intel/intel-one-mono">Intel One Mono</a>, and
+                                <a href="https://opendyslexic.org/">Open Dyslexic</a> are used for the body fonts
+                            </li>
+                            <li>
+                                <a href="https://contrast-finder.tanaguru.com/">Contrast finder</a> is used for any on
+                                hand colour contrast checking + alt colours
+                            </li>
+                            <li><a href="https://wordhtml.com/">Word HTML</a> for a WYSIWYG text editor</li>
+                            <li>
+                                <a href="https://pnggauntlet.com/">PNGGauntlet</a> and
+                                <a href="https://squoosh.app">Squoosh</a> for image optimizing
+                            </li>
+                            <li>
+                                <a href="https://github.com/studiobloom/opti-webp">Opti-WEBP</a> for image optimizing
+                                for OC/art galleries
+                            </li>
+                        </ul>
+                        <h2>Widgets / Code Snippets</h2>
+                        <ul>
+                            <li>
+                                Gallery layout by
+                                <a href="https://petrapixel.neocities.org/">petrapixel</a> + various
+                                <a href="https://petrapixel.neocities.org/coding/snippets">misc. snippets</a>
+                            </li>
+                            <li>
+                                <a href="https://glenthemes.tumblr.com/post/673598526813536256/griddery">Griddery</a>
+                                by glenthemes
+                            </li>
+                            <li>
+                                <a href="https://lokeshdhakar.com/projects/lightbox2/">Lightbox2</a> by Lokesh Dhakar
+                            </li>
+                            <li>
+                                <a href="https://codepen.io/sadness97/pen/VwmBjWo">Image refresh</a> by
+                                <a href="https://sadgrl.online">sadgrl</a> + minor changes
+                            </li>
+                            <li>
+                                <a
+                                    href="https://faithgaiciumia.hashnode.dev/creating-a-javascript-random-quote-generator"
+                                    >Random quote generator</a
+                                >
+                            </li>
+                            <li>Font toggle based off <a href="https://pastebin.com/u/punkwasp">punkwasp</a>'s code</li>
+                            <li>
+                                Preloader tutorial by
+                                <a href="https://nenrikido.neocities.org/blog/post/making-a-preloader/">nenrikido</a>
+                                with an
+                                <a href="https://www.geeksforgeeks.org/how-to-add-fade-in-effect-using-pure-javascript/"
+                                    >extra tutorial</a
+                                >
+                                (temp disabled)
+                            </li>
+                            <li>
+                                <a href="https://metemo.neocities.org/marquee/">Marquee CSS/JS</a>
+                                by metemo
+                            </li>
+                            <li>
+                                <a href="https://github.com/NickDJM/accessible-menu">WCAG navigation bar</a> by NickDJM
+                            </li>
+                            <li><a href="https://necolas.github.io/normalize.css/">Normalize.css</a> by necolas</li>
+                            <li>
+                                <a href="https://codepen.io/lukepeters/pen/JjoVWd">Responsive tables</a> by Luke Peters
+                            </li>
+                            <li>
+                                <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Carousel JS</a> on
+                                W3Schools
+                            </li>
+                            <li>
+                                <a href="https://bechnokid.neocities.org/resources/code-snippets/">Calendar</a> by
+                                Bechno Kid
+                            </li>
+                            <li>
+                                Gif toggle is some fucked up hybrid of
+                                <a href="https://solaria.neocities.org/guides/gifpausetut">Solaria's GIF to PNG</a> and
+                                <a href="https://bechnokid.neocities.org/resources/tutorials/freezeframe/"
+                                    >Bechno Kid's</a
+                                >
+                                +
+                                <a href="https://entropically.neocities.org/learn/freezeframe/">Vance's</a>
+                                freezeframe.js
+                            </li>
+                        </ul>
+                        <h2>Decorative Items</h2>
+                        <ul>
+                            <li>
+                                A lot of my layout was inspired by
+                                <a href="https://toyhou.se/9447250.sideblock-bundle-12">Pinkie's Sideblock CSS</a> since
+                                it's what I'm using on my Toyhouse + my original layout began from sadgrl's
+                                <a href="https://codepen.io/sadness97/pen/jOaqGdZ?editors=0100">skyline theme</a>
+                                (though I've regutted the code in due time to write it from scratch, this was the
+                                original inspo)
+                            </li>
+                            <li>
+                                Bopping sprout pixel by
+                                <a href="https://www.deviantart.com/koffeelam/art/Free-Status-Icon-Done-698395920"
+                                    >koffeelam</a
+                                >
+                            </li>
+                            <li>
+                                Leaf pixel header gif from
+                                <a href="https://www.goatlings.com/forums/view_topic/68476">Goatlings</a>
+                            </li>
+                            <li>
+                                Sidebar flower pixel from
+                                <a href="https://www.deviantart.com/profiledecor/art/F2U-Flower-Bullet-Light-761719155"
+                                    >profiledecor</a
+                                >
+                            </li>
+
+                            <li>
+                                Zhongvie + Sylvie themed buttons and stamps by
+                                <a href="https://www.tumblr.com/lavendergalactic">lavendergalactic</a> for my use
+                            </li>
+                            <li>
+                                Sidebar images are either by <u>me</u>, or by various artists I've commissioned (who
+                                will be linked in the image itself)
+                            </li>
+                            <li>
+                                <a href="https://idbuttons.neocities.org/database/">Pixel labels</a> are by fluffmoth
+                            </li>
+                            <li>
+                                Index buttons without direct links are an amalgamation of
+                                <a href="https://pixelsafari.neocities.org/buttons/">pixelsafari</a>,
+                                <a href="https://capstasher.neocities.org/88x31collection-page1">capstasher</a>,
+                                <a href="https://neonaut.neocities.org/cyber/88x31">neonaut</a>,
+                                <a href="https://bytemoth.neocities.org/88s/">bytemoth</a>, and
+                                <a href="https://geocities.restorativland.org/NapaValley/2022/88x31.html"
+                                    >eighty eight by thirty one</a
+                                >
+                                <ul>
+                                    <li>88x31 button origins are hard to find ... hell</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Index decorations
+                                <ul>
+                                    <li>
+                                        <a href="https://www.deviantart.com/liticaharmony/art/Monstera-Leaf-974458029"
+                                            >Big fern leaf</a
+                                        >
+                                        and
+                                        <a
+                                            href="https://www.deviantart.com/liticaharmony/art/Plantfriend-Succulent-Echeveria-Agavoides-Icon-633965280"
+                                            >succulent planter</a
+                                        >
+                                        by LiticaHarmony
+                                    </li>
+                                    <li>
+                                        <a href="https://www.deviantart.com/silkanide/art/Bud-771510771"
+                                            >Pixel froggy</a
+                                        >
+                                        by silkanide
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.deviantart.com/amysweetwolf/art/Pink-pointe-shoes-693348988"
+                                            >Plants and ballet shoes</a
+                                        >
+                                        by amysweetwolf
+                                    </li>
+                                    <li>
+                                        <a href="https://www.deviantart.com/korajora/art/Pixel-Clover-600473581"
+                                            >Clover pixel</a
+                                        >
+                                        for blog read more by Korajora
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Cursor from <a href="https://www.rw-designer.com">rw-designer</a></li>
+                        </ul>
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
 
-        <!-- Scroll to Top -->
-        <script src="js/scroll-to-top.js"></script>
+        <!-- PAGE ONLY SCRIPTS -->
     </body>
 </html>

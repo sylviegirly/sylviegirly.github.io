@@ -13,43 +13,41 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
         <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
-        <title>changelog</title>
+        <title>Title</title>
 
         <!-- Author -->
         <meta name="author" content="Asuraid" />
 
         <!-- Site Description -->
-        <meta content="Site changes" name="description" />
+        <meta content="Description." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
 
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
-        <script src="js/header.js" defer></script>
-        <script src="js/left-sidebar.js" defer></script>
-        <script src="js/footer.js" defer></script>
-        <script src="js/tab-title-suffix.js"></script>
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
 
-        <script src="js/accessibility/disclosure-menu.iife.js"></script>
-        <!-- Disclosure Menu -->
-        <script src="js/accessibility/accessible-menu.js" type="module"></script>
+        <!-- Page Only Javascript: -->
 
+        <!-- Page Only Styling: -->
         <style>
             article p {
                 border: 0;
@@ -63,476 +61,464 @@
             }
         </style>
     </head>
-    <body id="body">
+    <body>
         <!-- =============================================== -->
         <!-- Accessibility links. -->
         <!-- =============================================== -->
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
-        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
-            <!-- LEFT SIDEBAR CONTENT -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
             <!-- =============================================== -->
-            <div class="intro">
-                <section>
-                    <div class="img-floatinganim">
-                        <img class="dendro" src="../img/dendro_symbol.png" aria-hidden="true" alt="" />
-                    </div>
-                    <img
-                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/61813959_Xr5LiIyVeH43aDy.png"
-                        class="full-width-image hide-mobile" />
-                    <div class="subtitle">Changelog</div>
-                    <div>
-                        <p>
-                            A more dedicated page for site changelogs since I apparently tend to yap a lot about what
-                            things have changed/been updated (maybe I'll make this fancier someday).
-                        </p>
-                        <p>You can also subscribe to my <a href="feed.xml">RSS Feed</a> for site updates.</p>
-                        <hr />
-                        <div class="center-img">
-                            <a href="https://zhongvie.neocities.org/feed.xml"
-                                ><img
-                                    src="img/misc/icons8-rss-48.png"
-                                    data-tippy-content="RSS feed for site updates!"
-                                    loading="lazy"
-                                    alt="RSS feed icon"
-                                    style="width: 47px"
-                            /></a>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            <left-sidebar></left-sidebar>
 
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>Site Changelog Page</h1>
-                    <p>
-                        <span class="highlight">11/17/25:</span> <a href="templates.html">New template</a> has been
-                        made! Went for a big chunky sidebar + a giant focal image, plus I wanted an excuse to use some
-                        of the lace borders from scripted. I've had it done for a little while, but kinda dragged my
-                        feet on pushing it, oopsies
-                    </p>
-                    <p>
-                        <span class="highlight">11/05/25:</span> I've been putting off doing a
-                        <a href="now.html">now</a> update since I felt like I didn't have much to yap about, but I'll
-                        probably be a little freaky/excited in the games section sooooo apt time to do it. I am half
-                        debating if I should stop including just solo now page updates in here (and only bundle it with
-                        other things) and just leave it to the RSS feed + small index update section ...
-                    </p>
-                    <p>
-                        <span class="highlight">11/03/25:</span>
-                        And made <a href="templates/bloggy.html">my second template</a>!! It's in the vein of a tumblr
-                        theme (ish), and still pretty simple ... the day I make complex templates I will turn into dust
-                        (I don't even think I have any explicitly complex pages on my site). Otherwise, nothing new on
-                        the site, I've been bogged down trying to figure out adding carrds to sell on VGen, and it's ...
-                        Something(tm)
-                    </p>
-                    <p>
-                        <span class="highlight">10/31/25:</span>
-                        I made my very <a href="templates/boxy.html">first website template</a>!! I hope to make future
-                        ones, but I'm a&nbsp;<em>very</em> slow cooker when it comes to layouts and not overthinking it
-                        too much<br /><br />On a smaller note, I updated my
-                        <a href="diary/index.html">diary calendar</a> to have November settled in
-                    </p>
-                    <p>
-                        <span class="highlight">10/28/25:</span>
-                        Sorely overdue but I added stuff to the #me memes section of my
-                        <a href="about.html">about page</a>, with memes I'll probably yoink off my personal tumblr tag.
-                        I also added a few new quiz results, and getting an angel from evangelion as my assigned gender
-                        is a sickass result
-                    </p>
-                    <p>
-                        <span class="highlight">10/25/25:</span>
-                        Minor changes, but I added
-                        <a href="https://bechnokid.neocities.org/resources/code-snippets/">Bechno Kid's</a> cool
-                        calendar to the front page (only visible on desktop) and added a little section to link to my
-                        <a href="https://zhongvie.bearblog.dev/">bearblog</a> for longer posts, since I'll probably stop
-                        adding them to my blog page on here ... which I guess now is more of a microblog!! Bearblog just
-                        feels nicer to get full thoughts out on there
-                    </p>
-                    <p>
-                        <span class="highlight">10/20/25:</span>
-                        Not a very exciting <a href="now.html">now page</a> update, mostly just small life stuff, and
-                        it's been a bit of a blur. As a more minor thing, I've been doing article reading and wrote a
-                        <a href="https://zhongvie.bearblog.dev/2025-10-20/">small blog post</a> on the concept of
-                        bookmarks. I also fixed my <a href="articles/food.html">food log</a> page to be a bit cleaner
-                        with griddery, and updated some recent foods
-                    </p>
-                    <p>
-                        <span class="highlight">10/18/25:</span>
-                        I ended up caving to make a <a href="articles/food.html">fun food page</a> to just document all
-                        the stuff I've cooked and eaten over a period of time; I do not take selfies, I just take food
-                        photos LOL. It'll be one of those long-term projects since I need to dig through my phone and
-                        just be wary that the id for each 'item' in the masonry grid is different...
-                    </p>
-                    <p class="no-divider">
-                        <span class="highlight">10/11/25:</span>
-                        A couple new <a href="media-log.html">media entries</a> have been written up; I wasn't going to
-                        initially write a separate one up for Hades II, but the ending kinda dipped my rating down from
-                        what the original was.
-                    </p>
-                    <ul>
-                        <li>Hades II (games)</li>
-                        <li>The Amazing Digital Circus (shows)</li>
-                        <li>Captive Prince (books)</li>
-                        <li>TGCF / Heaven Official's Blessing + Other MXTX works (books)</li>
-                    </ul>
-                    <hr />
-                    <p>
-                        <span class="highlight">10/09/25:</span>
-                        <a href="articles/website.html">Big ugly code riddled page</a> in trying to break down how I set
-                        up my website layout ... at least it was an excuse to actually optimize some stuff in the HTML
-                        since there were classes in two separate places ... and some of my layout calculations were
-                        wrong. I'll probably expand on it in the future, depending on what questions might come up or if
-                        people show interest in the way I did some stuff.
-                    </p>
-                    <p>
-                        <span class="highlight">10/06/25:</span>
-                        In an attempt to try to offload some of my stuff from Toyhouse, I've made my
-                        <a href="https://zhongvie.neocities.org/oc/yadyra/gallery">first art gallery</a>&nbsp;and fic
-                        section for Yadyra, since I thought he didn't have too much art to explode my skull, but enough
-                        to work out a layout ... even so, it still was a lot of work to set up around 40&ndash;50 images
-                        and to WEBP everything. I'll&nbsp;<em>really</em> need to think about image optimization if I
-                        continue with the galleries ...<br /><br /><a href="now.html">Now page</a> has been updated
-                        w/recent ongoings, though it's a bit of a shorter one since the last two weeks haven't been
-                        horribly eventful (or they're brain fogged)
-                    </p>
-                    <p>
-                        <span class="highlight">10/01/25:</span>
-                        Cleaned up my index to reorganize since it's a way to combat the horrible itchy 'aughh I wanna
-                        rehaul my site' need. Mostly just added a section for new artwork I do so it's upfront +
-                        shuffled things around. New poll as well!
-                    </p>
-                    <p>
-                        <span class="highlight">09/28/25:</span>
-                        Inspired from
-                        <a href="https://nanacore.neocities.org/diary">Nana's page</a>, I wanted to make
-                        <a href="diary.html">my own little diary page</a> (since I've been in the habit of documenting
-                        one highlight of the day in my own actual journal) ... simple, but it's a start!! I've retired
-                        the nav link to my listography page, but it's still present on the site itself since I know
-                        there's a few outlinks to it
-                    </p>
-                    <p>
-                        <span class="highlight">09/26/25:</span> New <a href="blog.html">long blog post</a> just talking
-                        about exploring gender through OCs
-                    </p>
-                    <p>
-                        <span class="highlight">09/25/25:</span> Added a carousel to
-                        <a href="/oc/sylvie/index.html">Sylvie's</a> design sheet
-                    </p>
-                    <p>
-                        <span class="highlight">09/24/25:</span> <a href="gallery.html">2017 gallery</a> finished! Dang,
-                        been on a bit of a roll with these; after figuring out a nicer way to WEBP convert, the only
-                        real issue is just making thumbnails of everything and writing up ALT text for each art piece
-                        ... to be fair, 2017 only has 24 art pieces compared to 2016 which had 61. Decent amount of
-                        commission for this year
-                    </p>
-                    <p>
-                        <span class="highlight">09/23/25:</span> Caught up my <a href="gallery.html">art gallery</a> to
-                        2016 (which has among the most art pieces I'm going to be adding to my gallery) ... now it's
-                        just ... 8 years to go to fill out. Wish me luck ...
-                    </p>
-                    <p>
-                        <span class="highlight">09/22/25:</span> New <a href="media-log.html">media log</a> entries
-                        which include Neighbours from Hell (game), The Summer Hikaru Died (anime), and MADK (manga)
-                    </p>
-                    <p>
-                        <span class="highlight">09/21/25:</span> <a href="now.html">Now page</a> has been updated with
-                        just what's been going on, nothing too fancy. I also joined
-                        <a href="https://www.pillowfort.social/asuraid">pillowfort</a> to test out another art posting
-                        place
-                    </p>
-                    <p>
-                        <span class="highlight">09/20/25:</span> Wrote a longer <a href="blog.html">blog post</a> on the
-                        concept of having a sona (it's not a very coherent blog post, just me dumping out thoughts).
-                        Also uploaded a few artworks to the <a href="gallery.html">gallery</a> (one of which is context
-                        relevant to the blog post anyway LOL)
-                    </p>
-                    <p>
-                        <span class="highlight">09/04/25:</span> Got a new
-                        <a href="/oc/cotton/index.html">OC page made</a>! This is my old blorbo from my devART days when
-                        I made an adoptable species called the furzilla; they don't have any real development, but
-                        they're one of my oldest and favourite designs (I actually have a&nbsp;papier m&acirc;ch&eacute;
-                        artwork I made of them back in high-school that's still sitting in my room)
-                    </p>
-                    <p>
-                        <span class="highlight">09/03/25:</span> Inspired from Nana's own
-                        <a href="https://nanacore.neocities.org/articles/legacy" rel="noopener noreferrer"
-                            >Sims 3 legacy page</a
-                        >, I finally got <a href="sims-3-legacy.html">my own set up</a> to document what's been
-                        happening so far! Warframe is eating my brain right now so it is on a mild hiatus, but up to the
-                        beginning of generation 2 is active (I've also updated <a href="now.html">my now page</a>, but
-                        that's a lot smaller)
-                    </p>
-                    <p>
-                        <span class="highlight">08/28/25:</span> Finally added the
-                        <a href="recipes/matcha-cookies.html">matcha cookie</a> and
-                        <a href="recipes/basa-filet.html">basa filet</a> recipes to my site!! Knocking out more of my
-                        greyed out recipes, though the japanese curry one will be a mouthful when I get around to it
-                    </p>
-                    <p>
-                        <span class="highlight">08/26/25:</span> Temporarily archived my minecraft page, just until I
-                        pick it up again and can return to my forever world in full (it's not deleted, it's just in an
-                        archived folder that doesn't get pushed to Github). Added a new
-                        <a href="blog.html">blog post</a> as well about my new Sims 3 legacy challenge ... maybe if I
-                        ever do finish it, I'll make a page here about it (miracle if I ever do)
-                    </p>
-                    <p>
-                        <span class="highlight">08/15/25:</span> Almost 3 weeks since my last update, but my
-                        <a href="now.html">now page</a> is caught up to the present; not much has changed outside of me
-                        finishing my post-grad and starting to pick up personal projects again
-                    </p>
-                    <p>
-                        <span class="highlight">08/14/25:</span> New <a href="blog.html">blog entry</a> documenting the
-                        bentos I've made for myself during my semester! They're all under a 'read more' on the blog
-                    </p>
-                    <p>
-                        <span class="highlight">07/31/25:</span> Finally caved to make a new shrine ... it's not the
-                        most detailed thing ever, but I wanted to blab about my favourite Bleach character
-                        <a href="shrines/ukitake.html">Ukitake</a> and list all the alt cards I got from the Bleach
-                        Brave Souls game
-                    </p>
-                    <p>
-                        <span class="highlight">07/27/25:</span> Updated <a href="now.html">/now</a> and reorganized my
-                        index page to add some new webrings. Also changed the front video to one of adef's cool pokemon
-                        videos!
-                    </p>
-                    <p>
-                        <span class="highlight">07/16/25:</span> <a href="gallery.html">Gallery</a> has been updated to
-                        2015; I'm working backwards since it's a lot more artwork I need to do in the past vs more
-                        recent years, so I'd rather knock them out first
-                    </p>
-                    <p>
-                        <span class="highlight">07/14/25:</span> Completely overhauled
-                        <a href="blog.html">/blog</a> with a new look! I'll be using it for a lot more 'looser' blogging
-                        as well. Updated front page video as well!
-                    </p>
-                    <p>
-                        <span class="highlight">07/12/25:</span> New <a href="now.html">now page</a> with what's been
-                        going on, though it's a&nbsp;<em>little</em> emptier than some of the other weeks (I did look
-                        through my journal and most stuff was either minor life stuff, or website work which I already
-                        documented)
-                    </p>
-                    <p>
-                        <span class="highlight">07/08/25:</span> Created an <a href="gallery.html">art page</a>! I
-                        finally caved to make one to document my artwork throughout the years, though I'll be curating
-                        which ones I add. So far it's only 2025 and <i>part</i> of 2012 and earlier since there's some
-                        art I haven't uploaded yet
-                    </p>
-                    <p>
-                        <span class="highlight">07/08/25:</span> A few changes inbound: I added a full font toggle with
-                        different font options, and opted to remove my dark/light mode toggle for the fully built in
-                        prefers-system CSS code. Also adjusted the index page layout. On a more character end, I finally
-                        brought over Sylvie's game kit, cause I realize I never did actually include it in their
-                        character page even though it's been fully designed. By extension, I did now finally come up
-                        with recommended weapons, artifacts, and teams for them which I did not have before.
-                    </p>
-                    <p>
-                        <span class="highlight">07/05/25:</span> Added polls to the index page, even though it's fucking
-                        <i>ass</i> to set up; thanks to
-                        <a href="https://starry-knight.neocities.org/">starry-knight</a> for figuring out how to do it
-                        (aka github page you embed)
-                    </p>
-                    <p>
-                        <span class="highlight">06/30/25:</span> Made another
-                        <a href="/oc/raiden/index.html">OC page</a>!! Although it's not as fleshed out, he's Hideki's
-                        hubby and still means a lot to me even if retired.
-                    </p>
-                    <p>
-                        <span class="highlight">06/28/25:</span> Updated <a href="now.html">/now</a> page again! ... I
-                        didn't realize it's been a bit over two weeks since my last update; I wanna try to keep them to
-                        a bi-weekly basis for my own tracking as well to look back on for funsies
-                    </p>
-                    <p>
-                        <span class="highlight">06/24/25:</span> Added a <a href="toybox.html">/toybox</a> page to store
-                        cute pixels, inspired off other toyboxes!! I ... do need to make a nicer pixel shelf though ...
-                    </p>
-                    <p>
-                        <span class="highlight">06/11/25:</span> New <a href="now.html">/now</a> entry to catch
-                        everything up to the present
-                    </p>
-                    <p>
-                        <span class="highlight">06/09/25:</span> Note to self don't make folder structures without
-                        lowercase names again ... migrating everything to new folder names sucked ass.
-                    </p>
-                    <p>
-                        <span class="highlight">06/06/25:</span> Added a YouTube video to the front! Which is uh ...
-                        right below here :P I'll just be using it to drop cool videos I enjoyed on a [unknown] time
-                        basis
-                    </p>
-                    <p>
-                        <span class="highlight">06/04/25:</span> New <a href="blogging.html">/blog</a> entry mostly
-                        around journaling for me
-                    </p>
-                    <p>
-                        <span class="highlight">05/31/25:</span> I found Kalechip's cool fake listography page template
-                        and I wanted to make a <a href="listfauxgraphy/index.html">little page</a> for just thought
-                        dumps + random links I feel won't fit into my bookmarks page
-                    </p>
-                    <p>
-                        <span class="highlight">05/28/25:</span> New <a href="blogging.html">/blog</a> entry yapping
-                        mostly about recognizing traits of myself (some of which I didn't know) in my own OCs.
-                        <em>(I also expanded more on my media log, but that's minor compared to this </em>😉<em>)</em>
-                    </p>
-                    <p>
-                        <span class="highlight">05/27/25:</span> I caved and made a
-                        <a href="media-log.html">/media-log</a> to document some of my tracked media in a single place;
-                        although it won't be everything I list in my tracking specific sites, I'd like to show off the
-                        stuff I've consumed and my thoughts on them!
-                    </p>
-                    <p>
-                        <span class="highlight">05/25/25:</span> New <a href="./now.html">/now</a> entry! Just new life
-                        updates + what's been going on
-                    </p>
-                    <p>
-                        <span class="highlight">05/23/25:</span> New
-                        <a href="https://zhongvie.neocities.org/blogging">blog post</a>, though I'd call it more of an
-                        unorganized thought dump. Mostly surrounding me talking about how I view my own identity, and
-                        more as something to empty my brain out of my thoughts! It's definitely a more personal blab.
-                    </p>
-                    <p>
-                        <span class="highlight">05/19/25:</span> Brought in one of my oldest OCs which is my
-                        <a href="oc/resu/index.html">Bleach OC</a>! Her profile is rough cause god knows it was written
-                        well over ten years ago, but she's one of my more developed OCs I had immensely active for
-                        3&ndash;4 years before she was retired. Had it not been for her, I'd have never met such
-                        wonderful people in the OC/Canon community back then
-                    </p>
-                    <p>
-                        <span class="highlight">05/15/25:</span> New
-                        <a href="Recipes/airfry-pork-tenderloin.html">/recipe</a> for pork tenderloin!! Also updated
-                        <a href="blogging.html">/blog</a> with a new post about being non-sharing in the yume community
-                    </p>
-                    <p>
-                        <span class="highlight">05/14/25:</span> Began work on the program list on my
-                        <a href="bookmarks.html">/bookmarks</a>, though I know I'm still missing quite a few
-                    </p>
-                    <p>
-                        <span class="highlight">05/13/25:</span> Added a feed!! It'll be a reflection of future updates
-                        made here
-                    </p>
-                    <p>
-                        <span class="highlight">05/12/25:</span> Added a <a href="now.html">/now</a> page to try to
-                        track what's been going on with my life cause my memory is SO peepee poo poo
-                    </p>
-                    <p>
-                        <span class="highlight">05/09/25:</span> Got <a href="bookmarks.html">/bookmarks</a> up and
-                        running with some of my firefox extensions! Also finished
-                        <a href="oc/khaliun/index.html">/khaliun</a>'s OC page too
-                    </p>
-                    <p>
-                        <span class="highlight">05/07/25:</span> Added my <a href="oc.html">/oc</a> hub and made
-                        <a href="oc/hideki.html">/hideki</a>'s page ... slowly adding my other blorbos in
-                    </p>
-                    <p>
-                        <span class="highlight">05/05/25:</span> Happy one month anniversary to this website coming to
-                        be!! Nothing big has been going on, mostly minor fixes + CSS tweaks
-                    </p>
-                    <p>
-                        <span class="highlight">05/02/25:</span> Euehgugh dark mode overhaul ... so many pages to put
-                        scripts into but ... all pages <i>should</i> be on the same toggle to swap between dark/light
-                        mode
-                    </p>
-                    <p>
-                        <span class="highlight">05/01/25:</span> Finished my
-                        <a href="shrines/zhongli.html">/zhongli</a> shrine!! Now all that's left that's empty are my
-                        recipes and bookmarks ...
-                    </p>
-                    <p>
-                        <span class="highlight">04/30/25:</span> New <a href="blogging.html">/blog</a> post about some
-                        nostalgia over old MMO games I've played
-                    </p>
-                    <p>
-                        <span class="highlight">04/29/25:</span> RAAAH my
-                        <a href="shrines/zhongvie.html">OC/Canon shrine</a> is DONEEEE LETS GOOOOO!!!!!
-                    </p>
-                    <p>
-                        <span class="highlight">04/27/25:</span> Recipe page + first two recipes added, finished my 3
-                        main OC pages, and a lot more back-end keeping ... I'm beginning my first shrine right now!!
-                    </p>
-                    <p>
-                        <span class="highlight">04/24/25:</span> First OC page is now live!!! And the template is set up
-                        for me to easily remove sections I don't need/personalize colours so more should be coming out
-                        soon for my two other main OCs 😏
-                    </p>
-                    <p>
-                        <span class="highlight">04/22/25:</span> Finally got an accessible nav bar in ... my brain hurts
-                        from it ... nav bar should be navigatable using arrow keys.
-                    </p>
-                    <p>
-                        <span class="highlight">04/20/25:</span> New webring added!! Also shuffled some stuff around on
-                        the index (like this update zone). Also yay more responsive nav header with dropdowns!
-                    </p>
-                    <p>
-                        <span class="highlight">04/17/25:</span> Bleh mostly been doing back-end stuff (image optimizing
-                        + aria-hidden), school is nuking me rn ...
-                    </p>
-                    <p>
-                        <span class="highlight">04/13/25:</span> Yay <a href="about.html">about me</a> is live, though
-                        I'm having a hoot figuring out tabs ...
-                    </p>
-                    <p>
-                        <span class="highlight">04/12/25:</span> HAHAH font toggle + persistence on refresh/pages
-                        FINALLY works. I mostly added it for days when its hard for even my eyes to focus on the pixel
-                        text, so as a simple toggle to Arial which is easiest on my eyes.
-                    </p>
-                    <p>
-                        <span class="highlight">04/11/25:</span> Uhh, added a bunch of stuff ... adjusting my credits
-                        page + began a sitemap + did some mobile responsiveness work.
-                    </p>
-                    <p>
-                        <span class="highlight">04/10/25:</span> Ughh re-coded the entire site to use a grid system, so
-                        it's not reliant on the template I began with. Everything is now properly marked in the CSS +
-                        HTML, and it's <i>somewhat</i> responsive on mobile. I'll probably keep just the main content
-                        visible on mobile since I haven't figured out how to force the sidebars to re-size to the screen
-                        width.
-                    </p>
-                    <p>
-                        <span class="highlight">04/08/25:</span> Marquees beloathed ... no success in getting a
-                        javascript alternative to work, so I just used the good old &lt;marquee&gt; code lmaoooo. Added
-                        a site button too, so I <i>think</i> I'm done with the barebone setting up for the layouts.
-                    </p>
-                    <p>
-                        <span class="highlight">04/07/25:</span> Added a <a href="manifesto.html">manifesto</a> page,
-                        though uh ... gonna be pondering on what to write in it for a good while. Otherwise just CSS
-                        mucking about.
-                    </p>
-                    <p>
-                        <span class="highlight">04/06/25:</span> Why is it so hard to decide on a theme ... revamped the
-                        entire CSS layout to match closer to my Toyhouse one.
-                    </p>
-                    <p style="margin-bottom: 0">
-                        <span class="highlight">04/05/25:</span> Made the site ... HTML and CSS spooky, it's been years
-                        since I've really went super in depth. Made a <a href="to-do.html">to-do</a> to keep note of
-                        what I need ... to do ...
-                    </p>
+                    <section>
+                        <h1>Site Changelog Page</h1>
+                        <p class="no-divider">
+                            <mark>11/27/25:</mark> Oh god, there's a lot to even keep track of ... I've been gutting my
+                            old code for my site for a while now, and I&nbsp;<em>think</em> I'm done with it ... I'm
+                            sure there'll be a lot of broken links or fucked up images I need to fix, but I'll hammer at
+                            those over time slowly.
+                        </p>
+                        <p class="no-divider">To vaguely summarize:</p>
+                        <ul>
+                            <li>
+                                Implemented a site-wide GIF toggle, it doesn't quite work on everything, but I'll hammer
+                                those parts out slowly
+                            </li>
+                            <li>Rearranged the location of some stuff on the index</li>
+                            <li>
+                                Added as much screen reader support as I could on various pages (about me, etc), but
+                                it's not perfect
+                            </li>
+                            <li>Moved toybox into articles</li>
+                            <li>Updated my website unpacking in articles to fit this new site</li>
+                            <li>Cleaned up some mobile code, but not too much</li>
+                        </ul>
+                        <p>
+                            ... I'm sure I did other stuff I'm forgetting, but this was like a 2-3 week haze, I dunno
+                            when I started this.
+                        </p>
+                        <p>
+                            <mark>11/17/25:</mark> <a href="templates.html">New template</a> has been made! Went for a
+                            big chunky sidebar + a giant focal image, plus I wanted an excuse to use some of the lace
+                            borders from scripted. I've had it done for a little while, but kinda dragged my feet on
+                            pushing it, oopsies
+                        </p>
+                        <p>
+                            <mark>11/05/25:</mark> I've been putting off doing a <a href="now.html">now</a> update since
+                            I felt like I didn't have much to yap about, but I'll probably be a little freaky/excited in
+                            the games section sooooo apt time to do it. I am half debating if I should stop including
+                            just solo now page updates in here (and only bundle it with other things) and just leave it
+                            to the RSS feed + small index update section ...
+                        </p>
+                        <p>
+                            <mark>11/03/25:</mark>
+                            And made <a href="templates/bloggy.html">my second template</a>!! It's in the vein of a
+                            tumblr theme (ish), and still pretty simple ... the day I make complex templates I will turn
+                            into dust (I don't even think I have any explicitly complex pages on my site). Otherwise,
+                            nothing new on the site, I've been bogged down trying to figure out adding carrds to sell on
+                            VGen, and it's ... Something(tm)
+                        </p>
+                        <p>
+                            <mark>10/31/25:</mark>
+                            I made my very <a href="templates/boxy.html">first website template</a>!! I hope to make
+                            future ones, but I'm a&nbsp;<em>very</em> slow cooker when it comes to layouts and not
+                            overthinking it too much<br /><br />On a smaller note, I updated my
+                            <a href="diary/index.html">diary calendar</a> to have November settled in
+                        </p>
+                        <p>
+                            <mark>10/28/25:</mark>
+                            Sorely overdue but I added stuff to the #me memes section of my
+                            <a href="about.html">about page</a>, with memes I'll probably yoink off my personal tumblr
+                            tag. I also added a few new quiz results, and getting an angel from evangelion as my
+                            assigned gender is a sickass result
+                        </p>
+                        <p>
+                            <mark>10/25/25:</mark>
+                            Minor changes, but I added
+                            <a href="https://bechnokid.neocities.org/resources/code-snippets/">Bechno Kid's</a> cool
+                            calendar to the front page (only visible on desktop) and added a little section to link to
+                            my <a href="https://zhongvie.bearblog.dev/">bearblog</a> for longer posts, since I'll
+                            probably stop adding them to my blog page on here ... which I guess now is more of a
+                            microblog!! Bearblog just feels nicer to get full thoughts out on there
+                        </p>
+                        <p>
+                            <mark>10/20/25:</mark>
+                            Not a very exciting <a href="now.html">now page</a> update, mostly just small life stuff,
+                            and it's been a bit of a blur. As a more minor thing, I've been doing article reading and
+                            wrote a <a href="https://zhongvie.bearblog.dev/2025-10-20/">small blog post</a> on the
+                            concept of bookmarks. I also fixed my <a href="articles/food.html">food log</a> page to be a
+                            bit cleaner with griddery, and updated some recent foods
+                        </p>
+                        <p>
+                            <mark>10/18/25:</mark>
+                            I ended up caving to make a <a href="articles/food.html">fun food page</a> to just document
+                            all the stuff I've cooked and eaten over a period of time; I do not take selfies, I just
+                            take food photos LOL. It'll be one of those long-term projects since I need to dig through
+                            my phone and just be wary that the id for each 'item' in the masonry grid is different...
+                        </p>
+                        <p class="no-divider">
+                            <mark>10/11/25:</mark>
+                            A couple new <a href="media-log.html">media entries</a> have been written up; I wasn't going
+                            to initially write a separate one up for Hades II, but the ending kinda dipped my rating
+                            down from what the original was.
+                        </p>
+                        <ul>
+                            <li>Hades II (games)</li>
+                            <li>The Amazing Digital Circus (shows)</li>
+                            <li>Captive Prince (books)</li>
+                            <li>TGCF / Heaven Official's Blessing + Other MXTX works (books)</li>
+                        </ul>
+                        <hr />
+                        <p>
+                            <mark>10/09/25:</mark>
+                            <a href="articles/website.html">Big ugly code riddled page</a> in trying to break down how I
+                            set up my website layout ... at least it was an excuse to actually optimize some stuff in
+                            the HTML since there were classes in two separate places ... and some of my layout
+                            calculations were wrong. I'll probably expand on it in the future, depending on what
+                            questions might come up or if people show interest in the way I did some stuff.
+                        </p>
+                        <p>
+                            <mark>10/06/25:</mark>
+                            In an attempt to try to offload some of my stuff from Toyhouse, I've made my
+                            <a href="https://zhongvie.neocities.org/oc/yadyra/gallery">first art gallery</a>&nbsp;and
+                            fic section for Yadyra, since I thought he didn't have too much art to explode my skull, but
+                            enough to work out a layout ... even so, it still was a lot of work to set up around
+                            40&ndash;50 images and to WEBP everything. I'll&nbsp;<em>really</em> need to think about
+                            image optimization if I continue with the galleries ...<br /><br /><a href="now.html"
+                                >Now page</a
+                            >
+                            has been updated w/recent ongoings, though it's a bit of a shorter one since the last two
+                            weeks haven't been horribly eventful (or they're brain fogged)
+                        </p>
+                        <p>
+                            <mark>10/01/25:</mark>
+                            Cleaned up my index to reorganize since it's a way to combat the horrible itchy 'aughh I
+                            wanna rehaul my site' need. Mostly just added a section for new artwork I do so it's upfront
+                            + shuffled things around. New poll as well!
+                        </p>
+                        <p>
+                            <mark>09/28/25:</mark>
+                            Inspired from
+                            <a href="https://nanacore.neocities.org/diary">Nana's page</a>, I wanted to make
+                            <a href="diary.html">my own little diary page</a> (since I've been in the habit of
+                            documenting one highlight of the day in my own actual journal) ... simple, but it's a
+                            start!! I've retired the nav link to my listography page, but it's still present on the site
+                            itself since I know there's a few outlinks to it
+                        </p>
+                        <p>
+                            <mark>09/26/25:</mark> New <a href="blog.html">long blog post</a> just talking about
+                            exploring gender through OCs
+                        </p>
+                        <p>
+                            <mark>09/25/25:</mark> Added a carousel to
+                            <a href="/oc/sylvie/index.html">Sylvie's</a> design sheet
+                        </p>
+                        <p>
+                            <mark>09/24/25:</mark> <a href="gallery.html">2017 gallery</a> finished! Dang, been on a bit
+                            of a roll with these; after figuring out a nicer way to WEBP convert, the only real issue is
+                            just making thumbnails of everything and writing up ALT text for each art piece ... to be
+                            fair, 2017 only has 24 art pieces compared to 2016 which had 61. Decent amount of commission
+                            for this year
+                        </p>
+                        <p>
+                            <mark>09/23/25:</mark> Caught up my <a href="gallery.html">art gallery</a> to 2016 (which
+                            has among the most art pieces I'm going to be adding to my gallery) ... now it's just ... 8
+                            years to go to fill out. Wish me luck ...
+                        </p>
+                        <p>
+                            <mark>09/22/25:</mark> New <a href="media-log.html">media log</a> entries which include
+                            Neighbours from Hell (game), The Summer Hikaru Died (anime), and MADK (manga)
+                        </p>
+                        <p>
+                            <mark>09/21/25:</mark> <a href="now.html">Now page</a> has been updated with just what's
+                            been going on, nothing too fancy. I also joined
+                            <a href="https://www.pillowfort.social/asuraid">pillowfort</a> to test out another art
+                            posting place
+                        </p>
+                        <p>
+                            <mark>09/20/25:</mark> Wrote a longer <a href="blog.html">blog post</a> on the concept of
+                            having a sona (it's not a very coherent blog post, just me dumping out thoughts). Also
+                            uploaded a few artworks to the <a href="gallery.html">gallery</a> (one of which is context
+                            relevant to the blog post anyway LOL)
+                        </p>
+                        <p>
+                            <mark>09/04/25:</mark> Got a new <a href="/oc/cotton/index.html">OC page made</a>! This is
+                            my old blorbo from my devART days when I made an adoptable species called the furzilla; they
+                            don't have any real development, but they're one of my oldest and favourite designs (I
+                            actually have a&nbsp;papier m&acirc;ch&eacute; artwork I made of them back in high-school
+                            that's still sitting in my room)
+                        </p>
+                        <p>
+                            <mark>09/03/25:</mark> Inspired from Nana's own
+                            <a href="https://nanacore.neocities.org/articles/legacy" rel="noopener noreferrer"
+                                >Sims 3 legacy page</a
+                            >, I finally got <a href="sims-3-legacy.html">my own set up</a> to document what's been
+                            happening so far! Warframe is eating my brain right now so it is on a mild hiatus, but up to
+                            the beginning of generation 2 is active (I've also updated
+                            <a href="now.html">my now page</a>, but that's a lot smaller)
+                        </p>
+                        <p>
+                            <mark>08/28/25:</mark> Finally added the
+                            <a href="recipes/matcha-cookies.html">matcha cookie</a> and
+                            <a href="recipes/basa-filet.html">basa filet</a> recipes to my site!! Knocking out more of
+                            my greyed out recipes, though the japanese curry one will be a mouthful when I get around to
+                            it
+                        </p>
+                        <p>
+                            <mark>08/26/25:</mark> Temporarily archived my minecraft page, just until I pick it up again
+                            and can return to my forever world in full (it's not deleted, it's just in an archived
+                            folder that doesn't get pushed to Github). Added a new <a href="blog.html">blog post</a> as
+                            well about my new Sims 3 legacy challenge ... maybe if I ever do finish it, I'll make a page
+                            here about it (miracle if I ever do)
+                        </p>
+                        <p>
+                            <mark>08/15/25:</mark> Almost 3 weeks since my last update, but my
+                            <a href="now.html">now page</a> is caught up to the present; not much has changed outside of
+                            me finishing my post-grad and starting to pick up personal projects again
+                        </p>
+                        <p>
+                            <mark>08/14/25:</mark> New <a href="blog.html">blog entry</a> documenting the bentos I've
+                            made for myself during my semester! They're all under a 'read more' on the blog
+                        </p>
+                        <p>
+                            <mark>07/31/25:</mark> Finally caved to make a new shrine ... it's not the most detailed
+                            thing ever, but I wanted to blab about my favourite Bleach character
+                            <a href="shrines/ukitake.html">Ukitake</a> and list all the alt cards I got from the Bleach
+                            Brave Souls game
+                        </p>
+                        <p>
+                            <mark>07/27/25:</mark> Updated <a href="now.html">/now</a> and reorganized my index page to
+                            add some new webrings. Also changed the front video to one of adef's cool pokemon videos!
+                        </p>
+                        <p>
+                            <mark>07/16/25:</mark> <a href="gallery.html">Gallery</a> has been updated to 2015; I'm
+                            working backwards since it's a lot more artwork I need to do in the past vs more recent
+                            years, so I'd rather knock them out first
+                        </p>
+                        <p>
+                            <mark>07/14/25:</mark> Completely overhauled <a href="blog.html">/blog</a> with a new look!
+                            I'll be using it for a lot more 'looser' blogging as well. Updated front page video as well!
+                        </p>
+                        <p>
+                            <mark>07/12/25:</mark> New <a href="now.html">now page</a> with what's been going on, though
+                            it's a&nbsp;<em>little</em> emptier than some of the other weeks (I did look through my
+                            journal and most stuff was either minor life stuff, or website work which I already
+                            documented)
+                        </p>
+                        <p>
+                            <mark>07/08/25:</mark> Created an <a href="gallery.html">art page</a>! I finally caved to
+                            make one to document my artwork throughout the years, though I'll be curating which ones I
+                            add. So far it's only 2025 and <i>part</i> of 2012 and earlier since there's some art I
+                            haven't uploaded yet
+                        </p>
+                        <p>
+                            <mark>07/08/25:</mark> A few changes inbound: I added a full font toggle with different font
+                            options, and opted to remove my dark/light mode toggle for the fully built in prefers-system
+                            CSS code. Also adjusted the index page layout. On a more character end, I finally brought
+                            over Sylvie's game kit, cause I realize I never did actually include it in their character
+                            page even though it's been fully designed. By extension, I did now finally come up with
+                            recommended weapons, artifacts, and teams for them which I did not have before.
+                        </p>
+                        <p>
+                            <mark>07/05/25:</mark> Added polls to the index page, even though it's fucking <i>ass</i> to
+                            set up; thanks to <a href="https://starry-knight.neocities.org/">starry-knight</a> for
+                            figuring out how to do it (aka github page you embed)
+                        </p>
+                        <p>
+                            <mark>06/30/25:</mark> Made another <a href="/oc/raiden/index.html">OC page</a>!! Although
+                            it's not as fleshed out, he's Hideki's hubby and still means a lot to me even if retired.
+                        </p>
+                        <p>
+                            <mark>06/28/25:</mark> Updated <a href="now.html">/now</a> page again! ... I didn't realize
+                            it's been a bit over two weeks since my last update; I wanna try to keep them to a bi-weekly
+                            basis for my own tracking as well to look back on for funsies
+                        </p>
+                        <p>
+                            <mark>06/24/25:</mark> Added a <a href="toybox.html">/toybox</a> page to store cute pixels,
+                            inspired off other toyboxes!! I ... do need to make a nicer pixel shelf though ...
+                        </p>
+                        <p>
+                            <mark>06/11/25:</mark> New <a href="now.html">/now</a> entry to catch everything up to the
+                            present
+                        </p>
+                        <p>
+                            <mark>06/09/25:</mark> Note to self don't make folder structures without lowercase names
+                            again ... migrating everything to new folder names sucked ass.
+                        </p>
+                        <p>
+                            <mark>06/06/25:</mark> Added a YouTube video to the front! Which is uh ... right below here
+                            :P I'll just be using it to drop cool videos I enjoyed on a [unknown] time basis
+                        </p>
+                        <p>
+                            <mark>06/04/25:</mark> New <a href="blogging.html">/blog</a> entry mostly around journaling
+                            for me
+                        </p>
+                        <p>
+                            <mark>05/31/25:</mark> I found Kalechip's cool fake listography page template and I wanted
+                            to make a <a href="listfauxgraphy/index.html">little page</a> for just thought dumps +
+                            random links I feel won't fit into my bookmarks page
+                        </p>
+                        <p>
+                            <mark>05/28/25:</mark> New <a href="blogging.html">/blog</a> entry yapping mostly about
+                            recognizing traits of myself (some of which I didn't know) in my own OCs.
+                            <em>(I also expanded more on my media log, but that's minor compared to this </em>😉<em
+                                >)</em
+                            >
+                        </p>
+                        <p>
+                            <mark>05/27/25:</mark> I caved and made a <a href="media-log.html">/media-log</a> to
+                            document some of my tracked media in a single place; although it won't be everything I list
+                            in my tracking specific sites, I'd like to show off the stuff I've consumed and my thoughts
+                            on them!
+                        </p>
+                        <p>
+                            <mark>05/25/25:</mark> New <a href="./now.html">/now</a> entry! Just new life updates +
+                            what's been going on
+                        </p>
+                        <p>
+                            <mark>05/23/25:</mark> New <a href="https://zhongvie.neocities.org/blogging">blog post</a>,
+                            though I'd call it more of an unorganized thought dump. Mostly surrounding me talking about
+                            how I view my own identity, and more as something to empty my brain out of my thoughts! It's
+                            definitely a more personal blab.
+                        </p>
+                        <p>
+                            <mark>05/19/25:</mark> Brought in one of my oldest OCs which is my
+                            <a href="oc/resu/index.html">Bleach OC</a>! Her profile is rough cause god knows it was
+                            written well over ten years ago, but she's one of my more developed OCs I had immensely
+                            active for 3&ndash;4 years before she was retired. Had it not been for her, I'd have never
+                            met such wonderful people in the OC/Canon community back then
+                        </p>
+                        <p>
+                            <mark>05/15/25:</mark> New <a href="Recipes/airfry-pork-tenderloin.html">/recipe</a> for
+                            pork tenderloin!! Also updated <a href="blogging.html">/blog</a> with a new post about being
+                            non-sharing in the yume community
+                        </p>
+                        <p>
+                            <mark>05/14/25:</mark> Began work on the program list on my
+                            <a href="bookmarks.html">/bookmarks</a>, though I know I'm still missing quite a few
+                        </p>
+                        <p><mark>05/13/25:</mark> Added a feed!! It'll be a reflection of future updates made here</p>
+                        <p>
+                            <mark>05/12/25:</mark> Added a <a href="now.html">/now</a> page to try to track what's been
+                            going on with my life cause my memory is SO peepee poo poo
+                        </p>
+                        <p>
+                            <mark>05/09/25:</mark> Got <a href="bookmarks.html">/bookmarks</a> up and running with some
+                            of my firefox extensions! Also finished <a href="oc/khaliun/index.html">/khaliun</a>'s OC
+                            page too
+                        </p>
+                        <p>
+                            <mark>05/07/25:</mark> Added my <a href="oc.html">/oc</a> hub and made
+                            <a href="oc/hideki.html">/hideki</a>'s page ... slowly adding my other blorbos in
+                        </p>
+                        <p>
+                            <mark>05/05/25:</mark> Happy one month anniversary to this website coming to be!! Nothing
+                            big has been going on, mostly minor fixes + CSS tweaks
+                        </p>
+                        <p>
+                            <mark>05/02/25:</mark> Euehgugh dark mode overhaul ... so many pages to put scripts into but
+                            ... all pages <i>should</i> be on the same toggle to swap between dark/light mode
+                        </p>
+                        <p>
+                            <mark>05/01/25:</mark> Finished my <a href="shrines/zhongli.html">/zhongli</a> shrine!! Now
+                            all that's left that's empty are my recipes and bookmarks ...
+                        </p>
+                        <p>
+                            <mark>04/30/25:</mark> New <a href="blogging.html">/blog</a> post about some nostalgia over
+                            old MMO games I've played
+                        </p>
+                        <p>
+                            <mark>04/29/25:</mark> RAAAH my <a href="shrines/zhongvie.html">OC/Canon shrine</a> is
+                            DONEEEE LETS GOOOOO!!!!!
+                        </p>
+                        <p>
+                            <mark>04/27/25:</mark> Recipe page + first two recipes added, finished my 3 main OC pages,
+                            and a lot more back-end keeping ... I'm beginning my first shrine right now!!
+                        </p>
+                        <p>
+                            <mark>04/24/25:</mark> First OC page is now live!!! And the template is set up for me to
+                            easily remove sections I don't need/personalize colours so more should be coming out soon
+                            for my two other main OCs 😏
+                        </p>
+                        <p>
+                            <mark>04/22/25:</mark> Finally got an accessible nav bar in ... my brain hurts from it ...
+                            nav bar should be navigatable using arrow keys.
+                        </p>
+                        <p>
+                            <mark>04/20/25:</mark> New webring added!! Also shuffled some stuff around on the index
+                            (like this update zone). Also yay more responsive nav header with dropdowns!
+                        </p>
+                        <p>
+                            <mark>04/17/25:</mark> Bleh mostly been doing back-end stuff (image optimizing +
+                            aria-hidden), school is nuking me rn ...
+                        </p>
+                        <p>
+                            <mark>04/13/25:</mark> Yay <a href="about.html">about me</a> is live, though I'm having a
+                            hoot figuring out tabs ...
+                        </p>
+                        <p>
+                            <mark>04/12/25:</mark> HAHAH font toggle + persistence on refresh/pages FINALLY works. I
+                            mostly added it for days when its hard for even my eyes to focus on the pixel text, so as a
+                            simple toggle to Arial which is easiest on my eyes.
+                        </p>
+                        <p>
+                            <mark>04/11/25:</mark> Uhh, added a bunch of stuff ... adjusting my credits page + began a
+                            sitemap + did some mobile responsiveness work.
+                        </p>
+                        <p>
+                            <mark>04/10/25:</mark> Ughh re-coded the entire site to use a grid system, so it's not
+                            reliant on the template I began with. Everything is now properly marked in the CSS + HTML,
+                            and it's <i>somewhat</i> responsive on mobile. I'll probably keep just the main content
+                            visible on mobile since I haven't figured out how to force the sidebars to re-size to the
+                            screen width.
+                        </p>
+                        <p>
+                            <mark>04/08/25:</mark> Marquees beloathed ... no success in getting a javascript alternative
+                            to work, so I just used the good old &lt;marquee&gt; code lmaoooo. Added a site button too,
+                            so I <i>think</i> I'm done with the barebone setting up for the layouts.
+                        </p>
+                        <p>
+                            <mark>04/07/25:</mark> Added a <a href="manifesto.html">manifesto</a> page, though uh ...
+                            gonna be pondering on what to write in it for a good while. Otherwise just CSS mucking
+                            about.
+                        </p>
+                        <p>
+                            <mark>04/06/25:</mark> Why is it so hard to decide on a theme ... revamped the entire CSS
+                            layout to match closer to my Toyhouse one.
+                        </p>
+                        <p style="margin-bottom: 0">
+                            <mark>04/05/25:</mark> Made the site ... HTML and CSS spooky, it's been years since I've
+                            really went super in depth. Made a <a href="to-do.html">to-do</a> to keep note of what I
+                            need ... to do ...
+                        </p>
+                    </section>
                 </article>
             </main>
         </div>
-
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
 
-        <!-- Scroll to Top -->
-        <script src="js/scroll-to-top.js"></script>
+        <!-- PAGE ONLY SCRIPTS -->
     </body>
 </html>

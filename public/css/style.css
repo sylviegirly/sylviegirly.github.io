@@ -1,0 +1,1419 @@
+/* -------------------------------------------------------- */
+/* VARIABLES */
+/* -------------------------------------------------------- */
+:root {
+    /* SIZES + SPACING */
+    --blog-size: 1100px;
+    --grid-gap: 13px;
+    --body-gap: 13px;
+    --left-sidebar-size: 250px;
+    --right-sidebar-size: 220px;
+    --border-radius: 5px;
+    --marquee-duration: 160s;
+
+    /* FONTS */
+    --header-font: "Dosis";
+    --body-font: "Nunito";
+
+    /* HEADERS */
+    --header-bg: #211f1f;
+    --header-img: url("../img/websiteBanner.png");
+    --background-image: url(../img/light_mode_bg.png);
+    --header-title: #e8f4dd;
+    --header-subtitle: #c8d7a8;
+
+    /* BACKGROUNDS */
+    --background: #879d6d;
+    --body-bg: #e9ecdb;
+    --body-outline: rgba(74, 118, 58, 0.46);
+
+    /* PRIMARY ACCENTS */
+    --primary-accent: #4e6137;
+    --secondary-accent: #73582f;
+    --font-on-accent: #f3f4e0;
+    --crossed-out: #858585;
+    --letter-glow: rgba(156, 100, 25, 0.51);
+
+    /* TEXT */
+    --text: #16190f;
+    --text-underline: rgba(120, 139, 104, 0.71);
+    --link: #9a5b1a;
+    --link-hover: #475407;
+    --body-deco: #f7f6e3;
+
+    --h1-pixel-deco: url("../img/decos/Leaf.gif");
+    --h4-pixel-deco: url("../img/decos/plant_bopping.gif");
+
+    --focus: red;
+
+    @media (prefers-color-scheme: dark) {
+        /* HEADERS */
+        --header-bg: #211f1f;
+        --header-title: #edf4dd;
+        --header-subtitle: #bdd7a8;
+
+        /* BACKGROUNDS */
+        --background: #211f1f;
+        --background-image: url(../img/dark_mode_bg.png);
+        --body-bg: #191717;
+        --body-outline: rgba(74, 118, 58, 0.15);
+
+        /* PRIMARY ACCENTS */
+        --primary-accent: #778d60;
+        --secondary-accent: #cee8ba;
+        --font-on-accent: #000000;
+        --letter-glow: rgba(89, 118, 58, 0.46);
+
+        /* TEXT */
+        --text: #f4f4f4;
+        --text-underline: rgba(120, 139, 104, 0.71);
+        --link: #a8d38d;
+        --link-hover: #e2ae50;
+        --body-deco: #211f1f;
+
+        --focus: #ffe200;
+    }
+}
+
+/* -------------------------------------------------------- */
+/* FONTS */
+/* -------------------------------------------------------- */
+@font-face {
+    font-family: "Venice";
+    font-display: swap;
+    src: url(../fonts/VeniceClassic.ttf);
+}
+
+@font-face {
+    font-family: "Dosis";
+    font-display: swap;
+    src: url(../fonts/Dosis-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Atkinson";
+    font-display: swap;
+    src: url(../fonts/AtkinsonHyperlegible-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Dyslexic";
+    font-display: swap;
+    src: url(../fonts/OpenDyslexic-Regular.otf);
+}
+
+@font-face {
+    font-family: "Intel One";
+    font-display: swap;
+    src: url(../fonts/IntelOneMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Nunito";
+    font-display: swap;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
+/* -------------------------------------------------------- */
+/* SCROLLBAR STYLING */
+/* -------------------------------------------------------- */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-accent) transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 3px double var(--primary-accent);
+}
+
+::selection {
+    color: var(--font-on-accent);
+    background: var(--primary-accent);
+}
+
+/* -------------------------------------------------------- */
+/* TIPPY STYLING */
+/* -------------------------------------------------------- */
+
+.tippy-tooltip.character-theme {
+    color: var(--font-on-accent);
+    letter-spacing: 1px;
+    font-size: 1em;
+    background: var(--primary-accent);
+    box-shadow:
+        rgba(0, 0, 0, 0.16) 0 10px 36px 0,
+        rgba(0, 0, 0, 0.06) 0 0 0 1px;
+}
+
+.tippy-tooltip.character-theme[data-placement^="top"] .tippy-arrow {
+    border-top-color: var(--primary-accent);
+}
+.tippy-tooltip.character-theme[data-placement^="bottom"] .tippy-arrow {
+    border-bottom-color: var(--primary-accent);
+}
+.tippy-tooltip.character-theme[data-placement^="left"] .tippy-arrow {
+    border-left-color: var(--primary-accent);
+}
+.tippy-tooltip.character-theme[data-placement^="right"] .tippy-arrow {
+    border-right-color: var(--primary-accent);
+}
+
+/* -------------------------------------------------------- */
+/* BASICS */
+/* -------------------------------------------------------- */
+body {
+    font-family: var(--body-font), sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 1em;
+    line-height: 1.3em;
+    background-image: var(--background-image);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    cursor: url(https://www.rw-designer.com/cursor-extern.php?id=186458), auto;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+    &:focus-visible {
+        outline-color: var(--focus) !important;
+        outline-offset: -1px !important;
+        outline-style: solid !important;
+        outline-width: 3px !important;
+        border-color: transparent;
+    }
+}
+
+a img:focus {
+    opacity: 0.8;
+    filter: none;
+    -webkit-filter: grayscale(50%);
+    -moz-filter: grayscale(50%);
+    -ms-filter: grayscale(50%);
+    -o-filter: grayscale(50%);
+}
+
+html {
+    position: relative;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--link);
+    text-decoration: underline;
+    transition: 0.25s;
+
+    &:hover {
+        color: var(--link-hover);
+        text-decoration-color: var(--link-hover);
+        text-decoration-thickness: 2px;
+    }
+}
+
+/* only links with images are affected by this */
+a:has(> img) {
+    line-height: 0 !important;
+    display: block;
+}
+
+/* only add external links to paragraphs, blockquotes, and lists */
+main p a[href^="http"]:after,
+main blockquote a[href^="http"]:after,
+main li a[href^="http"]:after {
+    display: inline-block;
+    content: " ";
+    margin-left: 4px;
+
+    /* disgusting CSS to make the SVG shape next to the link*/
+    background-size: 1rem 1rem;
+    background-color: var(--link);
+    height: 0.5rem;
+    width: 0.5rem;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    mask-image: url("../img/misc/external.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-image: url("../img/external.svg");
+}
+
+:target {
+    scroll-margin: 80px;
+}
+
+/* -------------------------------------------------------- */
+/* GRID LAYOUT */
+/* -------------------------------------------------------- */
+#container-grid {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--grid-gap);
+    width: var(--blog-size);
+}
+
+#left-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--body-gap);
+    /* force sidebar to one size only */
+    max-width: var(--left-sidebar-size);
+    min-width: var(--left-sidebar-size);
+    margin-top: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 75px;
+    text-align: center;
+}
+
+main,
+main article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--body-gap);
+    min-width: 0; /* ...? why the fuck does this fix the flexbox being too big ... */
+    max-width: calc(
+        var(--blog-size) - (var(--left-sidebar-size) + (calc(var(--grid-gap) * 2)))
+    ); /* literally the px number is just grip-gap x2 */
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--body-gap);
+    /* force sidebar to one size only */
+    max-width: var(--right-sidebar-size);
+    min-width: var(--right-sidebar-size);
+    width: 100%;
+    margin-top: 20px;
+}
+
+#left-sidebar > section,
+main article > section,
+aside > .section {
+    background-color: var(--body-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 6px 6px 0 var(--body-outline);
+    position: relative;
+    padding: 1em;
+    width: auto;
+}
+
+/* -------------------------------------------------------- */
+/* FORMATTING */
+/* -------------------------------------------------------- */
+p {
+    padding: 5px 0;
+}
+
+p:first-child {
+    padding-top: 0;
+}
+
+p:last-child {
+    padding-bottom: 0;
+}
+
+/* -------------------------------------------------------- */
+/* STYLING */
+/* -------------------------------------------------------- */
+
+/* HEADERS */
+h1 {
+    background-color: var(--primary-accent);
+    color: var(--font-on-accent);
+    font-family: var(--header-font), sans-serif;
+    border-radius: var(--border-radius);
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* H1 pixel decoration */
+h1::before {
+    content: " ";
+    background: var(--h1-pixel-deco);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+h2 {
+    background-color: var(--primary-accent);
+    color: var(--font-on-accent);
+    font-family: var(--header-font), sans-serif;
+    border-radius: var(--border-radius);
+    letter-spacing: 2px;
+    padding: 7px 10px;
+    margin: 13px 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* somehow fixes h2 to sticky to the top... */
+section h2:first-child {
+    margin-top: 0;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font), sans-serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed var(--secondary-accent);
+    text-decoration-color: var(--secondary-accent);
+    margin-bottom: 5px;
+}
+
+/* DECORATIVE ELEMENTS LIKE BOLD, ETC. */
+bold,
+b,
+strong {
+    color: var(--primary-accent);
+}
+
+italics,
+i,
+em {
+    color: var(--secondary-accent);
+}
+
+underline,
+u {
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--text-underline);
+}
+
+s,
+strikethrough {
+    opacity: 0.7;
+}
+
+.subtle {
+    line-height: 1rem;
+    font-size: 0.8em;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dotted var(--secondary-accent);
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+mark {
+    background-color: var(--primary-accent);
+    color: var(--font-on-accent);
+    padding: 0 5px;
+    border-radius: var(--border-radius);
+}
+
+blockquote {
+    padding: 10px;
+    width: auto;
+    margin: 10px;
+    border-left-color: var(--primary-accent);
+    border-left-width: 3px;
+    border-left-style: solid;
+    border-right-color: var(--primary-accent);
+    border-right-width: 3px;
+    border-right-style: solid;
+    background-color: var(--body-deco);
+}
+
+pre {
+    background: var(--body-deco);
+    border: 1px solid var(--body-outline);
+    border-left: 3px solid var(--primary-accent);
+    border-radius: var(--border-radius);
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 1em;
+    line-height: 1.6;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em;
+    display: block;
+    word-wrap: break-word;
+    max-height: 350px;
+}
+
+abbr,
+.tippy {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--link-hover);
+    cursor: pointer;
+}
+
+summary {
+    font-size: 1em;
+    color: var(--secondary-accent);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+details {
+    background-color: var(--body-deco);
+    border-radius: var(--border-radius);
+    padding: 5px;
+    padding-left: 10px;
+    margin: 5px;
+    border-left: 5px solid var(--secondary-accent);
+}
+
+/* Form elements */
+input,
+textarea,
+select,
+option {
+    color: var(--text);
+    background: var(--body-deco);
+    font-family: inherit;
+    border: 1px solid var(--primary-accent);
+    padding: 1px;
+    max-width: 100%;
+}
+
+#left-sidebar select {
+    width: 100%;
+}
+
+button {
+    font-family: inherit;
+    color: var(--font-on-accent);
+    background-color: var(--primary-accent);
+    border-radius: var(--border-radius);
+    padding: 5px 16px;
+    transition: 0.25s ease-in;
+    border: 0;
+}
+
+button:hover {
+    background: var(--secondary-accent);
+}
+
+/* Lists */
+section ul,
+section ol {
+    padding-left: 20px;
+    margin: 5px 0 5px 10px;
+    overflow: hidden;
+}
+
+section ul li {
+    list-style: square;
+    margin: 5px 0;
+    /*list-style-image: url(../img/deco/star_bullet.gif);*/
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+section ol li {
+    margin: 5px 0 5px 10px;
+    line-height: 1.5;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+section ul ul li::marker {
+    color: var(--primary-accent);
+}
+
+section li::marker {
+    color: var(--secondary-accent);
+}
+
+/* Inline Lists */
+.inline-list ul {
+    padding: 0;
+    list-style: none;
+}
+
+.inline-list li {
+    display: inline;
+    line-height: 1.5em;
+    padding-left: 5px;
+}
+
+.inline-list li:after {
+    content: " •";
+    margin-left: 5px;
+    color: var(--secondary-accent);
+}
+
+.inline-list li:first-child {
+    padding-left: 0;
+}
+
+.inline-list li:last-child {
+    padding-right: 0;
+}
+
+.inline-list li:last-child:after {
+    content: "";
+    margin-left: 0;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+}
+
+/* OTHER THINGS: aside in main content is different than right sidebar
+ * aside ... so need to adjust accordingly */
+main aside {
+    width: 30%;
+    font-style: italic;
+    border-top: 3px solid var(--primary-accent);
+    border-bottom: 3px solid var(--primary-accent);
+    background-color: var(--body-deco);
+    padding: 10px;
+    margin: 5px;
+    float: right;
+}
+
+.scrollable {
+    height: 250px;
+    background-color: var(--body-deco);
+    border-radius: var(--border-radius);
+    overflow-y: scroll;
+    padding: 7px;
+    margin: 10px 0;
+}
+
+/* -------------------------------------------------------- */
+/* HEADER */
+/* -------------------------------------------------------- */
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    background-color: var(--header-bg);
+    background-image: var(--header-img);
+    background-size: cover;
+}
+
+header .title,
+header .subtext {
+    width: var(--blog-size);
+}
+
+header .title {
+    font-family: "Venice";
+    color: var(--header-title);
+    height: 30px;
+    letter-spacing: 5px;
+    font-size: 2em;
+    text-transform: lowercase;
+    margin-top: 50px;
+}
+
+header .subtext {
+    color: var(--header-subtitle);
+    height: 23px;
+    font-size: 0.8em;
+    text-transform: lowercase;
+}
+
+/* --------------------------------------------------------
+ * NAVIGATION
+ * ... don't touch for the most part, it's made to work
+ * with the accessibility plugin ...
+/* -------------------------------------------------------- */
+nav {
+    background-color: var(--primary-accent);
+    color: var(--font-on-accent);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin-bottom: 20px;
+    padding-left: 50px;
+}
+
+nav > button {
+    min-width: 44px;
+    min-height: 24px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border: 0;
+    background-color: var(--primary-accent);
+    color: var(--font-on-accent);
+    font-size: 2.5rem;
+}
+
+nav ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-accent);
+    color: var(--font-on-accent);
+    list-style: none;
+    text-transform: uppercase;
+}
+
+nav ul ul {
+    background-color: var(--body-bg);
+    box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px;
+    color: var(--text);
+    text-transform: lowercase;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+nav ul ul a {
+    color: var(--text-colour);
+}
+
+nav ul.show {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+}
+
+nav a {
+    min-width: 44px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 150ms ease-in-out;
+    color: var(--font-on-accent);
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--secondary-accent);
+    color: var(--font-on-accent);
+}
+
+nav li {
+    padding: 0.2rem;
+}
+
+nav li.dropdown {
+    position: relative;
+}
+
+nav li.dropdown > a::after {
+    content: "▼";
+    display: block;
+    margin-left: 0.5rem;
+    transition: transform 250ms linear;
+    font-size: 0.5em;
+}
+
+nav li.dropdown > a[aria-expanded="true"]::after {
+    transform: rotate(-180deg);
+}
+
+nav li.dropdown ul a {
+    padding-left: 1.25rem;
+}
+
+nav li.dropdown ul li.dropdown ul a {
+    padding-left: 2rem;
+}
+
+.font-wrapper {
+    position: sticky;
+    top: 7px;
+    float: right;
+    right: 7px;
+    z-index: 9;
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    margin-top: 8px;
+}
+
+.font-wrapper label {
+    color: var(--font-on-accent);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.font-wrapper select {
+    background-color: var(--body-bg);
+    color: var(--font-colour);
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    height: 30px;
+    width: 200px;
+    border-radius: var(--border-radius);
+}
+
+.font-wrapper button {
+    background-color: var(--body-bg);
+    color: var(--font-colour);
+    transition: 0.25s ease-in;
+}
+
+.font-wrapper button:hover {
+    background: var(--secondary-accent);
+    color: var(--font-on-accent);
+}
+
+@media screen and (min-width: 800px) {
+    nav button {
+        display: none;
+    }
+    nav li {
+        padding: 0;
+    }
+    nav > ul,
+    nav > ul.show {
+        display: grid;
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
+    }
+    nav .dropdown ul.show {
+        position: absolute;
+    }
+    nav .dropdown ul ul {
+        top: 0;
+        left: 100%;
+    }
+    nav ul ul {
+        max-width: max-content;
+        min-width: 175px;
+    }
+    nav ul ul li {
+        min-width: 175px;
+    }
+    nav ul {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        width: var(--blog-size);
+    }
+}
+
+/* -------------------------------------------------------- */
+/* FOOTER */
+/* -------------------------------------------------------- */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    padding: 5px;
+    min-width: 100%;
+    background-color: var(--body-bg);
+    font-size: 0.75em;
+    border-top: 5px solid var(--primary-accent);
+    font-family: "nunito";
+    margin-top: 30px;
+}
+
+footer a:hover {
+    color: var(--link-hover);
+}
+
+/* -------------------------------------------------------- */
+/* SIDEBAR DECORATONS */
+/* -------------------------------------------------------- */
+#left-sidebar .title,
+aside .section > .title {
+    background-color: var(--primary-accent);
+    color: var(--font-on-accent);
+    border-radius: var(--border-radius);
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    margin: 0;
+    text-align: center;
+    font-family: var(--header-font);
+    font-size: 1.2rem;
+    overflow: hidden;
+    font-weight: bold;
+    width: 100%;
+}
+
+#left-sidebar .title::before,
+#left-sidebar .title::after,
+aside > .title::before,
+aside > .title::after {
+    content: "";
+    background: var(--h4-pixel-deco);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 17px;
+    height: 15px;
+    display: inline-block;
+    background-size: contain;
+}
+
+#left-sidebar .title::before,
+aside .title::before {
+    margin-right: 6px;
+}
+
+#left-sidebar .title::after,
+aside .title::after {
+    margin-left: 6px;
+}
+
+#sidedeco {
+    width: 100%;
+}
+
+#sidedeco img {
+    border-radius: calc(var(--border-radius) / 2);
+}
+
+/* Dendro Image on Sidebar: */
+.dendro {
+    float: left;
+    position: absolute;
+    left: -45px;
+    top: -50px;
+    transform: rotate(-25deg);
+    animation: floating;
+    max-width: 64px;
+    max-height: auto;
+    pointer-events: none;
+}
+
+/* Floating Animation */
+.img-floatinganim {
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .img-floatinganim {
+        animation: none;
+    }
+
+    .dendro {
+        left: -25px;
+        top: -30px;
+    }
+
+    .marquee-guts,
+    .marquee {
+        animation-play-state: paused;
+    }
+
+    .hover-grow a img:hover {
+        transform: scale(1) !important;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* FREEZE FRAME FIXES */
+.ff-image {
+    vertical-align: unset !important;
+}
+
+.ff-container {
+    line-height: 0;
+}
+
+/* -------------------------------------------------------- */
+/* SCROLL TO TOP */
+/* -------------------------------------------------------- */
+#backscroll {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 13px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    background-color: var(--primary-accent); /* Set a background color */
+    color: var(--font-on-accent);
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px 20px; /* Some padding */
+    border-radius: var(--border-radius); /* Rounded corners */
+    font-size: 1.1rem; /* Increase font size */
+    font-family: "Nunito";
+    transition: 0.5s;
+    text-decoration: none;
+
+    &:hover {
+        background-color: var(--secondary-accent);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(-3px);
+    }
+}
+
+/* -------------------------------------------------------- */
+/* ACCESSIBILITY, DO NOT REMOVE */
+/* -------------------------------------------------------- */
+#skip a {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: -1000px;
+    overflow: hidden;
+    transition: top 0.5s ease;
+    background: var(--body-bg);
+    color: var(--link);
+    z-index: 1000;
+    padding: 10px;
+}
+
+#skip a:focus {
+    top: 0;
+    transition: top 0.5s ease;
+}
+
+/* -------------------------------------------------------- */
+/* RIGHT TO LEFT MARQUEE */
+/* -------------------------------------------------------- */
+.marquee-alt {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-alt div {
+    padding-left: 100%;
+    width: max-content;
+    animation: marquee var(--marquee-duration) linear infinite;
+    line-height: 1em;
+}
+
+.marquee-alt div:hover {
+    animation-play-state: paused;
+}
+
+.marquee-alt p {
+    display: inline;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-alt div {
+        overflow: scroll;
+        padding-left: 0;
+        animation: none;
+    }
+}
+
+/* -------------------------------------------------------- */
+/* WARNING / INFO BANNERS */
+/* -------------------------------------------------------- */
+.warningwrapper {
+    width: auto;
+    border-radius: var(--border-radius);
+    padding: 13px;
+}
+
+.danger {
+    background-color: #c7755f;
+    color: black;
+}
+
+.warning {
+    background-color: #eac556;
+    color: black;
+}
+
+.info {
+    background-color: #ecb24e;
+    color: black;
+}
+
+.success {
+    background-color: #d5d88a;
+    color: black;
+}
+
+.success i,
+.success b,
+.info i,
+.info b,
+.warning i,
+.warning b,
+.danger i,
+.danger b {
+    color: black;
+}
+
+/* -------------------------------------------------------- */
+/* OTHER HELPER CLASSES */
+/* -------------------------------------------------------- */
+.columns {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    flex: 1fr;
+}
+
+/* TWO SINGULAR COLUMNS AT 50% */
+
+.two-columns {
+    display: flex;
+}
+
+.two-columns > * {
+    flex: 1 1 0;
+    margin: 0;
+}
+
+.two-columns > *:first-child {
+    padding-right: 0.75em;
+}
+
+.two-columns > *:last-child {
+    padding-left: 0.75em;
+}
+
+/* LAZY FLEXBOX IMAGES...? only used on sims rn... */
+.images {
+    display: flex;
+    width: calc(100% + 5px + 5px);
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.hide-desktop {
+    display: none;
+}
+
+/* lazy flexbox for items */
+.flexbox-lazy {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+
+.flexbox-lazy a {
+    text-decoration: none;
+    line-height: 0;
+}
+
+/* center any item */
+.center-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    gap: 2px;
+}
+
+/* full width images with corner rounding */
+.full-width-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: calc(var(--border-radius) / 2);
+}
+
+/* Shadow CSS Deco */
+.image-shadow {
+    filter: drop-shadow(3px 3px 0 var(--primary-accent));
+}
+
+.image-deco {
+    text-align: center;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.image-deco img {
+    padding: 3px;
+    border-radius: var(--border-radius);
+    border: 3px solid var(--primary-accent);
+    transition: 0.5s;
+}
+
+.image-deco a img:hover {
+    border: 3px solid var(--secondary-accent);
+}
+
+/* image floats */
+.float-img-right {
+    max-width: 40%;
+    float: right;
+    margin: 5px 0 5px 10px;
+}
+
+.float-img-left {
+    max-width: 40%;
+    float: left;
+    margin: 5px 10px 5px 0;
+}
+
+/* fix for floats! */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* REMOVE ICONS */
+.no-after a[href^="http"]:after {
+    background-image: none;
+    margin-left: 0;
+    height: 0;
+    width: 0;
+    background-color: transparent;
+}
+
+/* simple link disable */
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* visual hiding for reader mode */
+.reader,
+.reader-focusable:not(:focus):not(:focus-within) {
+    border: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+}
+
+.reader:not(caption),
+.reader-focusable:not(:focus):not(:focus-within):not(caption) {
+    position: absolute !important;
+}
+
+/* General Hover */
+.hover-grow a img {
+    transition: transform 0.2s ease-in-out; /* Animation */
+}
+
+.hover-grow a img:hover {
+    transform: scale(1.1);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
+/* -------------------------------------------------------- */
+/* MOBILE RESPONSIVENESS */
+/* -------------------------------------------------------- */
+
+@media screen and (max-width: 800px) {
+    /* FIX BODY TO MOBILE WIDTH */
+    #container-grid {
+        flex-direction: column;
+        width: auto;
+        margin-left: 5px;
+        margin-right: 5px;
+        gap: var(--body-gap);
+    }
+
+    #left-sidebar {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        position: static;
+        margin-top: 0;
+        display: none;
+    }
+
+    /* fix intro post to look less disgusting */
+    #left-sidebar #intro {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #left-sidebar #intro .description {
+        flex-basis: 65%;
+        line-height: 1.5em;
+    }
+
+    #sidedeco {
+        flex-basis: 30%;
+    }
+
+    .dendro,
+    .img-floatinganim {
+        display: none !important;
+    }
+
+    /* mobile/desktop hiding */
+    .hide-desktop {
+        display: block !important;
+    }
+
+    .hide-mobile {
+        display: none !important;
+    }
+
+    /* float image fixes */
+    .float-img-right {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+        text-align: center;
+    }
+
+    .float-img-left {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+        text-align: center;
+    }
+
+    /* header fixes */
+    header {
+        height: 140px;
+    }
+
+    header .title,
+    header .subtext {
+        width: auto;
+        position: relative;
+    }
+
+    .image-gallery div {
+        width: calc(33% - 10px) !important;
+        overflow: hidden;
+    }
+
+    main article > section {
+        box-shadow: none;
+    }
+
+    section aside {
+        width: auto;
+        max-width: 100%;
+        margin-left: 0;
+        float: none;
+    }
+
+    footer {
+        height: 60px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .scrollable {
+        height: fit-content;
+        max-height: 400px;
+    }
+
+    .talkingbox::after {
+        display: none;
+    }
+
+    nav {
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .font-wrapper {
+        float: left !important;
+        margin: 0;
+        margin-top: 12px;
+        top: 12px;
+        left: 7px;
+        width: fit-content;
+        height: 100%;
+    }
+}

@@ -1,0 +1,653 @@
+:root {
+    /* default tape */
+    --tape: url("../img/decos/flowers-blue.png");
+    --border-radius: 8px;
+    --body-font: "Nunito";
+    --header-font: "dosis";
+
+    /* card colours */
+    --card-bg: #f7f7f7;
+    --blue-bg: #ddf6fd;
+    --pink-bg: #ffdbe0;
+    --purple-bg: #f9ddfd;
+    --yellow-bg: #ffffd6;
+    --green-bg: #d1ffd1;
+    --card-font: rgba(0, 0, 0, 0.8);
+    --card-date: rgba(0, 0, 0, 0.2);
+
+    /* accent colours */
+    --primary-accent: #b9688f;
+    --font-on-accent: #fff;
+    --secondary-accent: #798d37;
+    --font: #1c0b0b;
+    --link: #762747;
+    --link-hover: #d679a6;
+    --sidebar: #f5eee9;
+    --background: #ffffff;
+    --background-img: url(../img/decos/bk021.gif);
+
+    /* dark mode colours */
+    @media (prefers-color-scheme: dark) {
+        /* card colours */
+        --card-bg: #232222;
+        --blue-bg: #232c2e;
+        --pink-bg: #351c29;
+        --purple-bg: #291c2b;
+        --yellow-bg: #2c2418;
+        --green-bg: #1c2c1c;
+        --card-font: rgba(255, 255, 255, 0.8);
+        --card-date: rgba(255, 255, 255, 0.2);
+
+        /* accent colours */
+        --primary-accent: #ddaec5;
+        --font-on-accent: #000000;
+        --secondary-accent: #d9ef8f;
+        --font: #f6ebeb;
+        --link: #e7abab;
+        --link-hover: #aac947;
+        --sidebar: #242221;
+        --background: #191919;
+        --background-img: url(../img/dark_mode_bg.png);
+    }
+}
+
+@font-face {
+    font-family: "Nunito";
+    font-display: swap;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Dosis";
+    font-display: swap;
+    src: url(../fonts/Dosis-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: var(--body-font);
+    background-image: var(--background-img);
+    background-color: var(--background);
+    color: var(--font);
+    font-size: 1em;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+    font-size: 1rem;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* -------------------------------------------------------- */
+/* SCROLLBAR STYLING */
+/* -------------------------------------------------s------- */
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-accent) var(--background);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--background);
+    border-radius: 10px;
+    border: 3px double var(--primary-accent);
+}
+
+::selection {
+    color: var(--font-on-accent);
+    background: var(--primary-accent);
+}
+
+/* -------------------------------------------------------- */
+/* MASONRY LAYOUT */
+/* -------------------------------------------------------- */
+
+.container {
+    display: grid;
+    max-width: 90vw;
+    grid-template-areas: "side content";
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container div.side {
+    display: inline-block;
+    background-color: var(--sidebar);
+    border: 2px solid var(--secondary-accent);
+    position: sticky;
+    top: 10px;
+    margin-top: 20px;
+    height: fit-content;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.container main {
+    height: fit-content;
+}
+
+/* -------------------------------------------------------- */
+/* DECORATIVE ELEMENTS */
+/* -------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font);
+    color: var(--primary-accent);
+}
+
+p {
+    line-height: 1.5;
+    margin: 10px 0 10px 0;
+}
+
+a {
+    color: var(--link);
+    transition: 0.5s;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: var(--link-hover);
+}
+
+b,
+bold,
+strong {
+    color: var(--primary-accent);
+}
+
+i,
+italics,
+em {
+    color: var(--secondary-accent);
+}
+
+u,
+underline {
+    text-decoration-color: var(--primary-accent);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+
+ul {
+    line-height: 1.2rem;
+    list-style-type: square;
+}
+
+ul ul {
+    border-left: 1px solid rgba(from var(--secondary-accent) r g b / 50%);
+    border-radius: 0 0 0 10px;
+    padding-left: 2.3rem;
+    margin-left: -0.8rem;
+}
+
+ul ul li::marker {
+    color: var(--primary-accent);
+}
+
+li {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+li::marker {
+    color: var(--secondary-accent);
+}
+
+summary::marker {
+    color: var(--primary-accent);
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+hr {
+    border: 0;
+    border-bottom: 2px dotted var(--secondary-accent);
+}
+
+/* -------------------------------------------------------- */
+/* SIDEBAR MENU */
+/* -------------------------------------------------------- */
+
+#main-menu {
+    width: 100%;
+}
+
+#main-menu ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#main-menu li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+#main-menu li a {
+    display: block;
+    padding: 7px 19px;
+    border-radius: var(--border-radius);
+    background: var(--primary-accent);
+    color: var(--font-on-accent);
+    text-decoration: none;
+    transition: 0.5s ease;
+    margin-bottom: 5px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+#main-menu li a:first-child {
+    margin-top: 5px;
+}
+
+#main-menu li a:hover,
+#main-menu li a:focus {
+    background: var(--link-hover);
+    color: var(--font-on-accent);
+    transition: 0.5s ease;
+}
+
+/*use a pointer for the fake buttons*/
+details > summary,
+#tag-filters label {
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------- */
+/* GRIDDERY */
+/* -------------------------------------------------------- */
+/*----- griddery v2.0 (NEW) -----*/
+[griddery-cont] {
+    display: table;
+    width: 100%;
+}
+
+[griddery-tr] {
+    display: table-row;
+}
+
+[griddery-col] {
+    display: table-cell;
+    vertical-align: top;
+}
+
+[griddery-item] {
+    display: flex;
+    justify-content: center;
+}
+
+[griddery-item] > * {
+    flex: 1;
+}
+
+[griddery-item] img,
+[griddery-item] iframe,
+[griddery-item] figure {
+    max-width: 100%;
+}
+
+[griddery-item] img {
+    border-radius: var(--border-radius);
+    width: 100%;
+    transition: 0.5s;
+}
+
+[griddery-item] img:hover {
+    outline: 1px solid var(--secondary-accent);
+    outline-offset: -5px;
+}
+
+/*----- 🐶 DOGS GRID 🐶 -----*/
+/* dogs grid column spacing */
+[griddery-id=".masonry-item"] [griddery-col] + [griddery-col] {
+    padding-left: 10px;
+}
+
+/* dogs grid "row" spacing */
+[griddery-id=".masonry-item"] [griddery-item] + [griddery-item] {
+    margin-top: 0;
+}
+
+[griddery-item] img:hover {
+    outline: none;
+    outline-offset: 0;
+}
+
+.masonry-item {
+    display: none;
+}
+
+/* -------------------------------------------------------- */
+/* MASONRY LAYOUT */
+/* -------------------------------------------------------- */
+.masonry-item {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    outline: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: 0.5s;
+    margin-top: 22px;
+}
+.masonry-item img {
+    max-width: 100%;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: calc(var(--border-radius) / 2);
+    display: block; /* Remove extra space below image */
+    margin-bottom: 10px;
+}
+.masonry-item p {
+    font-size: 0.9em;
+    margin: 15px 0 5px 0;
+    color: var(--card-font);
+}
+.masonry-item span {
+    display: block;
+    font-size: 0.8em;
+    color: var(--card-date);
+    text-align: right;
+    font-style: italic;
+    width: 100%;
+    border-top: 1px dashed var(--card-date);
+}
+
+/* -------------------------------------------------------- */
+/* HOVER */
+/* -------------------------------------------------------- */
+.masonry-item:hover {
+    transform: scale(1.02);
+}
+
+/* -------------------------------------------------------- */
+/* BACKGROUND VARIANTS */
+/* -------------------------------------------------------- */
+.masonry-item.yellowbg {
+    --card-bg: var(--yellow-bg);
+}
+
+.masonry-item.pinkbg {
+    --card-bg: var(--pink-bg);
+}
+
+.masonry-item.greenbg {
+    --card-bg: var(--green-bg);
+}
+
+.masonry-item.bluebg {
+    --card-bg: var(--blue-bg);
+}
+
+.masonry-item.purplebg {
+    --card-bg: var(--purple-bg);
+}
+
+/* -------------------------------------------------------- */
+/* WASHI TAPE DECORATIONS
+             * https://hillhouse.neocities.org/materials/snippets/washitape */
+/* -------------------------------------------------------- */
+
+.masonry-item::before {
+    background-image: var(--tape);
+    background-repeat: no-repeat;
+    display: block;
+    content: " ";
+    position: absolute;
+    height: 50px;
+    max-width: 150px;
+    width: 50%;
+    background-size: contain;
+    margin-top: -27px;
+    left: 25%;
+}
+
+.masonry-item.pinkflower::before {
+    --tape: url("../img/decos/flowers-pink.png");
+    left: 40%;
+    transform: rotate(2deg);
+}
+
+.masonry-item.pinkfloweralt::before {
+    --tape: url("../img/decos/flowers-pink-light.png");
+    left: 60px;
+    transform: rotate(5deg);
+}
+
+.masonry-item.cherryblossom::before {
+    --tape: url("../img/decos/flowers-cherryblossoms.png");
+    left: 60px;
+    transform: rotate(-5deg);
+    margin-top: -36px;
+}
+
+.masonry-item.pinkdasies::before {
+    --tape: url("../img/decos/flowers-daisies-pink.png");
+    margin-top: -36px;
+}
+
+.masonry-item.dasies::before {
+    --tape: url("../img/decos/flowers-daisies.png");
+}
+
+.masonry-item.dasiesalt::before {
+    --tape: url("../img/decos/flowers-daisies2.png");
+}
+
+.masonry-item.leaves::before {
+    --tape: url("../img/decos/flowers-greenleaves.png");
+    left: 90px;
+    transform: rotate(5deg);
+}
+
+.masonry-item.purpleflower::before {
+    --tape: url("../img/decos/flowers-purple.png");
+}
+
+.masonry-item.redflower::before {
+    --tape: url("../img/decos/flowers-red.png");
+}
+
+.masonry-item.algaepink::before {
+    --tape: url("../img/decos/algae-bluepink.png");
+}
+
+.masonry-item.algaecyan::before {
+    --tape: url("../img/decos/algae-cyanotype.png");
+}
+
+.masonry-item.gildedface::before {
+    --tape: url("../img/decos/art-gildedface.png");
+}
+
+.masonry-item.tapestry::before {
+    --tape: url("../img/decos/art-tapestry.png");
+}
+
+.masonry-item.tapestryalt::before {
+    --tape: url("../img/decos/art-tapestry1.png");
+}
+
+.masonry-item.honeycomb::before {
+    --tape: url("../img/decos/pattern-honeycomb.png");
+}
+
+.masonry-item.honeycombalt::before {
+    --tape: url("../img/decos/pattern-honeycomb2.png");
+}
+
+.masonry-item.scallop::before {
+    --tape: url("../img/decos/pattern-scallop.png");
+}
+
+.masonry-item.typewriter::before {
+    --tape: url("../img/decos/pattern-typewriter.png");
+}
+
+.masonry-item.wavy::before {
+    --tape: url("../img/decos/pattern-wavy.png");
+}
+
+.masonry-item.aquarius::before {
+    --tape: url("../img/decos/stars-con-aquarius.png");
+}
+
+.masonry-item.pisces::before {
+    --tape: url("../img/decos/stars-con-pisces.png");
+}
+
+.masonry-item.milkyway::before {
+    --tape: url("../img/decos/stars-milkyway.png");
+    margin-top: -27px;
+    left: 50%;
+}
+
+.masonry-item.moon::before {
+    --tape: url("../img/decos/stars-moon.png");
+}
+
+/* -------------------------------------------------------- */
+/* FILTERING */
+/* -------------------------------------------------------- */
+#tag-filters {
+    margin-top: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.btn {
+    background: var(--primary-accent);
+    border: none;
+    color: var(--font-on-accent);
+    border-radius: var(--border-radius);
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-block: 0.3em;
+    padding: 0.2em 0.8em;
+    transition: 0.3s ease-out;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+    background: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+    background: var(--secondary-accent);
+    color: var(--font-on-accent);
+    text-decoration: underline;
+}
+
+/* -------------------------------------------------------- */
+/* ACCESSIBILITY */
+/* -------------------------------------------------------- */
+
+/* please do not remove this. */
+
+#skip-to-content-link {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    line-height: 1;
+    font-size: 1.25rem;
+    background-color: var(--content-background-color);
+    color: var(--text-colour);
+    transform: translateY(-2rem);
+    transition: transform 0.1s ease-in;
+    z-index: 99999999999;
+}
+
+#skip-to-content-link:focus,
+#skip-to-content-link:focus-within {
+    transform: translateY(0);
+}
+
+/* -------------------------------------------------------- */
+/* MOBILE RESPONSIVENESS */
+/* -------------------------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+    .container {
+        grid-template-areas:
+            "side"
+            "content";
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    .container div.side {
+        position: unset;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .masonry-item {
+        width: 100%;
+    }
+
+    #main-menu li {
+        display: inline-block;
+        width: fit-content;
+    }
+
+    #main-menu li a {
+        width: fit-content;
+    }
+
+    [griddery-col] {
+        display: block;
+        margin-top: 20px;
+    }
+}

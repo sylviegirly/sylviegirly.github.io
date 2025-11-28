@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    -->
+    <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
+
+        <!-- Site Title -->
+        <title>Title</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="Description." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
+
+        <!-- CSS: -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
+
+        <!-- JavaScript: -->
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
+
+        <!-- Page Only Styling: -->
+        <style>
+            .curiocabinet {
+                display: block;
+                width: 632px;
+                max-width: 100vw;
+                height: auto;
+                border: 34px solid transparent;
+                border-image: url("../img/decos/curio.png") 34;
+                border-image-outset: 0;
+                image-rendering: pixelated;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .shelves {
+                line-height: 123px;
+                background: url("../img/decos/shelf.png") repeat-y;
+                text-align: center;
+                width: 100%;
+                background-size: 564px 123px;
+            }
+
+            .shelves a:has(> img) {
+                display: unset;
+            }
+
+            .shelvesdeco {
+                position: absolute;
+                width: 632px;
+                max-width: 100vw;
+                height: auto;
+                z-index: 2;
+                top: -5px;
+                pointer-events: none;
+            }
+
+            .shelves img {
+                vertical-align: bottom !important;
+                display: inline-block;
+                margin: 7px 4px;
+                filter: drop-shadow(2px 2px 2px #34180e);
+            }
+
+            .lift-hover a img {
+                transition: 0.3s ease-in-out;
+                position: relative;
+                top: 0;
+            }
+
+            .lift-hover a img:hover {
+                top: -5px;
+            }
+
+            @media screen and (max-width: 800px) {
+                .curiocabinet {
+                    margin-left: -20px;
+                }
+
+                .shelvesdeco {
+                    width: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
+            <main id="content">
+                <article>
+                    <section>
+                        <h1>Toybox and Adopts</h1>
+                        <p>
+                            Pixel collection inspired from
+                            <a href="https://lazer-bunny.neocities.org/Toybox">lazer-bunny</a> using
+                            <a href="https://hillhouse.neocities.org/cliques">hillhouse's</a> free curio layout! I
+                            edited the shelf from there to fit the blog colours + err ... will eventually make hanging
+                            vines that look nicer.
+                        </p>
+                        <p>
+                            There's no real theme to my favourites, it's just pixels I like or I've adopted!! All pixels
+                            link back to their creators or their pages.
+                        </p>
+                        <div class="curiocabinet">
+                            <div class="shelvesdeco">
+                                <img src="../img/decos/tempVines.png" aria-hidden="true" alt="" />
+                            </div>
+                            <div class="shelves lift-hover">
+                                <a href="https://www.deviantart.com/silkanide/art/animation-is-my-passion-840631760"
+                                    ><img
+                                        src="../img/toybox/baby_chick.gif"
+                                        loading="lazy"
+                                        alt="yellow baby chick"
+                                        class="freeze"
+                                /></a>
+                                <a href="https://www.deviantart.com/raridecor/art/F2U-Green-Teabag-820646668"
+                                    ><img src="../img/toybox/green_tea.png" loading="lazy" alt="green tea bag"
+                                /></a>
+                                <a href="https://joroki.neocities.org/adoptables"
+                                    ><img
+                                        src="../img/toybox/noodle-kitsuneramen.png"
+                                        loading="lazy"
+                                        alt="noodle ramen container"
+                                /></a>
+                                <a href="https://www.lejlart.com/apple.html"
+                                    ><img
+                                        src="../img/toybox/macaroon.png"
+                                        loading="lazy"
+                                        alt="teal macaroon with whipped cream topping"
+                                /></a>
+                                <a href="https://mudflower.earth"
+                                    ><img
+                                        src="../img/toybox/macaron-reindeer.gif"
+                                        loading="lazy"
+                                        alt="a macaroon themed after a reindeer"
+                                /></a>
+                                <a href="https://www.deviantart.com/silkanide/art/Premium-Pearl-Milk-Tea-806405575"
+                                    ><img src="../img/toybox/boba_tea.png" loading="lazy" alt="pastel bubble tea"
+                                /></a>
+                                <a href="https://splattacks.neocities.org"
+                                    ><img
+                                        src="../img/toybox/white_puffle.gif"
+                                        loading="lazy"
+                                        alt="white puffle from club penguin"
+                                        class="freeze"
+                                /></a>
+                                <a href="https://blanketfort.neocities.org/adoptables"
+                                    ><img src="../img/toybox/pups.gif" loading="lazy" alt="a tiny dog" class="freeze"
+                                /></a>
+                                <a href="https://discourse.32bit.cafe/t/halloween-2025/3809"
+                                    ><img
+                                        src="../img/decos/halloween2025.png"
+                                        loading="lazy"
+                                        alt="A candy corn with a smiling face, behind it is the words '32-bit 2025'"
+                                        data-tippy-content="... not really an adoptable, but a badge from partaking in 32-bit Cafe's halloween event"
+                                /></a>
+                                <a href="https://fan.lysandre.me/starters"
+                                    ><img
+                                        src="../img/toybox/turtwig.gif"
+                                        data-tippy-content="My First Partner! ♥ Turtwig"
+                                /></a>
+                                <a href="https://www.deviantart.com/kaatlove/art/deer-skull-F2U-726851899"
+                                    ><img src="../img/toybox/deer_skull.png" loading="lazy" alt="pink deer skull"
+                                /></a>
+                                <a href="https://www.deviantart.com/kouenli/art/Maki-rolls-782568282"
+                                    ><img src="../img/toybox/maki_rolls.png" loading="lazy" alt="maki sushi rolls"
+                                /></a>
+                                <a href="https://www.deviantart.com/bukowskl/art/F2U-packaged-meat-797327314"
+                                    ><img src="../img/toybox/meat.png" loading="lazy" alt="packaged meat"
+                                /></a>
+                                <a href="http://pokyaron.fc2web.com/sozai.htm"
+                                    ><img src="../img/toybox/burger.gif" loading="lazy" alt="hamburger"
+                                /></a>
+                                <a href="https://www.deviantart.com/early2000s-witch/art/F2U-Bongo-Cat-gif-777527448"
+                                    ><img
+                                        src="../img/toybox/bongo-cat.gif"
+                                        loading="lazy"
+                                        alt="bongo cat"
+                                        class="freeze"
+                                /></a>
+                                <a href="https://yogomagpie.neocities.org/souvenirs"
+                                    ><img src="../img/toybox/magpiesprite.png" loading="lazy" alt="a magpie bird"
+                                /></a>
+                                <a href="https://www.deviantart.com/batbeasts/art/Com-Cotton-Icon-260011574"
+                                    ><img
+                                        src="../img/toybox/cotton.gif"
+                                        loading="lazy"
+                                        alt="a pastel creature"
+                                        class="freeze"
+                                        data-tippy-content="This is actually a custom avatar commission for me of one of my OCs!"
+                                /></a>
+                                <a href="https://www.deviantart.com/ceavit/art/Cockatiel-icon-369205506"
+                                    ><img
+                                        src="../img/toybox/cockatiel.gif"
+                                        loading="lazy"
+                                        alt="cute cockatiel"
+                                        class="freeze"
+                                /></a>
+                                <a href="https://www.deviantart.com/konekochan101/art/F2U-game-remote-pink-696886052"
+                                    ><img src="../img/toybox/gameremote.png" loading="lazy" alt="pink game controller"
+                                /></a>
+                                <a href="https://www.deviantart.com/king-lulu-deer/art/Echeveria-Green-Prince-750461911"
+                                    ><img src="../img/toybox/echeveria.gif" loading="lazy" alt="echeveria plant"
+                                /></a>
+                                <a href="https://www.deviantart.com/konekochan101/art/F2U-Koi-decorative-icon-696207715"
+                                    ><img src="../img/toybox/koi.png" loading="lazy" alt="koi fish"
+                                /></a>
+                                <a href="https://www.deviantart.com/silkanide/art/Bud-771510771"
+                                    ><img src="../img/toybox/froggie.png" loading="lazy" alt="cute green frog"
+                                /></a>
+                                <a href="https://www.deviantart.com/king-lulu-deer/art/Nintendo-Switch-746694784"
+                                    ><img
+                                        src="../img/toybox/nintendo.gif"
+                                        loading="lazy"
+                                        alt="pastel nintendo switch"
+                                        class="freeze"
+                                /></a>
+                                <a href="https://www.deviantart.com/raridecor/art/F2U-Terrarium-Avatar-761033366"
+                                    ><img src="../img/toybox/terrarium.png" loading="lazy" alt="pot with plants"
+                                /></a>
+                                <a href="https://www.deviantart.com/raridecor/art/F2U-Terrarium-Bowl-Avatar-761481281"
+                                    ><img
+                                        src="../img/toybox/terrarium_2.png"
+                                        loading="lazy"
+                                        alt="terrarium bowl with plants"
+                                /></a>
+                                <a href="https://www.deviantart.com/pjuk/art/Free-Avatar-Lotus-322518405"
+                                    ><img
+                                        src="../img/toybox/lotus.gif"
+                                        loading="lazy"
+                                        alt="lotus flower in a circular frame"
+                                        class="freeze"
+                                /></a>
+                                <a href="https://cinni.net/"
+                                    ><img
+                                        src="../img/toybox/tama-v3-cb.png"
+                                        loading="lazy"
+                                        alt="pink and blue tamagotchi"
+                                /></a>
+                                <a href="https://www.deviantart.com/adorelee/art/Eyes-F2U-Icon-719412072"
+                                    ><img
+                                        src="../img/toybox/eyes_1.png"
+                                        loading="lazy"
+                                        alt="a cluster of multiple eyes"
+                                /></a>
+                                <a href="https://www.deviantart.com/yourvoiceismine333/art/Deer-Badge-1221792390"
+                                    ><img src="../img/toybox/deer.gif" loading="lazy" alt="a deer"
+                                /></a>
+                                <a href="https://linwood.neocities.org/adopts"
+                                    ><img
+                                        src="../img/toybox/spring_linpossum.png"
+                                        loading="lazy"
+                                        alt="a cute opposum like creature that's green"
+                                        data-tippy-content="the spring event egg hunt was fun :)"
+                                /></a>
+                                <a href="https://www.deviantart.com/silkanide/art/babby-800656777"
+                                    ><img src="../img/toybox/wooloo.png" loading="lazy" alt="wooloo from pokemon"
+                                /></a>
+                                <a href="http://3rdoffice.fc2web.com/dot3/gallery.html"
+                                    ><img src="../img/toybox/madoka.gif" loading="lazy" alt="madoka kaname"
+                                /></a>
+                                <a href="https://www.deviantart.com/king-lulu-deer/art/Madoka-s-Soul-Gem-727187251"
+                                    ><img src="../img/toybox/madoka_gem.gif" loading="lazy" alt="madoka's soul gem"
+                                /></a>
+                                <a href="https://www.deviantart.com/king-lulu-deer/art/Homura-s-Soul-Gem-727187791"
+                                    ><img src="../img/toybox/homura_gem.gif" loading="lazy" alt="homura's soul gem"
+                                /></a>
+                                <a href="http://3rdoffice.fc2web.com/dot3/gallery.html"
+                                    ><img src="../img/toybox/homura.gif" loading="lazy" alt="homura akemi"
+                                /></a>
+                                <a
+                                    href="https://www.deviantart.com/king-lulu-deer/art/Basil-Meanings-Love-Good-Wishes-735316195"
+                                    ><img src="../img/toybox/basil.gif" loading="lazy" alt="basil plant"
+                                /></a>
+                                <a href="https://www.deviantart.com/king-lulu-deer/art/Space-Milk-673230040"
+                                    ><img
+                                        src="../img/toybox/space-milk.gif"
+                                        loading="lazy"
+                                        alt="space coloured milk carton"
+                                        class="freeze"
+                                /></a>
+                                <a href="https://mudflower.earth"
+                                    ><img
+                                        src="../img/toybox/birthday-2025_aid.gif"
+                                        loading="lazy"
+                                        alt="a pink cake with the words aid on top"
+                                        data-tippy-content="Thank you for the birthday gift!!!!!!!!!!!"
+                                /></a>
+                                <a href="http://pokyaron.fc2web.com/sozai.htm"
+                                    ><img src="../img/toybox/elric.gif" loading="lazy" alt="edward elric"
+                                /></a>
+                                <a href="http://pokyaron.fc2web.com/sozai.htm"
+                                    ><img src="../img/toybox/alphonse.gif" loading="lazy" alt="alphonse elric"
+                                /></a>
+                                <a
+                                    href="https://www.deviantart.com/king-lulu-deer/art/Chives-Meaning-Usefulness-735347341"
+                                    ><img src="../img/toybox/chives.gif" loading="lazy" alt="chives plant"
+                                /></a>
+                                <a href="https://www.deviantart.com/oxpixelpixelpixelxo/art/Cockatiel-748757010"
+                                    ><img
+                                        src="../img/toybox/cockatiel-2.png"
+                                        loading="lazy"
+                                        alt="large and round cockatiel"
+                                /></a>
+                                <a href="https://www.deviantart.com/oxpixelpixelpixelxo/art/Deer-748861715"
+                                    ><img src="../img/toybox/deer.png" loading="lazy" alt="large and round deer"
+                                /></a>
+                                <a href="https://www.deviantart.com/adorelee/art/F2U-EYECU-672916039"
+                                    ><img
+                                        src="../img/toybox/eyes.gif"
+                                        loading="lazy"
+                                        alt="a cluster of multiple dark eyes"
+                                        class="freeze"
+                                /></a>
+                                <a
+                                    href="https://www.deviantart.com/king-lulu-deer/art/Mint-Meanings-Wisdom-Virtue-735595906"
+                                    ><img src="../img/toybox/mint.gif" loading="lazy" alt="mint plant"
+                                /></a>
+                                <a
+                                    href="https://www.deviantart.com/king-lulu-deer/art/Lulu-Emote-Throwing-Glitter-788005325"
+                                    ><img
+                                        src="../img/toybox/deer_glitter.gif"
+                                        loading="lazy"
+                                        alt="pixel deer throwing glitter"
+                                        class="freeze"
+                                /></a>
+                                <a href="https://www.pokemon-adoption.de">
+                                    <img
+                                        src="../img/toybox/giratina-ori.gif"
+                                        style="width: 80px; height: 80px"
+                                        alt="Giratina from pokemon"
+                                        data-tippy-content="Adopt one yourself! @Pok&eacute;mon Orphanage"
+                                        class="freeze"
+                                /></a>
+                                <a href="https://www.deviantart.com/king-lulu-deer/art/Computer-672488210"
+                                    ><img
+                                        src="../img/toybox/pink_comp.gif"
+                                        loading="lazy"
+                                        class="freeze"
+                                        alt="pink computer with text that says log off and get a life, with yes or no options"
+                                /></a>
+                                <a href="http://pokyaron.fc2web.com/sozai.htm"
+                                    ><img src="../img/toybox/dragoncorn.gif" loading="lazy" alt="white dragon unicorn"
+                                /></a>
+                                <a href="https://www.deviantart.com/cinolth/art/F2U-Soda-Can-Fish-Bowl-800870046"
+                                    ><img
+                                        src="../img/toybox/fishbowl_can.png"
+                                        loading="lazy"
+                                        alt="fishbowl in the shape of a soda can"
+                                /></a>
+                                <a href="https://www.deviantart.com/king-lulu-deer/art/Nintendo-DS-673341499"
+                                    ><img
+                                        src="../img/toybox/peachtendo.gif"
+                                        loading="lazy"
+                                        alt="nintendo ds with pastel colours and a peach image"
+                                        class="freeze"
+                                /></a>
+                                <a href="https://www.deviantart.com/ampraeh/art/F2U-Art-stuff-722043354"
+                                    ><img
+                                        src="../img/toybox/notebook.gif"
+                                        loading="lazy"
+                                        class="freeze"
+                                        alt="black and white notebook with pencils and a bunny eraser"
+                                /></a>
+                                <a
+                                    href="https://www.deviantart.com/king-lulu-deer/art/PASTEL-Gardening-Supplies-741019540"
+                                    ><img
+                                        src="../img/toybox/gardening.gif"
+                                        loading="lazy"
+                                        alt="gardening equipment with pink rubber boots"
+                                /></a>
+                                <a href="https://www.deviantart.com/liticaharmony/art/F2U-Aesthetic-Pond-674563189"
+                                    ><img src="../img/toybox/pond.png" loading="lazy" alt="pond with flora around it"
+                                /></a>
+                                <a href="https://www.deviantart.com/fennecfoxaim/art/Chinese-Dragon-601755359"
+                                    ><img src="../img/toybox/dragon.png" loading="lazy" alt="golden chinese dragon"
+                                /></a>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </main>
+        </div>
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
+        <general-footer></general-footer>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script src="/js/tippy-deco.js"></script>
+
+        <!-- PAGE ONLY SCRIPTS -->
+    </body>
+</html>

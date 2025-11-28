@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    -->
+    <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
+
+        <!-- Site Title -->
+        <title>recipes</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="A page of various recipes I've tried out." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
+
+        <!-- CSS: -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
+
+        <!-- JavaScript: -->
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
+
+        <!-- Page Only Javascript: -->
+
+        <!-- Page Only Styling: -->
+        <style>
+            /* Gallery Alt */
+            /* Wrapper */
+            .image-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            /* Items */
+            .image-gallery div {
+                margin: 5px;
+                box-sizing: border-box;
+                width: calc(25% - 10px);
+                border: 5px solid var(--primary-accent);
+                border-radius: var(--border-radius);
+                overflow: hidden;
+                position: relative;
+                transition: transform 0.5s ease;
+            }
+
+            /* Images */
+            .image-gallery div img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+                aspect-ratio: 1/1;
+            }
+
+            /* Captions */
+            .image-gallery div span {
+                position: absolute;
+                bottom: 15px;
+                left: 0;
+                text-align: center;
+                align-content: center;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.75);
+                color: white;
+                padding: 5px 10px;
+                font-size: 1em;
+                height: 50px;
+                opacity: 0;
+                line-height: 1.1em;
+                transform: translateY(100px);
+                transition:
+                    transform 0.4s ease,
+                    opacity 0.5s ease;
+            }
+
+            /* Images on Hover */
+            .image-gallery div:hover img {
+                transform: scale(1.15) rotate(10deg);
+            }
+
+            /* Captions on Hover */
+            .image-gallery div:hover span,
+            .image-gallery div:focus span {
+                opacity: 1;
+                transform: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
+            <main id="content">
+                <article>
+                    <section>
+                        <h1>Recipes</h1>
+                        <p>
+                            These are a collection of the recipes I like using; I do host most of my recipes on my
+                            Notion, but I wanna share them too with people!! Most are from online/video recipes, I'm
+                            just collecting them here! All recipes I've made at least once.
+                        </p>
+                        <div class="image-gallery" aria-hidden="true">
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="airfry-pork-tenderloin.html">
+                                    <img
+                                        src="https://recipeteacher.com/wp-content/uploads/2019/12/best-damn-air-fryer-pork-tenderloin-2.jpg"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Air Fry Pork Tenderloin</span></a
+                                >
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="basa-filet.html">
+                                    <img
+                                        src="https://spcdn.shortpixel.ai/spio/ret_img,q_orig,to_webp,s_webp/ilonaspassion.com/wp-content/uploads/2019/02/Baked-Basa-Fish-Fillet-3.jpg"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Basa Filet</span></a
+                                >
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="spicy-basa-filet.html" class="disabled" tabindex="-1">
+                                    <img
+                                        src="https://www.whiskaffair.com/wp-content/uploads/2018/12/Spicy-Baked-Basa-2-1.jpg"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Basa with Spicy Tomato Sauce</span></a
+                                >
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="brownie-mug.html">
+                                    <img
+                                        src="https://celebratingsweets.com/wp-content/uploads/2018/07/Brownie-in-a-Mug-3.jpg"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Brownie in a Mug</span></a
+                                >
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="chow-mein-sauce.html" class="disabled" tabindex="-1">
+                                    <img
+                                        src="https://images.pexels.com/photos/18805709/pexels-photo-18805709.jpeg"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Chow Mein Sauce</span></a
+                                >
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="japanese-curry.html" class="disabled" tabindex="-1">
+                                    <img
+                                        src="https://www.justonecookbook.com/wp-content/uploads/2021/10/Japanese-Chicken-Curry-3769-II.jpg"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Japanese Curry</span></a
+                                >
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="matcha-cookies.html">
+                                    <img
+                                        src="https://foodwithfeeling.com/wp-content/uploads/2015/06/matcha-cookies-15-e1433430021499.jpg"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Matcha Cookies</span></a
+                                >
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="pad-see-ew.html">
+                                    <img
+                                        src="https://www.recipetineats.com/tachyon/2016/03/Pad-See-Ew_2.jpg?resize=1200%2C1680&zoom=0.54"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Pad See Ew</span></a
+                                >
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="portugese-rice.html" class="disabled" tabindex="-1">
+                                    <img
+                                        src="https://nishkitchen.com/wp-content/uploads/2018/09/Portuguese-rice-3B.jpg"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Portugese Rice</span></a
+                                >
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="fried-rice.html">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Take-out Fried Rice</span></a
+                                >
+                            </div>
+                            <!-- IMAGE -->
+                            <div>
+                                <a href="hot-and-sour.html" class="disabled" tabindex="-1">
+                                    <img
+                                        src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/10/24/09/picaRNwV2.jpg"
+                                        alt=""
+                                        loading="lazy"
+                                        aria-hidden="true" />
+                                    <span>Veggie Hot and Sour Soup</span></a
+                                >
+                            </div>
+                        </div>
+                        <div class="reader">
+                            <ul>
+                                <li><a href="airfry-pork-tenderloin.html" tabindex="-1">Air Fry Pork Tenderloin</a></li>
+                                <li><a href="basa-filet.html" tabindex="-1">Basa Filet</a></li>
+                                <li><s>Basa Filet with Spicy Tomato Sauce</s></li>
+                                <li><a href="brownie-mug.html" tabindex="-1">Brownie in a Mug</a></li>
+                                <li><s>Chow Mein Sauce</s></li>
+                                <li><s>Japanese Curry</s></li>
+                                <li><a href="matcha-cookies.html" tabindex="-1">Matcha Cookies</a></li>
+                                <li><a href="pad-see-ew.html" tabindex="-1">Pad See Ew</a></li>
+                                <li><s>Portugese Rice</s></li>
+                                <li><a href="fried-rice.html" tabindex="-1">Take-out Fried Rice</a></li>
+                                <li><s>Hot and Sour Soup</s></li>
+                            </ul>
+                        </div>
+                    </section>
+                </article>
+            </main>
+        </div>
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
+        <general-footer></general-footer>
+
+        <!-- PAGE ONLY SCRIPTS -->
+    </body>
+</html>

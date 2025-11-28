@@ -13,43 +13,41 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
         <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
-        <title>diary archive</title>
+        <title>Title</title>
 
         <!-- Author -->
         <meta name="author" content="Asuraid" />
 
         <!-- Site Description -->
-        <meta content="An archive of 2025's diary entries." name="description" />
+        <meta content="Description." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
 
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="../css/styles.css" />
-        <link rel="stylesheet" href="../css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
-        <script src="../js/header.js" defer></script>
-        <script src="../js/left-sidebar.js" defer></script>
-        <script src="../js/footer.js" defer></script>
-        <script src="../js/tab-title-suffix.js"></script>
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
 
-        <script src="../js/accessibility/disclosure-menu.iife.js"></script>
-        <!-- Disclosure Menu -->
-        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
+        <!-- Page Only Javascript: -->
 
+        <!-- Page Only Styling: -->
         <style>
             .calendar {
                 width: 100%;
@@ -107,8 +105,8 @@
                 color: var(--font);
                 padding: 5px;
                 box-shadow:
-                    -1px -1px var(--article-liner),
-                    inset -1px -1px 0 0 var(--article-liner);
+                    -1px -1px var(--body-outline),
+                    inset -1px -1px 0 0 var(--body-outline);
             }
 
             .day p {
@@ -136,350 +134,333 @@
             }
         </style>
     </head>
-    <body id="body">
+    <body>
         <!-- =============================================== -->
         <!-- Accessibility links. -->
         <!-- =============================================== -->
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
         <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
-        <div class="container-grid">
-            <!-- =============================================== -->
-            <!-- LEFT SIDEBAR CONTENT -->
-            <!-- =============================================== -->
-            <div class="intro">
-                <section>
-                    <div class="img-floatinganim">
-                        <img class="dendro" src="../img/dendro_symbol.png" aria-hidden="true" alt="" />
-                    </div>
-                    <img
-                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/61813959_Xr5LiIyVeH43aDy.png"
-                        class="full-width-image hide-mobile" />
-                    <div class="subtitle">Diary</div>
-                    <div>
-                        <p>
-                            A page to document one highlight of the day; I've been doing this in my
-                            <u>physical</u> journal, but I thought I'd do a simple version here for funsies.
-                        </p>
-                        <hr />
-                        <ul>
-                            <li><a href="index.html">Current Month</a></li>
-                            <li><a href="2025.html">2025 Archive</a></li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
 
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>2025 Diary Archive</h1>
-                    <hr />
-                    <h2>October</h2>
-                    <div class="calendar">
-                        <div class="calendar-head">
-                            <div class="dayname">Sun</div>
-                            <div class="dayname">Mon</div>
-                            <div class="dayname">Tues</div>
-                            <div class="dayname">Wed</div>
-                            <div class="dayname">Thurs</div>
-                            <div class="dayname">Fri</div>
-                            <div class="dayname">Sat</div>
-                        </div>
-                        <div class="row">
-                            <div class="day inactive"></div>
-                            <div class="day inactive"></div>
-                            <div class="day inactive"></div>
-                            <div class="day">
-                                <div class="day-number">1</div>
-                                <p>brain fog 💭</p>
+                    <section aria-labelledby="2025archive">
+                        <h1 id="2025archive">2025 Diary Archive</h1>
+                    </section>
+                    <section aria-labelledby="2025oct">
+                        <h2 id="2025oct">October</h2>
+                        <div class="calendar">
+                            <div class="calendar-head">
+                                <div class="dayname">Sun</div>
+                                <div class="dayname">Mon</div>
+                                <div class="dayname">Tues</div>
+                                <div class="dayname">Wed</div>
+                                <div class="dayname">Thurs</div>
+                                <div class="dayname">Fri</div>
+                                <div class="dayname">Sat</div>
                             </div>
-                            <div class="day">
-                                <div class="day-number">2</div>
-                                <p>mmm banana smoothie is so nice</p>
+                            <div class="row">
+                                <div class="day inactive"></div>
+                                <div class="day inactive"></div>
+                                <div class="day inactive"></div>
+                                <div class="day">
+                                    <div class="day-number">1</div>
+                                    <p>brain fog 💭</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">2</div>
+                                    <p>mmm banana smoothie is so nice</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">3</div>
+                                    <p>dad caught fish which we're going to cook another day. chili day today too :)</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">4</div>
+                                </div>
                             </div>
-                            <div class="day">
-                                <div class="day-number">3</div>
-                                <p>dad caught fish which we're going to cook another day. chili day today too :)</p>
+                            <div class="row">
+                                <div class="day">
+                                    <div class="day-number">5</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">6</div>
+                                    <p>it's sure a monday i guess</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">7</div>
+                                    <p>yaaay finished my very first custom carrd commission :)</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">8</div>
+                                    <p>are wednesdays just brain fog day or something wattahell ... my focus ...</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">9</div>
+                                    <p>mmm tuna mayo, haven't eaten in a long time</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">10</div>
+                                    <p>my mini rice cooker should be arriving today ... i wanna test it out</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">11</div>
+                                    <p>ougogugogu turkey 🍗</p>
+                                </div>
                             </div>
-                            <div class="day">
-                                <div class="day-number">4</div>
+                            <div class="row">
+                                <div class="day">
+                                    <div class="day-number">12</div>
+                                    <p>
+                                        sighs hello cookie run kingdom again, i did not miss you /silly. also had steak
+                                    </p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">13</div>
+                                    <p>RAAH finished base unlocks for castlevania DLC in vampire survivors</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">14</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">15</div>
+                                    <p>oberon rework for warframe ... idk how i feel about it yet</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">16</div>
+                                    <p>i need to sleep for 20 years after this call. bestie's bday 🎂</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">17</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">18</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="day">
-                                <div class="day-number">5</div>
+                            <div class="row">
+                                <div class="day">
+                                    <div class="day-number">19</div>
+                                    <p>RAAAH PHO SOUP FINALLY</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">20</div>
+                                    <p>met another romanian on pillowfort, i am rusty with typing in romanian...</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">21</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">22</div>
+                                    <p>graduation ceremony today!! excited since i didn't get to graduate in 2020</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">23</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">24</div>
+                                    <p>hate doing phonecalls for adult stuff</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">25</div>
+                                </div>
                             </div>
-                            <div class="day">
-                                <div class="day-number">6</div>
-                                <p>it's sure a monday i guess</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">7</div>
-                                <p>yaaay finished my very first custom carrd commission :)</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">8</div>
-                                <p>are wednesdays just brain fog day or something wattahell ... my focus ...</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">9</div>
-                                <p>mmm tuna mayo, haven't eaten in a long time</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">10</div>
-                                <p>my mini rice cooker should be arriving today ... i wanna test it out</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">11</div>
-                                <p>ougogugogu turkey 🍗</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="day">
-                                <div class="day-number">12</div>
-                                <p>sighs hello cookie run kingdom again, i did not miss you /silly. also had steak</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">13</div>
-                                <p>RAAH finished base unlocks for castlevania DLC in vampire survivors</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">14</div>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">15</div>
-                                <p>oberon rework for warframe ... idk how i feel about it yet</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">16</div>
-                                <p>i need to sleep for 20 years after this call. bestie's bday 🎂</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">17</div>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">18</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="day">
-                                <div class="day-number">19</div>
-                                <p>RAAAH PHO SOUP FINALLY</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">20</div>
-                                <p>met another romanian on pillowfort, i am rusty with typing in romanian...</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">21</div>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">22</div>
-                                <p>graduation ceremony today!! excited since i didn't get to graduate in 2020</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">23</div>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">24</div>
-                                <p>hate doing phonecalls for adult stuff</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">25</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="day">
-                                <div class="day-number">26</div>
-                                <p>fixation on my devart page is waning ... COME BACK ...</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">27</div>
-                                <p>i need to journal again 💔</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">28</div>
-                                <p>look at me doing adult things (income logging and invoices)</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">29</div>
-                                <p>dinner hangout with classmate 🍔</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">30</div>
-                                <p>3am coding session to make a template was unexpected</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">31</div>
-                                <p>
-                                    <a href="https://www.imdb.com/title/tt36590288/">depeche mode: m</a> movie today :D
-                                </p>
-                            </div>
-                            <div class="day inactive"></div>
-                        </div>
-                    </div>
-                    <hr />
-                    <h2>September</h2>
-                    <div class="calendar">
-                        <div class="calendar-head">
-                            <div class="dayname">Sun</div>
-                            <div class="dayname">Mon</div>
-                            <div class="dayname">Tues</div>
-                            <div class="dayname">Wed</div>
-                            <div class="dayname">Thurs</div>
-                            <div class="dayname">Fri</div>
-                            <div class="dayname">Sat</div>
-                        </div>
-                        <div class="row">
-                            <div class="day inactive"></div>
-                            <div class="day">
-                                <div class="day-number">1</div>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">2</div>
-                                <p>digital circus watching :)</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">3</div>
-                                <p>sitting in a forest is soothing to me</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">4</div>
-                                <p>finished digital circus fully</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">5</div>
-                                <p>closed commissions fully today, excited to work on them</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">6</div>
+                            <div class="row">
+                                <div class="day">
+                                    <div class="day-number">26</div>
+                                    <p>fixation on my devart page is waning ... COME BACK ...</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">27</div>
+                                    <p>i need to journal again 💔</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">28</div>
+                                    <p>look at me doing adult things (income logging and invoices)</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">29</div>
+                                    <p>dinner hangout with classmate 🍔</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">30</div>
+                                    <p>3am coding session to make a template was unexpected</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">31</div>
+                                    <p>
+                                        <a href="https://www.imdb.com/title/tt36590288/">depeche mode: m</a> movie today
+                                        :D
+                                    </p>
+                                </div>
+                                <div class="day inactive"></div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="day">
-                                <div class="day-number">7</div>
+                    </section>
+                    <section aria-labelledby="2025sept">
+                        <h2 id="2025sept">September</h2>
+                        <div class="calendar">
+                            <div class="calendar-head">
+                                <div class="dayname">Sun</div>
+                                <div class="dayname">Mon</div>
+                                <div class="dayname">Tues</div>
+                                <div class="dayname">Wed</div>
+                                <div class="dayname">Thurs</div>
+                                <div class="dayname">Fri</div>
+                                <div class="dayname">Sat</div>
                             </div>
-                            <div class="day">
-                                <div class="day-number">8</div>
+                            <div class="row">
+                                <div class="day inactive"></div>
+                                <div class="day">
+                                    <div class="day-number">1</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">2</div>
+                                    <p>digital circus watching :)</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">3</div>
+                                    <p>sitting in a forest is soothing to me</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">4</div>
+                                    <p>finished digital circus fully</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">5</div>
+                                    <p>closed commissions fully today, excited to work on them</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">6</div>
+                                </div>
                             </div>
-                            <div class="day">
-                                <div class="day-number">9</div>
-                                <p>grocery shopping, giant fat black squirred in backyard ... nut hunting</p>
+                            <div class="row">
+                                <div class="day">
+                                    <div class="day-number">7</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">8</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">9</div>
+                                    <p>grocery shopping, giant fat black squirred in backyard ... nut hunting</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">10</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">11</div>
+                                    <p>spider web catches sunlight so very easily when it flutters</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">12</div>
+                                    <p>found a book in local library; a simpsons episode tv guide</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">13</div>
+                                </div>
                             </div>
-                            <div class="day">
-                                <div class="day-number">10</div>
+                            <div class="row">
+                                <div class="day">
+                                    <div class="day-number">14</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">15</div>
+                                    <p>got lauma c1 from pulling!! yippee!!!</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">16</div>
+                                    <p>grocery day, buying stuff for dad's bday cake</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">17</div>
+                                    <p>dad's bday 🎂</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">18</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">19</div>
+                                    <p>created a sona design and wrote a blog post about it</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">20</div>
+                                    <p>family lunch at an italian place, pasta was <i>really</i> good</p>
+                                </div>
                             </div>
-                            <div class="day">
-                                <div class="day-number">11</div>
-                                <p>spider web catches sunlight so very easily when it flutters</p>
+                            <div class="row">
+                                <div class="day">
+                                    <div class="day-number">21</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">22</div>
+                                    <p>trying out bongo cat app, it's really cute 🐈</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">23</div>
+                                    <p>😒</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">24</div>
+                                    <p>rain caught me on my walk today, finished my 2017 art gallery year</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">25</div>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">26</div>
+                                    <p>😢</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">27</div>
+                                    <p>done with watching the summer hikaru died and PASWG 🥲</p>
+                                </div>
                             </div>
-                            <div class="day">
-                                <div class="day-number">12</div>
-                                <p>found a book in local library; a simpsons episode tv guide</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">13</div>
+                            <div class="row">
+                                <div class="day">
+                                    <div class="day-number">28</div>
+                                    <p>hades II 4 hour play session ... help</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">29</div>
+                                    <p>aughh massive anxiety about my contract work meeting today</p>
+                                </div>
+                                <div class="day">
+                                    <div class="day-number">30</div>
+                                    <p>found a marie kondo book in my local mini library + a wooden bookmark in it</p>
+                                </div>
+                                <div class="day inactive"></div>
+                                <div class="day inactive"></div>
+                                <div class="day inactive"></div>
+                                <div class="day inactive"></div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="day">
-                                <div class="day-number">14</div>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">15</div>
-                                <p>got lauma c1 from pulling!! yippee!!!</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">16</div>
-                                <p>grocery day, buying stuff for dad's bday cake</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">17</div>
-                                <p>dad's bday 🎂</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">18</div>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">19</div>
-                                <p>created a sona design and wrote a blog post about it</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">20</div>
-                                <p>family lunch at an italian place, pasta was <i>really</i> good</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="day">
-                                <div class="day-number">21</div>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">22</div>
-                                <p>trying out bongo cat app, it's really cute 🐈</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">23</div>
-                                <p>😒</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">24</div>
-                                <p>rain caught me on my walk today, finished my 2017 art gallery year</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">25</div>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">26</div>
-                                <p>😢</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">27</div>
-                                <p>done with watching the summer hikaru died and PASWG 🥲</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="day">
-                                <div class="day-number">28</div>
-                                <p>hades II 4 hour play session ... help</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">29</div>
-                                <p>aughh massive anxiety about my contract work meeting today</p>
-                            </div>
-                            <div class="day">
-                                <div class="day-number">30</div>
-                                <p>found a marie kondo book in my local mini library + a wooden bookmark in it</p>
-                            </div>
-                            <div class="day inactive"></div>
-                            <div class="day inactive"></div>
-                            <div class="day inactive"></div>
-                            <div class="day inactive"></div>
-                        </div>
-                    </div>
+                    </section>
                 </article>
             </main>
         </div>
-
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
 
-        <!-- Scroll to Top -->
-        <script src="../js/scroll-to-top.js"></script>
+        <!-- PAGE ONLY SCRIPTS -->
     </body>
 </html>

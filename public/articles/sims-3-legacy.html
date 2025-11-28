@@ -13,54 +13,41 @@
     Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
     peep at my (probably disorganized) coding!! Just don't 1:1 copy.
 
-    --->
+    -->
     <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Send to not found page is there's no javascript -->
-        <noscript> <meta http-equiv="Refresh" content="0; URL=not_found.html" /> </noscript>
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Title -->
-        <title>sims 3 legacy challenge</title>
+        <title>Title</title>
 
         <!-- Author -->
         <meta name="author" content="Asuraid" />
 
         <!-- Site Description -->
-        <meta content="My Sims 3 legacy challenge." name="description" />
+        <meta content="Description." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
 
         <!-- CSS: -->
-        <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css"
-        if this HTML file is in 2 subfolders, etc. -->
-        <link rel="stylesheet" href="../css/styles.css" />
-        <link rel="stylesheet" href="../css/normalize.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
 
         <!-- JavaScript: -->
-        <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js"
-        if this HTML file is in 2 subfolders, etc. -->
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
 
-        <script src="../js/header.js" defer></script>
-        <script src="../js/left-sidebar.js" defer></script>
-        <script src="../js/footer.js" defer></script>
-        <script src="../js/tab-title-suffix.js"></script>
+        <!-- Page Only Javascript: -->
 
-        <!--✻✻✻✻✻✻  griddery by @glenthemes + lightbox2  ✻✻✻✻✻✻-->
-        <script src="https://griddery.github.io/grid.js"></script>
-        <link href="../css/griddery.css" rel="stylesheet" />
-        <script src="../js/accessibility/accessible-menu.js" type="module"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                gridderyV3({
-                    items: ".minecraft",
-                    columns: 3
-                });
-            });
-        </script>
-        <script src="../js/lightbox-plus-jquery.js"></script>
-        <link href="../css/lightbox.css" rel="stylesheet" />
-
+        <!-- Page Only Styling: -->
         <style>
             /* Style the tab */
             .tab {
@@ -73,21 +60,8 @@
 
             /* Style the buttons that are used to open the tab content */
             .tab button {
-                color: var(--font-on-accent);
-                background-color: var(--primary-accent);
-                font-family: "dosis";
-                font-size: inherit;
-                border: none;
-                outline: none;
                 cursor: pointer;
-                border-radius: var(--border-radius);
-                transition: 0.3s;
                 width: calc(20% - 5px) !important;
-            }
-
-            /* Change background color of buttons on hover */
-            .tab button:hover {
-                background-color: var(--secondary-accent);
             }
 
             .tab button:focus {
@@ -103,101 +77,113 @@
             .tabcontent {
                 animation: fadeEffect 1s; /* Fading effect takes 1 second */
             }
+
+            .generation {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .generation img {
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                max-width: 49%;
+            }
         </style>
     </head>
-    <body id="body">
-        <a href="#content" id="skip-to-content-link">Skip to content</a>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
 
         <!-- =============================================== -->
-        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- Header will be loaded per JavaScript! Edit layout.js to change. -->
         <!-- =============================================== -->
         <nav-header></nav-header>
 
-        <button onclick="topFunction()" id="backscroll" title="Go to top">Top</button>
-
-        <div class="container-grid">
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
             <!-- =============================================== -->
-            <!-- LEFT SIDEBAR CONTENT -->
+            <!-- Sidebar will be loaded per JavaScript! Edit layout.js to change. -->
             <!-- =============================================== -->
-            <div class="intro">
-                <section>
-                    <div class="img-floatinganim">
-                        <img class="dendro" src="../img/dendro_symbol.png" aria-hidden="true" alt="" />
-                    </div>
-                    <img
-                        src="https://f2.toyhou.se/file/f2-toyhou-se/images/61813959_Xr5LiIyVeH43aDy.png"
-                        class="full-width-image hide-mobile" />
-                    <div class="subtitle">Sims 3 Legacy</div>
-                    <div>
-                        <p>Sims 3 Legacy challenge! ... whenever I get around to it, anyway.</p>
-                    </div>
-                </section>
-            </div>
+            <left-sidebar></left-sidebar>
 
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
             <main id="content">
                 <article>
-                    <h1>Sims 3 Legacy Challenge</h1>
-                    <div class="columns">
-                        <div style="width: 100px; margin-right: 20px" class="hide-mobile">
-                            <a href="https://www.deviantart.com/adorelee/art/F2U-cute-sprouts-673081279"
-                                ><img
-                                    src="../img/decos/sprouts.png"
-                                    style="
-                                        margin-left: 20px;
-                                        margin-right: 20px;
-                                        float: left;
-                                        min-width: 90px;
-                                        height: auto;
-                                    "
-                                    aria-hidden="true"
-                                    alt=""
-                            /></a>
+                    <section>
+                        <h1>Sims 3 Legacy Challenge</h1>
+                        <div class="columns">
+                            <div style="width: 100px; margin-right: 20px" class="hide-mobile">
+                                <a href="https://www.deviantart.com/adorelee/art/F2U-cute-sprouts-673081279"
+                                    ><img
+                                        src="../img/decos/sprouts.png"
+                                        style="
+                                            margin-left: 20px;
+                                            margin-right: 20px;
+                                            float: left;
+                                            min-width: 90px;
+                                            height: auto;
+                                        "
+                                        aria-hidden="true"
+                                        alt=""
+                                /></a>
+                            </div>
+                            <div style="flex: auto; text-align: left">
+                                <p>
+                                    I really wanted to return back to Sims 3 after my laptop nuke also nuked
+                                    <u>all</u> of my Sims 4 mods. I grew up on both Sims 3 and Sims 2, and after a poll
+                                    on my tumblr, people chose for me to do 3! SO ... here I am for 10 generations of
+                                    chaos! I'm going pretty simple and vanilla based off
+                                    <a
+                                        href="https://simslegacychallenge.com/legacy-challenge-rules/sims-3-legacy-challenge-rules/"
+                                        >the original legacy challenges</a
+                                    >.
+                                </p>
+                            </div>
                         </div>
-                        <div style="flex: auto; text-align: left">
-                            <p>
-                                I really wanted to return back to Sims 3 after my laptop nuke also nuked <u>all</u> of
-                                my Sims 4 mods. I grew up on both Sims 3 and Sims 2, and after a poll on my tumblr,
-                                people chose for me to do 3! SO ... here I am for 10 generations of chaos! I'm going
-                                pretty simple and vanilla based off
-                                <a
-                                    href="https://simslegacychallenge.com/legacy-challenge-rules/sims-3-legacy-challenge-rules/"
-                                    >the original legacy challenges</a
-                                >.
-                            </p>
+                    </section>
+                    <section>
+                        <div class="tab">
+                            <!-- Tab links -->
+                            <button class="tablinks" onclick="openSimsTab(event, 'G1')" id="generationActive">
+                                Gen One
+                            </button>
+                            <button class="tablinks" onclick="openSimsTab(event, 'G2')">Gen Two</button>
+                            <button class="tablinks disabled">Gen Three</button>
+                            <button class="tablinks disabled">Gen Four</button>
+                            <button class="tablinks disabled">Gen Five</button>
+                            <button class="tablinks disabled">Gen Six</button>
+                            <button class="tablinks disabled">Gen Seven</button>
+                            <button class="tablinks disabled">Gen Eight</button>
+                            <button class="tablinks disabled">Gen Nine</button>
+                            <button class="tablinks disabled">Gen Ten</button>
                         </div>
-                    </div>
-                </article>
-                <article>
-                    <div class="tab">
-                        <!-- Tab links -->
-                        <button class="tablinks" onclick="openTab(event, 'G1')" id="defaultOpen">Gen One</button>
-                        <button class="tablinks" onclick="openTab(event, 'G2')">Gen Two</button>
-                        <button class="tablinks disabled">Gen Three</button>
-                        <button class="tablinks disabled">Gen Four</button>
-                        <button class="tablinks disabled">Gen Five</button>
-                        <button class="tablinks disabled">Gen Six</button>
-                        <button class="tablinks disabled">Gen Seven</button>
-                        <button class="tablinks disabled">Gen Eight</button>
-                        <button class="tablinks disabled">Gen Nine</button>
-                        <button class="tablinks disabled">Gen Ten</button>
-                    </div>
-                </article>
-                <article>
-                    <!-- GENERATION ONE -->
-                    <div class="tabcontent" id="G1">
-                        <h2>Generation One</h2>
-                        <div class="images">
+                    </section>
+                    <section class="simsGeneration" id="G1" aria-labelledby="genone">
+                        <!-- GENERATION ONE -->
+                        <h2 id="genone">Generation One</h2>
+                        <div class="generation image-deco">
                             <img src="../img/sims3/g1-dianna.png" />
                             <img src="../img/sims3/g1-clark.png" />
                         </div>
                         <hr />
-                        <aside>
+                        <blockquote>
                             In some nightmare scenario, she ended up failing her job interview (I have a mod for
                             changing how you get jobs), got so depressed over it, picked up being an acrobat, and was
                             basically so miserable that she kept crying while trying to mime for money. The game then
                             crashed when I hovered over the toilet to make her clean it, which she couldn't do due to
                             being too sad.
-                        </aside>
+                        </blockquote>
                         <ul>
                             <li>
                                 Completely randomized sim traits and appearance to begin with for the Fun of it; her
@@ -219,7 +205,7 @@
                                 minimal love life) while living off the gym showers and snacks from the fridge at home
                             </li>
                             <li style="list-style: none">
-                                <div class="center-img">
+                                <div class="center-item">
                                     <img src="../img/sims3/g1-1.png" />
                                 </div>
                             </li>
@@ -247,7 +233,7 @@
                                 toddler he was babysitting. No woohoo ...
                             </li>
                             <li style="list-style: none">
-                                <div class="center-img">
+                                <div class="center-item">
                                     <img src="../img/sims3/g1-2.png" />
                                 </div>
                             </li>
@@ -279,7 +265,7 @@
                                 Dianna. He ended up passing in his sleep, with Vanessa home and Dianna at work
                             </li>
                             <li style="list-style: none">
-                                <div class="center-img">
+                                <div class="center-item">
                                     <img src="../img/sims3/g1-5.png" />
                                 </div>
                             </li>
@@ -295,7 +281,7 @@
                                 just watching ...
                             </li>
                             <li style="list-style: none">
-                                <div class="center-img">
+                                <div class="center-item">
                                     <img src="../img/sims3/g1-6.png" />
                                 </div>
                             </li>
@@ -309,140 +295,106 @@
                                 into a full adult the next day, allowing her to properly continue on the legacy.
                             </li>
                         </ul>
-                        <div class="center-img">
+                        <div class="center-item">
                             <img src="../img/sims3/g1-7.png" />
                         </div>
-                    </div>
+                    </section>
+                    <section class="simsGeneration" id="G2" aria-labelledby="gentwo">
+                        <!-- GENERATION TWO -->
+                        <div>
+                            <h2 id="gentwo">Generation Two</h2>
 
-                    <!-- GENERATION TWO -->
-                    <div class="tabcontent" id="G2">
-                        <h2>Generation Two</h2>
-
-                        <div class="images">
-                            <img src="../img/sims3/g2-vanessa.png" />
-                            <img src="../img/sims3/g2-bruce.png" />
+                            <div class="generation image-deco">
+                                <img src="../img/sims3/g2-vanessa.png" />
+                                <img src="../img/sims3/g2-bruce.png" />
+                            </div>
+                            <hr />
+                            <ul>
+                                <li>
+                                    With generation one fully gone, it is now on Vanessa to continue on; thankfully her
+                                    best friend from school, Bruce Greenwood-Racket, was already open to moving in with
+                                    her very early on
+                                    <ul>
+                                        <li>
+                                            He's a simple guy who loves the outdoors, is a snob, is good, a light
+                                            sleeper, and a schmoozer. His lifetime dream is
+                                            <span class="tippy" data-tippy-content="Have $50,000 simoleons on hand."
+                                                >Swimming in Cash</span
+                                            >
+                                            which ... good luck ...
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Story-wise, coming from a family living with very little and living on parents
+                                    working for long hours, she decided to pursue a self-sustaining home through
+                                    gardening and fishing
+                                </li>
+                                <li>
+                                    Her aspiration is
+                                    <span
+                                        class="tippy"
+                                        data-tippy-content="Have 13 Perfect fish in fish bowls around the house"
+                                        >Presenting the Perfect Private Aquarium</span
+                                    >, which there's already a deep progress towards in having 7 perfect fish caught so
+                                    far!
+                                </li>
+                                <li>
+                                    This time I'm trying to get her painting skills up to be able to make a portrait of
+                                    the family members to get legacy points ... she's trying her best
+                                </li>
+                                <li style="list-style: none">
+                                    <div class="center-item">
+                                        <img src="../img/sims3/g2-3.png" />
+                                    </div>
+                                </li>
+                                <li>
+                                    Her boyfriend/best friend easily took to her proposal to both go steady and then to
+                                    marry, but I'm waiting for the spring/summer seasons for them to have a nice summer
+                                    wedding
+                                    <ul>
+                                        <li>
+                                            Unfortunately this proposal just happened as his mum died ... and when his
+                                            birthday came around to have him grow into an adult, another family member
+                                            died so he was in 4 days of mourning. Poor guy
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="list-style: none">
+                                    <div class="center-item">
+                                        <img src="../img/sims3/g2-1.png" />
+                                    </div>
+                                </li>
+                                <li>
+                                    ... dunno why this girl approached Vanessa in the winter in a swimming suit, and
+                                    offered her flowers to flirt. Girl we're just here to fish, and nothing else
+                                </li>
+                                <li style="list-style: none">
+                                    <div class="center-item">
+                                        <img src="../img/sims3/g2-2.png" />
+                                    </div>
+                                </li>
+                                <li>
+                                    Gardening is steady, she's at skill 5, fishing is at 9 and will be the first 10
+                                    that's hit in the legacy, and her painting is at 6 (with the hopes to get it to 7 to
+                                    make proper portraits; I know I can take pictures at 5 to turn into paintings, but
+                                    I've had zero luck in getting a nice shot)
+                                </li>
+                            </ul>
                         </div>
-                        <hr />
-                        <ul>
-                            <li>
-                                With generation one fully gone, it is now on Vanessa to continue on; thankfully her best
-                                friend from school, Bruce Greenwood-Racket, was already open to moving in with her very
-                                early on
-                                <ul>
-                                    <li>
-                                        He's a simple guy who loves the outdoors, is a snob, is good, a light sleeper,
-                                        and a schmoozer. His lifetime dream is
-                                        <span class="tippy" data-tippy-content="Have $50,000 simoleons on hand."
-                                            >Swimming in Cash</span
-                                        >
-                                        which ... good luck ...
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                Story-wise, coming from a family living with very little and living on parents working
-                                for long hours, she decided to pursue a self-sustaining home through gardening and
-                                fishing
-                            </li>
-                            <li>
-                                Her aspiration is
-                                <span
-                                    class="tippy"
-                                    data-tippy-content="Have 13 Perfect fish in fish bowls around the house"
-                                    >Presenting the Perfect Private Aquarium</span
-                                >, which there's already a deep progress towards in having 7 perfect fish caught so far!
-                            </li>
-                            <li>
-                                This time I'm trying to get her painting skills up to be able to make a portrait of the
-                                family members to get legacy points ... she's trying her best
-                            </li>
-                            <li style="list-style: none">
-                                <div class="center-img">
-                                    <img src="../img/sims3/g2-3.png" />
-                                </div>
-                            </li>
-                            <li>
-                                Her boyfriend/best friend easily took to her proposal to both go steady and then to
-                                marry, but I'm waiting for the spring/summer seasons for them to have a nice summer
-                                wedding
-                                <ul>
-                                    <li>
-                                        Unfortunately this proposal just happened as his mum died ... and when his
-                                        birthday came around to have him grow into an adult, another family member died
-                                        so he was in 4 days of mourning. Poor guy
-                                    </li>
-                                </ul>
-                            </li>
-                            <li style="list-style: none">
-                                <div class="center-img">
-                                    <img src="../img/sims3/g2-1.png" />
-                                </div>
-                            </li>
-                            <li>
-                                ... dunno why this girl approached Vanessa in the winter in a swimming suit, and offered
-                                her flowers to flirt. Girl we're just here to fish, and nothing else
-                            </li>
-                            <li style="list-style: none">
-                                <div class="center-img">
-                                    <img src="../img/sims3/g2-2.png" />
-                                </div>
-                            </li>
-                            <li>
-                                Gardening is steady, she's at skill 5, fishing is at 9 and will be the first 10 that's
-                                hit in the legacy, and her painting is at 6 (with the hopes to get it to 7 to make
-                                proper portraits; I know I can take pictures at 5 to turn into paintings, but I've had
-                                zero luck in getting a nice shot)
-                            </li>
-                        </ul>
-                    </div>
+                    </section>
                 </article>
             </main>
         </div>
-        <!-- =============================================== -->
-        <!-- Footer will be loaded per JavaScript! Edit footer.js to change. -->
-        <!-- =============================================== -->
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
         <general-footer></general-footer>
 
         <!-- Tippy.js -->
         <script src="https://unpkg.com/popper.js@1"></script>
         <script src="https://unpkg.com/tippy.js@5"></script>
-        <script>
-            tippy("[data-tippy-content]", {
-                duration: 500,
-                placement: "top",
-                theme: "character"
-            });
-        </script>
+        <script src="/js/tippy-deco.js"></script>
 
-        <!-- Scroll to Top -->
-        <script src="../js/scroll-to-top.js"></script>
-
-        <script>
-            function openTab(evt, tabName) {
-                // Declare all variables
-                var i, tabcontent, tablinks;
-
-                // Get all elements with class="tabcontent" and hide them
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-
-                // Get all elements with class="tablinks" and remove the class "active"
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-
-                // Show the current tab, and add an "active" class to the button that opened the tab
-                document.getElementById(tabName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
-
-            // Get the element with id="defaultOpen" and click on it
-            if (document.getElementById("defaultOpen") != null) {
-                document.getElementById("defaultOpen").click();
-            }
-        </script>
+        <!-- PAGE ONLY SCRIPTS -->
+        <script src="../js/tabs.js"></script>
     </body>
 </html>
