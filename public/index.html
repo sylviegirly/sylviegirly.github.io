@@ -487,6 +487,24 @@
                 font-weight: bold;
             }
 
+            /* treefort */
+            .treefort {
+                display: flex;
+            }
+
+            .treefort > * {
+                flex: 1 1 0;
+                margin: 0;
+            }
+
+            .treefort > *:first-child {
+                padding-right: 0.75em;
+            }
+
+            .treefort > *:last-child {
+                padding-left: 0.75em;
+            }
+
             /* index css? if it works? */
 
             #index {
@@ -497,6 +515,28 @@
 
             .img-box img {
                 box-shadow: 2px 2px var(--primary-accent);
+            }
+
+            @media screen and (max-width: 800px) {
+                .treefort {
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .treefort > *:first-child {
+                    padding-right: 0;
+                }
+
+                .treefort > *:last-child {
+                    padding-left: 0;
+                }
+
+                .treefort img {
+                    max-width: 75%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
         </style>
     </head>
@@ -619,8 +659,8 @@
                     <!-- ABOUT ME. -->
                     <!-- =============================================== -->
                     <section>
-                        <div class="two-columns">
-                            <div class="subtl">
+                        <div class="treefort">
+                            <div>
                                 <p>
                                     Also psst, you should check out the
                                     <a href="https://treefort.boards.net/">Treefort Forums</a>, me and
@@ -628,7 +668,7 @@
                                     indie place to hang out with peeps. 💚
                                 </p>
                             </div>
-                            <div>
+                            <div style="text-align: center">
                                 <a href="https://treefort.boards.net/"
                                     ><img
                                         src="img/misc/header.png"
