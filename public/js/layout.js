@@ -62,6 +62,8 @@ function freezegifs() {
     for (var i = 0; i < x.length; i++) {
         x[i].src = x[i].src.slice(0, -3) + "png";
     }
+    // IF YOU USE QUERY SELECTOR ALL, you need to loop through everything to swap the set propery, querySelector only
+    // gives the first, query selector all gives a list, so you need to loop through the dang list!!!!!!
     for (var o = 0; o < h1.length; o++) {
         h1[o].style.setProperty("--h1-pixel-deco", "url(/img/decos/Leaf.png)");
     }
