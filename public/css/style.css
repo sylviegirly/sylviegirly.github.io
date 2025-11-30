@@ -41,8 +41,8 @@
     --link-hover: #475407;
     --body-deco: #f7f6e3;
 
-    --h1-pixel-deco: url("../img/decos/Leaf.gif");
-    --h4-pixel-deco: url("../img/decos/plant_bopping.gif");
+    --h1-pixel-deco: url("/img/decos/Leaf.gif");
+    --h4-pixel-deco: url("/img/decos/plant_bopping.gif");
 
     --focus: #007cb4;
 

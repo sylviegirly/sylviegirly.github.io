@@ -56,29 +56,60 @@ function loadUserPreference() {
 
 function freezegifs() {
     var x = document.querySelectorAll(".freeze img, img.freeze");
+    const h1 = document.querySelectorAll("h1");
+    const titles = document.querySelectorAll(".title");
+    //var titles = document.querySelectorAll("section.title");
     for (var i = 0; i < x.length; i++) {
         x[i].src = x[i].src.slice(0, -3) + "png";
+    }
+    for (var o = 0; o < h1.length; o++) {
+        h1[o].style.setProperty("--h1-pixel-deco", "url(/img/decos/Leaf.png)");
+    }
+    for (var p = 0; p < titles.length; p++) {
+        titles[p].style.setProperty("--h4-pixel-deco", "url(/img/decos/plant_bopping.png)");
     }
 }
 
 function resumegifs() {
     var x = document.querySelectorAll(".freeze img, img.freeze");
+    const h1 = document.querySelectorAll("h1");
+    const titles = document.querySelectorAll(".title");
     for (var i = 0; i < x.length; i++) {
         x[i].src = x[i].src.slice(0, -3) + "gif";
+    }
+    for (var o = 0; o < h1.length; o++) {
+        h1[o].style.setProperty("--h1-pixel-deco", "url(/img/decos/Leaf.gif)");
+    }
+    for (var p = 0; p < titles.length; p++) {
+        titles[p].style.setProperty("--h4-pixel-deco", "url(/img/decos/plant_bopping.gif)");
     }
 }
 
 function toggle() {
     const animationsEnabled = localStorage.getItem("animationsEnabled") === "true";
     var x = document.querySelectorAll(".freeze img, img.freeze");
+    const h1 = document.querySelectorAll("h1");
+    const titles = document.querySelectorAll(".title");
     if (animationsEnabled) {
         for (var i = 0; i < x.length; i++) {
             x[i].src = x[i].src.slice(0, -3) + "png";
+        }
+        for (var o = 0; o < h1.length; o++) {
+            h1[o].style.setProperty("--h1-pixel-deco", "url(/img/decos/Leaf.png)");
+        }
+        for (var p = 0; p < titles.length; p++) {
+            titles[p].style.setProperty("--h4-pixel-deco", "url(/img/decos/plant_bopping.png)");
         }
         localStorage.setItem("animationsEnabled", "false");
     } else {
         for (var m = 0; m < x.length; m++) {
             x[m].src = x[m].src.slice(0, -3) + "gif";
+        }
+        for (var n = 0; n < h1.length; n++) {
+            h1[n].style.setProperty("--h1-pixel-deco", "url(/img/decos/Leaf.gif)");
+        }
+        for (var b = 0; b < titles.length; b++) {
+            titles[b].style.setProperty("--h4-pixel-deco", "url(/img/decos/plant_bopping.gif)");
         }
         localStorage.setItem("animationsEnabled", "true");
     }
