@@ -314,7 +314,7 @@ class LeftSidebar extends HTMLElement {
     </section>
     <!-- FC2 Clap tag starts here -->
     <div class="flexbox-lazy hover-grow" style="flex-direction: column; padding: 0">
-        <a href="https://lovesick.cafe/grrrl">
+        <a href="https://grrrl.valentinely.cc/">
             <img
                 class="image"
                 loading="lazy"
