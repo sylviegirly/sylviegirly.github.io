@@ -272,6 +272,31 @@
                 max-width: 50px;
             }
 
+            /* onionring.js is made up of four files - onionring-widget.js, onionring-index.js, onionring-variables.js and onionring.css (this one!)
+            // it's licensed under the cooperative non-violent license (CNPL) v4+ (https://thufie.lain.haus/NPL.html)
+            // it was originally made by joey + mord of allium (è’œ) house, last updated 2020-10-24 */
+
+            /* === ONIONRING.CSS === */
+            /* this file affects the style of the widget. remember to replace all instances of #webringid with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
+
+            #focusfirst-webring {
+                margin: 0 auto;
+                padding: 0.2em;
+                border: 2px solid #c2bca0;
+                background: #e8ead2;
+                width: 100%;
+            }
+
+            #focusfirst-webring p,
+            .shortlines p {
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            #focusfirst-webring img {
+                margin-bottom: -10px;
+            }
+
             @media screen and (max-width: 800px) {
                 .aboutme {
                     flex-wrap: wrap;
@@ -2372,7 +2397,7 @@
                             <h2>Webrings</h2>
                             <p>... i'll organize these eventually, sorry it is not pretty</p>
 
-                            <div class="tabcontentinside threecolumn">
+                            <div class="tabcontentinside threecolumn" style="gap: 10px; min-width: 0; max-width: 100%">
                                 <div style="margin-top: 5px; text-align: center; max-width: 100%">
                                     <script
                                         src="https://homebrew.cresentri.com/webring.js"
@@ -2430,6 +2455,22 @@
                                     <a href="https://qtbeans.neocities.org/artistsonline?action=next">&nbsp;&gt;&gt;</a>
                                     <br />
                                     <a href="https://qtbeans.neocities.org/artistsonline?action=random">random</a>
+                                </div>
+                                <div>
+                                    <div id="focusfirst-webring">
+                                        <script
+                                            type="text/javascript"
+                                            src="https://www.beepbird.net/webring/onionring-variables.js"></script>
+                                        <script
+                                            type="text/javascript"
+                                            src="https://www.beepbird.net/webring/onionring-widget.js"></script>
+                                        <noscript
+                                            ><a href="https://www.beepbird.net/index.html"
+                                                ><img
+                                                    src="https://www.beepbird.net/webring/focusfirst.png"
+                                                    alt="Focus First Index" /></a
+                                        ></noscript>
+                                    </div>
                                 </div>
                             </div>
                         </div>
