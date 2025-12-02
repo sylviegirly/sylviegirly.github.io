@@ -1277,8 +1277,6 @@ aside .title::after {
 
 .hover-grow a img:hover {
     transform: scale(1.1);
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
 }
 
 /* -------------------------------------------------------- */
