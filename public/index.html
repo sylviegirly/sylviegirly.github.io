@@ -18,6 +18,21 @@
         <!-- Setting character encoding and viewport size. Do not remove. -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--<meta
+            http-equiv="Content-Security-Policy-Report-Only"
+            content="
+            default-src 'self';
+            script-src 'self' https://www.google-analytics.com;
+            style-src 'self' https://fonts.googleapis.com;
+            font-src 'self' https://fonts.gstatic.com;
+            img-src 'self' data: https://www.google-analytics.com;
+            connect-src 'self' https://www.google-analytics.com;
+            frame-ancestors 'none';
+            form-action 'self';
+            object-src 'none';
+            base-uri 'self';
+            report-uri https://your-csp-reporting-endpoint.com/report;
+        " />-->
         <link
             href="https://zhongvie.neocities.org/rss.xml"
             rel="alternate"
@@ -54,7 +69,7 @@
 
         <!-- Page Only Styling: -->
         <link rel="stylesheet" href="css/lightbox.css" />
-        <style nonce="MTo4MzQwNToxMjg1NTU1MzY4OjE3NjQ3MTA3NTk=">
+        <style>
             .galleryimg {
                 flex: 1 30%;
             }
