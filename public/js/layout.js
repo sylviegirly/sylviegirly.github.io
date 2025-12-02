@@ -344,6 +344,24 @@ customElements.define("left-sidebar", LeftSidebar);
 // DO IMAGE REROLL THINGS
 const images = [
     {
+        imagesrc: "/img/sidebar/sylvie_borb.png",
+        alt: "A chibi Sylvie with sparkles around them. Made by riechily.",
+        url: "https://vgen.co/riechily",
+        freezeframe: false
+    },
+    {
+        imagesrc: "/img/sidebar/sylvie_borb.png",
+        alt: "Sylvie as one of the paper origami birds from Honkai Star Rail. Made by PhoenixBlessed.",
+        url: "https://vgen.co/PhoenixBlessed",
+        freezeframe: false
+    },
+    {
+        imagesrc: "/img/sidebar/sylvie_chibi_8.png",
+        alt: "A chibi Sylvie with their hands on their hips. Made by Tirtouga678.",
+        url: "https://www1.flightrising.com/clan-profile/265695",
+        freezeframe: false
+    },
+    {
         imagesrc: "/img/sidebar/sylvie_chibi_3.png",
         alt: "",
         url: "",
