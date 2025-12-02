@@ -344,6 +344,12 @@ customElements.define("left-sidebar", LeftSidebar);
 // DO IMAGE REROLL THINGS
 const images = [
     {
+        imagesrc: "/img/sidebar/sylvie_pokemon.png",
+        alt: "A chibi Sylvie riding a hybrid Wyrdeer pokemon, and holding out a friendship ball to a deerling. Made by tsurudraws.",
+        url: "https://vgen.co/tsurudraws",
+        freezeframe: false
+    },
+    {
         imagesrc: "/img/sidebar/sylvie_borb.png",
         alt: "A chibi Sylvie with sparkles around them. Made by riechily.",
         url: "https://vgen.co/riechily",
