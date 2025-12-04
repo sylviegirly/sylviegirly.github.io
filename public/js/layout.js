@@ -38,37 +38,86 @@ document.addEventListener("DOMContentLoaded", function () {
         // If reduced motion is not active, load user preference from local storage
         loadUserPreference();
     }
+
+    /* SNOWFLAKES, DISABLE OUTSIDE OF DECEMBER */
+    const snowContainer = document.querySelector(".snow-container");
+
+    const particlesPerThousandPixels = 0.1;
+    const fallSpeed = 0.35;
+    const pauseWhenNotActive = true;
+    const maxSnowflakes = 100;
+    const snowflakes = [];
+
+    let snowflakeInterval;
+    let isTabActive = true;
+
+    function resetSnowflake(snowflake) {
+        const size = Math.random() * 5 + 1;
+        const viewportWidth = window.innerWidth - size; // Adjust for snowflake size
+        const viewportHeight = window.innerHeight;
+
+        snowflake.style.width = `${size}px`;
+        snowflake.style.height = `${size}px`;
+        snowflake.style.left = `${Math.random() * viewportWidth}px`; // Constrain within viewport width
+        snowflake.style.top = `-${size}px`;
+
+        const animationDuration = (Math.random() * 3 + 2) / fallSpeed;
+        snowflake.style.animationDuration = `${animationDuration}s`;
+        snowflake.style.animationTimingFunction = "linear";
+        snowflake.style.animationName = Math.random() < 0.5 ? "fall" : "diagonal-fall";
+
+        setTimeout(() => {
+            if (parseInt(snowflake.style.top, 10) < viewportHeight) {
+                resetSnowflake(snowflake);
+            } else {
+                snowflake.remove(); // Remove when it goes off the bottom edge
+            }
+        }, animationDuration * 1000);
+    }
+
+    function createSnowflake() {
+        if (snowflakes.length < maxSnowflakes) {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflakes.push(snowflake);
+            snowContainer.appendChild(snowflake);
+            resetSnowflake(snowflake);
+        }
+    }
+
+    function generateSnowflakes() {
+        const numberOfParticles =
+            Math.ceil((window.innerWidth * window.innerHeight) / 1000) * particlesPerThousandPixels;
+        const interval = 5000 / numberOfParticles;
+
+        clearInterval(snowflakeInterval);
+        snowflakeInterval = setInterval(() => {
+            if (isTabActive && snowflakes.length < maxSnowflakes) {
+                requestAnimationFrame(createSnowflake);
+            }
+        }, interval);
+    }
+
+    function handleVisibilityChange() {
+        if (!pauseWhenNotActive) return;
+
+        isTabActive = !document.hidden;
+        if (isTabActive) {
+            generateSnowflakes();
+        } else {
+            clearInterval(snowflakeInterval);
+        }
+    }
+
+    generateSnowflakes();
+
+    window.addEventListener("resize", () => {
+        clearInterval(snowflakeInterval);
+        setTimeout(generateSnowflakes, 1000);
+    });
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 });
-
-/* SNOWFLAKES, will remove not during december */
-function createSnowflake() {
-    const snowflake = document.createElement("div");
-    snowflake.classList.add("snowflake");
-    snowflake.textContent = "•";
-    snowflake.style.fontSize = Math.random() * 24 + 10 + "px";
-    snowflake.style.left = Math.random() * window.innerWidth + "px";
-    snowflake.style.animation = `fall ${Math.random() * 10 + 10}s linear infinite, sideWays ${Math.random() * 4 + 2}s ease-in-out infinite`;
-
-    document.body.appendChild(snowflake);
-
-    setTimeout(
-        () => {
-            snowflake.remove();
-        },
-        Math.random() * 10000 + 10000
-    );
-}
-
-document.styleSheets[0].insertRule(
-    "@keyframes fall { 0% { top: -50px; } 100% { top: 100vh; } }",
-    document.styleSheets[0].cssRules.length
-);
-document.styleSheets[0].insertRule(
-    "@keyframes sideWays { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(20px); } }",
-    document.styleSheets[0].cssRules.length
-);
-
-setInterval(createSnowflake, 200);
 
 /* FREEZE GIFS */
 // Load user preference from localStorage (on page load or after toggle)
@@ -559,6 +608,7 @@ document.getElementById("sidedeco").innerHTML = finalImage;
 
 /* BEGIN FOOTER */
 const footer = `
+<div class="snow-container"></div>
 <footer>
     <p>
         2025 &copy; lovingly coded by <a href="https://justinjackson.ca/webmaster/">aid</a> &bull; <a href="/changelog.html">changelog</a> &bull; <a href="/credits.html">credits</a> &bull; <a href="/feed.xml">rss</a> &bull; <a href="https://asuraid.atabook.org/">guestbook</a> &bull; <a href="https://revospring.net/@asuraid">askbox</a> &bull; <a href="mailto:sylviegirly@pm.me">contact me</a>
