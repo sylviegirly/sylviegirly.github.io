@@ -1414,4 +1414,16 @@ aside .title::after {
         width: fit-content;
         height: 100%;
     }
+
+    .two-columns {
+        display: block;
+    }
+
+    .two-columns > *:first-child {
+        padding-right: 0;
+    }
+
+    .two-columns > *:last-child {
+        padding-left: 0;
+    }
 }
