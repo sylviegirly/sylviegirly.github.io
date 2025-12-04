@@ -47,7 +47,7 @@ function createSnowflake() {
     snowflake.textContent = "•";
     snowflake.style.fontSize = Math.random() * 24 + 10 + "px";
     snowflake.style.left = Math.random() * window.innerWidth + "px";
-    snowflake.style.animation = `fall ${Math.random() * 10 + 10}s linear infinite, sideWays ${Math.random() * 2 + 1}s ease-in-out infinite`;
+    snowflake.style.animation = `fall ${Math.random() * 10 + 10}s linear infinite, sideWays ${Math.random() * 4 + 2}s ease-in-out infinite`;
 
     document.body.appendChild(snowflake);
 
@@ -55,7 +55,7 @@ function createSnowflake() {
         () => {
             snowflake.remove();
         },
-        Math.random() * 4000 + 4000
+        Math.random() * 10000 + 10000
     );
 }
 
