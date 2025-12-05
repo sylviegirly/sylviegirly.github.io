@@ -1280,12 +1280,8 @@ button {
 /* CREDIT DROPDOWN */
 /* -------------------------------------------------------- */
 
-.accordion {
-    display: none;
-}
-
 .panel {
-    display: none;
+    transition: max-height 0.2s ease-out;
 }
 
 /* -------------------------------------------------------- */
