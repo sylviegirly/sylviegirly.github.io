@@ -268,8 +268,24 @@
                 width: 100%;
             }
 
-            .flexstamps a {
+            .flexstamps a,
+            .blinkees-size-fix a,
+            .ff-container {
                 line-height: 0;
+            }
+
+            .blinkees-size-fix {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 5px;
+                width: 100%;
+            }
+
+            .blinkees-size-fix img,
+            .blinkees-size-fix canvas {
+                max-height: 20px;
             }
 
             /* picrew formatting */
@@ -780,9 +796,9 @@
                     <!-- =============================================== -->
                     <section class="warning" aria-hidden="true">
                         <i class="fas fa-warning" aria-hidden="true"></i> GIFs are present within the stamps + blinkees;
-                        I'm unable to get freezeframe to work with them, and I haven't had the time/brainpower yet to
-                        convert everything to PNG (aside from the very flashy 'entire Twilight movie in a stamp' GIF),
-                        so please just be aware. I will do it eventually, though.
+                        they should respect the site option if gifs and on or off (except for blinkees, just haven't
+                        done those yet), but you can manually use the buttons below to turn them on and off as well!
+                        Just know the top bar toggle <i>won't</i> affect these.
                     </section>
                     <!-- =============================================== -->
                     <!-- READER ONLY INTERESTS. -->
@@ -1380,7 +1396,7 @@
                                     <a href="https://www.deviantart.com/violetsteel/art/I-love-pink-stamp-70013332"
                                         ><img
                                             src="img/stamps/i_heart_pink.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt='"i heart pink" stamp'
                                     /></a>
                                     <a
@@ -1390,7 +1406,7 @@
                                     <a href="https://www.deviantart.com/linkmasterxp/art/Another-TWEWY-Stamp-113119983"
                                         ><img
                                             src="img/stamps/twewy.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt="the world ends with you stamp"
                                     /></a>
                                     <img
@@ -1559,7 +1575,7 @@
                                     <a href="https://www.deviantart.com/poserfan/art/Tumblr-Stamp-320198962"
                                         ><img
                                             src="img/stamps/im_on_tumblr.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt="'i'm on tumblr' stamp"
                                     /></a>
                                     <a href="https://www.deviantart.com/clefairykid/art/Firefox-User-Stamp-215181007"
@@ -1578,7 +1594,7 @@
                                         href="https://www.deviantart.com/straysmemoryalbum/art/Stamp-YGO-TAS-Tribute08-110603945"
                                         ><img
                                             src="img/stamps/brooklyn_rage.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt="brooklyn rage yu-gi-oh stamp"
                                     /></a>
                                     <a href="https://www.deviantart.com/imber-noctis/art/MTMTE-Tailgate-stamp-339861318"
@@ -1725,129 +1741,129 @@
                                 adding even more tabs.
                             </p>
                             <div class="tabcontentinside hover-grow" style="gap: 0">
-                                <div class="flexstamps">
+                                <div class="blinkees-size-fix">
                                     <a href="https://lovesick.cafe/shrines/gfx/blinkies-1" style="height: 0"
                                         ><img
                                             src="https://i.imgur.com/wJ1kVa8.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt="addicted to zoo tycoon"
                                             style="max-height: 20px"
                                     /></a>
                                     <img
                                         src="img/blinkies/0081-asexual.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="asexual pride"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/asexual_2.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="yeah i'm asexual, deal with it"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/i_have_adhd.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="i have adhd"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/kungpow_penis.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="kungpow penis"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/adhd.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="i have adhd alt"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/adhd_2.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="adhd flag"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/ocxcanon.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="oc x canon"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/platinum.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="pokemon platinum"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/i_miss_my_wife.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="i miss my wife tails"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/its_me_boy_ps5.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="it's me boy the ps5"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/spore.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="spore"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/vaporwave.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="vaporwave"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/i_love_my_trans_friends.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="i love my trans friends"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/things_will_work_out.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="things will work out"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/i-view-source.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="i view source"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/isupportdrawinginclass.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="i support drawing in class"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/pingas.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="pingas"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/tea-drinker.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="tea drinker"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/the-sims-3.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="the sims 3"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/updated_autopsy.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="ace attorney updated autopsy report"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/old_man_yaoi.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="old man yaoi"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/old_woman_yuri.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="old woman yuri"
                                         style="max-height: 20px" />
                                     <a
                                         href="https://www.tumblr.com/engravedlives/748854484818640896/misc-pink-blinkies-graphics"
                                         ><img
                                             src="img/blinkies/fuck_ai_art.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt="fuck AI art"
                                             style="max-height: 20px"
                                     /></a>
@@ -1855,46 +1871,46 @@
                                         href="https://www.tumblr.com/engravedlives/748854484818640896/misc-pink-blinkies-graphics"
                                         ><img
                                             src="img/blinkies/like_the_legend_of_the_penis.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt="like the legend of the penis"
                                             style="max-height: 20px"
                                     /></a>
                                     <a href="https://caitsith.neocities.org/graphics1">
                                         <img
                                             src="img/blinkies/homura.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt="homura did nothing wrong"
                                             style="max-height: 20px"
                                     /></a>
                                     <img
                                         src="img/blinkies/roddy.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="rodiums transformers"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/burnout.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="suffering from burnout"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/i_am_normal_about_fic.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="i am normal about fictional characters"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/i_love_deer.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="i love deer"
                                         style="max-height: 20px" />
                                     <img
                                         src="img/blinkies/techno_kitten.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="techno kitten adventure"
                                         style="max-height: 20px" />
                                     <a href="https://lazer-bunny.neocities.org/Graphics/MyGraphics"
                                         ><img
                                             src="img/blinkies/CR_Sea_Fairy_Cookie.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt="cookie run sea fairy cookie"
                                             style="max-height: 20px"
                                     /></a>
@@ -1909,91 +1925,95 @@
                                     ">
                                     <img
                                         src="img/blinkies/dragon_cave.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="dragon cave"
                                         style="max-height: 30px" />
                                     <img
                                         src="img/blinkies/flight_rising.gif"
-                                        loading="lazy"
+                                        class="freezeframe"
                                         alt="flight rising"
                                         style="max-height: 30px" />
                                     <a href="https://www.tumblr.com/lavendergalactic"
                                         ><img
                                             src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/i%20heart%20sylvie%20blinkie.gif"
                                             alt="blinkie that says i heart sylvie. © lavendergalactic"
-                                            loading="lazy"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.tumblr.com/lavendergalactic"
                                         ><img
                                             src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/milf%20man%20i%20love%20flowers%20blinkie.gif"
                                             alt="blinkie that says milf: man i love flowers. © lavendergalactic"
-                                            loading="lazy"
+                                            class="freezeframe"
                                     /></a>
                                     <a href="https://www.tumblr.com/lavendergalactic"
                                         ><img
                                             src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/dendro%20blinkie.gif"
                                             alt="blinkie that says dendro. © lavendergalactic"
-                                            loading="lazy"
+                                            class="freezeframe"
                                     /></a>
                                 </div>
                                 <hr />
                                 <div style="text-align: center">
                                     <div class="flexstamps">
-                                        <img src="img/shiny/Archon.gif" loading="lazy" alt="" aria-hidden="true" /><img
+                                        <img
+                                            src="img/shiny/Archon.gif"
+                                            class="freezeframe"
+                                            alt=""
+                                            aria-hidden="true" /><img
                                             src="img/shiny/Dendro.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/Geo.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/Melusine.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/haikaveh.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/fangirl.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/LovMyBFF.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/minecrafter.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/heart.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/gamer.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/losergirl.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/pink.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/yumejoshi.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/furina.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" /><img
                                             src="img/shiny/mizisua.gif"
-                                            loading="lazy"
+                                            class="freezeframe"
                                             alt=""
                                             aria-hidden="true" />
                                     </div>
