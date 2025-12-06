@@ -973,12 +973,28 @@ aside .title::after {
 }
 
 /* FREEZE FRAME FIXES */
-.ff-image {
-    vertical-align: unset !important;
+.ff-container {
+    display: inline-block;
+    position: relative;
 }
 
-.ff-container {
-    line-height: 0;
+.ff-container canvas {
+    max-width: 100%;
+}
+
+.ff-container.ff-hover:hover .ff-active {
+    position: absolute;
+    opacity: 0;
+}
+
+.ff-container.ff-hover:hover .ff-inactive {
+    position: static;
+    opacity: 1;
+}
+
+.ff-inactive {
+    position: absolute;
+    opacity: 0;
 }
 
 /* -------------------------------------------------------- */
