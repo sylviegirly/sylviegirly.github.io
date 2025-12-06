@@ -411,10 +411,6 @@ img {
     opacity: 0;
 }
 
-.ff-image {
-    max-width: 20px;
-}
-
 /*make sure videos stay in the post */
 .post .video-element {
     display: flex;
