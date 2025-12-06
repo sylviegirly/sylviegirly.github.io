@@ -2,6 +2,7 @@
  * this version is simplified for easier color swapping!*/
 :root {
     --site-bg: url(../img/light_mode_bg.png) #879d6d;
+    --blog-width: 600px;
     /*or like this for just a solid color:*/
     /*--site-bg: #FFE1C6; */
 
@@ -93,9 +94,17 @@ body {
     margin: 0;
     background: var(--site-bg);
     color: var(--post-text);
-    line-height: 1.6em;
+    line-height: 1.5em;
     /*if you use a bg image, this will keep it from scrolling*/
     background-attachment: fixed;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 /*use a special font for certain headings/buttons*/
@@ -164,7 +173,7 @@ details > summary,
 
 main {
     /*here is the post width*/
-    width: 600px;
+    width: var(--blog-width);
     /*this part means it ignores all other elements when figuring out where to sit on the page*/
     position: absolute;
     /*because of that, we gotta tell it how much room to leave for the sidebar*/
@@ -363,12 +372,49 @@ main {
     margin-bottom: 1em;
     box-shadow: 6px 6px 0 var(--border-shadow);
     min-width: 100%;
+    max-width: var(--blog-width);
 }
 /*make sure images stay within the post*/
 .post img,
-.pos a img {
+.post a img,
+img {
+    max-width: 100%;
+    margin: 5px 0;
+}
+
+/* stupid containers */
+.ff-container {
+    display: inline-block;
+    position: relative;
+}
+
+.ff-container canvas {
     max-width: 100%;
 }
+
+.ff-active {
+    margin: 5px 0;
+}
+
+.ff-container.ff-hover:hover .ff-active {
+    position: absolute;
+    opacity: 0;
+}
+
+.ff-container.ff-hover:hover .ff-inactive {
+    position: static;
+    opacity: 1;
+}
+
+.ff-inactive {
+    position: absolute;
+    opacity: 0;
+}
+
+.ff-image {
+    max-width: 20px;
+}
+
 /*make sure videos stay in the post */
 .post .video-element {
     display: flex;
@@ -444,6 +490,7 @@ main {
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
+    align-content: center;
 }
 
 /*this is for lists*/
