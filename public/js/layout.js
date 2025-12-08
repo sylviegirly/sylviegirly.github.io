@@ -217,6 +217,7 @@ if (tabTitle !== "aid's little corner") {
 /* BEGIN HEADER */
 const content = `
 <!-- HEADER -->
+<div class="christmas"></div>
 <header>
     <div class="title">aid's small corner</div>
     <div class="subtext">a little personal site</div>
