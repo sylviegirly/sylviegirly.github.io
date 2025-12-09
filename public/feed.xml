@@ -9,7 +9,19 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-11-17T23:27:05-05:00</updated>
+    <updated>2025-12-09T15:31:20-05:00</updated>
+
+    <entry>
+        <title>Zhongvie Shrine Revamp</title>
+        <link href="https://zhongvie.neocities.org/shrines/zhongvie" />
+        <updated>2025-12-09T15:31:20-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1765312280</id>
+        <content type="html">
+            &#x3C;p&#x3E;I revamped my Zhongvie shrine to use one of my own templates; it&#x27;s not complete yet, I
+            still need to do the gallery and find pixels/items to decorate it with, but I really wanted to get it off my
+            skull!!&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Site Re-gutting ... complete?</title>
