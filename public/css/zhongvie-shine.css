@@ -1132,26 +1132,26 @@ footer a {
 /* -------------------------------------------------------- */
 
 .tippy-tooltip.character-theme {
-    color: var(--body-bg);
+    color: var(--font-on-accent);
     letter-spacing: 1px;
     font-size: 1em;
-    background: var(--borders);
+    background: var(--accent);
     box-shadow:
         rgba(0, 0, 0, 0.16) 0 10px 36px 0,
         rgba(0, 0, 0, 0.06) 0 0 0 1px;
 }
 
 .tippy-tooltip.character-theme[data-placement^="top"] .tippy-arrow {
-    border-top-color: var(--borders);
+    border-top-color: var(--accent);
 }
 .tippy-tooltip.character-theme[data-placement^="bottom"] .tippy-arrow {
-    border-bottom-color: var(--borders);
+    border-bottom-color: var(--accent);
 }
 .tippy-tooltip.character-theme[data-placement^="left"] .tippy-arrow {
-    border-left-color: var(--borders);
+    border-left-color: var(--accent);
 }
 .tippy-tooltip.character-theme[data-placement^="right"] .tippy-arrow {
-    border-right-color: var(--borders);
+    border-right-color: var(--accent);
 }
 
 /* -------------------------------------------------------- */
