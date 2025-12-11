@@ -45,35 +45,30 @@
         <script src="/js/layout.js" defer></script>
         <script src="/js/navigation.js" type="module"></script>
 
-        <!--✻✻✻✻✻✻  griddery by @glenthemes + lightbox2  ✻✻✻✻✻✻-->
-        <script src="/js/griddery.js"></script>
-        <link href="/css/griddery.css" rel="stylesheet" />
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                gridderyV3({
-                    items: ".minecraft",
-                    columns: 3
-                });
-            });
-        </script>
         <script src="/js/lightbox-plus-jquery.js"></script>
         <link href="/css/lightbox.css" rel="stylesheet" />
 
         <!-- Page Only Styling: -->
         <style>
-            /*----- MINECRAFT SPACING -----*/
-            /* minecraft grid column spacing */
-            [griddery-id=".minecraft"] [griddery-col] + [griddery-col] {
-                padding-left: 3px;
+            .minecraft-cont {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
             }
 
-            /* minecraft grid "row" spacing */
-            [griddery-id=".minecraft"] [griddery-item] + [griddery-item] {
-                margin-top: 3px;
+            .minecraft-cont a {
+                max-width: calc(33% - 10px);
             }
 
-            /* COULD REMOVE THIS */
-            [griddery-item] a img:hover {
+            .minecraft-cont a img {
+                border-radius: var(--border-radius);
+                transition: 0.5s ease-in-out;
+                object-fit: cover;
+                aspect-ratio: 16/9;
+            }
+
+            .minecraft-cont a img:hover {
                 outline: 1px solid white;
                 outline-offset: -5px;
             }
@@ -152,6 +147,12 @@
                             should be enough beds to house them LOL. I also made a flower farm based off this
                             <a href="https://youtu.be/iiJGWlD2kNc">mini farm video</a>, and I really wanna do the AFK
                             stone farm and maybe the bamboo. The piglin bartering farm is pretty cool as well.
+                        </p>
+                        <p>
+                            ... okay I did end up doing the afk stone farm as well and made a little bat sanctuary.
+                            Explored one of the caverns I had nearby and found like ... maybe 9 diamonds? Surprisingly
+                            not at a deep Y level. Rescued a villager zombie thinking it was one of my own only to see
+                            it was nitwit LMAO.
                         </p>
                         <details>
                             <summary>Older Update Logs / Diary</summary>
@@ -459,10 +460,36 @@
                         <h2 id="screenshots">Screenshot Hub</h2>
                         <p>
                             All images are from newest to oldest and have their days noted + a comment from me in the
-                            captions (if I have the date I took them on). Sorry if they're out of order for the griddery
-                            layout LOL.
+                            captions (if I have the date I took them on).
                         </p>
-                        <div>
+                        <div class="minecraft-cont">
+                            <a
+                                href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Minecraft/2025-12-10_18.48.04.png"
+                                class="minecraft"
+                                data-lightbox="minecraft"
+                                data-title="This freak would NOT leave my house, I had to force him to the nearby village. (December 10, 2025)"
+                                ><img
+                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Minecraft/2025-12-10_18.48.04.png"
+                                    alt="A nitwit villager within a player house."
+                            /></a>
+                            <a
+                                href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Minecraft/2025-12-11_00.44.47.png"
+                                class="minecraft"
+                                data-lightbox="minecraft"
+                                data-title="What is it with me and endermen getting in weird places? Leave my honse alone?? (December 10, 2025)"
+                                ><img
+                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Minecraft/2025-12-11_00.44.47.png"
+                                    alt="An enderman within a horse pen."
+                            /></a>
+                            <a
+                                href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Minecraft/2025-12-11_00.54.29.png"
+                                class="minecraft"
+                                data-lightbox="minecraft"
+                                data-title="Baby Sniffer ... and I got a pottery sherd out of it too. (December 10, 2025)"
+                                ><img
+                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Minecraft/2025-12-11_00.54.29.png"
+                                    alt="A baby Sniffer."
+                            /></a>
                             <a
                                 href="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Minecraft/2025-12-09_01.03.10.png"
                                 class="minecraft"
