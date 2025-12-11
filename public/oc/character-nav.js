@@ -27,35 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fontForm.onchange = populateStorage;
 });
 
-function getNestingString() {
-    // This function prepares the "nesting" variable for your header and footer (see below).
-    // Only change this function if you know what you're doing.
-    const currentUrl = window.location.href.replace("http://", "").replace("https://", "").replace("/public/", "/");
-    const numberOfSlahes = currentUrl.split("/").length - 1;
-    if (numberOfSlahes == 1) return ".";
-    if (numberOfSlahes == 2) return "..";
-    return ".." + "/..".repeat(numberOfSlahes - 2);
-}
-
-/* ********************************* */
-
-/**
- *  H T M L
- */
-
-const nesting = getNestingString();
-
-/**
-  Use ${nesting} to output a . or .. or ../.. etc according to the current page's folder depth.
-  Example:
-    <img src="${nesting}/images/example.jpg" />
-  will output
-  	 <img src="./images/example.jpg" /> on a page that isn't in any folder.
-    <img src="../images/example.jpg" /> on a page that is in a folder.
-    <img src="../../images/example.jpg" /> on a page that is in a sub-folder.
-    etc.
- */
-
 const content = `
 <!-- =============================================== -->
 <!-- FONT TOGGLER -->
