@@ -1,5 +1,20 @@
 const quotes = [
     {
+        quote: "I still think it’s objectively fucked how the world is built for morning people and if you wake up later than everyone else you’re seen as a malicious aberration of some sort. I am that but it’s not because I wake up at 11 fuck yourself",
+        author: "jame7t",
+        url: "https://jame7t.tumblr.com/post/774307356666413056"
+    },
+    {
+        quote: "absolutely hate it when the pleasurable activity procrastination hits. i’m going to do something fun that brings me joy but not yet. yeah, not yet. not yet. maybe i shouldn’t do it at all, it’s not that fun",
+        author: "meatdiaz",
+        url: "https://www.tumblr.com/meatdiaz/789873524479295488"
+    },
+    {
+        quote: "having a hard time focusing today. i've also had a hard time focusing for the previous 15 or so years leading up to now but this post is about today.",
+        author: "sisyphusshrugged",
+        url: "https://sisyphusshrugged.tumblr.com/post/799389027562340352"
+    },
+    {
         quote: "i love OCs… think everyone should have one… a crucial step toward beauty is getting obsessed with a little person from inside your head",
         author: "dappermouth",
         url: "https://dappermouth.tumblr.com/post/799324206799208448"
