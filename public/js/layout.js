@@ -316,7 +316,7 @@ class LeftSidebar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
 <div id="left-sidebar">
-    <section id="intro">
+    <section id="intro" style="padding: 15px; line-height: 0">
         <div class="img-floatinganim">
             <img class="dendro" src="/img/decos/dendro_symbol.png" aria-hidden="true" alt="" />
         </div>
@@ -423,6 +423,18 @@ customElements.define("left-sidebar", LeftSidebar);
 
 // DO IMAGE REROLL THINGS
 const images = [
+    {
+        imagesrc: "/img/sidebar/sylvie_hot.jpg",
+        alt: "Sylvie looking towards the viewer, drawn in a sexy style.",
+        url: "https://vgen.co/KatheUvu",
+        freezeframe: false
+    },
+    {
+        imagesrc: "/img/sidebar/zhongvie_2.jpg",
+        alt: "Sylvie holding Zhongli's jaw and winking to the viewer, while Zhongli is covered in kiss marks from them and is blushing.",
+        url: "https://vgen.co/KatheUvu",
+        freezeframe: false
+    },
     {
         imagesrc: "/img/sidebar/sylvie_pokemon.png",
         alt: "A chibi Sylvie riding a hybrid Wyrdeer pokemon, and holding out a friendship ball to a deerling. Made by tsurudraws.",
