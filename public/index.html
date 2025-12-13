@@ -40,6 +40,13 @@
             title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Image Preview -->
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            if (navigator.userAgent.includes("Screenjesus")) {
+                document.getElementsByTagName("body")[0].innerHTML =
+                    '<style>*{margin: 0;padding: 0;box-sizing: border-box;}img{width:100vw;height:100vh;}</style><img src="/img/misc/siteHeader.webp">';
+            }
+        </script>
         <meta property="og:image" content="/img/misc/siteHeader.webp" />
         <meta property="og:title" content="Aid's Small Corner — Personal Website" />
 
@@ -606,7 +613,11 @@
                             <li>Game related things or <a href="recipes.html">recipes</a> I like</li>
                             <li>
                                 Yume / OC x Canon stuff cause I'm so normal about
-                                <a href="shrines/zhongvie.html">my OC who kisses Zhongli</a> (<span class="tippy" data-tippy-content="I am non-sharing though, in the sense of I do not like talking about other ships including him, sorry ;_; It's more of a comfort thing for me.">note</span>)
+                                <a href="shrines/zhongvie.html">my OC who kisses Zhongli</a> (<span
+                                    class="tippy"
+                                    data-tippy-content="I am non-sharing though, in the sense of I do not like talking about other ships including him, sorry ;_; It's more of a comfort thing for me."
+                                    >note</span
+                                >)
                             </li>
                             <li>Frequent updates since I work on this site daily pretty much</li>
                         </ul>
