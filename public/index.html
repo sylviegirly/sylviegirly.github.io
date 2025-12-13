@@ -40,13 +40,6 @@
             title="What's new on zhongvie.neociites.org" />
 
         <!-- Site Image Preview -->
-        <script>
-            const urlParams = new URLSearchParams(window.location.search);
-            if (navigator.userAgent.includes("Screenjesus")) {
-                document.getElementsByTagName("body")[0].innerHTML =
-                    '<style>*{margin: 0;padding: 0;box-sizing: border-box;}img{width:100vw;height:100vh;}</style><img src="/img/misc/siteHeader.webp">';
-            }
-        </script>
         <meta property="og:image" content="/img/misc/siteHeader.webp" />
         <meta property="og:title" content="Aid's Small Corner — Personal Website" />
 
@@ -1588,5 +1581,13 @@
         <script src="js/random-dragcave.js"></script>
         <script src="js/random-sentence.js"></script>
         <script src="js/body-snippets.js"></script>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            if (navigator.userAgent.includes("Screenjesus")) {
+                document.getElementsByTagName("body")[0].innerHTML =
+                    '<style>*{margin: 0;padding: 0;box-sizing: border-box;}img{width:100vw;height:100vh;}</style><img src="/img/misc/siteHeader.webp">';
+            }
+        </script>
     </body>
 </html>
