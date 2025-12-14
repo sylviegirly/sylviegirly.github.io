@@ -59,13 +59,16 @@
 
             .minecraft-cont a {
                 max-width: calc(33% - 10px);
+                max-height: 141px;
+                aspect-ratio: 16/9;
+                border-radius: var(--border-radius);
+                overflow: hidden;
             }
 
             .minecraft-cont a img {
-                border-radius: var(--border-radius);
                 transition: 0.5s ease-in-out;
-                object-fit: cover;
-                aspect-ratio: 16/9;
+                object-fit: fill;
+                min-height: 100%;
             }
 
             .minecraft-cont a img:hover {
