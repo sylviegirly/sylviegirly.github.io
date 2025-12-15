@@ -424,6 +424,12 @@ customElements.define("left-sidebar", LeftSidebar);
 // DO IMAGE REROLL THINGS
 const images = [
     {
+        imagesrc: "/img/sidebar/sylvie_chibi_10.png",
+        alt: "A chibi Sylvie inside of a flip phone, with flower charms hanging off, and various stickers decorating it. Made by leeleesart.",
+        url: "https://leeleesart.tumblr.com/",
+        freezeframe: false
+    },
+    {
         imagesrc: "/img/sidebar/sylvie_hot.jpg",
         alt: "Sylvie looking towards the viewer, drawn in a sexy style.",
         url: "https://vgen.co/KatheUvu",
