@@ -1,5 +1,30 @@
 const quotes = [
     {
+        quote: '"i want to work on a hobby but i wont because i should be doing more important things" <- person who isnt gonna do either of those',
+        author: "aidashakur",
+        url: "https://www.tumblr.com/aidashakur/190486704276"
+    },
+    {
+        quote: "you should be able to walk into your local CVS and get your uterus removed for $14.99 bro like I don't even care anymore",
+        author: "pearwolf",
+        url: "https://pearwolf.tumblr.com/post/795183999845875712"
+    },
+    {
+        quote: "the lion does not concern himself with where the light source in his drawing is",
+        author: "ph-cutie",
+        url: "https://ph-cutie.tumblr.com/post/799044240408707072"
+    },
+    {
+        quote: "Not wearing glasses anymore. I’ve seen enough",
+        author: "aidashakur",
+        url: "https://www.tumblr.com/aidashakur/190486704276"
+    },
+    {
+        quote: "Everyone loves me for my repetitive speech, my odd noises, my constant forgetfulness, and my repetitive speech",
+        author: "serenadeformice",
+        url: "https://sylviegirly.tumblr.com/post/803331724666863617"
+    },
+    {
         quote: "I still think it’s objectively fucked how the world is built for morning people and if you wake up later than everyone else you’re seen as a malicious aberration of some sort. I am that but it’s not because I wake up at 11 fuck yourself",
         author: "jame7t",
         url: "https://jame7t.tumblr.com/post/774307356666413056"
