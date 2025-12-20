@@ -9,7 +9,21 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-12-16T13:27:12-05:00</updated>
+    <updated>2025-12-19T20:17:13-05:00</updated>
+
+    <entry>
+        <title>End of the year wrap-up blog</title>
+        <link href="https://zhongvie.bearblog.dev/2025-12-19/" />
+        <updated>2025-12-19T20:17:13-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1766193433</id>
+        <content type="html">
+            &#x3C;p&#x3E;I usually haven&#x27;t been linking my blogs on here since they&#x27;re on Bear Blog (and bear
+            blog has its own RSS feed), but since this is a blog post that kinda summarizes my entire year, including my
+            introduction to the indie web side of things, I thought I&#x27;d make an RSS post here as well (sorry for
+            anyone who gets dupes if they follow both). A reflection on what I&#x27;ve accomplished this year, my art
+            summary for 2025, and what I hope for next year to knock out as goals.&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>New poll ... after like half a month</title>
