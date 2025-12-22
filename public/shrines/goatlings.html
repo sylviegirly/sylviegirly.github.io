@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Cool Site for Boiler Plates -->
+        <!-- https://htmlboilerplates.com -->
+
+        <!-- Site Title -->
+        <title>Title</title>
+
+        <!-- Author -->
+        <meta name="author" content="Author" />
+
+        <!-- Site Description -->
+        <meta content="Description." name="description" />
+
+        <!-- CSS: -->
+        <!--<link rel="stylesheet" href="css/style.css" />-->
+        <link rel="stylesheet" href="../css/normalize.css" />
+
+        <!-- JavaScript: -->
+        <!--<script src="js/header.js" defer></script>-->
+
+        <!-- Page Only Styling -->
+        <style>
+            /* -------------------------------------------------------- */
+            /* SCROLLBAR STYLING */
+            /* -------------------------------------------------s------- */
+            /* Firefox */
+            * {
+                scrollbar-width: thin;
+                scrollbar-color: black transparent;
+            }
+
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            *::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            *::-webkit-scrollbar-thumb {
+                background-color: transparent;
+                border-radius: 10px;
+                border: 3px double black;
+            }
+
+            ::selection {
+                color: black;
+                background: lightpink;
+            }
+
+            /* -------------------------------------------------------- */
+            /* BASICS */
+            /* -------------------------------------------------------- */
+            body {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                background-color: lightgray;
+                color: black;
+                font-size: 1em;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+
+                &:focus-visible {
+                    outline-color: red !important;
+                    outline-offset: -1px !important;
+                    outline-style: dotted !important;
+                    outline-width: 2px !important;
+                    border-color: transparent;
+                }
+            }
+
+            html {
+                position: relative;
+            }
+
+            html,
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            a {
+                color: darkmagenta;
+                text-decoration: underline;
+                transition: 0.25s;
+                line-height: 1rem;
+
+                &:hover {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+
+            /* only add external links to paragraphs, blockquotes, and lists */
+            main p a[href^="http"]:after,
+            main blockquote a[href^="http"]:after,
+            main li a[href^="http"]:after {
+                display: inline-block;
+                content: "↗";
+                margin-left: 1px;
+                background-size: 1rem 1rem;
+            }
+
+            /* remove */
+            main {
+                margin: 1em;
+                line-height: 1.5rem;
+                width: 50%;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <img src="../img/misc/weeaboo.jpg" loading="lazy" />
+            <p>
+                I'm putting this as a temporary shrine to return back to when I have time. Rest in peace Goatlings
+                (2010-2025), you and the staff deserved better than whatever Kris was doing.
+            </p>
+            <p>
+                I'll eventually document all the mini pixels used for user icons in due time, as I really liked them as
+                decorations.
+            </p>
+            <p>
+                Summarizing this would be a giant mess, there is evidence on the
+                <a href="https://www.tumblr.com/communities/goatlingsvented">goatlings vent community</a>, but I'm
+                unsure if people need an account to access it.
+            </p>
+        </main>
+    </body>
+</html>
