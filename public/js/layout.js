@@ -270,6 +270,9 @@ const content = `
                         <li id="item-5-5-3">
                             <a id="link-5-5-3" href="/shrines/ukitake.html">Jushiro Ukitake</a>
                         </li>
+                        <li id="item-5-5-3">
+                            <a id="link-5-5-4" href="/shrines/goatlings.html">Goatlings</a>
+                        </li>
                     </ul>
                 </li>
             </ul>

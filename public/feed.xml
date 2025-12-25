@@ -9,7 +9,23 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-12-22T13:48:27-05:00</updated>
+    <updated>2025-12-25T03:10:33-05:00</updated>
+
+    <entry>
+        <title>Goatlings Shrine Update + Template</title>
+        <link href="https://zhongvie.neocities.org/shrines/goatlings" />
+        <updated>2025-12-25T03:10:33-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1766650233</id>
+        <content type="html">
+            &#x3C;p&#x3E;I finalized the bones for my Goatlings shrine, and in the process the template I wanted to make
+            for it ... as such, err ... my shrine is kinda like half done since I was mostly speedrunning to finalize
+            the template to post up (which it now is on my &#x3C;a
+            href=&#x22;https://zhongvie.neocities.org/templates/&#x22;&#x3E;templates&#x3C;/a&#x3E;!). I still wanna
+            make a goatlings profile tab, but I&#x27;d need to figure out the javascript to have a dropdown selection
+            that then populates the template properly with the items ... and that&#x27;s scary:tm:.&#x3C;/p&#x3E;
+            &#x3C;p&#x3E;Future worry for future me, but for now I should finish my own shrine properly.&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Goatlings Shrine</title>

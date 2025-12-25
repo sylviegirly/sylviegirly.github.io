@@ -17,6 +17,9 @@
         <!-- Site Description -->
         <meta content="A work in progress shrine around the pet game Goatlings." name="description" />
 
+        <!-- FavIcon Gif -->
+        <link rel="icon" type="image/png" href="../img/goatlings/favicon.png" />
+
         <!-- CSS: -->
         <!--<link rel="stylesheet" href="css/style.css" />-->
         <link rel="stylesheet" href="../css/normalize.css" />
@@ -26,13 +29,93 @@
 
         <!-- Page Only Styling -->
         <style>
+            @import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap");
+
+            :root {
+                --padding: 10px;
+
+                --user-deco: url(/img/goatlings/Deer.gif);
+                --user-color: #aa0a26;
+                --active-goat: url(https://i.imgur.com/G18cbm0.png);
+
+                --content-bg: #ffffcd;
+                --main-bg: #fff;
+                --main-bg-outline: #ae8960;
+
+                --background-image: url(/img/goatlings/green_bg.png);
+                --header-img: url(/img/goatlings/GoatlingsHeader.gif);
+                --goat-side: url();
+
+                --text: #604325;
+                --bold: #e72083;
+                --italics: #52252d;
+
+                --header: #604325;
+                --header-underline: #ccc5bd;
+
+                --link: #0d85c1;
+                --link-hover: #a6d8f1;
+
+                /* one off/specific colours here */
+                --nav-bg: #956e44;
+                --nav-bg-hover: #3a2316;
+                --nav-outline: #af8a61;
+                --nav-outline-hover: #9a6741;
+                --nav-text: #f8f8c4;
+                --nav-text-outline: #d5b46b;
+
+                --home-h1-bg: #ff9f80;
+                --home-h1-border: #d1f2a5;
+                --home-h1-text: white;
+                --home-h2-bg: #eda45f;
+                --home-h2-text: white;
+                --home-icon-border: black;
+
+                --goat-outline: #eee;
+
+                @media (prefers-color-scheme: dark) {
+                    --content-bg: #1a181e;
+                    --main-bg: #121212;
+                    --main-bg-outline: #424754;
+
+                    --background-image: url(/img/goatlings/blue_bg.png);
+                    --header-img: url(/img/goatlings/GoatlingsHeader.gif);
+
+                    --text: #ffffff;
+                    --bold: #dd3c60;
+                    --italics: pink;
+
+                    --header: #c548ab;
+                    --header-underline: #312d30;
+
+                    --link: #e2708a;
+                    --link-hover: #bc1e42;
+
+                    --nav-bg: #8484aa;
+                    --nav-bg-hover: #3d3d6b;
+                    --nav-outline: #d4d2ec;
+                    --nav-outline-hover: #8888e4;
+                    --nav-text: #dddbfa;
+                    --nav-text-outline: #635f8f;
+
+                    --home-h1-bg: #8484aa;
+                    --home-h1-border: #d4d2ec;
+                    --home-h1-text: white;
+                    --home-h2-bg: #4d566d;
+                    --home-h2-text: white;
+                    --home-icon-border: white;
+
+                    --goat-outline: #212121;
+                }
+            }
+
             /* -------------------------------------------------------- */
             /* SCROLLBAR STYLING */
-            /* -------------------------------------------------s------- */
+            /* -------------------------------------------------------- */
             /* Firefox */
             * {
                 scrollbar-width: thin;
-                scrollbar-color: black transparent;
+                scrollbar-color: var(--bold) transparent;
             }
 
             /* Chrome, Edge, and Safari */
@@ -47,22 +130,22 @@
             *::-webkit-scrollbar-thumb {
                 background-color: transparent;
                 border-radius: 10px;
-                border: 3px double black;
+                border: 3px double var(--bold);
             }
 
             ::selection {
-                color: black;
-                background: lightpink;
+                color: var(--text);
+                background: var(--content-bg);
             }
 
             /* -------------------------------------------------------- */
             /* BASICS */
             /* -------------------------------------------------------- */
             body {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                background-color: lightgray;
-                color: black;
-                font-size: 1em;
+                font-family: Arial, sans-serif;
+                color: var(--text);
+                font-size: 0.8em;
+                background-image: var(--background-image);
             }
 
             * {
@@ -89,13 +172,14 @@
             }
 
             a {
-                color: darkmagenta;
-                text-decoration: underline;
+                color: var(--link);
+                text-decoration: none;
                 transition: 0.25s;
                 line-height: 1rem;
+                font-weight: bold;
 
                 &:hover {
-                    color: black;
+                    color: var(--link-hover);
                     text-decoration: none;
                 }
             }
@@ -110,41 +194,1487 @@
                 background-size: 1rem 1rem;
             }
 
-            /* remove */
-            main {
-                margin: 1em;
-                line-height: 1.5rem;
-                width: 540px;
-                height: 100%;
+            /* -------------------------------------------------------- */
+            /* CONTENT STYLING */
+            /* -------------------------------------------------------- */
+            #contentwrapper {
+                width: 70%;
+                max-width: 1000px;
                 margin-left: auto;
                 margin-right: auto;
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
+                background-color: var(--content-bg);
+            }
+
+            #bodycontainer {
+                display: grid;
+                grid-template-areas: "menu content";
+                grid-template-columns: 130px 3fr;
+                gap: 10px;
+                padding: var(--padding);
+            }
+
+            main {
+                background-color: var(--main-bg);
+                padding: var(--padding);
+                border-radius: 5px;
+                grid-area: content;
+                line-height: 1.35em;
+                position: relative;
+            }
+
+            /* -------------------------------------------------------- */
+            /* FORMATTING */
+            /* -------------------------------------------------------- */
+            main p {
+                padding: 5px 0;
+            }
+
+            main p:first-child {
+                padding-top: 0;
+            }
+
+            main p:last-child {
+                padding-bottom: 0;
+            }
+
+            /* -------------------------------------------------------- */
+            /* HEADER + PET ICON */
+            /* -------------------------------------------------------- */
+            header {
+                width: 100%;
+                height: 125px;
+                background-image: var(--header-img);
+                background-position: center;
+            }
+
+            header::after {
+                content: "";
+                float: right;
+                display: inline-block;
+                background-image: var(--active-goat);
+                width: 110px;
+                height: 110px;
+                margin-top: 10px;
+                background-repeat: no-repeat;
+                background-position: center;
+                display: inline-block;
+                background-size: contain;
+            }
+
+            #user-info {
                 display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 50px;
+                padding: var(--padding);
+            }
+
+            #user-info #left-user {
+                flex: 1;
+                justify-content: left;
+                align-self: center;
+                flex-direction: column;
+            }
+
+            #user-info #right-user {
+                flex: 1;
+                justify-content: right;
+                align-self: center;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .user-icon::before {
+                content: " ";
+                background: var(--user-deco);
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                margin-right: 3px;
+            }
+
+            #timer {
+                font-size: 0.8em;
+            }
+
+            /* -------------------------------------------------------- */
+            /* MAIN CONTENT + NAV */
+            /* -------------------------------------------------------- */
+            #bodycontainer nav {
+                grid-area: menu;
+                font-family: "Comic Relief", system-ui;
+                font-style: normal;
+                position: sticky;
+                top: 10px;
+                height: fit-content;
+            }
+
+            /* BUTTON VERSION */
+            .nav-button {
+                font-variant-caps: small-caps;
+                font-weight: bold;
+                font-size: 1rem;
+                cursor: pointer;
+                display: block;
+                width: 100%;
+                background-color: var(--nav-bg);
+                color: var(--nav-text);
+                text-align: center;
+                margin: 5px 0;
+                padding: 5px 0;
+                border-radius: 5px;
+                border: 5px solid var(--nav-outline);
+                transition: 0.5s;
+                text-shadow:
+                    -2px -2px 2px var(--nav-text-outline),
+                    2px -2px 2px var(--nav-text-outline),
+                    -2px 2px 2px var(--nav-text-outline),
+                    2px 2px 2px var(--nav-text-outline);
+            }
+
+            .nav-button:hover {
+                background-color: var(--nav-bg-hover);
+                border: 5px solid var(--nav-outline-hover);
+                transform: scale(1.1);
+            }
+
+            /* UL VERSION */
+            #bodycontainer nav ul {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            #bodycontainer nav li {
+                font-size: 1rem;
+                display: block;
+                width: 100%;
+                background-color: var(--nav-bg);
+                color: var(--nav-text);
+                text-align: center;
+                margin: 5px 0;
+                padding: 5px 0;
+                border-radius: 5px;
+                border: 5px solid var(--nav-outline);
+                transition: 0.5s;
+            }
+
+            #bodycontainer nav li:hover {
+                background-color: var(--nav-bg-hover);
+                border: 5px solid var(--nav-outline-hover);
+                transform: scale(1.1);
+            }
+
+            #bodycontainer nav li:first-child {
+                margin-top: 0;
+            }
+
+            #bodycontainer nav li:last-child {
+                margin-bottom: 0;
+            }
+
+            #bodycontainer nav li a {
+                font-variant-caps: small-caps;
+                line-height: 0;
+                color: var(--nav-text);
+                text-shadow:
+                    -2px -2px 2px var(--nav-text-outline),
+                    2px -2px 2px var(--nav-text-outline),
+                    -2px 2px 2px var(--nav-text-outline),
+                    2px 2px 2px var(--nav-text-outline);
+            }
+
+            /* -------------------------------------------------------- */
+            /* DECORATIVE */
+            /* -------------------------------------------------------- */
+            #news section,
+            #goats section {
+                border: 1px solid var(--main-bg-outline);
+                border-radius: 4px;
+                padding: var(--padding);
+                margin: 10px 0;
+            }
+
+            h2 {
+                color: var(--header);
+                font-size: 1.4em;
+                margin: 10px 0;
+            }
+
+            bold,
+            b,
+            strong {
+                color: var(--bold);
+            }
+
+            i,
+            em {
+                color: var(--italics);
+            }
+
+            u {
+                text-decoration-color: var(--bold);
+            }
+
+            hr {
+                border: none;
+                border-bottom: 1px solid var(--header-underline);
+            }
+
+            .user-color {
+                color: var(--user-color) !important;
+                font-style: italic;
+            }
+
+            abbr,
+            .tippy {
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                text-decoration-color: var(--bold);
+            }
+
+            /* misc/single-use stuff */
+            .page-title {
+                border-bottom: 1px solid var(--header-underline);
+            }
+
+            #goats section.custom-code {
+                border: none;
+                margin: 0;
+            }
+
+            #search {
+                font-family: arial;
+                margin-top: 10px;
+                width: 100%;
+                background-color: var(--nav-bg);
+                color: var(--nav-text);
+                text-align: center;
+                margin: 5px 0;
+                padding: 10px;
+                border-radius: 5px;
+                border: 5px solid var(--nav-outline);
+                transition: 0.5s;
+            }
+
+            #search input,
+            #search select {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .goat-img {
+                max-width: 200px;
+            }
+
+            /* helper classes */
+            .hide-desktop {
+                display: none;
+            }
+
+            .flexbox-lazy {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
                 justify-content: center;
+                align-content: center;
                 align-items: center;
+                padding: 5px;
+                gap: 5px;
+            }
+
+            .flexbox-lazy a {
+                text-decoration: none;
+                line-height: 0;
+            }
+
+            /* center any item */
+            .center-item {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center; /* align horizontal */
+                align-items: center; /* align vertical */
+                gap: 2px;
+            }
+
+            /* image floats */
+            .float-img-right {
+                max-width: 100px;
+                float: right;
+                margin: 5px 0 5px 10px;
+            }
+
+            .pet-image-active {
+                position: absolute;
+                right: 10px;
+                top: 0px;
+                max-width: 100px;
+                pointer-events: none;
+            }
+            /* -------------------------------------------------------- */
+            /* HOME-PAGE SPECIFIC CSS */
+            /* -------------------------------------------------------- */
+            .home {
+                display: grid;
+                grid-template-areas: "intro aside";
+                grid-template-columns: auto 150px;
+            }
+
+            #home article {
+                grid-area: intro;
+                border: 6px solid var(--home-h1-bg);
+                padding: 10px;
+            }
+
+            #home aside {
+                grid-area: aside;
+                text-align: center;
+                justify-content: center;
+                margin-left: 10px;
+            }
+
+            #home #cool-stuff {
+                border: 3px solid var(--home-h2-bg);
+                background-color: var(--main-bg);
+                margin-top: 10px;
+                text-align: left;
+            }
+
+            #home #cool-stuff ul {
+                font-size: 0.7rem;
+                margin: 10px 0;
+                padding-left: 20px;
+                padding-right: 5px;
+            }
+
+            #home #cool-stuff li::marker {
+                color: var(--bold);
+                content: "❤ ";
+            }
+
+            #home .image-border {
+                border: 2px solid var(--home-icon-border);
+                margin-top: 10px;
+            }
+
+            #home h1 {
+                font: 2.5em georgia;
+                background: var(--home-h1-bg);
+                color: var(--home-h1-text);
+                text-align: center;
+                border-bottom: 10px solid var(--home-h1-border);
+                text-transform: uppercase;
+                margin: 0 0 10px 0;
+            }
+
+            #home h2 {
+                background: var(--home-h2-bg);
+                color: var(--home-h2-text);
+                font: 1.1em georgia;
+                font-weight: normal;
+                text-align: center;
+                margin: 5px 0;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 3px 0;
+            }
+
+            /* -------------------------------------------------------- */
+            /* NEWS POSTS */
+            /* -------------------------------------------------------- */
+            #news .news-header {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                gap: 5px;
+                line-height: 1rem;
+                margin-bottom: 10px;
+            }
+
+            #news .news-header .icon {
+                max-width: 50px;
+                max-height: 50px;
+            }
+
+            #news h3 {
+                font-size: unset;
+                font-weight: bold;
+                color: var(--link);
+                margin-bottom: -8px;
+            }
+
+            /* -------------------------------------------------------- */
+            /* PROFILE LAYOUT */
+            /* -------------------------------------------------------- */
+            .profile-user {
+                display: grid;
+                grid-template-areas: "profile-content profile-icon";
+                grid-template-columns: 1fr 150px;
+                gap: 10px;
+            }
+
+            .profile-user .left-side {
+                line-height: 1.3rem;
+                grid-area: profile-content;
+                display: flex;
+                gap: 10px;
+            }
+
+            .profile-user .right-side {
+                grid-area: profile-icon;
+                align-content: center;
+                text-align: center;
+            }
+
+            .profile-user hr {
+                border-color: var(--home-icon-border);
+                margin: 5px;
+            }
+
+            .goat-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .goat-container > div {
+                padding: 10px;
+                border-radius: 4px;
+                border: 1px solid var(--goat-outline);
+                max-width: calc(25% - 10px);
+                text-align: center;
+            }
+
+            .goat-container > div img {
+                max-width: 160px;
+            }
+
+            .fave-items,
+            .collection {
+                gap: 20px;
+                align-items: baseline;
+                flex-wrap: wrap;
+            }
+
+            .fave-items > div {
+                max-width: calc(20% - 20px);
+                min-width: 90px;
+                text-align: center;
+            }
+
+            .collection > div {
+                max-width: calc(100% / 7 - 20px);
+                min-width: 90px;
+                text-align: center;
+            }
+
+            /* -------------------------------------------------------- */
+            /* FOOTER */
+            /* -------------------------------------------------------- */
+
+            footer {
+                text-align: center;
+                padding: 20px;
+                font-size: 0.7em;
+            }
+
+            /* Inline Lists */
+            footer nav ul {
+                font-size: 1.3em;
+                padding: 0;
+                list-style: none;
+                margin-bottom: 10px;
+            }
+
+            footer nav li a {
+                font-weight: bold;
+            }
+
+            footer nav li {
+                display: inline;
+                line-height: 1.2em;
+            }
+
+            footer nav li:after {
+                content: " |";
+            }
+
+            footer nav li:first-child {
+                padding-left: 0;
+            }
+
+            footer nav li:last-child {
+                padding-right: 0;
+            }
+
+            footer nav li:last-child:after {
+                content: "";
+                margin-left: 0;
+            }
+
+            /* -------------------------------------------------------- */
+            /* ACCESSIBILITY, DO NOT REMOVE */
+            /* -------------------------------------------------------- */
+            #skip a {
+                position: absolute;
+                display: inline-block;
+                left: 0;
+                top: -1000px;
+                overflow: hidden;
+                transition: top 0.5s ease;
+                background: var(--content-bg);
+                color: var(--link);
+                z-index: 1000;
+                padding: 10px;
+            }
+
+            #skip a:focus {
+                top: 0;
+                transition: top 0.5s ease;
+            }
+
+            /* -------------------------------------------------------- */
+            /* MOBILE RESPONSIVENESS */
+            /* -------------------------------------------------------- */
+            @media screen and (max-width: 900px) {
+                #contentwrapper {
+                    width: 95%;
+                }
+
+                #bodycontainer {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .home {
+                    display: block;
+                }
+
+                #bodycontainer nav {
+                    display: flex;
+                    gap: 10px;
+                }
+
+                #bodycontainer nav button,
+                #bodycontainer nav li,
+                #bodycontainer nav ul {
+                    margin: 0;
+                }
+
+                .hide-mobile {
+                    display: none;
+                }
+
+                #bodycontainer nav {
+                    position: static;
+                }
             }
         </style>
     </head>
     <body>
-        <main>
-            <img src="../img/misc/weeaboo.jpg" loading="lazy" />
-            <p>
-                I'm putting this as a temporary shrine to return back to when I have time. Rest in peace Goatlings
-                (2010-2025), you and the staff deserved better than whatever Kris was doing.
-            </p>
-            <p>
-                I'll eventually document all the mini pixels used for user icons in due time, as I really liked them as
-                decorations.
-            </p>
-            <p>
-                Summarizing this would be a giant mess, there is evidence on the
-                <a href="https://www.tumblr.com/communities/goatlingsvented">goatlings vent community</a>, but
-                unfortunately you need a tumblr account to access it due to the nature of the community being flagged as
-                NSFW (mostly due to mature topics).
-            </p>
-            <p><a href="/index.html">Back to site.</a></p>
-        </main>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Container. -->
+        <!-- =============================================== -->
+        <div id="contentwrapper">
+            <header></header>
+
+            <!-- =============================================== -->
+            <!-- User Info + Currency. -->
+            <!-- =============================================== -->
+            <div id="user-info" aria-hidden="true">
+                <div id="left-user">
+                    <p>
+                        Welcome <a href="#" class="user-icon user-color">Aid</a> - Your active goat is
+                        <a href="#">Sylvie</a><br />
+                    </p>
+                    <div id="timer"></div>
+                </div>
+                <div id="right-user">
+                    <div>
+                        <p><img src="../img/goatlings/mail3.gif" loading="lazy" alt="mail icon" /></p>
+                    </div>
+                    <div>
+                        <p><img src="../img/goatlings/dd_gem.gif" loading="lazy" alt="diamond dust" /> 69,420</p>
+                    </div>
+                    <div>
+                        <p><img src="../img/goatlings/SS2.gif" loading="lazy" alt="diamond dust" /> 10,210,460</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =============================================== -->
+            <!-- Body Container. -->
+            <!-- =============================================== -->
+            <div id="bodycontainer">
+                <!-- =============================================== -->
+                <!-- Tab Links. -->
+                <!-- =============================================== -->
+                <nav>
+                    <div class="center-item hide-mobile">
+                        <img src="../img/goatlings/49999.png" alt="" loading="lazy" aria-hidden="true" />
+                    </div>
+                    <button class="nav-button" onclick="openGoatTab('home')">Home</button>
+                    <button class="nav-button" onclick="openGoatTab('news')">News</button>
+                    <button class="nav-button" onclick="openGoatTab('goats')">Profile</button>
+                    <button class="nav-button" onclick="openGoatTab('gallery')">Collection</button>
+                    <button class="nav-button" onclick="openGoatTab('icons')">User Icons</button>
+                    <button class="nav-button" onclick="openGoatTab('credits')">Credits</button>
+                    <ul>
+                        <li><a href="/index.html">Back to Site</a></li>
+                    </ul>
+
+                    <!-- =============================================== -->
+                    <!-- Fake Search. -->
+                    <!-- =============================================== -->
+                    <div id="search" class="hide-mobile" aria-hidden="true">
+                        <p>Search Keyword</p>
+                        <input tabindex="-1" />
+                        <p>Specifics</p>
+                        <select name="Specifics" id="specifics" tabindex="-1">
+                            <option value="0">-Containing-</option>
+                            <option value="1">-Identical-</option>
+                        </select>
+                        <p>Category</p>
+                        <select name="Category" id="category" tabindex="-1">
+                            <option value="0">-Item Name-</option>
+                            <option value="1">-Member-</option>
+                            <option value="2">-Pets-</option>
+                        </select>
+                        <button tabindex="-1">Search</button>
+                    </div>
+                </nav>
+
+                <!-- =============================================== -->
+                <!-- Main Content. -->
+                <!-- =============================================== -->
+                <main id="content">
+                    <!-- =============================================== -->
+                    <!-- Home Tab. -->
+                    <!-- =============================================== -->
+                    <div id="home" class="tabbed">
+                        <div class="home">
+                            <!-- =============================================== -->
+                            <!-- Home Intro. -->
+                            <!-- =============================================== -->
+                            <article>
+                                <section>
+                                    <h1>Hello Motherfuckers</h1>
+                                </section>
+                                <img
+                                    src="../img/goatlings/goat_cake.png"
+                                    alt=""
+                                    aria-hidden="true"
+                                    style="float: left; margin-right: 10px" />
+                                <p><b>Come one, come all! Welcome to the Kingdom of Goatlings!</b></p>
+                                <p>
+                                    Welcome to my little Goatlings Shrine, made as the end of service for Goatlings has
+                                    basically arrived ... I'm um ... I'm still working on this, I kinda speedran
+                                    finishing the bones to post it as a template so I kinda left <i>my</i> portion of
+                                    the shrine half cooked LOL. I joined Goatlings in <b>2017</b> and have been playing
+                                    on and off for the <u>last 8 years</u>, and I had the cool, cool ID of
+                                    <i>#49999</i>. Literally one off of #50000 ...
+                                </p>
+                                <p>
+                                    I really enjoyed the simplicity of it, the gorgeous art styles, the ability to
+                                    submit art that could become part of the site, the close-knit community, and the way
+                                    the moderators and staff felt like a part of the community. This is kind of just an
+                                    ode to the site, and a remake in its style (but not using tables, lol. sorry if
+                                    there's one thing I hated was relying on tables + stripped CSS to do anything for
+                                    profile layouts).
+                                </p>
+                                <p>
+                                    (Only reason the header is 'Hello Motherfuckers' is because I had it as a
+                                    placeholder and someone thought it was funny so I'm keeping it.)
+                                </p>
+                                <div class="flexbox-lazy">
+                                    <img
+                                        src="../img/goatlings/home3.gif"
+                                        alt="welcome to goatlings. register now"
+                                        loading="lazy" />
+                                    <img
+                                        src="../img/goatlings/home2.gif"
+                                        alt="use appearance dolls to change your pet!"
+                                        loading="lazy" />
+                                    <img
+                                        src="../img/goatlings/home5.gif"
+                                        alt="best viewed with firefox. not 100% compatible on mobile."
+                                        loading="lazy" />
+                                </div>
+                                <section>
+                                    <h2>my beloved goal</h2>
+                                    <div class="flexbox-lazy" style="align-items: baseline">
+                                        <img src="../img/goatlings/party_pooper.png" alt="" loading="lazy" />
+                                        <img
+                                            src="https://i.imgur.com/wLX61o0.png"
+                                            class="goat-img"
+                                            alt="Ribbon Romantic Goat"
+                                            loading="lazy" />
+                                        <img src="../img/goatlings/party_pooper_flip.png" alt="" loading="lazy" />
+                                    </div>
+                                </section>
+                                <section>
+                                    <h2>favourite items</h2>
+                                    <div class="flexbox-lazy fave-items">
+                                        <div>
+                                            <img
+                                                src="https://www.goatlings.com/images/items/SugarStarGiftPlush.gif" /><br />
+                                            <p>Sugar Star Gift Plush But Longer Line</p>
+                                        </div>
+                                        <div>
+                                            <img
+                                                src="https://www.goatlings.com/images/items/SugarStarGiftPlush.gif" /><br />
+                                            <p>Sugar Star Gift Plush</p>
+                                        </div>
+                                        <div>
+                                            <img
+                                                src="https://www.goatlings.com/images/items/SugarStarGiftPlush.gif" /><br />
+                                            <p>Sugar Star Gift Plush</p>
+                                        </div>
+                                        <div>
+                                            <img
+                                                src="https://www.goatlings.com/images/items/SugarStarGiftPlush.gif" /><br />
+                                            <p>Sugar Star Gift Plush</p>
+                                        </div>
+                                        <div>
+                                            <img
+                                                src="https://www.goatlings.com/images/items/SugarStarGiftPlush.gif" /><br />
+                                            <p>Sugar Star Gift Plush</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section>
+                                    <h2>to-do list (temp)</h2>
+                                    <ul>
+                                        <li>
+                                            tab toggles:
+                                            <ul>
+                                                <li>
+                                                    'news' - my history with it, what i like, my gripes, fave designs,
+                                                    good memories, graphics i wanna keep like the site buttons, etc
+                                                </li>
+                                                <li>
+                                                    collection - just remake the collection page layout but w/o needing
+                                                    to worry about pages ... why were the bottom tabs never even!!!!
+                                                </li>
+                                                <li>
+                                                    my goats - probs just a list of all my goats divvied by section ...
+                                                    maybe using
+                                                    <a
+                                                        href="https://werewolf-girlfriend.itch.io/website-gallery-template"
+                                                        >werewolf-girlfriend's gallery</a
+                                                    >?
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>localize font + move CSS to ... CSS</li>
+                                        <li>
+                                            maybe look into JS solution to dropdown toggle goatling profiles in a tab to
+                                            write out treasures and what not ... JS database/list?
+                                        </li>
+                                        <li>fix selection colour CSS (use header 1 colors)</li>
+                                    </ul>
+                                </section>
+                            </article>
+                            <!-- =============================================== -->
+                            <!-- HA Buddy Aside. -->
+                            <!-- =============================================== -->
+                            <aside class="hide-mobile" aria-hidden="true">
+                                <div id="ha-shuffle"></div>
+                                <p><b>Featured HA Buddy </b><br />Aid</p>
+                                <div id="cool-stuff">
+                                    <h2 style="margin: 0">Fun Features!</h2>
+                                    <ul>
+                                        <li>Free To Play</li>
+                                        <li>Adopt Goatlings</li>
+                                        <li>Change Their Look</li>
+                                        <li>Battle Center</li>
+                                        <li>Training Center</li>
+                                        <li>Explore Area</li>
+                                        <li>Dress Up Avatar</li>
+                                        <li>User Shops</li>
+                                        <li>User Galleries</li>
+                                        <li>Club Houses</li>
+                                        <li>Bank With Interest</li>
+                                        <li>Restocking</li>
+                                        <li>Trades</li>
+                                        <li>Auctions</li>
+                                        <li>Quests</li>
+                                        <li>Forums</li>
+                                        <li>Live Chat</li>
+                                        <li>Display Name Icons</li>
+                                        <li>Crafting</li>
+                                        <li>Events</li>
+                                        <li>Wishing Well</li>
+                                        <li>Contests</li>
+                                        <li>Limited Editions</li>
+                                        <li>Lucky Boxes</li>
+                                        <li>Arcade</li>
+                                        <li>Shopping District</li>
+                                        <li>VIP Shop</li>
+                                        <li>Cash Shop</li>
+                                        <li>Gift Shop</li>
+                                        <li>Creative Park</li>
+                                        <li>Contribute Designs</li>
+                                        <li>Friendly Community</li>
+                                        <li>Super Cute</li>
+                                        <li>Ad Free</li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <!-- =============================================== -->
+                    <!-- History Tab. -->
+                    <!-- =============================================== -->
+                    <div id="news" class="tabbed" style="display: none">
+                        <article>
+                            <h2 class="page-title">My History With Goatlings</h2>
+                            <section aria-labelledby="myhistory">
+                                <div class="news-header">
+                                    <img
+                                        src="../img/goatlings/49999.png"
+                                        class="icon"
+                                        loading="lazy"
+                                        alt=""
+                                        aria-hidden="true" />
+                                    <div>
+                                        <h3 id="myhistory">How did I find this place?</h3>
+                                        <p>
+                                            Posted by <a href="#" class="user-icon user-color">Aid</a><br />on
+                                            <time>2025-12-24 12:00:07</time>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>
+                                    History tab. Yeah yeah I know semantically an article needs a header, I'll probably
+                                    remake the news headers and have it be like. H3 or something.
+                                </p>
+                            </section>
+                            <section aria-labelledby="whatilike">
+                                <div class="news-header">
+                                    <img
+                                        src="../img/goatlings/49999.png"
+                                        class="icon"
+                                        loading="lazy"
+                                        alt=""
+                                        aria-hidden="true" />
+                                    <div>
+                                        <h3 id="whatilike">What are some of my favourite designs?</h3>
+                                        <p>
+                                            Posted by <a href="#" class="user-icon user-color">Aid</a><br />on
+                                            <time>2025-12-24 12:00:07</time>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>
+                                    Gonna make a cool list of all the beloved designs here that I like ... maybe cap it
+                                    to like. 8 of them, 4 in a row?
+                                </p>
+                                <ul>
+                                    <li>Ribbon Romantic AD</li>
+                                    <li>Divine Guardian RAD</li>
+                                    <li>Marbled Candy RAD</li>
+                                    <li>Sweet Bat AD</li>
+                                    <li>Gaia AD</li>
+                                    <li>Gold Leaf AD</li>
+                                </ul>
+                            </section>
+                        </article>
+                    </div>
+
+                    <!-- =============================================== -->
+                    <!-- Goat Tabs. -->
+                    <!-- =============================================== -->
+                    <div id="goats" class="tabbed" style="display: none">
+                        <!--<img
+                            src="https://f2.toyhou.se/file/f2-toyhou-se/images/75603286_ErtqjxeZFmcy572.png"
+                            class="pet-image-active" />-->
+                        <h2 class="page-title">Profile Aid</h2>
+                        <!--<section class="custom-code">
+                            <p>
+                                You could put in custom code here and do whatever, or remove. This layout isn't catered
+                                to have custom goat profiles, or tabs, sowwy. If you're curious in making tabs for your
+                                goats, you could do what I did for the tabs here (I used Solaria's CSS tabs guide)
+                            </p>
+                        </section>-->
+                        <section>
+                            <!-- =============================================== -->
+                            <!-- Custom Code. -->
+                            <!-- =============================================== -->
+
+                            <!-- =============================================== -->
+                            <!-- User Information. -->
+                            <!-- =============================================== -->
+                            <div class="profile-user">
+                                <div class="left-side">
+                                    <div>
+                                        <p>
+                                            <b>Username:</b><br /><b>Status:</b><br /><b>Joined:</b><br /><b
+                                                >Referrals:</b
+                                            ><br /><b>Location:</b><br /><b>Forum Posts:</b><br /><b>Love:</b>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Aid<br />Online<br />
+                                            2017-05-28<br />1<br />Sumeru's forests (GT+0)<br />180<br />352 (<a href=""
+                                                >Give Love</a
+                                            >)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div style="display: flex; gap: 5px; justify-content: center; :center; width: 100%">
+                                        <img src="../img/goatlings/mail3.gif" alt="" loading="lazy" />
+                                        <img src="../img/goatlings/bud.gif" alt="" loading="lazy" />
+                                        <img src="../img/goatlings/premium.gif" alt="" loading="lazy" />
+                                        <img src="../img/goatlings/female.gif" alt="" loading="lazy" />
+                                    </div>
+                                    <hr />
+                                    <b>HA Buddy</b><br />
+                                    <img src="../img/goatlings/49999.png" alt="" loading="lazy" />
+                                </div>
+                            </div>
+
+                            <!-- =============================================== -->
+                            <!-- Tab Icons. -->
+                            <!-- =============================================== -->
+                            <p><b>Goatlings</b><br />Click tabs to view more.</p>
+                            <!-- =============================================== -->
+                            <!-- Goat Tab One. -->
+                            <!-- =============================================== -->
+                            <div class="goat-container">
+                                <div>
+                                    <img src="https://www.goatlings.com/images/pets/Galaxy.gif" /><a href="#">Ahaur</a>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/pets/Galaxy.gif" /><a href="#">Ahaur</a>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/pets/Galaxy.gif" /><a href="#">Ahaur</a>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/pets/Galaxy.gif" /><a href="#">Ahaur</a>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/pets/Galaxy.gif" /><a href="#">Ahaur</a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- =============================================== -->
+                    <!-- Gallery. -->
+                    <!-- =============================================== -->
+                    <div id="gallery" class="tabbed" style="display: none">
+                        <h2 class="page-title">Gallery</h2>
+                        <section>
+                            <p style="margin-bottom: -10px"><b>Viewing Gallery:</b> ❤ collectibles</p>
+                            <p><b>Owner:</b> <a href="#" class="user-icon user-color">Aid</a></p>
+                            <p>Put your own personal code here for your collection layout...!</p>
+                            <hr />
+                            <p>Search: <input /> <button>Search</button></p>
+                            <hr />
+                            <div class="flexbox-lazy collection">
+                                <div>
+                                    <img src="https://www.goatlings.com/images/items/Florals.gif" />
+                                    <p>Florals<br />Stock: 5</p>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/items/Florals.gif" />
+                                    <p>Florals<br />Stock: 5</p>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/items/Florals.gif" />
+                                    <p>Florals<br />Stock: 5</p>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/items/Florals.gif" />
+                                    <p>Florals<br />Stock: 5</p>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/items/Florals.gif" />
+                                    <p>Florals<br />Stock: 5</p>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/items/Florals.gif" />
+                                    <p>Florals<br />Stock: 5</p>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/items/Florals.gif" />
+                                    <p>Florals<br />Stock: 5</p>
+                                </div>
+                                <div>
+                                    <img src="https://www.goatlings.com/images/items/Florals.gif" />
+                                    <p>Florals<br />Stock: 5</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- =============================================== -->
+                    <!-- User Icons. -->
+                    <!-- =============================================== -->
+                    <div id="icons" class="tabbed" style="display: none">
+                        <article>
+                            <h2 class="page-title">User Icons</h2>
+                            <p>
+                                I would've been really sad to see all of the user icons made on Goatlings go to waste,
+                                so I thought I'd re-host them here. You <b>can</b> link these, only because they are
+                                hosted on imgbb, but please do save them to be safe, and please credit them back to the
+                                site.
+                            </p>
+                            <p>
+                                I sorely wish I could credit every individual artist that did make these, but credits
+                                for who made which user icon is scant.
+                            </p>
+                            <hr />
+                            <div class="flexbox-lazy">
+                                <img
+                                    src="https://i.ibb.co/HfvnBtTG/2014-GGArtist.gif"
+                                    alt="2014GGArtist"
+                                    loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/gFJz7WRh/2014-GGWriter.gif"
+                                    alt="2014GGWriter"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/YF1MyWWp/Ace-Pride.gif" alt="Ace Pride" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/67q5Z5TV/Agender-Pride.gif"
+                                    alt="Agender Pride"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/GQBBJ96x/Alien.gif" alt="Alien" loading="lazy" />
+                                <img src="https://i.ibb.co/QFT12fFk/Anchor.gif" alt="Anchor" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/C3K5YrST/Angel-Wings-Icon.gif"
+                                    alt="Angel Wings Icon"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/sJJ8Y4dq/Apples.gif" alt="Apples" loading="lazy" />
+                                <img src="https://i.ibb.co/k2Wt3r0y/Aroace.gif" alt="Aroace" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/99SfgZr0/Aromantic-Pride.gif"
+                                    alt="Aromantic Pride"
+                                    loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/23z833pZ/Autism-Infinity.gif"
+                                    alt="Autism Infinity"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/KjVzRgct/Avocado.gif" alt="Avocado" loading="lazy" />
+                                <img src="https://i.ibb.co/WvqCLNTm/Axolotl.gif" alt="Axolotl" loading="lazy" />
+                                <img src="https://i.ibb.co/PZ0yrZGc/Baby-Phan.gif" alt="Baby Phan" loading="lazy" />
+                                <img src="https://i.ibb.co/Xxnzmn4L/Banana.gif" alt="Banana" loading="lazy" />
+                                <img src="https://i.ibb.co/mVMH7x6X/Bat.gif" alt="Bat" loading="lazy" />
+                                <img src="https://i.ibb.co/tTVD9R0Q/Batty-Icon.gif" alt="Batty Icon" loading="lazy" />
+                                <img src="https://i.ibb.co/4QsWMzQ/Beach-Ball.gif" alt="Beach Ball" loading="lazy" />
+                                <img src="https://i.ibb.co/rKzK7Y58/Beagle.gif" alt="Beagle" loading="lazy" />
+                                <img src="https://i.ibb.co/dsJ8qqrZ/Bean-Sprout.gif" alt="Bean Sprout" loading="lazy" />
+                                <img src="https://i.ibb.co/3yXwWgkJ/Bee.gif" alt="Bee" loading="lazy" />
+                                <img src="https://i.ibb.co/8nwqD1cY/Bigender.gif" alt="Bigender" loading="lazy" />
+                                <img src="https://i.ibb.co/84K802c1/Bi-Pride.gif" alt="Bi Pride" loading="lazy" />
+                                <img src="https://i.ibb.co/YTyc5P9R/Black-Cat.gif" alt="Black Cat" loading="lazy" />
+                                <img src="https://i.ibb.co/YB3vSFx4/Blue-Jelly.gif" alt="Blue Jelly" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/kVBjQPW0/Bottle-Of-Love-Icon.gif"
+                                    alt="Bottle Of Love Icon"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/svnzCZ1H/Bowof-Cupid.gif" alt="Bowof Cupid" loading="lazy" />
+                                <img src="https://i.ibb.co/CKQn1hdj/Bubbles.gif" alt="Bubbles" loading="lazy" />
+                                <img src="https://i.ibb.co/xqSCnhmd/Bunny.gif" alt="Bunny" loading="lazy" />
+                                <img src="https://i.ibb.co/R1zZPCM/bunnyface.gif" alt="bunnyface" loading="lazy" />
+                                <img src="https://i.ibb.co/gL3kdZyT/Bun-Pop.gif" alt="Bun Pop" loading="lazy" />
+                                <img src="https://i.ibb.co/HpTxMgxL/Burg.gif" alt="Burg" loading="lazy" />
+                                <img src="https://i.ibb.co/wF4wxc4d/Cake.gif" alt="Cake" loading="lazy" />
+                                <img src="https://i.ibb.co/fVzDS4r3/Campfire.gif" alt="Campfire" loading="lazy" />
+                                <img src="https://i.ibb.co/TDK3C3x0/Candle.gif" alt="Candle" loading="lazy" />
+                                <img src="https://i.ibb.co/Q34wwS8L/Candy.gif" alt="Candy" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/0yqgGFsr/Candy-Cane-Heart.gif"
+                                    alt="Candy Cane Heart"
+                                    loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/KpWdGjxQ/Candy-Cane-Sword.gif"
+                                    alt="Candy Cane Sword"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/chC6FyPS/Candy-Corn.gif" alt="Candy Corn" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/F47LLBFh/Candy-Jack-Apple.gif"
+                                    alt="Candy Jack Apple"
+                                    loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/9kjcRPV5/Caramel-Apple.gif"
+                                    alt="Caramel Apple"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/sdmWRrBk/Cardinal.gif" alt="Cardinal" loading="lazy" />
+                                <img src="https://i.ibb.co/Rkg4ccDq/Carousel-1.gif" alt="Carousel" loading="lazy" />
+                                <img src="https://i.ibb.co/9mHBjtN6/cat.gif" alt="cat" loading="lazy" />
+                                <img src="https://i.ibb.co/3YWSSDwm/Cauldron.gif" alt="Cauldron" loading="lazy" />
+                                <img src="https://i.ibb.co/C5yMRjys/Cheesecake.gif" alt="Cheesecake" loading="lazy" />
+                                <img src="https://i.ibb.co/pssd073/Cherry.gif" alt="Cherry" loading="lazy" />
+                                <img src="https://i.ibb.co/Xk744X8M/Chick.gif" alt="Chick" loading="lazy" />
+                                <img src="https://i.ibb.co/FqJ9Xj3w/Chickadee.gif" alt="Chickadee" loading="lazy" />
+                                <img src="https://i.ibb.co/7dPZtXt9/Cinthean.gif" alt="Cinthean" loading="lazy" />
+                                <img src="https://i.ibb.co/8nyJLrx1/Citrus-Pop.gif" alt="Citrus Pop" loading="lazy" />
+                                <img src="https://i.ibb.co/hRRHhMW1/Coffee-Cup.gif" alt="Coffee Cup" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/8n4NH8GJ/Constellation.gif"
+                                    alt="Constellation"
+                                    loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/jv2gv3sP/Conversation-Hearts.gif"
+                                    alt="Conversation Hearts"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/7JfdmJtb/cookie.gif" alt="cookie" loading="lazy" />
+                                <img src="https://i.ibb.co/mrQ0Sj5w/coolgoat.gif" alt="coolgoat" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/wrJhx3rR/Corsair-Flag.gif"
+                                    alt="Corsair Flag"
+                                    loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/d4Fv4wV2/Cotton-Candy.gif"
+                                    alt="Cotton Candy"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/4w7GKjnw/Crab.gif" alt="Crab" loading="lazy" />
+                                <img src="https://i.ibb.co/HLY0pfgN/Cupcake.gif" alt="Cupcake" loading="lazy" />
+                                <img src="https://i.ibb.co/1cpMFsT/Daisy.gif" alt="Daisy" loading="lazy" />
+                                <img src="https://i.ibb.co/7Jf18Dsr/Dango.gif" alt="Dango" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/6cSB2ttW/Dawn-Heart-Icon.gif"
+                                    alt="Dawn Heart Icon"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/9KTP74P/Deer.gif" alt="Deer" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/T5ws03q/Deer-Antlers.gif"
+                                    alt="Deer Antlers"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/dsM70fSp/Demi.gif" alt="Demi" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/RpfkhCHv/Demiboy-Pride.gif"
+                                    alt="Demiboy Pride"
+                                    loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/9mmPYBBh/Demigirl-Pride.gif"
+                                    alt="Demigirl Pride"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/rRRVS3sV/dewdrop.gif" alt="dewdrop" loading="lazy" />
+                                <img src="https://i.ibb.co/nNMd4xXG/dino.gif" alt="dino" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/MDNjSQLM/Divine-Guardian.gif"
+                                    alt="Divine Guardian"
+                                    loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/mVcgL273/Divine-Guardian-RAD.gif"
+                                    alt="Divine Guardian RAD"
+                                    loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/wN3wM9Tw/Doctor-Pester-Mask.gif"
+                                    alt="Doctor Pester Mask"
+                                    loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/pvc1qLbZ/Double-Popsicle.gif"
+                                    alt="Double Popsicle"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/nsGy7Kj8/Dragon-Egg.gif" alt="Dragon Egg" loading="lazy" />
+                                <img src="https://i.ibb.co/r1bhHnw/dragonfly.gif" alt="dragonfly" loading="lazy" />
+                                <img src="https://i.ibb.co/5xMqVPyw/Drink.gif" alt="Drink" loading="lazy" />
+                                <img src="https://i.ibb.co/4ZnQk8r8/drop.gif" alt="drop" loading="lazy" />
+                                <img
+                                    src="https://i.ibb.co/Y7638G81/Dusk-Heart-Icon.gif"
+                                    alt="Dusk Heart Icon"
+                                    loading="lazy" />
+                                <img src="https://i.ibb.co/3mKFVbTZ/Ebil-Eye.gif" alt="Ebil Eye" />
+                                <img src="https://i.ibb.co/pBNQzd57/Elephant.gif" alt="Elephant" />
+                                <img src="https://i.ibb.co/39k0gXDj/Exclaim.gif" alt="Exclaim" />
+                                <img src="https://i.ibb.co/dsp5ZGkY/Fall-Leaves.gif" alt="Fall Leaves" />
+                                <img src="https://i.ibb.co/8n3YCsM5/Feather.gif" alt="Feather" />
+                                <img src="https://i.ibb.co/93rm48sk/Feather-Quill-Icon.gif" alt="Feather Quill Icon" />
+                                <img src="https://i.ibb.co/Lzhc6BnB/Ferret-Face.gif" alt="Ferret Face" />
+                                <img src="https://i.ibb.co/YBPMJrS8/Fish.gif" alt="Fish" />
+                                <img src="https://i.ibb.co/vCyp2rmp/Fishing.gif" alt="Fishing" />
+                                <img src="https://i.ibb.co/1G9jZK6c/Fizzy-Drink.gif" alt="Fizzy Drink" />
+                                <img src="https://i.ibb.co/21RP8Zdn/fox.gif" alt="fox" />
+                                <img src="https://i.ibb.co/BKqYW6Bp/frenchtoast.gif" alt="frenchtoast" />
+                                <img src="https://i.ibb.co/tTQczv4W/Fries.gif" alt="Fries" />
+                                <img src="https://i.ibb.co/Mk2fW5MY/frog.gif" alt="frog" />
+                                <img src="https://i.ibb.co/QvHFpk8T/frogface.gif" alt="frogface" />
+                                <img src="https://i.ibb.co/XkJQssQR/Full-Moon.gif" alt="Full Moon" />
+                                <img src="https://i.ibb.co/j96nZ7JN/Game-Controller.gif" alt="Game Controller" />
+                                <img src="https://i.ibb.co/JjRXLvpS/Game-Kid.gif" alt="Game Kid" />
+                                <img src="https://i.ibb.co/yBQMCzxG/Gavel.gif" alt="Gavel" />
+                                <img src="https://i.ibb.co/DHd6qqCk/Genderfluid-Pride.gif" alt="Genderfluid Pride" />
+                                <img src="https://i.ibb.co/hzHmqhG/Genderqueer.gif" alt="Genderqueer" />
+                                <img src="https://i.ibb.co/8yj65zg/Ghost.gif" alt="Ghost" />
+                                <img src="https://i.ibb.co/nq9wnjsj/Gilbert-Baker.gif" alt="Gilbert Baker" />
+                                <img src="https://i.ibb.co/TBGrhP94/Giraffe-Pool-Float.gif" alt="Giraffe Pool Float" />
+                                <img src="https://i.ibb.co/Kcvb8Psj/goatface.gif" alt="goatface" />
+                                <img src="https://i.ibb.co/G468qQrK/Golden-Sun.gif" alt="Golden Sun" />
+                                <img src="https://i.ibb.co/wFK57K62/GPStaff.gif" alt="GPStaff" />
+                                <img src="https://i.ibb.co/8gCR3Vhf/Grapefruit-Slice.gif" alt="Grapefruit Slice" />
+                                <img src="https://i.ibb.co/Y403v90y/Grass-Vitch.gif" alt="Grass Vitch" />
+                                <img src="https://i.ibb.co/S4Q1Sdhc/Gray-Goat.gif" alt="Gray Goat" />
+                                <img src="https://i.ibb.co/LdbJjmws/Guitar.gif" alt="Guitar" />
+                                <img src="https://i.ibb.co/G4M5tF9G/hammer.gif" alt="hammer" />
+                                <img src="https://i.ibb.co/VXjWFrm/Hawkmoth.gif" alt="Hawkmoth" />
+                                <img src="https://i.ibb.co/QV9wmXt/Health-Potion.gif" alt="Health Potion" />
+                                <img src="https://i.ibb.co/hF6NknHm/Heart.gif" alt="Heart" />
+                                <img src="https://i.ibb.co/93fK22KP/Heartbreak.gif" alt="Heartbreak" />
+                                <img src="https://i.ibb.co/TByNGZ9X/Heart-Bubble.gif" alt="Heart Bubble" />
+                                <img src="https://i.ibb.co/ZRqsPhFs/Heart-Cactus-Icon.gif" alt="Heart Cactus Icon" />
+                                <img src="https://i.ibb.co/5g0zbY7P/Heart-Ferris-Wheel.gif" alt="Heart Ferris Wheel" />
+                                <img src="https://i.ibb.co/4nyt0cVq/Heart-Staff.gif" alt="Heart Staff" />
+                                <img src="https://i.ibb.co/dZDZpJQ/Heart-Sword.gif" alt="Heart Sword" />
+                                <img src="https://i.ibb.co/fd2VFk5J/Hedgehog.gif" alt="Hedgehog" />
+                                <img src="https://i.ibb.co/kgnHLCsV/hoofprint.gif" alt="hoofprint" />
+                                <img src="https://i.ibb.co/zTvBzPWd/Hot-Air-Balloon.gif" alt="Hot Air Balloon" />
+                                <img src="https://i.ibb.co/vxy8G5Jd/Hot-Chocolate.gif" alt="Hot Chocolate" />
+                                <img src="https://i.ibb.co/7tm0Z2nY/Hot-Cocoa.gif" alt="Hot Cocoa" />
+                                <img src="https://i.ibb.co/ccmt3D2s/Hum-Bird.gif" alt="Hum Bird" />
+                                <img src="https://i.ibb.co/4R7pFR0K/Ice-Cream.gif" alt="Ice Cream" />
+                                <img src="https://i.ibb.co/VcfS88L2/Ice-Cream-Sam.gif" alt="Ice Cream Sam" />
+                                <img src="https://i.ibb.co/Z1f2VRKX/Ice-Heart.gif" alt="Ice Heart" />
+                                <img src="https://i.ibb.co/20Y4GpXG/Ice-Queen.gif" alt="Ice Queen" />
+                                <img src="https://i.ibb.co/YB3V75Wq/Intersex.gif" alt="Intersex" />
+                                <img src="https://i.ibb.co/nNPWtgcX/Koala.gif" alt="Koala" />
+                                <img src="https://i.ibb.co/dCdWwRF/Koi-Pond.gif" alt="Koi Pond" />
+                                <img src="https://i.ibb.co/7tnRHDLn/Koi-River.gif" alt="Koi River" />
+                                <img src="https://i.ibb.co/twvhfDFt/Lavender-Sprig.gif" alt="Lavender Sprig" />
+                                <img src="https://i.ibb.co/5gXTT6yc/Leaf.gif" alt="Leaf" />
+                                <img src="https://i.ibb.co/nsGG9NYk/Lemon-Slice.gif" alt="Lemon Slice" />
+                                <img src="https://i.ibb.co/b5GCFfVP/Lesbian-Pride.gif" alt="Lesbian Pride" />
+                                <img src="https://i.ibb.co/WNwg9J4x/Lil-Snail.gif" alt="Lil Snail" />
+                                <img src="https://i.ibb.co/S43CTcQv/Lilypad.gif" alt="Lilypad" />
+                                <img src="https://i.ibb.co/60k9zbBS/Lime-Slice.gif" alt="Lime Slice" />
+                                <img src="https://i.ibb.co/dwgC3Lmh/Lionhead-Goldfish.gif" alt="Lionhead Goldfish" />
+                                <img src="https://i.ibb.co/Fb97kg5V/Lobster.gif" alt="Lobster" />
+                                <img src="https://i.ibb.co/nqdDfzQx/Love-Letter-Icon.gif" alt="Love Letter Icon" />
+                                <img src="https://i.ibb.co/rKbtdjS1/Lovely-Eye.gif" alt="Lovely Eye" />
+                                <img src="https://i.ibb.co/whJr6ZCV/lovelyflower.gif" alt="lovelyflower" />
+                                <img src="https://i.ibb.co/MD5yyyF5/Love-Potion-Icon.gif" alt="Love Potion Icon" />
+                                <img src="https://i.ibb.co/Dg8y7N0x/Luna-Moth.gif" alt="Luna Moth" />
+                                <img src="https://i.ibb.co/KjY11ZnH/Magic-Ball.gif" alt="Magic Ball" />
+                                <img src="https://i.ibb.co/hRmTgdjh/Magic-Potion.gif" alt="Magic Potion" />
+                                <img src="https://i.ibb.co/v6vKHSnc/Maki-Roll.gif" alt="Maki Roll" />
+                                <img src="https://i.ibb.co/vvXm5jzH/Mana-Potion.gif" alt="Mana Potion" />
+                                <img src="https://i.ibb.co/hJLwPWXJ/Marionette-Masks.gif" alt="Marionette Masks" />
+                                <img src="https://i.ibb.co/CKJ7wyH3/MLM.gif" alt="MLM" />
+                                <img src="https://i.ibb.co/RkCYh2fy/Monster-Teeth.gif" alt="Monster Teeth" />
+                                <img src="https://i.ibb.co/svZJML0v/Morning-Glory.gif" alt="Morning Glory" />
+                                <img src="https://i.ibb.co/FksQ9NW5/Moss-Pet-Icon.gif" alt="Moss Pet Icon" />
+                                <img src="https://i.ibb.co/mFNQmvbx/Mouse.gif" alt="Mouse" />
+                                <img src="https://i.ibb.co/rRFS07jH/Music-Box.gif" alt="Music Box" />
+                                <img src="https://i.ibb.co/zVkDhs9K/Music-Note.gif" alt="Music Note" />
+                                <img src="https://i.ibb.co/Z1mhpVxg/Narwhal.gif" alt="Narwhal" />
+                                <img src="https://i.ibb.co/spyq0fDw/Night-Sky.gif" alt="Night Sky" />
+                                <img src="https://i.ibb.co/sJDysKGh/Nigiri.gif" alt="Nigiri" />
+                                <img src="https://i.ibb.co/Wd35sKM/Nonbinary-Pride.gif" alt="Nonbinary Pride" />
+                                <img src="https://i.ibb.co/1tvMR2bQ/Ocarina.gif" alt="Ocarina" />
+                                <img src="https://i.ibb.co/F4MtNJph/Orange-Slice.gif" alt="Orange Slice" />
+                                <img src="https://i.ibb.co/Mk1KC11D/Otter.gif" alt="Otter" />
+                                <img src="https://i.ibb.co/KpjSpJ8z/Owl.gif" alt="Owl" />
+                                <img src="https://i.ibb.co/Lhh1y7c4/Palmtree.gif" alt="Palmtree" />
+                                <img src="https://i.ibb.co/8gTjz4GD/Pancakes.gif" alt="Pancakes" />
+                                <img src="https://i.ibb.co/Rkmy3WPc/panda.gif" alt="panda" />
+                                <img src="https://i.ibb.co/Xr5tRJnk/Pan-Pride.gif" alt="Pan Pride" />
+                                <img src="https://i.ibb.co/845MJQ7F/Party-Popper.gif" alt="Party Popper" />
+                                <img src="https://i.ibb.co/Tx7y7BSY/pawprint.gif" alt="pawprint" />
+                                <img src="https://i.ibb.co/ynCD7bZd/PCIcon.gif" alt="PCIcon" />
+                                <img src="https://i.ibb.co/G33rYKXF/Peach.gif" alt="Peach" />
+                                <img src="https://i.ibb.co/TxKy6D9L/Pearl-Clam.gif" alt="Pearl Clam" />
+                                <img src="https://i.ibb.co/TxwZtWz6/Penguin.gif" alt="Penguin" />
+                                <img src="https://i.ibb.co/DDctTWbw/Peppermint.gif" alt="Peppermint" />
+                                <img src="https://i.ibb.co/zhn4WvQ5/Phantom-Tea.gif" alt="Phantom Tea" />
+                                <img src="https://i.ibb.co/twq8hYw6/pie.gif" alt="pie" />
+                                <img src="https://i.ibb.co/TDt4sP9k/Pieceof-Cake.gif" alt="Pieceof Cake" />
+                                <img src="https://i.ibb.co/SpXS5VW/Pinecone.gif" alt="Pinecone" />
+                                <img src="https://i.ibb.co/tp0cHPsd/Pink-Bow.gif" alt="Pink Bow" />
+                                <img src="https://i.ibb.co/5Wys7xCK/Pink-Jelly.gif" alt="Pink Jelly" />
+                                <img src="https://i.ibb.co/fdKC82dX/Pink-Pop.gif" alt="Pink Pop" />
+                                <img src="https://i.ibb.co/84K96Fqh/Pizza.gif" alt="Pizza" />
+                                <img src="https://i.ibb.co/gMZ46pjB/Planchette.gif" alt="Planchette" />
+                                <img src="https://i.ibb.co/GQgfTh7g/Pocket-Watch.gif" alt="Pocket Watch" />
+                                <img src="https://i.ibb.co/bRr027xv/Poly.gif" alt="Poly" />
+                                <img src="https://i.ibb.co/wZ8qKv32/poo.gif" alt="poo" />
+                                <img src="https://i.ibb.co/7xw9jWbH/Present.gif" alt="Present" />
+                                <img src="https://i.ibb.co/DPZhfdmF/Preserver.gif" alt="Preserver" />
+                                <img src="https://i.ibb.co/bRHS114h/Pride.gif" alt="Pride" />
+                                <img src="https://i.ibb.co/1f2BRXJP/Pride2.gif" alt="Pride2" />
+                                <img src="https://i.ibb.co/vxKRVFrZ/PSLIcon.gif" alt="PSLIcon" />
+                                <img src="https://i.ibb.co/0pzntybw/Ptarmigan.gif" alt="Ptarmigan" />
+                                <img src="https://i.ibb.co/7xqc5s4n/Pumpkin.gif" alt="Pumpkin" />
+                                <img src="https://i.ibb.co/TDfMYzWC/Rabbit-Hat.gif" alt="Rabbit Hat" />
+                                <img src="https://i.ibb.co/pvJNZnQK/Rainbow.gif" alt="Rainbow" />
+                                <img src="https://i.ibb.co/mFhGpW0s/Rainbow-Lights.gif" alt="Rainbow Lights" />
+                                <img src="https://i.ibb.co/3YGRM8JN/rainbowshield.gif" alt="rainbowshield" />
+                                <img src="https://i.ibb.co/WvjPZBmp/Raven.gif" alt="Raven" />
+                                <img src="https://i.ibb.co/8gMKzFWf/record.gif" alt="record" />
+                                <img src="https://i.ibb.co/9939gtNY/Rocket.gif" alt="Rocket" />
+                                <img src="https://i.ibb.co/nsThw0Z3/Rosemary-Sprig.gif" alt="Rosemary Sprig" />
+                                <img src="https://i.ibb.co/dJKCx5Kg/Royal-Bear.gif" alt="Royal Bear" />
+                                <img src="https://i.ibb.co/vxHgTk0t/Royal-Frog.gif" alt="Royal Frog" />
+                                <img src="https://i.ibb.co/zTRRqMYy/Sailboat.gif" alt="Sailboat" />
+                                <img src="https://i.ibb.co/27DnSm4M/Scissors.gif" alt="Scissors" />
+                                <img src="https://i.ibb.co/0jPRbwLz/Seagul.gif" alt="Seagul" />
+                                <img src="https://i.ibb.co/prjSYZWG/Seahorse.gif" alt="Seahorse" />
+                                <img src="https://i.ibb.co/LDZzBDVk/Shark.gif" alt="Shark" />
+                                <img src="https://i.ibb.co/6G778Q8/Shocked-Bubble.gif" alt="Shocked Bubble" />
+                                <img src="https://i.ibb.co/3m1JHQpP/Shoot-Star.gif" alt="Shoot Star" />
+                                <img src="https://i.ibb.co/Z61tzNFN/Skull.gif" alt="Skull" />
+                                <img src="https://i.ibb.co/wFKxsLMJ/Skull-Apple.gif" alt="Skull Apple" />
+                                <img src="https://i.ibb.co/LXctyfDd/Skull-Bubble.gif" alt="Skull Bubble" />
+                                <img src="https://i.ibb.co/S4Z5C7H9/Skull-Candle.gif" alt="Skull Candle" />
+                                <img src="https://i.ibb.co/PJrSxK0/Smores.gif" alt="Smores" />
+                                <img src="https://i.ibb.co/gMhy7csh/snail.gif" alt="snail" />
+                                <img src="https://i.ibb.co/VWXhvBQx/Snowdrop.gif" alt="Snowdrop" />
+                                <img src="https://i.ibb.co/DgPwTcG5/Snowglobe.gif" alt="Snowglobe" />
+                                <img src="https://i.ibb.co/s9ksk2q2/Snowy-Branch.gif" alt="Snowy Branch" />
+                                <img src="https://i.ibb.co/mCgXSGMW/Sour-Candy.gif" alt="Sour Candy" />
+                                <img src="https://i.ibb.co/Gv7WrL0q/Spiderweb.gif" alt="Spiderweb" />
+                                <img src="https://i.ibb.co/Zzj9nJrH/Spooky-Tree.gif" alt="Spooky Tree" />
+                                <img src="https://i.ibb.co/Q3LvQz9j/Sprout-Soda.gif" alt="Sprout Soda" />
+                                <img src="https://i.ibb.co/r2RhBtkC/Squeaky-Blue-Fish.gif" alt="Squeaky Blue Fish" />
+                                <img src="https://i.ibb.co/0VMY2KtR/squid.gif" alt="squid" />
+                                <img src="https://i.ibb.co/Fkk806sr/Squid-Kid.gif" alt="Squid Kid" />
+                                <img src="https://i.ibb.co/bjQvrQhk/Stag-Beetle.gif" alt="Stag Beetle" />
+                                <img src="https://i.ibb.co/hRdDCZ5F/starwand.gif" alt="starwand" />
+                                <img src="https://i.ibb.co/XZrffwNM/Stockmarket.gif" alt="Stockmarket" />
+                                <img src="https://i.ibb.co/ynv3HJ36/Stop-Sign.gif" alt="Stop Sign" />
+                                <img src="https://i.ibb.co/dJQXJCCk/Strawberry.gif" alt="Strawberry" />
+                                <img src="https://i.ibb.co/tPKcGQLN/Strawberry-Roll.gif" alt="Strawberry Roll" />
+                                <img src="https://i.ibb.co/4Zy5vtW8/Sun.gif" alt="Sun" />
+                                <img src="https://i.ibb.co/Zp27CNFV/Sunflower.gif" alt="Sunflower" />
+                                <img src="https://i.ibb.co/CF7b8y7/Sunglasses.gif" alt="Sunglasses" />
+                                <img src="https://i.ibb.co/rfcGG9jT/Swan.gif" alt="Swan" />
+                                <img src="https://i.ibb.co/rGdRF6BQ/sword.gif" alt="sword" />
+                                <img src="https://i.ibb.co/wZ8knc4N/Takoyaki.gif" alt="Takoyaki" />
+                                <img src="https://i.ibb.co/KjxhwzBW/Teacup.gif" alt="Teacup" />
+                                <img src="https://i.ibb.co/q35RvrZg/teddy.gif" alt="teddy" />
+                                <img src="https://i.ibb.co/bgcbMGX1/Terrarium.gif" alt="Terrarium" />
+                                <img src="https://i.ibb.co/7N6xSLnz/Toadstool.gif" alt="Toadstool" />
+                                <img src="https://i.ibb.co/ym89fbrW/Toilet.gif" alt="Toilet" />
+                                <img src="https://i.ibb.co/tMgjZDM3/tomato.gif" alt="tomato" />
+                                <img src="https://i.ibb.co/LD9xXCpC/Tombstone.gif" alt="Tombstone" />
+                                <img src="https://i.ibb.co/Cg9F8NP/Toric.gif" alt="Toric" />
+                                <img src="https://i.ibb.co/sJ6f6Q5M/Trans-Pride.gif" alt="Trans Pride" />
+                                <img src="https://i.ibb.co/TxkQrn9c/Trixic.gif" alt="Trixic" />
+                                <img src="https://i.ibb.co/MDzQcs4x/Turnip.gif" alt="Turnip" />
+                                <img src="https://i.ibb.co/Pzw7xjYc/tv.gif" alt="tv" />
+                                <img src="https://i.ibb.co/Zp8mMMKN/Twinkle-Heart.gif" alt="Twinkle Heart" />
+                                <img src="https://i.ibb.co/V4Typ11/UFO.gif" alt="UFO" />
+                                <img src="https://i.ibb.co/PsHGrcVs/umbrella.gif" alt="umbrella" />
+                                <img src="https://i.ibb.co/SXPSc9c0/Unicorn-Icon.gif" alt="Unicorn Icon" />
+                                <img src="https://i.ibb.co/QjfN4sDH/violin.gif" alt="violin" />
+                                <img src="https://i.ibb.co/FbGYnbzW/Watermelon.gif" alt="Watermelon" />
+                                <img src="https://i.ibb.co/ymp4QLTs/Whale.gif" alt="Whale" />
+                                <img src="https://i.ibb.co/mFSRZ9wQ/Whale-Shark.gif" alt="Whale Shark" />
+                                <img src="https://i.ibb.co/S7xCkvjn/White-Seabun.gif" alt="White Seabun" />
+                                <img src="https://i.ibb.co/4rqNhdM/Wisp-Vial.gif" alt="Wisp Vial" />
+                                <img src="https://i.ibb.co/mCQPjj5Z/Witch-Broom.gif" alt="Witch Broom" />
+                                <img src="https://i.ibb.co/yFsYt1fq/Witch-Cat.gif" alt="Witch Cat" />
+                                <img src="https://i.ibb.co/BHPF3X3N/Witch-Hat.gif" alt="Witch Hat" />
+                                <img src="https://i.ibb.co/QFtdxwpK/Worm.gif" alt="Worm" />
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- =============================================== -->
+                    <!-- Credits. -->
+                    <!-- =============================================== -->
+                    <div id="credits" class="tabbed" style="display: none">
+                        <h2 class="page-title">Page Credits</h2>
+                        <ul>
+                            <li>
+                                I'll ... I'll come back later, but it's the same stuff I kinda already have in my
+                                existing credits
+                            </li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+            <!-- =============================================== -->
+            <!-- Footer. -->
+            <!-- =============================================== -->
+            <footer>
+                <nav>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://web.archive.org/web/20251225075115/https://www.goatlings.com/profile/u/49999"
+                                title="can't see shit if ur logged out but oh well"
+                                >archived profile</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://goatlings.fandom.com/wiki/Wikiling_--_The_Goatlings_Database"
+                                >goatlings wiki</a
+                            >
+                        </li>
+                        <li><a href="#skip">back to top</a></li>
+                    </ul>
+                </nav>
+                <p>
+                    © Goatlings.com 2010 - 2025 Virtual Pet Goat Site. Site is compatible on mobile browsers and has
+                    actual dark mode who would've thunk.
+                </p>
+            </footer>
+        </div>
+
+        <!-- =============================================== -->
+        <!-- Tab Handler. -->
+        <!-- =============================================== -->
+        <script>
+            function openGoatTab(tabName) {
+                var i;
+                var x = document.getElementsByClassName("tabbed");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                document.getElementById(tabName).style.display = "block";
+            }
+        </script>
+
+        <!-- =============================================== -->
+        <!-- Home Page Image Shuffler. -->
+        <!-- =============================================== -->
+        <script>
+            // define your images here
+            var images = [
+                "https://i.ibb.co/5X2QTXRw/6.png",
+                "https://i.ibb.co/j9vg3X88/5.png",
+                "https://i.ibb.co/pBF36JpF/3.png",
+                "https://i.ibb.co/Rk1Z0nxM/1.png",
+                "https://i.ibb.co/qFcVFBJB/2.png",
+                "https://i.ibb.co/DDfRL1WN/4.png"
+            ];
+
+            // this chooses a random number from all available image indices
+            var randomImage = images[Math.floor(Math.random() * images.length)];
+            console.log(randomImage);
+            // make the URL into a proper image tag
+            var image = "<img src='" + randomImage + "' class='image-border'>";
+            // append to the div
+            document.getElementById("ha-shuffle").innerHTML = image;
+        </script>
+
+        <!-- =============================================== -->
+        <!-- Local Time Spitter. -->
+        <!-- =============================================== -->
+        <script>
+            let now = new Date();
+            let currentTime = now.toLocaleTimeString("en-US", {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            });
+
+            document.getElementById("timer").innerHTML = `Current Time: ${currentTime}`;
+            console.log(`Current Time: ${currentTime}`);
+        </script>
     </body>
 </html>
