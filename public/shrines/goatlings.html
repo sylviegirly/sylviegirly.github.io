@@ -134,8 +134,8 @@
             }
 
             ::selection {
-                color: var(--text);
-                background: var(--content-bg);
+                color: var(--home-h1-text);
+                background: var(--home-h1-bg);
             }
 
             /* -------------------------------------------------------- */
@@ -420,6 +420,7 @@
             hr {
                 border: none;
                 border-bottom: 1px solid var(--header-underline);
+                margin: 5px 0;
             }
 
             .user-color {
@@ -512,6 +513,7 @@
                 max-width: 100px;
                 pointer-events: none;
             }
+
             /* -------------------------------------------------------- */
             /* HOME-PAGE SPECIFIC CSS */
             /* -------------------------------------------------------- */
@@ -652,10 +654,16 @@
             }
 
             .fave-items,
-            .collection {
+            .collection,
+            .goatlingstreasure {
                 gap: 20px;
                 align-items: baseline;
                 flex-wrap: wrap;
+            }
+
+            .goatlingstreasure {
+                row-gap: 5px;
+                align-content: space-around;
             }
 
             .fave-items > div {
@@ -668,6 +676,51 @@
                 max-width: calc(100% / 7 - 20px);
                 min-width: 90px;
                 text-align: center;
+            }
+
+            .goatlingstreasure > div {
+                max-width: calc(100% / 6 - 20px);
+                min-width: 90px;
+                text-align: center;
+            }
+
+            /* -------------------------------------------------------- */
+            /* GOAT PROFILES */
+            /* -------------------------------------------------------- */
+            #goatprofile .infobox {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                height: fit-content;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+
+            .infobox .left-side,
+            .infobox .right-side,
+            #goatprofile .profilecode {
+                border-radius: 4px;
+                padding: var(--padding);
+                border: 1px solid var(--goat-outline);
+            }
+
+            .infobox .left-side {
+                flex: 1;
+                text-align: center;
+                align-self: stretch;
+                padding-top: 40px;
+            }
+
+            .infobox .left-side img {
+                max-width: 200px;
+            }
+
+            .infobox .right-side {
+                flex: 3;
+            }
+
+            #goatprofile .profilecode {
+                width: 100%;
             }
 
             /* -------------------------------------------------------- */
@@ -754,6 +807,8 @@
 
                 #bodycontainer nav {
                     display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
                     gap: 10px;
                 }
 
@@ -769,6 +824,11 @@
 
                 #bodycontainer nav {
                     position: static;
+                }
+
+                .nav-button,
+                #bodycontainer nav ul {
+                    width: calc(25% - 10px);
                 }
             }
         </style>
@@ -823,9 +883,9 @@
                     <button class="nav-button" onclick="openGoatTab('home')">Home</button>
                     <button class="nav-button" onclick="openGoatTab('news')">News</button>
                     <button class="nav-button" onclick="openGoatTab('goats')">Profile</button>
+                    <button class="nav-button" onclick="openGoatTab('goatprofile')">Goats</button>
                     <button class="nav-button" onclick="openGoatTab('gallery')">Collection</button>
                     <button class="nav-button" onclick="openGoatTab('icons')">User Icons</button>
-                    <button class="nav-button" onclick="openGoatTab('credits')">Credits</button>
                     <ul>
                         <li><a href="/index.html">Back to Site</a></li>
                     </ul>
@@ -910,13 +970,21 @@
                                 <section>
                                     <h2>my beloved goal</h2>
                                     <div class="flexbox-lazy" style="align-items: baseline">
-                                        <img src="../img/goatlings/party_pooper.png" alt="" loading="lazy" />
+                                        <img
+                                            src="../img/goatlings/party_pooper.png"
+                                            class="hide-mobile"
+                                            alt=""
+                                            loading="lazy" />
                                         <img
                                             src="https://i.imgur.com/wLX61o0.png"
                                             class="goat-img"
                                             alt="Ribbon Romantic Goat"
                                             loading="lazy" />
-                                        <img src="../img/goatlings/party_pooper_flip.png" alt="" loading="lazy" />
+                                        <img
+                                            src="../img/goatlings/party_pooper_flip.png"
+                                            class="hide-mobile"
+                                            alt=""
+                                            loading="lazy" />
                                     </div>
                                 </section>
                                 <section>
@@ -953,33 +1021,15 @@
                                     <h2>to-do list (temp)</h2>
                                     <ul>
                                         <li>
-                                            tab toggles:
-                                            <ul>
-                                                <li>
-                                                    'news' - my history with it, what i like, my gripes, fave designs,
-                                                    good memories, graphics i wanna keep like the site buttons, etc
-                                                </li>
-                                                <li>
-                                                    collection - just remake the collection page layout but w/o needing
-                                                    to worry about pages ... why were the bottom tabs never even!!!!
-                                                </li>
-                                                <li>
-                                                    my goats - probs just a list of all my goats divvied by section ...
-                                                    maybe using
-                                                    <a
-                                                        href="https://werewolf-girlfriend.itch.io/website-gallery-template"
-                                                        >werewolf-girlfriend's gallery</a
-                                                    >?
-                                                </li>
-                                            </ul>
+                                            add profile tabs for goats ... maybe figure out how to do dropdown
+                                            categories for goat page selection?
                                         </li>
+                                        <li>add data tippy here for just having tab names when hovering over</li>
                                         <li>localize font + move CSS to ... CSS</li>
                                         <li>
-                                            maybe look into JS solution to dropdown toggle goatling profiles in a tab to
-                                            write out treasures and what not ... JS database/list?
+                                            actually start filling everything in lmfao ... F to the amount of goats i
+                                            gotta do tho
                                         </li>
-                                        <li>fix selection colour CSS (use header 1 colors)</li>
-                                        <li>fix button sizes for mobile (dont wrap wround)</li>
                                     </ul>
                                 </section>
                             </article>
@@ -1099,13 +1149,231 @@
                             src="https://f2.toyhou.se/file/f2-toyhou-se/images/75603286_ErtqjxeZFmcy572.png"
                             class="pet-image-active" />-->
                         <h2 class="page-title">Profile Aid</h2>
-                        <!--<section class="custom-code">
+                        <section class="custom-code">
+                            <a href="https://www.goatlings.com/profile/u/101954"
+                                ><img
+                                    class="pet-image-active"
+                                    src="https://f2.toyhou.se/file/f2-toyhou-se/images/75603286_ErtqjxeZFmcy572.png"
+                                    width="100px"
+                                    alt="drawing of my sylvie goat, an alternative to the gaia doll"
+                            /></a>
                             <p>
-                                You could put in custom code here and do whatever, or remove. This layout isn't catered
-                                to have custom goat profiles, or tabs, sowwy. If you're curious in making tabs for your
-                                goats, you could do what I did for the tabs here (I used Solaria's CSS tabs guide)
+                                OH GOD tables are disgusting here help me. even if the old table codes are
+                                re-introduced, the issue is they use deprecated ass coding which needs to be adjusted
+                                for the modern one (phoenix code is yelling at me as i put in my old profile code lmao).
                             </p>
-                        </section>-->
+                            <p>
+                                is there even a way to safely transfer the old profile coding over ... cause everything
+                                is inline CSS + editing obviously to make it unique to each character.
+                            </p>
+                            <!--<table width="100%" cellpadding="1" cellspacing="10">
+            <tr>
+                <td width="10%"></td>
+                <td>
+                    <table cellpadding="10" cellspacing="2" class="event" width="100%">
+                        <tr>
+                            <td width="30%" class="small-text">
+                                <center>
+                                    <table>
+                                        <tr>
+                                            <td class="flash_data" bgcolor="#dbe7db">
+                                                <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/84202874_MuoDKoHOyGopysr.png" alt="chibi of an original character with green hair and elf-like ears" width="100%" />
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <p>she / her . 25+ . infp</p>
+                                    <a href="https://lgbtqia.wiki/wiki/Asexual">
+                                        <img alt="asexual flag" src="https://f2.toyhou.se/file/f2-toyhou-se/images/76775512_ETwOY5nsAF7i2ZO.png" /></a>
+                                    <a href="https://lgbtqia.wiki/wiki/Cassgirl"><img alt="cassgirl flag" src="https://file.garden/Zq0xOX6Iv3i3b1te/Toyhouse/cassgirl.png" /></a>
+                                    <a href="https://lgbtqia.wiki/wiki/Demigirl"><img alt="demigirl flag" src="https://f2.toyhou.se/file/f2-toyhou-se/images/76795018_fevjuCUadSdBNmG.png" /></a>
+                                </center>
+                            </td>
+                            <td>
+                                <p>
+                                    Name's <b>Aid</b>; Aid is shorthand for Asuraid which is what I normally go by
+                                    online, I'm just used to being called it!
+                                </p>
+                                <p>
+                                    I'm a Game Designer though I do digital art in my spare time. I'm a pretty chill
+                                    person who soaks in video games as a hobby, and inhales two-hour-long YouTube
+                                    documentaries. I like collecting old 5 digit goats and plant/deer-themed items.
+                                </p>
+                                <p>
+                                    I also have a yume/OC x canon ship with Zhongli! You can check out my blorbo
+                                    <a href="https://www.goatlings.com/pet/u/139031">Sylvie</a>
+                                    here.
+                                </p>
+                                <p>
+                                    Thanks for everything, Goatlings. Rest in peace.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="10%"></td>
+            </tr>
+            <tr>
+                <td width="10%"></td>
+                <td>
+                    <table cellpadding="5" cellspacing="2" class="event" width="100%">
+                        <tr>
+                            <td width="5%" class="flash_data" bgcolor="#dbe7db">
+                                <img src="https://www.goatlings.com/images/items/Plush Deer.gif" width="100px" alt="plush deer" />
+                            </td>
+                            <td>
+                                <p>
+                                    <center>
+                                        <b>Find Me Elsewhere</b><br /><a href="https://aid.uwu.ai">carrd</a> |
+                                        <a href="https://zhongvie.neocities.org">neocities</a> |
+                                        <a href="https://asuraid.tumblr.com/">art tumblr</a> |
+                                        <a href="https://toyhou.se/Hideki">toyhouse</a>
+                                    </center>
+                                </p>
+
+                                <table align="center" width="95%" bgcolor="#dbe7db" cellpadding="0" cellspacing="1">
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                                <p>
+                                    <center>
+                                        <b>Other Pet Sites</b><br />
+                                        <a href="https://www1.flightrising.com/clan-profile/68095">flight rising</a>
+                                        | <a href="https://dappervolk.com/profile/506">dappervolk</a> |
+                                        <a href="https://dragcave.net/user/Asuraid">dragon cave</a> |
+                                        <a href="https://pixpet.net/u/Hideki">pixpet</a>
+                                    </center>
+                                </p>
+                            </td>
+                            <td width="5%" class="flash_data" bgcolor="#dbe7db">
+                                <img src="https://www.goatlings.com/images/items/Florals.gif" width="100px" alt="bouquet of flowers" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="10%"></td>
+            </tr>
+            <tr>
+                <td width="10%"></td>
+                <td>
+                    <table cellpadding="10" cellspacing="2" class="event" width="100%">
+                        <tr>
+                            <td width="50%">
+                                <p><b>Bio Goals:</b></p>
+                                <p>
+                                    • [  ] - OC bios (7/10)<br />
+                                    • [x] - Complete rehaul of OC bio layouts<br />
+                                    • [  ] - ... and implementing said rehaul (3/10)<br />
+                                    • [  ] - Make simpler bio for non-OC goats<br />
+                                    • [  ] - 2+ rows of treasures for OCs<br />
+                                </p>
+
+                                <table align="center" width="95%" bgcolor="#dbe7db" cellpadding="0" cellspacing="1">
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                                <p><b>Impossible Wishlist Goals:</b></p>
+                                <p>
+                                    • Getting Sylvie as a name (fake L or not)<br />
+                                    • Getting Zhongli as a name (fake L or not)
+                                </p>
+                            </td>
+                            <td>
+                                <p><b>Long-term / Other Goals:</b></p>
+                                <p>
+                                    • [  ] - Design an HA buddy based off Sylvie<br />
+                                    • [x] - 100m SS in savings<br />
+                                    • [  ] - 50 goat slots<br />
+                                    • [x] - November 16th goat<br />
+                                </p>
+
+                                <table align="center" width="95%" bgcolor="#dbe7db" cellpadding="0" cellspacing="1">
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                                <p><b>Collectibles:</b></p>
+                                <p>
+                                    • [  ] - All baddie stamps for collection<br />
+                                    • [  ] - Aquarium collection<br />
+                                    • [x] - Butterfly collection
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="10%"></td>
+            </tr>
+            <tr>
+                <td width="10%"></td>
+                <td>
+                    <table cellpadding="6" cellspacing="2" class="event" width="100%">
+                        <tr>
+                            <td width="5%" class="flash_data" bgcolor="#dbe7db">
+                                <img src="https://www.goatlings.com/images/items/OrangeTree.gif" width="100px" alt="orange tree" />
+                            </td>
+                            <td>
+                                <p>
+                                    <center>
+                                        <b>Goatlings Links</b><br /><a href="https://www.goatlings.com/pet/u/189998/">battle center ADs</a>
+                                        |
+                                        <a href="https://www.goatlings.com/pet/u/132063/">exploration RADs</a> |
+                                        <a href="https://www.goatlings.com/forums/view_topic/66228">auto bios</a>
+                                    </center>
+                                </p>
+                            </td>
+                            <td width="5%" class="flash_data" bgcolor="#dbe7db">
+                                <img src="https://www.goatlings.com/images/items/Rosemary Sprig.gif" width="100px" alt="rosemary sprig" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="10%"></td>
+            </tr>
+            <tr>
+                <td width="10%"></td>
+                <td>
+                    <table cellpadding="10" cellspacing="2" class="event" width="100%">
+                        <tr>
+                            <td>
+                                <center>
+                                    <a href="https://www.tumblr.com/lovisu/770256337094475776/day-04-spending-christmas-your-favorite?source=share">
+                                        <img alt="zhongli from genshin impact" src="https://64.media.tumblr.com/579f45eb632285947058a43be65526ec/311a4a4baf875922-b7/s100x200/68095cc04a120e20ca2029e59ce82a8d5ffeadca.pnj" /></a>
+                                    <a href="https://www.deviantart.com/kezzi-rose/art/Starter-Stamp-425801801">
+                                        <img alt="pokemon stamp with the words 'still one of life's hardest decisions" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/123d674b-ec3a-48d6-974e-6735d6a62320/d71iert-a6f5043a-23cc-486a-89bc-5de00843369c.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8xMjNkNjc0Yi1lYzNhLTQ4ZDYtOTc0ZS02NzM1ZDZhNjIzMjAvZDcxaWVydC1hNmY1MDQzYS0yM2NjLTQ4NmEtODliYy01ZGUwMDg0MzM2OWMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.T3juX6sjAS1S-EZ7DQQ87CinHYWa5BtZKqxhu5fDUSQ" /></a>
+                                    <a href="https://www.deviantart.com/monochromegastar/art/Clip-Studio-Paint-Stamp-497055716">
+                                        <img alt="clip studio paint stamp" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/98ad022d-bdd4-43be-b9e6-b22888379a8d/d87xmn8-ddf8b510-12c2-450b-97c6-bb4a257066b2.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi85OGFkMDIyZC1iZGQ0LTQzYmUtYjllNi1iMjI4ODgzNzlhOGQvZDg3eG1uOC1kZGY4YjUxMC0xMmMyLTQ1MGItOTdjNi1iYjRhMjU3MDY2YjIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.wMy7Dl1rXWskdoz9kjgwTRCz2hZBgfDc5ieo7r9bQlM" /></a>
+                                    <a href="https://99fish.tumblr.com/post/772772062993514496/self-indulgent-deer-stamps">
+                                        <img alt="deer stamp" src="https://64.media.tumblr.com/bfb37d23ec97fe3cbbbb9687c68c6f38/c0bd66d17964d11b-31/s100x200/ca1047d6dcf91b20f92b647d4a8012fa87dd5814.png" /></a>
+                                    <a href="https://www.deviantart.com/zmei-kira/art/Lugia-stamp-641429848">
+                                        <img alt="lugia pokemon stamp" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea19e1a1-c2d7-4e38-b6d8-55c41a3b2a9c/dalw2fs-f6955c0a-4765-43fb-b5ea-251e69eb6a4d.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9lYTE5ZTFhMS1jMmQ3LTRlMzgtYjZkOC01NWM0MWEzYjJhOWMvZGFsdzJmcy1mNjk1NWMwYS00NzY1LTQzZmItYjVlYS0yNTFlNjllYjZhNGQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lf6VX3yhLsiK4TKr_ybFhGQozYHiAfgVjX4CKJ8UO3o" /></a>
+                                    <a href="https://www.deviantart.com/52kg/art/STAMP-Canon-x-OC-612482684"><img alt="support oc x canon" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2c66e49b-def2-4d53-b81a-11b9e6bc670a/da4nmnw-2fe7fc2e-b162-4d13-a22d-31589fe7033c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8yYzY2ZTQ5Yi1kZWYyLTRkNTMtYjgxYS0xMWI5ZTZiYzY3MGEvZGE0bm1udy0yZmU3ZmMyZS1iMTYyLTRkMTMtYTIyZC0zMTU4OWZlNzAzM2MucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BMWb1WnbzmU2S7_FQ6BXoC2U6uXBpsGzRlZPC5982Ok" /></a>
+                                    <a href="https://www.deviantart.com/paolachief117/art/I-love-Coffe-and-Milk-Stamp-520412074"><img alt="i love coffee and milk" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07be1e05-b25d-4fd1-b482-56adc5261359/d8lu8iy-30ae93ad-eb09-42c0-ae7d-a96cd7ddb668.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8wN2JlMWUwNS1iMjVkLTRmZDEtYjQ4Mi01NmFkYzUyNjEzNTkvZDhsdThpeS0zMGFlOTNhZC1lYjA5LTQyYzAtYWU3ZC1hOTZjZDdkZGI2NjguZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1zYFE-tDhvKtbOaropy1fva073jmDVEXV6nOOY-FFNQ" /></a>
+                                    <a href="https://www.deviantart.com/bleached-inc/art/Ukitake-Stamp-52713005"><img alt="jushiro ukitake from bleach" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/52535d17-6ee8-4c7e-96b7-31204c6e6bd2/dvdtm5-b7c82c72-ca28-47d9-afc5-c8203d581fdc.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi81MjUzNWQxNy02ZWU4LTRjN2UtOTZiNy0zMTIwNGM2ZTZiZDIvZHZkdG01LWI3YzgyYzcyLWNhMjgtNDdkOS1hZmM1LWM4MjAzZDU4MWZkYy5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.XSf7URJC07_CJQRN_7GvFzn-BhP6gwy6Nl2uVHtIag4" /></a>
+                                    <a href="https://www.deviantart.com/zmei-kira/art/Eeveelutions-stamp-Sylveon-641409731"><img alt="sylveon pokemon stamp" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea19e1a1-c2d7-4e38-b6d8-55c41a3b2a9c/dalvmwz-068c1eef-777c-4634-9412-664d5f6b55f8.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9lYTE5ZTFhMS1jMmQ3LTRlMzgtYjZkOC01NWM0MWEzYjJhOWMvZGFsdm13ei0wNjhjMWVlZi03NzdjLTQ2MzQtOTQxMi02NjRkNWY2YjU1ZjguZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6ClsY5BKT5IOnw8XNNB09oXixJXcNvliiMFT-eDTBHc" /></a>
+                                    <a href="https://www.deviantart.com/findyq/art/teddy-stamp-58258393"><img alt="i still sleep with my stuffed animals... whatever" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9b74835d-9bbb-49fc-b13d-b9068404868e/dyoogp-eadc60ee-89bb-4817-a390-43daf469d5fa.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi85Yjc0ODM1ZC05YmJiLTQ5ZmMtYjEzZC1iOTA2ODQwNDg2OGUvZHlvb2dwLWVhZGM2MGVlLTg5YmItNDgxNy1hMzkwLTQzZGFmNDY5ZDVmYS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.bWJpYameJpMamZHhYfJ9eWn9H-gJeALO2JMn2c1n9vs" /></a>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="10%"></td>
+            </tr>
+        </table>-->
+
+                            <div class="center-item">
+                                <a href="https://www.goatlings.com/forums/view_topic/65813"
+                                    ><img src="https://i.imgur.com/98u28nL.gif" />
+                                    <img src="https://i.imgur.com/kQQfOH0.gif" />
+                                    <img src="https://i.imgur.com/9Hm4f7L.gif"
+                                /></a>
+                            </div>
+                        </section>
                         <section>
                             <!-- =============================================== -->
                             <!-- Custom Code. -->
@@ -1585,16 +1853,19 @@
                     </div>
 
                     <!-- =============================================== -->
-                    <!-- Credits. -->
+                    <!-- Goat Profiles. -->
                     <!-- =============================================== -->
-                    <div id="credits" class="tabbed" style="display: none">
-                        <h2 class="page-title">Page Credits</h2>
-                        <ul>
-                            <li>
-                                I'll ... I'll come back later, but it's the same stuff I kinda already have in my
-                                existing credits
-                            </li>
-                        </ul>
+                    <div id="goatprofile" class="tabbed" style="display: none">
+                        <h2 class="page-title">Goatling Profile</h2>
+                        <p>
+                            Choose Goat:
+                            <select name="Goat" id="goat" style="width: 200px; margin-left: 5px">
+                                <option value="0">Introjection</option>
+                                <option value="1" selected="selected">Sylvie</option>
+                            </select>
+                        </p>
+                        <hr />
+                        <div id="goatinformation"></div>
                     </div>
                 </main>
             </div>
@@ -1678,5 +1949,7 @@
             document.getElementById("timer").innerHTML = `Current Time: ${currentTime}`;
             console.log(`Current Time: ${currentTime}`);
         </script>
+
+        <script src="../js/goats.js"></script>
     </body>
 </html>

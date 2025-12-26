@@ -1,0 +1,824 @@
+body {
+    margin: 0;
+    background: url("../images/layout/greenbg.gif");
+    font-family: Arial;
+    font-size: 12px;
+    color: #604325;
+}
+
+table,
+tr,
+td {
+    font-size: 12px;
+}
+
+#wrapper {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    width: 940px;
+    background: #ffffcd;
+}
+
+#sidebar {
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    width: 100px;
+    padding: 5px;
+}
+
+#content {
+    position: relative;
+    float: left;
+    background: #fff;
+    width: 760px;
+    border-radius: 4px 4px 4px 4px;
+    margin: 5px;
+    padding: 10px;
+    min-height: 500px;
+}
+
+.reset {
+    clear: both;
+}
+
+.navlink {
+    margin: 2px;
+}
+
+#user-info {
+    float: left;
+    width: 500px;
+}
+
+#user-info-points {
+    float: right;
+}
+
+#user-info-wrap {
+    padding: 10px;
+}
+
+.search-mid {
+    background: url("../images/layout/search_m.png");
+    width: 128px;
+    color: #fff;
+    text-align: center;
+}
+
+#footer {
+    text-align: center;
+    padding: 5px;
+}
+
+.small-text {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #1aa0e3;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+a:hover {
+    color: #a6d8f1;
+}
+
+.profile-box {
+    position: relative;
+    height: 260px;
+}
+
+.page-title {
+    border-bottom: 1px solid #ccc5bd;
+}
+
+.mystuff {
+    display: inline-block;
+    margin: 4px;
+}
+
+.item-invent {
+    display: inline-block;
+    margin: 4px;
+    text-align: center;
+}
+
+.item-invent-view {
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #ccc5bd;
+    width: 500px;
+    display: inline-block;
+    margin-top: 50px;
+    padding: 5px;
+}
+
+.flash_data {
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #ccc5bd;
+    padding: 5px;
+}
+
+.mypets-pet {
+    display: inline-block;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #ccc5bd;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+}
+
+.habase {
+    display: inline-block;
+    margin: 5px;
+}
+
+.mail-message {
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #000;
+    padding: 5px;
+    margin: 5px;
+}
+
+.event {
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #ccc5bd;
+    padding: 5px;
+    margin: 5px;
+}
+
+#header {
+    position: relative;
+}
+
+#active_pet_image {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.explore-area {
+    display: inline-block;
+    margin: 5px;
+}
+
+.table {
+    border: 1px solid #000;
+    padding: 4px;
+    margin: 4px;
+    width: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #633e19;
+}
+
+/*** Avatat System ***/
+
+.base_area {
+    width: 200px;
+    border: 2px solid #faf497;
+    border-radius: 4px 4px 4px 4px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.item_area {
+    width: 730px;
+    border: 2px solid #faf497;
+    padding: 5px;
+    border-radius: 4px 4px 4px 4px;
+    margin: 5px;
+}
+
+.button {
+    border: 1px solid #60513d;
+    background: #897558;
+    padding: 4px;
+    color: #fff;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #756349;
+    color: #fff;
+}
+
+.closetItem {
+    display: inline-block;
+    width: 90px;
+    margin: 5px;
+    vertical-align: top;
+}
+
+.closetItemImg {
+    cursor: pointer;
+}
+
+.addBorder {
+    border: 1px solid #000;
+}
+
+.cs-nav {
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 4px 4px 4px 4px;
+    width: 97%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cs-area {
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.cs-item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 3px;
+    text-align: center;
+}
+
+.cs-item a {
+    color: #3c8db6;
+}
+
+.cs-item a:hover {
+    color: #6bb3d7;
+}
+
+.book-cat {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+}
+
+.admin-section {
+    display: inline-block;
+    width: 350px;
+    margin: 5px;
+}
+
+.doll-info {
+    display: inline-block;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #ccc5bd;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+}
+
+.shopItem {
+    position: relative;
+    display: inline-block;
+    margin: 4px;
+    text-align: center;
+    width: 100px;
+    vertical-align: top;
+}
+
+.shopItemA {
+    position: relative;
+    display: inline-block;
+    margin: 4px;
+    text-align: center;
+    width: 140px;
+    vertical-align: top;
+}
+
+.table-header {
+    background: #f9e49c;
+    padding: 5px;
+}
+
+.profile-info {
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #cfd093;
+    padding: 5px;
+    width: 720px;
+    margin: 3px;
+}
+
+.profile-part-one {
+    float: left;
+    margin-right: 5px;
+    width: 550px;
+}
+
+.profile-part-two {
+    float: left;
+}
+
+.forum-post {
+    margin: 5px;
+    width: 700px;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #ae8960;
+}
+
+.forum-post-info {
+    float: left;
+    margin: 2px;
+    padding: 5px;
+    width: 150px;
+    border-right: 1px solid #ae8960;
+}
+
+.forum-post-message {
+    float: left;
+    margin: 2px;
+    padding: 5px;
+    width: 520px;
+}
+
+.forum-post-message-bar {
+    text-align: right;
+    width: 510px;
+}
+
+.forum-reply {
+    padding: 5px;
+    text-align: center;
+}
+
+.forum-post-small {
+    margin: 5px;
+    width: 540px;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #ae8960;
+}
+
+.forum-post-message-small {
+    float: left;
+    margin: 2px;
+    padding: 5px;
+    width: 320px;
+}
+
+.forum-post-message-bar-small {
+    text-align: right;
+    width: 320px;
+}
+
+#livechat {
+    float: left;
+    width: 570px;
+}
+
+.livechat-msg {
+    margin: 5px;
+    border-radius: 4px 4px 4px 4px;
+    padding: 5px;
+    border: 1px solid #ccac55;
+    width: 550px;
+    float: left;
+}
+
+#livechat-online {
+    float: left;
+    vertical-align: top;
+    margin: 5px;
+    border-radius: 4px 4px 4px 4px;
+    padding: 5px;
+    border: 1px solid #ccac55;
+    width: 150px;
+    vertical-align: top;
+}
+
+.pet-profile-box {
+    position: relative;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #cfd093;
+    padding: 5px;
+    width: 200px;
+    float: left;
+    margin: 3px;
+    text-align: center;
+}
+
+.pet-profile-box-two {
+    position: relative;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #cfd093;
+    padding: 5px;
+    width: 500px;
+    float: left;
+    margin: 3px;
+}
+
+.pet-profile-box-three {
+    position: relative;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #cfd093;
+    padding: 5px;
+    margin: 3px;
+}
+
+.favitem {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+
+.shoparea {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+
+.itema {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+
+.item-hover {
+    display: none;
+    position: absolute;
+    top: -70px;
+    left: -190px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 4px 4px 4px 4px;
+    width: 200px;
+    padding: 5px;
+}
+
+.news-post {
+    margin: 5px;
+    width: 750px;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #ae8960;
+    padding: 5px;
+}
+
+.news-post-who {
+    height: 70px;
+}
+
+.floatleft {
+    float: left;
+    margin: 2px;
+}
+
+.bank-area {
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #ae8960;
+    padding: 5px;
+}
+
+.bank-options {
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+}
+
+.HP {
+    color: #d72626;
+}
+
+#battle_log {
+    border: 1px solid #ae8960;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.table {
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #ccbc85;
+}
+
+.devLog {
+    position: relative;
+    width: 740;
+    padding: 10px;
+    border: 1px solid #ae8960;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.random_event {
+    margin: 5px;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #392b0d;
+    width: 600px;
+    padding: 5px;
+}
+
+.random_event_image {
+    float: left;
+    width: 90px;
+}
+
+.random_event_text {
+    float: left;
+    text-align: center;
+    width: 510px;
+}
+
+.itemcollect {
+    width: 110px;
+    display: inline-block;
+    border: 1px solid #000;
+    vertical-align: top;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+}
+
+.club-sidebar {
+    border: 2px solid #f48181;
+    padding: 5px;
+    background: #ffffff;
+    width: 150px;
+    float: left;
+    margin: 5px;
+    text-align: center;
+}
+
+.club-area {
+    border: 2px solid #f48181;
+    padding: 5px;
+    background: #ffffff;
+    width: 550px;
+    min-height: 300px;
+    float: left;
+    margin: 5px;
+}
+
+.club-name {
+    background: #f4d881;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.club-join {
+    background: #f4d881;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.trade {
+    position: relative;
+    width: 720px;
+    padding: 5px;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #000;
+    margin: 5px;
+}
+
+.trade-item-a {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+    width: 110px;
+}
+
+.support-reply {
+    border: 1px solid #000;
+    margin: 5px;
+    padding: 5px;
+}
+
+.treasure-tile {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.treasure {
+    width: 500px;
+    text-align: center;
+}
+
+.ss-area {
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+    vertical-align: top;
+}
+
+.hp_wrapper {
+    padding: 5px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #000;
+    height: 10px;
+    width: 150px;
+    text-align: left;
+}
+
+.hp_filler {
+    height: 10px;
+    background: #e32044;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.like-button {
+    -moz-box-shadow: inset 0px 1px 0px 0px #ffe0b5;
+
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ffe0b5;
+
+    box-shadow: inset 0px 1px 0px 0px #ffe0b5;
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fbb450), color-stop(1, #f89306));
+
+    background: -moz-linear-gradient(top, #fbb450 5%, #f89306 100%);
+
+    background: -webkit-linear-gradient(top, #fbb450 5%, #f89306 100%);
+
+    background: -o-linear-gradient(top, #fbb450 5%, #f89306 100%);
+
+    background: -ms-linear-gradient(top, #fbb450 5%, #f89306 100%);
+
+    background: linear-gradient(to bottom, #fbb450 5%, #f89306 100%);
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89306',GradientType=0);
+
+    background-color: #fbb450;
+
+    -moz-border-radius: 7px;
+
+    -webkit-border-radius: 7px;
+
+    border-radius: 7px;
+
+    border: 1px solid #c97e1c;
+
+    display: inline-block;
+
+    color: #ffffff;
+
+    font-family: Trebuchet MS;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    padding: 6px 11px;
+
+    text-decoration: none;
+
+    text-shadow: 0px 1px 0px #8f7f24;
+}
+
+.like-button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f89306), color-stop(1, #fbb450));
+
+    background: -moz-linear-gradient(top, #f89306 5%, #fbb450 100%);
+
+    background: -webkit-linear-gradient(top, #f89306 5%, #fbb450 100%);
+
+    background: -o-linear-gradient(top, #f89306 5%, #fbb450 100%);
+
+    background: -ms-linear-gradient(top, #f89306 5%, #fbb450 100%);
+
+    background: linear-gradient(to bottom, #f89306 5%, #fbb450 100%);
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f89306', endColorstr='#fbb450',GradientType=0);
+
+    background-color: #f89306;
+
+    cursor: pointer;
+}
+
+.like-button:active {
+    position: relative;
+
+    top: 1px;
+}
+
+.home-items {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.goal-wrapper {
+    display: inline-block;
+    border-radius: 8px;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.team-wrapper {
+    display: inline-block;
+    border-radius: 8px;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.team-members-count {
+    color: #8e3234;
+    font-weight: bold;
+    font-size: 9px;
+}
+
+.team-member-btn {
+    background: #686868;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #4f4f4f;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.outfits-block {
+    display: inline-block;
+    margin: 5px;
+}
+
+.battle-grid {
+    display: inline-block;
+    border-radius: 8px;
+    width: 140px;
+    padding: 10px;
+    margin: 5px;
+    vertical-align: top;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.forum-poll {
+    border: 1px solid #ae8960;
+    padding: 10px;
+    width: 91%;
+    border-radius: 4px;
+    margin-bottom: 0px;
+}
+
+.poll-answer-block {
+    border-radius: 0px;
+    border: 0px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    background: #eee;
+    margin: 0px;
+}
+
+.poll-vote-per {
+    width: 97%;
+    padding: 0px;
+    border-radius: 4px;
+    background: #fff;
+    margin: 5px;
+}
+
+.poll-vote-per-bar {
+    width: 0%;
+    background: #0099ff;
+    padding: 10px;
+    border-radius: 0px;
+}
+
+.pv-box {
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    padding: 2px;
+    margin: 1px;
+    display: inline-block;
+    width: 37px;
+}
+
+.pv-box img {
+    cursor: pointer;
+}
+
+.pv-box a {
+    padding-bottom: 0px;
+    margin-bottom: 0px !important;
+}
+
+.active-box {
+    border: 2px solid #604325 !important;
+}
+
+.pv-cat {
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+    height: 240px;
+}
