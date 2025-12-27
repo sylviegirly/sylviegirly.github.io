@@ -19,6 +19,7 @@ function renderGoatProfile(goat) {
                 </p>
 
                 <p>
+                    <b>ID:</b> #${goat.id}<br/>
                     <b>Level:</b> ${goat.level}<br />
                     <b>EXP:</b> ${goat.exp.current}/${goat.exp.max}<br />
                     <b>HP:</b> ${goat.hp.current}/${goat.hp.max}<br />
@@ -61,6 +62,7 @@ function renderGoatProfile(goat) {
 const introjection = {
     name: "Introjection",
     image: "https://i.imgur.com/wLX61o0.png",
+    id: 319946,
     gender: "Male",
     appearance: "Ribbon Romantic AD",
     born: "2nd Jan 2023 08:35",
@@ -84,39 +86,39 @@ const introjection = {
 
     treasure: [
         {
-            image: "https://www.goatlings.com/images/items/ForgottenStone.gif",
+            image: "/img/goatlings/items/ForgottenStone.gif",
             name: "Forgotten Stone"
         },
         {
-            image: "https://www.goatlings.com/images/items/RibbonRomanticPlush.gif",
+            image: "/img/goatlings/items/RibbonRomanticPlush.gif",
             name: "Ribbon Romantic Plush"
         },
         {
-            image: "https://www.goatlings.com/images/items/GraveyardBouquet.gif",
+            image: "/img/goatlings/items/GraveyardBouquet.gif",
             name: "Graveyard Bouquet"
         },
         {
-            image: "https://www.goatlings.com/images/items/CrystalDirt.gif",
+            image: "/img/goatlings/items/CrystalDirt.gif",
             name: "Crystal Dirt"
         },
         {
-            image: "https://www.goatlings.com/images/items/ForgottenCup.gif",
+            image: "/img/goatlings/items/ForgottenCup.gif",
             name: "Forgotten Cup"
         },
         {
-            image: "https://www.goatlings.com/images/items/LavenderRADBracelet.gif",
+            image: "/img/goatlings/items/LavenderRADBracelet.gif",
             name: "Lavender RAD Bracelet"
         },
         {
-            image: "https://www.goatlings.com/images/items/MidnightPotion.gif",
+            image: "/img/goatlings/items/MidnightPotion.gif",
             name: "Midnight Potion"
         },
         {
-            image: "https://www.goatlings.com/images/items/PurpleBlanket.gif",
+            image: "/img/goatlings/items/PurpleBlanket.gif",
             name: "Purple Blanket"
         },
         {
-            image: "https://www.goatlings.com/images/items/SugarBones.gif",
+            image: "/img/goatlings/items/SugarBones.gif",
             name: "Sugar Bones"
         }
     ]
@@ -125,6 +127,7 @@ const introjection = {
 const sylvie = {
     name: "Sylvie",
     image: "https://i.imgur.com/cKtK6LB.png",
+    id: 139031,
     gender: "Other",
     appearance: "Gaia AD",
     born: "3rd Jun 2017 03:28",
@@ -173,8 +176,78 @@ const sylvie = {
             name: "Plant Specimen"
         },
         {
-            image: "../img/goatlings/items/Rosemary%20Sprig.gif",
+            image: "../img/goatlings/items/RosemarySprig.gif",
             name: "Rosemary Sprig"
+        }
+    ]
+};
+
+const cerni = {
+    name: "Cerni",
+    image: "/img/goatlings/goats/Betta.gif",
+    id: 162202,
+    gender: "Hidden",
+    appearance: "Betta AD",
+    born: "19th Mar 2018 06:25 ",
+    feeling: "Healthy, Full, and Happy",
+
+    level: 9,
+    exp: { current: 1048, max: 1281 },
+    hp: { current: 50, max: 50 },
+
+    stats: {
+        str: 9,
+        def: 9,
+        int: 1,
+        spd: 1
+    },
+
+    about: "",
+
+    treasure: [
+        {
+            image: "/img/goatlings/items/Flower%20Fish.gif",
+            name: "Flower Fish"
+        },
+        {
+            image: "/img/goatlings/items/Cow%20Plush.gif",
+            name: "Cow Plush"
+        },
+        {
+            image: "/img/goatlings/items/FloralPerfume.gif",
+            name: "Floral Perfume"
+        },
+        {
+            image: "/img/goatlings/items/Florals.gif",
+            name: "Florals"
+        },
+        {
+            image: "/img/goatlings/items/BottleOfLove.gif",
+            name: "Bottle of Love"
+        },
+        {
+            image: "/img/goatlings/items/PopUpCard.gif",
+            name: "Pop Up Card"
+        },
+        {
+            image: "/img/goatlings/items/PondKoi.gif",
+            name: "Pond Koi"
+        },
+        {
+            image: "../img/goatlings/items/RosyMothkitBP.gif",
+            name: "Rosy Mothkit BP"
+        },
+        {
+            image: "../img/goatlings/items/CutiePie.gif",
+            name: "Cutie Pie"
+        },
+        {
+            image: "../img/goatlings/items/Angelfish.gif",
+            name: "Angelfish"
+        },
+        {
+            image: "../img/goatlings/items/RadioactiveCowPlush.gif",
+            name: "Radioactive Cow Plush"
         }
     ]
 };
@@ -182,7 +255,7 @@ const sylvie = {
 document.getElementById("goatinformation").innerHTML = renderGoatProfile(sylvie);
 
 // UPDATE THIS LATER W/NEW GOATS!!!!!!!!!!
-const goats = [introjection, sylvie];
+const goats = [cerni, introjection, sylvie];
 
 document.getElementById("goat").addEventListener("change", (e) => {
     document.getElementById("goatinformation").innerHTML = renderGoatProfile(goats[e.target.value]);
