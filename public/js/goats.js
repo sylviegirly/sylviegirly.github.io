@@ -148,7 +148,7 @@ const sylvie = {
 
     treasure: [
         {
-            image: "../img/goatlings/items/Lavender%20Sprig.gif",
+            image: "../img/goatlings/items/LavenderSprig.gif",
             name: "Lavender Sprig"
         },
         {
@@ -206,11 +206,11 @@ const cerni = {
 
     treasure: [
         {
-            image: "/img/goatlings/items/Flower%20Fish.gif",
+            image: "/img/goatlings/items/FlowerFish.gif",
             name: "Flower Fish"
         },
         {
-            image: "/img/goatlings/items/Cow%20Plush.gif",
+            image: "/img/goatlings/items/CowPlush.gif",
             name: "Cow Plush"
         },
         {
