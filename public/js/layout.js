@@ -427,19 +427,19 @@ customElements.define("left-sidebar", LeftSidebar);
 // DO IMAGE REROLL THINGS
 const images = [
     {
-        imagesrc: "https://f2.toyhou.se/file/f2-toyhou-se/images/112451752_3O3nO85Q21OmSWA.gif",
+        imagesrc: "/img/sidebar/Ceriae_479261_diona.gif",
         alt: "A chibi pixel of Diona, an original character",
         url: "https://www1.flightrising.com/clan-profile/479621",
         freezeframe: false
     },
     {
-        imagesrc: "https://f2.toyhou.se/file/f2-toyhou-se/images/112451735_7QyDLf5XwozuyVK.gif",
+        imagesrc: "/img/sidebar/Ceriae_479261.gif",
         alt: "A chibi pixel of Sylvie, an original character",
         url: "https://www1.flightrising.com/clan-profile/479621",
         freezeframe: false
     },
     {
-        imagesrc: "https://f2.toyhou.se/file/f2-toyhou-se/images/112451712_B2DNGWMiRz8sBse.gif",
+        imagesrc: "/img/sidebar/Ceriae_479261_ZL.gif",
         alt: "A chibi pixel of Zhongli, from Genshin Impact",
         url: "https://www1.flightrising.com/clan-profile/479621",
         freezeframe: false
