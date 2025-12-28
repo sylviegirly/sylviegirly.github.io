@@ -430,19 +430,19 @@ const images = [
         imagesrc: "/img/sidebar/Ceriae_479261_diona.gif",
         alt: "A chibi pixel of Diona, an original character",
         url: "https://www1.flightrising.com/clan-profile/479621",
-        freezeframe: false
+        freezeframe: true
     },
     {
         imagesrc: "/img/sidebar/Ceriae_479261.gif",
         alt: "A chibi pixel of Sylvie, an original character",
         url: "https://www1.flightrising.com/clan-profile/479621",
-        freezeframe: false
+        freezeframe: true
     },
     {
         imagesrc: "/img/sidebar/Ceriae_479261_ZL.gif",
         alt: "A chibi pixel of Zhongli, from Genshin Impact",
         url: "https://www1.flightrising.com/clan-profile/479621",
-        freezeframe: false
+        freezeframe: true
     },
     {
         imagesrc: "/img/sidebar/sylvie_chibi_10.png",
