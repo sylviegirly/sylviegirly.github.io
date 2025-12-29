@@ -815,4 +815,8 @@ footer nav li:last-child:after {
     .infobox .left-side {
         padding-top: 0;
     }
+
+    .pet-image-active {
+        display: none;
+    }
 }
