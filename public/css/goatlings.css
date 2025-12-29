@@ -5,7 +5,7 @@
 
     --user-deco: url(/img/goatlings/Deer.gif);
     --user-color: #aa0a26;
-    --active-goat: url(https://i.imgur.com/G18cbm0.png);
+    --active-goat: url(/img/goatlings/goats/sylvie.png);
 
     --content-bg: #ffffcd;
     --main-bg: #fff;
@@ -48,7 +48,7 @@
         --main-bg-outline: #424754;
 
         --background-image: url(/img/goatlings/blue_bg.png);
-        --header-img: url(/img/goatlings/GoatlingsHeader.gif);
+        --header-img: url(/img/goatlings/bannerbygalacticrush.png);
 
         --text: #ffffff;
         --bold: #dd3c60;
