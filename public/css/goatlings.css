@@ -418,7 +418,8 @@ abbr,
 
 #goats section.custom-code {
     border: none;
-    margin: 0;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #search {
@@ -626,7 +627,7 @@ abbr,
 }
 
 .goat-container > div img {
-    max-width: 160px;
+    max-width: 100%;
 }
 
 .fave-items,
