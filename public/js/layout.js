@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* SNOWFLAKES, DISABLE OUTSIDE OF DECEMBER */
-    const snowContainer = document.querySelector(".snow-container");
+    /*const snowContainer = document.querySelector(".snow-container");
 
     const particlesPerThousandPixels = 0.1;
     const fallSpeed = 0.35;
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(generateSnowflakes, 1000);
     });
 
-    document.addEventListener("visibilitychange", handleVisibilityChange);
+    document.addEventListener("visibilitychange", handleVisibilityChange);*/
 });
 
 /* FREEZE GIFS */
