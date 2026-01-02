@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    -->
+    <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
+
+        <!-- Site Title -->
+        <title>2026 diary archive</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="An archive of my diary calendar." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="/css/style.css" as="style" />
+        <link rel="preload" href="/js/layout.js" as="script" />
+
+        <!-- CSS: -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
+
+        <!-- JavaScript: -->
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
+
+        <!-- Page Only Javascript: -->
+
+        <!-- Page Only Styling: -->
+        <style>
+            .calendar {
+                width: 100%;
+            }
+
+            .calendar-head {
+                display: flex;
+                min-height: 30px;
+                color: var(--font-on-accent);
+                font-family: "dosis";
+            }
+
+            .inactive {
+                opacity: 0.1;
+                background-size: 10px 10px;
+                background-image: repeating-linear-gradient(
+                    45deg,
+                    var(--primary-accent) 0,
+                    var(--primary-accent) 1px,
+                    transparent 0,
+                    transparent 50%
+                );
+            }
+
+            .dayname {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                text-transform: uppercase;
+                color: var(--font-on-accent);
+                overflow: hidden;
+                background-color: var(--primary-accent);
+                font-weight: bold;
+                text-align: center;
+                line-height: 1;
+            }
+
+            .day-number {
+                font-family: "dosis";
+                font-weight: bold;
+                color: var(--secondary-accent);
+            }
+
+            .row {
+                display: flex;
+                min-height: 150px;
+            }
+
+            .day {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                color: var(--font);
+                padding: 5px;
+                box-shadow:
+                    -1px -1px var(--body-outline),
+                    inset -1px -1px 0 0 var(--body-outline);
+            }
+
+            .day p {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.8em;
+            }
+
+            section div ul {
+                margin-left: -20px;
+            }
+
+            @media screen and (max-width: 800px) {
+                .row {
+                    flex-direction: column;
+                }
+
+                .inactive,
+                .calendar-head {
+                    display: none;
+                }
+
+                .day p {
+                    font-size: 1em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
+            <main id="content">
+                <article>
+                    <section aria-labelledby="2026archive">
+                        <h1 id="2025archive">2026 Diary Archive</h1>
+                        <p>
+                            Nothing yet ... wait why the hell is this so small LMAO. Uhh lorem ipsum something something
+                            bug found where it doesn't like not having enough content.
+                        </p>
+                    </section>
+                </article>
+            </main>
+        </div>
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
+        <general-footer></general-footer>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script src="/js/tippy-deco.js"></script>
+
+        <!-- PAGE ONLY SCRIPTS -->
+    </body>
+</html>
