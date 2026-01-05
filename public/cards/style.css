@@ -290,3 +290,17 @@ hr {
     margin-top: 20px;
     font-size: 0.8em;
 }
+
+#newcardscontainer,
+#fullcollectioncontainer > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-content: center;
+}
+
+#fullcollectioncontainer > div {
+    margin-top: 10px;
+}

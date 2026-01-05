@@ -60,6 +60,7 @@
 var logs = `
 <u>01/05/2026</u>
 <ul>
+    <li><b>received from new deck claim:</b> qucusaurus01, dagobah01, truepassion11, laprimera01, triplecone01, rust01, scepter01, abundance12, cortondo02, firstlie01, vanarana15, vasavi12, nirvasyl01, burgers01, illness01, psychology01, lapisdei01, cervanivea01, warmonk01</li>
     <li><b>gifted by corafish:</b> jadedeer06, objection15, 1 red crayon, 1 orange crayon, 1 yellow crayon, 1 green crayon, 1 blue crayon, 1 purple crayon, 1 brown crayon, 1 gray crayon</li>
     <li><b>received from game:</b> lapisdei07, lapisdei10, lawless19, crusader19, orderly19, ioka01, gentian12, valkyria14</li>
     <li>started playing</li>
