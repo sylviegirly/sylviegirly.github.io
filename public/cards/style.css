@@ -5,6 +5,7 @@
     --pagecontentaccentcolor: darkseagreen;
 
     --navbuttoncolor: beige;
+    --navbuttontext: black;
 
     --textcolor: black;
     --linkcolor: black;
@@ -19,6 +20,36 @@
     --collectingcolor-brown: #e9d4b7;
     --collectingcolor-gray: #d4d4d4;
     --collectingcolor-special: white;
+
+    @media (prefers-color-scheme: dark) {
+        /* general colors */
+        --websitebackgroundcolor: #222922;
+        --pagecontentmaincolor: #161b1c;
+        --pagecontentaccentcolor: #577b57;
+
+        --navbuttoncolor: #5e9552;
+        --navbuttontext: white;
+
+        --textcolor: #ede8db;
+        --linkcolor: #aef6a2;
+
+        /* collecting page header/deck colors */
+        --collectingcolor-red: #3b2e2e;
+        --collectingcolor-orange: #433b35;
+        --collectingcolor-yellow: #595634;
+        --collectingcolor-green: #3a5c40;
+        --collectingcolor-blue: #2b4452;
+        --collectingcolor-purple: #29294c;
+        --collectingcolor-brown: #312718;
+        --collectingcolor-gray: #333333;
+        --collectingcolor-special: #0f0f0f;
+    }
+}
+
+@font-face {
+    font-family: "Nunito";
+    font-display: swap;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
 }
 
 /* DO NOT CHANGE BELOW UNLESS YOU KNOW WHAT YOU'RE DOING */
@@ -26,15 +57,19 @@
 /* GENERAL */
 body {
     background-color: var(--websitebackgroundcolor);
+    font-family: "Nunito";
+    color: var(--textcolor);
     /* background image instead of color */
     /* background-image: ? */
 }
 p {
-    color: var(--textcolor);
     margin: 0;
     margin-left: 5px;
     margin-right: 5px;
     padding: 0;
+}
+h1 {
+    color: var(--textcolor);
 }
 a {
     color: var(--linkcolor);
@@ -88,7 +123,7 @@ hr {
     margin-bottom: 20px;
 }
 .navbutton {
-    color: black;
+    color: var(--navbuttontext);
     background-color: var(--navbuttoncolor);
     text-decoration: none;
     padding: 7px;
