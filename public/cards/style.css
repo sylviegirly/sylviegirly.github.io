@@ -26,7 +26,7 @@
         /* general colors */
         --websitebackgroundcolor: #222922;
         --pagecontentmaincolor: #161b1c;
-        --pagecontentaccentcolor: #577b57;
+        --pagecontentaccentcolor: #7aa97a;
 
         --navbuttoncolor: #5e9552;
         --navbuttontext: white;
@@ -60,6 +60,7 @@
 body {
     background-color: var(--websitebackgroundcolor);
     font-family: "Nunito";
+    font-size: 1rem;
     color: var(--textcolor);
     /* background image instead of color */
     /* background-image: ? */
@@ -107,6 +108,12 @@ p {
 h1 {
     color: var(--textcolor);
     margin-bottom: 10px;
+}
+
+bold,
+b,
+strong {
+    color: var(--pagecontentaccentcolor);
 }
 
 a {
@@ -160,6 +167,8 @@ hr {
     background-color: var(--pagecontentmaincolor);
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0 var(--pagecontentaccentcolor);
 }
 
 /* HEADER */
@@ -263,4 +272,9 @@ hr {
     padding: 10px;
     margin: 10px;
     min-width: 90px;
+}
+
+#creditscontainer {
+    margin-top: 20px;
+    font-size: 0.8em;
 }
