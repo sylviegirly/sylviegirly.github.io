@@ -50,7 +50,7 @@ var coupons = [];
 var paletteportfoliopath = "portfolios/paletteportfolio.gif"; // change if named different
 var monochromeportfoliopath = "portfolios/monochromeportfolio.gif"; // change if named different
 
-var paletteportfoliodecks = "reddeck, orangdeck, yellowdeck, greendeck, bluedeck, purpledeck, browndeck, graydeck"; //
+var paletteportfoliodecks = "vasavi, psychology, warmonk, jadedeer, objection, burgers, lapisdei, illness"; //
 var monochromeportfoliodecks = "deckone, decktwo, deckthree, deckfour, deckfive, decksix, deckseven, deckeight";
 
 /*

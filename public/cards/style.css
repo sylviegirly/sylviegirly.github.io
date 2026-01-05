@@ -204,7 +204,7 @@ hr {
 }
 .portfoliohidden {
     background-color: var(--pagecontentmaincolor);
-    width: 110px;
+    width: max-content;
     border: 1px solid var(--pagecontentaccentcolor);
     position: absolute;
     display: none;
