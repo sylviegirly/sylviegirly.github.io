@@ -1,8 +1,10 @@
 :root {
     /* general colors */
     --websitebackgroundcolor: darkseagreen;
+    --backgroundimage: url(../img/light_mode_bg.png);
     --pagecontentmaincolor: beige;
     --pagecontentaccentcolor: darkseagreen;
+    --pageoutline: rgba(74, 118, 58, 0.15);
 
     --navbuttoncolor: beige;
     --navbuttontext: black;
@@ -24,16 +26,18 @@
 
     @media (prefers-color-scheme: dark) {
         /* general colors */
-        --websitebackgroundcolor: #222922;
-        --pagecontentmaincolor: #161b1c;
-        --pagecontentaccentcolor: #7aa97a;
+        --websitebackgroundcolor: #211f1f;
+        --backgroundimage: url(../img/dark_mode_bg.png);
+        --pagecontentmaincolor: #191717;
+        --pagecontentaccentcolor: #778d60;
+        --pageoutline: rgba(74, 118, 58, 0.15);
 
-        --navbuttoncolor: #5e9552;
-        --navbuttontext: white;
+        --navbuttoncolor: #778d60;
+        --navbuttontext: #000000;
 
-        --textcolor: #ede8db;
-        --texthovercolor: #ffffff;
-        --linkcolor: #aef6a2;
+        --textcolor: #f4f4f4;
+        --linkhovercolor: #e2ae50;
+        --linkcolor: #a8d38d;
 
         /* collecting page header/deck colors */
         --collectingcolor-red: #3b2e2e;
@@ -63,7 +67,7 @@ body {
     font-size: 1rem;
     color: var(--textcolor);
     /* background image instead of color */
-    /* background-image: ? */
+    background-image: var(--backgroundimage);
 }
 
 * {
@@ -168,7 +172,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    box-shadow: 6px 6px 0 var(--pagecontentaccentcolor);
+    box-shadow: 6px 6px 0 var(--pageoutline);
 }
 
 /* HEADER */
@@ -179,7 +183,14 @@ hr {
     color: var(--navbuttontext);
     background-color: var(--navbuttoncolor);
     text-decoration: none;
-    padding: 7px;
+    padding: 7px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.navbutton:hover {
+    color: initial;
+    background-color: var(--linkhovercolor);
 }
 
 /* HOME PAGE */
