@@ -26,7 +26,8 @@ var pendingtrades = [];
 
    ex: "deckone, decktwo, deckthree" or "card01, card02, card03"
 */
-var highprioritydecks = "lapisdei, illness, jadedeer, cervanivea, vasavi, vanarana"; // "deckone, decktwo, deckthree..."
+var highprioritydecks =
+   "lapisdei, illness, jadedeer, cervanivea, vasavi, vanarana, burgers, psychology, warmonk, objection"; // "deckone, decktwo, deckthree..."
 var allisodecks =
    "e-ming, lapisdei, ruoye, logic, objection, illness, nirvasyl, jadedeer, omniscient, vasavi, warmonk, cervanivea, psychology, burgers, vanarana"; // "deckone, decktwo, deckthree..."
 var singlecards = ""; // "card01, card02, card03..."
