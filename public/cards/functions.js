@@ -244,9 +244,9 @@ function fillSketchpads() {
     var currentSketchpad = result[1];
 
     document.getElementById("completedsketchpadscontainer").innerHTML =
-        "<img class='marginimage' src='sketchpads/" + sketchpadname + "20.gif'>x" + completedSketchpads;
+        "<img class='marginimage' src='sketchpads/" + sketchpadname + "20.png'>x" + completedSketchpads;
     document.getElementById("currentsketchpadcontainer").innerHTML =
-        "<img class='marginimage' src='sketchpads/" + sketchpadname + currentSketchpad + ".gif'>";
+        "<img class='marginimage' src='sketchpads/" + sketchpadname + currentSketchpad + ".png'>";
 }
 
 // INSERTS INTO crayonscontainer
