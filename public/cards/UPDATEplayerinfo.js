@@ -86,5 +86,5 @@ var additionalCompletedSketchpads = 0;
 var avatar = "https://v2.dreamwidth.org/18243822/4280806"; // path to avatar picture, should be 80x80px
 var playername = "Asuraid"; // colors tcg name
 var headername = "Aid"; // in case you want it to be different from player name
-var tradepost = "https://colors-trade.dreamwidth.org/"; // dream width trade post link (where people can comment to trade with you)
+var tradepost = "https://asuraid.dreamwidth.org/4183.html"; // dream width trade post link (where people can comment to trade with you)
 var tradetag = "https://colors-trade.dreamwidth.org/tag/player:+PLAYERNAME"; // dreamwidth player tag (in colors-tcg, given to you when you join)
