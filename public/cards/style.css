@@ -8,6 +8,7 @@
     --navbuttontext: black;
 
     --textcolor: black;
+    --texthovercolor: #7ea444;
     --linkcolor: black;
 
     /* collecting page header/deck colors */
@@ -31,6 +32,7 @@
         --navbuttontext: white;
 
         --textcolor: #ede8db;
+        --texthovercolor: #ffffff;
         --linkcolor: #aef6a2;
 
         /* collecting page header/deck colors */
@@ -62,24 +64,66 @@ body {
     /* background image instead of color */
     /* background-image: ? */
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+    &:focus-visible {
+        outline-color: skyblue !important;
+        outline-offset: -1px !important;
+        outline-style: solid !important;
+        outline-width: 3px !important;
+        border-color: transparent;
+    }
+}
+
+a img:focus {
+    opacity: 0.8;
+    filter: none;
+    -webkit-filter: grayscale(50%);
+    -moz-filter: grayscale(50%);
+    -ms-filter: grayscale(50%);
+    -o-filter: grayscale(50%);
+}
+
+html {
+    position: relative;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
 p {
     margin: 0;
     margin-left: 5px;
     margin-right: 5px;
     padding: 0;
 }
+
 h1 {
     color: var(--textcolor);
+    margin-bottom: 10px;
 }
+
 a {
     color: var(--linkcolor);
+    transition: 0.5s;
 }
+a:hover {
+    color: var(--linkhovercolor);
+}
+
 hr {
     border: 1px solid var(--pagecontentaccentcolor);
     margin-top: 10px;
     margin-left: 30px;
     margin-right: 30px;
 }
+
 .flex {
     display: flex;
     justify-content: center;
