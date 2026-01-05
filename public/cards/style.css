@@ -1,17 +1,17 @@
 :root {
     /* general colors */
-    --websitebackgroundcolor: darkseagreen;
+    --websitebackgroundcolor: #879d6d;
     --backgroundimage: url(../img/light_mode_bg.png);
-    --pagecontentmaincolor: beige;
-    --pagecontentaccentcolor: darkseagreen;
-    --pageoutline: rgba(74, 118, 58, 0.15);
+    --pagecontentmaincolor: #e9ecdb;
+    --pagecontentaccentcolor: #4e6137;
+    --pageoutline: rgba(74, 118, 58, 0.46);
 
-    --navbuttoncolor: beige;
-    --navbuttontext: black;
+    --navbuttoncolor: #4e6137;
+    --navbuttontext: white;
 
-    --textcolor: black;
-    --texthovercolor: #7ea444;
-    --linkcolor: black;
+    --textcolor: #16190f;
+    --linkhovercolor: #475407;
+    --linkcolor: #9a5b1a;
 
     /* collecting page header/deck colors */
     --collectingcolor-red: #ffdbdb;
@@ -189,8 +189,9 @@ hr {
 }
 
 .navbutton:hover {
-    color: initial;
+    color: var(--navbuttontext);
     background-color: var(--linkhovercolor);
+    letter-spacing: 2px;
 }
 
 /* HOME PAGE */
