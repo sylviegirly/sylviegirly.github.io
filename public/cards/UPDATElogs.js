@@ -60,6 +60,7 @@
 var logs = `
 <u>01/05/2026</u>
 <ul>
+    <li><b>traded to tempoet:</b> ioka01 for warmonk06
     <li><b>received from finalizing application:</b> wildlife14, explosion05</li>
     <li><b>received from Little Spell Academia 396:</b> jadedeer01, illness02, objection01, psychology03, psychology02, vasavi13, logic01, burgers02, lapisdei20</li>
     <li><b>received from December Deck Release:</b> qucusaurus01, dagobah01, truepassion11, laprimera01, triplecone01, rust01, scepter01, abundance12, cortondo02, firstlie01, vanarana15, vasavi12, nirvasyl01, burgers01, illness01, psychology01, lapisdei01, cervanivea01, warmonk01</li>
