@@ -4,4 +4,4 @@
 
     ex: "card01, card02...."
 */
-var tradingcards = "wildlife14, explosion05, lawless19, crusader19, orderly19, ioka01, gentian12, valkyria14";
+var tradingcards = "wildlife14, explosion05, lawless19, crusader19, orderly19, gentian12, valkyria14";
