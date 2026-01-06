@@ -288,7 +288,7 @@ ul li:last-child {
     background-color: var(--pagecontentmaincolor);
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     box-shadow: 6px 6px 0 var(--pageoutline);
 }
 
@@ -317,7 +317,7 @@ ul li:last-child {
     text-decoration: none;
     padding: 7px 10px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
 }
 
 .navbutton:hover {
