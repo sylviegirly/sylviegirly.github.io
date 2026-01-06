@@ -14,10 +14,18 @@
         <!-- Site Description -->
         <meta content="Completed sets." name="description" />
 
-        <link href="style.css" rel="stylesheet" type="text/css" media="all" />
-        <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="functions.js"></script>
-        <!-- DO NOT REMOVE -->
+        <!-- Preloading -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="js/UPDATEplayerinfo.js" as="script" />
+        <link rel="preload" href="js/functions.js" as="script" />
+
+        <!-- CSS Files -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+
+        <!-- JS Files + Init -->
+        <script type="text/javascript" src="js/UPDATEplayerinfo.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
         <script>
             window.onload = () => {
                 setWebsiteHeader();
@@ -27,22 +35,33 @@
         <!-- DO NOT REMOVE -->
     </head>
     <body>
-        <!-- website header including navigation bar -->
-        <div style="text-align: center">
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#middle">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Content Begins. -->
+        <!-- =============================================== -->
+        <div id="sitecontainer">
+            <!-- website header including navigation bar -->
             <div id="websiteheadercontainer"></div>
 
             <!-- rest of the website -->
-            <div id="middle" class="">
-                <h2>completed sets + masteries</h2>
-                <p>
-                    i'll figure it out at some point how to format this so it just uses the collecting layout or some
-                    other nicer layout ...
-                    <a href="https://corafish-tcg.neocities.org/completed">cora's layout</a> looks nice for finished
-                    sets but i'd wanna find out some way to automate it using the existing code.
-                </p>
-            </div>
+            <main id="middle" class="">
+                <article>
+                    <h2>completed sets + masteries</h2>
+                    <p>
+                        i'll figure it out at some point how to format this so it just uses the collecting layout or
+                        some other nicer layout ...
+                        <a href="https://corafish-tcg.neocities.org/completed">cora's layout</a> looks nice for finished
+                        sets but i'd wanna find out some way to automate it using the existing code.
+                    </p>
+                </article>
+            </main>
 
             <div id="creditscontainer"><!-- DO NOT REMOVE --></div>
         </div>
+        <a href="#skip" id="backscroll" title="Go to top">Top</a>
     </body>
 </html>

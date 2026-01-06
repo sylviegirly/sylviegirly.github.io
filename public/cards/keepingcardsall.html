@@ -1,57 +1,89 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=100%, initial-scale=.4">
-        <title>keeping cards</title>
-        <link href="style.css" rel="stylesheet" type="text/css" media="all">
-        <script type="text/javascript" src="UPDATEcolorstcgdeckdata.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEkeepingcards.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEplayerinfo.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="functions.js"></script> <!-- DO NOT REMOVE -->
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Site Title -->
+        <title>keeping cards all</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="Cards to keep." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="js/UPDATEkeepingcards.js" as="script" />
+        <link rel="preload" href="js/UPDATEplayerinfo.js" as="script" />
+        <link rel="preload" href="js/UPDATElogs.js" as="script" />
+        <link rel="preload" href="js/functions.js" as="script" />
+
+        <!-- CSS Files -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+
+        <!-- JS Files + Init -->
+        <script type="text/javascript" src="js/UPDATEcolorstcgdeckdata.js"></script>
+        <script type="text/javascript" src="js/UPDATEkeepingcards.js"></script>
+        <script type="text/javascript" src="js/UPDATEplayerinfo.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <!-- DO NOT REMOVE -->
         <script>
             window.onload = () => {
                 setWebsiteHeader();
                 setCredits();
                 insertImages("keeping", "all"); // fullcollectioncontainer
-            }
-        </script> <!-- DO NOT REMOVE -->
+            };
+        </script>
+        <!-- DO NOT REMOVE -->
     </head>
     <body>
-        <!-- website header including navigation bar -->
-        <center>
-        <div id="websiteheadercontainer"></div>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#middle">Skip to content</a></div>
 
-        <!-- rest of the website -->
-        <div id="middle" class="">
-            <p><b>all keeping cards</b></p>
-            <p>duplicates:</p>
-            <textarea id="duplicatestextarea"></textarea>
+        <!-- =============================================== -->
+        <!-- Content Begins. -->
+        <!-- =============================================== -->
+        <div id="sitecontainer">
+            <!-- website header including navigation bar -->
+            <div id="websiteheadercontainer"></div>
 
-            <div>
-                <p style="display:inline-block;">show color:</p>
-                <input type="checkbox" id="showAll" name= "input" value="sort" checked>
-                <label for="showAll">all</label>
-                <input type="checkbox" id="showRed" name= "input" value="sort">
-                <label for="showRed">red</label>
-                <input type="checkbox" id="showOrange" name= "input" value="sort">
-                <label for="showOrange">orange</label>
-                <input type="checkbox" id="showYellow" name= "input" value="sort">
-                <label for="showYellow">yellow</label>
-                <input type="checkbox" id="showGreen" name= "input" value="sort">
-                <label for="showGreen">green</label>
-                <input type="checkbox" id="showBlue" name= "input" value="sort">
-                <label for="showBlue">blue</label>
-                <input type="checkbox" id="showPurple" name= "input" value="sort">
-                <label for="showPurple">purple</label>
-                <input type="checkbox" id="showBrown" name= "input" value="sort">
-                <label for="showBrown">brown</label>
-                <input type="checkbox" id="showGrey" name= "input" value="sort">
-                <label for="showGrey">grey</label>
-                <input type="checkbox" id="showSpecial" name= "input" value="sort">
-                <label for="showSpecial">special</label>
+            <!-- rest of the website -->
+            <main id="middle">
+                <article>
+                    <h2>all keeping cards</h2>
+                    <p>duplicates:</p>
+                    <textarea id="duplicatestextarea"></textarea>
 
-                <!--<p style="display:inline-block; margin-left: 40px;">sort by</p>
+                    <div>
+                        <p style="display: inline-block">show color:</p>
+                        <input type="checkbox" id="showAll" name="input" value="sort" checked />
+                        <label for="showAll">all</label>
+                        <input type="checkbox" id="showRed" name="input" value="sort" />
+                        <label for="showRed">red</label>
+                        <input type="checkbox" id="showOrange" name="input" value="sort" />
+                        <label for="showOrange">orange</label>
+                        <input type="checkbox" id="showYellow" name="input" value="sort" />
+                        <label for="showYellow">yellow</label>
+                        <input type="checkbox" id="showGreen" name="input" value="sort" />
+                        <label for="showGreen">green</label>
+                        <input type="checkbox" id="showBlue" name="input" value="sort" />
+                        <label for="showBlue">blue</label>
+                        <input type="checkbox" id="showPurple" name="input" value="sort" />
+                        <label for="showPurple">purple</label>
+                        <input type="checkbox" id="showBrown" name="input" value="sort" />
+                        <label for="showBrown">brown</label>
+                        <input type="checkbox" id="showGrey" name="input" value="sort" />
+                        <label for="showGrey">grey</label>
+                        <input type="checkbox" id="showSpecial" name="input" value="sort" />
+                        <label for="showSpecial">special</label>
+
+                        <!--<p style="display:inline-block; margin-left: 40px;">sort by</p>
                 <input type="radio" id="sortbyall" name= "input" value="sort" checked>
                 <label for="sortbyall">all</label>
                 <input type="radio" id="sortbycolors" name= "input" value="sort">
@@ -59,23 +91,20 @@
                 <input type="radio" id="sortbyseries" name= "input" value="sort">
                 <label for="sortbyseries">series</label>-->
 
-                <button onclick="filter()" style="padding: 10px; margin-left: 30px;">filter</button>
+                        <button onclick="filter()" style="padding: 10px; margin-left: 30px">filter</button>
 
-                <br>
+                        <br />
 
-                <p>search by card name, deck name, or series:</p>
-                <input id="searchbar" onkeyup="filter()" type="text"
-                name="search" placeholder="search...">
-            </div>
+                        <p>search by card name, deck name, or series:</p>
+                        <input id="searchbar" onkeyup="filter()" type="text" name="search" placeholder="search..." />
+                    </div>
 
-            <div id="fullcollectioncontainer">
-            </div>
+                    <div id="fullcollectioncontainer"></div>
+                </article>
+            </main>
 
-
+            <div id="creditscontainer"><!-- DO NOT REMOVE --></div>
         </div>
-
-        <div id="creditscontainer"> <!-- DO NOT REMOVE -->
-        </div>
-        </center>
+        <a href="#skip" id="backscroll" title="Go to top">Top</a>
     </body>
 </html>

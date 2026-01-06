@@ -1147,7 +1147,7 @@ function setWebsiteHeader() {
     document.getElementById("websiteheadercontainer").innerHTML = `
         <div id="websiteheader">
             <h1><span id="headername"></span>'s colortcg</h1>
-            <div id="navbar">
+            <nav id="navbar">
                 <a href="index.html" class="navbutton">home</a>
                 <a href="collecting.html" class="navbutton">collecting</a>
                 <a href="complete.html" class="navbutton">completed</a>
@@ -1156,7 +1156,8 @@ function setWebsiteHeader() {
                 <a href="keepingcards.html" class="navbutton">keeping</a>
                 <a href="tradingcards.html" class="navbutton">trading</a>
                 <a href="log.html" class="navbutton">logs</a>
-            </div>
+                <a href="to-do.html" class="navbutton">to-do</a>
+            </nav>
         </div>
         `;
     document.getElementById("headername").innerHTML = headername;

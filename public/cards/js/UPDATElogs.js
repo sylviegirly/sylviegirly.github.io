@@ -58,7 +58,7 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
-<u>01/05/2026</u>
+<time>01/05/2026</time>
 <ul>
     <li>received from art shop: lapisdei03, lapisdei04, lapisdei05, lapisdei06</li>
     <li>lost to art shop: 4 brown crayon</li>

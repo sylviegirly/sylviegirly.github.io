@@ -1,42 +1,75 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=100%, initial-scale=.4">
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Site Title -->
         <title>future cards</title>
-        <link href="style.css" rel="stylesheet" type="text/css" media="all">
-        <script type="text/javascript" src="UPDATEkeepingcards.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEfuturecards.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEplayerinfo.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATElogs.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="functions.js"></script> <!-- DO NOT REMOVE -->
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="Cards to be used in future sets." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="js/UPDATEcolorstcgdeckdata.js" as="script" />
+        <link rel="preload" href="js/UPDATEkeepingcards.js" as="script" />
+        <link rel="preload" href="js/UPDATEplayerinfo.js" as="script" />
+        <link rel="preload" href="js/functions.js" as="script" />
+
+        <!-- CSS Files -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+
+        <!-- JS Files + Init -->
+        <script type="text/javascript" src="js/UPDATEkeepingcards.js"></script>
+        <script type="text/javascript" src="js/UPDATEfuturecards.js"></script>
+        <script type="text/javascript" src="js/UPDATEplayerinfo.js"></script>
+        <script type="text/javascript" src="js/UPDATElogs.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
         <script>
             window.onload = () => {
                 setWebsiteHeader();
                 setCredits();
                 fillNewCardsContainer("future"); //newcardscontainer
-            }
-        </script> <!-- DO NOT REMOVE -->
+            };
+        </script>
+        <!-- DO NOT REMOVE -->
     </head>
     <body>
-        <!-- website header including navigation bar -->
-        <center>
-        <div id="websiteheadercontainer"></div>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#middle">Skip to content</a></div>
 
-        <!-- rest of the website -->
-        <div id="middle" class="">
-            <p><b>future cards<br></b></p>
-            <div>
-                <a href="futurecardsall.html">all</a>
-                <a href="futurecards0-M.html">0-M</a>
-                <a href="futurecardsN-Z.html">N-Z</a>
-            </div>
-            <p><b>new future cards<br></b></p>
-           <div id="newcardscontainer"></div>
-        </div>
+        <!-- =============================================== -->
+        <!-- Content Begins. -->
+        <!-- =============================================== -->
+        <div id="sitecontainer">
+            <!-- website header including navigation bar -->
+            <div id="websiteheadercontainer"></div>
 
-        <div id="creditscontainer"> <!-- DO NOT REMOVE -->
+            <!-- rest of the website -->
+            <main id="middle">
+                <article>
+                    <h2>future cards</h2>
+                    <nav>
+                        <a href="futurecardsall.html">all</a>
+                        <a href="futurecards0-M.html">0-M</a>
+                        <a href="futurecardsN-Z.html">N-Z</a>
+                    </nav>
+                    <hr />
+                    <h3>new future cards</h3>
+                    <div id="newcardscontainer"></div>
+                </article>
+            </main>
+
+            <div id="creditscontainer"><!-- DO NOT REMOVE --></div>
         </div>
-        </center>
+        <a href="#skip" id="backscroll" title="Go to top">Top</a>
     </body>
 </html>

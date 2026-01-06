@@ -1,15 +1,37 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=100%, initial-scale=.4">
-        <title>collecting</title>
-        <link href="style.css" rel="stylesheet" type="text/css" media="all">
-        <script type="text/javascript" src="UPDATEcolorstcgdeckdata.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEtradingcards.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEkeepingcards.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEplayerinfo.js"></script> <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="functions.js"></script> <!-- DO NOT REMOVE -->
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Site Title -->
+        <title>collecting sets</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="Priority sets." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="js/UPDATEcolorstcgdeckdata.js" as="script" />
+        <link rel="preload" href="js/UPDATEtradingcards.js" as="script" />
+        <link rel="preload" href="js/UPDATEkeepingcards.js" as="script" />
+        <link rel="preload" href="js/UPDATEplayerinfo.js" as="script" />
+        <link rel="preload" href="js/functions.js" as="script" />
+
+        <!-- CSS Files -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+
+        <!-- JS Files + Init -->
+        <script type="text/javascript" src="js/UPDATEcolorstcgdeckdata.js"></script>
+        <script type="text/javascript" src="js/UPDATEtradingcards.js"></script>
+        <script type="text/javascript" src="js/UPDATEkeepingcards.js"></script>
+        <script type="text/javascript" src="js/UPDATEplayerinfo.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
         <script>
             window.onload = () => {
                 setWebsiteHeader();
@@ -17,49 +39,46 @@
                 createPriorityDecks(); // fullsetisocontainer
                 sortNeededDecks();
                 sortSingleCards();
-            }
-        </script> <!-- DO NOT REMOVE -->
+            };
+        </script>
+        <!-- DO NOT REMOVE -->
     </head>
     <body>
-        <!-- website header including navigation bar -->
-        <center>
-        <div id="websiteheadercontainer"></div>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#middle">Skip to content</a></div>
 
-        <!-- rest of the website -->
-        <div id="middle" class="">
-            <p><b>collecting</b></p>
-            <div>
+        <!-- =============================================== -->
+        <!-- Content Begins. -->
+        <!-- =============================================== -->
+        <div id="sitecontainer">
+            <!-- website header including navigation bar -->
+            <div id="websiteheadercontainer"></div>
 
-                <div style="margin-bottom: 30px; ">
-                    <p><b>high priority</b></p>
+            <!-- rest of the website -->
+            <main id="middle" class="">
+                <article>
+                    <h2>collecting</h2>
+                    <section>
+                        <h3>high priority</h3>
+                        <div id="fullsetisocontainer"></div>
+                    </section>
+                    <hr />
+                    <section>
+                        <h3>single cards</h3>
+                        <div id="singlecardscontainer"></div>
+                    </section>
+                    <hr />
+                    <section>
+                        <h3>all</h3>
+                        <div id="neededdeckscontainer"></div>
+                    </section>
+                </article>
+            </main>
 
-                    <div id="fullsetisocontainer" style="display:flex; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
-                    </div>
-
-                </div>
-
-                <div style="margin-bottom: 30px;">
-                    <p><b>single cards</b></p>
-
-                    <div id="singlecardscontainer" style="display:flex; flex-direction: row; justify-content: center; flex-wrap: wrap; text-align: center">
-                    </div>
-
-                </div>
-
-
-                <div style="margin-bottom: 30px;">
-                    <p><b>all</b></p>
-
-                    <div id="neededdeckscontainer" style="display:flex; flex-direction: row; justify-content: center; flex-wrap: wrap; text-align: center">
-                    </div>
-
-                </div>
-
-            </div>
+            <div id="creditscontainer"><!-- DO NOT REMOVE --></div>
         </div>
-
-        <div id="creditscontainer"> <!-- DO NOT REMOVE -->
-        </div>
-        </center>
+        <a href="#skip" id="backscroll" title="Go to top">Top</a>
     </body>
 </html>

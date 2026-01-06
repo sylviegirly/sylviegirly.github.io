@@ -14,15 +14,22 @@
         <!-- Site Description -->
         <meta content="Logs for Color TCG." name="description" />
 
-        <link href="style.css" rel="stylesheet" type="text/css" media="all" />
-        <script type="text/javascript" src="UPDATEkeepingcards.js"></script>
-        <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEplayerinfo.js"></script>
-        <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATElogs.js"></script>
-        <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="functions.js"></script>
-        <!-- DO NOT REMOVE -->
+        <!-- Preloading -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="js/UPDATEkeepingcards.js" as="script" />
+        <link rel="preload" href="js/UPDATEplayerinfo.js" as="script" />
+        <link rel="preload" href="js/UPDATElogs.js" as="script" />
+        <link rel="preload" href="js/functions.js" as="script" />
+
+        <!-- CSS Files -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+
+        <!-- JS Files + Init -->
+        <script type="text/javascript" src="js/UPDATEkeepingcards.js"></script>
+        <script type="text/javascript" src="js/UPDATEplayerinfo.js"></script>
+        <script type="text/javascript" src="js/UPDATElogs.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
         <script>
             window.onload = () => {
                 setWebsiteHeader();
@@ -33,17 +40,28 @@
         <!-- DO NOT REMOVE -->
     </head>
     <body>
-        <!-- website header including navigation bar -->
-        <div style="text-align: center">
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#middle">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Content Begins. -->
+        <!-- =============================================== -->
+        <div id="sitecontainer">
+            <!-- website header including navigation bar -->
             <div id="websiteheadercontainer"></div>
 
             <!-- rest of the website -->
-            <div id="middle" class="">
-                <h2>logs</h2>
-                <div id="collectionlogcontainer" style="text-align: left"><!-- DO NOT REMOVE --></div>
-            </div>
+            <main id="middle">
+                <article>
+                    <h2>logs</h2>
+                    <div id="collectionlogcontainer" style="text-align: left"><!-- DO NOT REMOVE --></div>
+                </article>
+            </main>
 
             <div id="creditscontainer"><!-- DO NOT REMOVE --></div>
         </div>
+        <a href="#skip" id="backscroll" title="Go to top">Top</a>
     </body>
 </html>

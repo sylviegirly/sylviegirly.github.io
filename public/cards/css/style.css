@@ -1,13 +1,22 @@
 :root {
+    /* sizes */
+    --width: 900px;
+    --basefont: "Nunito";
+    --border-radius: 10px;
+
     /* general colors */
     --websitebackgroundcolor: #879d6d;
-    --backgroundimage: url(../img/light_mode_bg.png);
+    --backgroundimage: url(/img/light_mode_bg.png);
+    --headerimage: url(/img/websiteBanner.png);
+    --titlecolor: white;
+
     --pagecontentmaincolor: #e9ecdb;
     --pagecontentaccentcolor: #4e6137;
+    --pagecontentfontonaccentcolor: #ffffff;
     --pageoutline: rgba(74, 118, 58, 0.46);
 
-    --navbuttoncolor: #4e6137;
-    --navbuttontext: white;
+    --navbuttoncolor: #bbcda5;
+    --navbuttontext: #000000;
 
     --textcolor: #16190f;
     --linkhovercolor: #475407;
@@ -24,10 +33,12 @@
     --collectingcolor-gray: #d4d4d4;
     --collectingcolor-special: white;
 
+    --creditslink: #fff575;
+
     @media (prefers-color-scheme: dark) {
         /* general colors */
         --websitebackgroundcolor: #211f1f;
-        --backgroundimage: url(../img/dark_mode_bg.png);
+        --backgroundimage: url(/img/dark_mode_bg.png);
         --pagecontentmaincolor: #191717;
         --pagecontentaccentcolor: #778d60;
         --pageoutline: rgba(74, 118, 58, 0.15);
@@ -49,25 +60,40 @@
         --collectingcolor-brown: #312718;
         --collectingcolor-gray: #333333;
         --collectingcolor-special: #0f0f0f;
+
+        --creditslink: #9a5b1a;
     }
 }
 
 @font-face {
     font-family: "Nunito";
     font-display: swap;
-    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+    src: url(/fonts/Nunito-VariableFont_wght.ttf);
 }
 
 /* DO NOT CHANGE BELOW UNLESS YOU KNOW WHAT YOU'RE DOING */
 
-/* GENERAL */
+/* -------------------------------------------------------- */
+/* GENERAL SETUP */
+/* -------------------------------------------------------- */
+html {
+    position: relative;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-color: var(--websitebackgroundcolor);
-    font-family: "Nunito";
+    font-family: var(--basefont);
     font-size: 1rem;
     color: var(--textcolor);
     /* background image instead of color */
     background-image: var(--backgroundimage);
+    line-height: 1.5em;
 }
 
 * {
@@ -92,20 +118,70 @@ a img:focus {
     -o-filter: grayscale(50%);
 }
 
-html {
-    position: relative;
-}
-
-html,
-body {
-    padding: 0;
-    margin: 0;
-}
-
-body {
+#sitecontainer {
+    width: var(--width);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     margin-top: 100px;
 }
 
+section {
+    margin-bottom: 30px;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------s------ */
+/* SCROLL TO TOP */
+/* -------------------------------------------------------- */
+#backscroll {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 13px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    background-color: var(--pagecontentaccentcolor);
+    color: var(--pagecontentfontonaccentcolor);
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px 20px; /* Some padding */
+    border-radius: var(--border-radius); /* Rounded corners */
+    font-size: 1.1rem; /* Increase font size */
+    transition: 0.5s;
+    text-decoration: none;
+
+    &:hover {
+        background-color: var(--linkhovercolor);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(-3px);
+    }
+}
+
+/* -------------------------------------------------------- */
+/* ACCESSIBILITY, DO NOT REMOVE */
+/* -------------------------------------------------------- */
+#skip a {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: -1000px;
+    overflow: hidden;
+    transition: top 0.5s ease;
+    background: var(--pagecontentmaincolor);
+    color: var(--linkcolor);
+    z-index: 1000;
+    padding: 10px;
+}
+
+#skip a:focus {
+    top: 0;
+    transition: top 0.5s ease;
+}
+
+/* -------------------------------------------------------- */
+/* STYLING */
+/* -------------------------------------------------------- */
 p {
     margin: 0;
     margin-left: 5px;
@@ -114,8 +190,26 @@ p {
 }
 
 h1 {
-    color: var(--textcolor);
+    color: var(--titlecolor);
     margin-bottom: 10px;
+}
+
+h2 {
+    background-color: var(--pagecontentaccentcolor);
+    color: var(--pagecontentfontonaccentcolor);
+    padding: 10px 0;
+    border-radius: var(--border-radius);
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+h2:first-of-type {
+    margin-top: 0;
+}
+
+h3 {
+    color: var(--pagecontentaccentcolor);
+    margin: 5px;
 }
 
 bold,
@@ -139,6 +233,13 @@ hr {
     margin-right: 30px;
 }
 
+ul {
+    text-align: left;
+}
+
+/* -------------------------------------------------------- */
+/* HELPER CLASSES */
+/* -------------------------------------------------------- */
 .flex {
     display: flex;
     justify-content: center;
@@ -168,9 +269,12 @@ hr {
     margin: 0;
 }
 
+/* -------------------------------------------------------- */
+/* BODY */
+/* -------------------------------------------------------- */
 #middle {
     min-height: 500px;
-    width: 900px;
+    width: 100%;
     padding: 10px;
     background-color: var(--pagecontentmaincolor);
     margin-left: auto;
@@ -179,10 +283,25 @@ hr {
     box-shadow: 6px 6px 0 var(--pageoutline);
 }
 
+/* -------------------------------------------------------- */
 /* HEADER */
+/* -------------------------------------------------------- */
 #websiteheader {
     margin-bottom: 20px;
+    background-color: white;
+    padding: 20px 0;
+    border-radius: var(--border-radius);
+    background-image: var(--headerimage);
+    outline: 3px solid var(--pagecontentaccentcolor);
 }
+
+#navbar {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .navbutton {
     color: var(--navbuttontext);
     background-color: var(--navbuttoncolor);
@@ -195,10 +314,12 @@ hr {
 .navbutton:hover {
     color: var(--navbuttontext);
     background-color: var(--linkhovercolor);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
+/* -------------------------------------------------------- */
 /* HOME PAGE */
+/* -------------------------------------------------------- */
 #avatar {
     width: 80px;
 }
@@ -230,7 +351,9 @@ hr {
     margin-right: 5px;
 }
 
+/* -------------------------------------------------------- */
 /* COLLECTING PAGE */
+/* -------------------------------------------------------- */
 .deckred {
     background-color: var(--collectingcolor-red);
 }
@@ -290,11 +413,41 @@ hr {
     min-width: 90px;
 }
 
+#fullsetisocontainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+#singlecardscontainer,
+#neededdeckscontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* -------------------------------------------------------- */
+/* CREDITS */
+/* -------------------------------------------------------- */
 #creditscontainer {
     margin-top: 20px;
     font-size: 0.8em;
 }
 
+#creditscontainer a {
+    color: var(--creditslink);
+}
+
+#creditscontainer a:hover {
+    color: var(--linkhovercolor);
+}
+
+/* -------------------------------------------------------- */
+/* CARD DISPLAY FLEX FIX */
+/* -------------------------------------------------------- */
 #newcardscontainer,
 #fullcollectioncontainer > div {
     display: flex;
@@ -305,6 +458,31 @@ hr {
     align-content: center;
 }
 
+/* -------------------------------------------------------- */
+/* FULL COLLECTION */
+/* -------------------------------------------------------- */
 #fullcollectioncontainer > div {
     margin-top: 10px;
+}
+
+/* -------------------------------------------------------- */
+/* LOGS */
+/* -------------------------------------------------------- */
+time {
+    color: var(--pagecontentaccentcolor);
+    text-decoration: underline;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* -------------------------------------------------------- */
+/* MOBILE RESPONSIVENESS */
+/* -------------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+    #sitecontainer {
+        width: 100%;
+        padding: 10px;
+    }
 }

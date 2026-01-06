@@ -14,19 +14,26 @@
         <!-- Site Description -->
         <meta content="A site for Colors TCG on Dreamwidth." name="description" />
 
-        <link href="style.css" rel="stylesheet" type="text/css" media="all" />
-        <script type="text/javascript" src="UPDATEkeepingcards.js"></script>
-        <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEtradingcards.js"></script>
-        <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEfuturecards.js"></script>
-        <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATEplayerinfo.js"></script>
-        <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="UPDATElogs.js"></script>
-        <!-- DO NOT REMOVE -->
-        <script type="text/javascript" src="functions.js"></script>
-        <!-- DO NOT REMOVE -->
+        <!-- Preloading -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="js/UPDATEkeepingcards.js" as="script" />
+        <link rel="preload" href="js/UPDATEtradingcards.js" as="script" />
+        <link rel="preload" href="js/UPDATEfuturecards.js" as="script" />
+        <link rel="preload" href="js/UPDATEplayerinfo.js" as="script" />
+        <link rel="preload" href="js/UPDATElogs.js" as="script" />
+        <link rel="preload" href="js/functions.js" as="script" />
+
+        <!-- CSS Files -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+
+        <!-- JS Files + Init -->
+        <script type="text/javascript" src="js/UPDATEkeepingcards.js"></script>
+        <script type="text/javascript" src="js/UPDATEtradingcards.js"></script>
+        <script type="text/javascript" src="js/UPDATEfuturecards.js"></script>
+        <script type="text/javascript" src="js/UPDATEplayerinfo.js"></script>
+        <script type="text/javascript" src="js/UPDATElogs.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
         <script>
             window.onload = () => {
                 setWebsiteHeader();
@@ -45,141 +52,179 @@
         <!-- DO NOT REMOVE -->
     </head>
     <body>
-        <!-- website header including navigation bar -->
-        <div style="text-align: center">
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#middle">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Content Begins. -->
+        <!-- =============================================== -->
+        <div id="sitecontainer">
+            <!-- website header including navigation bar -->
             <div id="websiteheadercontainer"></div>
 
             <!-- rest of the website -->
-            <div id="middle" class="">
-                <div class="flex spaceevenly">
-                    <a class="sectionlink" href="https://colors-tcg.dreamwidth.org/" target="_blank">colorstcg</a>
-                    <a class="sectionlink" href="https://colors-trade.dreamwidth.org/" target="_blank">colorstrade</a>
-                    <a class="sectionlink" href="http://colors-tcg.eu/recycledart.php" target="_blank">recycled art</a>
-                    <a class="sectionlink" href="https://colors-tcg.dreamwidth.org/tag/%2Aart+studio" target="_blank"
-                        >art studio</a
-                    >
-                    <a class="sectionlink" href="https://colors-tcg.dreamwidth.org/tag/%2Aart+shop" target="_blank"
-                        >art shop</a
-                    >
-                    <a
-                        class="sectionlink"
-                        href="https://colors-tcg.dreamwidth.org/tag/%21activity+rewards"
-                        target="_blank"
-                        >activity rewards</a
-                    >
-                    <a class="sectionlink" href="https://colors-tcg.dreamwidth.org/tag/%2Aportfolios" target="_blank"
-                        >portfolios</a
-                    >
-                    <a class="sectionlink" href="https://colors-tcg.dreamwidth.org/tag/%21masteries" target="_blank"
-                        >masteries</a
-                    >
-                    <a class="sectionlink" href="https://colors-tcg.dreamwidth.org/tag/%21levels" target="_blank"
-                        >levels</a
-                    >
-                    <a class="sectionlink" href="http://colors-tcg.eu/cards.php?view=alpha" target="_blank"
-                        >decks list</a
-                    >
-                    <a class="sectionlink" href="http://colors-tcg.eu/members.php" target="_blank">member list</a>
-                </div>
-
-                <hr />
-
-                <div class="flex spaceevenly">
-                    <div class="flex center section">
-                        <div id="avatarcontainer"></div>
-                        <!-- DO NOT REMOVE -->
-                        <p class="tleft">
-                            <b>player:</b> <span id="playernamecontainer"></span><br />
-                            <!-- DO NOT REMOVE -->
-                            <b>level:</b> <span id="totalcardscontainer"></span><br /><a
-                                href="https://colors-tcg.dreamwidth.org/2734600.html?thread=156208648#cmt156208648"
-                                ><img
-                                    src="websiteassets/red_level.png"
-                                    alt="red level, displaying amber from genshin impact"
-                                    loading="lazy" /></a
-                            ><br />
-                            <!-- DO NOT REMOVE -->
-                            <b>dw trade post:</b> <span id="tradepostcontainer"></span><br />
-                            <!-- DO NOT REMOVE -->
-                            <b>dw trade tag:</b> <span id="tradetagcontainer"></span>
-                            <!-- DO NOT REMOVE -->
-                        </p>
-                    </div>
-                    <div class="flex">
-                        <div>
-                            <p><b>current</b></p>
-                            <div id="currentsketchpadcontainer"><!-- DO NOT REMOVE --></div>
+            <main id="middle">
+                <article>
+                    <h2>home page + quicklinks</h2>
+                    <nav>
+                        <div class="flex spaceevenly">
+                            <a class="sectionlink" href="https://colors-tcg.dreamwidth.org/" target="_blank"
+                                >colorstcg</a
+                            >
+                            <a class="sectionlink" href="https://colors-trade.dreamwidth.org/" target="_blank"
+                                >colorstrade</a
+                            >
+                            <a class="sectionlink" href="http://colors-tcg.eu/recycledart.php" target="_blank"
+                                >recycled art</a
+                            >
+                            <a
+                                class="sectionlink"
+                                href="https://colors-tcg.dreamwidth.org/tag/%2Aart+studio"
+                                target="_blank"
+                                >art studio</a
+                            >
+                            <a
+                                class="sectionlink"
+                                href="https://colors-tcg.dreamwidth.org/tag/%2Aart+shop"
+                                target="_blank"
+                                >art shop</a
+                            >
+                            <a
+                                class="sectionlink"
+                                href="https://colors-tcg.dreamwidth.org/tag/%21activity+rewards"
+                                target="_blank"
+                                >activity rewards</a
+                            >
+                            <a
+                                class="sectionlink"
+                                href="https://colors-tcg.dreamwidth.org/tag/%2Aportfolios"
+                                target="_blank"
+                                >portfolios</a
+                            >
+                            <a
+                                class="sectionlink"
+                                href="https://colors-tcg.dreamwidth.org/tag/%21masteries"
+                                target="_blank"
+                                >masteries</a
+                            >
+                            <a
+                                class="sectionlink"
+                                href="https://colors-tcg.dreamwidth.org/tag/%21levels"
+                                target="_blank"
+                                >levels</a
+                            >
+                            <a class="sectionlink" href="http://colors-tcg.eu/cards.php?view=alpha" target="_blank"
+                                >decks list</a
+                            >
+                            <a class="sectionlink" href="http://colors-tcg.eu/members.php" target="_blank"
+                                >member list</a
+                            >
                         </div>
-                        <div>
-                            <p><b>completed</b></p>
-                            <div id="completedsketchpadscontainer"><!-- DO NOT REMOVE --></div>
-                        </div>
-                    </div>
-                    <div class="flex center section">
-                        <div class="flex fcol">
-                            <div id="paletteportfoliocontainer"></div>
+                    </nav>
+                    <hr />
+                    <section class="flex spaceevenly">
+                        <div class="flex center section">
+                            <div id="avatarcontainer"></div>
                             <!-- DO NOT REMOVE -->
+                            <p class="tleft">
+                                <b>player:</b> <span id="playernamecontainer"></span><br />
+                                <!-- DO NOT REMOVE -->
+                                <b>level:</b> <span id="totalcardscontainer"></span><br /><a
+                                    href="https://colors-tcg.dreamwidth.org/2734600.html?thread=156208648#cmt156208648"
+                                    ><img
+                                        src="websiteassets/red_level.png"
+                                        alt="red level, displaying amber from genshin impact"
+                                        loading="lazy" /></a
+                                ><br />
+                                <!-- DO NOT REMOVE -->
+                                <b>dw trade post:</b> <span id="tradepostcontainer"></span><br />
+                                <!-- DO NOT REMOVE -->
+                                <b>dw trade tag:</b> <span id="tradetagcontainer"></span>
+                                <!-- DO NOT REMOVE -->
+                            </p>
+                        </div>
+                        <div class="flex">
                             <div>
-                                <button class="portfoliobutton" onclick="showPortfolio('palette')" type="button">
-                                    <b>Palette ▾</b>
-                                </button>
-                                <div id="palettehidden" class="portfoliohidden">
-                                    <p id="palettedeckscontainer"></p>
-                                    <!-- DO NOT REMOVE -->
+                                <p><b>current</b></p>
+                                <div id="currentsketchpadcontainer"><!-- DO NOT REMOVE --></div>
+                            </div>
+                            <div>
+                                <p><b>completed</b></p>
+                                <div id="completedsketchpadscontainer"><!-- DO NOT REMOVE --></div>
+                            </div>
+                        </div>
+                        <div class="flex center section">
+                            <div class="flex fcol">
+                                <div id="paletteportfoliocontainer"></div>
+                                <!-- DO NOT REMOVE -->
+                                <div>
+                                    <button class="portfoliobutton" onclick="showPortfolio('palette')" type="button">
+                                        <b>Palette ▾</b>
+                                    </button>
+                                    <div id="palettehidden" class="portfoliohidden">
+                                        <p id="palettedeckscontainer"></p>
+                                        <!-- DO NOT REMOVE -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex fcol">
+                                <div id="monochromeportfoliocontainer"></div>
+                                <!-- DO NOT REMOVE -->
+                                <div>
+                                    <button class="portfoliobutton" onclick="showPortfolio('monochrome')" type="button">
+                                        <b>Monochrome ▾</b>
+                                    </button>
+                                    <div id="monochromehidden" class="portfoliohidden">
+                                        <p id="monochromedeckscontainer"></p>
+                                        <!-- DO NOT REMOVE -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex fcol">
-                            <div id="monochromeportfoliocontainer"></div>
+                    </section>
+
+                    <section id="crayonscontainer" style="margin-left: auto; margin-right: auto">
+                        <!-- DO NOT REMOVE -->
+                    </section>
+                    <hr />
+                    <section>
+                        <h3>coupons</h3>
+                        <div id="couponcontainer" class="flex"><!-- DO NOT REMOVE --></div>
+                    </section>
+
+                    <hr />
+
+                    <section>
+                        <h3>pending trades</h3>
+                        <div id="pendingtradescontainer" class="flex"><!-- DO NOT REMOVE --></div>
+                    </section>
+
+                    <hr />
+
+                    <section>
+                        <h3>signatures</h3>
+                        <div id="signaturescontainer" class="flex">
                             <!-- DO NOT REMOVE -->
-                            <div>
-                                <button class="portfoliobutton" onclick="showPortfolio('monochrome')" type="button">
-                                    <b>Monochrome ▾</b>
-                                </button>
-                                <div id="monochromehidden" class="portfoliohidden">
-                                    <p id="monochromedeckscontainer"></p>
-                                    <!-- DO NOT REMOVE -->
-                                </div>
-                            </div>
+                            <p>none</p>
                         </div>
-                    </div>
-                </div>
+                    </section>
 
-                <div id="crayonscontainer" style="margin-left: auto; margin-right: auto"><!-- DO NOT REMOVE --></div>
+                    <hr />
 
-                <div class="section">
-                    <div id="couponcontainer" class="flex"><!-- DO NOT REMOVE --></div>
-                </div>
-
-                <hr />
-
-                <div>
-                    <p><b>pending trades</b></p>
-                    <div id="pendingtradescontainer" class="flex"><!-- DO NOT REMOVE --></div>
-                </div>
-
-                <hr />
-
-                <div>
-                    <p><b>signatures</b></p>
-                    <div id="signaturescontainer" class="flex">
-                        <!-- DO NOT REMOVE -->
-                        <p>none</p>
-                    </div>
-                </div>
-
-                <hr />
-
-                <div>
-                    <p><b>masteries</b></p>
-                    <div id="masteriescontainer" class="flex">
-                        <!-- DO NOT REMOVE -->
-                        <p>none</p>
-                    </div>
-                </div>
-            </div>
+                    <section>
+                        <h3>masteries</h3>
+                        <div id="masteriescontainer" class="flex">
+                            <!-- DO NOT REMOVE -->
+                            <p>none</p>
+                        </div>
+                    </section>
+                </article>
+            </main>
 
             <div id="creditscontainer"><!-- DO NOT REMOVE --></div>
         </div>
+        <a href="#skip" id="backscroll" title="Go to top">Top</a>
     </body>
 </html>

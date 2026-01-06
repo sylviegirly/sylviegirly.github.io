@@ -6,19 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- Site Title -->
-        <title>needed cards</title>
+        <title>to-do</title>
 
         <!-- Author -->
         <meta name="author" content="Asuraid" />
 
         <!-- Site Description -->
-        <meta content="Needed cards for Color TCG." name="description" />
+        <meta content="Completed sets." name="description" />
 
         <!-- Preloading -->
         <link rel="preload" href="css/style.css" as="style" />
-        <link rel="preload" href="js/UPDATEcolorstcgdeckdata.js" as="script" />
-        <link rel="preload" href="js/UPDATEkeepingcards.js" as="script" />
-        <link rel="preload" href="js/UPDATEtradingcards.js" as="script" />
         <link rel="preload" href="js/UPDATEplayerinfo.js" as="script" />
         <link rel="preload" href="js/functions.js" as="script" />
 
@@ -27,16 +24,12 @@
         <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
 
         <!-- JS Files + Init -->
-        <script type="text/javascript" src="js/UPDATEcolorstcgdeckdata.js"></script>
-        <script type="text/javascript" src="js/UPDATEkeepingcards.js"></script>
-        <script type="text/javascript" src="js/UPDATEtradingcards.js"></script>
         <script type="text/javascript" src="js/UPDATEplayerinfo.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
         <script>
             window.onload = () => {
                 setWebsiteHeader();
                 setCredits();
-                fillNeededCardsPage();
             };
         </script>
         <!-- DO NOT REMOVE -->
@@ -55,34 +48,33 @@
             <div id="websiteheadercontainer"></div>
 
             <!-- rest of the website -->
-            <main id="middle">
+            <main id="middle" class="">
                 <article>
-                    <h2>needed cards</h2>
-                    <div style="display: flex; justify-content: center; text-align: center; flex-direction: column">
-                        <p>search for a specific card or multiple cards</p>
-                        <input
-                            style="margin: auto"
-                            id="searchbar"
-                            type="text"
-                            name="search"
-                            placeholder="card01, card02, ..." />
-                        <!-- DO NOT REMOVE -->
-                        <button onclick="cardTextSearch('neededcards')" style="padding: 5px; margin: auto">
-                            search
-                        </button>
-                    </div>
-
-                    <p id="searchresultcontainer" style="overflow-x: wrap; margin-bottom: 30px; text-align: center"></p>
-
-                    <div>
-                        <p>needs only:</p>
-                        <textarea id="cardstextareacontainer"></textarea>
-                        <!-- DO NOT REMOVE -->
-                    </div>
-
-                    <div id="cardstextcontainer" style="overflow-x: wrap"></div>
+                    <h2>to-do website list</h2>
+                    <p>
+                        considering the complexity of the code that's here, and because it's its own entity outside of
+                        my own CSS/HTML and JS environment, i'd rather keep my website to-do list OUT of my actual site
+                        <a href="../to-do.html">to-do</a>.
+                    </p>
+                    <br />
+                    <ul>
+                        <li>fixing up other pages to match JS/HTML</li>
+                        <li>reorganizing the front page top layout because it's .... it feels messy as hell :skull:</li>
+                        <li>cleaning up the logs, styling the date</li>
+                        <li>
+                            long-term project: doing a completed page showcasing all finished cards, time of finishing,
+                            plus the mastery card too
+                        </li>
+                        <li>custom link colours per card colour?</li>
+                        <li>custom bullets would be cute for here, since i don't use them anywhere else on my site</li>
+                        <li>
+                            organize the quick links on home page bc it looks fugly w/o any divider between the links,
+                            esp for mobile
+                        </li>
+                    </ul>
                 </article>
             </main>
+
             <div id="creditscontainer"><!-- DO NOT REMOVE --></div>
         </div>
         <a href="#skip" id="backscroll" title="Go to top">Top</a>
