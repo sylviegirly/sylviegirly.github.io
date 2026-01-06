@@ -47,7 +47,7 @@ var coupons = [];
 
    ex: "reddeck, orangdeck, yellowdeck, greendeck, bluedeck, purpledeck, browndeck, graydeck"
 */
-var paletteportfoliopath = "portfolios/paletteportfolio.gif"; // change if named different
+var paletteportfoliopath = "portfolios/portfolio_01.png"; // change if named different
 var monochromeportfoliopath = "portfolios/monochromeportfolio.gif"; // change if named different
 
 var paletteportfoliodecks = "vasavi, psychology, warmonk, jadedeer, objection, burgers, lapisdei, illness"; //

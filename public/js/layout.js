@@ -202,9 +202,10 @@ const content = `
             <ul id="menu-6">
                 <li id="item-6-1-0"><a id="link-6-1-0" href="/articles/index.html">Articles</a></li>
                 <li id="item-6-2-0"><a id="link-6-2-0" href="/bookmarks.html">Bookmarks</a></li>
-                <li id="item-6-3-0"><a id="link-6-3-0" href="/media-log.html">Media Log</a></li>
-                <li id="item-6-4-0"><a id="link-6-4-0" href="/recipes/index.html">Recipes</a></li>
-                <li id="item-6-5-0"><a id="link-6-5-0" href="/templates/index.html">Templates</a></li>
+                <li id="item-6-3-0"><a id="link-6-3-0" href="/cards/index.html">Colors TCG</a></li>
+                <li id="item-6-4-0"><a id="link-6-4-0" href="/media-log.html">Media Log</a></li>
+                <li id="item-6-5-0"><a id="link-6-5-0" href="/recipes/index.html">Recipes</a></li>
+                <li id="item-6-6-0"><a id="link-6-6-0" href="/templates/index.html">Templates</a></li>
             </ul>
         </li>
         <li id="item-7-0-0" class="dropdown">
