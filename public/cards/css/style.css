@@ -6,7 +6,7 @@
 
     /* general colors */
     --websitebackgroundcolor: #879d6d;
-    --backgroundimage: url(/img/light_mode_bg.png);
+    --backgroundimage: url(https://i.ibb.co/RG4L7N4r/ENYJEQL.png);
     --headerimage: url(/img/websiteBanner.png);
     --titlecolor: white;
 
@@ -16,6 +16,7 @@
     --pageoutline: rgba(74, 118, 58, 0.46);
 
     --navbuttoncolor: #bbcda5;
+    --navbuttonhovercolor: #ffffff;
     --navbuttontext: #000000;
 
     --textcolor: #16190f;
@@ -38,12 +39,12 @@
     @media (prefers-color-scheme: dark) {
         /* general colors */
         --websitebackgroundcolor: #211f1f;
-        --backgroundimage: url(/img/dark_mode_bg.png);
         --pagecontentmaincolor: #191717;
         --pagecontentaccentcolor: #778d60;
         --pageoutline: rgba(74, 118, 58, 0.15);
 
         --navbuttoncolor: #778d60;
+        --navbuttonhovercolor: #73a535;
         --navbuttontext: #000000;
 
         --textcolor: #f4f4f4;
@@ -313,7 +314,7 @@ ul {
 
 .navbutton:hover {
     color: var(--navbuttontext);
-    background-color: var(--linkhovercolor);
+    background-color: var(--navbuttonhovercolor);
     letter-spacing: 1px;
 }
 
