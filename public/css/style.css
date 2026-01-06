@@ -1468,8 +1468,12 @@ aside .title::after {
         margin-top: 12px;
         top: 12px;
         left: 7px;
-        width: 150px;
+        width: fit-content;
         height: 100%;
+    }
+    
+    .font-wrapper select {
+      width: 150px;
     }
 
     .two-columns {
