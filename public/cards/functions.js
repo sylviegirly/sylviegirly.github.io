@@ -1150,6 +1150,7 @@ function setWebsiteHeader() {
             <div id="navbar">
                 <a href="index.html" class="navbutton">home</a>
                 <a href="collecting.html" class="navbutton">collecting</a>
+                <a href="complete.html" class="navbutton">completed</a>
                 <a href="neededcards.html" class="navbutton">needed</a>
                 <a href="futurecards.html" class="navbutton">future</a>
                 <a href="keepingcards.html" class="navbutton">keeping</a>
