@@ -1468,7 +1468,7 @@ aside .title::after {
         margin-top: 12px;
         top: 12px;
         left: 7px;
-        width: fit-content;
+        width: 150px;
         height: 100%;
     }
 
