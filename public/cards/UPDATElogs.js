@@ -60,6 +60,8 @@
 var logs = `
 <u>01/05/2026</u>
 <ul>
+    <li><b>received from art shop:</b> lapisdei03, lapisdei04, lapisdei05, lapisdei06</li>
+    <li><b>lost to art shop:</b> 4 brown crayon</li>
     <li><b>gifted by sonetto:</b> illness06, jadedeer04, vasavi07, objection17, 3 brown crayon</li>
     <li><b>traded to tempoet:</b> ioka01 for warmonk06
     <li><b>received from finalizing application:</b> wildlife14, explosion05</li>
