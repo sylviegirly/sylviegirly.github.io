@@ -60,6 +60,7 @@
 var logs = `
 <u>01/05/2026</u>
 <ul>
+    <li><b>gifted by sonetto:</b> illness06, jadedeer04, vasavi07, objection17, 3 brown crayon</li>
     <li><b>traded to tempoet:</b> ioka01 for warmonk06
     <li><b>received from finalizing application:</b> wildlife14, explosion05</li>
     <li><b>received from Little Spell Academia 396:</b> jadedeer01, illness02, objection01, psychology03, psychology02, vasavi13, logic01, burgers02, lapisdei20</li>
