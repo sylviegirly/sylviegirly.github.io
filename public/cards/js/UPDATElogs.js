@@ -60,6 +60,7 @@
 var logs = `
 <time>01/06/2026</time>
 <ul>
+    <li>lost to colouring book 371: 1 green crayon</li>
     <li>traded to netbug009: crusader19, orderly19 for cervanivea15, warmonk12</li>
     <li>received from art shop: lapisdei03, lapisdei04, lapisdei05, lapisdei06</li>
 </ul>
