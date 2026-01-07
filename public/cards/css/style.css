@@ -285,6 +285,7 @@ ul li:last-child {
     min-height: 500px;
     width: 100%;
     padding: 10px;
+    padding-bottom: 25px;
     background-color: var(--pagecontentmaincolor);
     margin-left: auto;
     margin-right: auto;
