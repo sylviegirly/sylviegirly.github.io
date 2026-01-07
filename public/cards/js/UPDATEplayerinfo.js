@@ -5,7 +5,7 @@
 
     ex: ["PLAYERNAME1: card01, card02", "PLAYERNAME2: card03, card04"]
 */
-var pendingtrades = [];
+var pendingtrades = ["netbug009: signature for signature"];
 
 /*
    HIGH PRIORITY DECKS:
