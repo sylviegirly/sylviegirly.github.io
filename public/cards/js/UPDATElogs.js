@@ -60,6 +60,11 @@
 var logs = `
 <time>01/07/2026</time>
 <ul>
+    <li>traded to tempoet: sig_aid for sig_emmy</li>
+    <li>received from signature: sig_aid, sig_aid, sig_aid</li>
+</ul>
+<time>01/07/2026</time>
+<ul>
     <li>received from colouring book 371: northambria05, motovlogging20, motovlogging05, lumiosecity01, cervanivea17, disgrace06, venusknights20, speedrunner12, mimicslime19, speedrunner06, motovlogging08, mimicslime09, mimicslime12, disgrace18, mimicslime04, disgrace04</li>
 </ul>
 <time>01/06/2026</time>

@@ -4,9 +4,8 @@
     the cards listed here will not show under your for trade pile, but once you complete the trade, you must go remove those cards in UPDATEtradingcards!
 
     ex: ["PLAYERNAME1: card01, card02", "PLAYERNAME2: card03, card04"]
-    "netbug009: signature for signature"
 */
-var pendingtrades = [];
+var pendingtrades = ["netbug009: sig_aid"];
 
 /*
    HIGH PRIORITY DECKS:
