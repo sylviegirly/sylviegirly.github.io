@@ -29,7 +29,7 @@ var pendingtrades = ["netbug009: sig_aid"];
 var highprioritydecks =
    "lapisdei, illness, jadedeer, cervanivea, vasavi, vanarana, burgers, psychology, warmonk, objection"; // "deckone, decktwo, deckthree..."
 var allisodecks =
-   "e-ming, lapisdei, ruoye, logic, objection, illness, nirvasyl, jadedeer, omniscient, vasavi, warmonk, cervanivea, psychology, burgers, vanarana"; // "deckone, decktwo, deckthree..."
+   "pal, coffee, townhall, roost, fragment, dragonscale, e-ming, lapisdei, ruoye, logic, objection, illness, nirvasyl, jadedeer, omniscient, vasavi, warmonk, cervanivea, psychology, burgers, vanarana"; // "deckone, decktwo, deckthree..."
 var singlecards = ""; // "card01, card02, card03..."
 
 /*
@@ -48,10 +48,10 @@ var coupons = [];
    ex: "reddeck, orangdeck, yellowdeck, greendeck, bluedeck, purpledeck, browndeck, graydeck"
 */
 var paletteportfoliopath = "portfolios/portfolio_01.png"; // change if named different
-var monochromeportfoliopath = "portfolios/monochromeportfolio.gif"; // change if named different
+var monochromeportfoliopath = "portfolios/mono_portfolio_01.png"; // change if named different
 
 var paletteportfoliodecks = "vasavi, psychology, warmonk, jadedeer, objection, burgers, lapisdei, illness"; //
-var monochromeportfoliodecks = "deckone, decktwo, deckthree, deckfour, deckfive, decksix, deckseven, deckeight";
+var monochromeportfoliodecks = "jadedeer, cervanivea, pal, coffee, townhall, roost, fragment, dragonscale";
 
 /*
    SKETCHPAD DATA:
