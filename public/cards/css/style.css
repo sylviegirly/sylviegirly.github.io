@@ -188,6 +188,11 @@ p {
     margin-left: 5px;
     margin-right: 5px;
     padding: 0;
+    margin-bottom: 8px;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 h1 {
@@ -473,6 +478,17 @@ ul li:last-child {
 /* -------------------------------------------------------- */
 #fullcollectioncontainer > div {
     margin-top: 10px;
+}
+
+.mastery {
+    display: flex;
+    height: auto;
+    gap: 5px;
+    text-align: left;
+    padding: 10px;
+    align-items: center;
+    border-top: 1px dotted var(--pagecontentaccentcolor);
+    border-bottom: 1px dotted var(--pagecontentaccentcolor);
 }
 
 /* -------------------------------------------------------- */
