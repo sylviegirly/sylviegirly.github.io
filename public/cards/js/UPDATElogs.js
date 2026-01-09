@@ -69,11 +69,11 @@ var logs = `
 </ul>
 <time>01/07/2026</time>
 <ul>
-    <li>received from colouring book 371: northambria05, motovlogging20, motovlogging05, lumiosecity01, cervanivea17, disgrace06, venusknights20, speedrunner12, mimicslime19, speedrunner06, motovlogging08, mimicslime09, mimicslime12, disgrace18, mimicslime04, disgrace04</li>
+    <li>received from Colouring Book 371: northambria05, motovlogging20, motovlogging05, lumiosecity01, cervanivea17, disgrace06, venusknights20, speedrunner12, mimicslime19, speedrunner06, motovlogging08, mimicslime09, mimicslime12, disgrace18, mimicslime04, disgrace04</li>
 </ul>
 <time>01/06/2026</time>
 <ul>
-    <li>lost to colouring book 371: 1 green crayon</li>
+    <li>lost to Colouring Book 371: 1 green crayon</li>
     <li>traded to netbug009: crusader19, orderly19 for cervanivea15, warmonk12</li>
     <li>received from art shop: lapisdei03, lapisdei04, lapisdei05, lapisdei06</li>
 </ul>
