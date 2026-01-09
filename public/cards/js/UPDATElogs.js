@@ -60,6 +60,10 @@
 var logs = `
 <time>01/08/2026</time>
 <ul>
+    <li>gifted by admiral: lapisdei17, illness20, jadedeer17, burgers10, psychology12, 2 red crayons, 2 orange crayons, 2 yellow crayons, 2 green crayons, 2 blue crayons, 2 purple crayons, 2 brown crayons, 2 gray crayons</li>
+</ul>
+<time>01/08/2026</time>
+<ul>
     <li>lost to Silly Blanks 301: lawless19, speedrunner06</li>
 </ul>
 <time>01/07/2026</time>
