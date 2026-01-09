@@ -5,4 +5,4 @@
     ex: "card01, card02...."
 */
 var tradingcards =
-    "sig_aid, firstlie01, northambria05, motovlogging20, motovlogging05, disgrace06, venusknights20, speedrunner12, mimicslime19, speedrunner06, motovlogging08, mimicslime09, mimicslime12, disgrace18, mimicslime04, disgrace04, wildlife14, explosion05, lawless19, gentian12, valkyria14";
+    "satisfaction13, disinfect18, cabaret08, sig_aid, firstlie01, northambria05, motovlogging20, motovlogging05, disgrace06, venusknights20, speedrunner12, mimicslime19, speedrunner06, motovlogging08, mimicslime09, mimicslime12, disgrace18, mimicslime04, disgrace04, wildlife14, explosion05, lawless19, gentian12, valkyria14";
