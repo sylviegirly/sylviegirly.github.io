@@ -29,7 +29,7 @@ var pendingtrades = ["netbug009: sig_aid"];
 var highprioritydecks =
    "lapisdei, illness, jadedeer, cervanivea, vasavi, vanarana, burgers, psychology, warmonk, objection"; // "deckone, decktwo, deckthree..."
 var allisodecks =
-   "pal, coffee, townhall, roost, fragment, dragonscale, e-ming, lapisdei, ruoye, logic, objection, illness, nirvasyl, jadedeer, omniscient, vasavi, warmonk, cervanivea, psychology, burgers, vanarana"; // "deckone, decktwo, deckthree..."
+   "pal, coffee, townhall, roost, fragment, dragonscale, e-ming, lapisdei, ruoye, logic, objection, illness, nirvasyl, jadedeer, omniscient, vasavi, warmonk, cervanivea, psychology, burgers, vanarana, cuarta"; // "deckone, decktwo, deckthree..."
 var singlecards = ""; // "card01, card02, card03..."
 
 /*
