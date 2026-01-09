@@ -58,6 +58,10 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>01/08/2026</time>
+<ul>
+    <li>lost to Silly Blanks 301: lawless19, speedrunner06 (if correct)</li>
+</ul>
 <time>01/07/2026</time>
 <ul>
     <li>traded to tempoet: sig_aid for sig_emmy</li>
