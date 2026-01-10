@@ -1,5 +1,10 @@
 const quotes = [
     {
+        quote: "it’s one thing to have a mutual who’s obsessed with blorbo from their show but it is quite another when a mutual is obsessed with their OC. to be clear, it’s so much better. blorbo from their brain is awesome. oh you made a sim of them and are posting dozens of screencaps of the sim in different poses? you commissioned another five drawings of them because you just had to see them in those new outfits you thought of? you’re self-shipping with them and one of your friend’s OCs? I love you so much. please never ever stop.",
+        author: "archibaldtuttle",
+        url: "https://archibaldtuttle.tumblr.com/post/800940952244142080"
+    },
+    {
         quote: '"i want to work on a hobby but i wont because i should be doing more important things" <- person who isnt gonna do either of those',
         author: "aidashakur",
         url: "https://www.tumblr.com/aidashakur/190486704276"
