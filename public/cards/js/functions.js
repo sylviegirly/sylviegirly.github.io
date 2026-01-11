@@ -1139,7 +1139,7 @@ function searchShowing() {
 
 function setCredits() {
     document.getElementById("creditscontainer").innerHTML = `
-        <p><a href="https://github.com/leedmitri/neotcg">neotcg</a> by <a href="https://gloomlee.neocities.org/">gloomlee</a></p>
+        <p><a href="https://github.com/leedmitri/neotcg">neotcg</a> by <a href="https://gloomlee.neocities.org/">gloomlee</a> / <a href="https://www.deviantart.com/empressofroses/art/Pixel-Bullet-Pastel-Green-798301867">bullet</a> by empressofroses</p>
         `;
 }
 

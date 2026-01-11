@@ -241,6 +241,7 @@ hr {
 
 ul {
     text-align: left;
+    list-style-image: url("/img/decos/pastel_bullet.gif");
 }
 
 ul li {
