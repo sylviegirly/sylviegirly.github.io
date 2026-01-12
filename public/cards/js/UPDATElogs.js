@@ -63,7 +63,7 @@ var logs = `
     <li>received from Crazy Colors 377: amanojaku20, chaperone13, knowledge16, elemia10, plainasia04, laevatain17, kazus02, shielder20</li>
     <li>received from Scramble! 240: wildhuter01, foul08, ricky01, vaneltia02, toddler17, driving03, tactics15, incarnation11, oceanic07, mipo05, 1 yellow crayon</li>
     <li>received from Little Spell Academia 397: cervanivea02, lapisdei08, cervanivea03, cervanivea04, burgers03, warmonk02, lapisdei09, cuarta01, lapisdei11, cervanivea05, cervanivea06, cervanivea07, omniscient01</li>
-    <li>lost to Crazy Colors 377: disinfect18 (pending)</li>
+    <li>lost to Crazy Colors 377: disinfect18</li>
 </ul>
 <time>01/10/2026</time>
 <ul>
