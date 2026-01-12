@@ -233,10 +233,9 @@ a:hover {
 }
 
 hr {
-    border: 1px solid var(--pagecontentaccentcolor);
+    border: none;
+    border-bottom: 1px dotted var(--pagecontentaccentcolor);
     margin-top: 10px;
-    margin-left: 30px;
-    margin-right: 30px;
 }
 
 ul {
@@ -365,6 +364,19 @@ ul li:last-child {
     flex-direction: column;
     text-align: center;
     margin-right: 5px;
+}
+#quicklinks a {
+    background-color: var(--navbuttoncolor);
+    color: var(--navbuttontext);
+    border-radius: var(--border-radius);
+    padding: 2px 16px;
+    margin: 2px;
+    text-decoration: none;
+}
+#quicklinks a:hover {
+    color: var(--navbuttontext);
+    background-color: var(--navbuttonhovercolor);
+    letter-spacing: 1px;
 }
 
 /* -------------------------------------------------------- */

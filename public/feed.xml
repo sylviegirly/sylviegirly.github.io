@@ -9,7 +9,22 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2025-12-25T03:10:33-05:00</updated>
+    <updated>2026-01-12T14:40:55-05:00</updated>
+
+    <entry>
+        <title>Color TCG Page</title>
+        <link href="https://zhongvie.neocities.org/cards/" />
+        <updated>2026-01-12T14:40:55-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1768246855</id>
+        <content type="html">
+            &#x3C;p&#x3E;I completely forgot to actually put this in my feed, I got too lost in the sauce ... I joined
+            Colors TCG on Dreamwidth and ended up using a template for my trading page. I&#x27;m still very baby with my
+            collection at the moment, and there&#x27;s still a few things I wanna fix on the page itself (such as having
+            little mini tools which weren&#x27;t included in the original template but are on the creator&#x27;s site),
+            and organizing the front page layout but ...&#x3C;/p&#x3E; &#x3C;p&#x3E;Yay, cards! Who is surprised that
+            I&#x27;m going ham on collecting Zhongli&#x27;s cards.&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Goatlings Shrine Update + Template</title>
