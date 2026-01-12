@@ -58,6 +58,10 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>01/12/2026</time>
+<ul>
+    <li>received from leveling to orange: lapisdei19, messenger09, hence09, 1 blue crayon</li>
+</ul>
 <time>01/11/2026</time>
 <ul>
     <li>traded to tempoet: chaperone13, knowledge16, shielder20 for trigger06, suzumushi03, knowing19</li>
