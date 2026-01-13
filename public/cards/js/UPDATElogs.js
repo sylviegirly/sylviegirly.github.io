@@ -60,6 +60,8 @@
 var logs = `
 <time>01/12/2026</time>
 <ul>
+    <li>received from Most Wanted 204: pinkelf08, zhenjun15, expectations18, enraptured08, oysters18</li>
+    <li>received from Pokeradar 459: puresavior17, wolfbeil12, easilylost13, daemons17, coexistence10, quietingclaw15, worst05, senses02, unicorn03, electabuzz13</li>
     <li>traded to sonetto: sig_aid for sig_lanne</li>
     <li>traded to travastila: explosion05, firstlie01 for umbra13, e-ming13</li>
     <li>received from leveling to orange: lapisdei19, messenger09, hence09, 1 blue crayon</li>
