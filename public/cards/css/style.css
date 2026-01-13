@@ -378,6 +378,18 @@ ul li:last-child {
     background-color: var(--navbuttonhovercolor);
     letter-spacing: 1px;
 }
+#intro {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#intro img {
+    max-width: 150px;
+}
 
 /* -------------------------------------------------------- */
 /* COLLECTING PAGE */
@@ -525,5 +537,17 @@ time {
         width: 100%;
         padding: 10px;
         margin-top: 10px;
+    }
+
+    #intro {
+        flex-direction: column;
+    }
+
+    #intro img {
+        max-width: 30%;
+    }
+
+    #quicklinks a {
+        width: 30%;
     }
 }
