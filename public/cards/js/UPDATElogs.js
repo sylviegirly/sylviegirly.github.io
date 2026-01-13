@@ -60,6 +60,7 @@
 var logs = `
 <time>01/12/2026</time>
 <ul>
+    <li>traded to sonetto: sig_aid for sig_lanne</li>
     <li>traded to travastila: explosion05, firstlie01 for umbra13, e-ming13</li>
     <li>received from leveling to orange: lapisdei19, messenger09, hence09, 1 blue crayon</li>
 </ul>
