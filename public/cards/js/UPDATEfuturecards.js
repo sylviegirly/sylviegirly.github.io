@@ -5,4 +5,4 @@
     ex: "card01, card02...."
 */
 var futurecards =
-    "pinkelf08, easilylost13, umbra13, e-ming13, trigger06, suzumushi03, knowing19, lumiosecity01, logic01, nirvasyl01, qucusaurus01, dagobah01, abundance12, truepassion11, laprimera01, triplecone01, rust01, scepter01, cortondo02";
+    "marchosius20, pinkelf08, easilylost13, umbra13, e-ming13, trigger06, suzumushi03, knowing19, lumiosecity01, logic01, nirvasyl01, qucusaurus01, dagobah01, abundance12, truepassion11, laprimera01, triplecone01, rust01, scepter01, cortondo02";
