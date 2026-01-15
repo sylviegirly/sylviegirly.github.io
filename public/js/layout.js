@@ -348,6 +348,12 @@ customElements.define("left-sidebar", LeftSidebar);
 // DO IMAGE REROLL THINGS
 const images = [
     {
+        imagesrc: "/img/sidebar/sylvie_chibi_11.png",
+        alt: "A chibi of Sylvie in a green cow onesie",
+        url: "https://vgen.co/lavendergalactic",
+        freezeframe: false
+    },
+    {
         imagesrc: "/img/sidebar/Ceriae_479261_diona.gif",
         alt: "A chibi pixel of Diona, an original character",
         url: "https://www1.flightrising.com/clan-profile/479621",
