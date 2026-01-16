@@ -61,6 +61,7 @@ var logs = `
 <time>01/15/2026</time>
 <ul>
     <li>received from Silly Blanks 301: ko-gal04, 12years08, teni17, kyun-kyun12, chisha16, convey06, summermode11, savage03, organization14</li>
+    <li>lost to Silly Blanks 301: lawless19, speedrunner06</li>
     <li>traded to corafish: sig_aid for sig_cora</li>
     <li>received from art shop: sig_aid, sig_aid</li>
 </ul>
@@ -92,10 +93,6 @@ var logs = `
 <ul>
     <li>received from twenty questions 007: satisfaction13, disinfect18, cabaret08</li>
     <li>gifted by admiral: lapisdei17, illness20, jadedeer17, burgers10, psychology12, 2 red crayons, 2 orange crayons, 2 yellow crayons, 2 green crayons, 2 blue crayons, 2 purple crayons, 2 brown crayons, 2 gray crayons</li>
-</ul>
-<time>01/08/2026</time>
-<ul>
-    <li>lost to Silly Blanks 301: lawless19, speedrunner06</li>
 </ul>
 <time>01/07/2026</time>
 <ul>
