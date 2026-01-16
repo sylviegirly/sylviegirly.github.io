@@ -60,6 +60,7 @@
 var logs = `
 <time>01/15/2026</time>
 <ul>
+    <li>received from Silly Blanks 301: ko-gal04, 12years08, teni17, kyun-kyun12, chisha16, convey06, summermode11, savage03, organization14</li>
     <li>traded to corafish: sig_aid for sig_cora</li>
     <li>received from art shop: sig_aid, sig_aid</li>
 </ul>
@@ -94,7 +95,7 @@ var logs = `
 </ul>
 <time>01/08/2026</time>
 <ul>
-    <li>lost to Silly Blanks 301: lawless19, speedrunner06 (pending)</li>
+    <li>lost to Silly Blanks 301: lawless19, speedrunner06</li>
 </ul>
 <time>01/07/2026</time>
 <ul>
