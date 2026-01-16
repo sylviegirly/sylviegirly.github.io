@@ -25,14 +25,31 @@
 
     /* collecting page header/deck colors */
     --collectingcolor-red: #ffdbdb;
+    --collectingcolor-red-link: #613333;
+
     --collectingcolor-orange: #ffeee2;
+    --collectingcolor-orange-link: #65432b;
+
     --collectingcolor-yellow: #fcfade;
+    --collectingcolor-yellow-link: #58431a;
+
     --collectingcolor-green: #e2fce6;
+    --collectingcolor-green-link: #2f6922;
+
     --collectingcolor-blue: #dff2fd;
+    --collectingcolor-blue-link: #19445d;
+
     --collectingcolor-purple: #e3e3ff;
+    --collectingcolor-purple-link: #2c1c5f;
+
     --collectingcolor-brown: #e9d4b7;
+    --collectingcolor-brown-link: #3d2d14;
+
     --collectingcolor-gray: #d4d4d4;
+    --collectingcolor-gray-link: #616161;
+
     --collectingcolor-special: white;
+    --collectingcolor-special-link: #4f4b47;
 
     --creditslink: #fff575;
 
@@ -54,14 +71,31 @@
 
         /* collecting page header/deck colors */
         --collectingcolor-red: #3b2e2e;
+        --collectingcolor-red-link: #d09c9c;
+
         --collectingcolor-orange: #433b35;
+        --collectingcolor-orange-link: #ccb3a1;
+
         --collectingcolor-yellow: #595634;
+        --collectingcolor-yellow-link: #cbc36c;
+
         --collectingcolor-green: #3a5c40;
+        --collectingcolor-green-link: #81ce8e;
+
         --collectingcolor-blue: #2b4452;
+        --collectingcolor-blue-link: #71b4da;
+
         --collectingcolor-purple: #29294c;
+        --collectingcolor-purple-link: #ababff;
+
         --collectingcolor-brown: #312718;
+        --collectingcolor-brown-link: #dbae69;
+
         --collectingcolor-gray: #333333;
+        --collectingcolor-gray-link: #e5e5e5;
+
         --collectingcolor-special: #0f0f0f;
+        --collectingcolor-special-link: #979797;
 
         --creditslink: #9a5b1a;
     }
@@ -398,29 +432,56 @@ ul li:last-child {
 .deckred {
     background-color: var(--collectingcolor-red);
 }
+.deckred a {
+    color: var(--collectingcolor-red-link);
+}
 .deckorange {
     background-color: var(--collectingcolor-orange);
+}
+.deckorange a {
+    color: var(--collectingcolor-orange-link);
 }
 .deckyellow {
     background-color: var(--collectingcolor-yellow);
 }
+.deckyellow a {
+    color: var(--collectingcolor-yellow-link);
+}
 .deckgreen {
     background-color: var(--collectingcolor-green);
+}
+.deckgreen a {
+    color: var(--collectingcolor-green-link);
 }
 .deckblue {
     background-color: var(--collectingcolor-blue);
 }
+.deckblue a {
+    color: var(--collectingcolor-blue-link);
+}
 .deckpurple {
     background-color: var(--collectingcolor-purple);
+}
+.deckpurple a {
+    color: var(--collectingcolor-purple-link);
 }
 .deckbrown {
     background-color: var(--collectingcolor-brown);
 }
+.deckbrown a {
+    color: var(--collectingcolor-brown-link);
+}
 .deckgray {
     background-color: var(--collectingcolor-gray);
 }
+.deckgray a {
+    color: var(--collectingcolor-gray-link);
+}
 .deckspecial {
     background-color: var(--collectingcolor-special);
+}
+.deckspecial a {
+    color: var(--collectingcolor-special-link);
 }
 .deckCOLORNOTFOUND {
     background-color: none;
