@@ -486,6 +486,17 @@ ul li:last-child {
 .deckCOLORNOTFOUND {
     background-color: none;
 }
+.deckred a:hover,
+.deckorange a:hover,
+.deckyellow a:hover,
+.deckgreen a:hover,
+.deckblue a:hover,
+.deckpurple a:hover,
+.deckbrown a:hover,
+.deckgray a:hover,
+.deckspecial a:hover {
+    color: var(--linkhovercolor);
+}
 .deckdiv .deckred,
 .deckdiv .deckorange,
 .deckdiv .deckyellow,
