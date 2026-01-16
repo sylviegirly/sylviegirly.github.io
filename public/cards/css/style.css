@@ -486,6 +486,28 @@ ul li:last-child {
 .deckCOLORNOTFOUND {
     background-color: none;
 }
+.deckdiv .deckred,
+.deckdiv .deckorange,
+.deckdiv .deckyellow,
+.deckdiv .deckgreen,
+.deckdiv .deckblue,
+.deckdiv .deckpurple,
+.deckdiv .deckbrown,
+.deckdiv .deckgray,
+.deckdiv .deckspecial {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.deckred,
+.deckorange,
+.deckyellow,
+.deckgreen,
+.deckblue,
+.deckpurple,
+.deckbrown,
+.deckgray,
+.deckspecial {
+    border-radius: var(--border-radius);
+}
 .deckdiv {
     display: inline-block;
     margin: 5px;
