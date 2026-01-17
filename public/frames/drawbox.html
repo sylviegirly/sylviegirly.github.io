@@ -32,15 +32,9 @@
         </script>
 
         <style>
-            article {
-                max-width: calc(720px + 1em);
-                min-width: calc(720px + 1em);
-                margin: 20px auto;
+            body {
                 background-color: var(--body-bg);
-                border-radius: var(--border-radius);
-                box-shadow: 6px 6px 0 var(--body-outline);
-                padding: 1em;
-                width: auto;
+                background-image: none;
             }
             * {
                 box-sizing: border-box;
@@ -56,6 +50,7 @@
                 border: 1px solid var(--primary-accent);
                 border-radius: var(--border-radius);
                 cursor: crosshair;
+                color: white;
             }
             #gallery {
                 display: flex;
@@ -96,6 +91,6 @@
         <h2>Submitted Drawings</h2>
         <div id="gallery">Loading images...</div>
 
-        <script src="js/drawbox.js"></script>
+        <script src="../js/drawbox.js"></script>
     </body>
 </html>
