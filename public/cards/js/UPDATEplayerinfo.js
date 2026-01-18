@@ -62,7 +62,7 @@ var monochromeportfoliodecks = "jadedeer, cervanivea, pal, coffee, townhall, roo
 
    ex: "sketchpad" if your images are sketchpad0.gif, sketchpad1.gif etc.
 */
-var sketchpadname = "furina";
+var sketchpadname = "sylvie";
 
 /*
    ADDING CRAYONS, CURRENT SKETCHPAD TRADES, COMPLETED SKETCHPADS:
