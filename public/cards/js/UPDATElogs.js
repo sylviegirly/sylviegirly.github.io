@@ -58,6 +58,11 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>01/17/2026</time>
+<ul>
+    <li>received from Twenty Questions 078: chuunibyou04, keeneye08, psypher06</li>
+    <li>gifted from camilovesyou: lapisdei02, illness05, illness11, illness12, illness17</li>
+</ul>
 <time>01/16/2026</time>
 <ul>
     <li>received from Colorseum 73-2: 2 gray crayons, 1 green crayon, 1 brown crayon</li>
