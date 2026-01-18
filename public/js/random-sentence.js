@@ -1,5 +1,40 @@
 const quotes = [
     {
+        quote: "i dont need a job. loving that fictional character IS my job and my salary is $0",
+        author: "heartsiintune",
+        url: "https://www.tumblr.com/heartsiintune/784933388142411776"
+    },
+    {
+        quote: "(in sex ed class) this is stupid when are we ever gonna need to use this lol",
+        author: "markovchaingang",
+        url: "https://www.tumblr.com/markovchaingang/800872033605009408"
+    },
+    {
+        quote: "I love having friends who reject diet culture. I love going out when everyone buys food and drinks that they enjoy. I love people who will pipe up and suggest we stop for a snack or grab a meal. I love ordering what I want and no one making comments other than how good it looks (and maybe asking to steal a bite off my plate). I love revelling in how full we are after a good meal and taking a break to appreciate how fortunate we are. I love sharing snack from our bags with one another. I love enjoying the pleasure of food and drinks and good company.",
+        author: "shadowed-yet-vibrant",
+        url: "https://shadowed-yet-vibrant.tumblr.com/post/783494555807973376"
+    },
+    {
+        quote: "every day im mad as hell that i dont have infinite time in the day and am not physically able to draw for 200 hours straight no breaks and dont know every hobby and cant just spend the rest of time drawing and getting into every creative hobby and learn everything and get infinite money from the government",
+        author: "funtergeist",
+        url: "https://funtergeist.tumblr.com/post/801852052849508352"
+    },
+    {
+        quote: "bro i’m ready to sleep for two months straight",
+        author: "lj-64",
+        url: "https://sylviegirly.tumblr.com/post/805324862061150208"
+    },
+    {
+        quote: "Who else has thousands of ideas but unfortunately your mortal form is constantly at 'low battery' energy levels?",
+        author: "kawaii-pigeon",
+        url: "https://www.tumblr.com/kawaii-pigeon/763437339608547328"
+    },
+    {
+        quote: "love for Character so strong and encompassing i have to kill them",
+        author: "mewnbuns",
+        url: "https://www.tumblr.com/mewnbuns/805921437551624192"
+    },
+    {
         quote: "it’s one thing to have a mutual who’s obsessed with blorbo from their show but it is quite another when a mutual is obsessed with their OC. to be clear, it’s so much better. blorbo from their brain is awesome. oh you made a sim of them and are posting dozens of screencaps of the sim in different poses? you commissioned another five drawings of them because you just had to see them in those new outfits you thought of? you’re self-shipping with them and one of your friend’s OCs? I love you so much. please never ever stop.",
         author: "archibaldtuttle",
         url: "https://archibaldtuttle.tumblr.com/post/800940952244142080"
