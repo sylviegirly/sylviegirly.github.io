@@ -143,6 +143,7 @@ function fillCoupons() {
 function fillPlayerInfo() {
     document.getElementById("avatarcontainer").innerHTML = '<img id="avatar" src="' + avatar + '">';
     document.getElementById("playernamecontainer").innerHTML = playername;
+    document.getElementById("datecontainer").innerHTML = datejoined;
     document.getElementById("tradepostcontainer").innerHTML = "<a href='" + tradepost + "' target='_blank'>here</a>";
     document.getElementById("tradetagcontainer").innerHTML = "<a href='" + tradetag + "' target='_blank'>here</a>";
 }
