@@ -151,9 +151,9 @@ function fillPlayerInfo() {
 // paletteportfoliocontainer, monochromeportfoliocontainer divs and palettedeckscontainer, monochromedeckscontainer ps
 function fillPortfolios() {
     document.getElementById("paletteportfoliocontainer").innerHTML =
-        "<img class='marginimage' src ='" + paletteportfoliopath + "'>";
+        "<img class='marginimage imageshadow' src ='" + paletteportfoliopath + "'>";
     document.getElementById("monochromeportfoliocontainer").innerHTML =
-        "<img class='marginimage' src ='" + monochromeportfoliopath + "'>";
+        "<img class='marginimage imageshadow' src ='" + monochromeportfoliopath + "'>";
 
     var keepingCards = getKeepingCards();
 
@@ -244,9 +244,9 @@ function fillSketchpads() {
     var currentSketchpad = result[1];
 
     document.getElementById("completedsketchpadscontainer").innerHTML =
-        "<img class='marginimage' src='sketchpads/" + sketchpadname + "20.png'>x" + completedSketchpads;
+        "<img class='marginimage imageshadow' src='sketchpads/" + sketchpadname + "20.png'>x" + completedSketchpads;
     document.getElementById("currentsketchpadcontainer").innerHTML =
-        "<img class='marginimage' src='sketchpads/" + sketchpadname + currentSketchpad + ".png'>";
+        "<img class='marginimage imageshadow' src='sketchpads/" + sketchpadname + currentSketchpad + ".png'>";
 }
 
 // INSERTS INTO crayonscontainer
