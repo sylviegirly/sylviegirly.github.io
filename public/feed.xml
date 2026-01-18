@@ -9,7 +9,20 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2026-01-12T14:40:55-05:00</updated>
+    <updated>2026-01-18T12:39:52-05:00</updated>
+
+    <entry>
+        <title>Drawbox!</title>
+        <link href="https://zhongvie.neocities.org/drawbox" />
+        <updated>2026-01-18T12:39:52-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1768757992</id>
+        <content type="html">
+            &#x3C;p&#x3E;I finally got around to adding a drawbox to my page!! It&#x27;s still kinda rough since I have
+            to do a frame to have it work (something something supporter and no external scripts) and I&#x27;ll have to
+            organize the submitted art into its own frame eventually, but it is live!! Thank you to the people who
+            already sent in a few doodles &#x1F496;&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Color TCG Page</title>
