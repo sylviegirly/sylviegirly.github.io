@@ -1140,7 +1140,7 @@ function searchShowing() {
 
 function setCredits() {
     document.getElementById("creditscontainer").innerHTML = `
-        <p><a href="https://github.com/leedmitri/neotcg">neotcg</a> by <a href="https://earthslee.neocities.org/">gloomlee</a> / <a href="https://www.deviantart.com/empressofroses/art/Pixel-Bullet-Pastel-Green-798301867">bullet</a> by empressofroses</p>
+        <p><a href="https://github.com/leedmitri/neotcg">neotcg</a> by <a href="https://earthslee.neocities.org/">gloomlee</a> / <a href="https://www.deviantart.com/empressofroses/art/Pixel-Bullet-Pastel-Green-798301867">bullet</a> by empressofroses / <a href="https://vgen.co/inlyaart" title="aka it's a commission for me, I'm just using it for a personal sketchbook">sketchbook art commission</a> for me</p>
         `;
 }
 
