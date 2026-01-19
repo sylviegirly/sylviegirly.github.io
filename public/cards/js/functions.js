@@ -455,10 +455,10 @@ function fillNewCardsContainer(type) {
         cardsFromType = getFutureCards(false);
     }
 
-    if (cardsFromType.length < 100) {
+    if (cardsFromType.length < 98) {
         numCardsShown = cardsFromType.length;
     } else {
-        numCardsShown = 100;
+        numCardsShown = 98;
     }
 
     for (var index = 0; index < numCardsShown; index++) {

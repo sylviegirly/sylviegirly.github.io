@@ -58,6 +58,11 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>01/19/2026</time>
+<ul>
+    <li>received from <a href="https://colors-tcg.dreamwidth.org/4447001.html?thread=219900185#cmt219900185">leveling to yellow</a>: cervanivea09, kyouken12, lubu07, 1 purple crayon</li>
+    <li>received from <a href="https://colors-tcg.dreamwidth.org/4447001.html?thread=219900185#cmt219900185">Puzzle Chains 399</a>: shangrila20, criticrista12, swimmer15, totalassault19, creator08, gloucester06, logical02, lyngheidr02, hylia15, florence07, man14, magiamagenta19, citro05, convey03, no02, dashing06, tenpa-kun15, rabidhound18, hatter09, erebonia07, well07, illiterate13, vjonly07, paranormal14, neoarcadia12, xuandu19, stockmarket17, watchman10, kokushin08, temsik08, 1 yellow crayon</li>
+</ul>
 <time>01/18/2026</time>
 <ul>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4456550.html?thread=220275558#cmt220275558">Little Spell Academia 398</a>: jadedeer02, lapisdei12, illness03, jadedeer03, objection02, warmonk03, lapisdei13, suzumushi01, lapisdei14, townhall01, lapisdei15, objection03, cervanivea08</li>
