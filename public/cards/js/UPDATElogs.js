@@ -58,6 +58,15 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>01/20/2026</time>
+<ul>
+    <li>received from <a href="https://colors-tcg.dreamwidth.org/4455027.html?thread=220264563#cmt220264563">Crazy Colors 378</a>: betreida10, educate16, whatapain07, a-set11, raise18, roaromin15, specimen20, avalken17, tharsis13, gun09</li>
+    <li>lost to <a href="https://colors-tcg.dreamwidth.org/4455027.html?thread=220264563#cmt220264563">Crazy Colors 378</a>: gentian12</li>
+    <li>received from <a href="https://colors-tcg.dreamwidth.org/3969255.html?thread=220279015#cmt220279015">art shop</a>: lapisdei16, lapisdei18</li>
+    <li>lost to <a href="https://colors-tcg.dreamwidth.org/3969255.html?thread=220279015#cmt220279015">art shop</a>: 2 brown crayons</li>
+    <li>gifted to <a href="https://corafish.dreamwidth.org/372.html?thread=20084#cmt20084">corafish</a>: zhenjun20</li>
+    <li>trade to <a href="https://travastila.dreamwidth.org/3965.html?thread=10877#cmt10877">travastila</a>: cyborg00216 for zhenjun20</li>
+</ul>
 <time>01/19/2026</time>
 <ul>
     <li>traded to <a href="https://tempoet.dreamwidth.org/1972.html?thread=326324#cmt326324">tempoet</a>: alderaan16, watches09 for knowing12, vanarana12</li>
