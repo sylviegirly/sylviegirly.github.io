@@ -605,6 +605,7 @@ ul li:last-child {
 
 .mastery {
     display: flex;
+    flex-direction: row-reverse;
     height: auto;
     gap: 5px;
     text-align: left;
