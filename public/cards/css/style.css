@@ -361,6 +361,7 @@ ul li:last-child {
     padding: 7px 10px;
     font-weight: bold;
     border-radius: var(--border-radius);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .navbutton:hover {
