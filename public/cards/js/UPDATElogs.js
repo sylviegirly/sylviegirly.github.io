@@ -63,9 +63,6 @@ var logs = `
     <li>traded to <a href="https://tempoet.dreamwidth.org/1972.html?thread=326324#cmt326324">tempoet</a>: alderaan16, watches09 for knowing12, vanarana12</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4451106.html?thread=220109346#cmt220109346">Most Wanted 205</a>: vanarana13, watches09, obedience20, wineglass20, jello18</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4450933.html?thread=220122997#cmt220122997">Pokeradar 460</a>: elixir01, well-being03, flamenblack03, galemaker18, suihakkei13, pay08, remind16, surnames01, novels08, fluorspar13, chartreux16, batting09, prize15, hachiko13, lyfjaberg03, loleus05, seeker12, themoles16, spiritwave03, deathscythe18, dauntless11, dive13, huntdown13, captivate12, obbligato18</li>
-</ul>
-<time>01/19/2026</time>
-<ul>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/2957585.html?thread=220301329#cmt220301329">leveling to yellow</a>: cervanivea09, kyouken12, lubu07, 1 purple crayon</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4447001.html?thread=219900185#cmt219900185">Puzzle Chains 399</a>: shangrila20, criticrista12, swimmer15, totalassault19, creator08, gloucester06, logical02, lyngheidr02, hylia15, florence07, man14, magiamagenta19, citro05, convey03, no02, dashing06, tenpa-kun15, rabidhound18, hatter09, erebonia07, well07, illiterate13, vjonly07, paranormal14, neoarcadia12, xuandu19, stockmarket17, watchman10, kokushin08, temsik08, 1 yellow crayon</li>
 </ul>
