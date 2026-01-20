@@ -60,6 +60,7 @@
 var logs = `
 <time>01/20/2026</time>
 <ul>
+    <li>received from <a href="https://colors-tcg.dreamwidth.org/4059899.html?thread=220354043#cmt220354043">mastering lapisdei</a>: jadedeer05, olympia09, afraid02, 1 gray crayon</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4455027.html?thread=220264563#cmt220264563">Crazy Colors 378</a>: betreida10, educate16, whatapain07, a-set11, raise18, roaromin15, specimen20, avalken17, tharsis13, gun09</li>
     <li>lost to <a href="https://colors-tcg.dreamwidth.org/4455027.html?thread=220264563#cmt220264563">Crazy Colors 378</a>: gentian12</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/3969255.html?thread=220279015#cmt220279015">art shop</a>: lapisdei16, lapisdei18</li>

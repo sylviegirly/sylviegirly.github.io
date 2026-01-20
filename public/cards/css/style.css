@@ -614,6 +614,21 @@ ul li:last-child {
     border-bottom: 1px dotted var(--pagecontentaccentcolor);
 }
 
+.masteryinfo {
+    flex: 40%;
+}
+
+.masteryinfo img {
+    object-fit: contain;
+}
+
+.masterycards {
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    flex: 100%;
+}
+
 /* -------------------------------------------------------- */
 /* LOGS */
 /* -------------------------------------------------------- */
@@ -659,5 +674,17 @@ time {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .mastery {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .masteryinfo {
+        display: flex;
+        gap: 20px;
     }
 }
