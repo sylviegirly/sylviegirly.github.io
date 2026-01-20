@@ -60,6 +60,7 @@
 var logs = `
 <time>01/19/2026</time>
 <ul>
+    <li>traded to <a href="https://tempoet.dreamwidth.org/1972.html?thread=326324#cmt326324">tempoet</a>: alderaan16, watches09 for knowing12, vanarana12</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4451106.html?thread=220109346#cmt220109346">Most Wanted 205</a>: vanarana13, watches09, obedience20, wineglass20, jello18</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4450933.html?thread=220122997#cmt220122997">Pokeradar 460</a>: elixir01, well-being03, flamenblack03, galemaker18, suihakkei13, pay08, remind16, surnames01, novels08, fluorspar13, chartreux16, batting09, prize15, hachiko13, lyfjaberg03, loleus05, seeker12, themoles16, spiritwave03, deathscythe18, dauntless11, dive13, huntdown13, captivate12, obbligato18</li>
 </ul>
