@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Site Title -->
+        <title>to-do</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="Completed sets." name="description" />
+
+        <!-- Preloading -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="js/UPDATEplayerinfo.js" as="script" />
+        <link rel="preload" href="js/functions.js" as="script" />
+
+        <!-- CSS Files -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+
+        <!-- JS Files + Init -->
+        <script type="text/javascript" src="js/UPDATEplayerinfo.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script>
+            window.onload = () => {
+                setWebsiteHeader();
+                setCredits();
+            };
+        </script>
+        <!-- DO NOT REMOVE -->
+    </head>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#middle">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Content Begins. -->
+        <!-- =============================================== -->
+        <div id="sitecontainer">
+            <!-- website header including navigation bar -->
+            <div id="websiteheadercontainer"></div>
+
+            <!-- rest of the website -->
+            <main id="middle" class="">
+                <article>
+                    <h2>TCG Centric Tools</h2>
+                    <p>
+                        This is based off <a href="https://earthslee.neocities.org/colorstcg/tools">gloomlee's</a> own
+                        code for tools, just placed into 'one' page for easy access
+                    </p>
+                    <hr />
+                    <section style="margin-top: 10px">
+                        <nav id="quicklinks">
+                            <div class="flex spaceevenly">
+                                <button class="sectionlink" onclick="openTab('ImgGen')">img generator</button>
+                                <button class="sectionlink" onclick="openTab('PileRemove')">
+                                    remove cards from pile
+                                </button>
+                            </div>
+                        </nav>
+                    </section>
+                    <hr />
+                    <div id="ImgGen" class="tool">
+                        <h3>image generator</h3>
+                        <div class="toolkit">
+                            <div class="toolkitinputs">
+                                <div class="imagetagsinput">
+                                    <div class="imagetagsinputtextareas">
+                                        <div>
+                                            <p>enter new card names seperated by commas</p>
+                                            <textarea id="newcardnamelist"></textarea>
+                                        </div>
+
+                                        <div>
+                                            <p>enter where your cards are hosted</p>
+                                            <textarea id="siteinput"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <input
+                                            type="checkbox"
+                                            id="alphabetizeinput"
+                                            name="alphabetize"
+                                            value="alphabetize" />
+                                        <label for="alphabetize">alphabetize?</label>
+                                    </div>
+
+                                    <div class="imagetagsinputbuttons">
+                                        <button onclick="processNewCardsNameList()" style="padding: 10px">
+                                            process!
+                                        </button>
+                                        <button onclick="resetimgen()" style="padding: 10px">reset</button>
+                                    </div>
+                                </div>
+
+                                <div id="processedcardlist"></div>
+                            </div>
+
+                            <div id="toolkitoutputs">
+                                <div id="imagetagsoutput">
+                                    <div>
+                                        <p>sort by</p>
+                                        <button onclick="sortAll()" style="padding: 10px">all</button>
+                                        <button onclick="sortDeck()" style="padding: 10px">deck</button>
+                                    </div>
+
+                                    <div id="cardimages"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="PileRemove" class="tool" style="display: none">
+                        <h3>remove cards from card pile</h3>
+                        <div class="toolkit">
+                            <div class="toolkitinputs">
+                                <div class="imagetagsinput">
+                                    <div class="imagetagsinputtextareas">
+                                        <div>
+                                            <p>enter your full card pile as card names</p>
+                                            <textarea style="width: 250px; height: 50px" id="cardpile"></textarea>
+                                        </div>
+                                        <div>
+                                            <p>enter list of cards you'd like to remove</p>
+                                            <textarea
+                                                style="width: 250px; height: 50px"
+                                                id="removethesecards"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="imagetagsinputbuttons">
+                                        <button onclick="removeCards()" style="padding: 10px">process!</button>
+                                        <button onclick="reset()" style="padding: 10px">reset</button>
+                                    </div>
+                                </div>
+
+                                <div id="resultsoutput"></div>
+
+                                <div id="statsoutput"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </main>
+
+            <div id="creditscontainer"><!-- DO NOT REMOVE --></div>
+        </div>
+        <a href="#skip" id="backscroll" title="Go to top">Top</a>
+        <script type="text/javascript" src="js/tools.js"></script>
+
+        <script>
+            function openTab(tabName) {
+                var i;
+                var x = document.getElementsByClassName("tool");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                document.getElementById(tabName).style.display = "block";
+            }
+        </script>
+    </body>
+</html>

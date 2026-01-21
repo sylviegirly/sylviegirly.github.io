@@ -367,7 +367,7 @@ ul li:last-child {
 .navbutton:hover {
     color: var(--navbuttontext);
     background-color: var(--navbuttonhovercolor);
-    letter-spacing: 1px;
+    transform: translateY(-3px);
 }
 
 /* -------------------------------------------------------- */
@@ -414,7 +414,7 @@ ul li:last-child {
 #quicklinks a:hover {
     color: var(--navbuttontext);
     background-color: var(--navbuttonhovercolor);
-    letter-spacing: 1px;
+    transform: translateY(-3px);
 }
 #intro {
     margin-top: 10px;
@@ -648,6 +648,34 @@ time {
 /* -------------------------------------------------------- */
 .imageshadow {
     filter: drop-shadow(3px 3px 0 var(--pagecontentaccentcolor));
+}
+
+/* TOOLKIT FIX */
+.toolkit textarea {
+    width: 100%;
+}
+.toolkitinputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imagetagsinputbuttons button {
+    background-color: var(--navbuttoncolor);
+    color: var(--navbuttontext);
+    border-radius: var(--border-radius);
+    border: none;
+    padding: 2px 16px;
+    margin: 2px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.imagetagsinputbuttons button:hover {
+    color: var(--navbuttontext);
+    background-color: var(--navbuttonhovercolor);
+    transform: translateY(-3px);
 }
 
 /* -------------------------------------------------------- */
