@@ -60,6 +60,11 @@
 var logs = `
 <time>01/20/2026</time>
 <ul>
+    <li>received from <a href="https://colors-tcg.dreamwidth.org/2957585.html?thread=220368145#cmt220368145">leveling to green</a>: jadedeer07, bloodelf01, karamucho05, 1 yellow crayon</li>
+    <li>received from <a href="https://colors-tcg.dreamwidth.org/4452035.html?thread=220358339#cmt220358339">Switch It Up 284</a>: lacking04, jadedeer14</li>
+    <li>lost to <a href="https://colors-tcg.dreamwidth.org/4452035.html?thread=220358339#cmt220358339">Switch It Up 284</a>: disgrace04, disgrace06</li>
+    <li>received from <a href="https://colors-tcg.dreamwidth.org/4455027.html?thread=220353651#cmt220353651">Crazy Colors 378</a>: sickly11, supra-force18, sequencer05, appraiser10, golddragon20, levanguard15, banchou13, blossom20, koyaku01, 3b07</li>
+    <li>lost to <a href="https://colors-tcg.dreamwidth.org/4455027.html?thread=220353651#cmt220353651">Crazy Colors 378</a>: sezan03</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4451667.html?thread=220357971#cmt220357971">Coloring Book 372</a>: gemini20, mothers09, urn04, southern17, almyra20, maverick12, al-unknown14, raidraptors12, dagobah19, dazzle06, kimie01, kimie13, strawberry19, shampoodle09, stride03, elegies13</li>
     <li>lost to <a href="https://colors-tcg.dreamwidth.org/4451667.html?thread=220357971#cmt220357971">Coloring Book 372</a>: 1 green crayon</li>
 </ul>

@@ -8,7 +8,6 @@
 var pendingtrades = [
    "netbug009: sig_aid",
    "SillyBlanks302: driving03, worst05",
-   "CrazyColours378: sezan03",
    "SwitchItUp284: disgrace04, disgrace06"
 ];
 
