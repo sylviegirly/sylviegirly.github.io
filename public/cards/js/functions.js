@@ -1159,6 +1159,7 @@ function setWebsiteHeader() {
                 <a href="log.html" class="navbutton">logs</a>
                 <a href="tools.html" class="navbutton">tools</a>
                 <a href="to-do.html" class="navbutton">to-do</a>
+                <a href="/index.html" class="navbutton">site</a>
             </nav>
         </div>
         `;
