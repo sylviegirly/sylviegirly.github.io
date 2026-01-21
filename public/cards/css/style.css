@@ -288,6 +288,16 @@ ul li:last-child {
     margin-bottom: 0;
 }
 
+textarea {
+    background-color: var(--pagecontentmaincolor);
+    color: var(--textcolor);
+    border-radius: var(--border-radius);
+    padding: 5px;
+    border-color: var(--pagecontentaccentcolor);
+    width: 50%;
+    height: 70px;
+}
+
 /* -------------------------------------------------------- */
 /* HELPER CLASSES */
 /* -------------------------------------------------------- */
@@ -403,15 +413,19 @@ ul li:last-child {
     text-align: center;
     margin-right: 5px;
 }
-#quicklinks a {
+#quicklinks a,
+button {
     background-color: var(--navbuttoncolor);
     color: var(--navbuttontext);
     border-radius: var(--border-radius);
     padding: 2px 16px;
     margin: 2px;
     text-decoration: none;
+    border: none;
+    transition: 0.5s;
 }
-#quicklinks a:hover {
+#quicklinks a:hover,
+button:hover {
     color: var(--navbuttontext);
     background-color: var(--navbuttonhovercolor);
     transform: translateY(-3px);
