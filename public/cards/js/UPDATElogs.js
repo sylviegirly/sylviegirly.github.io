@@ -60,6 +60,10 @@
 var logs = `
 <time>01/20/2026</time>
 <ul>
+    <li>received from <a href="https://colors-tcg.dreamwidth.org/4451667.html?thread=220357971#cmt220357971">Coloring Book 372</a>: gemini20, mothers09, urn04, southern17, almyra20, maverick12, al-unknown14, raidraptors12, dagobah19, dazzle06, kimie01, kimie13, strawberry19, shampoodle09, stride03, elegies13</li>
+</ul>
+<time>01/20/2026</time>
+<ul>
     <li>traded to <a href="https://asuraid.dreamwidth.org/4183.html?thread=37207#cmt37207">sonetto</a>: rulerstruth03, locoroco19, music18, novels08 for fragment14, dragonscale07, dragonscale11, autobots02</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4059899.html?thread=220354043#cmt220354043">mastering lapisdei</a>: jadedeer05, olympia09, afraid02, 1 gray crayon</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4455027.html?thread=220264563#cmt220264563">Crazy Colors 378</a>: betreida10, educate16, whatapain07, a-set11, raise18, roaromin15, specimen20, avalken17, tharsis13, gun09</li>
