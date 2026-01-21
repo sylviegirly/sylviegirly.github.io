@@ -35,7 +35,7 @@ var highprioritydecks =
    "lapisdei, illness, jadedeer, cervanivea, vasavi, vanarana, burgers, psychology, warmonk, objection, pal, coffee, cuarta, townhall, roost, fragment, dragonscale"; // "deckone, decktwo, deckthree..."
 var allisodecks =
    "fleshlings, husbandos, autobots, decepticons, pal, coffee, townhall, roost, fragment, dragonscale, e-ming, lapisdei, ruoye, logic, objection, illness, nirvasyl, jadedeer, omniscient, vasavi, warmonk, cervanivea, psychology, burgers, vanarana, cuarta, destron, convoy"; // "deckone, decktwo, deckthree..."
-var singlecards = ""; // "card01, card02, card03..."
+var singlecards = "yaoi02"; // "card01, card02, card03..."
 
 /*
     COUPONS:
