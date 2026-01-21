@@ -1,5 +1,10 @@
 const quotes = [
     {
+        quote: "far too old to care about fandom opinions i am an adult with a *sees a take* hm. never mind actually. i am in fact so blessed to have a huge brain and correct inconsequential opinions on fictional characters. there but for the grace of god go i",
+        author: "662607015",
+        url: "https://sylviegirly.tumblr.com/post/806314381981941760"
+    },
+    {
         quote: "i dont need a job. loving that fictional character IS my job and my salary is $0",
         author: "heartsiintune",
         url: "https://www.tumblr.com/heartsiintune/784933388142411776"
