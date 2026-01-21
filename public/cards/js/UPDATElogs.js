@@ -61,6 +61,7 @@ var logs = `
 <time>01/20/2026</time>
 <ul>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4451667.html?thread=220357971#cmt220357971">Coloring Book 372</a>: gemini20, mothers09, urn04, southern17, almyra20, maverick12, al-unknown14, raidraptors12, dagobah19, dazzle06, kimie01, kimie13, strawberry19, shampoodle09, stride03, elegies13</li>
+    <li>lost to <a href="https://colors-tcg.dreamwidth.org/4451667.html?thread=220357971#cmt220357971">Coloring Book 372</a>: 1 green crayon</li>
 </ul>
 <time>01/20/2026</time>
 <ul>
