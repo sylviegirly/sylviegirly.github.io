@@ -393,6 +393,8 @@ button.sectionlink {
 .portfoliobutton {
     border: none;
     background-color: transparent;
+    color: var(--pagecontentaccentcolor);
+    font-weight: bold;
 }
 .portfoliohidden {
     background-color: var(--pagecontentmaincolor);
