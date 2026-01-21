@@ -25,10 +25,12 @@ function processNewCardsNameList() {
         enteredCardNameArray.sort();
     }
 
+    var lazyLoadAttribute = document.getElementById("lazyloadinginput").checked ? ' loading="lazy"' : "";
+
     var imageTagsText = enteredCardNameArray
-        .map((card) => websitePrefix + siteInput + card + imageTagSuffix + card + '"/>')
+        .map((card) => websitePrefix + siteInput + card + imageTagSuffix + card + '"' + lazyLoadAttribute + '/>')
         .toString();
-    colorsImages = enteredCardNameArray.map((card) => colorsPrefix + card + imageTagSuffix + card + '"/>');
+    colorsImages = enteredCardNameArray.map((card) => colorsPrefix + card + imageTagSuffix + card + '"' + lazyLoadAttribute + '/>');
 
     // make elements
     var newlinesdiv = document.createElement("div");
