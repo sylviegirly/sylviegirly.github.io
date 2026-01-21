@@ -67,7 +67,7 @@ var logs = `
     <li>received from <a href="https://colors-tcg.dreamwidth.org/3969255.html?thread=220279015#cmt220279015">art shop</a>: lapisdei16, lapisdei18</li>
     <li>lost to <a href="https://colors-tcg.dreamwidth.org/3969255.html?thread=220279015#cmt220279015">art shop</a>: 2 brown crayons</li>
     <li>gifted to <a href="https://corafish.dreamwidth.org/372.html?thread=20084#cmt20084">corafish</a>: zhenjun20</li>
-    <li>trade to <a href="https://travastila.dreamwidth.org/3965.html?thread=10877#cmt10877">travastila</a>: cyborg00216 for zhenjun20</li>
+    <li>traded to <a href="https://travastila.dreamwidth.org/3965.html?thread=10877#cmt10877">travastila</a>: cyborg00216 for zhenjun20</li>
 </ul>
 <time>01/19/2026</time>
 <ul>
