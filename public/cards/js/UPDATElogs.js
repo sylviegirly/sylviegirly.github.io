@@ -58,6 +58,10 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>01/22/2026</time>
+<ul>
+    <li>received from <a href="https://colors-tcg.eu/recycledart.php?view=log">recycle art</a>: convoy04, cuarta05, cuarta11, ruoye02, autobots01, autobots07, autobots13, autobots16, autobots19, fleshlings03, fleshlings08, husbandos04</li>
+</ul>
 <time>01/21/2026</time>
 <ul>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/2957585.html?thread=220368145#cmt220368145">leveling to green</a>: jadedeer07, bloodelf01, karamucho05, 1 yellow crayon</li>
