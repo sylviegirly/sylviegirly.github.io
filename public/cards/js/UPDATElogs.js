@@ -58,14 +58,11 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
-<time>01/22/2026</time>
+<time>01/21/2026</time>
 <ul>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4445190.html?thread=219804678#cmt219804678">Kotori's Costume Party 452</a>: classrep02, surprises09, crt04, lovelin20, spellcaster02, ariatrading12, 21sacraments04, photographs04, marbirthday06, bloodwhip19</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4445465.html?thread=219804441#cmt219804441">Booster Bundle 221</a>: roaring03, appmon12, greatest15, stapler13, nidothing07, pose04, heavyblade05, allnight03</li>
     <li>received from <a href="https://colors-tcg.eu/recycledart.php?view=log">recycled art</a>: convoy04, cuarta05, cuarta11, ruoye02, autobots01, autobots07, autobots13, autobots16, autobots19, fleshlings03, fleshlings08, husbandos04</li>
-</ul>
-<time>01/21/2026</time>
-<ul>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/2957585.html?thread=220368145#cmt220368145">leveling to green</a>: jadedeer07, bloodelf01, karamucho05, 1 yellow crayon</li>
     <li>received from <a href="https://colors-tcg.dreamwidth.org/4452035.html?thread=220358339#cmt220358339">Switch It Up 284</a>: lacking04, jadedeer14</li>
     <li>lost to <a href="https://colors-tcg.dreamwidth.org/4452035.html?thread=220358339#cmt220358339">Switch It Up 284</a>: disgrace04, disgrace06</li>
