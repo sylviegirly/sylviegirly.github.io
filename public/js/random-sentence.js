@@ -1,5 +1,15 @@
 const quotes = [
     {
+        quote: "stupid thing about me is I don’t cut corners but I also have no work ethic. if I do something it WILL be done right. no telling whether I’ll actually fucking do it tho ",
+        author: "jackkdaniels",
+        url: "https://jackkdaniels.tumblr.com/post/758703848465530880"
+    },
+    {
+        quote: "crazy that you can make an oc with Issues and not even realize until months later that those are actually Your Issues",
+        author: "jansuta",
+        url: "https://jansuta.tumblr.com/post/799815405206110208"
+    },
+    {
         quote: "far too old to care about fandom opinions i am an adult with a *sees a take* hm. never mind actually. i am in fact so blessed to have a huge brain and correct inconsequential opinions on fictional characters. there but for the grace of god go i",
         author: "662607015",
         url: "https://sylviegirly.tumblr.com/post/806314381981941760"
