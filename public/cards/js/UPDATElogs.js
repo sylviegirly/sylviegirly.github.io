@@ -60,6 +60,7 @@
 var logs = `
 <time>01/23/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4454333.html?thread=220213949#cmt220213949'>Puzzle Chains 400</a>: snowboard05, goldenrod17, porn11, aka13, ultimarain20, nekko01, pitiful08, gouki10, suna-suna06, paired12, gastanets02, college01, kicking14, fiancee12, cafemascot07, bluecrow11, curetwinkle03, 1stguardian20, vermouth13, winter04, pinkelf05, beast07, live18, manderville17, organization09, potter16, ouji07, optometry02, youshow19, libertine17, 1 yellow crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4453953.html?thread=220207681#cmt220207681'>Colorseum 73-3</a>: 1 green crayon, 1 purple crayon, 1 blue crayon, 1 orange crayon</li>
 </ul>
 <time>01/22/2026</time>
