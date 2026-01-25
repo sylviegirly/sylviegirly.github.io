@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+    <!--
+
+     ________  ___  ___  ________  ________   ________  ___      ___ ___  _______
+    |\_____  \|\  \|\  \|\   __  \|\   ___  \|\   ____\|\  \    /  /|\  \|\  ___ \
+     \|___/  /\ \  \\\  \ \  \|\  \ \  \\ \  \ \  \___|\ \  \  /  / | \  \ \   __/|
+         /  / /\ \   __  \ \  \\\  \ \  \\ \  \ \  \  __\ \  \/  / / \ \  \ \  \_|/__
+        /  /_/__\ \  \ \  \ \  \\\  \ \  \\ \  \ \  \|\  \ \    / /   \ \  \ \  \_|\ \
+       |\________\ \__\ \__\ \_______\ \__\\ \__\ \_______\ \__/ /     \ \__\ \_______\
+        \|_______|\|__|\|__|\|_______|\|__| \|__|\|_______|\|__|/       \|__|\|_______|
+
+    Welcome to my insanity, if you're here, go get a sip of water. Anyway, feel free to
+    peep at my (probably disorganized) coding!! Just don't 1:1 copy.
+
+    -->
+    <head>
+        <!-- Setting character encoding and viewport size. Do not remove. -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://zhongvie.neocities.org/rss.xml"
+            rel="alternate"
+            type="application/rss+xml"
+            title="What's new on zhongvie.neociites.org" />
+
+        <!-- Site Title -->
+        <title>templates</title>
+
+        <!-- Author -->
+        <meta name="author" content="Asuraid" />
+
+        <!-- Site Description -->
+        <meta content="Site templates." name="description" />
+
+        <!-- CSS: -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/normalize.css" />
+
+        <!-- JavaScript: -->
+        <script src="/js/layout.js" defer></script>
+        <script src="/js/navigation.js" type="module"></script>
+
+        <!-- Page Only Javascript: -->
+
+        <!-- Page Only Styling: -->
+        <style>
+            .templatecontainer {
+                display: flex;
+                flex-direction: row;
+                max-width: 100%;
+                background-color: var(--body-deco);
+                border-radius: var(--border-radius);
+                padding: 10px;
+                gap: 20px;
+                margin: 10px 0;
+
+                &:first-child {
+                    margin-top: 0px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .templatecontainer .image {
+                flex: 1 1 30%;
+            }
+
+            .image img {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 2/1;
+                object-position: center;
+                object-fit: cover;
+                border-radius: var(--border-radius);
+                outline: 3px solid var(--primary-accent);
+            }
+
+            .templatecontainer .content {
+                flex: 1 1 70%;
+            }
+
+            @media screen and (max-width: 800px) {
+                .templatecontainer {
+                    flex-direction: column;
+                    gap: 2px;
+                }
+
+                .templatecontainer .image {
+                    flex: 1 1 100%;
+                    width: 100%;
+                    align-self: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- =============================================== -->
+        <!-- Accessibility links. -->
+        <!-- =============================================== -->
+        <div id="skip"><a href="#content">Skip to content</a></div>
+
+        <!-- =============================================== -->
+        <!-- Header will be loaded per JavaScript! Edit header.js to change. -->
+        <!-- =============================================== -->
+        <nav-header></nav-header>
+
+        <!-- =============================================== -->
+        <!-- BODY BEGINS. -->
+        <!-- =============================================== -->
+        <div id="container-grid">
+            <!-- =============================================== -->
+            <!-- Sidebar will be loaded per JavaScript! Edit left-sidebar.js to change. -->
+            <!-- =============================================== -->
+            <left-sidebar></left-sidebar>
+
+            <!-- =============================================== -->
+            <!-- MAIN CONTENT BEGINS. -->
+            <!-- =============================================== -->
+            <main id="content">
+                <article>
+                    <section aria-labelledby="articles">
+                        <h1 id="templates">Shrines</h1>
+                        <p>
+                            To avoid my navigation bar becoming two bajillion links long, I'm making a shrine 'hub' to
+                            house everything! ... trust me, placing new shrines in and seeing it look fucked up on
+                            mobile made me consider just making a home hub to house everything.
+                        </p>
+                        <hr />
+                        <!-- SECTION BEGIN -->
+                        <div class="templatecontainer">
+                            <div class="image">
+                                <img
+                                    src="https://f2.toyhou.se/file/f2-toyhou-se/images/109304968_DLD1JzTwzE0KCUi.jpg"
+                                    loading="lazy"
+                                    alt="" />
+                            </div>
+                            <div class="content">
+                                <h2>Zhongvie</h2>
+                                <p>
+                                    A little love letter to my yumeship between
+                                    <a href="../oc/sylvie/index.html">Sylvie</a> and Zhongli of Genshin Impact!
+                                </p>
+                                <div style="text-align: center">
+                                    <a href="zhongvie.html">Click here for the shrine</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- SECTION END -->
+
+                        <!-- SECTION BEGIN -->
+                        <div class="templatecontainer">
+                            <div class="image">
+                                <img
+                                    src="https://file.garden/Zq0xOX6Iv3i3b1te/Neocities/Other/ZLedit7.png"
+                                    loading="lazy"
+                                    alt="" />
+                            </div>
+                            <div class="content">
+                                <h2>Zhongli</h2>
+                                <p>
+                                    A shrine to ... well, obviously the man included in said ship above, he's been in my
+                                    brain for 4 years now, it'd be silly to not at least make a shrine for him as well.
+                                </p>
+                                <div style="text-align: center">
+                                    <a href="zhongli.html">Click here for the shrine</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- SECTION END -->
+
+                        <!-- SECTION BEGIN -->
+                        <div class="templatecontainer">
+                            <div class="image">
+                                <img
+                                    src="https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Genshin_Impact_Knights_of_Favonius_Closed_Beta_Test.jpg"
+                                    loading="lazy"
+                                    alt="" />
+                            </div>
+                            <div class="content">
+                                <h2>Genshin Impact</h2>
+                                <p>
+                                    A gift shrine from <a href="https://floralchai.neocities.org/">Flora</a> for
+                                    Shrineta! A shrine to Genshin and what it means to me as a game, plus my collection
+                                    of mods to enhance my experience with it.
+                                </p>
+                                <div style="text-align: center">
+                                    <a href="genshin/index.html" class="disabled">Click here for the shrine</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- SECTION END -->
+
+                        <!-- SECTION BEGIN -->
+                        <div class="templatecontainer">
+                            <div class="image">
+                                <img src="../img/ukitake/parasol.jpg" loading="lazy" alt="" />
+                            </div>
+                            <div class="content">
+                                <h2>Jushiro Ukitake</h2>
+                                <p>
+                                    It's funny, when I got into Bleach, I was more into Toshiro, but as I got older, I
+                                    found myself a lot more interested in Ukitake. I'm still mad about how his story
+                                    ended, but that's a mouthful.
+                                </p>
+                                <div style="text-align: center">
+                                    <a href="ukitake.html">Click here for the shrine</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- SECTION END -->
+
+                        <!-- SECTION BEGIN -->
+                        <div class="templatecontainer">
+                            <div class="image">
+                                <img src="/img/goatlings/gpandgp.png" loading="lazy" alt="" />
+                            </div>
+                            <div class="content">
+                                <h2>Goatlings</h2>
+                                <p>
+                                    With Goatling's permanent sunset as of January 2026, I thought I'd finally make a
+                                    shrine for it; although I wasn't the most avid player, my account was from 2017 and
+                                    it sucked to see it close.
+                                </p>
+                                <div style="text-align: center">
+                                    <a href="goatlings.html">Click here for the shrine</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- SECTION END -->
+                    </section>
+                </article>
+            </main>
+        </div>
+        <a href="#skip" id="backscroll" class="backscroll" title="Go to top">Top</a>
+        <general-footer></general-footer>
+
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@5"></script>
+        <script src="/js/tippy-deco.js"></script>
+
+        <!-- PAGE ONLY SCRIPTS -->
+    </body>
+</html>

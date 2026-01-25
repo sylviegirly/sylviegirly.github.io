@@ -179,22 +179,8 @@ const content = `
                 <li id="item-5-1-0"><a id="link-5-1-0" href="/oc/sylvie/index.html">Sylvie</a></li>
                 <li id="item-5-2-0"><a id="link-5-2-0" href="/oc/yadyra/index.html">Yadyra</a></li>
                 <li id="item-5-3-0"><a id="link-5-3-0" href="/oc/nameless/index.html">Nameless</a></li>
-                <li id="item-5-4-0"><a id="link-5-4-0" href="/oc/index.html">Other OCs</a></li>
-                <li id="item-5-5-0" class="dropdown">
-                    <a id="link-5-5-0" href="#">Shrines</a>
-                    <ul id="menu-5-5">
-                        <li id="item-5-5-1"><a id="link-5-5-1" href="/shrines/zhongli.html">Zhongli</a></li>
-                        <li id="item-5-5-2">
-                            <a id="link-5-5-2" href="/shrines/zhongvie.html">Zhongvie (🌿🔶)</a>
-                        </li>
-                        <li id="item-5-5-3">
-                            <a id="link-5-5-3" href="/shrines/ukitake.html">Jushiro Ukitake</a>
-                        </li>
-                        <li id="item-5-5-3">
-                            <a id="link-5-5-4" href="/shrines/goatlings.html">Goatlings</a>
-                        </li>
-                    </ul>
-                </li>
+                <li id="item-5-4-0"><a id="link-5-4-0" href="/oc/index.html">All OCs</a></li>
+                <li id="item-5-5-0"><a id="link-5-5-0" href="/shrines/index.html">All Shrines</a></li>
             </ul>
         </li>
         <li id="item-6-0-0" class="dropdown">
