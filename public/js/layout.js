@@ -335,6 +335,18 @@ customElements.define("left-sidebar", LeftSidebar);
 // DO IMAGE REROLL THINGS
 const images = [
     {
+        imagesrc: "/img/sidebar/sylvie_chibi_12.png",
+        alt: "Chibi Sylvie pushing a door wide open with a grin",
+        url: "",
+        freezeframe: false
+    },
+    {
+        imagesrc: "/img/sidebar/splash.png",
+        alt: "Sylvie standing in a dynamic pose with their weapon, and their half-feral form behind them as a bust, framing them",
+        url: "",
+        freezeframe: false
+    },
+    {
         imagesrc: "/img/sidebar/sylvie_chibi_11.png",
         alt: "A chibi of Sylvie in a green cow onesie",
         url: "https://vgen.co/lavendergalactic",
