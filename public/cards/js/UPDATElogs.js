@@ -58,6 +58,13 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>01/25/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=220525073#cmt220525073'>leveling to blue</a>: warmonk04, flodeboller11, soulspark08, 1 green crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4454739.html?thread=220264787#cmt220264787'>Colors Concentration 150</a>: immovable01, loyalblade07, boughs19, croceamors15, quick11, acey13, oripathy04, cigarette19, deity13, kindness11, stars09, spear20, deadoralive10, detailed09, attache14, husbando10, mustaches09, alarmclock03, silverstar10, diagnostics09, tengawara16, native13, godsplit12, directorial20, bilkis04, noblewoman20, ladykiller20, razing04, argent20, nurturing19, 1 red crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4462534.html?thread=220481734#cmt220481734'>Crazy Colors 379</a>: swimsuits16, choromi10, tanabata02, secondlast13, pinkpearl03, sexytype13, repair19, onihime08, pomefiore14, catcafe16</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/4462534.html?thread=220481734#cmt220481734'>Crazy Colors 379</a>: obbligato18</li>
+</ul>
 <time>01/23/2026</time>
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4454333.html?thread=220213949#cmt220213949'>Puzzle Chains 400</a>: snowboard05, goldenrod17, porn11, aka13, ultimarain20, nekko01, pitiful08, gouki10, suna-suna06, paired12, gastanets02, college01, kicking14, fiancee12, cafemascot07, bluecrow11, curetwinkle03, 1stguardian20, vermouth13, winter04, pinkelf05, beast07, live18, manderville17, organization09, potter16, ouji07, optometry02, youshow19, libertine17, 1 yellow crayon</li>
