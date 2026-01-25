@@ -9,7 +9,19 @@
         <name>Aid</name>
         <uri>https://zhongvie.neocities.org/</uri>
     </author>
-    <updated>2026-01-18T12:39:52-05:00</updated>
+    <updated>2026-01-25T03:41:17-05:00</updated>
+
+    <entry>
+        <title>Shrine Index Page</title>
+        <link href="https://zhongvie.neocities.org/shrines/" />
+        <updated>2026-01-25T03:41:17-05:00</updated>
+        <id>https://zhongvie.neocities.org/xml/item1769330477</id>
+        <content type="html">
+            &#x3C;p&#x3E;Nothing too fancy, I ended up just making a hub page for my shrines, so my navigation is kept
+            more concise. I also added my Genshin Impact shrine I got gifted! It&#x27;s up, but technically I still need
+            to fill out the content.&#x3C;/p&#x3E;
+        </content>
+    </entry>
 
     <entry>
         <title>Drawbox!</title>
