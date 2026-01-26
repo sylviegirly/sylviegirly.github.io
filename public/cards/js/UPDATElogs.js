@@ -60,6 +60,7 @@
 var logs = `
 <time>01/26/2026</time>
 <ul>
+    <li>gifted to <a href="https://overmore.dreamwidth.org/27332.html?thread=24516#cmt24516">overmore</a>: 1 red crayon, 1 orange crayon, 1 yellow crayon, 1 green crayon, 1 blue crayon, 1 purple crayon, 1 brown crayon, 1 gray crayon</li>
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=47959#cmt47959'>16thpi</a>: secondlast13, obedience20, a-set11, sentinels08, paired12, boughs19, sig_aid for destron07, husbandos06, sakanade20, zangetsu11, bell11, wingman17, sig_sen2</li>
 </ul>
 <time>01/25/2026</time>
