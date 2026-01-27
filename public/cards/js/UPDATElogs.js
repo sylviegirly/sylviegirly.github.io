@@ -60,6 +60,9 @@
 var logs = `
 <time>01/26/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/2802693.html?thread=220525573#cmt220525573'>January Activity</a>: dracula17, thepsychic14, verdantfaith17, pooka07, visualnovel01, fuuga13, unbound20, potato12, coordinator02, marchhare03, machina13, lawnmower12, moonwalker10, flamenco03, lohenwolf19, avalken15, tenbillion07, witchcraft07, kraftwork01, bored20, blogger12, neomonachus13, honest03, spoiled05, hensheng02, warpstar14, lasciate04, ramble01, psychologist16, teacher01, unseeable06, orangegrove20, einstein08, severe10, laughing09, eco18, 1 green crayon, 1 purple crayon, 1 gray crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4457744.html?thread=220335888#cmt220335888'>Most Wanted 206</a>: squeak18, undyingflame18, songbird06, beli06, leominor19</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4457625.html?thread=220336281#cmt220336281'>Pokeradar 461</a>: romancekiss17, refined12, denmark04, executioner01, custard05, fleshcan03, gray14, containment10, dullstown06, technician12</li>
     <li>gifted to <a href="https://overmore.dreamwidth.org/27332.html?thread=24516#cmt24516">overmore</a>: 1 red crayon, 1 orange crayon, 1 yellow crayon, 1 green crayon, 1 blue crayon, 1 purple crayon, 1 brown crayon, 1 gray crayon</li>
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=47959#cmt47959'>16thpi</a>: secondlast13, obedience20, a-set11, sentinels08, paired12, boughs19, sig_aid for destron07, husbandos06, sakanade20, zangetsu11, bell11, wingman17, sig_sen2</li>
 </ul>
