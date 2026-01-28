@@ -1,5 +1,10 @@
 const quotes = [
     {
+        quote: "just hit flow state and wrote 50 words of my essay. might scroll on my phone and write another 25 in about an hour or two. nobody is doing it like me",
+        author: "dugaodna",
+        url: "https://dugaodna.tumblr.com/post/802676620579291136"
+    },
+    {
         quote: "stupid thing about me is I don’t cut corners but I also have no work ethic. if I do something it WILL be done right. no telling whether I’ll actually fucking do it tho ",
         author: "jackkdaniels",
         url: "https://jackkdaniels.tumblr.com/post/758703848465530880"
