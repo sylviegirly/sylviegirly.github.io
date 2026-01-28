@@ -60,6 +60,7 @@
 var logs = `
 <time>01/28/2026</time>
 <ul>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=49751#cmt49751'>overmore</a>: containment10 for vanarana01</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4465829.html?thread=220576165#cmt220576165'>Switch It Up 285</a>: noctua05, selfless04, swim19, legendary15, nasod17, neongem19, pavo11, mona07, aliens12, enduring02, easilylost10, jamsword10, easilylost18</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/4465829.html?thread=220576165#cmt220576165'>Switch It Up 285</a>: aggressive07, huntdown13, loleus05, appmon12, bored20, alarmclock03, attache14, batting09, kyouken12, no02, nidothing07, caramelsyrup03, flamenco03</li>
 </ul>
