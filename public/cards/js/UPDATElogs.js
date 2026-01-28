@@ -60,6 +60,8 @@
 var logs = `
 <time>01/26/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4465655.html?thread=220576503#cmt220576503'>Coloring Book 373</a>: narshe03, vexed08, stalking16, mercenaries15, somersaults04, 4thrank13, appear20, ouji20, romancenovel16, darkshrine01, magichat06, shyly12, incomplete11, esthar11, upperfive16, butlerpower09</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/4465655.html?thread=220576503#cmt220576503'>Coloring Book 373</a>: 1 gray crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=220551399#cmt220551399'>art shop</a>: sig_aid, sig_aid</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=220551399#cmt220551399'>art shop</a>: 2 green crayons</li>
 </ul>
