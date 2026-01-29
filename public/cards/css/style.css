@@ -267,6 +267,7 @@ a {
 }
 a:hover {
     color: var(--linkhovercolor);
+    text-decoration-thickness: 2px;
 }
 
 hr {
