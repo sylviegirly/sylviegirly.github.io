@@ -60,6 +60,7 @@
 var logs = `
 <time>01/29/2026</time>
 <ul>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2067752.html?thread=44326184#cmt44326184'>misheard</a>: undyingflame18 for illness10</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4466769.html?thread=220634193#cmt220634193'>Release 189</a>: hyposelenia01, eternaleye01, werehound01, blacksalt01, omnitrix01, syruptanker01, insides01, grief01, lostlight01, howto01, awoo01, sig_aid, sig_aid</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=220629521#cmt220629521'>leveling to purple</a>: jadedeer13, virgins20, fairytales01, 1 green crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4456371.html?thread=220275123#cmt220275123'>No Context Theater 453</a>: usurped12, colleague13, secondseat20, envy05, locoroco19</li>
