@@ -22,8 +22,10 @@ function cardTextSearch(type) {
 
     var searchingCards;
     if (type == "tradingcards") {
+        console.log("finding needed cards");
         searchingCards = getNeededCards()[0];
     } else {
+        console.log("getting trading cards");
         searchingCards = getTradingCards();
     }
 
@@ -31,6 +33,7 @@ function cardTextSearch(type) {
     var collecting = result[1];
     var singles = result[2];
     var future = result[3];
+    var tradingResult = getTradingCards();
 
     var collectFound = collecting.filter((card) => {
         return searchArray.some((input) => {
@@ -53,14 +56,23 @@ function cardTextSearch(type) {
             }
         });
     });
+    var tradingFound = tradingResult.filter((card) => {
+        return searchArray.some((input) => {
+            if (card.startsWith(input) && input != "") {
+                return true;
+            }
+        });
+    });
 
     document.getElementById("searchresultcontainer").innerHTML = "";
     document.getElementById("searchresultcontainer").innerHTML +=
-        "high priority: " + collectFound.length + "<br>" + collectFound.join(", ") + "<br><br>";
+        "<b>high priority:</b> " + collectFound.length + "<br>" + collectFound.join(", ") + "<br><br>";
     document.getElementById("searchresultcontainer").innerHTML +=
-        "single cards: " + singlesFound.length + "<br>" + singlesFound.join(", ") + "<br><br>";
+        "<b>single cards:</b> " + singlesFound.length + "<br>" + singlesFound.join(", ") + "<br><br>";
     document.getElementById("searchresultcontainer").innerHTML +=
-        "future: " + futureFound.length + "<br>" + futureFound.join(", ") + "<br>";
+        "<b>future:</b> " + futureFound.length + "<br>" + futureFound.join(", ") + "<br><br>";
+    document.getElementById("searchresultcontainer").innerHTML +=
+        "<b>trading:</b> " + tradingFound.length + "<br>" + tradingFound.join(", ") + "<br>";
 }
 
 // INSERTS INTO: fullsetisocontainer
