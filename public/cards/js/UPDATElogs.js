@@ -60,6 +60,8 @@
 var logs = `
 <time>01/29/2026</time>
 <ul>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2067752.html?thread=44329512#cmt44329512'>mezzin</a>: demonbelle01, glassblade01, crownsguard01, live18, shampoodle09, sig_aid for lostlight05, hyposelenia05, convoy01, destron09, dragonscale09, sig_mez</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4466769.html?thread=220634193#cmt220634193'>Release 189</a>: demonbelle01, glassblade01</li>
     <li>traded to <a href="https://colors-trade.dreamwidth.org/2067752.html?thread=44327720#cmt44327720">travastila</a>: fatherhood02, postwar02, onesided02, incog02 for lostlight03, hyposelenia03, blacksalt02, eternaleye02</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4466769.html?thread=220634193#cmt220634193'>Release 189</a>: fatherhood02, postwar02, onesided02, incog02</li>
     <li>traded to <a href="https://colors-trade.dreamwidth.org/2067752.html?thread=44327208#cmt44327208">corafish</a>: allsimples02, gems02 for lostlight02, hyposelenia02</li>
