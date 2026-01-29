@@ -63,6 +63,7 @@
                                 <button class="sectionlink" onclick="openTab('PileRemove')">
                                     remove cards from pile
                                 </button>
+                                <button class="sectionlink" onclick="openTab('scraper')">colorstcg html scraper</button>
                             </div>
                         </nav>
                     </section>
@@ -154,6 +155,33 @@
                                 <div id="resultsoutput"></div>
 
                                 <div id="statsoutput"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="scraper" class="tool" style="display: none">
+                        <h3>colorstcg html scraper</h3>
+                        <div class="toolkit">
+                            <div class="toolkitinputs">
+                                <div class="imagetagsinput">
+                                    <div class="imagetagsinputtextareas">
+                                        <div>
+                                            <p>upload html file of color tcgs's deck list page</p>
+                                            <input
+                                                type="file"
+                                                id="htmlinput"
+                                                name="colorstcghtml"
+                                                accept=".html, .htm" />
+                                        </div>
+                                    </div>
+
+                                    <div id="imagetagsinputbuttons">
+                                        <button onclick="scrapeColorsTCGData()" style="padding: 10px">process!</button>
+                                        <button onclick="reset()" style="padding: 10px">reset</button>
+                                    </div>
+                                </div>
+
+                                <div id="scraperoutput"></div>
                             </div>
                         </div>
                     </div>

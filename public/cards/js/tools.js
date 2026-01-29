@@ -28,9 +28,11 @@ function processNewCardsNameList() {
     var lazyLoadAttribute = document.getElementById("lazyloadinginput").checked ? ' loading="lazy"' : "";
 
     var imageTagsText = enteredCardNameArray
-        .map((card) => websitePrefix + siteInput + card + imageTagSuffix + card + '"' + lazyLoadAttribute + '/>')
+        .map((card) => websitePrefix + siteInput + card + imageTagSuffix + card + '"' + lazyLoadAttribute + "/>")
         .toString();
-    colorsImages = enteredCardNameArray.map((card) => colorsPrefix + card + imageTagSuffix + card + '"' + lazyLoadAttribute + '/>');
+    colorsImages = enteredCardNameArray.map(
+        (card) => colorsPrefix + card + imageTagSuffix + card + '"' + lazyLoadAttribute + "/>"
+    );
 
     // make elements
     var newlinesdiv = document.createElement("div");
@@ -245,9 +247,52 @@ function removeCards() {
     document.getElementById("statsoutput").appendChild(statsdiv);
 }
 
+async function scrapeColorsTCGData() {
+    var data = await document.getElementById("htmlinput").files[0].text();
+    var converter = document.createElement("div");
+    converter.innerHTML = data;
+
+    // grab data row
+    var colorsTable = converter.querySelector("#colors");
+    var dataRows = colorsTable.getElementsByTagName("tr");
+
+    //create dictionary
+    var deckDictionary = {};
+    for (var index = 1; index < dataRows.length; index++) {
+        // remove color series etc table header
+        var dataRow = dataRows[index];
+        var dataCells = dataRow.getElementsByTagName("td");
+        var seriesName = dataCells[0].innerText;
+        var characterName = dataCells[1].innerText;
+        var deckName = dataCells[2].innerText
+            .toLowerCase()
+            .replaceAll(" ", "")
+            .replace(/[àáâãäå]/g, "a")
+            .replace(/[èéêë]/g, "e")
+            .replace(/[ìíîï]/g, "i")
+            .replace(/[òóôöõ]/g, "o")
+            .replace(/[ùúûü]/g, "u")
+            .replace(/[ýÿ]/g, "u")
+            .replace(/[ç]/g, "c")
+            .replace(/[ñ]/g, "n")
+            .replace(/[^a-z0-9-]/g, "");
+        var color = dataCells[3].innerText;
+        // add to dictionary deckname: [seriesname, color, charactername]
+        deckDictionary[deckName] = [seriesName, characterName, color];
+    }
+
+    //display
+    var resulttextarea = document.createElement("textarea");
+    resulttextarea.value = "var deckDictionary = " + JSON.stringify(deckDictionary);
+    // pretty output ver: resulttextarea.value = "var deckDictionary = " + JSON.stringify(deckDictionary, null, 1);
+
+    document.getElementById("scraperoutput").appendChild(resulttextarea);
+}
+
 function reset() {
     document.getElementById("resultsoutput").innerHTML = "";
     document.getElementById("statsoutput").innerHTML = "";
     document.getElementById("cardpile").value = "";
     document.getElementById("removethesecards").value = "";
+    document.getElementById("scraperoutput").value = "";
 }
