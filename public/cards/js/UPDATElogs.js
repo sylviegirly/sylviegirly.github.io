@@ -58,6 +58,12 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>01/29/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=220629521#cmt220629521'>leveling to purple</a>: jadedeer13, virgins20, fairytales01, 1 green crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4456371.html?thread=220275123#cmt220275123'>No Context Theater 453</a>: usurped12, colleague13, secondseat20, envy05, locoroco19</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4450309.html?thread=219952389#cmt219952389'>No Context Theater 452</a>: kraftwork17, litterateurs19, dominion07, burnt02, secondseat04</li>
+</ul>
 <time>01/28/2026</time>
 <ul>
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=49751#cmt49751'>overmore</a>: containment10 for vanarana01</li>
