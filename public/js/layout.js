@@ -59,8 +59,11 @@ function freezegifs() {
     for (var i = 0; i < x.length; i++) {
         x[i].src = x[i].src.slice(0, -3) + "png";
     }
-    // IF YOU USE QUERY SELECTOR ALL, you need to loop through everything to swap the set propery, querySelector only
-    // gives the first, query selector all gives a list, so you need to loop through the dang list!!!!!!
+    /* IF YOU USE QUERY SELECTOR ALL, you need to loop through everything to swap the set propery, querySelector only
+     * gives the first, query selector ALL gives a list, so you need to loop through the dang list!!!!!!
+     * this is stupid i wish i saved the stackoverflow thread abt it. tl;dr you can target properties directly
+     * to change them if you have them as variable roots in your CSS, and change them directly there.
+     */
     for (var o = 0; o < h1.length; o++) {
         h1[o].style.setProperty("--h1-pixel-deco", "url(/img/decos/Leaf.png)");
     }
@@ -352,7 +355,7 @@ var randomIndex = Math.floor(Math.random() * images.length);
 const selectedImage = images[randomIndex];
 
 // Create the final image string
-let finalImage = "<img src='" + selectedImage.imagesrc + "' alt='" + selectedImage.alt + "'";
+var finalImage = "<img src='" + selectedImage.imagesrc + "' alt='" + selectedImage.alt + "'";
 
 // Add 'freezeframe' class if the image has freezeframe set to true
 if (selectedImage.freezeframe) {
