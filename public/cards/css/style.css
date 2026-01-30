@@ -717,6 +717,14 @@ time {
     transform: translateY(-3px);
 }
 
+input {
+    background-color: var(--pagecontentmaincolor);
+    color: var(--textcolor);
+    border-radius: var(--border-radius);
+    padding: 5px;
+    border-color: var(--pagecontentaccentcolor);
+}
+
 /* -------------------------------------------------------- */
 /* MOBILE RESPONSIVENESS */
 /* -------------------------------------------------------- */
