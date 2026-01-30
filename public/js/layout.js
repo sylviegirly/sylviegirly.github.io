@@ -352,7 +352,7 @@ var randomIndex = Math.floor(Math.random() * images.length);
 const selectedImage = images[randomIndex];
 
 // Create the final image string
-let finalImage = "<img src='" + selectedImage.imagesrc + "' alt='" + selectedImage.alt + "' loading='lazy'";
+let finalImage = "<img src='" + selectedImage.imagesrc + "' alt='" + selectedImage.alt + "'";
 
 // Add 'freezeframe' class if the image has freezeframe set to true
 if (selectedImage.freezeframe) {
