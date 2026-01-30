@@ -60,6 +60,13 @@
 var logs = `
 <time>01/29/2026</time>
 <ul>
+    <li>gifted by <a href='https://colors-trade.dreamwidth.org/2068396.html?thread=44332204#cmt44332204'>breadfully</a>: onion13, pureheart05, swimming07</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2068396.html?thread=44332204#cmt44332204'>breadfully</a>: spiritevo02, sig_aid for lostlight06, hyposelenia06, sig_bread</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4466769.html?thread=220634193#cmt220634193'>Release 189</a>: spiritevo02</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2067752.html?thread=44333608#cmt44333608'>sonetto</a>: shyly12 for illness15</li>
+</ul>
+<time>01/29/2026</time>
+<ul>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2068173.html?thread=44330189#cmt44330189'>tiddly_widdly</a>: flodeboller11, magichat06 for vasavi08, vasavi17</li>
     <li>traded to <a href="https://corafish.dreamwidth.org/372.html?thread=20596#cmt20596">corafish</a>: spiritwave03 for dragonscale15</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2068173.html?thread=44330189#cmt44330189'>mezucore</a>: incarnation11, minalinsky07, onihime07, onihime08, ouji07, ouji20, stars09, sig_aid for lostlight04, hyposelenia04, blacksalt04, eternaleye03, autobots17, imperatrix16, crowknights13, sig_mezu</li>
