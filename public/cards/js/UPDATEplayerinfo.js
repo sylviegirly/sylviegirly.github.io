@@ -5,10 +5,7 @@
 
     ex: ["PLAYERNAME1: card01, card02", "PLAYERNAME2: card03, card04"]
 */
-var pendingtrades = [
-   "netbug009: sig_aid",
-   "SillyBlanks303: greatest15, pay08"
-];
+var pendingtrades = ["netbug009: sig_aid", "SillyBlanks303: greatest15, pay08"];
 
 /*
    HIGH PRIORITY DECKS:
@@ -30,7 +27,7 @@ var pendingtrades = [
    ex: "deckone, decktwo, deckthree" or "card01, card02, card03"
 */
 var highprioritydecks =
-   "lapisdei, illness, jadedeer, cervanivea, vasavi, vanarana, burgers, psychology, warmonk, objection, pal, coffee, cuarta, townhall, roost, fragment, dragonscale"; // "deckone, decktwo, deckthree..."
+   "lostlight, hyposelenia, blacksalt, lapisdei, illness, jadedeer, cervanivea, vasavi, vanarana, burgers, psychology, warmonk, objection, pal, coffee, cuarta, townhall, roost, fragment, dragonscale"; // "deckone, decktwo, deckthree..."
 var allisodecks =
    "animula, fleshlings, husbandos, autobots, decepticons, pal, coffee, townhall, roost, fragment, dragonscale, e-ming, lapisdei, ruoye, logic, objection, illness, nirvasyl, jadedeer, omniscient, vasavi, warmonk, cervanivea, psychology, burgers, vanarana, cuarta, destron, convoy, vector, warmaiden, pillowfort, sapientia, holypriest, spectrum, matoi, burnish, mysterious, hyposelenia, eternaleye, blacksalt, lostlight"; // "deckone, decktwo, deckthree..."
 var singlecards = "yaoi02"; // "card01, card02, card03..."
