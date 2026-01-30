@@ -56,8 +56,8 @@
             <main id="middle" class="">
                 <article>
                     <h2>cards for trade text</h2>
-                    <div style="display: flex; justify-content: center; text-align: center; flex-direction: column">
-                        <p>search for a specific card or multiple cards</p>
+                    <p>search for a specific card or multiple cards</p>
+                    <div class="searchbar">
                         <input
                             style="margin: auto"
                             id="searchbar"
@@ -65,9 +65,7 @@
                             name="search"
                             placeholder="card01, card02, ..." />
                         <!-- DO NOT REMOVE -->
-                        <button onclick="cardTextSearch('tradingcards')" style="padding: 5px; margin: auto">
-                            search
-                        </button>
+                        <button onclick="cardTextSearch('tradingcards')">search</button>
                     </div>
 
                     <p id="searchresultcontainer" style="overflow-x: wrap; margin-bottom: 30px; text-align: center"></p>
