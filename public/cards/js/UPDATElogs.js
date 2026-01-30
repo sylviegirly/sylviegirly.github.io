@@ -60,6 +60,7 @@
 var logs = `
 <time>01/30/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4460873.html?thread=220439625#cmt220439625'>Colorseum 73-4</a>: 2 orange crayons, 2 brown crayons</li>
     <li>gifted by <a href='https://colors-trade.dreamwidth.org/2068396.html?thread=44332204#cmt44332204'>breadfully</a>: onion13, pureheart05, swimming07</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2068396.html?thread=44332204#cmt44332204'>breadfully</a>: spiritevo02, sig_aid for lostlight06, hyposelenia06, sig_bread</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4466769.html?thread=220634193#cmt220634193'>Release 189</a>: spiritevo02</li>
