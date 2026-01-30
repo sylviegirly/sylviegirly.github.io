@@ -60,6 +60,7 @@
 var logs = `
 <time>01/29/2026</time>
 <ul>
+    <li>traded to <a href="https://corafish.dreamwidth.org/372.html?thread=20596#cmt20596">corafish</a>: spiritwave03 for dragonscale15</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2068173.html?thread=44330189#cmt44330189'>mezucore</a>: incarnation11, minalinsky07, onihime07, onihime08, ouji07, ouji20, stars09, sig_aid for lostlight04, hyposelenia04, blacksalt04, eternaleye03, autobots17, imperatrix16, crowknights13, sig_mezu</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2067752.html?thread=44329512#cmt44329512'>mezzin</a>: demonbelle01, glassblade01, crownsguard01, live18, shampoodle09, sig_aid for lostlight05, hyposelenia05, convoy01, destron09, dragonscale09, sig_mez</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4466769.html?thread=220634193#cmt220634193'>Release 189</a>: demonbelle01, glassblade01</li>
