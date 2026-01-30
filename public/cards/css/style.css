@@ -261,6 +261,13 @@ strong {
     color: var(--pagecontentaccentcolor);
 }
 
+u,
+underline {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--pagecontentaccentcolor);
+}
+
 a {
     color: var(--linkcolor);
     transition: 0.5s;
