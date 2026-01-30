@@ -9,7 +9,7 @@
     --left-sidebar-size: 250px;
     --right-sidebar-size: 220px;
     --border-radius: 5px;
-    --marquee-duration: 160s;
+    --marquee-duration: 300s;
 
     /* FONTS */
     --header-font: "Dosis";
@@ -1471,9 +1471,9 @@ aside .title::after {
         width: fit-content;
         height: 100%;
     }
-    
+
     .font-wrapper select {
-      width: 150px;
+        width: 150px;
     }
 
     .two-columns {
