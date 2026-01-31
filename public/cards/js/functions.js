@@ -21,58 +21,61 @@ function cardTextSearch(type) {
     var searchArray = searchInput.replaceAll(" ", "").split(",");
 
     var searchingCards;
-    if (type == "tradingcards") {
+    if (type == "neededcards") {
         console.log("finding needed cards");
-        searchingCards = getNeededCards()[0];
+        var result = getNeededCards();
+        var collecting = result[1];
+        var singles = result[2];
+        var future = result[3];
+        var tradingResult = getTradingCards();
+
+        var collectFound = collecting.filter((card) => {
+            return searchArray.some((input) => {
+                if (card.startsWith(input) && input != "") {
+                    return true;
+                }
+            });
+        });
+        var singlesFound = singles.filter((card) => {
+            return searchArray.some((input) => {
+                if (card.startsWith(input) && input != "") {
+                    return true;
+                }
+            });
+        });
+        var futureFound = future.filter((card) => {
+            return searchArray.some((input) => {
+                if (card.startsWith(input) && input != "") {
+                    return true;
+                }
+            });
+        });
+
+        document.getElementById("searchresultcontainer").innerHTML = "";
+        document.getElementById("searchresultcontainer").innerHTML +=
+            "<b>high priority:</b> " + collectFound.length + "<br>" + collectFound.join(", ") + "<br><br>";
+        document.getElementById("searchresultcontainer").innerHTML +=
+            "<b>single cards:</b> " + singlesFound.length + "<br>" + singlesFound.join(", ") + "<br><br>";
+        document.getElementById("searchresultcontainer").innerHTML +=
+            "<b>future:</b> " + futureFound.length + "<br>" + futureFound.join(", ");
     } else {
         console.log("getting trading cards");
+
         searchingCards = getTradingCards();
+
+        var tradingFound = searchingCards.filter((card) => {
+            return searchArray.some((input) => {
+                if (card.startsWith(input) && input != "") {
+                    return true;
+                }
+            });
+        });
+
+        console.log("do trading post result shit");
+        document.getElementById("searchresultcontainer").innerHTML = "";
+        document.getElementById("searchresultcontainer").innerHTML +=
+            "<b>trading:</b> " + tradingFound.length + "<br>" + tradingFound.join(", ") + "<br>";
     }
-
-    var result = getNeededCards();
-    var collecting = result[1];
-    var singles = result[2];
-    var future = result[3];
-    var tradingResult = getTradingCards();
-
-    var collectFound = collecting.filter((card) => {
-        return searchArray.some((input) => {
-            if (card.startsWith(input) && input != "") {
-                return true;
-            }
-        });
-    });
-    var singlesFound = singles.filter((card) => {
-        return searchArray.some((input) => {
-            if (card.startsWith(input) && input != "") {
-                return true;
-            }
-        });
-    });
-    var futureFound = future.filter((card) => {
-        return searchArray.some((input) => {
-            if (card.startsWith(input) && input != "") {
-                return true;
-            }
-        });
-    });
-    var tradingFound = tradingResult.filter((card) => {
-        return searchArray.some((input) => {
-            if (card.startsWith(input) && input != "") {
-                return true;
-            }
-        });
-    });
-
-    document.getElementById("searchresultcontainer").innerHTML = "";
-    document.getElementById("searchresultcontainer").innerHTML +=
-        "<b>high priority:</b> " + collectFound.length + "<br>" + collectFound.join(", ") + "<br><br>";
-    document.getElementById("searchresultcontainer").innerHTML +=
-        "<b>single cards:</b> " + singlesFound.length + "<br>" + singlesFound.join(", ") + "<br><br>";
-    document.getElementById("searchresultcontainer").innerHTML +=
-        "<b>future:</b> " + futureFound.length + "<br>" + futureFound.join(", ") + "<br><br>";
-    document.getElementById("searchresultcontainer").innerHTML +=
-        "<b>trading:</b> " + tradingFound.length + "<br>" + tradingFound.join(", ") + "<br>";
 }
 
 // INSERTS INTO: fullsetisocontainer
