@@ -428,7 +428,8 @@ button.sectionlink {
     margin-right: 5px;
 }
 #quicklinks a,
-button {
+button,
+article > nav a {
     background-color: var(--navbuttoncolor);
     color: var(--navbuttontext);
     border-radius: var(--border-radius);
@@ -439,10 +440,14 @@ button {
     transition: 0.5s;
 }
 #quicklinks a:hover,
+article > nav a:hover,
 button:hover {
     color: var(--navbuttontext);
     background-color: var(--navbuttonhovercolor);
     transform: translateY(-3px);
+}
+article > nav {
+    margin: 10px 0;
 }
 #intro {
     margin-top: 10px;
