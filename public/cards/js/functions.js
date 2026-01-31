@@ -164,9 +164,17 @@ function fillPlayerInfo() {
 // paletteportfoliocontainer, monochromeportfoliocontainer divs and palettedeckscontainer, monochromedeckscontainer ps
 function fillPortfolios() {
     document.getElementById("paletteportfoliocontainer").innerHTML =
-        "<img class='marginimage imageshadow' src ='" + paletteportfoliopath + "'>";
+        "<a href='" +
+        paletteportfoliourl +
+        "'><img class='marginimage imageshadow' src ='" +
+        paletteportfoliopath +
+        "'></a>";
     document.getElementById("monochromeportfoliocontainer").innerHTML =
-        "<img class='marginimage imageshadow' src ='" + monochromeportfoliopath + "'>";
+        "<a href='" +
+        monochromeportfoliourl +
+        "'><img class='marginimage imageshadow' src ='" +
+        monochromeportfoliopath +
+        "'></a>";
 
     var keepingCards = getKeepingCards();
 

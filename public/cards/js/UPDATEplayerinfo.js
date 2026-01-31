@@ -53,7 +53,9 @@ var coupons = [];
    ex: "reddeck, orangdeck, yellowdeck, greendeck, bluedeck, purpledeck, browndeck, graydeck"
 */
 var paletteportfoliopath = "portfolios/portfolio_01.png"; // change if named different
+var paletteportfoliourl = "https://colors-tcg.dreamwidth.org/2732409.html?thread=219724153#cmt219724153"; // change if named different
 var monochromeportfoliopath = "portfolios/mono_portfolio_01.png"; // change if named different
+var monochromeportfoliourl = "https://colors-tcg.dreamwidth.org/2732409.html?thread=219840121#cmt219840121"; // change if named different
 
 var paletteportfoliodecks = "vasavi, psychology, warmonk, jadedeer, objection, burgers, lapisdei, illness"; //
 var monochromeportfoliodecks = "jadedeer, cervanivea, pal, coffee, townhall, roost, fragment, dragonscale";
