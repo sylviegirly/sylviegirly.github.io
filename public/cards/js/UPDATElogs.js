@@ -60,6 +60,7 @@
 var logs = `
 <time>02/01/2026</time>
 <ul>
+    <li>traded to <a href='https://overmore.dreamwidth.org/27332.html?thread=27588#cmt27588'>overmore</a>: dreary05 for goldweaver15</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=220798481#cmt220798481'>leveling to grey</a>: lostlight15, couturier18, gohyaku15, 1 green crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=220798203#cmt220798203'>mastering cervanivea</a>: lostlight14, beanville11, marionetta09, 1 orange crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=220798203#cmt220798203'>mastering jadedeer</a>: cervanivea20, oolong14, caelin07, 1 yellow crayon</li>
