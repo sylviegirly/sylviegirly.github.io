@@ -60,6 +60,7 @@
 var logs = `
 <time>02/01/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4470177.html?thread=220794785#cmt220794785'>Little Spell Academia 400</a>: lostlight08, jadedeer16, jadedeer18, cervanivea14, lostlight09, coffee01, lostlight10, jadedeer19, fragment01, jadedeer20, lostlight13, cervanivea16, lostlight11, cervanivea18, cervanivea19, lostlight12</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4469018.html?thread=220782362#cmt220782362'>Crazy Colors 380</a>: nirvana14, myprince03, chousin19, profit19, rock10, fran05, diva14, punishment05, revenge08, b-701, extractteam03, mooncell12, wildchild08, usagimimi09, torule11, 1stchild15</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/4469018.html?thread=220782362#cmt220782362'>Crazy Colors 380</a>: moonwalker10</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=220753895#cmt220753895'>art shop</a>: ironskin20, 100cats06, genz07</li>
