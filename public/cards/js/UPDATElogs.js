@@ -58,6 +58,11 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/01/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4452416.html?thread=220143936#cmt220143936'>Memory Lane 016</a>: started18, sanctifex15, patchwork09, bombings19, ukaku16, rustboro01, troubleshoot13, witchheart03, warrant10, 098812, babalon08, korenaru10, mikazuki20, gunman15, snakewoman06, 1 red crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4452626.html?thread=220143634#cmt220143634'>Pick A Color 306</a>: blackfox06, synchronize06, commodore06, harvest10, attracts10, negative-kun18, vex16, rati11, socialmedia20, thracia10, zaftig12, scavenger19, experiments20, killerwolf20, doctors08, kingofnohr01, canvas14, hardland05, pediatrician08, ragnarok03, outlandish06, possessive20, reckless12, vice10, peacemaker09</li>
+</ul>
 <time>01/31/2026</time>
 <ul>
     <li>gifted by <a href='https://colors-trade.dreamwidth.org/2068950.html?thread=44343766#cmt44343766'>camilovesyou</a>: ruoye10, ruoye15, decepticons01, decepticons09, decepticons19, fleshlings17, husbandos02, vanarana02, burgers20, coffee09</li>
