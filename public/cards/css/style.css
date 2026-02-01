@@ -655,16 +655,6 @@ article > nav {
     text-align: left;
     padding: 10px;
     align-items: center;
-    border-top: 1px dotted var(--pagecontentaccentcolor);
-    border-bottom: 1px dotted var(--pagecontentaccentcolor);
-}
-
-.mastery:first-of-type {
-    border-top: 0;
-}
-
-.mastery:last-of-type {
-    border-bottom: 0;
 }
 
 .masteryinfo {
