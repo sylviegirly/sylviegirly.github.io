@@ -60,6 +60,9 @@
 var logs = `
 <time>02/02/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=220842491#cmt220842491'>mastering lostlight</a>: blacksalt05, roving05, mischievous06, 1 yellow crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/2418272.html?thread=220831328#cmt220831328'>art studio</a>: lostlight07, lostlight16, lostlight17, lostlight18, lostlight19, lostlight20</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/2418272.html?thread=220831328#cmt220831328'>art studio</a>: marionetta09, oolong14, caelin07, nirvana14, myprince03, chousin19, profit19, rock10, fran05, diva14, punishment05, revenge08, b-701, extractteam03, mooncell12, wildchild08, evilking17, debug17</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4462150.html?thread=220481862#cmt220481862'>Colors Concentration 151</a>: chroma12, fearless03, barkeep03, assertive06, moves13, forwards14, walks04, patchwork10, amadeus19, owl18, commanding12, charles12, shopkeep04, yomihime10, paruru02, lemuria03, yumekawa18, variabeauties11, violetwolf17, bespa05, striker04, straydog10, sensible07, cannibal13, lend04, frivolous13, youthful08, urameshiya17, hotel18, flowersong14, 1 green crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4458854.html?thread=220357734#cmt220357734'>Lady Luck Slots 246</a>: fevrith17, sexytype05, homo15, morikubos02, seele10, endings09, champions02, kanaiward14, cure18, restoration08, fullbloom08, natsus09, 2 green crayons</li>
 </ul>
