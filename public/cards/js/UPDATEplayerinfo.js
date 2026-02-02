@@ -9,7 +9,6 @@ var pendingtrades = [
    "netbug009: sig_aid",
    "camilovesyou: raidraptors12, swimmer15, sig_aid",
    "SillyBlanks304: severe10, mothers09",
-   "misheard: gatlingmax09, ironskin20",
    "travastila: denmark04, fiancee12, illiterate13, sheeh08"
 ];
 
