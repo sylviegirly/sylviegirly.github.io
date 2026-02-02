@@ -60,6 +60,7 @@
 var logs = `
 <time>02/02/2026</time>
 <ul>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=220846311#cmt220846311'>art shop</a>: 3 green crayons</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2069259.html?thread=44354827#cmt44354827'>travastila</a>: denmark04, fiancee12, illiterate13, sheeh08 for ampulla14, spectrum20, coffee03, tablesalt11</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2069259.html?thread=44354827#cmt44354827'>misheard</a>: gatlingmax09, ironskin20 for hyposelenia07, illness16</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2067752.html?thread=44355368#cmt44355368'>jelliebean</a>: bombings19, envy05, greenword05, margrace11, sig_aid for vasavi18, psychology08, pal06, pal09, sig_jellie</li>
