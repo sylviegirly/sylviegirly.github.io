@@ -60,6 +60,7 @@
 var logs = `
 <time>02/02/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4462150.html?thread=220481862#cmt220481862'>Colors Concentration 151</a>: chroma12, fearless03, barkeep03, assertive06, moves13, forwards14, walks04, patchwork10, amadeus19, owl18, commanding12, charles12, shopkeep04, yomihime10, paruru02, lemuria03, yumekawa18, variabeauties11, violetwolf17, bespa05, striker04, straydog10, sensible07, cannibal13, lend04, frivolous13, youthful08, urameshiya17, hotel18, flowersong14, 1 green crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4458854.html?thread=220357734#cmt220357734'>Lady Luck Slots 246</a>: fevrith17, sexytype05, homo15, morikubos02, seele10, endings09, champions02, kanaiward14, cure18, restoration08, fullbloom08, natsus09, 2 green crayons</li>
 </ul>
 <time>02/01/2026</time>
