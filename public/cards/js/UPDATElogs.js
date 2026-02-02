@@ -60,6 +60,7 @@
 var logs = `
 <time>02/01/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.eu/recycledart.php?view=log'>recycled art</a>: educate04, el01, eun10, eun11, knowing03, knowing18, kazeshini01, kazeshini09, shuanghua08, suzumushi18, kyous08, zanpakuto02, zanpakuto07, zanpakuto12, zanpakuto14, zanpakuto16, wabisuke19, hakudan14, hakudan15, flowery13, factor10, factor20, faerghus13, tercera17, three01, xcution17, xcution20, plagiarist02</li>
     <li>traded to <a href='https://overmore.dreamwidth.org/27332.html?thread=27588#cmt27588'>overmore</a>: dreary05 for goldweaver15</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=220798481#cmt220798481'>leveling to grey</a>: lostlight15, couturier18, gohyaku15, 1 green crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=220798203#cmt220798203'>mastering cervanivea</a>: lostlight14, beanville11, marionetta09, 1 orange crayon</li>
