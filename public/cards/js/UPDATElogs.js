@@ -69,7 +69,7 @@ var logs = `
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4464666.html?thread=220568346#cmt220568346'>Pokeradar 462</a>: elucidator05, rhythm02, hakunon07, loyalty19, phonestrap14, astra17, bladerang17, mechanizing18, biovolt03, sigmund15</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=220846311#cmt220846311'>art shop</a>: sig_aid, sig_aid, sig_aid</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=220846311#cmt220846311'>art shop</a>: 3 green crayons</li>
-    <li>traded to <a href='https://colors-trade.dreamwidth.org/2069259.html?thread=44354827#cmt44354827'>travastila</a>: denmark04, fiancee12, illiterate13, sheeh08 for ampulla14, spectrum20, coffee03, tablesalt11</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2069097.html?thread=44356201#cmt44356201'>travastila</a>: denmark04, fiancee12, illiterate13, sheeh08 for ampulla14, spectrum20, coffee03, tablesalt11</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2069259.html?thread=44354827#cmt44354827'>misheard</a>: gatlingmax09, ironskin20 for hyposelenia07, illness16</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2067752.html?thread=44355368#cmt44355368'>jelliebean</a>: bombings19, envy05, greenword05, margrace11, sig_aid for vasavi18, psychology08, pal06, pal09, sig_jellie</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=220842491#cmt220842491'>mastering lostlight</a>: blacksalt05, roving05, mischievous06, 1 yellow crayon</li>
