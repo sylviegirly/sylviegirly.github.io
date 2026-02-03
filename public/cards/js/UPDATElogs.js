@@ -63,6 +63,7 @@ var logs = `
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=54359#cmt54359'>tempoet</a>: captivate12, colleague13, kurikaramaru17, allnight03, emotion06 for misericordia16, shackle17, crowknights12, mediocrity05, smol10</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4464914.html?thread=220568082#cmt220568082'>Most Wanted 207</a>: squeak14, pink11, devotee17, secretaries20, otahen08</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4464666.html?thread=220568346#cmt220568346'>Pokeradar 462</a>: elucidator05, rhythm02, hakunon07, loyalty19, phonestrap14, astra17, bladerang17, mechanizing18, biovolt03, sigmund15</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=220846311#cmt220846311'>art shop</a>: sig_aid, sig_aid, sig_aid</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=220846311#cmt220846311'>art shop</a>: 3 green crayons</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2069259.html?thread=44354827#cmt44354827'>travastila</a>: denmark04, fiancee12, illiterate13, sheeh08 for ampulla14, spectrum20, coffee03, tablesalt11</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2069259.html?thread=44354827#cmt44354827'>misheard</a>: gatlingmax09, ironskin20 for hyposelenia07, illness16</li>
