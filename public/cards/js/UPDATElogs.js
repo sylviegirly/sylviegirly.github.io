@@ -60,6 +60,7 @@
 var logs = `
 <time>02/04/2026</time>
 <ul>
+    <li>lost to <a href="https://colors-tcg.dreamwidth.org/3969255.html?thread=220922855#cmt220922855">art shop</a>: 6 gray crayons</li>
     <li>gifted by <a href='https://colors-trade.dreamwidth.org/2069666.html?thread=44365986#cmt44365986'>admiral</a>: hyposelenia15, illness07</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2069666.html?thread=44365986#cmt44365986'>admiral</a>: oldersister09, peacemaker09, shangrila20, troubleshoot13, homo15, charles12, ofuda16, sanctifex15, sig_aid for warmonk01, warmonk13, warmonk15, warmonk19, pal01, objection09, vasavi04, vasavi05, sig_lex</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2070067.html?thread=44367923#cmt44367923'>corafish</a>: sensible07, usagimimi09 for yaoi02, animula04</li>
