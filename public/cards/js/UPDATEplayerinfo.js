@@ -9,8 +9,7 @@ var pendingtrades = [
    "netbug009: sig_aid",
    "camilovesyou: raidraptors12, swimmer15, sig_aid",
    "SillyBlanks304: severe10, mothers09",
-   "PotOfGold140(Gray): lend04, owl18, violetwolf17, walks04, sigmund15",
-   "admiral: oldersister09, peacemaker09, shangrila20, troubleshoot13, homo15, charles12, ofuda16, sanctifex15"
+   "PotOfGold140(Gray): lend04, owl18, violetwolf17, walks04, sigmund15"
 ];
 
 /*
@@ -20,7 +19,7 @@ var pendingtrades = [
    put the deck name, not card numbers (ie sakura, not sakura01)
 
    all ISO DECKS:
-   all decks that you would like to be collecting INCLUDING high priority decks.
+   all decks that you would like to be collecting INCzzzzzzLUDING high priority decks.
    these will be displayed by just a link to the deck page.
    put the deck name, not card numbers (ie sakura, not sakura01)
 

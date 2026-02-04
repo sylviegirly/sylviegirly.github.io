@@ -58,6 +58,12 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/04/2026</time>
+<ul>
+    <li>gifted by <a href='https://colors-trade.dreamwidth.org/2069666.html?thread=44365986#cmt44365986'>admiral</a>: hyposelenia15, illness07</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2069666.html?thread=44365986#cmt44365986'>admiral</a>: oldersister09, peacemaker09, shangrila20, troubleshoot13, homo15, charles12, ofuda16, sanctifex15, sig_aid for warmonk01, warmonk13, warmonk15, warmonk19, pal01, objection09, vasavi04, vasavi05, sig_lex</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2070067.html?thread=44367923#cmt44367923'>corafish</a>: sensible07, usagimimi09 for yaoi02, animula04</li>
+</ul>
 <time>02/03/2026</time>
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4465655.html?thread=220890871#cmt220890871'>Coloring Book 373</a>: grow10, dietmember14, shaft20, tanpopo12, deathhalo18, insides20, notquite03, sith19</li>
