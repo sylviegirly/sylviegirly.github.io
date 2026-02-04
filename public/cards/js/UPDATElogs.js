@@ -60,6 +60,7 @@
 var logs = `
 <time>02/03/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4465655.html?thread=220890871#cmt220890871'>Coloring Book 373</a>: grow10, dietmember14, shaft20, tanpopo12, deathhalo18, insides20, notquite03, sith19</li>
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=56663#cmt56663'>overmore</a>: sig_aid for sig_blue3</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/4471113.html?thread=220888393#cmt220888393'>Pot of Gold 140</a>: chroma12, barkeep03, assertive06, forwards14, patchwork10, amadeus19, cannibal13, restoration08, youthful08, fearless03</li>
 </ul>
