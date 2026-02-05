@@ -60,6 +60,8 @@
 var logs = `
 <time>02/05/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=220944635#cmt220944635'>mastering illness</a>: hyposelenia09, publicmorals13, weasel15, 1 purple crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=220922855#cmt220922855'>Art Shop</a>: illness08, illness09, illness13, illness14, illness18, illness19</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=220942609#cmt220942609'>leveling to strawberry</a>: hyposelenia08, psyqualia09, nova14, 1 gray crayon</li>
 </ul>
 <time>02/04/2026</time>
