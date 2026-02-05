@@ -8,7 +8,8 @@
 var pendingtrades = [
    "netbug009: sig_aid",
    "camilovesyou: raidraptors12, swimmer15, sig_aid",
-   "SillyBlanks304: severe10, mothers09"
+   "SillyBlanks304: severe10, mothers09",
+   "moes: expectations18, glimmerlab04, kyun-kyun12, morikubos02, secretaries20, usurped12, ariatrading12, babalon08, beast07, birds10"
 ];
 
 /*
