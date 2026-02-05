@@ -58,8 +58,14 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/05/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=220942609#cmt220942609'>leveling to strawberry</a>: hyposelenia08, psyqualia09, nova14, 1 gray crayon</li>
+</ul>
 <time>02/04/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4459486.html?thread=220363742#cmt220363742'>Booster Bundle 222</a>: tealeaves11, galearc15, vegitamura10, girle02, gone05, videogame16, somnians03, resonance14</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4459147.html?thread=220363915#cmt220363915'>Kotori's Costume Party 453</a>: value19, x24s20, vfsuit15, sanzenri13, tachikaze13, aerokinesis03, alternate01, raised11, a-set05, imanity15</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2069666.html?thread=44365986#cmt44365986'>friednice</a>: tenbillion07, 1stchild15, eyes09, germanium02, seele10, talwar05 for fragum20, nyctereutes02, ochotona13, adrestia11, earthmother18, memokeeper10</li>
     <li>lost to <a href="https://colors-tcg.dreamwidth.org/3969255.html?thread=220922855#cmt220922855">art shop</a>: 6 gray crayons</li>
     <li>gifted by <a href='https://colors-trade.dreamwidth.org/2069666.html?thread=44365986#cmt44365986'>admiral</a>: hyposelenia15, illness07</li>
