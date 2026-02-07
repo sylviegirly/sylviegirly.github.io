@@ -10,7 +10,6 @@ var pendingtrades = [
    "camilovesyou: raidraptors12, swimmer15, sig_aid",
    "SillyBlanks305: onion13, pose04",
    "moes: expectations18, glimmerlab04, kyun-kyun12, morikubos02, secretaries20, usurped12, ariatrading12, babalon08, beast07, birds10",
-   "errorysm: croceamors15, value19, jello18, sig_aid",
    "SwapStation264: warmonk01"
 ];
 
