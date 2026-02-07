@@ -60,6 +60,7 @@
 var logs = `
 <time>02/06/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4468022.html?thread=220681014#cmt220681014'>Colorseum 73-5</a>: 1 brown crayon, 1 red crayon, 1 yellow crayon, 1 grey crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4474430.html?thread=220970302#cmt220970302'>Twenty Questions 081</a>: realian19, housefire16, megaevolve10</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4467436.html?thread=220663276#cmt220663276'>Silly Blanks 304</a>: shenzhou16, strictcoach14, shopping16, deadend20, icecar06, mountaindash08, chevalier08, ratatouille17, rowdy10, darkflame08</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/4467436.html?thread=220663276#cmt220663276'>Silly Blanks 304</a>: mothers09, severe10</li>
