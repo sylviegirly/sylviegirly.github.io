@@ -60,6 +60,8 @@
 var logs = `
 <time>02/06/2026</time>
 <ul>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/4475194.html?thread=221005114#cmt221005114'>Swap Station 264</a>: warmonk01, 1 red crayon</li>
+    <li>lost to <a href="https://colors-tcg.dreamwidth.org/3969255.html?thread=221001447#cmt221001447">art shop</a>: 11 yellow crayons</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2071175.html?thread=44385927#cmt44385927'>pcrtiallystcrs</a>: pinkpearl03, bigleague03, blossom20, butlerpower09, cure18, curetwinkle03, sig_aid for vector05, factor13, tachikaze05, wingman07, wingman19, wiseking12, sig_amity</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4468022.html?thread=220681014#cmt220681014'>Colorseum 73-5</a>: 1 brown crayon, 1 red crayon, 1 yellow crayon, 1 grey crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4474430.html?thread=220970302#cmt220970302'>Twenty Questions 081</a>: realian19, housefire16, megaevolve10</li>
