@@ -60,6 +60,7 @@
 var logs = `
 <time>02/09/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4477563.html?thread=221103995#cmt221103995'>Little Spell Academia 401</a>: coffee02, burgers06, objection04, dragonscale02, burgers07, vasavi02, objection05, psychology04, objection06, objection08, burgers08</li>
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=16727#cmt16727'>netbug009</a>: sig_aid for sig_netbug</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4468831.html?thread=220783199#cmt220783199'>Colors Concentration 152</a>: cureace20, flamenpink16, solotriangle04, skyloft20, explomb16, letus20, amikke03, capable20, xenon16, md-0032g11, moongold10, ex-fiance06, mayfly13, truce14, skydress01, seed06, monks09, yao-er02, sweeten10, erasergun13, mariposa20, macanluin18, everyday03, occultism19, horse17, results02, tellme04, sorceress03, four19, kyokyo04, 1 purple crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4466146.html?thread=220576738#cmt220576738'>Lady Luck Slots 247</a>: astraea14, aresweis16, nqm11, devious07, targetpanic01, samadhi10, nevassa09, thewitch07, movie13, flamboyant01, happyengage18, dnn04, flamengreen10, foolsgold14, zebul12, tightrope06, sheep01, kabaneri01, greatchief05, relicsong05, half-vampire18, delusions13, sage06, flamboyant12, 2 green crayons</li>
