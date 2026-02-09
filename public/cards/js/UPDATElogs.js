@@ -58,8 +58,15 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/09/2026</time>
+<ul>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=16727#cmt16727'>netbug009</a>: sig_aid for sig_netbug</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4468831.html?thread=220783199#cmt220783199'>Colors Concentration 152</a>: cureace20, flamenpink16, solotriangle04, skyloft20, explomb16, letus20, amikke03, capable20, xenon16, md-0032g11, moongold10, ex-fiance06, mayfly13, truce14, skydress01, seed06, monks09, yao-er02, sweeten10, erasergun13, mariposa20, macanluin18, everyday03, occultism19, horse17, results02, tellme04, sorceress03, four19, kyokyo04, 1 purple crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4466146.html?thread=220576738#cmt220576738'>Lady Luck Slots 247</a>: astraea14, aresweis16, nqm11, devious07, targetpanic01, samadhi10, nevassa09, thewitch07, movie13, flamboyant01, happyengage18, dnn04, flamengreen10, foolsgold14, zebul12, tightrope06, sheep01, kabaneri01, greatchief05, relicsong05, half-vampire18, delusions13, sage06, flamboyant12, 2 green crayons</li>
+</ul>
 <time>02/08/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4475194.html?thread=221005114#cmt221005114'>Swap Station 264</a>: warmonk14, 1 blue crayon</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2067752.html?thread=44402472#cmt44402472'>scblakdrgon</a>: sweetvoice08, acey13, mountaindash08, burnt02, dazzle06, enchante06, enraptured08, hongyuan20, orangegrove20, oysters18, sig_aid for dragonscale01, squeak16, e-ming12, eternaleye18, spectrum17, squeak07, vector01, vector11, decepticons16, fleshlings06, sig_adelicya</li>
 </ul>
 <time>02/07/2026</time>
