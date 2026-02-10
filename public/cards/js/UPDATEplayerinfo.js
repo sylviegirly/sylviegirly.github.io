@@ -5,7 +5,11 @@
 
     ex: ["PLAYERNAME1: card01, card02", "PLAYERNAME2: card03, card04"]
 */
-var pendingtrades = ["camilovesyou: raidraptors12, swimmer15, sig_aid", "SillyBlanks305: onion13, pose04"];
+var pendingtrades = [
+   "camilovesyou: raidraptors12, swimmer15, sig_aid",
+   "SillyBlanks305: onion13, pose04",
+   "SwitchItUp286: half-vampire18, astraea14, savage03, videogame16, biovolt03, resistant06, bonfire20, classrep02"
+];
 
 /*
    HIGH PRIORITY DECKS:
