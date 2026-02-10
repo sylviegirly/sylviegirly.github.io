@@ -60,6 +60,7 @@
 var logs = `
 <time>02/10/2026</time>
 <ul>
+    <li>lost to <a href="https://colors-tcg.dreamwidth.org/4479180.html?thread=221145292#cmt221145292">Coloring Book 374</a>: 1 gray crayon</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2070628.html?thread=44378724#cmt44378724'>moes</a>: expectations18, glimmerlab04, kyun-kyun12, morikubos02, secretaries20, usurped12, ariatrading12, babalon08, beast07, birds10 for decepticons04, e-ming12, fleshlings11, omniscient03, omniscient06, omniscient16, ruoye09, squeak18, vasavi03, vector07</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4471713.html?thread=220869537#cmt220869537'>Most Wanted 208</a>: allsimples14, chains16, yanderes15, four-leaf20, carmendei19</li>
     <li>received from <a href='https://colors-tcg.eu/recycledart.php?view=log'>recycled art</a>: vector01, vector14, tachikaze06, earthmother20, elucidator16, nohr16, nohr18, noriyuki09, ogata14, zanpakuto12 </li>
