@@ -8,7 +8,8 @@
 var pendingtrades = [
    "camilovesyou: raidraptors12, swimmer15, sig_aid",
    "SillyBlanks305: onion13, pose04",
-   "SwitchItUp286: half-vampire18, astraea14, savage03, videogame16, biovolt03, resistant06, bonfire20, classrep02"
+   "SwitchItUp286: half-vampire18, astraea14, savage03, videogame16, biovolt03, resistant06, bonfire20, classrep02",
+   "citoyenne: 098810, 098812, deathscythe18, md-0032g11, unicorn03, phagocyte02, pomeranian20, rakugoka09, witchcraft07"
 ];
 
 /*
