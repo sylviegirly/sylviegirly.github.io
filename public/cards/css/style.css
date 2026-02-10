@@ -766,4 +766,8 @@ input {
         display: flex;
         gap: 20px;
     }
+
+    .toolkitinputs {
+        flex-direction: column;
+    }
 }
