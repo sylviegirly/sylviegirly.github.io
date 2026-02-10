@@ -63,6 +63,7 @@
                                 <button class="sectionlink" onclick="openTab('PileRemove')">
                                     remove cards from pile
                                 </button>
+                                <button class="sectionlink" onclick="openTab('alphabetizer')">alphabetizer</button>
                                 <button class="sectionlink" onclick="openTab('scraper')">colorstcg html scraper</button>
                             </div>
                         </nav>
@@ -159,6 +160,36 @@
                         </div>
                     </div>
 
+                    <div id="alphabetizer" class="tool" style="display: none">
+                        <h3>alphabetizer</h3>
+                        <div class="toolkit">
+                            <div class="toolkitinputs">
+                                <div class="imagetagsinput">
+                                    <div class="imagetagsinputtextareas">
+                                        <div>
+                                            <p>enter img tags or a card name list w/ commas</p>
+                                            <textarea id="alphabetnamelist"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" id="imgtagssort" name="input" value="alphabetize" />
+                                        <label for="imgtags">sort img tags</label>
+                                        <input type="radio" id="cardnamessort" name="input" value="alphabetize" />
+                                        <label for="cardnames">sort card names</label>
+                                    </div>
+
+                                    <div id="imagetagsinputbuttons">
+                                        <button onclick="alphabetize()" style="padding: 10px">process!</button>
+                                        <button onclick="reset()" style="padding: 10px">reset</button>
+                                    </div>
+                                </div>
+
+                                <div id="alphabetizeoutput"></div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div id="scraper" class="tool" style="display: none">
                         <h3>colorstcg html scraper</h3>
                         <div class="toolkit">
@@ -175,7 +206,7 @@
                                         </div>
                                     </div>
 
-                                    <div id="imagetagsinputbuttons">
+                                    <div class="imagetagsinputbuttons">
                                         <button onclick="scrapeColorsTCGData()" style="padding: 10px">process!</button>
                                         <button onclick="reset()" style="padding: 10px">reset</button>
                                     </div>

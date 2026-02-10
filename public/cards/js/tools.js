@@ -247,6 +247,107 @@ function removeCards() {
     document.getElementById("statsoutput").appendChild(statsdiv);
 }
 
+function alphabetize() {
+    var outputString = "";
+
+    // what are we sorting?
+    if (document.getElementById("imgtagssort").checked == true) {
+        document.getElementById("imagetagsoutput").innerHTML = "";
+        //
+        var enteredCardNames = document.getElementById("alphabetnamelist").value;
+        var imageTagsArray = enteredCardNames.split(".gif");
+        var enteredCardNameTags = enteredCardNames.split(">");
+
+        // get just image names
+        var cardNameToTag = {};
+        for (index = 0; index < imageTagsArray.length - 1; index++) {
+            // get card name for key
+            var firstLetter = imageTagsArray[index].lastIndexOf("/") + 1;
+            var cardName = imageTagsArray[index].substring(firstLetter, imageTagsArray[index].length);
+
+            // get original img tag for value;
+            var currentTag = enteredCardNameTags[index];
+            var imgTag = currentTag.substring(currentTag.indexOf("<", currentTag.length)) + ">";
+
+            // handle duplicates
+            if (cardName in cardNameToTag) {
+                cardNameToTag[cardName].push(imgTag);
+            } else {
+                cardNameToTag[cardName] = [imgTag];
+            }
+        }
+
+        console.log(cardNameToTag);
+
+        // sort card names
+        var cardNamesArray = Object.keys(cardNameToTag);
+        cardNamesArray.sort();
+
+        // make sorted list of tags
+        var sortedTags = [];
+        cardNamesArray.forEach((cardName) => {
+            cardNameToTag[cardName].forEach((imgTag) => {
+                sortedTags.push(imgTag.trim());
+            });
+        });
+
+        outputString = sortedTags.toString();
+
+        // make elements
+        var newlinesdiv = document.createElement("div");
+        var onelinediv = document.createElement("div");
+        var newlinesp = document.createElement("p");
+        var onelinep = document.createElement("p");
+        var imagetagoutputnewlines = document.createElement("textarea");
+        var imagetagoutputoneline = document.createElement("textarea");
+
+        newlinesp.innerHTML = "on new lines";
+        onelinep.innerHTML = "on one line";
+        imagetagoutputnewlines.setAttribute("id", "imagetagoutputnewlines");
+        imagetagoutputoneline.setAttribute("id", "imagetagoutputoneline");
+
+        imagetagoutputnewlines.value = outputString.replaceAll(",", "\r\n");
+        imagetagoutputoneline.value = outputString.replaceAll(",", "");
+
+        //display
+        newlinesdiv.appendChild(newlinesp);
+        newlinesdiv.appendChild(imagetagoutputnewlines);
+        onelinediv.appendChild(onelinep);
+        onelinediv.appendChild(imagetagoutputoneline);
+
+        document.getElementById("alphabetizeoutput").appendChild(newlinesdiv);
+        document.getElementById("alphabetizeoutput").appendChild(onelinediv);
+    } else if (document.getElementById("cardnamessort").checked == true) {
+        document.getElementById("alphabetizeoutput").innerHTML = "";
+
+        // sort
+        var enteredCardNameArray = document.getElementById("alphabetnamelist").value.replaceAll(" ", "").split(",");
+        enteredCardNameArray.sort();
+
+        // display
+        var cardNamesString = "";
+        enteredCardNameArray.forEach((imageTag) => {
+            cardNamesString += imageTag + ", ";
+        });
+        outputString = cardNamesString.substring(0, cardNamesString.length - 2);
+
+        //display
+        var div = document.createElement("div");
+        var outputp = document.createElement("p");
+        var output = document.createElement("textarea");
+
+        outputp.innerHTML = "alphabetized output all on one line";
+        output.setAttribute("id", "imagetagoutputnewlines");
+
+        output.value = outputString;
+
+        div.appendChild(outputp);
+        div.appendChild(output);
+
+        document.getElementById("alphabetizeoutput").appendChild(div);
+    }
+}
+
 async function scrapeColorsTCGData() {
     var data = await document.getElementById("htmlinput").files[0].text();
     var converter = document.createElement("div");
@@ -295,4 +396,6 @@ function reset() {
     document.getElementById("cardpile").value = "";
     document.getElementById("removethesecards").value = "";
     document.getElementById("scraperoutput").value = "";
+    document.getElementById("alphabetnamelist").value = "";
+    document.getElementById("alphabetizeoutput").value = "";
 }
