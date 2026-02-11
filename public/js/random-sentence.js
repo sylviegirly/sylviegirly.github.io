@@ -1,5 +1,10 @@
 const quotes = [
     {
+        quote: "the 100+ unfinished games in my steam library vs my 20 year old game i have played through 2387462387 times",
+        author: "buffaloballet",
+        url: "https://www.tumblr.com/buffaloballet/807046438231162880"
+    },
+    {
         quote: "just hit flow state and wrote 50 words of my essay. might scroll on my phone and write another 25 in about an hour or two. nobody is doing it like me",
         author: "dugaodna",
         url: "https://dugaodna.tumblr.com/post/802676620579291136"
