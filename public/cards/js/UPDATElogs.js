@@ -60,6 +60,10 @@
 var logs = `
 <time>02/11/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4479349.html?thread=221145717#cmt221145717'>Switch It Up 286</a>: cuarta03, sapientia18, fragment19, picket01, prinzessin06, primera19, conqueror06, flowery03</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/4479349.html?thread=221145717#cmt221145717'>Switch It Up 286</a>: half-vampire18, astraea14, savage03, videogame16, biovolt03, resistant06, bonfire20, classrep02</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2068664.html?thread=44338616#cmt44338616'>camilovesyou</a>: coldflames03, aidraptors12, swimmer15, sig_aid for lostlight07, jadedeer20, illness14, sig_cami3</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4466769.html?thread=220634193#cmt220634193'>january release</a>: coldflames03</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4479180.html?thread=221145292#cmt221145292'>Coloring Book 374</a>: staunch12, lilies05, portmafia15, greatwar07, pomeranian18, sosick19, grudge07, mangaka10, ragingstorm07, thatdarncat14, sith08, sakestore20, kazahana12, profiler18, pear04, zero-type15</li>
 </ul>
 <time>02/10/2026</time>

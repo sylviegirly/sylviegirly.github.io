@@ -6,9 +6,7 @@
     ex: ["PLAYERNAME1: card01, card02", "PLAYERNAME2: card03, card04"]
 */
 var pendingtrades = [
-   "camilovesyou: raidraptors12, swimmer15, sig_aid",
    "SillyBlanks305: onion13, pose04",
-   "SwitchItUp286: half-vampire18, astraea14, savage03, videogame16, biovolt03, resistant06, bonfire20, classrep02",
    "citoyenne: 098810, 098812, deathscythe18, md-0032g11, unicorn03, phagocyte02, pomeranian20, rakugoka09, witchcraft07"
 ];
 
@@ -34,7 +32,7 @@ var pendingtrades = [
 var highprioritydecks =
    "hyposelenia, blacksalt, vasavi, vanarana, burgers, psychology, objection, pal, coffee, cuarta, townhall, roost, fragment, dragonscale"; // "deckone, decktwo, deckthree..."
 var allisodecks =
-   "goldweaver, emergency, zangetsu, squeak, songbird, selfless, animula, fleshlings, husbandos, autobots, decepticons, pal, coffee, townhall, roost, fragment, dragonscale, e-ming, ruoye, logic, objection, nirvasyl, omniscient, vasavi, psychology, burgers, vanarana, cuarta, destron, convoy, vector, warmaiden, pillowfort, sapientia, holypriest, spectrum, matoi, burnish, mysterious, hyposelenia, eternaleye, blacksalt, ashcat, easilylost, awoo, nasod"; // "deckone, decktwo, deckthree..."
+   "goldweaver, squeak, selfless, animula, fleshlings, husbandos, autobots, decepticons, pal, coffee, townhall, roost, fragment, dragonscale, e-ming, ruoye, logic, objection, nirvasyl, omniscient, vasavi, psychology, burgers, vanarana, cuarta, destron, convoy, vector, warmaiden, pillowfort, sapientia, holypriest, spectrum, matoi, burnish, mysterious, hyposelenia, eternaleye, blacksalt, ashcat, easilylost, awoo, nasod"; // "deckone, decktwo, deckthree..."
 var singlecards = "yaoi02"; // "card01, card02, card03..."
 
 /*
