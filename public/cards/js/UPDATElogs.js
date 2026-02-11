@@ -58,8 +58,13 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/11/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4479180.html?thread=221145292#cmt221145292'>Coloring Book 374</a>: staunch12, lilies05, portmafia15, greatwar07, pomeranian18, sosick19, grudge07, mangaka10, ragingstorm07, thatdarncat14, sith08, sakestore20, kazahana12, profiler18, pear04, zero-type15</li>
+</ul>
 <time>02/10/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4445938.html?thread=219818482#cmt219818482'>Mika's Quilting 204</a>: president08, search10, catastrophe11, pikarigaoka07, thermopylae12, mistress13, seaeagle03, eleventh11, clarines16, betrothed16, deadoralive17, firetruck02</li>
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=67159#cmt67159'>overmore</a>: chains16 for awoo07</li>
     <li>lost to <a href="https://colors-tcg.dreamwidth.org/4479180.html?thread=221145292#cmt221145292">Coloring Book 374</a>: 1 gray crayon</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2070628.html?thread=44378724#cmt44378724'>moes</a>: expectations18, glimmerlab04, kyun-kyun12, morikubos02, secretaries20, usurped12, ariatrading12, babalon08, beast07, birds10 for decepticons04, e-ming12, fleshlings11, omniscient03, omniscient06, omniscient16, ruoye09, squeak18, vasavi03, vector07</li>
