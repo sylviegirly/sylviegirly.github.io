@@ -60,6 +60,7 @@
 var logs = `
 <time>02/11/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4466464.html?thread=220589856#cmt220589856'>Pick A Color 307</a>: glamsight18, neatfreak12, nacchan19, nstackle19, morii17, champions09, elvensniper06, boyslove13, majesty06, lycanthe07, erudite11, fantan20, chakra04, apfel13, ducttape03, snapshot18, hades18, solinvictus17, masquerades06, churchgrim19, demonlord06, shinen12, clawmyheart01, akasha03, renegade10</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2072400.html?thread=44424272#cmt44424272'>citoyenne</a>: 098810, 098812, deathscythe18, md-0032g11, unicorn03, phagocyte02, pomeranian20, rakugoka09, witchcraft07 for hyposelenia12, brynhilde09, benishidare18, phones10, sohcahtoa03, deltoro07, hisagomaru01, sweetscheme01, jamsword15</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4479349.html?thread=221145717#cmt221145717'>Switch It Up 286</a>: cuarta03, sapientia18, fragment19, picket01, prinzessin06, primera19, conqueror06, flowery03</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/4479349.html?thread=221145717#cmt221145717'>Switch It Up 286</a>: half-vampire18, astraea14, savage03, videogame16, biovolt03, resistant06, bonfire20, classrep02</li>
