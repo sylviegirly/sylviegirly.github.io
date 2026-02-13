@@ -60,6 +60,7 @@
 var logs = `
 <time>02/11/2026</time>
 <ul>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2072702.html?thread=44444030#cmt44444030'>wachamachas</a>: lasciate04 for paradisaea03</li>
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=69207#cmt69207'>tempoet</a>: sakestore20, four-leaf20, dietmember14, four19, mangaka10, yanderes15 for appointed01, yo-kai01, redknights02, empathizes05, brawn19, planetfarer16</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4466464.html?thread=220589856#cmt220589856'>Pick A Color 307</a>: glamsight18, neatfreak12, nacchan19, nstackle19, morii17, champions09, elvensniper06, boyslove13, majesty06, lycanthe07, erudite11, fantan20, chakra04, apfel13, ducttape03, snapshot18, hades18, solinvictus17, masquerades06, churchgrim19, demonlord06, shinen12, clawmyheart01, akasha03, renegade10</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2072400.html?thread=44424272#cmt44424272'>citoyenne</a>: 098810, 098812, deathscythe18, md-0032g11, unicorn03, phagocyte02, pomeranian20, rakugoka09, witchcraft07 for hyposelenia12, brynhilde09, benishidare18, phones10, sohcahtoa03, deltoro07, hisagomaru01, sweetscheme01, jamsword15</li>
