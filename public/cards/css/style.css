@@ -672,6 +672,13 @@ article > nav {
     flex: 100%;
 }
 
+#masteriescontainer,
+.pendingsection > div,
+#signaturescontainer {
+    display: flex;
+    gap: 5px;
+}
+
 /* -------------------------------------------------------- */
 /* LOGS */
 /* -------------------------------------------------------- */
