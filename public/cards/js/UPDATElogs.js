@@ -60,6 +60,9 @@
 var logs = `
 <time>02/15/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=221383185#cmt221383185'>leveling to tangerine</a>: burgers13, firstlove14, snakes18, blackwidow04, 1 blue crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4472831.html?thread=220886527#cmt220886527'>Lady Luck Slots 248</a>: twintails06, restoration09, mockingbirds14, knighted16, laguz04, paranoia02, maleidols12, riders09, horror02, onod13, reis08, cutlass05, 1 brown crayon, 1 gray crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4465655.html?thread=220576503#cmt220576503'>Coloring Book 373</a>: 1 orange crayon, 1 yellow crayon, 1 blue crayon, 1 purple crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4484087.html?thread=221382391#cmt221382391'>Little Spell Academia 402</a>: pal02, psychology05, vasavi06, objection10, cuarta02, vasavi09, burgers09, fragment02, vasavi10, burgers11, objection11, burgers12, objection12, vasavi11</li>
 </ul>
 <time>02/14/2026</time>
