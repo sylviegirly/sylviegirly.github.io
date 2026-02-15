@@ -58,6 +58,11 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/14/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4473846.html?thread=220971510#cmt220971510'>Silly Blanks 305</a>: frozen16, yanzhuo01, posh15, shadowflash18, ember15, legendary16, cheer02, tidalelegy01, curefinale07</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/4473846.html?thread=220971510#cmt220971510'>Silly Blanks 305</a>: onion13, pose04</li>
+</ul>
 <time>02/13/2026</time>
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4474862.html?thread=221001198#cmt221001198'>Colorseum 74-1</a>: 1 gray crayon, 1 yellow crayon, 1 purple crayon, 1 orange crayon</li>
