@@ -58,6 +58,15 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/17/2026</time>
+<ul>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=76119#cmt76119'>tempoet</a>: proposal04 for syruptanker03</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=221438715#cmt221438715'>mastering burgers</a>: objection13, string407, japanese20, 1 red crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=221398759#cmt221398759'>Art Shop</a>: burgers14, burgers15, burgers16, burgers17, burgers18, burgers19</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=221398759#cmt221398759'>Art Shop</a>: 6 purple crayons</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4478491.html?thread=221144347#cmt221144347'>Most Wanted 209</a>: lasciate20, eternaleye01, blacksalt15, proposal04, whiteraven15</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4478339.html?thread=221144707#cmt221144707'>Pokeradar 464</a>: grapejuice06, powerpuff12, kingkazma20, nightfury08, wish01, bararaq18, curbstomp09, ribbonchan19, virage14, worstdriver16</li>
+</ul>
 <time>02/15/2026</time>
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=221383185#cmt221383185'>leveling to tangerine</a>: burgers13, firstlove14, snakes18, blackwidow04, 1 blue crayon</li>
