@@ -58,6 +58,16 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/21/2026</time>
+<ul>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=87639#cmt87639'>16thpi</a>: a-set05, japanese20 for blacksalt11, hyposelenia18</li>
+</ul>
+<time>02/20/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4481288.html?thread=221304072#cmt221304072'>Colorseum 74-2</a>: 2 green crayons, 2 purple crayons</li>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=85847#cmt85847'>tempoet</a>: vanarana03</li>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=85591#cmt85591'>pcrtiallystcrs</a>: nasod14</li>
+</ul>
 <time>02/19/2026</time>
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4473089.html?thread=220896257#cmt220896257'>Booster Bundle 223</a>: itsamii03, confidants16, ito11, ehn-na13, clow05, appmon17, hoenn04, ecchi14</li>
@@ -65,7 +75,7 @@ var logs = `
 </ul>
 <time>02/17/2026</time>
 <ul>
-    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=76119#cmt76119'>sonetto</a>: pink11, powerpuff12, trickmaster03 for blacksalt08, decepticons07, destron11</li>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=77655#cmt77655'>sonetto</a>: pink11, powerpuff12, trickmaster03 for blacksalt08, decepticons07, destron11</li>
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=76119#cmt76119'>tempoet</a>: proposal04 for syruptanker03</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=221438715#cmt221438715'>mastering burgers</a>: objection13, string407, japanese20, 1 red crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=221398759#cmt221398759'>Art Shop</a>: burgers14, burgers15, burgers16, burgers17, burgers18, burgers19</li>
