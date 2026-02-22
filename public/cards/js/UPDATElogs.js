@@ -58,6 +58,12 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/22/2026</time>
+<ul>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=89943#cmt89943'>16thpi</a>: pal20</li>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=90711#cmt90711'>mezzin</a>: vasavi14</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4479597.html?thread=221144941#cmt221144941'>Lady Luck Slots 249</a>: planetoid10, braingum10, greenlake01, please01, hamelin04, leetspeak16, steward06, worldchain14, genji17, economical14, wakanda08, smoking11, 1 purple crayon</li>
+</ul>
 <time>02/21/2026</time>
 <ul>
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=87639#cmt87639'>16thpi</a>: a-set05, japanese20 for blacksalt11, hyposelenia18</li>
