@@ -60,6 +60,11 @@
 var logs = `
 <time>02/22/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=221677307#cmt221677307'>mastering vasavi and objection</a>: psychology06, psychology07, chernabog19, artista14, attendant02, al-flame13, 1 green crayon, 1 blue crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=221650151#cmt221650151'>art shop</a>: vasavi15, vasavi16, vasavi19, vasavi20, objection14, objection16, objection18, objection19, objection20, sig_aid, sig_aid, sig_aid, sig_aid, lapistier05, triomphe08, rising10, capitulation14, butterfly02, kazu-kun10, foolsgold09, redgaze10, demonhand18, maya01, 2 orange crayons, 1 yellow crayon, 1 green crayon, 1 gray crayon</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=221650151#cmt221650151'>art shop</a>: 4 red crayons, 6 blue crayons, 4 green crayons, 5 sketchpads</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4480295.html?thread=221263911#cmt221263911'>Go Fish! 503</a>: mirakurun03, desire10, shroomie15</li>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=93015#cmt93015'>overthedimension</a>: vasavi15</li>
     <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=89943#cmt89943'>16thpi</a>: pal20</li>
     <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=90711#cmt90711'>mezzin</a>: vasavi14</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4479597.html?thread=221144941#cmt221144941'>Lady Luck Slots 249</a>: planetoid10, braingum10, greenlake01, please01, hamelin04, leetspeak16, steward06, worldchain14, genji17, economical14, wakanda08, smoking11, 1 purple crayon</li>
