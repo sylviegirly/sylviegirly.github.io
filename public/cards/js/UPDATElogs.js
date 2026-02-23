@@ -58,6 +58,10 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/23/2026</time>
+<ul>
+    <li>traded to <a href='https://chocopeppermint.dreamwidth.org/281.html?thread=793#cmt793'>overmore</a>: foolsgold09 for wildkat13</li>
+</ul>
 <time>02/22/2026</time>
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=221677307#cmt221677307'>mastering vasavi and objection</a>: psychology06, psychology07, chernabog19, artista14, attendant02, al-flame13, 1 green crayon, 1 blue crayon</li>
