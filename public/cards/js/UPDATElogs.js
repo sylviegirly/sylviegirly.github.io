@@ -60,6 +60,7 @@
 var logs = `
 <time>02/23/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4485152.html?thread=221439776#cmt221439776'>Most Wanted 210</a>: ehrgeiz18, vanarana15, theoblivion05, jello13, pink12, pink03, mustari13, finehound12, laprimera16, colleague15</li>
     <li>traded to <a href='https://chocopeppermint.dreamwidth.org/281.html?thread=793#cmt793'>overmore</a>: foolsgold09 for wildkat13</li>
 </ul>
 <time>02/22/2026</time>
