@@ -330,8 +330,6 @@ function fillTotalCards() {
         levelString += "rainbow " + modifier + " (" + totalcards + " cards)";
     } else if (totalcards > 14101) {
         levelString += "himalayan (" + totalcards + " cards)";
-    } else if (totalcards > 14101) {
-        levelString += "himalayan (" + totalcards + " cards)";
     } else if (totalcards > 13801) {
         levelString += "puma (" + totalcards + " cards)";
     } else if (totalcards > 13501) {
