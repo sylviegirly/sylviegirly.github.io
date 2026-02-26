@@ -60,6 +60,7 @@
 var logs = `
 <time>02/26/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4470362.html?thread=220800602#cmt220800602'>Shadow Watching 387</a>: survivor18, inseparable14, dotharl14, maelstorm10, glass18, ceo14, void02, connect06, verbose10, dragunov19, bepsi10, hiruko17, akabari12, blackhole05, adeptrogue11, topknot01, battleaxe02, kingswand08, stomachscar08, zodiac09</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4483609.html?thread=221382937#cmt221382937'>No Context Theater 457</a>: riverprawn12, halting01, whitespace09, willoflight06, kikujumonji03</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4477701.html?thread=221103365#cmt221103365'>No Context Theater 456</a>: howto19, godeye06, fullburst18, sachie15, conch10</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4470003.html?thread=220801011#cmt220801011'>No Context Theater 455</a>: housekeeping18, racket10, sith13, photoalbum08, prosthetics03</li>
