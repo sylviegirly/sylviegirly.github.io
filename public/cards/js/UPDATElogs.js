@@ -58,6 +58,14 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/25/2026</time>
+<ul>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=110679#cmt110679'>overmore</a>: selfless03</li>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=113751#cmt113751'>corafish</a>: hyposelenia13</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/4487314.html?thread=221587090#cmt221587090'>vday large box</a>: ecchi14, slimes17, leo18, morals04, myfairlady17, jiant14, shenanigans18, detachment11, briarvalley09, infinite04</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4480082.html?thread=221165906#cmt221165906'>Pick a Color 308</a>: 2 red crayons, 2 orange crayons, 2 yellow crayons, 2 green crayons, 2 blue crayons, 2 purple crayons, 2 brown crayons, 2 gray crayons</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4479830.html?thread=221166678#cmt221166678'>Memory Lane 018</a>: jigenhaoh02, isenergy16, tonedeaf16, haircut14, neighbor02, paternal18, untouchable15, dull07, effective14, mealkit13, chemistry05, ikemen02, cinema09, thehorse14, clotting03, skyloft03, ecchi17, closure01, ancestor20, feral07</li>
+</ul>
 <time>02/23/2026</time>
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4485152.html?thread=221439776#cmt221439776'>Most Wanted 210</a>: ehrgeiz18, vanarana15, theoblivion05, jello13, pink12, pink03, mustari13, finehound12, laprimera16, colleague15</li>
