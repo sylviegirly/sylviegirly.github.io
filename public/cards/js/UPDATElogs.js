@@ -60,6 +60,12 @@
 var logs = `
 <time>02/26/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4449577.html?thread=219951657#cmt219951657'>Deck Lover 503</a>: fireelement09, prettycure15, ishidaa07, arrows11, lizzes10, clamp03</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4457075.html?thread=220280179#cmt220280179'>Deck Lover 504</a>: americans04, grandpas20, morikubos10, sakuras11, greenvale05, millenia16</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4463360.html?thread=220531712#cmt220531712'>Deck Lover 505</a>: lightclub07, juggernaut11, trinisette10, badbreath03, mechonis19, europeans06</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4470572.html?thread=220800300#cmt220800300'>Deck Lover 506</a>: mementos18, kings09, seitokai01, helper03, darkaltar01, koryuji04</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4477024.html?thread=221146208#cmt221146208'>Deck Lover 507</a>: kabasaki08, corecrystal16, shugo10, kimurar12, trinisette14, rollout15</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4484603.html?thread=221382651#cmt221382651'>Deck Lover 508</a>: grann77620, arkcity08, ogata13, glenbrook09, maous10, stmichaels14</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=221841169#cmt221841169'>leveling to lemon</a>: psychology09, eternity10, cigarette12, doctors20, 1 red crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4449873.html?thread=219951441#cmt219951441'>Shadow Watching 384</a>: doubleshot11, fired-up20, usagi14, sakura12, sunsword09, six-function10, hashihime02, earphone16, razorwind16, astronomer06, mysticeyes17, memorybomb15, shutter06, potent09, shujin16, immortal01, e01605, laverre16, moonflute18, cobbleston01</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4456817.html?thread=220280433#cmt220280433'>Shadow Watching 385</a>: resonator17, globetrotter15, zurek14, futurestar07, bentos20, teases08, cantus09, k9-ball13, geisha20, bonneter02, pioneers08, charite13, qishanwen01, pendragon07, promqueen20, wanderingsea09, medbag14, rainbowroad12, charisma16, dhill14</li>
