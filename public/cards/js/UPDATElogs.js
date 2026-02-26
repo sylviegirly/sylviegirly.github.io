@@ -58,6 +58,14 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>02/26/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4483609.html?thread=221382937#cmt221382937'>No Context Theater 457</a>: riverprawn12, halting01, whitespace09, willoflight06, kikujumonji03</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4477701.html?thread=221103365#cmt221103365'>No Context Theater 456</a>: howto19, godeye06, fullburst18, sachie15, conch10</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4470003.html?thread=220801011#cmt220801011'>No Context Theater 455</a>: housekeeping18, racket10, sith13, photoalbum08, prosthetics03</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4464358.html?thread=220529894#cmt220529894'>No Context Theater 454</a>: orangejoe09, ironskin10, jewelspell04, al-kamar15, eternaleye01</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4477237.html?thread=221145909#cmt221145909'>Shadow Watching 388</a>: archadia17, rockbison13, rock-bottom17, younggirls06, isharaa11, mokkun18, rubeum06, gabriel20, cloak17, zetsugi10, similar06, imperatore01, gaomi13, followed07, swordofodin13, thegold16, cruelty05, heartmask04, attendant01, roulette15</li>
+</ul>
 <time>02/25/2026</time>
 <ul>
     <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=110679#cmt110679'>overmore</a>: selfless03</li>
