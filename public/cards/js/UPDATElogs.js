@@ -60,6 +60,10 @@
 var logs = `
 <time>02/26/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=221841169#cmt221841169'>leveling to lemon</a>: psychology09, eternity10, cigarette12, doctors20, 1 red crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4449873.html?thread=219951441#cmt219951441'>Shadow Watching 384</a>: doubleshot11, fired-up20, usagi14, sakura12, sunsword09, six-function10, hashihime02, earphone16, razorwind16, astronomer06, mysticeyes17, memorybomb15, shutter06, potent09, shujin16, immortal01, e01605, laverre16, moonflute18, cobbleston01</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4456817.html?thread=220280433#cmt220280433'>Shadow Watching 385</a>: resonator17, globetrotter15, zurek14, futurestar07, bentos20, teases08, cantus09, k9-ball13, geisha20, bonneter02, pioneers08, charite13, qishanwen01, pendragon07, promqueen20, wanderingsea09, medbag14, rainbowroad12, charisma16, dhill14</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4463821.html?thread=220531661#cmt220531661'>Shadow Watching 386</a>: coarse13, bling06, helping05, yaoi14, seafriend10, gerbera16, french06, butt01, malynera15, komainu05, compassion16, demoneyes19, housemouse07, outlook04, gloucester09, 100ka19, thehollow03, larceny06, heartbreak20, questions01</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4470362.html?thread=220800602#cmt220800602'>Shadow Watching 387</a>: survivor18, inseparable14, dotharl14, maelstorm10, glass18, ceo14, void02, connect06, verbose10, dragunov19, bepsi10, hiruko17, akabari12, blackhole05, adeptrogue11, topknot01, battleaxe02, kingswand08, stomachscar08, zodiac09</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4483609.html?thread=221382937#cmt221382937'>No Context Theater 457</a>: riverprawn12, halting01, whitespace09, willoflight06, kikujumonji03</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4477701.html?thread=221103365#cmt221103365'>No Context Theater 456</a>: howto19, godeye06, fullburst18, sachie15, conch10</li>
