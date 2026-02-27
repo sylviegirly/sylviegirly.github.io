@@ -207,7 +207,7 @@ var logs = `
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4459486.html?thread=220363742#cmt220363742'>Booster Bundle 222</a>: tealeaves11, galearc15, vegitamura10, girle02, gone05, videogame16, somnians03, resonance14</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4459147.html?thread=220363915#cmt220363915'>Kotori's Costume Party 453</a>: value19, x24s20, vfsuit15, sanzenri13, tachikaze13, aerokinesis03, alternate01, raised11, a-set05, imanity15</li>
-    <li>traded to <a href='https://colors-trade.dreamwidth.org/2069666.html?thread=44365986#cmt44365986'>friednice</a>: tenbillion07, 1stchild15, eyes09, germanium02, seele10, talwar05 for fragum20, nyctereutes02, ochotona13, adrestia11, earthmother18, memokeeper10</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2070366.html?thread=44374366#cmt44374366'>friednice</a>: tenbillion07, 1stchild15, eyes09, germanium02, seele10, talwar05 for fragum20, nyctereutes02, ochotona13, adrestia11, earthmother18, memokeeper10</li>
     <li>lost to <a href="https://colors-tcg.dreamwidth.org/3969255.html?thread=220922855#cmt220922855">art shop</a>: 6 gray crayons</li>
     <li>gifted by <a href='https://colors-trade.dreamwidth.org/2069666.html?thread=44365986#cmt44365986'>admiral</a>: hyposelenia15, illness07</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2069666.html?thread=44365986#cmt44365986'>admiral</a>: oldersister09, peacemaker09, shangrila20, troubleshoot13, homo15, charles12, ofuda16, sanctifex15, sig_aid for warmonk01, warmonk13, warmonk15, warmonk19, pal01, objection09, vasavi04, vasavi05, sig_lex</li>
