@@ -60,6 +60,11 @@
 var logs = `
 <time>02/26/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4449520.html?thread=219952112#cmt219952112'>Scramble! 241</a>: flower19, leblanc17, venusknights12, talwar19, one-winged02, potions04, married20, lethaldesign14, al-rosary07, glassbead09, 1 orange crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4457271.html?thread=220279863#cmt220279863'>Scramble! 242</a>: hence02, starfall11, rumormill09, confidence14, hollywood20, chain03, ares15, impassioned02, windwitch15, perky10, 1 red crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4463335.html?thread=220532199#cmt220532199'>Scramble! 243</a>: oboro20, revengeplan10, glider04, steelclaws05, poseidon02, thiefking09, coils14, devours07, muscular19, impatience08, 1 brown crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4470845.html?thread=220800061#cmt220800061'>Scramble! 244</a>: birdtheatre16, ploys16, infantile04, imitate03, cancer14, witchscastle05, sacraments15, banshee12, tyranny05, merlinite01, 1 red crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4476833.html?thread=221146529#cmt221146529'>Scramble! 245</a>: yummy01, corncity08, rubber14, whatwhat01, attached02, cuter02, pullcord16, hokage06, biwa15, misguided11, 1 orange crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4449577.html?thread=219951657#cmt219951657'>Deck Lover 503</a>: fireelement09, prettycure15, ishidaa07, arrows11, lizzes10, clamp03</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4457075.html?thread=220280179#cmt220280179'>Deck Lover 504</a>: americans04, grandpas20, morikubos10, sakuras11, greenvale05, millenia16</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4463360.html?thread=220531712#cmt220531712'>Deck Lover 505</a>: lightclub07, juggernaut11, trinisette10, badbreath03, mechonis19, europeans06</li>
