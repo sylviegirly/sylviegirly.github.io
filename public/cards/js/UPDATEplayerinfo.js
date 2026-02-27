@@ -29,7 +29,7 @@ var pendingtrades = [];
 var highprioritydecks =
    "blacksalt, coffee, cuarta, dragonscale, fragment, hyposelenia, pal, psychology, roost, townhall, vanarana"; // "deckone, decktwo, deckthree..."
 var allisodecks =
-   "easilylost, eun, crowknights, goldweaver, squeak, selfless, animula, fleshlings, husbandos, autobots, decepticons, pal, coffee, townhall, roost, fragment, dragonscale, e-ming, ruoye, logic, nirvasyl, omniscient, psychology, vanarana, cuarta, destron, convoy, vector, warmaiden, pillowfort, sapientia, holypriest, spectrum, matoi, burnish, mysterious, hyposelenia, eternaleye, blacksalt, ashcat, easilylost, awoo, nasod"; // "deckone, decktwo, deckthree..."
+   "tower, easilylost, eun, crowknights, goldweaver, squeak, selfless, animula, fleshlings, husbandos, autobots, decepticons, pal, coffee, townhall, roost, fragment, dragonscale, e-ming, ruoye, logic, nirvasyl, omniscient, psychology, vanarana, cuarta, destron, convoy, vector, warmaiden, pillowfort, sapientia, holypriest, spectrum, matoi, burnish, mysterious, hyposelenia, eternaleye, blacksalt, ashcat, easilylost, awoo, nasod"; // "deckone, decktwo, deckthree..."
 var singlecards = "yaoi02"; // "card01, card02, card03..."
 
 /*
