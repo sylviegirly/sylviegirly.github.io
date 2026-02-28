@@ -60,6 +60,8 @@
 var logs = `
 <time>02/28/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4496651.html?thread=221972491#cmt221972491'>feburary release</a>: equaalba01, dreadlord01, chiliarch01, truename01, restored01, silvertree01, waifei01, sig_aid, eun01, eun02, nasod01</li>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=121943#cmt121943'>sonetto</a>: hyposelenia19</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=221936123#cmt221936123'>mastering psychology and finishing palette #1</a>: hyposelenia14, ko03, desudayo13, bird13, annoying10, droids13, osha06, 1 red crayon, 1 orange crayon, 1 yellow crayon, 2 gray crayons</li>
 </ul>
 <time>02/27/2026</time>
