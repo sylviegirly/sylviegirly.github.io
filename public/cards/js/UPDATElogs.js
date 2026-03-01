@@ -60,6 +60,7 @@
 var logs = `
 <time>03/01/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4498547.html?thread=222040691#cmt222040691'>Little Spell Academia 404</a>: holypriest06, animula02, cuarta04, squeak01, holypriest07, holypriest08, cuarta08, squeak02, dreadlord04, cuarta09, holypriest09, animula03, dragonscale04</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=222034919#cmt222034919'>art shop</a>: 5 green crayons, 2 purple crayons, 1 sketchpad</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=222034449#cmt222034449'>leveling to lime</a>: hyposelenia16, appetite17, idolplanet18, housepet01, 1 green crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4486331.html?thread=221439675#cmt221439675'>Lady Luck Slots 250</a>: denying13, miyama07, maella20, 1619418, pariah02, risingsun04, 6thchairman09, archenemy14, synesthesia08, inkblast20, glimmerlab04, 58yearsold19, onarashinken15, ideal15, more07, akademeia05, sonicboom02, percussion02, memory12, burly11, flamenblue14, zweihander05, aisen13, ablesisters10, neverfails02, pet06, fivedays16, identities04, akabari19, nightfury03, western02, shattertide18, prizemaster06, fromuruk10, bikaku05, unlove01, wanted01, kaijugirl13, matriarch10, moros01, shokuran15, rcplane13, nude15, identical11, vanguard02, zackpedia08, terrors03, morph11, 3 green crayons, 3 gray crayons</li>
