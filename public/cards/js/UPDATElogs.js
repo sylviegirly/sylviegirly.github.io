@@ -60,6 +60,9 @@
 var logs = `
 <time>02/28/2026</time>
 <ul>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=126295#cmt126295'>beato</a>: squeak09</li>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=126039#cmt126039'>aroseofmay</a>: animula01</li>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=126039#cmt126039'>aroseofmay</a>: al-kamar15, chakra04, ehn-na13, lemuria03, mugendai07, racket10, rati11, stomachscar08, thirdseat03 for eun17, destron04, eternaleye16, fleshlings15, flowery11, primera17, tercera19, wildkat04, wildkat18</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2073307.html?thread=44485595#cmt44485595'>overmore</a>: thehermit08, indexproxy01 for dreadlord02, chiliarch02</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4496651.html?thread=221972491#cmt221972491'>feburary release</a>: thehermit08, indexproxy01</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4496651.html?thread=221972491#cmt221972491'>feburary release</a>: equaalba01, dreadlord01, chiliarch01, truename01, restored01, silvertree01, waifei01, sig_aid, eun01, eun02, nasod01</li>
