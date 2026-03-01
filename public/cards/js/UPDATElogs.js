@@ -58,6 +58,15 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>03/01/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=222034449#cmt222034449'>leveling to lime</a>: hyposelenia16, appetite17, idolplanet18, housepet01, 1 green crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4486331.html?thread=221439675#cmt221439675'>Lady Luck Slots 250</a>: denying13, miyama07, maella20, 1619418, pariah02, risingsun04, 6thchairman09, archenemy14, synesthesia08, inkblast20, glimmerlab04, 58yearsold19, onarashinken15, ideal15, more07, akademeia05, sonicboom02, percussion02, memory12, burly11, flamenblue14, zweihander05, aisen13, ablesisters10, neverfails02, pet06, fivedays16, identities04, akabari19, nightfury03, western02, shattertide18, prizemaster06, fromuruk10, bikaku05, unlove01, wanted01, kaijugirl13, matriarch10, moros01, shokuran15, rcplane13, nude15, identical11, vanguard02, zackpedia08, terrors03, morph11, 3 green crayons, 3 gray crayons</li>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=128087#cmt128087'>overmore</a>: portmafia15, redgaze10 for autobots14, fleshlings08</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2073649.html?thread=44487729#cmt44487729'>jelliebean</a>: yevon05, ehrgeiz18, finehound12 for dreadlord03, cuarta06, cuarta07</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4496651.html?thread=221972491#cmt221972491'>feburary release</a>: yevon05</li>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=127063#cmt127063'>tempoet</a>: sachie15, gone05, devours07, lapistier05, maleidols12, rubber14 for destron20, paradisaea02, tercera14, manderville15, lucoa19, grayscale08</li>
+</ul>
 <time>02/28/2026</time>
 <ul>
     <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=126295#cmt126295'>beato</a>: squeak09</li>

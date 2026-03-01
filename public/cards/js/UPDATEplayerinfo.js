@@ -5,7 +5,7 @@
 
     ex: ["PLAYERNAME1: card01, card02", "PLAYERNAME2: card03, card04"]
 */
-var pendingtrades = ["swapstation267: eternaleye01, eternaleye01", "jelliebean: ehrgeiz18, finehound12"];
+var pendingtrades = ["swapstation267: eternaleye01, eternaleye01"];
 
 /*
    HIGH PRIORITY DECKS:
@@ -29,7 +29,7 @@ var pendingtrades = ["swapstation267: eternaleye01, eternaleye01", "jelliebean: 
 var highprioritydecks =
    "animula, blacksalt, chiliarch, coffee, cuarta, dragonscale, dreadlord, equaalba, eun, fragment, holypriest, hyposelenia, nasod, omniscient, pal, roost, squeak, townhall, truename, vanarana"; // "deckone, decktwo, deckthree..."
 var allisodecks =
-   "waifei, silvertree, restored, truename, chiliarch, dreadlord, equaalba, flowery, educate, wildkat, primera, thewary, conqueror, viatrix, tablesalt, tercera, paradisaea, tower, easilylost, eun, crowknights, goldweaver, squeak, selfless, animula, fleshlings, husbandos, autobots, decepticons, pal, coffee, townhall, roost, fragment, dragonscale, e-ming, ruoye, logic, nirvasyl, omniscient, psychology, vanarana, cuarta, destron, convoy, vector, warmaiden, pillowfort, sapientia, holypriest, spectrum, matoi, burnish, mysterious, hyposelenia, eternaleye, blacksalt, ashcat, easilylost, awoo, nasod"; // "deckone, decktwo, deckthree..."
+   "nightfury, dotharl, waifei, silvertree, restored, truename, chiliarch, dreadlord, equaalba, flowery, educate, wildkat, primera, thewary, conqueror, viatrix, tablesalt, tercera, paradisaea, tower, easilylost, eun, crowknights, goldweaver, squeak, selfless, animula, fleshlings, husbandos, autobots, decepticons, pal, coffee, townhall, roost, fragment, dragonscale, e-ming, ruoye, logic, nirvasyl, omniscient, vanarana, cuarta, destron, convoy, vector, warmaiden, pillowfort, sapientia, holypriest, spectrum, matoi, burnish, mysterious, hyposelenia, eternaleye, blacksalt, ashcat, easilylost, awoo, nasod"; // "deckone, decktwo, deckthree..."
 var singlecards = "yaoi02"; // "card01, card02, card03..."
 
 /*
