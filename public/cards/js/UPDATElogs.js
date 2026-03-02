@@ -58,8 +58,18 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>03/02/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=222110203#cmt222110203'>mastering hyposelenia</a>: cuarta10, mastermind01, lefthand19, 1 green crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/3355031.html?thread=220647831#cmt220647831'>donating dreadlord and chiliarch</a>: earthgrudge08, heropon06, geidai03, dknight04, supporter08, snowfall08, 1 red crayon, 1 blue crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/3355031.html?thread=220648855#cmt220648855'>donating truename</a>: latent10, kisei07, southtown08, 1 gray crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=222034919#cmt222034919'>art shop</a>: hyposelenia17, hyposelenia20, holypriest01, holypriest02, holypriest03, holypriest04, holypriest05, ruckus12, shiratorizawa04, 1 brown crayon</li>
+</ul>
 <time>03/01/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4496058.html?thread=221936570#cmt221936570'>Swap Station 267</a>: eternaleye08, eternaleye15</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/4496058.html?thread=221936570#cmt221936570'>Swap Station 267</a>: eternaleye01, eternaleye01</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2074102.html?thread=44493046#cmt44493046'>scblakdrgon</a>: flamboyant01, greatchief05, greenlake01 for deliverer11, autobots08, awoo16</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4498547.html?thread=222040691#cmt222040691'>Little Spell Academia 404</a>: holypriest06, animula02, cuarta04, squeak01, holypriest07, holypriest08, cuarta08, squeak02, dreadlord04, cuarta09, holypriest09, animula03, dragonscale04</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/3969255.html?thread=222034919#cmt222034919'>art shop</a>: 5 green crayons, 2 purple crayons, 1 sketchpad</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=222034449#cmt222034449'>leveling to lime</a>: hyposelenia16, appetite17, idolplanet18, housepet01, 1 green crayon</li>
