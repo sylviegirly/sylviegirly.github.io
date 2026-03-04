@@ -58,6 +58,12 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>03/04/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4493260.html?thread=222141388#cmt222141388'>Coloring Book 375</a>: shepherd02, busty05, wet02, therapist17, biracial02, natsus03, cspd06, starwolf03, blueninja01, applemoon06, blueninja10, thehermit07, nomotivation20, fashionblog13, trickyfox16, bullseye16</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4493443.html?thread=222141571#cmt222141571'>Switch It Up 287</a>: nasod12, thewary09, dtr05, ascian14</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/4493443.html?thread=222141571#cmt222141571'>Switch It Up 287</a>: gouki10, horse17, erasergun13, 58yearsold19</li>
+</ul>
 <time>03/02/2026</time>
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=222110203#cmt222110203'>mastering hyposelenia</a>: cuarta10, mastermind01, lefthand19, 1 green crayon</li>
