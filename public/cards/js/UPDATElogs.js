@@ -60,6 +60,8 @@
 var logs = `
 <time>03/04/2026</time>
 <ul>
+    <li>gifted by <a href='https://colors-trade.dreamwidth.org/2074969.html?thread=44506201#cmt44506201'>moes</a>: omniscient02</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2074969.html?thread=44506201#cmt44506201'>moes</a>: allsimples14, amikke03, cinema09, clow05, effective14 for eun20, dotharl06, primera11, tower06, vector03</li>
     <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=133207#cmt133207'>hyoga</a>: cuarta12</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4493260.html?thread=222141388#cmt222141388'>Coloring Book 375</a>: shepherd02, busty05, wet02, therapist17, biracial02, natsus03, cspd06, starwolf03, blueninja01, applemoon06, blueninja10, thehermit07, nomotivation20, fashionblog13, trickyfox16, bullseye16</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4493443.html?thread=222141571#cmt222141571'>Switch It Up 287</a>: nasod12, thewary09, dtr05, ascian14</li>
