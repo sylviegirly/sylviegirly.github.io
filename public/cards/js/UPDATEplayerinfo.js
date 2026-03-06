@@ -14,7 +14,7 @@ var pendingtrades = ["pog141: shepherd02, trickyfox16, wet02, applemoon06, thera
    put the deck name, not card numbers (ie sakura, not sakura01)
 
    all ISO DECKS:
-   all decks that you would like to be collecting INCzzzzzzLUDING high priority decks.
+   all decks that you would like to be collecting INCLUDING high priority decks.
    these will be displayed by just a link to the deck page.
    put the deck name, not card numbers (ie sakura, not sakura01)
 
