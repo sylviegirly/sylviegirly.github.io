@@ -27,9 +27,9 @@ var pendingtrades = ["pog141: shepherd02, trickyfox16, wet02, applemoon06, thera
    ex: "deckone, decktwo, deckthree" or "card01, card02, card03"
 */
 var highprioritydecks =
-   "animula, blacksalt, chiliarch, coffee, dragonscale, dreadlord, equaalba, eun, fragment, holypriest, nasod, omniscient, pal, roost, squeak, townhall, truename, vanarana"; // "deckone, decktwo, deckthree..."
+   "animula, blacksalt, chiliarch, coffee, dragonscale, dreadlord, equaalba, eun, fragment, holypriest, nasod, omniscient, pal, roost, scams, squeak, townhall, truename, vanarana"; // "deckone, decktwo, deckthree..."
 var allisodecks =
-   "benishidare, deliverer, nightfury, dotharl, waifei, silvertree, restored, truename, chiliarch, dreadlord, equaalba, flowery, educate, wildkat, primera, thewary, conqueror, viatrix, tablesalt, tercera, paradisaea, tower, easilylost, eun, crowknights, goldweaver, squeak, selfless, animula, fleshlings, husbandos, autobots, decepticons, pal, coffee, townhall, roost, fragment, dragonscale, e-ming, ruoye, logic, nirvasyl, omniscient, vanarana, cuarta, destron, convoy, vector, warmaiden, pillowfort, sapientia, holypriest, spectrum, matoi, burnish, mysterious, eternaleye, blacksalt, ashcat, easilylost, awoo, nasod"; // "deckone, decktwo, deckthree..."
+   "scams, benishidare, deliverer, nightfury, dotharl, waifei, silvertree, restored, truename, chiliarch, dreadlord, equaalba, flowery, educate, wildkat, primera, thewary, conqueror, viatrix, tablesalt, tercera, paradisaea, tower, easilylost, eun, crowknights, goldweaver, squeak, selfless, animula, fleshlings, husbandos, autobots, decepticons, pal, coffee, townhall, roost, fragment, dragonscale, e-ming, ruoye, logic, nirvasyl, omniscient, vanarana, cuarta, destron, convoy, vector, warmaiden, pillowfort, sapientia, holypriest, spectrum, matoi, burnish, mysterious, eternaleye, blacksalt, ashcat, easilylost, awoo, nasod"; // "deckone, decktwo, deckthree..."
 var singlecards = ""; // "card01, card02, card03..."
 
 /*
