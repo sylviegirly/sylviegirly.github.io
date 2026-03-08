@@ -58,6 +58,19 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>03/08/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4493592.html?thread=221901848#cmt221901848'>Lady Luck Slots 251</a>: tong-an01, wyborg11, forwards05, humilau05, purgatory05, stoic09, kikaku02, carrotsteak17, magoroku04, forkilling19, unitone09, firewhip15, 1 gray crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4506224.html?thread=222348400#cmt222348400'>Little Spell Academia 405</a>: eternaleye04, eternaleye05, equaalba02, eternaleye06, eternaleye07, e-ming01, eternaleye09, eternaleye10, holypriest10, holypriest11, eternaleye11, eternaleye12</li>
+</ul>
+<time>03/07/2026</time>
+<ul>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=137047#cmt137047'>camilovesyou</a>: restored02</li>
+</ul>
+<time>03/06/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4495414.html?thread=221936694#cmt221936694'>Colorseum 74-4</a>: 1 purple crayon, 1 green crayon, 1 orange crayon, 1 yellow crayon</li>
+</ul>
 <time>03/05/2026</time>
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4487094.html?thread=221445302#cmt221445302'>Booster Bundle 224</a>: marionette16, sunburst16, saga07, mufflers05, candidate10, fumo14, exalt13, kazoku11</li>
