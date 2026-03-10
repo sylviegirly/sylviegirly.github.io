@@ -60,6 +60,8 @@
 var logs = `
 <time>03/10/2026</time>
 <ul>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=139863#cmt139863'>netbug009</a>: eternaleye20</li>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=139863#cmt139863'>netbug009</a>: almyra20, attendant01, badbreath03, beanville11, blackwidow04, blueninja01 for coffee12, eun09, nasod04, nasod11, husbandos03, vector10</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=222398737#cmt222398737'>leveling to blueberry</a>: eternaleye13, sweetvoice09, nacrene03, tribios13, 1 purple crayon</li>
 </ul>
 <time>03/09/2026</time>
