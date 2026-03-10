@@ -58,6 +58,18 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>03/10/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=222398737#cmt222398737'>leveling to blueberry</a>: eternaleye13, sweetvoice09, nacrene03, tribios13, 1 purple crayon</li>
+</ul>
+<time>03/09/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4499886.html?thread=222141102#cmt222141102'>Most Wanted 212</a>: dreadlord11, noytnetta17, henshin04, quality03, fpsgamer02</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4499667.html?thread=222141907#cmt222141907'>Pokeradar 467</a>: mmorpg20, picket16, sirakkikamuy16, hamster04, bashousen05, demihuman06, west-khan03, strings18, vanguard14, money14</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4503806.html?thread=222269694#cmt222269694'>Swap Station 268</a>: wildkat10, fleshlings03, 1 purple crayon</li>
+    <li>lost to <a href='https://colors-tcg.dreamwidth.org/4503806.html?thread=222269694#cmt222269694'>Swap Station 268</a>: wildkat18, fleshlings08, 1 gray crayon</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2074969.html?thread=44528217#cmt44528217'>corafish</a>: denying13, ito11, teases08, unitone09, vegitamura10 for equaalba17, fleshlings18, nightfury20, vanarana08, waifei18</li>
+</ul>
 <time>03/08/2026</time>
 <ul>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4493592.html?thread=221901848#cmt221901848'>Lady Luck Slots 251</a>: tong-an01, wyborg11, forwards05, humilau05, purgatory05, stoic09, kikaku02, carrotsteak17, magoroku04, forkilling19, unitone09, firewhip15, 1 gray crayon</li>
@@ -260,7 +272,7 @@ var logs = `
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/4475194.html?thread=221005114#cmt221005114'>Swap Station 264</a>: warmonk01, 1 red crayon</li>
     <li>lost to <a href="https://colors-tcg.dreamwidth.org/3969255.html?thread=221001447#cmt221001447">art shop</a>: 11 yellow crayons</li>
     <li>traded to <a href='https://colors-trade.dreamwidth.org/2071175.html?thread=44385927#cmt44385927'>pcrtiallystcrs</a>: pinkpearl03, bigleague03, blossom20, butlerpower09, cure18, curetwinkle03, sig_aid for vector05, factor13, tachikaze05, wingman07, wingman19, wiseking12, sig_amity</li>
-    <li>received from <a href='https://colors-tcg.dreamwidth.org/4468022.html?thread=220681014#cmt220681014'>Colorseum 73-5</a>: 1 brown crayon, 1 red crayon, 1 yellow crayon, 1 grey crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4468022.html?thread=220681014#cmt220681014'>Colorseum 73-5</a>: 1 brown crayon, 1 red crayon, 1 yellow crayon, 1 gray crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4474430.html?thread=220970302#cmt220970302'>Twenty Questions 081</a>: realian19, housefire16, megaevolve10</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4467436.html?thread=220663276#cmt220663276'>Silly Blanks 304</a>: shenzhou16, strictcoach14, shopping16, deadend20, icecar06, mountaindash08, chevalier08, ratatouille17, rowdy10, darkflame08</li>
     <li>lost to <a href='https://colors-tcg.dreamwidth.org/4467436.html?thread=220663276#cmt220663276'>Silly Blanks 304</a>: mothers09, severe10</li>
@@ -308,7 +320,7 @@ var logs = `
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4451667.html?thread=220357971#cmt220357971'>Coloring Book 372</a>: glimmerlab04, enchante06, ofuda16, hongyuan20, triplecone13</li>
     <li>received from <a href='https://colors-tcg.eu/recycledart.php?view=log'>recycled art</a>: educate04, el01, eun10, eun11, knowing03, knowing18, kazeshini01, kazeshini09, shuanghua08, suzumushi18, kyous08, zanpakuto02, zanpakuto07, zanpakuto12, zanpakuto14, zanpakuto16, wabisuke19, hakudan14, hakudan15, flowery13, factor10, factor20, faerghus13, tercera17, three01, xcution17, xcution20, plagiarist02</li>
     <li>traded to <a href='https://overmore.dreamwidth.org/27332.html?thread=27588#cmt27588'>overmore</a>: dreary05 for goldweaver15</li>
-    <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=220798481#cmt220798481'>leveling to grey</a>: lostlight15, couturier18, gohyaku15, 1 green crayon</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/2957585.html?thread=220798481#cmt220798481'>leveling to gray</a>: lostlight15, couturier18, gohyaku15, 1 green crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=220798203#cmt220798203'>mastering cervanivea</a>: lostlight14, beanville11, marionetta09, 1 orange crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4059899.html?thread=220798203#cmt220798203'>mastering jadedeer</a>: cervanivea20, oolong14, caelin07, 1 yellow crayon</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4470177.html?thread=220794785#cmt220794785'>Little Spell Academia 400</a>: lostlight08, jadedeer16, jadedeer18, cervanivea14, lostlight09, coffee01, lostlight10, jadedeer19, fragment01, jadedeer20, lostlight13, cervanivea16, lostlight11, cervanivea18, cervanivea19, lostlight12</li>
