@@ -58,6 +58,10 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>03/11/2026</time>
+<ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4471113.html?thread=220888393#cmt220888393'>Pot Of Gold 140</a>: ocarina03, ptrd-4119, greateye16, security03, lifelong07, mentalist17, geek13, need10, golem04, unethical15, freckled06, crossbow07, electricity03, skull13, tornado01, legation17, cosplay15, soreloser02, subaru-kyun02, sorceria01, lostmemory10, goraishi20, bigeater01, unfettered10, yasutsuna10, candyhouse19, iciclefall07, poisonplants06, starclip06, enthusiast20, novelites06, visage11, likeabird02, oathbrother17, devon11, powerless03, tohth09, blackwhite15, gekokujou20, dwn-01413, cetus05, dryjuice07, winter08, distance17, beechcraft11, roids17, wishingstars15, emissary02, goldburn18, tsunderes19, nude12, saikou-ryu10, sweettreats02, chiffon13, ghoststory04, imitation13, arsenal16, stories02, nice06, sullen11, amusement16, urvan17, sr38809, syh14, producing10, cleavingwave19, shades04, schwarzwelt16, nettles09, newkama19, embodiment10, demonhunter11, abandon16, sangriarosa20, chivalric07, novelist15, hostility09, goateepriest05, hustle18, bianca19, horror08, leadcrow19, birdplush11, sechs08, kirakirara13, golden13, trainer11, dracul17, starmiya19, xiii20, sharemadness07, pallidwhale07, ordinaire09, firstsight18, broadsword05, twocastles12, indexproxy16, nobunagas09, oppositio14, chiliarch11, 3 red crayons, 1 yellow crayon, 2 green crayons, 1 blue crayon, 3 purple crayons, 2 brown crayons, 3 gray crayons</li>
+</ul>
 <time>03/10/2026</time>
 <ul>
     <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=139863#cmt139863'>netbug009</a>: eternaleye20</li>

@@ -149,7 +149,13 @@ function fillCoupons() {
             couponuses.innerHTML = couponArray[2] + "/" + couponArray[1];
 
             document.getElementById("couponcontainer").innerHTML +=
-                "<div><img src='" + couponArray[0] + "'>" + couponArray[2] + "/" + couponArray[1] + "</div>";
+                "<div class='flex' style='flex-direction: column'><img src='" +
+                couponArray[0] +
+                "'>" +
+                couponArray[2] +
+                "/" +
+                couponArray[1] +
+                "</div>";
         });
     }
 }

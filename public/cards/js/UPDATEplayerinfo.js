@@ -40,7 +40,7 @@ var singlecards = ""; // "card01, card02, card03..."
 
     ex: ["coupons/coupons.gif, 5, 4"]
 */
-var coupons = [];
+var coupons = ["coupons/feb26.gif, 5, 5"];
 
 /*
    PORTFOLIO DATA:
