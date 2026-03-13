@@ -58,8 +58,16 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>03/12/2026</time>
+<ul>
+    <li>traded to <a href='https://colors-tcg.dreamwidth.org/4492331.html?thread=221902379#cmt221902379'>overthedimension</a>: gluttony15, specimen20, ecchi17, everyday03, flower19, horror02, horror08, ideal15, koyaku01, otahen08, pallidwhale07, potions04, yaoi14 for chiliarch18, nasod19, omniscient05, autobots04, burnish16, conqueror19, convoy15, educate05, educate08, nirvasyl02, pillowfort09, primera10, tercera11</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4492331.html?thread=221902379#cmt221902379'>Pokeradar 466</a>: kusegawa11, landlady18, sheriff09, pyroclasm11, asleep16, anija05, hightide15, theartist10, prank01, poisonous03</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4492665.html?thread=221902201#cmt221902201'>Most Wanted 211</a>: nidia14, hooligans20, unassuming12, contract07, rescuebullet01</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4494137.html?thread=221738041#cmt221738041'>Pick a Color 309</a>: 2 red crayons, 2 orange crayons, 2 yellow crayons, 2 green crayons, 2 blue crayons, 2 purple crayons, 2 brown crayons, 2 gray crayons</li>
+</ul>
 <time>03/11/2026</time>
 <ul>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=141655#cmt141655'>travastila</a>: omniscient20</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4471113.html?thread=220888393#cmt220888393'>Pot Of Gold 140</a>: ocarina03, ptrd-4119, greateye16, security03, lifelong07, mentalist17, geek13, need10, golem04, unethical15, freckled06, crossbow07, electricity03, skull13, tornado01, legation17, cosplay15, soreloser02, subaru-kyun02, sorceria01, lostmemory10, goraishi20, bigeater01, unfettered10, yasutsuna10, candyhouse19, iciclefall07, poisonplants06, starclip06, enthusiast20, novelites06, visage11, likeabird02, oathbrother17, devon11, powerless03, tohth09, blackwhite15, gekokujou20, dwn-01413, cetus05, dryjuice07, winter08, distance17, beechcraft11, roids17, wishingstars15, emissary02, goldburn18, tsunderes19, nude12, saikou-ryu10, sweettreats02, chiffon13, ghoststory04, imitation13, arsenal16, stories02, nice06, sullen11, amusement16, urvan17, sr38809, syh14, producing10, cleavingwave19, shades04, schwarzwelt16, nettles09, newkama19, embodiment10, demonhunter11, abandon16, sangriarosa20, chivalric07, novelist15, hostility09, goateepriest05, hustle18, bianca19, horror08, leadcrow19, birdplush11, sechs08, kirakirara13, golden13, trainer11, dracul17, starmiya19, xiii20, sharemadness07, pallidwhale07, ordinaire09, firstsight18, broadsword05, twocastles12, indexproxy16, nobunagas09, oppositio14, chiliarch11, 3 red crayons, 1 yellow crayon, 2 green crayons, 1 blue crayon, 3 purple crayons, 2 brown crayons, 3 gray crayons</li>
 </ul>
 <time>03/10/2026</time>
