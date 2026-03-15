@@ -58,6 +58,14 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>03/14/2026</time>
+<ul>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=144215#cmt144215'>magaru</a>: colleague15, fpsgamer02, lifelong07, directorial20, godeye06, kikaku02, morph11, motovlogging05, tradeplaces18, confidants16 for dragonscale16, dragonscale17, flowery14, flowery19, nirvasyl10, selfless01, tercera01, tercera15, tower05, tower14 </li>
+</ul>
+<time>03/13/2026</time>
+<ul>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=144215#cmt144215'>phibby</a>: eternaleye19</li>
+</ul>
 <time>03/12/2026</time>
 <ul>
     <li>traded to <a href='https://colors-tcg.dreamwidth.org/4492331.html?thread=221902379#cmt221902379'>overthedimension</a>: gluttony15, specimen20, ecchi17, everyday03, flower19, horror02, horror08, ideal15, koyaku01, otahen08, pallidwhale07, potions04, yaoi14 for chiliarch18, nasod19, omniscient05, autobots04, burnish16, conqueror19, convoy15, educate05, educate08, nirvasyl02, pillowfort09, primera10, tercera11</li>
