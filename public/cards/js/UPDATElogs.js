@@ -58,8 +58,15 @@
   Once you've done that, begin putting your new correctly formatted logs in the logs variable.
 */
 var logs = `
+<time>03/15/2026</time>
+<ul>
+    <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=147031#cmt147031'>emsie</a>: eun03</li>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4500910.html?thread=222142126#cmt222142126'>Lady Luck Slots 252</a>: beastar06, candyviolin20, storytime03, umbrabilis14, ancientone07, probably06, backdraft06, scissors12, insurance19, dragonclaw13, friedchicken15, darksun09, 1 blue crayon</li>
+</ul>
 <time>03/14/2026</time>
 <ul>
+    <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=146007#cmt146007'>mezzin</a>: 100cats06, gabriel20, goateepriest05, housekeeping18, onod13, rcplane13, rockbison13, shades04 for autobots20, benishidare02, benishidare09, crowknights17, decepticons11, e-ming17, educate10, educate20</li>
+    <li>traded to <a href='https://colors-trade.dreamwidth.org/2074969.html?thread=44535385#cmt44535385'>travastila</a>: bling06, fleshcan03, wanted01, whiteraven15, younggirls06 for chiliarch09, dreadlord18, eun07, nasod05, squeak15</li>
     <li>traded to <a href='https://asuraid.dreamwidth.org/4183.html?thread=144215#cmt144215'>magaru</a>: colleague15, fpsgamer02, lifelong07, directorial20, godeye06, kikaku02, morph11, motovlogging05, tradeplaces18, confidants16 for dragonscale16, dragonscale17, flowery14, flowery19, nirvasyl10, selfless01, tercera01, tercera15, tower05, tower14 </li>
 </ul>
 <time>03/13/2026</time>
