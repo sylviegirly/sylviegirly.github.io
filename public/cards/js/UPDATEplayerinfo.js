@@ -6,7 +6,7 @@
     ex: ["PLAYERNAME1: card01, card02", "PLAYERNAME2: card03, card04"]
 */
 var pendingtrades = [
-   "pog141: shepherd02, trickyfox16, probably06, wet02, applemoon06, therapist17, cspd06, housepet01, tenseiga06"
+   "pog141: shepherd02, trickyfox16, probably06, wet02, applemoon06, therapist17, cspd06, housepet01, tenseiga06", "swapstation269: fleshlings03, paradisaea02"
 ];
 
 /*
