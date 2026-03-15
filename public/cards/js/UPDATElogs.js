@@ -60,6 +60,7 @@
 var logs = `
 <time>03/15/2026</time>
 <ul>
+    <li>received from <a href='https://colors-tcg.dreamwidth.org/4512788.html?thread=222618132#cmt222618132'>Little Spell Academia 406</a>: nasod02, eternaleye14, eternaleye17, vanarana04, nasod03, e-ming02, educate02, e-ming03, logic02, educate01, e-ming04, viatrix01, e-ming05, paradisaea01, paradisaea02, e-ming06, ashcat01, squeak03, vanarana05, e-ming07</li>
     <li>gifted by <a href='https://asuraid.dreamwidth.org/4183.html?thread=147031#cmt147031'>emsie</a>: eun03</li>
     <li>received from <a href='https://colors-tcg.dreamwidth.org/4500910.html?thread=222142126#cmt222142126'>Lady Luck Slots 252</a>: beastar06, candyviolin20, storytime03, umbrabilis14, ancientone07, probably06, backdraft06, scissors12, insurance19, dragonclaw13, friedchicken15, darksun09, 1 blue crayon</li>
 </ul>
